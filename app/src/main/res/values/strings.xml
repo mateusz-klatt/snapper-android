@@ -55,4 +55,7 @@
     <string name="safety_critical">Safety critical</string>
     <string name="snapshot_limit">This view shows current positions and up to 100 recent orders and alerts; it is not a complete history.</string>
     <string name="chart_window">The chart shows the last 100 retrieved candles.</string>
+    <string name="local_network_explanation">For a backend on your local network, allow local network access before signing in. Public internet backends do not need this permission.</string>
+    <string name="local_network_allow">Allow local network</string>
+    <string name="local_network_settings">Open app settings</string>
 </resources>

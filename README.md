@@ -42,9 +42,13 @@ Run the offline Compose interaction tests on a connected emulator or device:
 ./gradlew :app:connectedDebugAndroidTest
 ```
 
+CI runs these device tests on an Android 17 emulator with hardware acceleration, including local network permission denial, grant and activity recreation after a language change.
+
 ## Connect to a backend
 
 Set the server origin in the login screen, for example `https://snapper.example`. Enter an origin only: no `/api` suffix, credentials, query or fragment. Release builds accept HTTPS only and use the platform certificate trust configuration.
+
+On Android 17 (API 37) or newer, a backend on your local network requires Android’s local network permission. Tap **Allow local network** beside the backend settings before signing in. This action is optional for public internet backends and never prompts automatically. If Android stops showing the permission prompt after denial, **Open app settings** lets you grant access; returning to the app refreshes the permission state. See [Android’s local network permission guidance](https://developer.android.com/privacy-and-security/local-network-permission). HTTPS and certificate requirements still apply.
 
 Debug builds additionally allow HTTP for `localhost`, `127.0.0.1`, `::1` and the Android emulator host bridge `10.0.2.2`. The debug default is `http://10.0.2.2:8000`; release builds require the user to configure an HTTPS origin.
 

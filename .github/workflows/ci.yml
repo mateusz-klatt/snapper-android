@@ -34,6 +34,30 @@ jobs:
           "$RUNNER_TEMP/android-tools/cmdline-tools/bin/sdkmanager" --sdk_root="$ANDROID_HOME" 'platforms;android-37.0' 'build-tools;36.0.0'
       - name: Build, test and lint
         run: ./gradlew --no-daemon :app:assembleDebug :app:testDebugUnitTest :app:lintDebug :app:assembleDebugAndroidTest
+      - name: Install Android 17 emulator
+        shell: bash
+        run: |
+          SDKMANAGER="$RUNNER_TEMP/android-tools/cmdline-tools/bin/sdkmanager"
+          "$SDKMANAGER" --sdk_root="$ANDROID_HOME" --licenses < <(yes)
+          "$SDKMANAGER" --sdk_root="$ANDROID_HOME" 'emulator' 'system-images;android-37.0;google_apis;x86_64' < <(yes)
+          sudo chmod a+rw /dev/kvm
+          "$ANDROID_HOME/emulator/emulator" -accel-check
+          "$RUNNER_TEMP/android-tools/cmdline-tools/bin/avdmanager" create avd --force --name snapper-ci --package 'system-images;android-37.0;google_apis;x86_64' --device pixel_6 < <(printf 'no\n')
+      - name: Run Android 17 device tests
+        shell: bash
+        timeout-minutes: 12
+        run: |
+          export PATH="$ANDROID_HOME/platform-tools:$PATH"
+          export ANDROID_SERIAL=emulator-5554
+          "$ANDROID_HOME/emulator/emulator" -avd snapper-ci -port 5554 -no-window -no-audio -no-boot-anim -no-snapshot -gpu swiftshader -cores 2 -memory 3072 -accel on > "$RUNNER_TEMP/snapper-emulator.log" 2>&1 &
+          EMULATOR_PID=$!
+          trap 'adb -s "$ANDROID_SERIAL" emu kill || true; kill "$EMULATOR_PID" 2>/dev/null || true' EXIT
+          timeout 240 bash -c 'until adb -s "$ANDROID_SERIAL" shell getprop sys.boot_completed 2>/dev/null | tr -d "\r" | grep -qx 1; do sleep 2; done'
+          adb -s "$ANDROID_SERIAL" shell settings put global window_animation_scale 0
+          adb -s "$ANDROID_SERIAL" shell settings put global transition_animation_scale 0
+          adb -s "$ANDROID_SERIAL" shell settings put global animator_duration_scale 0
+          adb -s "$ANDROID_SERIAL" shell input keyevent 82
+          ./gradlew --no-daemon --max-workers=2 -Pandroid.injected.device.serial=emulator-5554 :app:connectedDebugAndroidTest
       - name: Upload debug APK
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
@@ -49,5 +73,8 @@ jobs:
           path: |
             app/build/reports/tests/
             app/build/reports/lint-results-debug.*
+            app/build/reports/androidTests/
+            app/build/outputs/androidTest-results/
+            ${{ runner.temp }}/snapper-emulator.log
           if-no-files-found: ignore
           retention-days: 14

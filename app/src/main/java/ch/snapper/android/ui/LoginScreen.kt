@@ -57,6 +57,7 @@ internal fun LanguagePicker(language: String, onSelect: (String) -> Unit) {
 
 @Composable
 internal fun BackendEditor(backend: String, save: (String) -> Unit) {
+    LocalNetworkAccess()
     var draft by rememberSaveable(backend) { mutableStateOf(backend) }
     OutlinedTextField(draft, { draft = it }, label = { Text(stringResource(R.string.backend)) },
         singleLine = true, keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Uri),

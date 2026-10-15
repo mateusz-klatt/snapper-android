@@ -3,6 +3,8 @@ package ch.snapper.android
 import android.content.res.Configuration
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.activity.compose.LocalActivity
+import androidx.activity.compose.LocalActivityResultRegistryOwner
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
@@ -56,6 +58,8 @@ class MainActivity : ComponentActivity() {
 @Composable
 private fun LocalizedContent(language: String, content: @Composable () -> Unit) {
     val context = LocalContext.current
+    val activity = LocalActivity.current
+    val activityResultRegistryOwner = checkNotNull(LocalActivityResultRegistryOwner.current)
     val configuration = LocalConfiguration.current
     val localized = remember(context, configuration, language) {
         if (language.isEmpty()) context else {
@@ -70,6 +74,8 @@ private fun LocalizedContent(language: String, content: @Composable () -> Unit) 
         LayoutDirection.Ltr
     }
     CompositionLocalProvider(
+        LocalActivity provides activity,
+        LocalActivityResultRegistryOwner provides activityResultRegistryOwner,
         LocalContext provides localized,
         LocalConfiguration provides localized.resources.configuration,
         LocalLayoutDirection provides direction,

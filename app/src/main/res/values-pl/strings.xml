@@ -52,4 +52,7 @@
     <string name="safety_critical">Krytyczne dla bezpieczeństwa</string>
     <string name="snapshot_limit">Widok przedstawia bieżące pozycje oraz do 100 ostatnich zleceń i alertów; nie jest to pełna historia.</string>
     <string name="chart_window">Wykres przedstawia ostatnie 100 pobranych świec.</string>
+    <string name="local_network_explanation">Jeśli backend znajduje się w sieci lokalnej, zezwól na dostęp do sieci lokalnej przed zalogowaniem. Backend dostępny przez publiczny internet nie wymaga tego uprawnienia.</string>
+    <string name="local_network_allow">Zezwól na dostęp do sieci lokalnej</string>
+    <string name="local_network_settings">Otwórz ustawienia aplikacji</string>
 </resources>
