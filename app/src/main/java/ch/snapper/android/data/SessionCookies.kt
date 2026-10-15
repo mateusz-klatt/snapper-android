@@ -5,6 +5,8 @@ import android.content.Context
 import android.os.Build
 import android.security.keystore.KeyGenParameterSpec
 import android.security.keystore.KeyProperties
+import androidx.annotation.ChecksSdkIntAtLeast
+import androidx.annotation.RequiresApi
 import java.io.File
 import java.io.IOException
 import java.security.GeneralSecurityException
@@ -55,13 +57,14 @@ internal class AndroidCookieEncryption(private val context: Context, private val
         }?.forEach(::eraseCookieFile)
     }
 
+    @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.R)
     private fun available(): Boolean = Build.VERSION.SDK_INT >= 30 &&
         context.getSystemService(KeyguardManager::class.java).isDeviceSecure
 
+    @RequiresApi(Build.VERSION_CODES.R)
     private fun key(): SecretKey {
         val store = keyStore()
         (store.getKey(alias, null) as? SecretKey)?.let { return it }
-        if (Build.VERSION.SDK_INT < 30) throw IllegalStateException("Persistent sessions require Android 11 or newer")
         val specification = KeyGenParameterSpec.Builder(alias, KeyProperties.PURPOSE_ENCRYPT or KeyProperties.PURPOSE_DECRYPT)
             .setBlockModes(KeyProperties.BLOCK_MODE_GCM)
             .setEncryptionPaddings(KeyProperties.ENCRYPTION_PADDING_NONE)
