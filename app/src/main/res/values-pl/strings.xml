@@ -3,6 +3,7 @@
     <string name="username">Nazwa użytkownika</string>
     <string name="password">Hasło</string>
     <string name="sign_in">Zaloguj się</string>
+    <string name="session_retention_notice">Pozostanie zalogowanym wymaga Androida 11 lub nowszego, bezpiecznej blokady ekranu oraz uwierzytelnienia kodem PIN, wzorem, hasłem lub silną metodą biometryczną w ciągu ostatnich 5 minut. W przeciwnym razie po ponownym uruchomieniu aplikacji trzeba się zalogować.</string>
     <string name="subtitle">Platforma transakcyjna</string>
     <string name="backend">Niestandardowy adres URL backendu</string>
     <string name="language">Język</string>

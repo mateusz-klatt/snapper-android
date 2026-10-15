@@ -162,38 +162,50 @@ class SessionRepository private constructor(
 
     override suspend fun logout() {
         if (!loggingOut.compareAndSet(false, true)) return
-        val headers = synchronized(stateLock) {
-            val captured = cookies.authenticationHeaders()
-            mutableUser.value = null
-            cookies.pause()
-            captured
-        }
-        client.dispatcher.cancelAll()
         try {
+            val headers = try {
+                synchronized(stateLock) {
+                    val captured = cookies.authenticationHeaders()
+                    mutableUser.value = null
+                    cookies.pause()
+                    captured
+                }
+            } finally {
+                client.dispatcher.cancelAll()
+            }
             operation.withLock { api.logout(headers.first, headers.second) }
         } catch (error: CancellationException) {
             throw error
         } catch (_: IOException) {
             // Local credentials remain cleared if the server cannot be reached.
         } finally {
-            synchronized(stateLock) {
-                if (!closed.get()) {
-                    cookies.invalidate()
-                    cookies.resume()
+            try {
+                synchronized(stateLock) {
+                    if (!closed.get()) {
+                        try {
+                            cookies.invalidate()
+                        } finally {
+                            cookies.resume()
+                        }
+                    }
                 }
+            } finally {
                 loggingOut.set(false)
             }
         }
     }
 
     override fun close() {
-        synchronized(stateLock) {
-            closed.set(true)
-            mutableUser.value = null
-            cookies.pause()
+        try {
+            synchronized(stateLock) {
+                closed.set(true)
+                mutableUser.value = null
+                cookies.pause()
+            }
+        } finally {
+            client.dispatcher.cancelAll()
+            client.connectionPool.evictAll()
         }
-        client.dispatcher.cancelAll()
-        client.connectionPool.evictAll()
     }
 
     companion object {

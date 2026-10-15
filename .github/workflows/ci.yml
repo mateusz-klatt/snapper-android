@@ -30,7 +30,7 @@ jobs:
       - name: Install Android command-line tools
         shell: bash
         run: |
-          curl --fail --location --retry 2 https://dl.google.com/android/repository/commandlinetools-linux-16111833_latest.zip --output "$RUNNER_TEMP/android-tools.zip"
+          curl --proto '=https' --proto-redir '=https' --fail --location --retry 2 https://dl.google.com/android/repository/commandlinetools-linux-16111833_latest.zip --output "$RUNNER_TEMP/android-tools.zip"
           echo "0877a1d048fe4a24efe2eff536ca4223f7adeb58648bb81909d33c446918cfa8  $RUNNER_TEMP/android-tools.zip" | sha256sum --check
           unzip -q "$RUNNER_TEMP/android-tools.zip" -d "$RUNNER_TEMP/android-tools"
           mkdir -p "$ANDROID_HOME/cmdline-tools"
@@ -60,8 +60,12 @@ jobs:
           adb -s "$ANDROID_SERIAL" shell settings put global window_animation_scale 0
           adb -s "$ANDROID_SERIAL" shell settings put global transition_animation_scale 0
           adb -s "$ANDROID_SERIAL" shell settings put global animator_duration_scale 0
+          adb -s "$ANDROID_SERIAL" shell settings put system screen_off_timeout 1800000
           adb -s "$ANDROID_SERIAL" shell input keyevent 82
-          ./gradlew --no-daemon --max-workers=2 -Pandroid.injected.device.serial=emulator-5554 :app:combinedDebugCoverageReport
+          SNAPPER_TEST_DEVICE_PIN=$(python3 -c 'import secrets; print(secrets.randbelow(900000) + 100000)')
+          adb -s "$ANDROID_SERIAL" shell locksettings set-pin "$SNAPPER_TEST_DEVICE_PIN"
+          adb -s "$ANDROID_SERIAL" shell locksettings verify --old "$SNAPPER_TEST_DEVICE_PIN"
+          ./gradlew --no-daemon --max-workers=2 -Pandroid.injected.device.serial=emulator-5554 "-Pandroid.testInstrumentationRunnerArguments.snapperTestDevicePin=$SNAPPER_TEST_DEVICE_PIN" :app:combinedDebugCoverageReport
       - name: Resolve Sonar analysis classpaths
         run: ./gradlew --no-daemon :app:writeSonarProperties
       - name: Require combined coverage report

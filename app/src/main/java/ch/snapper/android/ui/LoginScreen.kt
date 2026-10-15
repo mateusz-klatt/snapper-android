@@ -42,6 +42,12 @@ internal fun LoginScreen(state: AppUiState, actions: AppActions) {
             modifier = Modifier.fillMaxWidth().testTag("login.signIn")) {
             Text(stringResource(if (state.isLoading) R.string.loading else R.string.sign_in))
         }
+        Text(
+            stringResource(R.string.session_retention_notice),
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.fillMaxWidth(),
+        )
         BackendEditor(state.backendUrl, actions.saveBackend)
     }
 }

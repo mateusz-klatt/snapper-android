@@ -1,10 +1,16 @@
 package ch.snapper.android.data
 
+import java.io.IOException
 import java.util.concurrent.TimeUnit
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withContext
+import kotlinx.coroutines.withTimeout
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
+import okhttp3.mockwebserver.SocketPolicy
 import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
@@ -49,6 +55,66 @@ class SessionRepositoryTest {
             assertEquals(0, server.requestCount)
         } finally {
             fresh.close()
+        }
+    }
+    @Test fun failedCredentialRemovalDoesNotLeaveLogoutOrFutureLoginStuck() = runBlocking {
+        var failRemoval = false
+        val failingStorage = object : CookieStorage by storage {
+            override fun write(cookies: List<String>) {
+                if (failRemoval && cookies.isEmpty()) throw IOException("Storage unavailable")
+                storage.write(cookies)
+            }
+        }
+        val candidate = SessionRepository.create(server.url("/").toString(), true, failingStorage) { host -> host == server.hostName }
+        try {
+            server.enqueue(auth())
+            candidate.login("reader", "password")
+            server.takeRequest()
+            failRemoval = true
+            assertTrue(runCatching { candidate.logout() }.exceptionOrNull() is IOException)
+            assertNull(candidate.user.value)
+            failRemoval = false
+            server.enqueue(auth().addHeader("Set-Cookie", "access_token=renewed; Path=/; HttpOnly"))
+            assertEquals("reader", candidate.login("reader", "password").username)
+            server.takeRequest()
+            server.enqueue(MockResponse().setResponseCode(204))
+            candidate.logout()
+            val logout = server.takeRequest()
+            assertEquals("/api/auth/logout", logout.path)
+            assertEquals("access_token=renewed", logout.getHeader("Cookie"))
+            assertNull(candidate.user.value)
+        } finally {
+            failRemoval = false
+            candidate.close()
+        }
+    }
+    @Test fun closeCancelsAuthenticatedRequestEvenWhenCredentialRemovalFails() = runBlocking {
+        assertPendingRequestCancelledAfterRemovalFailure { it.close() }
+    }
+    @Test fun logoutCancelsAuthenticatedRequestEvenWhenCredentialRemovalFails() = runBlocking {
+        assertPendingRequestCancelledAfterRemovalFailure { it.logout() }
+    }
+    private suspend fun assertPendingRequestCancelledAfterRemovalFailure(stop: suspend (SessionRepository) -> Unit) = coroutineScope {
+        var failRemoval = false
+        val failingStorage = object : CookieStorage by storage {
+            override fun write(cookies: List<String>) {
+                if (failRemoval && cookies.isEmpty()) throw IOException("Storage unavailable")
+                storage.write(cookies)
+            }
+        }
+        val candidate = SessionRepository.create(server.url("/").toString(), true, failingStorage) { host -> host == server.hostName }
+        try {
+            server.enqueue(MockResponse().setSocketPolicy(SocketPolicy.NO_RESPONSE))
+            val pending = async { runCatching { candidate.restore() } }
+            val request = withContext(Dispatchers.IO) { server.takeRequest(5, TimeUnit.SECONDS) }
+            assertEquals("refresh_token=saved", request?.getHeader("Cookie"))
+            failRemoval = true
+            assertTrue(runCatching { stop(candidate) }.exceptionOrNull() is IOException)
+            assertTrue(withTimeout(2000) { pending.await() }.exceptionOrNull() is IOException)
+            assertNull(candidate.user.value)
+        } finally {
+            failRemoval = false
+            candidate.close()
         }
     }
     @Test fun loginUsesEnvelopeAndCookieAuthentication() = runBlocking {

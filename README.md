@@ -26,6 +26,8 @@ Open this directory as a project in a current stable Android Studio. Install And
 
 The project pins AGP 9.4.1, Gradle 9.8.1 and Kotlin 2.4.21. Gradle runs on JDK 17 or a compatible newer JDK; Android Studio can supply the JDK. `local.properties` and signing credentials are not committed.
 
+Library and plugin versions are declared in `gradle/libs.versions.toml`; the early Kotlin buildscript bootstrap in `build.gradle.kts` must retain the same Kotlin pin. Gradle verifies dependency artifacts and metadata against the committed SHA-256 checksums in `gradle/verification-metadata.xml`.
+
 ## Build and validate
 
 With a JDK and Android SDK available:
@@ -44,7 +46,7 @@ Run the offline Compose interaction tests on a connected emulator or device:
 ./gradlew :app:connectedDebugAndroidTest
 ```
 
-CI runs these device tests on an Android 17 emulator with hardware acceleration, including local network permission denial, grant and activity recreation after a language change. CI combines JVM and device execution data into one JaCoCo report using all application classes, without coverage exclusions. The analysis receives the actual application and test compile classpaths, including Android SDK classes. After the tests, it analyzes all owned source files with SonarQube Cloud and requires the project quality gate to pass. The analysis uses the repository’s `SONAR_TOKEN` secret; automatic analysis must stay disabled so CI supplies the analysis.
+CI runs these device tests on an Android 17 emulator with hardware acceleration, including local network permission denial, grant and activity recreation after a language change. A fresh temporary screen-lock credential on the disposable emulator enables authenticated Keystore tests. CI combines JVM and device execution data into one JaCoCo report using all application classes, without coverage exclusions. The analysis receives the actual application and test compile classpaths, including Android SDK classes. After the tests, it analyzes all owned source files with SonarQube Cloud and requires the project quality gate to pass. The analysis uses the repository’s `SONAR_TOKEN` secret; automatic analysis must stay disabled so CI supplies the analysis.
 
 To generate the same combined coverage report locally with a connected device:
 
@@ -72,12 +74,18 @@ adb install -r app/build/outputs/apk/debug/app-debug.apk
 
 Select `http://127.0.0.1:8000` in the debug app. If multiple devices are connected, add `-s DEVICE_SERIAL` to each ADB command. No production credentials or sample live accounts are included.
 
+### Remembered sessions
+
+Remembered sessions require Android 11 or newer, a secure screen lock, and device authentication with a PIN, pattern, password or strong biometric within the last five minutes. The app does not open an authentication prompt automatically. When these conditions are unavailable, the current session stays in memory and restarting the app requires signing in again.
+
+Session encryption keys are specific to the backend origin and require device authentication. Signing out removes the key before deleting its encrypted file. The earlier shared key and stored sessions are retired on upgrade, requiring one new sign-in.
+
 ## Design
 
 - A single application module with Compose screens, a ViewModel/StateFlow UI state, and injected session and settings dependencies.
 - Retrofit, OkHttp and kotlinx.serialization use the backend's typed `payload` envelopes, cookie authentication and URL-scoped CSRF headers.
 - Session rotations and wallet operations are serialized; 401 requests receive one refresh-and-replay attempt. Backend changes, logout and revoked permissions discard stale account data.
-- Persistent cookies use AES-GCM with an Android Keystore key and private backup-excluded storage. DataStore contains only the backend and language preferences.
+- Persistent cookies use AES-GCM with a device-authenticated, origin-specific Android Keystore key and private backup-excluded storage. DataStore contains only the backend and language preferences.
 - Backend and network failures are visible; an unavailable resource is not silently shown as an empty successful result.
 - Room, WorkManager, Hilt and Firebase are added only when an implemented feature needs them.
 
