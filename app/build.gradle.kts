@@ -21,6 +21,20 @@ jacoco {
     toolVersion = libs.versions.jacoco.get()
 }
 
+val releaseVersionCode = providers.environmentVariable("SNAPPER_VERSION_CODE").orElse("2").get()
+    .toIntOrNull()?.takeIf { it in 1..2_100_000_000 }
+    ?: error("SNAPPER_VERSION_CODE must be an integer between 1 and 2100000000")
+val releaseVersionName = providers.environmentVariable("SNAPPER_VERSION_NAME").orElse("0.2.0").get()
+require(releaseVersionName.length <= 100 && Regex("""(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)(-(0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*)(\.(0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*))*)?(\+[0-9A-Za-z-]+(\.[0-9A-Za-z-]+)*)?""").matches(releaseVersionName)) {
+    "SNAPPER_VERSION_NAME must be a SemVer string of at most 100 characters"
+}
+val uploadSigning = listOf("ANDROID_UPLOAD_KEYSTORE_PATH", "ANDROID_UPLOAD_STORE_PASSWORD", "ANDROID_UPLOAD_KEY_ALIAS", "ANDROID_UPLOAD_KEY_PASSWORD")
+    .associateWith { providers.environmentVariable(it).orNull }
+val hasUploadSigning = uploadSigning.values.any { !it.isNullOrBlank() }
+require(!hasUploadSigning || uploadSigning.values.all { !it.isNullOrBlank() }) {
+    "Upload signing requires ANDROID_UPLOAD_KEYSTORE_PATH, ANDROID_UPLOAD_STORE_PASSWORD, ANDROID_UPLOAD_KEY_ALIAS and ANDROID_UPLOAD_KEY_PASSWORD"
+}
+
 android {
     testCoverage {
         jacocoVersion = libs.versions.jacoco.get()
@@ -33,11 +47,21 @@ android {
         applicationId = "ch.snapper.android"
         minSdk = 26
         targetSdk = 37
-        versionCode = 1
-        versionName = "0.1.0"
+        versionCode = releaseVersionCode
+        versionName = releaseVersionName
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        if (hasUploadSigning) {
+            create("upload") {
+                storeFile = file(requireNotNull(uploadSigning["ANDROID_UPLOAD_KEYSTORE_PATH"]))
+                storePassword = uploadSigning["ANDROID_UPLOAD_STORE_PASSWORD"]
+                keyAlias = uploadSigning["ANDROID_UPLOAD_KEY_ALIAS"]
+                keyPassword = uploadSigning["ANDROID_UPLOAD_KEY_PASSWORD"]
+            }
+        }
+    }
     buildTypes {
         debug {
             enableUnitTestCoverage = true
@@ -47,6 +71,7 @@ android {
             buildConfigField("String", "DEFAULT_BACKEND_URL", "\"http://10.0.2.2:8000\"")
         }
         release {
+            if (hasUploadSigning) signingConfig = signingConfigs.getByName("upload")
             isMinifyEnabled = true
             isShrinkResources = true
             buildConfigField("String", "DEFAULT_BACKEND_URL", "\"\"")

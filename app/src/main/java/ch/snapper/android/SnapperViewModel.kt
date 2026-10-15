@@ -6,7 +6,14 @@ import ch.snapper.android.data.OriginPolicy
 import ch.snapper.android.data.SessionClient
 import ch.snapper.android.data.SessionExpiredException
 import ch.snapper.android.data.UserDto
+import ch.snapper.android.data.OrderDto
+import ch.snapper.android.data.OrderScope
+import ch.snapper.android.data.OrderScopeChangedException
+import ch.snapper.android.data.OrderRejectedException
+import ch.snapper.android.data.OrderOutcomeUnknownException
+import ch.snapper.android.data.WalletDto
 import java.io.IOException
+import java.util.UUID
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -32,6 +39,10 @@ class SnapperViewModel(
     private var revision = 0L
     private var sessionEpoch = 0L
     private var marketRevision = 0L
+    private var orderRevision = 0L
+    private var catalogRevision = 0L
+    private var catalogRequest: Job? = null
+    private var orderMutation: Job? = null
 
     val actions = AppActions(
         login = ::login,
@@ -42,6 +53,15 @@ class SnapperViewModel(
         selectLanguage = ::selectLanguage,
         clearError = { mutableState.update { it.copy(error = null) } },
         loadMarket = ::loadMarket,
+        orders = OrderActions(
+            open = ::openOrder, dismiss = ::dismissOrder, updateDraft = ::updateOrderDraft,
+            selectExchange = ::selectOrderExchange, review = ::reviewOrder, back = ::editOrder,
+            confirm = { submitOrder(false) }, retry = { submitOrder(true) },
+            requestCancel = ::requestOrderCancel, dismissCancel = ::dismissOrder,
+            confirmCancel = ::confirmOrderCancel, clearResult = ::dismissOrder,
+            checkStatus = ::refresh,
+            retryCatalog = ::retryOrderCatalog,
+        ),
     )
 
     init {
@@ -72,12 +92,14 @@ class SnapperViewModel(
         sessionObserver = viewModelScope.launch {
             client.user.collect { profile ->
                 if (session === client && profile == null && state.value.user != null) {
+                    resetOrderFlow()
                     sessionEpoch++
                     marketRevision++
                     marketRequest?.cancel()
                     mutableState.update { it.copy(user = null, snapshot = null, market = MarketState()) }
                 } else if (session === client && profile != null && state.value.user != null) {
                     if (!sameScope(profile, state.value.user)) {
+                        resetOrderFlow()
                         sessionEpoch++
                         marketRevision++
                         marketRequest?.cancel()
@@ -110,6 +132,7 @@ class SnapperViewModel(
 
     fun selectWallet(publicId: String?) {
         if (state.value.isLoading || state.value.user == null) return
+        resetOrderFlow()
         marketRequest?.cancel()
         marketRevision++
         sessionEpoch++
@@ -126,7 +149,7 @@ class SnapperViewModel(
     private suspend fun refreshSnapshot(client: SessionClient, request: Long) {
         val snapshot = client.snapshot()
         if (session === client && request == revision && sameScope(snapshot.user, client.user.value)) {
-            mutableState.update { it.copy(user = snapshot.user, snapshot = snapshot) }
+            mutableState.update { it.copy(user = snapshot.user, snapshot = snapshot, orders = it.orders.copy(snapshotRefreshFailed = false)) }
         }
     }
 
@@ -158,6 +181,7 @@ class SnapperViewModel(
     }
 
     private fun clearVisibleSession() {
+        resetOrderFlow()
         revision++
         sessionEpoch++
         marketRevision++
@@ -195,6 +219,213 @@ class SnapperViewModel(
                 mutableState.update { it.copy(error = UiError.SERVICE) }
             }
         }
+    }
+
+    private fun resetOrderFlow() {
+        orderRevision++
+        catalogRevision++
+        catalogRequest?.cancel()
+        orderMutation?.cancel()
+        mutableState.update { it.copy(orders = OrderFlowState()) }
+    }
+
+    private fun dismissOrder() {
+        if (state.value.orders.isSubmitting) return
+        if (state.value.orders.outcome == OrderOutcome.UNKNOWN) updateOrders { it.copy(isDismissed = true) }
+        else resetOrderFlow()
+    }
+
+    private fun orderWallet(): WalletDto? = state.value.snapshot?.wallets
+        ?.firstOrNull { it.publicId == state.value.user?.activeWalletPublicId }
+
+    private fun orderScope(): OrderScope? = state.value.user?.let(OrderScope::from)
+
+    private fun orderCurrent(client: SessionClient, scope: OrderScope, request: Long): Boolean =
+        session === client && request == orderRevision && orderScope() == scope &&
+            client.user.value?.let(OrderScope::from) == scope
+
+    private fun updateOrders(change: (OrderFlowState) -> OrderFlowState) {
+        mutableState.update { it.copy(orders = change(it.orders)) }
+    }
+
+    fun openOrder() {
+        val client = session ?: return
+        val scope = orderScope() ?: return
+        if (orderWallet() == null || state.value.isLoading || state.value.orders.isSubmitting ||
+            !scope.effectivePermissions.containsAll(listOf("create:orders", "read:market_data"))) return
+        if (state.value.orders.outcome == OrderOutcome.UNKNOWN) {
+            updateOrders { it.copy(isDismissed = false) }
+            return
+        }
+        resetOrderFlow()
+        val request = orderRevision
+        val catalog = ++catalogRevision
+        updateOrders { it.copy(draft = OrderDraft(), loadingCatalog = true) }
+        catalogRequest = viewModelScope.launch {
+            try {
+                val exchanges = client.orderExchanges(scope)
+                if (!orderCurrent(client, scope, request) || catalog != catalogRevision) return@launch
+                updateOrders { it.copy(exchanges = exchanges, loadingCatalog = false, issue = null) }
+                exchanges.firstOrNull()?.let(::selectOrderExchange)
+            } catch (error: CancellationException) {
+                throw error
+            } catch (_: Exception) {
+                if (orderCurrent(client, scope, request) && catalog == catalogRevision) {
+                    updateOrders { it.copy(loadingCatalog = false, issue = OrderIssue.CATALOG) }
+                }
+            }
+        }
+    }
+
+    fun selectOrderExchange(exchange: String) {
+        val client = session ?: return
+        val scope = orderScope() ?: return
+        val flow = state.value.orders
+        val draft = flow.draft ?: return
+        if (flow.isSubmitting || flow.review != null || flow.outcome == OrderOutcome.UNKNOWN || exchange !in flow.exchanges) return
+        catalogRequest?.cancel()
+        val catalog = ++catalogRevision
+        val request = orderRevision
+        updateOrders { it.copy(draft = draft.copy(exchange = exchange, instrumentPublicId = ""), instruments = emptyList(), loadingCatalog = true, issue = null) }
+        catalogRequest = viewModelScope.launch {
+            try {
+                val instruments = client.orderInstruments(scope, exchange)
+                if (orderCurrent(client, scope, request) && catalog == catalogRevision) {
+                    updateOrders { it.copy(instruments = instruments, loadingCatalog = false, issue = null) }
+                }
+            } catch (error: CancellationException) {
+                throw error
+            } catch (_: Exception) {
+                if (orderCurrent(client, scope, request) && catalog == catalogRevision) {
+                    updateOrders { it.copy(loadingCatalog = false, issue = OrderIssue.CATALOG) }
+                }
+            }
+        }
+    }
+
+    fun retryOrderCatalog() {
+        val draft = state.value.orders.draft ?: return
+        if (draft.exchange.isEmpty()) openOrder() else selectOrderExchange(draft.exchange)
+    }
+
+    fun updateOrderDraft(draft: OrderDraft) {
+        val flow = state.value.orders
+        if (flow.draft == null || flow.review != null || flow.isSubmitting || flow.outcome == OrderOutcome.UNKNOWN ||
+            draft.exchange != flow.draft.exchange) return
+        updateOrders { it.copy(draft = draft, issue = null) }
+    }
+
+    fun reviewOrder() {
+        val flow = state.value.orders
+        val wallet = orderWallet() ?: return
+        val scope = orderScope() ?: return
+        val draft = flow.draft ?: return
+        if (!flow.canReview || "create:orders" !in scope.effectivePermissions) return
+        val instrument = flow.instruments.firstOrNull { it.instrumentPublicId == draft.instrumentPublicId }
+        val body = OrderForm.build(draft, instrument, wallet, UUID.randomUUID().toString()) ?: return
+        updateOrders { it.copy(review = OrderReview(body, wallet.label, scope), issue = null) }
+    }
+
+    fun editOrder() {
+        if (state.value.orders.isSubmitting || state.value.orders.outcome == OrderOutcome.UNKNOWN) return
+        updateOrders { it.copy(review = null, issue = null) }
+    }
+
+    fun submitOrder(retry: Boolean = false) {
+        val client = session ?: return
+        val flow = state.value.orders
+        val review = flow.review ?: return
+        if (flow.isSubmitting || (flow.outcome == OrderOutcome.UNKNOWN) != retry) return
+        val request = orderRevision
+        if (!orderCurrent(client, review.scope, request)) { resetOrderFlow(); return }
+        updateOrders { it.copy(isSubmitting = true, issue = null, isDismissed = false) }
+        orderMutation = viewModelScope.launch {
+            try {
+                client.createOrder(review.scope, review.body)
+                orderAccepted(client, review.scope, request, OrderOutcome.CREATED)
+            } catch (error: CancellationException) {
+                throw error
+            } catch (error: Exception) {
+                orderFailed(client, review.scope, request, error)
+            }
+        }
+    }
+
+    fun requestOrderCancel(order: OrderDto) {
+        val flow = state.value.orders
+        val scope = orderScope() ?: return
+        if (flow.isSubmitting || flow.draft != null || flow.outcome == OrderOutcome.UNKNOWN || state.value.isLoading ||
+            !OrderForm.canCancel(order, state.value.user) || order !in state.value.snapshot?.orders.orEmpty()) return
+        resetOrderFlow()
+        updateOrders { it.copy(pendingCancel = order, cancelScope = scope) }
+    }
+
+    fun confirmOrderCancel() {
+        val client = session ?: return
+        val flow = state.value.orders
+        val order = flow.pendingCancel ?: return
+        val scope = flow.cancelScope ?: return
+        if (flow.isSubmitting || flow.outcome == OrderOutcome.UNKNOWN) return
+        val request = orderRevision
+        if (!orderCurrent(client, scope, request) || !OrderForm.canCancel(order, state.value.user) ||
+            order !in state.value.snapshot?.orders.orEmpty()) { resetOrderFlow(); return }
+        updateOrders { it.copy(isSubmitting = true, outcome = null, issue = null) }
+        orderMutation = viewModelScope.launch {
+            try {
+                client.cancelOrder(scope, order)
+                orderAccepted(client, scope, request, OrderOutcome.CANCEL_REQUESTED)
+            } catch (error: CancellationException) {
+                throw error
+            } catch (error: Exception) {
+                orderFailed(client, scope, request, error)
+            }
+        }
+    }
+
+    private suspend fun orderAccepted(client: SessionClient, scope: OrderScope, request: Long, outcome: OrderOutcome) {
+        if (!orderCurrent(client, scope, request)) return
+        updateOrders { OrderFlowState(outcome = outcome) }
+        try {
+            val snapshot = client.snapshot()
+            if (orderCurrent(client, scope, request) && OrderScope.from(snapshot.user) == scope) {
+                mutableState.update { it.copy(snapshot = snapshot) }
+            }
+        } catch (error: CancellationException) {
+            throw error
+        } catch (_: Exception) {
+            if (orderCurrent(client, scope, request)) updateOrders { it.copy(snapshotRefreshFailed = true) }
+        }
+    }
+
+    private fun orderFailed(client: SessionClient, scope: OrderScope, request: Long, error: Exception) {
+        if (!orderCurrent(client, scope, request)) return
+        val issue = when (error) {
+            is OrderScopeChangedException, is SessionExpiredException -> OrderIssue.SESSION_CHANGED
+            is OrderRejectedException -> orderRejection(error)
+            is IllegalArgumentException -> OrderIssue.INVALID_FORM
+            is HttpException -> if (error.code() == 403) OrderIssue.FORBIDDEN else OrderIssue.REJECTED
+            else -> null
+        }
+        if (issue == OrderIssue.SESSION_CHANGED) {
+            resetOrderFlow()
+            updateOrders { it.copy(issue = issue) }
+        } else {
+            val unknown = error is OrderOutcomeUnknownException || issue == null
+            updateOrders {
+                it.copy(isSubmitting = false, issue = issue,
+                    outcome = if (unknown || it.outcome == OrderOutcome.UNKNOWN) OrderOutcome.UNKNOWN else null)
+            }
+        }
+    }
+
+    private fun orderRejection(error: OrderRejectedException): OrderIssue? = when {
+        error.statusCode == 409 -> null
+        error.statusCode == 401 -> OrderIssue.SESSION_CHANGED
+        error.statusCode == 403 -> OrderIssue.FORBIDDEN
+        error.errorCode == "unknown_instrument" -> OrderIssue.UNKNOWN_INSTRUMENT
+        error.errorCode == "instrument_market_data_only" -> OrderIssue.OBSERVATION_ONLY
+        error.errorCode == "caps_violation" -> OrderIssue.CAPS_VIOLATION
+        else -> OrderIssue.REJECTED
     }
 
     fun loadMarket(exchange: String, instrument: String, timeframe: String) {

@@ -15,9 +15,14 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.SerializationException
+import kotlinx.serialization.json.jsonObject
+import kotlinx.serialization.json.jsonPrimitive
 import okhttp3.HttpUrl
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
+import okhttp3.RequestBody
+import okio.BufferedSink
 import retrofit2.HttpException
 import retrofit2.Retrofit
 import retrofit2.converter.kotlinx.serialization.asConverterFactory
@@ -32,12 +37,17 @@ interface SessionClient {
     suspend fun logout()
     suspend fun snapshot(): DashboardSnapshot
     suspend fun candles(exchange: String, instrument: String, timeframe: String = "1h", limit: Int = 100): List<CandleDto>
+    suspend fun orderExchanges(scope: OrderScope): List<String>
+    suspend fun orderInstruments(scope: OrderScope, exchange: String): List<InstrumentDto>
+    suspend fun createOrder(scope: OrderScope, payload: CreateOrderPayload): ExecutionPlanDto
+    suspend fun cancelOrder(scope: OrderScope, order: OrderDto): ExecutionPlanDto
     fun close()
 }
 
 /** Serializes cookie rotation and scoped reads so a snapshot belongs to one wallet. */
 class SessionRepository private constructor(
     private val api: SnapperApi,
+    private val mutationApi: SnapperApi,
     private val cookies: SessionCookies,
     private val client: OkHttpClient,
 ) : SessionClient {
@@ -160,6 +170,93 @@ class SessionRepository private constructor(
         authorized(cookies.generation()) { api.candles(exchange, instrument, timeframe, limit).payload }
     }
 
+    private fun requireOrderScope(scope: OrderScope, permission: String) {
+        val current = mutableUser.value ?: throw SessionExpiredException()
+        if (OrderScope.from(current) != scope) throw OrderScopeChangedException()
+        if (!current.hasPermission(permission)) throw OrderRejectedException(403)
+        require(!scope.activeWalletPublicId.isNullOrBlank()) { "Select a wallet first" }
+    }
+
+    private suspend fun orderPreflight(scope: OrderScope, permission: String): Long {
+        requireOrderScope(scope, permission)
+        val generation = cookies.generation()
+        val profile = authorized(generation) { api.me().payload }
+        commitUser(generation, profile)
+        requireOrderScope(scope, permission)
+        return generation
+    }
+
+    override suspend fun orderExchanges(scope: OrderScope): List<String> = operation.withLock {
+        val generation = orderPreflight(scope, "create:orders")
+        requireOrderScope(scope, "read:market_data")
+        val result = authorized(generation) { api.exchanges().payload }
+        requireOrderScope(scope, "create:orders")
+        result
+    }
+
+    override suspend fun orderInstruments(scope: OrderScope, exchange: String): List<InstrumentDto> = operation.withLock {
+        require(exchange.isNotBlank())
+        val generation = orderPreflight(scope, "create:orders")
+        requireOrderScope(scope, "read:market_data")
+        val result = authorized(generation) { api.instruments(exchange).payload }
+        requireOrderScope(scope, "create:orders")
+        result
+    }
+
+    override suspend fun createOrder(scope: OrderScope, payload: CreateOrderPayload): ExecutionPlanDto = operation.withLock {
+        require(payload.walletPublicId == scope.activeWalletPublicId)
+        require(payload.idempotencyKey.isNotBlank() && payload.instrumentPublicId.isNotBlank())
+        require(payload.instrument.isNotBlank() && payload.exchange.isNotBlank())
+        require(listOfNotNull(payload.quantity, payload.price, payload.stopPrice).all(OrderNumbers::isSupported))
+        require(payload.leverage == null || payload.leverage > 0)
+        require(payload.timeInForce == "GTC" && !payload.postOnly)
+        require(payload.mode in setOf("paper", "live") && payload.side in setOf("buy", "sell"))
+        require(payload.orderType in setOf("market", "limit", "stop", "stop_limit"))
+        require(payload.orderType !in setOf("limit", "stop_limit") || payload.price != null)
+        require(payload.orderType !in setOf("stop", "stop_limit") || payload.stopPrice != null)
+        val generation = orderPreflight(scope, "create:orders")
+        requireOrderScope(scope, "read:market_data")
+        val instruments = authorized(generation) { api.instruments(payload.exchange).payload }
+        requireOrderScope(scope, "create:orders")
+        val instrument = instruments.find { it.instrumentPublicId == payload.instrumentPublicId && it.symbol == payload.instrument && it.exchange == payload.exchange }
+        if (instrument == null || !instrument.instrumentResolved) throw OrderRejectedException(422, "unknown_instrument")
+        if (!instrument.canTrade) throw OrderRejectedException(422, "instrument_market_data_only")
+        val command = envelope("create_order_command", payload)
+        dispatchOrder(generation) { mutationApi.createOrder(command).payload }
+    }
+
+    override suspend fun cancelOrder(scope: OrderScope, order: OrderDto): ExecutionPlanDto = operation.withLock {
+        val plan = requireNotNull(order.planPublicId?.takeIf { it.isNotBlank() })
+        require(order.walletPublicId == scope.activeWalletPublicId && order.walletPublicId != null)
+        require(order.status in setOf("new", "submitted", "open", "partially_filled"))
+        val generation = orderPreflight(scope, "cancel:orders")
+        val command = envelope("cancel_order_command", CancelOrderPayload())
+        dispatchOrder(generation) { mutationApi.cancelOrder(plan, command).payload }
+    }
+
+    private suspend fun dispatchOrder(generation: Long, action: suspend () -> ExecutionPlanDto): ExecutionPlanDto {
+        ensureCurrent(generation)
+        try {
+            return action().also { ensureCurrent(generation) }
+        } catch (error: CancellationException) {
+            throw error
+        } catch (error: HttpException) {
+            if (error.code() == 401) expire(generation)
+            if (error.code() in 400..499 && error.code() !in setOf(408, 425)) {
+                val code = runCatching {
+                    val body = error.response()?.errorBody()?.string() ?: return@runCatching null
+                    Json.parseToJsonElement(body).jsonObject["detail"]?.jsonObject?.get("error_code")?.jsonPrimitive?.content
+                }.getOrNull()
+                throw OrderRejectedException(error.code(), code)
+            }
+            throw OrderOutcomeUnknownException(error)
+        } catch (error: IOException) {
+            throw OrderOutcomeUnknownException(error)
+        } catch (error: SerializationException) {
+            throw OrderOutcomeUnknownException(error)
+        }
+    }
+
     override suspend fun logout() {
         if (!loggingOut.compareAndSet(false, true)) return
         try {
@@ -231,7 +328,22 @@ class SessionRepository private constructor(
             val api = Retrofit.Builder().baseUrl(url).client(client)
                 .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
                 .build().create(SnapperApi::class.java)
-            return SessionRepository(api, cookies, client)
+            val mutationClient = client.newBuilder().retryOnConnectionFailure(false)
+                .addInterceptor { chain ->
+                    val request = chain.request()
+                    val body = requireNotNull(request.body)
+                    val oneShot = object : RequestBody() {
+                        override fun contentType() = body.contentType()
+                        override fun contentLength() = body.contentLength()
+                        override fun isOneShot() = true
+                        override fun writeTo(sink: BufferedSink) = body.writeTo(sink)
+                    }
+                    chain.proceed(request.newBuilder().method(request.method, oneShot).build())
+                }.build()
+            val mutationApi = Retrofit.Builder().baseUrl(url).client(mutationClient)
+                .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
+                .build().create(SnapperApi::class.java)
+            return SessionRepository(api, mutationApi, cookies, client)
         }
     }
 }

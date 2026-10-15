@@ -12,13 +12,21 @@ Native Android client for the [Snapper](https://github.com/mateusz-klatt/snapper
 - Configure a backend origin before login; switching backend removes the previous session and displayed account data.
 - Select a wallet through the backend session contract and request wallet-scoped positions and orders.
 - View current positions, recent orders, alert history and historical candle charts.
+- Review and submit manual orders for a selected wallet using execution-capable instruments.
+- Confirm cancellation of eligible open orders.
 - Show only the screens allowed by the session's effective permissions.
 - English and Polish interfaces, with light and dark themes.
 - Exact decimal quantities, prices and P&L; chart drawing converts coordinates separately.
 
-This first version displays REST snapshots, refreshed on foreground entry or with Refresh. Orders and alerts show up to 100 recent records; positions are the current backend snapshot. Market charts request 100 candles. It does not yet include order submission/cancellation, the other iOS management screens, WebSocket streaming or Android push notifications.
+The app displays REST snapshots, refreshed on foreground entry or with Refresh. Orders and alerts show up to 100 recent records; positions are the current backend snapshot. Market charts request 100 candles. Other iOS management screens, WebSocket streaming and Android push notifications remain unavailable.
 
 The existing backend's device registration and delivery are APNs-only. FCM requires an Android provider contract and delivery integration before an Android device token can be registered; this app does not submit FCM tokens to the iOS endpoint.
+
+## Manual orders
+
+Order entry requires a selected wallet and `create:orders` plus `read:market_data`. The wallet determines paper or live mode. Review buy/sell market, limit, stop or stop-limit orders before confirming; leverage and reduce-only are optional. The exchange and instrument lists come from the backend, and observation-only instruments cannot be selected for trading.
+
+Cancellation requires `cancel:orders`, an eligible open order in the selected wallet and its execution plan. Acceptance means cancellation was requested, not that the venue has cancelled the order. After an uncertain submission, check status; an explicit creation retry retains the same reviewed payload and idempotency key. Dismissing the dialog does not discard that uncertain intent, and a later rejected retry does not resolve it. Accepted commands remain accepted if the subsequent snapshot refresh fails.
 
 ## Open in Android Studio
 
@@ -39,6 +47,8 @@ export ANDROID_HOME=/path/to/android-sdk
 ```
 
 The APK is `app/build/outputs/apk/debug/app-debug.apk`. The Android workflow also publishes a `snapper-debug` artifact. Debug builds use application ID `ch.snapper.android.debug`; release builds use `ch.snapper.android` and require your own signing configuration for distribution.
+
+See [Android releases](RELEASING.md) for the manual release workflow, unsigned bundle builds, signed bundles verified against an upload-certificate pin, and separately configured Google Play publication.
 
 Run the offline Compose interaction tests on a connected emulator or device:
 
@@ -84,7 +94,7 @@ Session encryption keys are specific to the backend origin and require device au
 
 - A single application module with Compose screens, a ViewModel/StateFlow UI state, and injected session and settings dependencies.
 - Retrofit, OkHttp and kotlinx.serialization use the backend's typed `payload` envelopes, cookie authentication and URL-scoped CSRF headers.
-- Session rotations and wallet operations are serialized; 401 requests receive one refresh-and-replay attempt. Backend changes, logout and revoked permissions discard stale account data.
+- Session rotations and wallet operations are serialized. Authenticated reads can refresh expired credentials and retry once; order mutations are never replayed automatically. Backend, session, wallet and permission changes discard stale account data and order drafts.
 - Persistent cookies use AES-GCM with a device-authenticated, origin-specific Android Keystore key and private backup-excluded storage. DataStore contains only the backend and language preferences.
 - Backend and network failures are visible; an unavailable resource is not silently shown as an empty successful result.
 - Room, WorkManager, Hilt and Firebase are added only when an implemented feature needs them.

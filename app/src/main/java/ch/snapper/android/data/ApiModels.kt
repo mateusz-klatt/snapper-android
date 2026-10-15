@@ -66,6 +66,7 @@ data class OrderDto(
     @SerialName("created_at") val createdAt: String,
     val price: BigDecimal? = null,
     @SerialName("average_price") val averagePrice: BigDecimal? = null,
+    @SerialName("plan_public_id") val planPublicId: String? = null,
     @SerialName("wallet_public_id") val walletPublicId: String? = null,
 )
 

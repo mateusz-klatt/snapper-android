@@ -26,6 +26,7 @@ data class AppUiState(
     val isRestoring: Boolean = true,
     val error: UiError? = null,
     val market: MarketState = MarketState(),
+    val orders: OrderFlowState = OrderFlowState(),
 )
 
 data class AppActions(
@@ -37,4 +38,5 @@ data class AppActions(
     val selectLanguage: (String) -> Unit,
     val clearError: () -> Unit,
     val loadMarket: (String, String, String) -> Unit,
+    val orders: OrderActions = OrderActions(),
 )

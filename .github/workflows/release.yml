@@ -1,0 +1,226 @@
+name: Android release
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Build an artifact, upload a Play draft, or release to Play
+        type: choice
+        options: [build, play-draft, play-release]
+        default: build
+      track:
+        description: Google Play destination (used only by Play modes)
+        type: choice
+        options: [internal, beta, production]
+        default: internal
+      version_code:
+        description: Positive unused Play version code (blank uses 1000 + run number)
+        type: string
+        default: ''
+      version_name:
+        description: Release SemVer
+        type: string
+        default: '0.2.0'
+      release_notes:
+        description: English release notes (maximum 500 characters)
+        type: string
+        default: 'Native Android order entry and cancellation.'
+
+concurrency:
+  group: android-play-release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    if: github.ref == 'refs/heads/master'
+    permissions:
+      contents: read
+      actions: read
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Validate inputs and signing prerequisites
+        id: config
+        shell: bash
+        env:
+          RELEASE_MODE: ${{ inputs.mode }}
+          RELEASE_TRACK: ${{ inputs.track }}
+          VERSION_CODE_INPUT: ${{ inputs.version_code }}
+          VERSION_NAME_INPUT: ${{ inputs.version_name }}
+          RELEASE_NOTES: ${{ inputs.release_notes }}
+          RELEASE_RUN_NUMBER: ${{ github.run_number }}
+          ANDROID_UPLOAD_KEYSTORE_BASE64: ${{ secrets.ANDROID_UPLOAD_KEYSTORE_BASE64 }}
+          ANDROID_UPLOAD_STORE_PASSWORD: ${{ secrets.ANDROID_UPLOAD_STORE_PASSWORD }}
+          ANDROID_UPLOAD_KEY_ALIAS: ${{ secrets.ANDROID_UPLOAD_KEY_ALIAS }}
+          ANDROID_UPLOAD_KEY_PASSWORD: ${{ secrets.ANDROID_UPLOAD_KEY_PASSWORD }}
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+          ANDROID_UPLOAD_CERTIFICATE_SHA256: ${{ vars.ANDROID_UPLOAD_CERTIFICATE_SHA256 }}
+        run: |
+          set -euo pipefail
+          case "$RELEASE_MODE" in build|play-draft|play-release) ;; *) exit 1 ;; esac
+          case "$RELEASE_TRACK" in internal|beta|production) ;; *) exit 1 ;; esac
+          missing=()
+          present=0
+          for name in ANDROID_UPLOAD_KEYSTORE_BASE64 ANDROID_UPLOAD_STORE_PASSWORD ANDROID_UPLOAD_KEY_ALIAS ANDROID_UPLOAD_KEY_PASSWORD; do
+            if [[ -n "${!name}" ]]; then present=$((present + 1)); else missing+=("$name"); fi
+          done
+          if [[ "$RELEASE_MODE" != build && -z "$GOOGLE_PLAY_SERVICE_ACCOUNT_JSON" ]]; then
+            missing+=(GOOGLE_PLAY_SERVICE_ACCOUNT_JSON)
+          fi
+          if [[ "$RELEASE_MODE" != build || "$present" -gt 0 ]]; then
+            if [[ "${#missing[@]}" -gt 0 ]]; then printf 'Missing required secret: %s\n' "${missing[@]}"; exit 1; fi
+          fi
+          if [[ "$present" == 4 && ! "$ANDROID_UPLOAD_CERTIFICATE_SHA256" =~ ^[0-9a-fA-F]{64}$ ]]; then
+            echo 'Signed builds require repository variable ANDROID_UPLOAD_CERTIFICATE_SHA256 containing exactly 64 hexadecimal characters.'
+            exit 1
+          fi
+          code="${VERSION_CODE_INPUT:-$((1000 + RELEASE_RUN_NUMBER))}"
+          export RELEASE_VERSION_CODE="$code"
+          python3 - <<'PY'
+          import os
+          import re
+          code = os.environ['RELEASE_VERSION_CODE']
+          name = os.environ['VERSION_NAME_INPUT']
+          if not re.fullmatch(r'[1-9][0-9]{0,9}', code) or int(code) > 2100000000:
+              raise SystemExit('Version code must be an integer between 1 and 2100000000')
+          pattern = r'(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)(-(0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*)(\.(0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*))*)?(\+[0-9A-Za-z-]+(\.[0-9A-Za-z-]+)*)?'
+          if len(name) > 100 or not re.fullmatch(pattern, name):
+              raise SystemExit('Version name must be a SemVer string of at most 100 characters')
+          if not 1 <= len(os.environ['RELEASE_NOTES']) <= 500:
+              raise SystemExit('Release notes must contain 1 to 500 characters')
+          PY
+          printf 'SNAPPER_VERSION_CODE=%s\nSNAPPER_VERSION_NAME=%s\n' "$code" "$VERSION_NAME_INPUT" >> "$GITHUB_ENV"
+          printf 'signed=%s\n' "$([[ "$present" == 4 ]] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+          umask 077
+          mkdir -p "$RUNNER_TEMP/snapper-release-private"
+          if [[ "$present" == 4 ]]; then
+            printf '%s' "$ANDROID_UPLOAD_KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/snapper-release-private/upload.jks"
+            test -s "$RUNNER_TEMP/snapper-release-private/upload.jks"
+          fi
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Require successful native CI and secret scan for this exact commit
+        if: inputs.mode != 'build'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_REPOSITORY: ${{ github.repository }}
+          RELEASE_SHA: ${{ github.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          for workflow in ci.yml gitleaks.yml; do
+            result=$(gh api --method GET "repos/$RELEASE_REPOSITORY/actions/workflows/$workflow/runs" -f head_sha="$RELEASE_SHA" -f branch=master -f event=push -f per_page=100)
+            if ! jq -e --arg sha "$RELEASE_SHA" '.workflow_runs | sort_by(.run_number, .run_attempt) | last | .head_sha == $sha and .head_branch == "master" and .event == "push" and .conclusion == "success"' <<< "$result" > /dev/null; then
+              printf 'Exact commit must pass %s on master before Play upload.\n' "$workflow"
+              exit 1
+            fi
+          done
+      - uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Install Android command-line tools
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --proto '=https' --proto-redir '=https' --fail --location --retry 2 https://dl.google.com/android/repository/commandlinetools-linux-16111833_latest.zip --output "$RUNNER_TEMP/android-tools.zip"
+          echo "0877a1d048fe4a24efe2eff536ca4223f7adeb58648bb81909d33c446918cfa8  $RUNNER_TEMP/android-tools.zip" | sha256sum --check
+          unzip -q "$RUNNER_TEMP/android-tools.zip" -d "$RUNNER_TEMP/android-tools"
+          mkdir -p "$ANDROID_HOME/cmdline-tools"
+          mv "$RUNNER_TEMP/android-tools/cmdline-tools" "$ANDROID_HOME/cmdline-tools/snapper-release"
+          "$ANDROID_HOME/cmdline-tools/snapper-release/bin/sdkmanager" --sdk_root="$ANDROID_HOME" --licenses < <(yes)
+          "$ANDROID_HOME/cmdline-tools/snapper-release/bin/sdkmanager" --sdk_root="$ANDROID_HOME" 'platforms;android-37.0' 'build-tools;36.0.0'
+      - name: Compile, test, lint and bundle release
+        env:
+          SIGNED_BUILD: ${{ steps.config.outputs.signed }}
+          ANDROID_UPLOAD_STORE_PASSWORD: ${{ secrets.ANDROID_UPLOAD_STORE_PASSWORD }}
+          ANDROID_UPLOAD_KEY_ALIAS: ${{ secrets.ANDROID_UPLOAD_KEY_ALIAS }}
+          ANDROID_UPLOAD_KEY_PASSWORD: ${{ secrets.ANDROID_UPLOAD_KEY_PASSWORD }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "$SIGNED_BUILD" == true ]]; then
+            export ANDROID_UPLOAD_KEYSTORE_PATH="$RUNNER_TEMP/snapper-release-private/upload.jks"
+          fi
+          ./gradlew --no-daemon :app:assembleDebug :app:testDebugUnitTest :app:lintDebug :app:lintRelease
+          ./gradlew --no-daemon :app:bundleRelease
+      - name: Verify release signature and pinned upload certificate
+        env:
+          SIGNED_BUILD: ${{ steps.config.outputs.signed }}
+          ANDROID_UPLOAD_CERTIFICATE_SHA256: ${{ vars.ANDROID_UPLOAD_CERTIFICATE_SHA256 }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          bundle=app/build/outputs/bundle/release/app-release.aab
+          fingerprint=unsigned
+          if [[ "$SIGNED_BUILD" == true ]]; then
+            verification=$(jarsigner -J-Duser.language=en -J-Duser.country=US -verify "$bundle")
+            if ! grep -Fq 'jar verified.' <<< "$verification" || grep -Eiq 'unsigned entries|jar is unsigned|treated as unsigned' <<< "$verification"; then
+              echo 'Release bundle must have a valid JAR signature covering its contents.'
+              exit 1
+            fi
+            fingerprint=$(keytool -printcert -jarfile "$bundle" -rfc | openssl x509 -outform DER | sha256sum | cut -d ' ' -f 1)
+            if [[ "$fingerprint" != "${ANDROID_UPLOAD_CERTIFICATE_SHA256,,}" ]]; then
+              echo 'Release upload certificate does not match ANDROID_UPLOAD_CERTIFICATE_SHA256.'
+              exit 1
+            fi
+          fi
+          printf 'UPLOAD_CERTIFICATE_SHA256=%s\n' "$fingerprint" >> "$GITHUB_ENV"
+      - name: Prepare release artifact and provenance
+        env:
+          SIGNED_BUILD: ${{ steps.config.outputs.signed }}
+          RELEASE_SHA: ${{ github.sha }}
+          RELEASE_REPOSITORY: ${{ github.repository }}
+          RELEASE_RUN_ID: ${{ github.run_id }}
+          RELEASE_RUN_ATTEMPT: ${{ github.run_attempt }}
+          RELEASE_MODE: ${{ inputs.mode }}
+          RELEASE_TRACK: ${{ inputs.track }}
+          RELEASE_NOTES: ${{ inputs.release_notes }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release-artifact/whatsnew
+          cp app/build/outputs/bundle/release/app-release.aab release-artifact/
+          cp app/build/outputs/mapping/release/mapping.txt release-artifact/
+          printf '%s\n' "$RELEASE_NOTES" > release-artifact/whatsnew/whatsnew-en-US
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          fields = ['SIGNED_BUILD', 'UPLOAD_CERTIFICATE_SHA256', 'RELEASE_SHA', 'RELEASE_REPOSITORY', 'RELEASE_RUN_ID', 'RELEASE_RUN_ATTEMPT', 'RELEASE_MODE', 'RELEASE_TRACK', 'SNAPPER_VERSION_CODE', 'SNAPPER_VERSION_NAME']
+          Path('release-artifact/provenance.json').write_text(json.dumps({name.lower(): os.environ[name] for name in fields}, indent=2) + '\n')
+          PY
+          printf '%s\n' "$UPLOAD_CERTIFICATE_SHA256" > release-artifact/upload-certificate-sha256.txt
+          (cd release-artifact && sha256sum app-release.aab mapping.txt provenance.json upload-certificate-sha256.txt whatsnew/whatsnew-en-US > SHA256SUMS)
+          printf 'Release artifact: version %s (%s), signed=%s, commit=%s\n' "$SNAPPER_VERSION_NAME" "$SNAPPER_VERSION_CODE" "$SIGNED_BUILD" "$RELEASE_SHA" >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload release bundle, mapping and provenance
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: android-release-${{ env.SNAPPER_VERSION_CODE }}-${{ github.run_attempt }}
+          path: release-artifact/
+          if-no-files-found: error
+          retention-days: 30
+      - name: Prepare Google Play credentials
+        if: inputs.mode != 'build'
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          umask 077
+          printf '%s' "$GOOGLE_PLAY_SERVICE_ACCOUNT_JSON" > "$RUNNER_TEMP/snapper-release-private/play.json"
+      - name: Upload to Google Play
+        if: inputs.mode != 'build'
+        uses: r0adkll/upload-google-play@e738b9dd8f2476ea806d921b64aacd24f34515a5 # v1.1.5
+        with:
+          serviceAccountJson: ${{ runner.temp }}/snapper-release-private/play.json
+          packageName: ch.snapper.android
+          releaseFiles: release-artifact/app-release.aab
+          mappingFile: release-artifact/mapping.txt
+          whatsNewDirectory: release-artifact/whatsnew
+          releaseName: ${{ env.SNAPPER_VERSION_NAME }}
+          track: ${{ inputs.track }}
+          status: ${{ inputs.mode == 'play-draft' && 'draft' || 'completed' }}
+      - name: Remove temporary credentials
+        if: always()
+        shell: bash
+        run: rm -rf -- "$RUNNER_TEMP/snapper-release-private"

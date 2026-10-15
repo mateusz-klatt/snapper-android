@@ -7,6 +7,13 @@ import ch.snapper.android.data.OrderDto
 import ch.snapper.android.data.SessionClient
 import ch.snapper.android.data.UserDto
 import ch.snapper.android.data.WalletDto
+import ch.snapper.android.data.CreateOrderPayload
+import ch.snapper.android.data.ExecutionPlanDto
+import ch.snapper.android.data.InstrumentDto
+import ch.snapper.android.data.OrderScope
+import ch.snapper.android.data.OrderRejectedException
+import ch.snapper.android.data.OrderOutcomeUnknownException
+import ch.snapper.android.data.OrderScopeChangedException
 import java.io.IOException
 import java.math.BigDecimal
 import kotlinx.coroutines.Dispatchers
@@ -228,6 +235,417 @@ class SnapperViewModelTest {
         advanceUntilIdle()
         assertTrue(model.state.value.market.candles.isEmpty())
     }
+
+    private fun tradingProfile(): UserDto = profile().copy(effectivePermissions = listOf("read:market_data", "create:orders", "cancel:orders"))
+
+    private fun readyOrder(model: SnapperViewModel) {
+        model.openOrder()
+        dispatcher.scheduler.advanceUntilIdle()
+        val draft = requireNotNull(model.state.value.orders.draft)
+        model.updateOrderDraft(draft.copy(instrumentPublicId = "instrument-a", quantity = "0.1234567890123456789", price = "100"))
+        model.reviewOrder()
+    }
+
+    @Test
+    fun creationRequiresKnownSelectedWalletAndExplicitPermissionsWithoutFallback() = runTest(dispatcher) {
+        client.restoredUser = tradingProfile().copy(role = "admin", effectivePermissions = listOf("read:market_data"))
+        val model = model()
+        advanceUntilIdle()
+        model.openOrder()
+        advanceUntilIdle()
+        assertNull(model.state.value.orders.draft)
+        assertEquals(0, client.exchangeCalls)
+        client.user.value = tradingProfile().copy(activeWalletPublicId = null)
+        runCurrent()
+        model.openOrder()
+        assertNull(model.state.value.orders.draft)
+        client.user.value = tradingProfile()
+        runCurrent()
+        model.openOrder()
+        assertNull(model.state.value.orders.draft)
+        model.refresh()
+        advanceUntilIdle()
+        client.exchangeAction = { emptyList() }
+        model.openOrder()
+        advanceUntilIdle()
+        assertTrue(model.state.value.orders.exchanges.isEmpty())
+        assertEquals("", model.state.value.orders.draft?.exchange)
+        assertFalse(model.state.value.orders.canReview)
+        assertTrue(client.instrumentRequests.isEmpty())
+    }
+
+    @Test
+    fun duplicateSubmitSendsOneImmutableIntentAndAcceptanceSurvivesRefreshFailure() = runTest(dispatcher) {
+        client.restoredUser = tradingProfile()
+        val model = model()
+        advanceUntilIdle()
+        readyOrder(model)
+        val review = requireNotNull(model.state.value.orders.review)
+        client.createAction = { delay(100); plan() }
+        client.beforeSnapshot = { throw IOException("Snapshot unavailable") }
+        model.submitOrder()
+        model.submitOrder()
+        model.updateOrderDraft(OrderDraft(quantity = "99"))
+        advanceUntilIdle()
+        assertEquals(listOf(review.body), client.created)
+        assertEquals(OrderOutcome.CREATED, model.state.value.orders.outcome)
+        assertTrue(model.state.value.orders.snapshotRefreshFailed)
+        assertNull(model.state.value.orders.review)
+        assertNull(model.state.value.error)
+    }
+
+    @Test
+    fun ambiguousOutcomeFreezesIntentAndOnlyExplicitRetryReusesIt() = runTest(dispatcher) {
+        client.restoredUser = tradingProfile()
+        val model = model()
+        advanceUntilIdle()
+        readyOrder(model)
+        val review = requireNotNull(model.state.value.orders.review)
+        client.createAction = { throw OrderOutcomeUnknownException(IOException("Lost response")) }
+        model.submitOrder()
+        advanceUntilIdle()
+        assertEquals(OrderOutcome.UNKNOWN, model.state.value.orders.outcome)
+        model.editOrder()
+        model.updateOrderDraft(OrderDraft(quantity = "99"))
+        model.openOrder()
+        model.submitOrder()
+        advanceUntilIdle()
+        assertEquals(review, model.state.value.orders.review)
+        assertEquals(1, client.created.size)
+        model.actions.orders.dismiss()
+        assertTrue(model.state.value.orders.isDismissed)
+        assertEquals(review, model.state.value.orders.review)
+        model.openOrder()
+        assertFalse(model.state.value.orders.isDismissed)
+        assertEquals(review, model.state.value.orders.review)
+        client.createAction = { plan() }
+        model.submitOrder(retry = true)
+        advanceUntilIdle()
+        assertEquals(listOf(review.body, review.body), client.created)
+        assertEquals(OrderOutcome.CREATED, model.state.value.orders.outcome)
+    }
+
+    @Test
+    fun idempotencyConflictStaysAmbiguousAndKnownRejectionCanBeEditedWithNewKey() = runTest(dispatcher) {
+        client.restoredUser = tradingProfile()
+        val model = model()
+        advanceUntilIdle()
+        readyOrder(model)
+        val first = requireNotNull(model.state.value.orders.review)
+        client.createAction = { throw OrderRejectedException(422, "caps_violation") }
+        model.submitOrder()
+        advanceUntilIdle()
+        assertEquals(OrderIssue.CAPS_VIOLATION, model.state.value.orders.issue)
+        model.editOrder()
+        model.updateOrderDraft(requireNotNull(model.state.value.orders.draft).copy(quantity = "2"))
+        model.reviewOrder()
+        assertTrue(first.body.idempotencyKey != model.state.value.orders.review?.body?.idempotencyKey)
+        client.createAction = { throw OrderRejectedException(409) }
+        model.submitOrder()
+        advanceUntilIdle()
+        assertEquals(OrderOutcome.UNKNOWN, model.state.value.orders.outcome)
+        model.editOrder()
+        assertTrue(model.state.value.orders.review != null)
+    }
+
+    @Test
+    fun rejectedRetriesCannotResolveAnEarlierUnknownSubmissionOrRemintItsKey() = runTest(dispatcher) {
+        client.restoredUser = tradingProfile()
+        val model = model()
+        advanceUntilIdle()
+        readyOrder(model)
+        val review = requireNotNull(model.state.value.orders.review)
+        client.createAction = { throw OrderOutcomeUnknownException(IOException("Lost first response")) }
+        model.submitOrder()
+        advanceUntilIdle()
+        val rejections = listOf(
+            OrderRejectedException(422, "instrument_market_data_only") to OrderIssue.OBSERVATION_ONLY,
+            OrderRejectedException(403) to OrderIssue.FORBIDDEN,
+        )
+        for ((rejection, issue) in rejections) {
+            client.createAction = { delay(100); throw rejection }
+            model.submitOrder(retry = true)
+            assertEquals(OrderOutcome.UNKNOWN, model.state.value.orders.outcome)
+            assertTrue(model.state.value.orders.isSubmitting)
+            model.submitOrder(retry = true)
+            advanceUntilIdle()
+            assertEquals(OrderOutcome.UNKNOWN, model.state.value.orders.outcome)
+            assertEquals(issue, model.state.value.orders.issue)
+            assertFalse(model.state.value.orders.isSubmitting)
+            model.editOrder()
+            model.updateOrderDraft(requireNotNull(model.state.value.orders.draft).copy(quantity = "9"))
+            model.actions.orders.dismiss()
+            assertTrue(model.state.value.orders.isDismissed)
+            model.openOrder()
+            model.reviewOrder()
+            model.submitOrder()
+            advanceUntilIdle()
+            assertEquals(review, model.state.value.orders.review)
+            assertEquals(OrderOutcome.UNKNOWN, model.state.value.orders.outcome)
+            assertFalse(model.state.value.orders.isDismissed)
+        }
+        assertEquals(List(3) { review.body }, client.created)
+        client.createAction = { plan() }
+        model.submitOrder(retry = true)
+        advanceUntilIdle()
+        assertEquals(List(4) { review.body }, client.created)
+        assertEquals(OrderOutcome.CREATED, model.state.value.orders.outcome)
+        assertNull(model.state.value.orders.review)
+    }
+
+    @Test
+    fun realPermissionScopeChangeStillClearsHistoricallyUnknownIntentDuringRetry() = runTest(dispatcher) {
+        client.restoredUser = tradingProfile()
+        val model = model()
+        advanceUntilIdle()
+        readyOrder(model)
+        client.createAction = { throw OrderOutcomeUnknownException(IOException("Lost response")) }
+        model.submitOrder()
+        advanceUntilIdle()
+        client.createAction = {
+            withContext(NonCancellable) {
+                delay(100)
+                throw OrderRejectedException(403)
+            }
+        }
+        model.submitOrder(retry = true)
+        runCurrent()
+        client.user.value = tradingProfile().copy(effectivePermissions = emptyList())
+        runCurrent()
+        assertEquals(OrderFlowState(), model.state.value.orders)
+        advanceUntilIdle()
+        assertEquals(OrderFlowState(), model.state.value.orders)
+    }
+
+    @Test
+    fun scopeChangesDropLateMutationSuccessAndFailure() = runTest(dispatcher) {
+        for (fail in listOf(false, true)) {
+            client.restoredUser = tradingProfile()
+            val model = model()
+            advanceUntilIdle()
+            readyOrder(model)
+            client.createAction = {
+                withContext(NonCancellable) {
+                    delay(100)
+                    if (fail) throw IOException("Late failure")
+                    plan()
+                }
+            }
+            model.submitOrder()
+            runCurrent()
+            client.user.value = tradingProfile().copy(effectivePermissions = emptyList())
+            runCurrent()
+            assertEquals(OrderFlowState(), model.state.value.orders)
+            advanceUntilIdle()
+            assertEquals(OrderFlowState(), model.state.value.orders)
+        }
+    }
+
+    @Test
+    fun walletChangeClearsReviewedIntentBeforeSelectionFinishes() = runTest(dispatcher) {
+        client.restoredUser = tradingProfile()
+        val model = model()
+        advanceUntilIdle()
+        readyOrder(model)
+        client.selectionAction = { delay(100); tradingProfile().copy(activeWalletPublicId = it) }
+        model.selectWallet("wallet-b")
+        assertEquals(OrderFlowState(), model.state.value.orders)
+        model.submitOrder()
+        advanceUntilIdle()
+        assertTrue(client.created.isEmpty())
+    }
+
+    @Test
+    fun exchangeRoundTripRejectsLateSuccessAndLateFailure() = runTest(dispatcher) {
+        client.restoredUser = tradingProfile()
+        client.exchangeAction = { listOf("kraken", "other") }
+        val model = model()
+        advanceUntilIdle()
+        model.openOrder()
+        advanceUntilIdle()
+        var count = 0
+        client.instrumentAction = { exchange ->
+            val call = ++count
+            withContext(NonCancellable) {
+                delay(if (call == 3) 10 else 100)
+                if (call == 2) throw IOException("Old exchange failed")
+                listOf(instrument(exchange).copy(symbol = "version-$call"))
+            }
+        }
+        model.selectOrderExchange("kraken")
+        runCurrent()
+        model.selectOrderExchange("other")
+        runCurrent()
+        model.selectOrderExchange("kraken")
+        advanceUntilIdle()
+        assertEquals("version-3", model.state.value.orders.instruments.single().symbol)
+        assertNull(model.state.value.orders.issue)
+        assertFalse(model.state.value.orders.loadingCatalog)
+    }
+
+    @Test
+    fun catalogueFailureRecoversAndLogoutDropsUncooperativeLookup() = runTest(dispatcher) {
+        client.restoredUser = tradingProfile()
+        client.exchangeAction = { throw IOException("No catalogue") }
+        val model = model()
+        advanceUntilIdle()
+        model.openOrder()
+        advanceUntilIdle()
+        assertEquals(OrderIssue.CATALOG, model.state.value.orders.issue)
+        client.exchangeAction = { listOf("kraken") }
+        model.retryOrderCatalog()
+        advanceUntilIdle()
+        assertNull(model.state.value.orders.issue)
+        assertEquals("BTC-USD", model.state.value.orders.instruments.single().symbol)
+        client.instrumentAction = { withContext(NonCancellable) { delay(100); listOf(instrument(it)) } }
+        model.selectOrderExchange("kraken")
+        runCurrent()
+        model.logout()
+        advanceUntilIdle()
+        assertEquals(OrderFlowState(), model.state.value.orders)
+    }
+
+    @Test
+    fun cancelRequiresCurrentOpenRowAndConfirmationAndRejectsDoubleTap() = runTest(dispatcher) {
+        client.restoredUser = tradingProfile()
+        val model = model()
+        advanceUntilIdle()
+        val order = requireNotNull(model.state.value.snapshot).orders.single()
+        model.requestOrderCancel(order.copy(planPublicId = null))
+        assertNull(model.state.value.orders.pendingCancel)
+        model.requestOrderCancel(order.copy(status = "filled"))
+        assertNull(model.state.value.orders.pendingCancel)
+        model.requestOrderCancel(order)
+        assertEquals(order, model.state.value.orders.pendingCancel)
+        assertTrue(client.cancelled.isEmpty())
+        client.cancelAction = { delay(100); plan() }
+        model.confirmOrderCancel()
+        model.confirmOrderCancel()
+        advanceUntilIdle()
+        assertEquals(listOf(order), client.cancelled)
+        assertEquals(OrderOutcome.CANCEL_REQUESTED, model.state.value.orders.outcome)
+    }
+
+    @Test
+    fun cancelConfirmationRechecksRowAndScopeAndAmbiguousCancelDoesNotRetry() = runTest(dispatcher) {
+        client.restoredUser = tradingProfile()
+        val model = model()
+        advanceUntilIdle()
+        val order = requireNotNull(model.state.value.snapshot).orders.single()
+        model.requestOrderCancel(order)
+        client.orderStatus = "filled"
+        model.refresh()
+        advanceUntilIdle()
+        model.confirmOrderCancel()
+        assertTrue(client.cancelled.isEmpty())
+        client.orderStatus = "open"
+        model.refresh()
+        advanceUntilIdle()
+        model.requestOrderCancel(order)
+        client.cancelAction = { throw OrderOutcomeUnknownException(IOException("No reply")) }
+        model.confirmOrderCancel()
+        advanceUntilIdle()
+        assertEquals(OrderOutcome.UNKNOWN, model.state.value.orders.outcome)
+        model.confirmOrderCancel()
+        model.submitOrder(retry = true)
+        advanceUntilIdle()
+        assertEquals(1, client.cancelled.size)
+    }
+
+    @Test
+    fun knownRejectionCodesRemainVisibleWithoutAutomaticRetries() = runTest(dispatcher) {
+        client.restoredUser = tradingProfile()
+        val model = model()
+        advanceUntilIdle()
+        readyOrder(model)
+        val failures = listOf(
+            OrderRejectedException(403) to OrderIssue.FORBIDDEN,
+            OrderRejectedException(422, "unknown_instrument") to OrderIssue.UNKNOWN_INSTRUMENT,
+            OrderRejectedException(422, "instrument_market_data_only") to OrderIssue.OBSERVATION_ONLY,
+            OrderRejectedException(400) to OrderIssue.REJECTED,
+            IllegalArgumentException("Invalid payload") to OrderIssue.INVALID_FORM,
+        )
+        for ((failure, issue) in failures) {
+            client.createAction = { throw failure }
+            model.submitOrder()
+            advanceUntilIdle()
+            assertEquals(issue, model.state.value.orders.issue)
+            assertNull(model.state.value.orders.outcome)
+        }
+        assertEquals(failures.size, client.created.size)
+        client.createAction = { throw OrderScopeChangedException() }
+        model.submitOrder()
+        advanceUntilIdle()
+        assertNull(model.state.value.orders.review)
+        assertEquals(OrderIssue.SESSION_CHANGED, model.state.value.orders.issue)
+        model.actions.orders.clearResult()
+        assertEquals(OrderFlowState(), model.state.value.orders)
+    }
+
+    @Test
+    fun revokedScopeBeforeObserverRunsCannotSubmitCreateOrCancel() = runTest(dispatcher) {
+        client.restoredUser = tradingProfile()
+        val model = model()
+        advanceUntilIdle()
+        readyOrder(model)
+        client.user.value = tradingProfile().copy(activeWalletPublicId = "wallet-b")
+        model.submitOrder()
+        assertEquals(OrderFlowState(), model.state.value.orders)
+        advanceUntilIdle()
+        assertTrue(client.created.isEmpty())
+        client.user.value = tradingProfile()
+        advanceUntilIdle()
+        model.refresh()
+        advanceUntilIdle()
+        val order = requireNotNull(model.state.value.snapshot).orders.single()
+        model.requestOrderCancel(order)
+        client.user.value = tradingProfile().copy(effectivePermissions = emptyList())
+        model.confirmOrderCancel()
+        assertEquals(OrderFlowState(), model.state.value.orders)
+        advanceUntilIdle()
+        assertTrue(client.cancelled.isEmpty())
+    }
+
+    @Test
+    fun reviewedDraftIsDismissibleButBusySubmissionAndLateLogoutResultCannotRestoreIt() = runTest(dispatcher) {
+        client.restoredUser = tradingProfile()
+        val model = model()
+        advanceUntilIdle()
+        readyOrder(model)
+        model.actions.orders.dismiss()
+        assertEquals(OrderFlowState(), model.state.value.orders)
+        readyOrder(model)
+        client.createAction = { withContext(NonCancellable) { delay(100); plan() } }
+        model.submitOrder()
+        runCurrent()
+        model.actions.orders.dismiss()
+        assertTrue(model.state.value.orders.isSubmitting)
+        model.logout()
+        assertEquals(OrderFlowState(), model.state.value.orders)
+        advanceUntilIdle()
+        assertEquals(OrderFlowState(), model.state.value.orders)
+        assertNull(model.state.value.user)
+    }
+
+    @Test
+    fun instrumentsFailureCanRetryWithoutKeepingOldSelection() = runTest(dispatcher) {
+        client.restoredUser = tradingProfile()
+        val model = model()
+        advanceUntilIdle()
+        readyOrder(model)
+        model.editOrder()
+        client.instrumentAction = { throw IOException("Unavailable") }
+        model.selectOrderExchange("kraken")
+        assertEquals("", model.state.value.orders.draft?.instrumentPublicId)
+        assertTrue(model.state.value.orders.instruments.isEmpty())
+        advanceUntilIdle()
+        assertEquals(OrderIssue.CATALOG, model.state.value.orders.issue)
+        client.instrumentAction = { listOf(instrument(it)) }
+        model.retryOrderCatalog()
+        advanceUntilIdle()
+        assertNull(model.state.value.orders.issue)
+        assertEquals(1, model.state.value.orders.instruments.size)
+    }
 }
 
 private class FakeSettingsStore : SettingsStore {
@@ -248,6 +666,15 @@ private class FakeSessionClient : SessionClient {
     var logoutAction: suspend () -> Unit = {}
     var candleAction: suspend (String) -> List<CandleDto> = { listOf(candle(it)) }
     var beforeSnapshot: suspend () -> Unit = {}
+    var exchangeAction: suspend () -> List<String> = { listOf("kraken") }
+    var instrumentAction: suspend (String) -> List<InstrumentDto> = { listOf(instrument(it)) }
+    var createAction: suspend () -> ExecutionPlanDto = { plan() }
+    var cancelAction: suspend () -> ExecutionPlanDto = { plan() }
+    var orderStatus = "open"
+    var exchangeCalls = 0
+    val instrumentRequests = mutableListOf<String>()
+    val created = mutableListOf<CreateOrderPayload>()
+    val cancelled = mutableListOf<OrderDto>()
     var snapshotCalls = 0
     var logoutCalls = 0
     var closed = false
@@ -268,8 +695,8 @@ private class FakeSessionClient : SessionClient {
         val current = requireNotNull(user.value)
         val wallet = WalletDto(requireNotNull(current.activeWalletPublicId), "Selected wallet", isPaper = true)
         val order = OrderDto(
-            "order-a", "client-order-a", "BTC-USD", "kraken", "BUY", "OPEN", "LIMIT",
-            BigDecimal.ONE, BigDecimal.ZERO, "2026-10-15T00:00:00Z", walletPublicId = wallet.publicId,
+            "order-a", "client-order-a", "BTC-USD", "kraken", "buy", orderStatus, "limit",
+            BigDecimal.ONE, BigDecimal.ZERO, "2026-10-15T00:00:00Z", walletPublicId = wallet.publicId, planPublicId = "plan-a",
         )
         return DashboardSnapshot(current, listOf(wallet), emptyList(), listOf(order), emptyList())
     }
@@ -280,7 +707,26 @@ private class FakeSessionClient : SessionClient {
     override fun close() {
         closed = true
     }
+    override suspend fun orderExchanges(scope: OrderScope): List<String> {
+        exchangeCalls++
+        return exchangeAction()
+    }
+    override suspend fun orderInstruments(scope: OrderScope, exchange: String): List<InstrumentDto> {
+        instrumentRequests.add(exchange)
+        return instrumentAction(exchange)
+    }
+    override suspend fun createOrder(scope: OrderScope, payload: CreateOrderPayload): ExecutionPlanDto {
+        created.add(payload)
+        return createAction()
+    }
+    override suspend fun cancelOrder(scope: OrderScope, order: OrderDto): ExecutionPlanDto {
+        cancelled.add(order)
+        return cancelAction()
+    }
 }
+
+private fun instrument(exchange: String = "kraken") = InstrumentDto("instrument-a", "symbol-a", "BTC-USD", exchange, true, true)
+private fun plan() = ExecutionPlanDto("plan-a", "pending", "wallet-a")
 
 private fun profile() = UserDto(
     "alice", "viewer", activeWalletPublicId = "wallet-a", effectivePermissions = listOf("read:market_data"),

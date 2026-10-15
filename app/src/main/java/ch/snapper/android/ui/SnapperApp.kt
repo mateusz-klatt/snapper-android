@@ -52,7 +52,7 @@ private fun AuthenticatedApp(state: AppUiState, actions: AppActions) {
             when (current) {
                 Destination.HOME -> item { Column(verticalArrangement = Arrangement.spacedBy(16.dp)) { HomeScreen(state, actions) } }
                 Destination.POSITIONS -> positionsScreen(state)
-                Destination.ORDERS -> ordersScreen(state)
+                Destination.ORDERS -> ordersScreen(state, actions.orders)
                 Destination.ALERTS -> alertsScreen(state)
                 Destination.MARKET -> marketScreen(state.market, actions.loadMarket)
                 Destination.SETTINGS -> item { Column(verticalArrangement = Arrangement.spacedBy(16.dp)) { SettingsScreen(state, actions) } }
@@ -64,6 +64,7 @@ private fun AuthenticatedApp(state: AppUiState, actions: AppActions) {
             }
         }
     }
+    OrderDialogs(state, actions.orders)
 }
 
 @Composable
