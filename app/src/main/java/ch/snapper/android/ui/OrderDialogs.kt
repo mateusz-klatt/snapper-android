@@ -48,10 +48,9 @@ internal fun OrderDialogs(state: AppUiState, actions: OrderActions) {
     if (flow.isDismissed) return
     val scope = OrderScope.from(user)
     key(state.backendUrl, scope) {
-        if (flow.draft != null && wallet != null && user.hasPermission("create:orders") && user.hasPermission("read:market_data")) {
-            if (flow.review == null || flow.review.scope == scope) {
-                NewOrderDialog(flow, wallet, actions, state.isLoading)
-            }
+        if (flow.draft != null && wallet != null && user.hasPermission("create:orders") && user.hasPermission("read:market_data") &&
+            (flow.review == null || flow.review.scope == scope)) {
+            NewOrderDialog(flow, wallet, actions, state.isLoading)
         }
         flow.pendingCancel?.let { order ->
             if (OrderForm.canCancel(order, user) && flow.cancelScope == scope) {

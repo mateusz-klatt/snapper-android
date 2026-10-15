@@ -166,7 +166,7 @@ class SessionRepository private constructor(
 
     override suspend fun candles(exchange: String, instrument: String, timeframe: String, limit: Int): List<CandleDto> = operation.withLock {
         require(limit in 1..1000) { "Candle limit must be between 1 and 1000" }
-        check(mutableUser.value?.hasPermission("read:market_data") == true) { "Market data permission is required" }
+        check(mutableUser.value?.hasPermission(READ_MARKET_DATA_PERMISSION) == true) { "Market data permission is required" }
         authorized(cookies.generation()) { api.candles(exchange, instrument, timeframe, limit).payload }
     }
 
@@ -187,19 +187,19 @@ class SessionRepository private constructor(
     }
 
     override suspend fun orderExchanges(scope: OrderScope): List<String> = operation.withLock {
-        val generation = orderPreflight(scope, "create:orders")
-        requireOrderScope(scope, "read:market_data")
+        val generation = orderPreflight(scope, CREATE_ORDERS_PERMISSION)
+        requireOrderScope(scope, READ_MARKET_DATA_PERMISSION)
         val result = authorized(generation) { api.exchanges().payload }
-        requireOrderScope(scope, "create:orders")
+        requireOrderScope(scope, CREATE_ORDERS_PERMISSION)
         result
     }
 
     override suspend fun orderInstruments(scope: OrderScope, exchange: String): List<InstrumentDto> = operation.withLock {
         require(exchange.isNotBlank())
-        val generation = orderPreflight(scope, "create:orders")
-        requireOrderScope(scope, "read:market_data")
+        val generation = orderPreflight(scope, CREATE_ORDERS_PERMISSION)
+        requireOrderScope(scope, READ_MARKET_DATA_PERMISSION)
         val result = authorized(generation) { api.instruments(exchange).payload }
-        requireOrderScope(scope, "create:orders")
+        requireOrderScope(scope, CREATE_ORDERS_PERMISSION)
         result
     }
 
@@ -214,10 +214,10 @@ class SessionRepository private constructor(
         require(payload.orderType in setOf("market", "limit", "stop", "stop_limit"))
         require(payload.orderType !in setOf("limit", "stop_limit") || payload.price != null)
         require(payload.orderType !in setOf("stop", "stop_limit") || payload.stopPrice != null)
-        val generation = orderPreflight(scope, "create:orders")
-        requireOrderScope(scope, "read:market_data")
+        val generation = orderPreflight(scope, CREATE_ORDERS_PERMISSION)
+        requireOrderScope(scope, READ_MARKET_DATA_PERMISSION)
         val instruments = authorized(generation) { api.instruments(payload.exchange).payload }
-        requireOrderScope(scope, "create:orders")
+        requireOrderScope(scope, CREATE_ORDERS_PERMISSION)
         val instrument = instruments.find { it.instrumentPublicId == payload.instrumentPublicId && it.symbol == payload.instrument && it.exchange == payload.exchange }
         if (instrument == null || !instrument.instrumentResolved) throw OrderRejectedException(422, "unknown_instrument")
         if (!instrument.canTrade) throw OrderRejectedException(422, "instrument_market_data_only")
@@ -306,6 +306,9 @@ class SessionRepository private constructor(
     }
 
     companion object {
+        private const val CREATE_ORDERS_PERMISSION = "create:orders"
+        private const val READ_MARKET_DATA_PERMISSION = "read:market_data"
+
         fun create(context: Context, origin: String, allowLocalHttp: Boolean): SessionRepository {
             val url = OriginPolicy.validate(origin, allowLocalHttp)
             return create(url, EncryptedCookieStorage(context.applicationContext, url))
