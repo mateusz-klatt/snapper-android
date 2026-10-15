@@ -9,6 +9,7 @@ import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNull
+import org.junit.Assert.assertThrows
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
@@ -26,14 +27,23 @@ class SessionRepositoryTest {
         server = MockWebServer()
         server.start()
         storage.write(listOf("refresh_token=saved; Path=/; Max-Age=3600"))
-        repository = SessionRepository.create(server.url("/").toString(), true, storage)
+        repository = SessionRepository.create(server.url("/").toString(), true, storage) { host -> host == server.hostName }
     }
     @After fun cleanup() {
         repository.close()
         server.shutdown()
     }
+    @Test fun factoryRejectsCleartextWhenReleaseOrPlatformPolicyForbidsIt() {
+        val origin = server.url("/").toString()
+        assertThrows(IllegalArgumentException::class.java) {
+            SessionRepository.create(origin, false) { true }
+        }
+        assertThrows(IllegalArgumentException::class.java) {
+            SessionRepository.create(origin, true) { false }
+        }
+    }
     @Test fun freshInstallDoesNotRequestUnavailableBackend() = runBlocking {
-        val fresh = SessionRepository.create(server.url("/").toString(), true)
+        val fresh = SessionRepository.create(server.url("/").toString(), true) { host -> host == server.hostName }
         try {
             assertNull(fresh.restore())
             assertEquals(0, server.requestCount)
@@ -141,6 +151,13 @@ class SessionRepositoryTest {
             .addHeader("Set-Cookie", "csrf_token=csrf; Path=/api/auth"))
         repository.login("reader", "password")
         server.takeRequest()
+        server.enqueue(auth())
+        repository.selectWallet("wallet-1")
+        val select = server.takeRequest()
+        assertEquals("csrf", select.getHeader("X-CSRF-Token"))
+        val selectBody = select.body.readUtf8()
+        assertTrue(selectBody.contains("\"active_wallet_public_id\":\"wallet-1\""))
+        assertFalse(selectBody.contains("clear_active_wallet"))
         server.enqueue(auth())
         repository.selectWallet(null)
         val rotate = server.takeRequest()

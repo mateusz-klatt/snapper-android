@@ -2,6 +2,8 @@
 
 [![Android](https://github.com/mateusz-klatt/snapper-android/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/mateusz-klatt/snapper-android/actions/workflows/ci.yml)
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=mateusz-klatt_snapper-android&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=mateusz-klatt_snapper-android)
+
 Native Android client for the [Snapper](https://github.com/mateusz-klatt/snapper) trading platform, built with Kotlin, Jetpack Compose and Material 3. It connects directly to the same self-hosted backend as the [SwiftUI iOS client](https://github.com/mateusz-klatt/snapper-ios).
 
 ## Current application
@@ -42,7 +44,15 @@ Run the offline Compose interaction tests on a connected emulator or device:
 ./gradlew :app:connectedDebugAndroidTest
 ```
 
-CI runs these device tests on an Android 17 emulator with hardware acceleration, including local network permission denial, grant and activity recreation after a language change.
+CI runs these device tests on an Android 17 emulator with hardware acceleration, including local network permission denial, grant and activity recreation after a language change. CI combines JVM and device execution data into one JaCoCo report using all application classes, without coverage exclusions. The analysis receives the actual application and test compile classpaths, including Android SDK classes. After the tests, it analyzes all owned source files with SonarQube Cloud and requires the project quality gate to pass. The analysis uses the repository’s `SONAR_TOKEN` secret; automatic analysis must stay disabled so CI supplies the analysis.
+
+To generate the same combined coverage report locally with a connected device:
+
+```bash
+./gradlew :app:combinedDebugCoverageReport
+```
+
+This runs both test suites and writes `app/build/reports/jacoco/combinedDebugCoverageReport/combinedDebugCoverageReport.xml`. The report task requires execution data from both suites.
 
 ## Connect to a backend
 

@@ -5,21 +5,49 @@ import org.junit.Assert.assertThrows
 import org.junit.Test
 
 class OriginPolicyTest {
-    @Test fun releaseRequiresHttps() {
-        assertEquals("https://example.com", OriginPolicy.normalize("https://example.com/", false))
+    @Test fun releaseRequiresHttpsEvenWhenPlatformPermitsCleartext() {
+        assertEquals("https://example.com", OriginPolicy.normalize(" https://example.com/ ", false))
         listOf("http://localhost", "http://127.0.0.1", "http://[::1]", "http://10.0.2.2", "http://example.com").forEach {
-            assertThrows(IllegalArgumentException::class.java) { OriginPolicy.validate(it, false) }
+            assertThrows(IllegalArgumentException::class.java) { OriginPolicy.validate(it, false) { true } }
         }
     }
-    @Test fun debugAllowsOnlyExactLocalHosts() {
-        listOf("localhost", "127.0.0.1", "[::1]", "10.0.2.2").forEach { OriginPolicy.validate("http://$it:8000", true) }
-        listOf("localhost.evil.test", "127.0.0.2", "192.168.1.1", "0.0.0.0").forEach {
-            assertThrows(IllegalArgumentException::class.java) { OriginPolicy.validate("http://$it", true) }
+
+    @Test fun debugUsesPlatformDecisionForCanonicalHost() {
+        val checkedHosts = mutableListOf<String>()
+        val policy: (String) -> Boolean = { host ->
+            checkedHosts.add(host)
+            host == "localhost"
+        }
+        assertEquals("localhost", OriginPolicy.validate("http://LOCALHOST:8000", true, policy).host)
+        assertThrows(IllegalArgumentException::class.java) {
+            OriginPolicy.validate("http://localhost.evil.test", true, policy)
+        }
+        assertEquals(listOf("localhost", "localhost.evil.test"), checkedHosts)
+    }
+
+    @Test fun debugRejectsLocalHttpWhenPlatformDeniesIt() {
+        assertThrows(IllegalArgumentException::class.java) {
+            OriginPolicy.validate("http://localhost", true) { false }
         }
     }
-    @Test fun rejectsCredentialsPathsQueriesAndFragments() {
-        listOf("https://user:password@example.com", "https://example.com/api", "https://example.com?x=1", "https://example.com#fragment", "invalid").forEach {
-            assertThrows(IllegalArgumentException::class.java) { OriginPolicy.validate(it, true) }
+
+    @Test fun httpsDoesNotConsultCleartextPolicy() {
+        assertEquals("https://example.com/", OriginPolicy.validate("https://example.com", true) {
+            throw AssertionError("HTTPS must not consult the cleartext policy")
+        }.toString())
+    }
+
+    @Test fun rejectsCredentialsPathsQueriesFragmentsAndMalformedUrls() {
+        listOf(
+            "https://user:password@example.com",
+            "https://example.com/api",
+            "https://example.com?x=1",
+            "https://example.com#fragment",
+            "invalid",
+            "http://[invalid]",
+            "ftp://example.com",
+        ).forEach {
+            assertThrows(IllegalArgumentException::class.java) { OriginPolicy.validate(it, true) { true } }
         }
     }
 }

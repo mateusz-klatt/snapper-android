@@ -1,6 +1,7 @@
 package ch.snapper.android.data
 
 import android.content.Context
+import android.security.NetworkSecurityPolicy
 import java.io.IOException
 import java.time.Instant
 import java.util.UUID
@@ -14,6 +15,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.serialization.json.Json
+import okhttp3.HttpUrl
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import retrofit2.HttpException
@@ -128,7 +130,7 @@ class SessionRepository private constructor(
         ensureCurrent(generation)
         check(mutableUser.value != null) { "Sign in first" }
         try {
-            rotate(generation, RefreshPayload(publicId, if (publicId == null) true else null))
+            rotate(generation, RefreshPayload(publicId, (publicId == null).takeIf { it }))
         } catch (error: HttpException) {
             if (error.code() == 401 && cookies.generation() == generation) {
                 expire(generation)
@@ -197,10 +199,18 @@ class SessionRepository private constructor(
     companion object {
         fun create(context: Context, origin: String, allowLocalHttp: Boolean): SessionRepository {
             val url = OriginPolicy.validate(origin, allowLocalHttp)
-            return create(origin, allowLocalHttp, EncryptedCookieStorage(context.applicationContext, url))
+            return create(url, EncryptedCookieStorage(context.applicationContext, url))
         }
-        fun create(origin: String, allowLocalHttp: Boolean, cookieStorage: CookieStorage = MemoryCookieStorage()): SessionRepository {
-            val url = OriginPolicy.validate(origin, allowLocalHttp)
+        fun create(
+            origin: String,
+            allowLocalHttp: Boolean,
+            cookieStorage: CookieStorage = MemoryCookieStorage(),
+            isCleartextTrafficPermitted: (String) -> Boolean = { host ->
+                NetworkSecurityPolicy.getInstance().isCleartextTrafficPermitted(host)
+            },
+        ): SessionRepository = create(OriginPolicy.validate(origin, allowLocalHttp, isCleartextTrafficPermitted), cookieStorage)
+
+        private fun create(url: HttpUrl, cookieStorage: CookieStorage): SessionRepository {
             val cookies = SessionCookies(url, cookieStorage)
             val client = OkHttpClient.Builder().addInterceptor(cookies)
                 .followRedirects(false).followSslRedirects(false)
