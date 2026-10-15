@@ -31,18 +31,20 @@ jobs:
           curl --fail --location --retry 2 https://dl.google.com/android/repository/commandlinetools-linux-16111833_latest.zip --output "$RUNNER_TEMP/android-tools.zip"
           echo "0877a1d048fe4a24efe2eff536ca4223f7adeb58648bb81909d33c446918cfa8  $RUNNER_TEMP/android-tools.zip" | sha256sum --check
           unzip -q "$RUNNER_TEMP/android-tools.zip" -d "$RUNNER_TEMP/android-tools"
-          "$RUNNER_TEMP/android-tools/cmdline-tools/bin/sdkmanager" --sdk_root="$ANDROID_HOME" 'platforms;android-37.0' 'build-tools;36.0.0'
+          mkdir -p "$ANDROID_HOME/cmdline-tools"
+          mv "$RUNNER_TEMP/android-tools/cmdline-tools" "$ANDROID_HOME/cmdline-tools/snapper-ci"
+          "$ANDROID_HOME/cmdline-tools/snapper-ci/bin/sdkmanager" --sdk_root="$ANDROID_HOME" 'platforms;android-37.0' 'build-tools;36.0.0'
       - name: Build, test and lint
         run: ./gradlew --no-daemon :app:assembleDebug :app:testDebugUnitTest :app:lintDebug :app:assembleDebugAndroidTest
       - name: Install Android 17 emulator
         shell: bash
         run: |
-          SDKMANAGER="$RUNNER_TEMP/android-tools/cmdline-tools/bin/sdkmanager"
+          SDKMANAGER="$ANDROID_HOME/cmdline-tools/snapper-ci/bin/sdkmanager"
           "$SDKMANAGER" --sdk_root="$ANDROID_HOME" --licenses < <(yes)
           "$SDKMANAGER" --sdk_root="$ANDROID_HOME" 'emulator' 'system-images;android-37.0;google_apis;x86_64' < <(yes)
           sudo chmod a+rw /dev/kvm
           "$ANDROID_HOME/emulator/emulator" -accel-check
-          "$RUNNER_TEMP/android-tools/cmdline-tools/bin/avdmanager" create avd --force --name snapper-ci --package 'system-images;android-37.0;google_apis;x86_64' --device pixel_6 < <(printf 'no\n')
+          "$ANDROID_HOME/cmdline-tools/snapper-ci/bin/avdmanager" create avd --force --name snapper-ci --package 'system-images;android-37.0;google_apis;x86_64' --device pixel_6 < <(printf 'no\n')
       - name: Run Android 17 device tests
         shell: bash
         timeout-minutes: 12
