@@ -1,5 +1,6 @@
 package ch.snapper.android.ui
 
+import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -45,7 +46,7 @@ class PositionActionInputsTest {
             }
             val state = current.state.collectAsState().value
             PositionActionDialogs(state, current.actions) { checks++ }
-            PositionActionFeedback(state, current.actions) { checks++ }
+            Column { PositionActionFeedback(state, current.actions) { checks++ } }
         }
         compose.runOnIdle { controller.open(wallet, target, kind) }
     }
