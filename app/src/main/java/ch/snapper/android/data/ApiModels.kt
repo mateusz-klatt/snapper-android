@@ -25,6 +25,7 @@ data class UserDto(
     val role: String,
     @SerialName("public_id") val publicId: String = "",
     val email: String? = null,
+    @SerialName("primary_operator_public_id") val primaryOperatorPublicId: String? = null,
     @SerialName("active_wallet_public_id") val activeWalletPublicId: String? = null,
     @SerialName("effective_permissions") val effectivePermissions: List<String>? = null,
 ) {
@@ -79,6 +80,8 @@ data class AlertDto(
     @SerialName("is_safety_critical") val isSafetyCritical: Boolean = false,
     val title: String = "",
     val body: String = "",
+    @SerialName("thread_key") val threadKey: String? = null,
+    @SerialName("source_topic") val sourceTopic: String? = null,
 ) {
     val displayTitle: String get() = title.ifBlank { alertType }
 }

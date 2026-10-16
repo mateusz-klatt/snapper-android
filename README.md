@@ -11,14 +11,19 @@ Native Android client for the [Snapper](https://github.com/mateusz-klatt/snapper
 - Sign in, restore a remembered session, refresh expired cookies and sign out.
 - Configure a backend origin before login; switching backend removes the previous session and displayed account data.
 - Select a wallet through the backend session contract and request wallet-scoped positions and orders.
-- View current positions, recent orders, alert history and historical candle charts.
+- View current positions, open/recent orders, fills with fees, expandable alert details and historical candle charts.
+- Search the backend market catalog without trading permissions or a selected wallet; choose 1m, 5m, 15m, 1h, 4h or 1d candles.
+- Inspect accessible desks and, with explicit membership permissions, attach an existing viewer.
+- Read permission-gated health/status, strategy, backtest, user and AI-delegate inventories.
+- Edit account-level notification defaults independently of Android push registration.
+- Inspect profile email/role and app version; confirm sign-out or backend changes before clearing the session.
 - Review and submit manual orders for a selected wallet using execution-capable instruments.
 - Confirm cancellation of eligible open orders.
 - Show only the screens allowed by the session's effective permissions.
 - English and Polish interfaces, with light and dark themes.
 - Exact decimal quantities, prices and P&L; chart drawing converts coordinates separately.
 
-The app displays REST snapshots, refreshed on foreground entry or with Refresh. Orders and alerts show up to 100 recent records; positions are the current backend snapshot. Market charts request 100 candles. Other iOS management screens, WebSocket streaming and Android push notifications remain unavailable.
+The app displays REST snapshots, refreshed on foreground entry or with Refresh. Orders, fills and alerts fetch up to 100 recent records; the Recent orders segment displays the newest 50. Positions are the current backend snapshot. Market charts request 100 candles. System feeds and fills refresh independently, with their own errors. Position close/reduce/bracket/trailing actions, venue-account truth, signals, P&L timelines, process controls, AI review decisions, WebSocket streaming and Android push notifications remain unavailable.
 
 The existing backend's device registration and delivery are APNs-only. FCM requires an Android provider contract and delivery integration before an Android device token can be registered; this app does not submit FCM tokens to the iOS endpoint.
 
@@ -112,7 +117,7 @@ signing and Play submission requirements.
 
 - A single application module with Compose screens, a ViewModel/StateFlow UI state, and injected session and settings dependencies.
 - Retrofit, OkHttp and kotlinx.serialization use the backend's typed `payload` envelopes, cookie authentication and URL-scoped CSRF headers.
-- Session rotations and wallet operations are serialized. Authenticated reads can refresh expired credentials and retry once; order mutations are never replayed automatically. Backend, session, wallet and permission changes discard stale account data and order drafts.
+- Session rotations and wallet operations are serialized. Authenticated reads can refresh expired credentials and retry once; mutations are never replayed automatically. An uncertain desk attachment remains blocked until the account scope changes; notification defaults can be reconciled through an explicit read before another write. Backend, session, wallet and permission changes discard stale account data and order drafts.
 - Persistent cookies use AES-GCM with a device-authenticated, origin-specific Android Keystore key and private backup-excluded storage. DataStore contains only the backend and language preferences.
 - Backend and network failures are visible; an unavailable resource is not silently shown as an empty successful result.
 - Room, WorkManager, Hilt and Firebase are added only when an implemented feature needs them.

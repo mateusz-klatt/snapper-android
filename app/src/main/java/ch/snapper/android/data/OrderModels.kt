@@ -24,6 +24,8 @@ data class InstrumentDto(
     val exchange: String,
     @SerialName("can_trade") val canTrade: Boolean,
     @SerialName("instrument_resolved") val instrumentResolved: Boolean,
+    @SerialName("can_market_data") val canMarketData: Boolean = false,
+    @SerialName("instrument_kind") val instrumentKind: String? = null,
 )
 
 @Serializable

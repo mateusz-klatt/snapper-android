@@ -43,6 +43,7 @@ class SnapperViewModel(
     private var catalogRevision = 0L
     private var catalogRequest: Job? = null
     private var orderMutation: Job? = null
+    private val features = FeatureCoordinator(viewModelScope, { session }, { state.value }, { change -> mutableState.update(change) })
 
     val actions = AppActions(
         login = ::login,
@@ -53,6 +54,12 @@ class SnapperViewModel(
         selectLanguage = ::selectLanguage,
         clearError = { mutableState.update { it.copy(error = null) } },
         loadMarket = ::loadMarket,
+        loadCatalog = features::loadCatalog,
+        marketCatalog = features.catalogActions,
+        desks = features.deskActions,
+        system = features.systemActions,
+        records = features.recordsActions,
+        notificationDefaults = features.notificationActions,
         orders = OrderActions(
             open = ::openOrder, dismiss = ::dismissOrder, updateDraft = ::updateOrderDraft,
             selectExchange = ::selectOrderExchange, review = ::reviewOrder, back = ::editOrder,
@@ -92,6 +99,7 @@ class SnapperViewModel(
         sessionObserver = viewModelScope.launch {
             client.user.collect { profile ->
                 if (session === client && profile == null && state.value.user != null) {
+                    features.invalidate()
                     resetOrderFlow()
                     sessionEpoch++
                     marketRevision++
@@ -99,6 +107,7 @@ class SnapperViewModel(
                     mutableState.update { it.copy(user = null, snapshot = null, market = MarketState()) }
                 } else if (session === client && profile != null && state.value.user != null) {
                     if (!sameScope(profile, state.value.user)) {
+                        features.invalidate()
                         resetOrderFlow()
                         sessionEpoch++
                         marketRevision++
@@ -133,6 +142,7 @@ class SnapperViewModel(
     fun selectWallet(publicId: String?) {
         if (state.value.isLoading || state.value.user == null) return
         resetOrderFlow()
+        features.invalidate()
         marketRequest?.cancel()
         marketRevision++
         sessionEpoch++
@@ -155,6 +165,7 @@ class SnapperViewModel(
 
     private fun sameScope(first: UserDto, second: UserDto?): Boolean = second != null &&
         first.username == second.username && first.publicId == second.publicId &&
+        first.primaryOperatorPublicId == second.primaryOperatorPublicId &&
         first.activeWalletPublicId == second.activeWalletPublicId &&
         first.effectivePermissions.orEmpty().toSet() == second.effectivePermissions.orEmpty().toSet()
 
@@ -181,6 +192,7 @@ class SnapperViewModel(
     }
 
     private fun clearVisibleSession() {
+        features.invalidate()
         resetOrderFlow()
         revision++
         sessionEpoch++

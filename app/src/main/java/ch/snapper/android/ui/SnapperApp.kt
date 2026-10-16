@@ -12,11 +12,14 @@ import androidx.compose.ui.unit.dp
 import ch.snapper.android.AppActions
 import ch.snapper.android.AppUiState
 import ch.snapper.android.R
+import ch.snapper.android.BuildConfig
+import ch.snapper.android.features.system.SystemFeed
 
 private enum class Destination(val label: Int, val permission: String? = null) {
     HOME(R.string.home), POSITIONS(R.string.positions, "read:positions"),
     ORDERS(R.string.orders, "read:orders"), ALERTS(R.string.alerts, "read:notifications"),
-    MARKET(R.string.market, "read:market_data"), SETTINGS(R.string.settings)
+    MARKET(R.string.market, "read:market_data"), SYSTEM(R.string.system_tools),
+    DESKS(R.string.desk_nav_title), NOTIFICATIONS(R.string.notification_defaults_title), SETTINGS(R.string.settings)
 }
 
 @Composable
@@ -33,8 +36,21 @@ fun SnapperApp(state: AppUiState, actions: AppActions) {
 @Composable
 private fun AuthenticatedApp(state: AppUiState, actions: AppActions) {
     var selected by rememberSaveable { mutableStateOf(Destination.HOME.name) }
-    val destinations = Destination.entries.filter { it.permission == null || state.user?.effectivePermissions?.contains(it.permission) == true }
+    val permissions = state.user?.effectivePermissions.orEmpty().toSet()
+    val destinations = Destination.entries.filter {
+        if (it == Destination.SYSTEM) SystemFeed.entries.any { feed -> feed.isAllowed(permissions) }
+        else it.permission == null || it.permission in permissions
+    }
     val current = destinations.firstOrNull { it.name == selected } ?: Destination.HOME
+    LaunchedEffect(current, state.backendUrl, state.user?.publicId, state.user?.activeWalletPublicId, permissions) {
+        when (current) {
+            Destination.MARKET -> actions.loadCatalog()
+            Destination.DESKS -> actions.desks.reload()
+            Destination.NOTIFICATIONS -> actions.notificationDefaults.refresh()
+            Destination.SYSTEM -> SystemFeed.entries.filter { it.isAllowed(permissions) }.forEach(actions.system::refresh)
+            else -> Unit
+        }
+    }
     Column(Modifier.fillMaxSize().safeDrawingPadding()) {
         PrimaryScrollableTabRow(selectedTabIndex = destinations.indexOf(current), edgePadding = 0.dp) {
             destinations.forEach { destination ->
@@ -52,12 +68,15 @@ private fun AuthenticatedApp(state: AppUiState, actions: AppActions) {
             when (current) {
                 Destination.HOME -> item { Column(verticalArrangement = Arrangement.spacedBy(16.dp)) { HomeScreen(state, actions) } }
                 Destination.POSITIONS -> positionsScreen(state)
-                Destination.ORDERS -> ordersScreen(state, actions.orders)
+                Destination.ORDERS -> ordersScreen(state, actions.orders, state.records, actions.records)
                 Destination.ALERTS -> alertsScreen(state)
-                Destination.MARKET -> marketScreen(state.market, actions.loadMarket)
+                Destination.MARKET -> marketScreen(state.market, actions.loadMarket, state.marketCatalog, actions.marketCatalog)
+                Destination.SYSTEM -> systemScreen(state.system, actions.system)
+                Destination.DESKS -> item { DeskScreen(state.desks, actions.desks) }
+                Destination.NOTIFICATIONS -> notificationDefaultsScreen(state.notificationDefaults, actions.notificationDefaults)
                 Destination.SETTINGS -> item { Column(verticalArrangement = Arrangement.spacedBy(16.dp)) { SettingsScreen(state, actions) } }
             }
-            if (current != Destination.SETTINGS && current != Destination.MARKET) {
+            if (current in setOf(Destination.HOME, Destination.POSITIONS, Destination.ORDERS, Destination.ALERTS)) {
                 item { OutlinedButton(onClick = actions.refresh, enabled = !state.isLoading, modifier = Modifier.testTag("dashboard.refresh")) {
                     Text(stringResource(R.string.refresh))
                 } }
@@ -97,11 +116,19 @@ private fun HomeScreen(state: AppUiState, actions: AppActions) {
 
 @Composable
 private fun SettingsScreen(state: AppUiState, actions: AppActions) {
-    Text(state.user?.username.orEmpty(), style = MaterialTheme.typography.titleMedium)
+    var confirmation by remember(state.backendUrl, state.user?.publicId, state.user?.activeWalletPublicId, state.user?.effectivePermissions) { mutableStateOf<AccountConfirmation?>(null) }
+    var pendingBackend by remember(state.backendUrl, state.user?.publicId) { mutableStateOf("") }
+    state.user?.let { AccountSettingsContent(it, BuildConfig.VERSION_NAME, BuildConfig.VERSION_CODE.toString()) }
     Text(state.backendUrl)
     LanguagePicker(state.language, actions.selectLanguage)
     Text(stringResource(R.string.backend_warning), style = MaterialTheme.typography.bodySmall)
-    BackendEditor(state.backendUrl, actions.saveBackend)
+    BackendEditor(state.backendUrl) { value -> pendingBackend = value; confirmation = AccountConfirmation.CHANGE_BACKEND }
     PrivacyPolicyLink()
-    Button(onClick = actions.logout, modifier = Modifier.testTag("settings.logout")) { Text(stringResource(R.string.logout)) }
+    Button(onClick = { confirmation = AccountConfirmation.LOGOUT }, modifier = Modifier.testTag("settings.logout")) { Text(stringResource(R.string.logout)) }
+    confirmation?.let { kind ->
+        AccountSettingsConfirmation(kind, state.isLoading, { confirmation = null }) {
+            confirmation = null
+            if (kind == AccountConfirmation.LOGOUT) actions.logout() else actions.saveBackend(pendingBackend)
+        }
+    }
 }

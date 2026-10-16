@@ -5,10 +5,24 @@ import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.POST
+import retrofit2.http.PATCH
 import retrofit2.http.Query
 import retrofit2.http.Path
 
 internal interface SnapperApi {
+    @GET("api/operators") suspend fun desks(): Envelope<List<DeskDto>>
+    @POST("api/auth/desks/{operator}/members/{username}") suspend fun attachViewer(
+        @Path("operator") operator: String, @Path("username") username: String,
+    ): Envelope<String>
+    @GET("api/health") suspend fun systemHealth(): Envelope<SystemHealthCheckDataDto>
+    @GET("api/status") suspend fun systemStatus(): Envelope<SystemSystemStatusDataDto>
+    @GET("api/strategies") suspend fun systemStrategies(): Envelope<List<SystemStrategyProcessDto>>
+    @GET("api/backtests") suspend fun systemBacktests(): Envelope<List<SystemBacktestRunDataDto>>
+    @GET("api/auth/users") suspend fun systemUsers(): Envelope<List<SystemUserProfileDto>>
+    @GET("api/ai-delegates") suspend fun systemDelegates(): Envelope<List<SystemDelegateReadDto>>
+    @GET("api/executions") suspend fun executions(@Query("wallet_public_id") walletPublicId: String?): Envelope<List<ExecutionDto>>
+    @GET("api/alert_defaults") suspend fun notificationDefaults(): Envelope<List<NotificationDefaultDto>>
+    @PATCH("api/alert_defaults") suspend fun updateNotificationDefaults(@Body request: Envelope<UpdateNotificationDefaultPayload>): Envelope<NotificationDefaultDto>
     @GET("api/exchanges") suspend fun exchanges(): Envelope<List<String>>
     @GET("api/exchanges/{exchange}/instruments/detail") suspend fun instruments(@Path("exchange") exchange: String): Envelope<List<InstrumentDto>>
     @POST("api/orders") suspend fun createOrder(@Body request: Envelope<CreateOrderPayload>): Envelope<ExecutionPlanDto>

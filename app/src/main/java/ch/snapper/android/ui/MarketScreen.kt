@@ -19,14 +19,35 @@ import androidx.compose.ui.unit.dp
 import ch.snapper.android.MarketState
 import ch.snapper.android.R
 import ch.snapper.android.data.CandleDto
+import ch.snapper.android.features.market.MarketCatalogState
+import ch.snapper.android.features.market.MarketCatalogActions
+import ch.snapper.android.features.market.MarketCatalogControls
 import java.math.BigDecimal
 import java.math.MathContext
 
-internal fun LazyListScope.marketScreen(state: MarketState, load: (String, String, String) -> Unit) {
-    item { MarketControls(state, load) }
+internal fun LazyListScope.marketScreen(
+    state: MarketState,
+    load: (String, String, String) -> Unit,
+    catalog: MarketCatalogState? = null,
+    catalogActions: MarketCatalogActions = MarketCatalogActions(),
+) {
+    item {
+        if (catalog == null) MarketControls(state, load) else {
+            MarketCatalogControls(catalog, catalogActions)
+            val request = { load(catalog.exchange, catalog.instrument, catalog.timeframe) }
+            Button(onClick = request, enabled = catalog.canLoad && !state.isLoading, modifier = Modifier.testTag("market.load")) {
+                Text(stringResource(R.string.load_market))
+            }
+            if (state.isLoading) LinearProgressIndicator(Modifier.fillMaxWidth())
+            state.error?.let { ErrorCard(it, request) }
+            Text(stringResource(R.string.snapshot_note), style = MaterialTheme.typography.bodySmall)
+            if (state.candles.isEmpty() && !state.isLoading) Text(stringResource(R.string.no_candles))
+        }
+    }
     if (state.candles.isNotEmpty()) {
         item {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                Text("${state.exchange} · ${state.instrument} · ${state.timeframe}", style = MaterialTheme.typography.labelMedium)
                 Text(stringResource(R.string.chart_window), style = MaterialTheme.typography.bodySmall)
                 CandleChart(state.candles)
             }

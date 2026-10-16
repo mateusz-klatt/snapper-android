@@ -2,6 +2,7 @@ package ch.snapper.android.data
 
 import android.content.Context
 import android.security.NetworkSecurityPolicy
+import ch.snapper.android.features.system.SystemClient
 import java.io.IOException
 import java.time.Instant
 import java.util.UUID
@@ -50,7 +51,7 @@ class SessionRepository private constructor(
     private val mutationApi: SnapperApi,
     private val cookies: SessionCookies,
     private val client: OkHttpClient,
-) : SessionClient {
+) : SessionClient, DeskClient, MarketCatalogClient, SystemClient, RecordsClient, NotificationDefaultsClient {
     private val mutableUser = MutableStateFlow<UserDto?>(null)
     override val user: StateFlow<UserDto?> = mutableUser.asStateFlow()
     private val operation = Mutex()
@@ -168,6 +169,102 @@ class SessionRepository private constructor(
         require(limit in 1..1000) { "Candle limit must be between 1 and 1000" }
         check(mutableUser.value?.hasPermission(READ_MARKET_DATA_PERMISSION) == true) { "Market data permission is required" }
         authorized(cookies.generation()) { api.candles(exchange, instrument, timeframe, limit).payload }
+    }
+
+    private suspend fun <T> featureRead(permission: String? = null, action: suspend () -> T): T = operation.withLock {
+        val generation = cookies.generation()
+        ensureCurrent(generation)
+        check(mutableUser.value != null) { "Sign in first" }
+        val profile = authorized(generation) { api.me().payload }
+        commitUser(generation, profile)
+        if (permission != null && !profile.hasPermission(permission)) throw OrderRejectedException(403)
+        authorized(generation, action)
+    }
+
+    override suspend fun marketExchanges(): List<String> = featureRead(READ_MARKET_DATA_PERMISSION) { api.exchanges().payload }
+    override suspend fun marketInstruments(exchange: String): List<InstrumentDto> {
+        require(exchange.isNotBlank())
+        return featureRead(READ_MARKET_DATA_PERMISSION) { api.instruments(exchange).payload }
+    }
+
+    override suspend fun desks(): List<DeskDto> = featureRead { api.desks().payload }
+
+    override suspend fun attachViewer(scope: OrderScope, operatorPublicId: String, username: String) = operation.withLock {
+        require(operatorPublicId.isNotBlank() && username.isNotBlank() && username == username.trim())
+        val generation: Long
+        try {
+            generation = featureMutationPreflight(scope, "manage:desk_memberships")
+            val desks = authorized(generation) { api.desks().payload }
+            if (desks.none { it.publicId == operatorPublicId }) throw DeskRejectedException(403)
+            requireFeatureScope(scope, "manage:desk_memberships")
+        } catch (error: CancellationException) {
+            throw error
+        } catch (error: DeskRejectedException) {
+            throw error
+        } catch (error: OrderRejectedException) {
+            throw DeskRejectedException(error.statusCode)
+        } catch (error: Exception) {
+            throw DeskPreparationException(error)
+        }
+        try {
+            mutationApi.attachViewer(operatorPublicId, username)
+            ensureCurrent(generation)
+        } catch (error: HttpException) {
+            if (error.code() == 401) expire(generation)
+            if (error.code() in 400..499 && error.code() !in setOf(408, 425)) throw DeskRejectedException(error.code())
+            throw error
+        }
+        Unit
+    }
+
+    private fun requireFeatureScope(scope: OrderScope, permission: String?) {
+        val current = mutableUser.value ?: throw SessionExpiredException()
+        if (OrderScope.from(current) != scope) throw OrderScopeChangedException()
+        if (permission != null && !current.hasPermission(permission)) throw OrderRejectedException(403)
+    }
+
+    private suspend fun featureMutationPreflight(scope: OrderScope, permission: String? = null): Long {
+        requireFeatureScope(scope, permission)
+        val generation = cookies.generation()
+        val profile = authorized(generation) { api.me().payload }
+        commitUser(generation, profile)
+        requireFeatureScope(scope, permission)
+        return generation
+    }
+
+    override suspend fun systemHealth(): SystemHealthCheckDataDto = featureRead("read:system_status") { api.systemHealth().payload }
+    override suspend fun systemStatus(): SystemSystemStatusDataDto = featureRead("read:system_status") { api.systemStatus().payload }
+    override suspend fun systemStrategies(): List<SystemStrategyProcessDto> = featureRead("read:strategies") { api.systemStrategies().payload }
+    override suspend fun systemBacktests(): List<SystemBacktestRunDataDto> = featureRead("read:backtests") { api.systemBacktests().payload }
+    override suspend fun systemUsers(): List<SystemUserProfileDto> = featureRead("manage:users") { api.systemUsers().payload }
+    override suspend fun systemDelegates(): List<SystemDelegateReadDto> = featureRead("read:ai_integration") { api.systemDelegates().payload }
+
+    override suspend fun executions(walletPublicId: String?): List<ExecutionDto> = featureRead("read:orders") {
+        if (mutableUser.value?.activeWalletPublicId != walletPublicId) throw OrderScopeChangedException()
+        api.executions(walletPublicId).payload
+    }
+
+    override suspend fun notificationDefaults(): List<NotificationDefaultDto> = featureRead { api.notificationDefaults().payload }
+
+    override suspend fun updateNotificationDefaults(scope: OrderScope, payload: UpdateNotificationDefaultPayload): NotificationDefaultDto = operation.withLock {
+        require(payload.alertType in setOf("order_fill_full", "order_rejected", "position_stop_loss_fired", "margin_warning", "critical_system_error", "order_unknown", "drift"))
+        require(payload.minPriority in setOf("low", "medium", "high"))
+        val generation = featureMutationPreflight(scope)
+        try {
+            val result = mutationApi.updateNotificationDefaults(envelope("update_user_alert_default_command", payload)).payload
+            ensureCurrent(generation)
+            result
+        } catch (error: CancellationException) {
+            throw error
+        } catch (error: HttpException) {
+            if (error.code() == 401) expire(generation)
+            if (error.code() in 400..499 && error.code() !in setOf(408, 425)) throw NotificationDefaultRejectedException(error.code())
+            throw NotificationDefaultOutcomeUnknownException(error)
+        } catch (error: IOException) {
+            throw NotificationDefaultOutcomeUnknownException(error)
+        } catch (error: SerializationException) {
+            throw NotificationDefaultOutcomeUnknownException(error)
+        }
     }
 
     private fun requireOrderScope(scope: OrderScope, permission: String) {
@@ -334,7 +431,8 @@ class SessionRepository private constructor(
             val mutationClient = client.newBuilder().retryOnConnectionFailure(false)
                 .addInterceptor { chain ->
                     val request = chain.request()
-                    val body = requireNotNull(request.body)
+                    val body = request.body
+                    if (body == null) return@addInterceptor chain.proceed(request)
                     val oneShot = object : RequestBody() {
                         override fun contentType() = body.contentType()
                         override fun contentLength() = body.contentLength()
