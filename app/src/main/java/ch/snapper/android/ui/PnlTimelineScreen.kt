@@ -61,19 +61,19 @@ fun PnlTimelineScreen(state: PnlState, actions: PnlActions) {
 @Composable
 private fun PnlContent(data: PnlSeriesDto) {
     if (data.points.isEmpty()) Text(stringResource(R.string.positions_timeline_empty_message))
-    Text(data.valuation_ccy)
-    PnlCurve(R.string.positions_timeline_chart_net, data.points.map { it.net_pnl })
-    PnlCurve(R.string.positions_timeline_chart_realized, data.points.map { it.realized_pnl })
-    PnlCurve(R.string.positions_timeline_chart_unrealized, data.points.map { it.unrealized_pnl })
+    Text(data.valuationCcy)
+    PnlCurve(R.string.positions_timeline_chart_net, data.points.map { it.netPnl })
+    PnlCurve(R.string.positions_timeline_chart_realized, data.points.map { it.realizedPnl })
+    PnlCurve(R.string.positions_timeline_chart_unrealized, data.points.map { it.unrealizedPnl })
     Text(stringResource(R.string.positions_timeline_incompleteness_title))
     Text(stringResource(R.string.positions_timeline_incompleteness_description))
-    data.points.flatMap { it.incompleteness_reasons }.groupingBy { it }.eachCount().forEach { (reason, count) ->
+    data.points.flatMap { it.incompletenessReasons }.groupingBy { it }.eachCount().forEach { (reason, count) ->
         Text(reasonLabel(reason.reason))
-        Text(listOfNotNull(reason.withholding_scope, reason.withholding_tier, reason.trigger_instrument_public_id).joinToString(" · "))
+        Text(listOfNotNull(reason.withholdingScope, reason.withholdingTier, reason.triggerInstrumentPublicId).joinToString(" · "))
         Text(stringResource(R.string.positions_timeline_incompleteness_affectedpoints, count))
     }
-    PnlCoverage(data.equity_coverage)
-    PnlExecutionHistory(data.execution_history)
+    PnlCoverage(data.equityCoverage)
+    PnlExecutionHistory(data.executionHistory)
     PnlSources(data)
     data.points.lastOrNull()?.let { PnlContributions(it) }
 }
@@ -81,14 +81,14 @@ private fun PnlContent(data: PnlSeriesDto) {
 @Composable
 private fun PnlCoverage(coverage: PnlEquityCoverageDto) {
     Text(stringResource(R.string.positions_timeline_equity_title))
-    Text(stringResource(R.string.pnl_equity_coverage, coverage.sampled.toString(), coverage.complete_minutes.toString()))
-    Text(listOfNotNull(coverage.valuation_basis, coverage.sample_calc_version, coverage.first_minute, coverage.last_minute).joinToString(" · "))
-    Text(stringResource(R.string.positions_timeline_equity_honesty_conversionwithheld, coverage.conversion_withheld_minutes.toString()))
-    coverage.converted_from?.let { Text(stringResource(R.string.positions_timeline_equity_honesty_restatedfrom, it)) }
-    coverage.conversion_rate_source?.let { Text(stringResource(R.string.positions_timeline_equity_honesty_pricedon, it)) }
-    if (coverage.drawdown_withheld_reason != null) Text(stringResource(R.string.positions_timeline_equity_honesty_drawdownconverted))
-    if (coverage.external_flows_adjusted == false) Text(stringResource(R.string.positions_timeline_equity_honesty_flowsunadjusted))
-    if (coverage.venue_scope == "spot_only") Text(stringResource(R.string.positions_timeline_equity_honesty_spotonly))
+    Text(stringResource(R.string.pnl_equity_coverage, coverage.sampled.toString(), coverage.completeMinutes.toString()))
+    Text(listOfNotNull(coverage.valuationBasis, coverage.sampleCalcVersion, coverage.firstMinute, coverage.lastMinute).joinToString(" · "))
+    Text(stringResource(R.string.positions_timeline_equity_honesty_conversionwithheld, coverage.conversionWithheldMinutes.toString()))
+    coverage.convertedFrom?.let { Text(stringResource(R.string.positions_timeline_equity_honesty_restatedfrom, it)) }
+    coverage.conversionRateSource?.let { Text(stringResource(R.string.positions_timeline_equity_honesty_pricedon, it)) }
+    if (coverage.drawdownWithheldReason != null) Text(stringResource(R.string.positions_timeline_equity_honesty_drawdownconverted))
+    if (coverage.externalFlowsAdjusted == false) Text(stringResource(R.string.positions_timeline_equity_honesty_flowsunadjusted))
+    if (coverage.venueScope == "spot_only") Text(stringResource(R.string.positions_timeline_equity_honesty_spotonly))
 }
 
 @Composable
@@ -98,9 +98,9 @@ private fun PnlExecutionHistory(history: PnlExecutionHistoryDto) {
         Text(stringResource(R.string.positions_timeline_executionhistory_title))
         Text(stringResource(R.string.positions_timeline_executionhistory_summary))
         history.corrections.forEach { correction ->
-            Text(correction.exchange + " #" + correction.scope_sequence + " · " + correction.correction_time)
-            Text(stringResource(R.string.positions_timeline_executionhistory_targetexecutionid) + ": " + correction.target_execution_public_id)
-            Text(stringResource(R.string.positions_timeline_executionhistory_correctionid) + ": " + correction.correction_public_id)
+            Text(correction.exchange + " #" + correction.scopeSequence + " · " + correction.correctionTime)
+            Text(stringResource(R.string.positions_timeline_executionhistory_targetexecutionid) + ": " + correction.targetExecutionPublicId)
+            Text(stringResource(R.string.positions_timeline_executionhistory_correctionid) + ": " + correction.correctionPublicId)
             Text(correction.reason)
         }
     }
@@ -108,27 +108,27 @@ private fun PnlExecutionHistory(history: PnlExecutionHistoryDto) {
 
 @Composable
 private fun PnlSources(data: PnlSeriesDto) {
-    Text(data.from_time + " — " + data.to_time + " · " + data.as_of)
-    Text(stringResource(R.string.pnl_provenance, data.calc_version, data.mark_source, data.as_of))
-    data.rate_sources.forEach { Text(it.source_currency + " → " + it.valuation_currency + " · " + it.base_currency + "/" + it.quote_currency + "@" + it.exchange) }
+    Text(data.fromTime + " — " + data.toTime + " · " + data.asOf)
+    Text(stringResource(R.string.pnl_provenance, data.calcVersion, data.markSource, data.asOf))
+    data.rateSources.forEach { Text(it.sourceCurrency + " → " + it.valuationCurrency + " · " + it.baseCurrency + "/" + it.quoteCurrency + "@" + it.exchange) }
 }
 
 @Composable
 private fun PnlContributions(point: PnlTimelinePointDto) {
     PnlStock(R.string.positions_timeline_equity_serieslabel, point.equity)
     PnlStock(R.string.positions_timeline_equity_cashposition_cash, point.cash)
-    PnlStock(R.string.positions_timeline_equity_cashposition_position, point.position_value)
+    PnlStock(R.string.positions_timeline_equity_cashposition_position, point.positionValue)
     PnlStock(R.string.positions_timeline_equity_drawdown_current, point.drawdown)
     Text(stringResource(R.string.positions_timeline_attribution_valuesemantics))
     Text(stringResource(R.string.positions_timeline_contributions_title))
-    point.per_instrument.forEach { row ->
-        Text(listOfNotNull(row.native_symbol, row.exchange, row.instrument_public_id).joinToString(" · "))
-        PnlComponents(row.realized_pnl, row.fee_pnl, row.accrual_pnl, row.unrealized_pnl)
+    point.perInstrument.forEach { row ->
+        Text(listOfNotNull(row.nativeSymbol, row.exchange, row.instrumentPublicId).joinToString(" · "))
+        PnlComponents(row.realizedPnl, row.feePnl, row.accrualPnl, row.unrealizedPnl)
     }
     Text(stringResource(R.string.positions_timeline_attribution_title))
     point.attribution.forEach { row ->
-        Text(row.origin + " · " + (row.strategy_name ?: stringResource(R.string.positions_timeline_attribution_nostrategy)))
-        PnlComponents(row.realized_pnl, row.fee_pnl, row.accrual_pnl, row.unrealized_pnl)
+        Text(row.origin + " · " + (row.strategyName ?: stringResource(R.string.positions_timeline_attribution_nostrategy)))
+        PnlComponents(row.realizedPnl, row.feePnl, row.accrualPnl, row.unrealizedPnl)
     }
 }
 

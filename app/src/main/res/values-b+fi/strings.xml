@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="privacy_policy" formatted="false">Privacy policy</string>
+    <string name="username" formatted="false">Käyttäjänimi</string>
+    <string name="password" formatted="false">Salasana</string>
+    <string name="sign_in" formatted="false">Kirjaudu sisään</string>
+    <string name="session_retention_notice" formatted="false">Staying signed in requires Android 11+, a secure screen lock, and authentication with your PIN, pattern, password or strong biometrics within the last 5 minutes. Otherwise, sign in again after the app restarts.</string>
+    <string name="subtitle" formatted="false">Kaupankäyntialusta</string>
+    <string name="backend" formatted="false">Mukautetun taustapalvelun URL-osoite</string>
+    <string name="language" formatted="false">Kieli</string>
+    <string name="logout" formatted="false">Kirjaudu ulos</string>
+    <string name="positions" formatted="false">Positiot</string>
+    <string name="orders" formatted="false">Toimeksiannot</string>
+    <string name="market" formatted="false">Markkinatiedot</string>
+    <string name="wallet" formatted="false">Lompakko</string>
+    <string name="all_wallets" formatted="false">Kaikki lompakot</string>
+    <string name="retry" formatted="false">Yritä uudelleen</string>
+    <string name="loading" formatted="false">Ladataan…</string>
+    <string name="size" formatted="false">Määrä</string>
+    <string name="average_price" formatted="false">Keskihinta</string>
+    <string name="mark_price" formatted="false">Mark-hinta</string>
+    <string name="pnl" formatted="false">Realisoitumaton PnL</string>
+    <string name="instrument" formatted="false">Instrumentti</string>
+    <string name="price" formatted="false">Hinta</string>
+    <string name="filled" formatted="false">Toteutettu</string>
+    <string name="status" formatted="false">Tila</string>
+    <string name="side" formatted="false">Suunta</string>
+    <string name="open" formatted="false">Open</string>
+    <string name="high" formatted="false">High</string>
+    <string name="low" formatted="false">Low</string>
+    <string name="close" formatted="false">Close</string>
+    <string name="volume" formatted="false">Volyymi</string>
+    <string name="timeframe" formatted="false">Aikaväli</string>
+    <string name="no_candles" formatted="false">Ei vielä kynttilöitä</string>
+    <string name="backend_warning" formatted="false">Taustapalvelun vaihtaminen kirjaa sinut ulos ja tyhjentää sovelluksen paikallisen tilan. Sinun on kirjauduttava sisään uudelleen uudessa URL-osoitteessa.</string>
+    <string name="home" formatted="false">Etusivu</string>
+    <string name="alerts" formatted="false">Hälytykset</string>
+    <string name="settings" formatted="false">Asetukset</string>
+    <string name="save" formatted="false">Tallenna</string>
+    <string name="refresh" formatted="false">Refresh</string>
+    <string name="exchange" formatted="false">Pörssi</string>
+    <string name="load_market" formatted="false">Load candles</string>
+    <string name="empty" formatted="false">No records available.</string>
+    <string name="snapshot_note" formatted="false">Snapshot data. Refresh to retrieve the latest available records.</string>
+    <string name="chart_description" formatted="false">Historical candle chart. Exact values are listed below.</string>
+    <string name="error_origin" formatted="false">Enter a valid HTTPS backend origin.</string>
+    <string name="error_credentials" formatted="false">The username or password is incorrect.</string>
+    <string name="error_session" formatted="false">Your session expired. Please sign in again.</string>
+    <string name="error_network" formatted="false">Could not reach the backend. Check your connection and try again.</string>
+    <string name="error_service" formatted="false">The backend could not complete this request. Please try again.</string>
+    <string name="error_unknown" formatted="false">Something went wrong. Please try again.</string>
+    <string name="dismiss" formatted="false">Kuittaa</string>
+    <string name="paper" formatted="false">Demo</string>
+    <string name="safety_critical" formatted="false">Safety critical</string>
+    <string name="snapshot_limit" formatted="false">This view shows current positions and up to 100 recent orders and alerts; it is not a complete history.</string>
+    <string name="chart_window" formatted="false">The chart shows the last 100 retrieved candles.</string>
+    <string name="local_network_explanation" formatted="false">For a backend on your local network, allow local network access before signing in. Public internet backends do not need this permission.</string>
+    <string name="local_network_allow" formatted="false">Allow local network</string>
+    <string name="local_network_settings" formatted="false">Open app settings</string>
+    <string name="order_new" formatted="false">New Order</string>
+    <string name="order_entry" formatted="false">New Manual Order</string>
+    <string name="order_confirm" formatted="false">Confirm Order</string>
+    <string name="order_quantity" formatted="false">Määrä</string>
+    <string name="order_type" formatted="false">Order Type</string>
+    <string name="order_stop_price" formatted="false">Stop Price</string>
+    <string name="order_mode" formatted="false">Tapa</string>
+    <string name="order_buy" formatted="false">Osta</string>
+    <string name="order_sell" formatted="false">Myy</string>
+    <string name="order_market" formatted="false">Markkina</string>
+    <string name="order_limit" formatted="false">Limit</string>
+    <string name="order_stop" formatted="false">Stop</string>
+    <string name="order_stop_limit" formatted="false">Stop Limit</string>
+    <string name="order_live" formatted="false">Live</string>
+    <string name="order_review" formatted="false">Review Order</string>
+    <string name="order_back" formatted="false">Back</string>
+    <string name="order_submit" formatted="false">Confirm Order</string>
+    <string name="order_submitting" formatted="false">Submitting…</string>
+    <string name="order_leverage" formatted="false">Vipu</string>
+    <string name="order_reduce_only" formatted="false">Reduce Only</string>
+    <string name="order_observation_only" formatted="false">This instrument is observation-only — place orders on an execution-capable instrument.</string>
+    <string name="order_unknown_instrument" formatted="false">This instrument is not recognised. Reload the list and try again.</string>
+    <string name="order_caps_violation" formatted="false">This order would exceed your account safety caps. Review your risk settings and retry.</string>
+    <string name="order_rejected" formatted="false">Order creation failed</string>
+    <string name="order_cancel_title" formatted="false">Peruutetaanko toimeksianto?</string>
+    <string name="order_cancel_confirm" formatted="false">Peruuta toimeksianto</string>
+    <string name="order_keep_open" formatted="false">Pidä avoinna</string>
+    <string name="order_select_wallet" formatted="false">Select a wallet on Home before placing an order.</string>
+    <string name="order_created" formatted="false">Order submitted. Refresh to check execution status.</string>
+    <string name="order_cancel_requested" formatted="false">Cancellation requested. Refresh to check the order status.</string>
+    <string name="order_unknown_outcome" formatted="false">The request outcome is unknown. Check status before taking further action.</string>
+    <string name="order_check_status" formatted="false">Check status</string>
+    <string name="order_retry_intent" formatted="false">Retry same order</string>
+    <string name="order_catalog_error" formatted="false">Could not load exchanges or instruments. Try again.</string>
+    <string name="order_no_instruments" formatted="false">No instruments available for this exchange.</string>
+    <string name="order_invalid_form" formatted="false">Enter positive quantities and required prices. Optional leverage must be a positive whole number.</string>
+    <string name="order_refresh_failed" formatted="false">The request was accepted, but the latest records could not be loaded. Refresh to check status.</string>
+    <string name="order_forbidden" formatted="false">You no longer have permission for this action.</string>
+    <string name="order_session_changed" formatted="false">The session or wallet changed. Open a new order from the current account.</string>
+    <string name="order_enabled" formatted="false">Käytössä</string>
+    <string name="order_disabled" formatted="false">Pois käytöstä</string>
+    <string name="system_tools" formatted="false">Overview</string>
+    <string name="desk_attach_button" formatted="false">Lisää katselija</string>
+    <string name="desk_attach_desk_label" formatted="false">Desk</string>
+    <string name="desk_nav_title" formatted="false">Omat deskit</string>
+    <string name="desk_primary_badge" formatted="false">Ensisijainen</string>
+    <string name="desk_attach_username_placeholder" formatted="false">Katselijan tarkka käyttäjänimi</string>
+    <string name="desk_attach_validation_username" formatted="false">Anna katselijan käyttäjänimi.</string>
+    <string name="desk_description_unavailable" formatted="false">Kuvausta ei ole annettu.</string>
+    <string name="desk_attach_help" formatted="false">Anna katselijan tarkka käyttäjänimi. Uusi desk tulee käyttöön vasta, kun katselija on kirjautunut ulos ja takaisin sisään.</string>
+    <string name="desk_attach_success_message" formatted="false">Katselijan on kirjauduttava ulos ja takaisin sisään ennen kuin uusi desk tulee käyttöön.</string>
+    <string name="desk_empty_message" formatted="false">Tiliäsi ei ole liitetty yhteenkään deskiin.</string>
+    <string name="desk_load_error" formatted="false">Deskejä ei voitu ladata. Yritä uudelleen.</string>
+    <string name="settings_account_email" formatted="false">Sähköposti</string>
+    <string name="settings_account_role">Rooli: %1$s</string>
+    <string name="settings_app_info_version" formatted="false">Versio</string>
+    <string name="settings_app_info_build" formatted="false">Koontiversio</string>
+    <string name="settings_logout_confirm_title" formatted="false">Kirjaudutaanko ulos?</string>
+    <string name="settings_logout_confirm_message" formatted="false">Haluatko varmasti kirjautua ulos?</string>
+    <string name="settings_connection_change_backend_title" formatted="false">Vaihdetaanko taustapalvelu?</string>
+    <string name="settings_connection_change_backend_message" formatted="false">Taustapalvelun vaihtaminen kirjaa sinut ulos ja tyhjentää sovelluksen paikallisen tilan. Sinun on kirjauduttava sisään uudelleen uudessa URL-osoitteessa.</string>
+    <string name="common_continue" formatted="false">Jatka</string>
+    <string name="backend_url_cancel" formatted="false">Peruuta</string>
+    <string name="market_search" formatted="false">Hae instrumentteja</string>
+    <string name="market_view_only" formatted="false">Vain katselu</string>
+    <string name="market_catalog_retry" formatted="false">Yritä uudelleen</string>
+    <string name="market_picker_close" formatted="false">Peruuta</string>
+    <string name="market_no_matches" formatted="false">\@string/empty</string>
+    <string name="market_catalog_error" formatted="false">\@string/error_unknown</string>
+    <string name="system_health" formatted="false">Järjestelmän tila</string>
+    <string name="system_strategies" formatted="false">Strategiat</string>
+    <string name="system_backtests" formatted="false">Backtestit</string>
+    <string name="system_users" formatted="false">Käyttäjät</string>
+    <string name="system_delegates" formatted="false">AI-valtuutetut</string>
+    <string name="system_version" formatted="false">Versio</string>
+    <string name="system_connections" formatted="false">Aktiiviset yhteydet</string>
+    <string name="system_subscribers" formatted="false">ZMQ-tilaajat</string>
+    <string name="system_tasks" formatted="false">Tilaajatehtävät</string>
+    <string name="system_topics" formatted="false">Aktiiviset aiheet</string>
+    <string name="system_clients" formatted="false">Aktiiviset asiakkaat</string>
+    <string name="system_gaps" formatted="false">Havaitut aukot</string>
+    <string name="system_resets" formatted="false">Istunnon nollaukset</string>
+    <string name="system_duplicates" formatted="false">Kaksoiskappaleet</string>
+    <string name="system_joins" formatted="false">Liittymiset kesken virran</string>
+    <string name="system_unstamped" formatted="false">Hylätyt (ilman leimaa)</string>
+    <string name="system_rest_clients" formatted="false">Seuratut REST-asiakkaat</string>
+    <string name="system_initial_cash" formatted="false">Alkupääoma</string>
+    <string name="system_period" formatted="false">Ajanjakso</string>
+    <string name="system_created" formatted="false">Luotu</string>
+    <string name="system_max_orders" formatted="false">Maks. avoimet toimeksiannot</string>
+    <string name="system_max_daily" formatted="false">Maks. USD/päivä</string>
+    <string name="system_default" formatted="false">Oletus</string>
+    <string name="system_trader" formatted="false">Treidaajan tila</string>
+    <string name="system_running" formatted="false">Käynnissä</string>
+    <string name="system_stopped" formatted="false">Pysäytetty</string>
+    <string name="system_mode" formatted="false">Tapa</string>
+    <string name="system_autostart" formatted="false">Automaattikäynnistys</string>
+    <string name="system_active" formatted="false">Aktiivinen</string>
+    <string name="system_inactive" formatted="false">Ei aktiivinen</string>
+    <string name="system_revoked" formatted="false">Peruutettu</string>
+    <string name="records_open" formatted="false">Open</string>
+    <string name="records_recent" formatted="false">Viimeaikaiset</string>
+    <string name="records_fills" formatted="false">Toteutukset</string>
+    <string name="records_refresh" formatted="false">Refresh</string>
+    <string name="records_fee" formatted="false">Fee</string>
+    <string name="records_details" formatted="false">Details</string>
+    <string name="records_hide_details" formatted="false">\@string/close</string>
+    <string name="records_thread" formatted="false">Säie</string>
+    <string name="records_source_topic" formatted="false">Lähdeaihe</string>
+    <string name="notification_defaults_title" formatted="false">Käyttäjän oletukset</string>
+    <string name="notification_defaults_footer" formatted="false">Oletuksia käytetään, kun mikään laitekohtainen poikkeus ei vastaa saapuvaa hälytystä.</string>
+    <string name="notification_defaults_enabled" formatted="false">Käytössä</string>
+    <string name="notification_defaults_priority" formatted="false">Vähimmäisprioriteetti</string>
+    <string name="notification_defaults_load_failed" formatted="false">Asetusten lataaminen epäonnistui</string>
+    <string name="notification_defaults_save_failed" formatted="false">Asetusten tallentaminen epäonnistui</string>
+    <string name="notification_defaults_low" formatted="false">Low</string>
+    <string name="notification_defaults_medium" formatted="false">Keskitaso</string>
+    <string name="notification_defaults_high" formatted="false">High</string>
+    <string name="notification_defaults_fill" formatted="false">Toimeksianto toteutettu</string>
+    <string name="notification_defaults_rejected" formatted="false">Toimeksianto hylätty</string>
+    <string name="notification_defaults_stop" formatted="false">Stop-loss aktivoitui</string>
+    <string name="notification_defaults_margin" formatted="false">Vakuusvaroitus</string>
+    <string name="notification_defaults_system" formatted="false">Järjestelmävirhe</string>
+    <string name="notification_defaults_saved" formatted="false">OK</string>
+    <string name="signals_title" formatted="false">Signaalit</string>
+    <string name="signals_strength" formatted="false">Vahvuus</string>
+    <string name="signals_price" formatted="false">Hinta</string>
+    <string name="signals_reason" formatted="false">Syy:</string>
+    <string name="signals_strong" formatted="false">Vahva</string>
+    <string name="signals_medium" formatted="false">Keskitaso</string>
+    <string name="signals_weak" formatted="false">Heikko</string>
+    <string name="signals_very_weak" formatted="false">Erittäin heikko</string>
+    <string name="signals_total" formatted="false">Yhteensä</string>
+    <string name="signals_buy" formatted="false">Osta</string>
+    <string name="signals_sell" formatted="false">Myy</string>
+    <string name="signals_average_strength" formatted="false">Ka. vahvuus</string>
+    <string name="signals_filter" formatted="false">Suodata strategian mukaan</string>
+    <string name="signals_all_strategies" formatted="false">Kaikki strategiat</string>
+    <string name="signals_empty" formatted="false">Mikään kaupankäyntisignaali ei vastaa nykyisiä suodattimiasi.</string>
+    <string name="signals_export" formatted="false">Vie</string>
+    <string name="signals_export_failed" formatted="false">Lähettäminen epäonnistui</string>
+    <string name="venue_accounts_title" formatted="false">Pörssitilit</string>
+    <string name="venue_accounts_refresh" formatted="false">Refresh</string>
+    <string name="venue_accounts_failed" formatted="false">Pörssitilin tilaa ei voitu ladata. Tili ei ole tyhjä, vaan tiedot eivät juuri nyt ole saatavilla.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Reaaliaikainen pörssin tila, havaittu vahvistusikkunan sisällä.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Rivit, joita ei ole merkitty reaaliaikaisiksi, näyttävät viimeksi tunnettuja, simuloituja tai puuttuvia tietoja — ne eivät koskaan ole pörssin luotettavia reaaliaikaisia saldoja.</string>
+    <string name="venue_accounts_valuation" formatted="false">Valuation</string>
+    <string name="venue_accounts_balances" formatted="false">Saldot</string>
+    <string name="venue_accounts_observed" formatted="false">Observed at</string>
+    <string name="venue_accounts_source" formatted="false">Source observation</string>
+    <string name="venue_accounts_total" formatted="false">Yhteensä</string>
+    <string name="venue_accounts_free" formatted="false">Käytettävissä</string>
+    <string name="venue_accounts_used" formatted="false">Sidottu</string>
+    <string name="venue_accounts_numeric_source" formatted="false">Numeric provenance</string>
+    <string name="venue_accounts_positions" formatted="false">Avoimet positiot</string>
+    <string name="venue_accounts_funding" formatted="false">Rahoitus</string>
+    <string name="venue_accounts_reconciliation" formatted="false">Reconciliation status</string>
+    <string name="venue_accounts_evaluation" formatted="false">Evaluation status</string>
+    <string name="venue_accounts_deadline" formatted="false">Authority deadline</string>
+    <string name="positions_timeline_controls_window" formatted="false">Aikaväli</string>
+    <string name="positions_timeline_controls_granularity" formatted="false">Tarkkuus</string>
+    <string name="positions_timeline_controls_valuationcurrency" formatted="false">Arvostusvaluutta</string>
+    <string name="positions_timeline_controls_last24hours" formatted="false">Viimeiset 24 tuntia</string>
+    <string name="positions_timeline_controls_last7days" formatted="false">Viimeiset 7 päivää</string>
+    <string name="positions_timeline_controls_last30days" formatted="false">Viimeiset 30 päivää</string>
+    <string name="positions_timeline_controls_last90days" formatted="false">Viimeiset 90 päivää</string>
+    <string name="positions_timeline_error_title" formatted="false">P&amp;L-aikajanan lataaminen epäonnistui</string>
+    <string name="positions_timeline_empty_message" formatted="false">Tällä aikavälillä ei ole saatavilla P&amp;L-pisteitä.</string>
+    <string name="positions_timeline_nowallet_message" formatted="false">Näytä lompakon P&amp;L-aikajana valitsemalla lompakko.</string>
+    <string name="positions_timeline_incompleteness_title" formatted="false">Miksi pisteet ovat puutteellisia</string>
+    <string name="positions_timeline_incompleteness_description" formatted="false">Syyt koskevat koko ladattua aikaväliä. Määrät voivat mennä päällekkäin, jos pisteellä on useampi kuin yksi syy.</string>
+    <string name="positions_timeline_incompleteness_affectedpoints">Affected points: %1$s</string>
+    <string name="positions_timeline_chart_title" formatted="false">P&amp;L ajan kuluessa</string>
+    <string name="positions_timeline_chart_net" formatted="false">Netto-P&amp;L</string>
+    <string name="positions_timeline_chart_realized" formatted="false">Realisoitunut P&amp;L</string>
+    <string name="positions_timeline_chart_unrealized" formatted="false">Realisoitumaton P&amp;L</string>
+    <string name="positions_timeline_attribution_title" formatted="false">Viimeisin P&amp;L-kohdistus</string>
+    <string name="positions_timeline_attribution_nostrategy" formatted="false">Ei todennettua strategiaa</string>
+    <string name="positions_timeline_attribution_withheld" formatted="false">Ei todennettavissa</string>
+    <string name="positions_timeline_attribution_valuesemantics" formatted="false">Näytetty nolla on todennettu. Merkintä ”Ei todennettavissa” tarkoittaa, ettei arvoa voitu todentaa.</string>
+    <string name="positions_timeline_contributions_title" formatted="false">Viimeisimmät instrumenttikohtaiset vaikutukset</string>
+    <string name="positions_timeline_contributions_realized" formatted="false">Realisoitunut P&amp;L</string>
+    <string name="positions_timeline_contributions_fees" formatted="false">Kulut</string>
+    <string name="positions_timeline_contributions_accrual" formatted="false">Kertynyt rahoitus</string>
+    <string name="positions_timeline_contributions_unrealized" formatted="false">Realisoitumaton P&amp;L</string>
+    <string name="positions_timeline_incompleteness_reasons_scope_order_regression" formatted="false">Aikaleima taantui alueen järjestyksessä</string>
+    <string name="positions_timeline_incompleteness_reasons_before_activation" formatted="false">Piste edeltää aktivointia</string>
+    <string name="positions_timeline_incompleteness_reasons_activation_baseline_non_finite" formatted="false">Aktivoinnin lähtöarvo ei ole äärellinen</string>
+    <string name="positions_timeline_incompleteness_reasons_fill_evidence_gap" formatted="false">Puute pysyvästi tallennetuissa toteutustiedoissa</string>
+    <string name="positions_timeline_incompleteness_reasons_seed_quantity_non_finite" formatted="false">Alustava määrä ei ole äärellinen</string>
+    <string name="positions_timeline_incompleteness_reasons_cost_basis_unavailable" formatted="false">Hankintameno ei ole saatavilla</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_provenance_unproven" formatted="false">Toteutushinnan alkuperää ei ole todennettu</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_size_invalid" formatted="false">Toteutuksen koko on virheellinen</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_invalid" formatted="false">Toteutushinta on virheellinen</string>
+    <string name="positions_timeline_incompleteness_reasons_fx_conversion_unproven" formatted="false">Valuuttamuunnosta ei ole todennettu</string>
+    <string name="positions_timeline_incompleteness_reasons_mark_unavailable" formatted="false">Mark-hinta ei ole saatavilla</string>
+    <string name="positions_timeline_incompleteness_reasons_cumulative_non_finite" formatted="false">Kumulatiivinen arvo ei ole äärellinen</string>
+    <string name="positions_timeline_incompleteness_reasons_unrealized_non_finite" formatted="false">Realisoitumaton P&amp;L ei ole äärellinen</string>
+    <string name="positions_timeline_incompleteness_reasons_net_non_finite" formatted="false">Netto-P&amp;L ei ole äärellinen</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_value_non_finite" formatted="false">Kohdistusarvo ei ole äärellinen</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">Kohdistuksen täsmäytys epäonnistui</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">Instrumenttikohtaisten P&amp;L-summien täsmäytys kokonais-P&amp;L:ään epäonnistui</string>
+    <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">Myöhässä saapunut, ennen aktivointia aikaleimattu kaupankäyntitoteutus</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Attribution sum is not representable</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Instrument sum is not representable</string>
+    <string name="positions_timeline_executionhistory_title" formatted="false">Operator-corrected execution history</string>
+    <string name="positions_timeline_executionhistory_summary" formatted="false">An operator repudiated recorded executions in this scope. Every correction listed here is excluded from the figures on this page.</string>
+    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Repudiated execution</string>
+    <string name="positions_timeline_executionhistory_correctionid" formatted="false">Correction record</string>
+    <string name="positions_timeline_equity_title" formatted="false">Equity overlay</string>
+    <string name="positions_timeline_equity_serieslabel" formatted="false">Oma pääoma</string>
+    <string name="positions_timeline_equity_drawdown_current" formatted="false">Current drawdown</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Spot venue only — balances held on other venues are excluded.</string>
+    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">External deposits and withdrawals are not adjusted out.</string>
+    <string name="positions_timeline_equity_honesty_restatedfrom">These figures are restated from %1$s at each minute\'s close, not sampled natively in this currency.</string>
+    <string name="positions_timeline_equity_honesty_pricedon">Priced on %1$s.</string>
+    <string name="positions_timeline_equity_honesty_conversionwithheld">Minutes dropped for want of a proven close: %1$s.</string>
+    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Drawdown is withheld on a converted basis, because the running peak is tracked in the sampled currency.</string>
+    <string name="positions_timeline_equity_cashposition_position" formatted="false">Position value</string>
+    <string name="positions_timeline_equity_cashposition_cash" formatted="false">Cash</string>
+    <string name="pnl_provenance">Calculation: %1$s · Mark source: %2$s · As of: %3$s</string>
+    <string name="pnl_equity_coverage">Equity sampled: %1$s · Complete minutes: %2$s</string>
+    <string name="pnl_execution_history">Execution history: %1$s</string>
+    <string name="process_title" formatted="false">Prosessit</string>
+    <string name="process_running" formatted="false">Käynnissä</string>
+    <string name="process_stopped" formatted="false">Pysäytetty</string>
+    <string name="process_feeds" formatted="false">Syötteet</string>
+    <string name="process_strategies" formatted="false">Strategiat</string>
+    <string name="process_executors" formatted="false">Suorittajat</string>
+    <string name="process_brokers" formatted="false">Välittäjät</string>
+    <string name="process_memory" formatted="false">Muisti</string>
+    <string name="process_cpu" formatted="false">CPU</string>
+    <string name="process_empty" formatted="false">Ei määritettyjä prosesseja.</string>
+    <string name="process_start" formatted="false">Käynnistä</string>
+    <string name="process_stop" formatted="false">Stop</string>
+    <string name="process_restart" formatted="false">Käynnistä uudelleen</string>
+    <string name="process_cancel" formatted="false">Peruuta</string>
+    <string name="process_stale" formatted="false">Tätä prosessia ei voi enää hallita täältä käsin. Päivitä tiedot ja yritä uudelleen.</string>
+    <string name="process_partial" formatted="false">Prosessi pysäytettiin, mutta sitä ei voi enää käynnistää uudelleen täältä käsin. Päivitä tiedot ja yritä uudelleen.</string>
+    <string name="process_confirm" formatted="false">Confirm process action</string>
+    <string name="process_confirm_message" formatted="false">Apply this action to the selected process?</string>
+    <string name="process_intent_saved" formatted="false">Desired state saved. The owning coordinator will apply it.</string>
+    <string name="process_accepted" formatted="false">Process action accepted.</string>
+    <string name="process_unknown" formatted="false">The command outcome is unknown. Controls remain locked: a status refresh cannot prove whether this command was applied.</string>
+    <string name="process_partial_unknown" formatted="false">The process was stopped, but the restart outcome is unknown. Controls remain locked: a status refresh cannot prove whether the restart was applied.</string>
+    <string name="process_rejected" formatted="false">The process action failed.</string>
+    <string name="process_load_failed" formatted="false">Could not refresh process status.</string>
+    <string name="process_config_failed" formatted="false">Process controls are unavailable because configuration could not be refreshed.</string>
+    <string name="process_enable" formatted="false">Enable</string>
+    <string name="process_disable" formatted="false">Disable</string>
+    <string name="ai_reviews_pending_title" formatted="false">Odottavat tarkistukset</string>
+    <string name="ai_reviews_decisions_title" formatted="false">AI-päätökset</string>
+    <string name="ai_reviews_deadline" formatted="false">Määräaika</string>
+    <string name="ai_reviews_expired" formatted="false">Vanhentunut</string>
+    <string name="ai_reviews_rationale" formatted="false">Perustelu</string>
+    <string name="ai_reviews_rationale_long">Perustelu on liian pitkä (raja on %1$d merkkiä).</string>
+    <string name="ai_reviews_approve" formatted="false">Hyväksy</string>
+    <string name="ai_reviews_reject" formatted="false">Hylkää</string>
+    <string name="ai_reviews_pending" formatted="false">Odottaa</string>
+    <string name="ai_reviews_superseded" formatted="false">Peruutettu</string>
+    <string name="ai_reviews_decided" formatted="false">Päätetty</string>
+    <string name="ai_reviews_reject_message" formatted="false">Hylkääminen estää kaupan, jota varten tämä tarkistus avattiin. Toimintoa ei voi kumota.</string>
+    <string name="ai_reviews_cancel" formatted="false">Peruuta</string>
+    <string name="ai_reviews_peer_resolved" formatted="false">Toinen delegaatti on jo ratkaissut tämän tarkistuksen.</string>
+    <string name="ai_reviews_expired_message" formatted="false">Tämä tarkistus ylitti määräaikansa ja aikakatkaistiin.</string>
+    <string name="ai_reviews_missing" formatted="false">Tätä tarkistusta ei enää ole.</string>
+    <string name="ai_reviews_denied" formatted="false">Delegaattioikeutesi muuttuivat. Lataa uudelleen ennen päätöstä.</string>
+    <string name="ai_reviews_load_failed" formatted="false">Could not refresh reviews. Previously loaded reviews remain visible.</string>
+    <string name="ai_reviews_check_status" formatted="false">Check status</string>
+    <string name="ai_reviews_retry" formatted="false">Retry original decision</string>
+    <string name="ai_reviews_confirm" formatted="false">Confirm review decision</string>
+    <string name="ai_reviews_accepted" formatted="false">Decision accepted</string>
+    <string name="ai_reviews_rejected" formatted="false">Decision rejected by the server</string>
+    <string name="ai_reviews_unknown" formatted="false">Outcome unknown. Check status before retrying.</string>
+    <string name="positions_accessibility_label_closebutton" formatted="false">Sulje positio</string>
+    <string name="positions_accessibility_label_reducebutton" formatted="false">Pienennä positiota</string>
+    <string name="positions_reduce_cancel" formatted="false">Peruuta</string>
+    <string name="positions_reduce_footer" formatted="false">100 % sulkee position. Lähettää vain pienentävän markkinatoimeksiannon vastakkaiselle puolelle.</string>
+    <string name="positions_reduce_sizelabel" formatted="false">Pienennettävä määrä</string>
+    <string name="trading_bracket_attach" formatted="false">Liitä stop-loss / take-profit</string>
+    <string name="trading_bracket_stoplosslabel" formatted="false">Stop-loss</string>
+    <string name="trading_bracket_takeprofitlabel" formatted="false">Take-profit</string>
+    <string name="trading_trailingstop_attach" formatted="false">Liitä liukuva stop</string>
+    <string name="trading_trailingstop_trailamountlabel" formatted="false">Seurantaetäisyys</string>
+    <string name="position_action_review" formatted="false">Review position action</string>
+    <string name="position_action_confirm" formatted="false">Confirm action</string>
+    <string name="position_action_accepted" formatted="false">Request accepted. Refresh to check execution status.</string>
+    <string name="position_action_retry" formatted="false">Retry same request</string>
+    <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
+    <string name="position_action_cycle" formatted="false">Position cycle</string>
+    <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+</resources>

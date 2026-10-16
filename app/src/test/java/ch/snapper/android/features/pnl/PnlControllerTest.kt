@@ -102,7 +102,7 @@ class PnlControllerTest {
         assertEquals(Instant.parse("2026-10-16T00:00:00.123456Z"), query.to)
         assertEquals(123456000, query.from.nano)
         val result = requireNotNull(controller.state.value.data)
-        assertTrue(PnlController.matches(query, result.copy(to_time = "2026-10-16T02:00:00.123456+02:00")))
+        assertTrue(PnlController.matches(query, result.copy(toTime = "2026-10-16T02:00:00.123456+02:00")))
     }
 
     @Test fun newerQueryCommitsWhileCancelledIgnoringOldQueryCannotOverwriteIt() = runTest {
@@ -115,11 +115,11 @@ class PnlControllerTest {
         client.gate = null
         controller.actions.currency("EUR")
         runCurrent()
-        assertEquals("EUR", controller.state.value.data?.valuation_ccy)
+        assertEquals("EUR", controller.state.value.data?.valuationCcy)
         assertFalse(controller.state.value.loading)
         gate.complete(Unit)
         runCurrent()
-        assertEquals("EUR", controller.state.value.data?.valuation_ccy)
+        assertEquals("EUR", controller.state.value.data?.valuationCcy)
         assertFalse(controller.state.value.loading)
     }
 

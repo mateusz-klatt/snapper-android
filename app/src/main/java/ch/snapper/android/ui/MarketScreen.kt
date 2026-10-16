@@ -84,24 +84,46 @@ private fun MarketControls(state: MarketState, load: (String, String, String) ->
 }
 
 @Composable
-private fun CandleChart(candles: List<CandleDto>) {
+internal fun CandleChart(candles: List<CandleDto>) {
     val visible = candles.takeLast(100)
-    val low = visible.minOf { it.low }
-    val high = visible.maxOf { it.high }
-    val range = (high - low).takeIf { it.signum() != 0 } ?: BigDecimal.ONE
+    val minimum = visible.minOf { it.low }
+    val maximum = visible.maxOf { it.high }
+    val padding = if (minimum.compareTo(maximum) == 0) maxOf(minimum.abs().multiply(BigDecimal("0.01")), BigDecimal("0.00000001")) else BigDecimal.ZERO
+    val low = minimum - padding
+    val high = maximum + padding
+    val range = high - low
     val description = stringResource(R.string.chart_description)
     val rising = MaterialTheme.colorScheme.primary
     val falling = Color(0xFFD94848)
-    Canvas(Modifier.fillMaxWidth().height(220.dp).semantics { contentDescription = description }) {
-        val stride = size.width / visible.size
-        fun y(value: BigDecimal): Float = size.height * (1f - (value - low).divide(range, MathContext.DECIMAL64).toFloat())
-        visible.forEachIndexed { index, candle ->
-            val x = (index + 0.5f) * stride
-            val color = if (candle.close >= candle.open) rising else falling
-            drawLine(color, Offset(x, y(candle.high)), Offset(x, y(candle.low)), strokeWidth = 2f)
-            val top = minOf(y(candle.open), y(candle.close))
-            val height = kotlin.math.abs(y(candle.open) - y(candle.close)).coerceAtLeast(2f)
-            drawRect(color, Offset(x - stride * 0.3f, top), Size(stride * 0.6f, height))
+    val grid = MaterialTheme.colorScheme.outlineVariant
+    Column(Modifier.semantics { contentDescription = description }) {
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            Column(Modifier.widthIn(max = 96.dp).height(220.dp), verticalArrangement = Arrangement.SpaceBetween) {
+                Text(high.display(), style = MaterialTheme.typography.labelSmall)
+                Text((low + range.divide(BigDecimal(2))).display(), style = MaterialTheme.typography.labelSmall)
+                Text(low.display(), style = MaterialTheme.typography.labelSmall)
+            }
+            Canvas(Modifier.weight(1f).height(220.dp)) {
+                for (step in 0..4) {
+                    val fraction = step / 4f
+                    drawLine(grid, Offset(0f, size.height * fraction), Offset(size.width, size.height * fraction))
+                    drawLine(grid, Offset(size.width * fraction, 0f), Offset(size.width * fraction, size.height))
+                }
+                val stride = size.width / visible.size
+                fun y(value: BigDecimal): Float = size.height * (1f - (value - low).divide(range, MathContext.DECIMAL64).toFloat())
+                visible.forEachIndexed { index, candle ->
+                    val x = (index + 0.5f) * stride
+                    val color = if (candle.close >= candle.open) rising else falling
+                    drawLine(color, Offset(x, y(candle.high)), Offset(x, y(candle.low)), strokeWidth = 2f)
+                    val top = minOf(y(candle.open), y(candle.close))
+                    val height = kotlin.math.abs(y(candle.open) - y(candle.close)).coerceAtLeast(2f)
+                    drawRect(color, Offset(x - stride * 0.3f, top), Size(stride * 0.6f, height))
+                }
+            }
+        }
+        Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+            Text(visible.first().openAt, Modifier.weight(1f), style = MaterialTheme.typography.labelSmall)
+            Text(visible.last().openAt, Modifier.weight(1f), style = MaterialTheme.typography.labelSmall)
         }
     }
 }

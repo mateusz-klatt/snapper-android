@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="privacy_policy" formatted="false">Privacy policy</string>
+    <string name="username" formatted="false">ユーザー名</string>
+    <string name="password" formatted="false">パスワード</string>
+    <string name="sign_in" formatted="false">サインイン</string>
+    <string name="session_retention_notice" formatted="false">Staying signed in requires Android 11+, a secure screen lock, and authentication with your PIN, pattern, password or strong biometrics within the last 5 minutes. Otherwise, sign in again after the app restarts.</string>
+    <string name="subtitle" formatted="false">取引プラットフォーム</string>
+    <string name="backend" formatted="false">カスタムバックエンドURL</string>
+    <string name="language" formatted="false">言語</string>
+    <string name="logout" formatted="false">ログアウト</string>
+    <string name="positions" formatted="false">ポジション</string>
+    <string name="orders" formatted="false">注文</string>
+    <string name="market" formatted="false">市場データ</string>
+    <string name="wallet" formatted="false">ウォレット</string>
+    <string name="all_wallets" formatted="false">すべてのウォレット</string>
+    <string name="retry" formatted="false">再試行</string>
+    <string name="loading" formatted="false">読み込み中…</string>
+    <string name="size" formatted="false">サイズ</string>
+    <string name="average_price" formatted="false">平均価格</string>
+    <string name="mark_price" formatted="false">マーク価格</string>
+    <string name="pnl" formatted="false">未実現損益</string>
+    <string name="instrument" formatted="false">銘柄</string>
+    <string name="price" formatted="false">価格</string>
+    <string name="filled" formatted="false">約定済み</string>
+    <string name="status" formatted="false">ステータス</string>
+    <string name="side" formatted="false">Side</string>
+    <string name="open" formatted="false">Open</string>
+    <string name="high" formatted="false">High</string>
+    <string name="low" formatted="false">Low</string>
+    <string name="close" formatted="false">Close</string>
+    <string name="volume" formatted="false">出来高</string>
+    <string name="timeframe" formatted="false">時間足</string>
+    <string name="no_candles" formatted="false">ローソク足はまだありません</string>
+    <string name="backend_warning" formatted="false">バックエンドを切り替えるとサインアウトされ、ローカルのアプリ状態がクリアされます。新しいURLで再度サインインする必要があります。</string>
+    <string name="home" formatted="false">ホーム</string>
+    <string name="alerts" formatted="false">アラート</string>
+    <string name="settings" formatted="false">設定</string>
+    <string name="save" formatted="false">保存</string>
+    <string name="refresh" formatted="false">Refresh</string>
+    <string name="exchange" formatted="false">取引所</string>
+    <string name="load_market" formatted="false">Load candles</string>
+    <string name="empty" formatted="false">No records available.</string>
+    <string name="snapshot_note" formatted="false">Snapshot data. Refresh to retrieve the latest available records.</string>
+    <string name="chart_description" formatted="false">Historical candle chart. Exact values are listed below.</string>
+    <string name="error_origin" formatted="false">Enter a valid HTTPS backend origin.</string>
+    <string name="error_credentials" formatted="false">The username or password is incorrect.</string>
+    <string name="error_session" formatted="false">Your session expired. Please sign in again.</string>
+    <string name="error_network" formatted="false">Could not reach the backend. Check your connection and try again.</string>
+    <string name="error_service" formatted="false">The backend could not complete this request. Please try again.</string>
+    <string name="error_unknown" formatted="false">Something went wrong. Please try again.</string>
+    <string name="dismiss" formatted="false">閉じる</string>
+    <string name="paper" formatted="false">デモ</string>
+    <string name="safety_critical" formatted="false">Safety critical</string>
+    <string name="snapshot_limit" formatted="false">This view shows current positions and up to 100 recent orders and alerts; it is not a complete history.</string>
+    <string name="chart_window" formatted="false">The chart shows the last 100 retrieved candles.</string>
+    <string name="local_network_explanation" formatted="false">For a backend on your local network, allow local network access before signing in. Public internet backends do not need this permission.</string>
+    <string name="local_network_allow" formatted="false">Allow local network</string>
+    <string name="local_network_settings" formatted="false">Open app settings</string>
+    <string name="order_new" formatted="false">New Order</string>
+    <string name="order_entry" formatted="false">New Manual Order</string>
+    <string name="order_confirm" formatted="false">Confirm Order</string>
+    <string name="order_quantity" formatted="false">数量</string>
+    <string name="order_type" formatted="false">Order Type</string>
+    <string name="order_stop_price" formatted="false">Stop Price</string>
+    <string name="order_mode" formatted="false">モード</string>
+    <string name="order_buy" formatted="false">買い</string>
+    <string name="order_sell" formatted="false">売り</string>
+    <string name="order_market" formatted="false">成行</string>
+    <string name="order_limit" formatted="false">指値</string>
+    <string name="order_stop" formatted="false">Stop</string>
+    <string name="order_stop_limit" formatted="false">Stop Limit</string>
+    <string name="order_live" formatted="false">Live</string>
+    <string name="order_review" formatted="false">Review Order</string>
+    <string name="order_back" formatted="false">Back</string>
+    <string name="order_submit" formatted="false">Confirm Order</string>
+    <string name="order_submitting" formatted="false">Submitting…</string>
+    <string name="order_leverage" formatted="false">レバレッジ</string>
+    <string name="order_reduce_only" formatted="false">Reduce Only</string>
+    <string name="order_observation_only" formatted="false">This instrument is observation-only — place orders on an execution-capable instrument.</string>
+    <string name="order_unknown_instrument" formatted="false">This instrument is not recognised. Reload the list and try again.</string>
+    <string name="order_caps_violation" formatted="false">This order would exceed your account safety caps. Review your risk settings and retry.</string>
+    <string name="order_rejected" formatted="false">Order creation failed</string>
+    <string name="order_cancel_title" formatted="false">注文をキャンセルしますか？</string>
+    <string name="order_cancel_confirm" formatted="false">注文をキャンセル</string>
+    <string name="order_keep_open" formatted="false">注文を残す</string>
+    <string name="order_select_wallet" formatted="false">Select a wallet on Home before placing an order.</string>
+    <string name="order_created" formatted="false">Order submitted. Refresh to check execution status.</string>
+    <string name="order_cancel_requested" formatted="false">Cancellation requested. Refresh to check the order status.</string>
+    <string name="order_unknown_outcome" formatted="false">The request outcome is unknown. Check status before taking further action.</string>
+    <string name="order_check_status" formatted="false">Check status</string>
+    <string name="order_retry_intent" formatted="false">Retry same order</string>
+    <string name="order_catalog_error" formatted="false">Could not load exchanges or instruments. Try again.</string>
+    <string name="order_no_instruments" formatted="false">No instruments available for this exchange.</string>
+    <string name="order_invalid_form" formatted="false">Enter positive quantities and required prices. Optional leverage must be a positive whole number.</string>
+    <string name="order_refresh_failed" formatted="false">The request was accepted, but the latest records could not be loaded. Refresh to check status.</string>
+    <string name="order_forbidden" formatted="false">You no longer have permission for this action.</string>
+    <string name="order_session_changed" formatted="false">The session or wallet changed. Open a new order from the current account.</string>
+    <string name="order_enabled" formatted="false">有効</string>
+    <string name="order_disabled" formatted="false">無効</string>
+    <string name="system_tools" formatted="false">Overview</string>
+    <string name="desk_attach_button" formatted="false">閲覧者を追加</string>
+    <string name="desk_attach_desk_label" formatted="false">デスク</string>
+    <string name="desk_nav_title" formatted="false">マイデスク</string>
+    <string name="desk_primary_badge" formatted="false">メイン</string>
+    <string name="desk_attach_username_placeholder" formatted="false">閲覧者の正確なユーザー名</string>
+    <string name="desk_attach_validation_username" formatted="false">閲覧者のユーザー名を入力してください。</string>
+    <string name="desk_description_unavailable" formatted="false">説明はありません。</string>
+    <string name="desk_attach_help" formatted="false">閲覧者の正確なユーザー名を入力してください。新しいデスクは、閲覧者がサインアウトして再度サインインした後に利用できます。</string>
+    <string name="desk_attach_success_message" formatted="false">新しいデスクを利用するには、閲覧者がサインアウトして再度サインインする必要があります。</string>
+    <string name="desk_empty_message" formatted="false">アカウントはどのデスクにも関連付けられていません。</string>
+    <string name="desk_load_error" formatted="false">デスクを読み込めませんでした。もう一度お試しください。</string>
+    <string name="settings_account_email" formatted="false">メールアドレス</string>
+    <string name="settings_account_role">役割：%1$s</string>
+    <string name="settings_app_info_version" formatted="false">バージョン</string>
+    <string name="settings_app_info_build" formatted="false">ビルド</string>
+    <string name="settings_logout_confirm_title" formatted="false">サインアウトしますか？</string>
+    <string name="settings_logout_confirm_message" formatted="false">ログアウトしてもよろしいですか？</string>
+    <string name="settings_connection_change_backend_title" formatted="false">バックエンドを変更しますか？</string>
+    <string name="settings_connection_change_backend_message" formatted="false">バックエンドを切り替えるとサインアウトされ、ローカルのアプリ状態がクリアされます。新しいURLで再度サインインする必要があります。</string>
+    <string name="common_continue" formatted="false">続行</string>
+    <string name="backend_url_cancel" formatted="false">キャンセル</string>
+    <string name="market_search" formatted="false">銘柄を検索</string>
+    <string name="market_view_only" formatted="false">閲覧のみ</string>
+    <string name="market_catalog_retry" formatted="false">再試行</string>
+    <string name="market_picker_close" formatted="false">キャンセル</string>
+    <string name="market_no_matches" formatted="false">\@string/empty</string>
+    <string name="market_catalog_error" formatted="false">\@string/error_unknown</string>
+    <string name="system_health" formatted="false">システムの状態</string>
+    <string name="system_strategies" formatted="false">戦略</string>
+    <string name="system_backtests" formatted="false">バックテスト</string>
+    <string name="system_users" formatted="false">ユーザー</string>
+    <string name="system_delegates" formatted="false">AI デリゲート</string>
+    <string name="system_version" formatted="false">バージョン</string>
+    <string name="system_connections" formatted="false">アクティブな接続</string>
+    <string name="system_subscribers" formatted="false">ZMQ サブスクライバー</string>
+    <string name="system_tasks" formatted="false">サブスクライバータスク</string>
+    <string name="system_topics" formatted="false">アクティブなトピック</string>
+    <string name="system_clients" formatted="false">アクティブなクライアント</string>
+    <string name="system_gaps" formatted="false">検出されたギャップ</string>
+    <string name="system_resets" formatted="false">セッションのリセット</string>
+    <string name="system_duplicates" formatted="false">重複</string>
+    <string name="system_joins" formatted="false">ストリーム途中参加</string>
+    <string name="system_unstamped" formatted="false">拒否（スタンプなし）</string>
+    <string name="system_rest_clients" formatted="false">追跡中の REST クライアント</string>
+    <string name="system_initial_cash" formatted="false">初期資金</string>
+    <string name="system_period" formatted="false">期間</string>
+    <string name="system_created" formatted="false">作成日</string>
+    <string name="system_max_orders" formatted="false">最大未約定注文数</string>
+    <string name="system_max_daily" formatted="false">1日の最大USD</string>
+    <string name="system_default" formatted="false">デフォルト</string>
+    <string name="system_trader" formatted="false">トレーダーステータス</string>
+    <string name="system_running" formatted="false">実行中</string>
+    <string name="system_stopped" formatted="false">停止</string>
+    <string name="system_mode" formatted="false">モード</string>
+    <string name="system_autostart" formatted="false">自動起動</string>
+    <string name="system_active" formatted="false">有効</string>
+    <string name="system_inactive" formatted="false">無効</string>
+    <string name="system_revoked" formatted="false">取り消し済み</string>
+    <string name="records_open" formatted="false">Open</string>
+    <string name="records_recent" formatted="false">最近</string>
+    <string name="records_fills" formatted="false">約定</string>
+    <string name="records_refresh" formatted="false">Refresh</string>
+    <string name="records_fee" formatted="false">Fee</string>
+    <string name="records_details" formatted="false">Details</string>
+    <string name="records_hide_details" formatted="false">\@string/close</string>
+    <string name="records_thread" formatted="false">スレッド</string>
+    <string name="records_source_topic" formatted="false">送信元トピック</string>
+    <string name="notification_defaults_title" formatted="false">ユーザー既定設定</string>
+    <string name="notification_defaults_footer" formatted="false">受信アラートに一致するデバイス別上書きがない場合、既定値が適用されます。</string>
+    <string name="notification_defaults_enabled" formatted="false">有効</string>
+    <string name="notification_defaults_priority" formatted="false">最低優先度</string>
+    <string name="notification_defaults_load_failed" formatted="false">設定を読み込めませんでした</string>
+    <string name="notification_defaults_save_failed" formatted="false">設定を保存できませんでした</string>
+    <string name="notification_defaults_low" formatted="false">Low</string>
+    <string name="notification_defaults_medium" formatted="false">中</string>
+    <string name="notification_defaults_high" formatted="false">High</string>
+    <string name="notification_defaults_fill" formatted="false">注文約定</string>
+    <string name="notification_defaults_rejected" formatted="false">注文拒否</string>
+    <string name="notification_defaults_stop" formatted="false">ストップロス発動</string>
+    <string name="notification_defaults_margin" formatted="false">証拠金警告</string>
+    <string name="notification_defaults_system" formatted="false">システムエラー</string>
+    <string name="notification_defaults_saved" formatted="false">OK</string>
+    <string name="signals_title" formatted="false">シグナル</string>
+    <string name="signals_strength" formatted="false">強度</string>
+    <string name="signals_price" formatted="false">価格</string>
+    <string name="signals_reason" formatted="false">理由：</string>
+    <string name="signals_strong" formatted="false">強い</string>
+    <string name="signals_medium" formatted="false">中</string>
+    <string name="signals_weak" formatted="false">弱い</string>
+    <string name="signals_very_weak" formatted="false">非常に弱い</string>
+    <string name="signals_total" formatted="false">合計</string>
+    <string name="signals_buy" formatted="false">買い</string>
+    <string name="signals_sell" formatted="false">売り</string>
+    <string name="signals_average_strength" formatted="false">平均強度</string>
+    <string name="signals_filter" formatted="false">戦略で絞り込む</string>
+    <string name="signals_all_strategies" formatted="false">すべての戦略</string>
+    <string name="signals_empty" formatted="false">現在のフィルターに一致する取引シグナルはありません。</string>
+    <string name="signals_export" formatted="false">エクスポート</string>
+    <string name="signals_export_failed" formatted="false">送信に失敗しました</string>
+    <string name="venue_accounts_title" formatted="false">取引所アカウント</string>
+    <string name="venue_accounts_refresh" formatted="false">Refresh</string>
+    <string name="venue_accounts_failed" formatted="false">取引所アカウントの状態を読み込めませんでした。アカウントが空なのではなく、現在データを取得できない状態です。</string>
+    <string name="venue_accounts_authoritative" formatted="false">権限ウィンドウ内で確認された、ライブの取引所データ。</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">リアルタイムと表示されていない行には、最終確認済み、シミュレーション、または利用不可のデータが表示されます — 取引所が提供する信頼できるリアルタイム残高では決してありません。</string>
+    <string name="venue_accounts_valuation" formatted="false">Valuation</string>
+    <string name="venue_accounts_balances" formatted="false">残高</string>
+    <string name="venue_accounts_observed" formatted="false">Observed at</string>
+    <string name="venue_accounts_source" formatted="false">Source observation</string>
+    <string name="venue_accounts_total" formatted="false">合計</string>
+    <string name="venue_accounts_free" formatted="false">利用可能</string>
+    <string name="venue_accounts_used" formatted="false">使用中</string>
+    <string name="venue_accounts_numeric_source" formatted="false">Numeric provenance</string>
+    <string name="venue_accounts_positions" formatted="false">オープンポジション</string>
+    <string name="venue_accounts_funding" formatted="false">ファンディング</string>
+    <string name="venue_accounts_reconciliation" formatted="false">Reconciliation status</string>
+    <string name="venue_accounts_evaluation" formatted="false">Evaluation status</string>
+    <string name="venue_accounts_deadline" formatted="false">Authority deadline</string>
+    <string name="positions_timeline_controls_window" formatted="false">期間</string>
+    <string name="positions_timeline_controls_granularity" formatted="false">時間間隔</string>
+    <string name="positions_timeline_controls_valuationcurrency" formatted="false">評価通貨</string>
+    <string name="positions_timeline_controls_last24hours" formatted="false">過去24時間</string>
+    <string name="positions_timeline_controls_last7days" formatted="false">過去7日間</string>
+    <string name="positions_timeline_controls_last30days" formatted="false">過去30日間</string>
+    <string name="positions_timeline_controls_last90days" formatted="false">過去90日間</string>
+    <string name="positions_timeline_error_title" formatted="false">P&amp;L推移を読み込めませんでした</string>
+    <string name="positions_timeline_empty_message" formatted="false">この期間に利用可能なP&amp;Lデータポイントはありません。</string>
+    <string name="positions_timeline_nowallet_message" formatted="false">P&amp;L推移を表示するウォレットを選択してください。</string>
+    <string name="positions_timeline_incompleteness_title" formatted="false">データポイントが不完全な理由</string>
+    <string name="positions_timeline_incompleteness_description" formatted="false">理由は読み込み済み期間全体を対象とします。1つのデータポイントに複数の原因がある場合、件数は重複することがあります。</string>
+    <string name="positions_timeline_incompleteness_affectedpoints">Affected points: %1$s</string>
+    <string name="positions_timeline_chart_title" formatted="false">P&amp;Lの推移</string>
+    <string name="positions_timeline_chart_net" formatted="false">純P&amp;L</string>
+    <string name="positions_timeline_chart_realized" formatted="false">実現P&amp;L</string>
+    <string name="positions_timeline_chart_unrealized" formatted="false">Unrealized P&amp;L</string>
+    <string name="positions_timeline_attribution_title" formatted="false">最新のP&amp;L帰属内訳</string>
+    <string name="positions_timeline_attribution_nostrategy" formatted="false">裏付けられた戦略なし</string>
+    <string name="positions_timeline_attribution_withheld" formatted="false">検証不能</string>
+    <string name="positions_timeline_attribution_valuesemantics" formatted="false">表示されているゼロは裏付け済みです。「検証不能」は値を裏付けられなかったことを意味します。</string>
+    <string name="positions_timeline_contributions_title" formatted="false">銘柄別の最新P&amp;L寄与額</string>
+    <string name="positions_timeline_contributions_realized" formatted="false">実現P&amp;L</string>
+    <string name="positions_timeline_contributions_fees" formatted="false">手数料</string>
+    <string name="positions_timeline_contributions_accrual" formatted="false">累積ファンディング</string>
+    <string name="positions_timeline_contributions_unrealized" formatted="false">Unrealized P&amp;L</string>
+    <string name="positions_timeline_incompleteness_reasons_scope_order_regression" formatted="false">スコープ順序で時刻が逆行</string>
+    <string name="positions_timeline_incompleteness_reasons_before_activation" formatted="false">有効化前のデータポイントです</string>
+    <string name="positions_timeline_incompleteness_reasons_activation_baseline_non_finite" formatted="false">有効化時の基準値が有限値ではありません</string>
+    <string name="positions_timeline_incompleteness_reasons_fill_evidence_gap" formatted="false">永続化された約定証跡が欠落しています</string>
+    <string name="positions_timeline_incompleteness_reasons_seed_quantity_non_finite" formatted="false">初期数量が有限値ではありません</string>
+    <string name="positions_timeline_incompleteness_reasons_cost_basis_unavailable" formatted="false">取得原価を利用できません</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_provenance_unproven" formatted="false">約定価格の出所を裏付けられません</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_size_invalid" formatted="false">約定数量が無効です</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_invalid" formatted="false">約定価格が無効です</string>
+    <string name="positions_timeline_incompleteness_reasons_fx_conversion_unproven" formatted="false">FX換算を裏付けられません</string>
+    <string name="positions_timeline_incompleteness_reasons_mark_unavailable" formatted="false">マーク価格を利用できません</string>
+    <string name="positions_timeline_incompleteness_reasons_cumulative_non_finite" formatted="false">累積値が有限値ではありません</string>
+    <string name="positions_timeline_incompleteness_reasons_unrealized_non_finite" formatted="false">未実現P&amp;Lが有限値ではありません</string>
+    <string name="positions_timeline_incompleteness_reasons_net_non_finite" formatted="false">純P&amp;Lが有限値ではありません</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_value_non_finite" formatted="false">帰属値が有限値ではありません</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">帰属値の照合に失敗しました</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">銘柄別P&amp;L合計の照合に失敗しました</string>
+    <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">有効化前のタイムスタンプを持つ、遅れて到着した約定</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Attribution sum is not representable</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Instrument sum is not representable</string>
+    <string name="positions_timeline_executionhistory_title" formatted="false">Operator-corrected execution history</string>
+    <string name="positions_timeline_executionhistory_summary" formatted="false">An operator repudiated recorded executions in this scope. Every correction listed here is excluded from the figures on this page.</string>
+    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Repudiated execution</string>
+    <string name="positions_timeline_executionhistory_correctionid" formatted="false">Correction record</string>
+    <string name="positions_timeline_equity_title" formatted="false">Equity overlay</string>
+    <string name="positions_timeline_equity_serieslabel" formatted="false">純資産</string>
+    <string name="positions_timeline_equity_drawdown_current" formatted="false">Current drawdown</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Spot venue only — balances held on other venues are excluded.</string>
+    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">External deposits and withdrawals are not adjusted out.</string>
+    <string name="positions_timeline_equity_honesty_restatedfrom">These figures are restated from %1$s at each minute\'s close, not sampled natively in this currency.</string>
+    <string name="positions_timeline_equity_honesty_pricedon">Priced on %1$s.</string>
+    <string name="positions_timeline_equity_honesty_conversionwithheld">Minutes dropped for want of a proven close: %1$s.</string>
+    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Drawdown is withheld on a converted basis, because the running peak is tracked in the sampled currency.</string>
+    <string name="positions_timeline_equity_cashposition_position" formatted="false">Position value</string>
+    <string name="positions_timeline_equity_cashposition_cash" formatted="false">Cash</string>
+    <string name="pnl_provenance">Calculation: %1$s · Mark source: %2$s · As of: %3$s</string>
+    <string name="pnl_equity_coverage">Equity sampled: %1$s · Complete minutes: %2$s</string>
+    <string name="pnl_execution_history">Execution history: %1$s</string>
+    <string name="process_title" formatted="false">プロセス</string>
+    <string name="process_running" formatted="false">実行中</string>
+    <string name="process_stopped" formatted="false">停止</string>
+    <string name="process_feeds" formatted="false">フィード</string>
+    <string name="process_strategies" formatted="false">戦略</string>
+    <string name="process_executors" formatted="false">エグゼキューター</string>
+    <string name="process_brokers" formatted="false">ブローカー</string>
+    <string name="process_memory" formatted="false">メモリ</string>
+    <string name="process_cpu" formatted="false">CPU</string>
+    <string name="process_empty" formatted="false">構成されたプロセスはありません。</string>
+    <string name="process_start" formatted="false">開始</string>
+    <string name="process_stop" formatted="false">Stop</string>
+    <string name="process_restart" formatted="false">再起動</string>
+    <string name="process_cancel" formatted="false">キャンセル</string>
+    <string name="process_stale" formatted="false">このプロセスはここから操作できなくなりました。更新して、もう一度お試しください。</string>
+    <string name="process_partial" formatted="false">プロセスは停止しましたが、ここから再起動できなくなりました。更新して、もう一度お試しください。</string>
+    <string name="process_confirm" formatted="false">Confirm process action</string>
+    <string name="process_confirm_message" formatted="false">Apply this action to the selected process?</string>
+    <string name="process_intent_saved" formatted="false">Desired state saved. The owning coordinator will apply it.</string>
+    <string name="process_accepted" formatted="false">Process action accepted.</string>
+    <string name="process_unknown" formatted="false">The command outcome is unknown. Controls remain locked: a status refresh cannot prove whether this command was applied.</string>
+    <string name="process_partial_unknown" formatted="false">The process was stopped, but the restart outcome is unknown. Controls remain locked: a status refresh cannot prove whether the restart was applied.</string>
+    <string name="process_rejected" formatted="false">The process action failed.</string>
+    <string name="process_load_failed" formatted="false">Could not refresh process status.</string>
+    <string name="process_config_failed" formatted="false">Process controls are unavailable because configuration could not be refreshed.</string>
+    <string name="process_enable" formatted="false">Enable</string>
+    <string name="process_disable" formatted="false">Disable</string>
+    <string name="ai_reviews_pending_title" formatted="false">保留中のレビュー</string>
+    <string name="ai_reviews_decisions_title" formatted="false">AIの決定</string>
+    <string name="ai_reviews_deadline" formatted="false">期限</string>
+    <string name="ai_reviews_expired" formatted="false">期限切れ</string>
+    <string name="ai_reviews_rationale" formatted="false">根拠</string>
+    <string name="ai_reviews_rationale_long">根拠が長すぎます（上限は%1$d文字です）。</string>
+    <string name="ai_reviews_approve" formatted="false">承認</string>
+    <string name="ai_reviews_reject" formatted="false">却下</string>
+    <string name="ai_reviews_pending" formatted="false">待機中</string>
+    <string name="ai_reviews_superseded" formatted="false">取り下げ済み</string>
+    <string name="ai_reviews_decided" formatted="false">決定日時</string>
+    <string name="ai_reviews_reject_message" formatted="false">却下すると、このレビューの対象となった取引は拒否されます。この操作は取り消せません。</string>
+    <string name="ai_reviews_cancel" formatted="false">キャンセル</string>
+    <string name="ai_reviews_peer_resolved" formatted="false">別のデリゲートがこのレビューをすでに解決しました。</string>
+    <string name="ai_reviews_expired_message" formatted="false">このレビューは期限を過ぎ、タイムアウトしました。</string>
+    <string name="ai_reviews_missing" formatted="false">このレビューは存在しません。</string>
+    <string name="ai_reviews_denied" formatted="false">デリゲートのアクセス権が変更されました。決定する前に再読み込みしてください。</string>
+    <string name="ai_reviews_load_failed" formatted="false">Could not refresh reviews. Previously loaded reviews remain visible.</string>
+    <string name="ai_reviews_check_status" formatted="false">Check status</string>
+    <string name="ai_reviews_retry" formatted="false">Retry original decision</string>
+    <string name="ai_reviews_confirm" formatted="false">Confirm review decision</string>
+    <string name="ai_reviews_accepted" formatted="false">Decision accepted</string>
+    <string name="ai_reviews_rejected" formatted="false">Decision rejected by the server</string>
+    <string name="ai_reviews_unknown" formatted="false">Outcome unknown. Check status before retrying.</string>
+    <string name="positions_accessibility_label_closebutton" formatted="false">ポジションをクローズ</string>
+    <string name="positions_accessibility_label_reducebutton" formatted="false">ポジションを減らす</string>
+    <string name="positions_reduce_cancel" formatted="false">キャンセル</string>
+    <string name="positions_reduce_footer" formatted="false">100%でポジションをクローズします。反対サイドに対してリデュースオンリーの成行注文を送信します。</string>
+    <string name="positions_reduce_sizelabel" formatted="false">減らす数量</string>
+    <string name="trading_bracket_attach" formatted="false">ストップロス / テイクプロフィットを設定</string>
+    <string name="trading_bracket_stoplosslabel" formatted="false">ストップロス</string>
+    <string name="trading_bracket_takeprofitlabel" formatted="false">テイクプロフィット</string>
+    <string name="trading_trailingstop_attach" formatted="false">トレーリングストップを設定</string>
+    <string name="trading_trailingstop_trailamountlabel" formatted="false">トレール幅</string>
+    <string name="position_action_review" formatted="false">Review position action</string>
+    <string name="position_action_confirm" formatted="false">Confirm action</string>
+    <string name="position_action_accepted" formatted="false">Request accepted. Refresh to check execution status.</string>
+    <string name="position_action_retry" formatted="false">Retry same request</string>
+    <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
+    <string name="position_action_cycle" formatted="false">Position cycle</string>
+    <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+</resources>

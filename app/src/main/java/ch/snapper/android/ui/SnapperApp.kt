@@ -16,12 +16,15 @@ import ch.snapper.android.BuildConfig
 import ch.snapper.android.data.OrderScope
 import ch.snapper.android.features.system.SystemFeed
 
+private const val POSITIONS_READ_PERMISSION = "read:positions"
+
 private enum class Destination(val label: Int, val permission: String? = null) {
-    HOME(R.string.home), POSITIONS(R.string.positions, "read:positions"),
+    HOME(R.string.home), POSITIONS(R.string.positions, POSITIONS_READ_PERMISSION),
     ORDERS(R.string.orders, "read:orders"), ALERTS(R.string.alerts, "read:notifications"),
     MARKET(R.string.market, "read:market_data"), SYSTEM(R.string.system_tools),
     ACCOUNTS(R.string.venue_accounts_title, "read:account_state"), SIGNALS(R.string.signals_title, "read:signals"),
-    PNL(R.string.positions_timeline_chart_title, "read:positions"), DESKS(R.string.desk_nav_title),
+    PNL(R.string.positions_timeline_chart_title, POSITIONS_READ_PERMISSION), DESKS(R.string.desk_nav_title),
+    PROCESSES(R.string.process_title), AI_REVIEWS(R.string.ai_reviews_decisions_title),
     NOTIFICATIONS(R.string.notification_defaults_title), SETTINGS(R.string.settings)
 }
 
@@ -41,11 +44,16 @@ private fun AuthenticatedApp(state: AppUiState, actions: AppActions) {
     var selected by rememberSaveable { mutableStateOf(Destination.HOME.name) }
     val permissions = state.user?.effectivePermissions.orEmpty().toSet()
     val destinations = Destination.entries.filter {
-        if (it == Destination.SYSTEM) SystemFeed.entries.any { feed -> feed.isAllowed(permissions) }
-        else it.permission == null || it.permission in permissions
+        when (it) {
+            Destination.SYSTEM -> SystemFeed.entries.any { feed -> feed.isAllowed(permissions) }
+            Destination.PROCESSES -> "read:system_status" in permissions || "read:processes" in permissions
+            Destination.AI_REVIEWS -> "read:ai_reviews" in permissions ||
+                (!state.user?.delegatePublicId.isNullOrBlank() && "read:signals" in permissions)
+            else -> it.permission == null || it.permission in permissions
+        }
     }
     val current = destinations.firstOrNull { it.name == selected } ?: Destination.HOME
-    val sessionScope = state.user?.let { OrderScope.from(it) to it.primaryOperatorPublicId }
+    val sessionScope = state.user?.let { Triple(OrderScope.from(it), it.primaryOperatorPublicId, it.delegatePublicId) }
     val pnlWallet = state.snapshot?.wallets?.firstOrNull { it.publicId == state.user?.activeWalletPublicId }
     LaunchedEffect(current, state.backendUrl, sessionScope, if (current == Destination.PNL) pnlWallet else null) {
         when (current) {
@@ -55,6 +63,8 @@ private fun AuthenticatedApp(state: AppUiState, actions: AppActions) {
             Destination.SYSTEM -> SystemFeed.entries.filter { it.isAllowed(permissions) }.forEach(actions.system::refresh)
             Destination.SIGNALS -> actions.signals.refresh()
             Destination.PNL -> actions.pnl.refresh()
+            Destination.PROCESSES -> actions.loadProcesses()
+            Destination.AI_REVIEWS -> actions.loadAiReviews()
             else -> Unit
         }
     }
@@ -78,7 +88,7 @@ private fun AuthenticatedApp(state: AppUiState, actions: AppActions) {
             } }
             when (current) {
                 Destination.HOME -> item { Column(verticalArrangement = Arrangement.spacedBy(16.dp)) { HomeScreen(state, actions) } }
-                Destination.POSITIONS -> positionsScreen(state)
+                Destination.POSITIONS -> positionsScreen(state, actions)
                 Destination.ORDERS -> ordersScreen(state, actions.orders, state.records, actions.records)
                 Destination.ALERTS -> alertsScreen(state)
                 Destination.MARKET -> marketScreen(state.market, actions.loadMarket, state.marketCatalog, actions.marketCatalog)
@@ -86,6 +96,8 @@ private fun AuthenticatedApp(state: AppUiState, actions: AppActions) {
                 Destination.SIGNALS -> signalsScreen(state.signals, actions.signals)
                 Destination.ACCOUNTS -> venueAccountsScreen(state.venueAccounts, actions.refreshVenueAccounts)
                 Destination.PNL -> item { PnlTimelineScreen(state.pnl, actions.pnl) }
+                Destination.PROCESSES -> processesScreen(state.processes, actions.processes)
+                Destination.AI_REVIEWS -> aiReviewsScreen(state.aiReviews, actions.aiReviews)
                 Destination.DESKS -> item { DeskScreen(state.desks, actions.desks) }
                 Destination.NOTIFICATIONS -> notificationDefaultsScreen(state.notificationDefaults, actions.notificationDefaults)
                 Destination.SETTINGS -> item { Column(verticalArrangement = Arrangement.spacedBy(16.dp)) { SettingsScreen(state, actions) } }
@@ -98,6 +110,8 @@ private fun AuthenticatedApp(state: AppUiState, actions: AppActions) {
         }
     }
     OrderDialogs(state, actions.orders)
+    PositionActionDialogs(state.positionActions, actions.positionActions, actions.refresh)
+    AiReviewConfirmation(state.aiReviews, actions.aiReviews)
 }
 
 @Composable
@@ -121,7 +135,7 @@ private fun HomeScreen(state: AppUiState, actions: AppActions) {
     Text(stringResource(R.string.snapshot_limit), style = MaterialTheme.typography.bodySmall)
     state.snapshot?.let { snapshot ->
         RecordCard(state.user?.username.orEmpty()) {
-            if (snapshot.user.hasPermission("read:positions")) Metric(R.string.positions, snapshot.positions.size.toString())
+            if (snapshot.user.hasPermission(POSITIONS_READ_PERMISSION)) Metric(R.string.positions, snapshot.positions.size.toString())
             if (snapshot.user.hasPermission("read:orders")) Metric(R.string.orders, snapshot.orders.size.toString())
             if (snapshot.user.hasPermission("read:notifications")) Metric(R.string.alerts, snapshot.alerts.size.toString())
         }
@@ -130,7 +144,7 @@ private fun HomeScreen(state: AppUiState, actions: AppActions) {
 
 @Composable
 private fun SettingsScreen(state: AppUiState, actions: AppActions) {
-    val sessionScope = state.user?.let { OrderScope.from(it) to it.primaryOperatorPublicId }
+    val sessionScope = state.user?.let { Triple(OrderScope.from(it), it.primaryOperatorPublicId, it.delegatePublicId) }
     var confirmation by remember(state.backendUrl, sessionScope) { mutableStateOf<AccountConfirmation?>(null) }
     var pendingBackend by remember(state.backendUrl, state.user?.publicId) { mutableStateOf("") }
     state.user?.let { AccountSettingsContent(it, BuildConfig.VERSION_NAME, BuildConfig.VERSION_CODE.toString()) }

@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="privacy_policy" formatted="false">Privacy policy</string>
+    <string name="username" formatted="false">Gebruikersnaam</string>
+    <string name="password" formatted="false">Wachtwoord</string>
+    <string name="sign_in" formatted="false">Inloggen</string>
+    <string name="session_retention_notice" formatted="false">Staying signed in requires Android 11+, a secure screen lock, and authentication with your PIN, pattern, password or strong biometrics within the last 5 minutes. Otherwise, sign in again after the app restarts.</string>
+    <string name="subtitle" formatted="false">Trading-platform</string>
+    <string name="backend" formatted="false">Aangepaste backend-URL</string>
+    <string name="language" formatted="false">Taal</string>
+    <string name="logout" formatted="false">Uitloggen</string>
+    <string name="positions" formatted="false">Posities</string>
+    <string name="orders" formatted="false">Orders</string>
+    <string name="market" formatted="false">Marktdata</string>
+    <string name="wallet" formatted="false">Wallet</string>
+    <string name="all_wallets" formatted="false">Alle wallets</string>
+    <string name="retry" formatted="false">Opnieuw proberen</string>
+    <string name="loading" formatted="false">Laden…</string>
+    <string name="size" formatted="false">Grootte</string>
+    <string name="average_price" formatted="false">Gemiddelde prijs</string>
+    <string name="mark_price" formatted="false">Markprijs</string>
+    <string name="pnl" formatted="false">Ongerealiseerde P&amp;L</string>
+    <string name="instrument" formatted="false">Instrument</string>
+    <string name="price" formatted="false">Prijs</string>
+    <string name="filled" formatted="false">Uitgevoerd</string>
+    <string name="status" formatted="false">Status</string>
+    <string name="side" formatted="false">Kant</string>
+    <string name="open" formatted="false">Open</string>
+    <string name="high" formatted="false">Hoog</string>
+    <string name="low" formatted="false">Laag</string>
+    <string name="close" formatted="false">Close</string>
+    <string name="volume" formatted="false">Volume</string>
+    <string name="timeframe" formatted="false">Tijdsinterval</string>
+    <string name="no_candles" formatted="false">Nog geen candles</string>
+    <string name="backend_warning" formatted="false">Als je van backend wisselt, word je uitgelogd en wordt de lokale appstatus gewist. Je moet opnieuw inloggen op de nieuwe URL.</string>
+    <string name="home" formatted="false">Start</string>
+    <string name="alerts" formatted="false">Alerts</string>
+    <string name="settings" formatted="false">Instellingen</string>
+    <string name="save" formatted="false">Opslaan</string>
+    <string name="refresh" formatted="false">Refresh</string>
+    <string name="exchange" formatted="false">Beurs</string>
+    <string name="load_market" formatted="false">Load candles</string>
+    <string name="empty" formatted="false">No records available.</string>
+    <string name="snapshot_note" formatted="false">Snapshot data. Refresh to retrieve the latest available records.</string>
+    <string name="chart_description" formatted="false">Historical candle chart. Exact values are listed below.</string>
+    <string name="error_origin" formatted="false">Enter a valid HTTPS backend origin.</string>
+    <string name="error_credentials" formatted="false">The username or password is incorrect.</string>
+    <string name="error_session" formatted="false">Your session expired. Please sign in again.</string>
+    <string name="error_network" formatted="false">Could not reach the backend. Check your connection and try again.</string>
+    <string name="error_service" formatted="false">The backend could not complete this request. Please try again.</string>
+    <string name="error_unknown" formatted="false">Something went wrong. Please try again.</string>
+    <string name="dismiss" formatted="false">Sluiten</string>
+    <string name="paper" formatted="false">Demo</string>
+    <string name="safety_critical" formatted="false">Safety critical</string>
+    <string name="snapshot_limit" formatted="false">This view shows current positions and up to 100 recent orders and alerts; it is not a complete history.</string>
+    <string name="chart_window" formatted="false">The chart shows the last 100 retrieved candles.</string>
+    <string name="local_network_explanation" formatted="false">For a backend on your local network, allow local network access before signing in. Public internet backends do not need this permission.</string>
+    <string name="local_network_allow" formatted="false">Allow local network</string>
+    <string name="local_network_settings" formatted="false">Open app settings</string>
+    <string name="order_new" formatted="false">New Order</string>
+    <string name="order_entry" formatted="false">New Manual Order</string>
+    <string name="order_confirm" formatted="false">Confirm Order</string>
+    <string name="order_quantity" formatted="false">Aantal</string>
+    <string name="order_type" formatted="false">Order Type</string>
+    <string name="order_stop_price" formatted="false">Stop Price</string>
+    <string name="order_mode" formatted="false">Modus</string>
+    <string name="order_buy" formatted="false">Kopen</string>
+    <string name="order_sell" formatted="false">Verkopen</string>
+    <string name="order_market" formatted="false">Markt</string>
+    <string name="order_limit" formatted="false">Limiet</string>
+    <string name="order_stop" formatted="false">Stop</string>
+    <string name="order_stop_limit" formatted="false">Stop Limit</string>
+    <string name="order_live" formatted="false">Live</string>
+    <string name="order_review" formatted="false">Review Order</string>
+    <string name="order_back" formatted="false">Back</string>
+    <string name="order_submit" formatted="false">Confirm Order</string>
+    <string name="order_submitting" formatted="false">Submitting…</string>
+    <string name="order_leverage" formatted="false">Hefboom</string>
+    <string name="order_reduce_only" formatted="false">Reduce Only</string>
+    <string name="order_observation_only" formatted="false">This instrument is observation-only — place orders on an execution-capable instrument.</string>
+    <string name="order_unknown_instrument" formatted="false">This instrument is not recognised. Reload the list and try again.</string>
+    <string name="order_caps_violation" formatted="false">This order would exceed your account safety caps. Review your risk settings and retry.</string>
+    <string name="order_rejected" formatted="false">Order creation failed</string>
+    <string name="order_cancel_title" formatted="false">Order annuleren?</string>
+    <string name="order_cancel_confirm" formatted="false">Order annuleren</string>
+    <string name="order_keep_open" formatted="false">Open laten</string>
+    <string name="order_select_wallet" formatted="false">Select a wallet on Home before placing an order.</string>
+    <string name="order_created" formatted="false">Order submitted. Refresh to check execution status.</string>
+    <string name="order_cancel_requested" formatted="false">Cancellation requested. Refresh to check the order status.</string>
+    <string name="order_unknown_outcome" formatted="false">The request outcome is unknown. Check status before taking further action.</string>
+    <string name="order_check_status" formatted="false">Check status</string>
+    <string name="order_retry_intent" formatted="false">Retry same order</string>
+    <string name="order_catalog_error" formatted="false">Could not load exchanges or instruments. Try again.</string>
+    <string name="order_no_instruments" formatted="false">No instruments available for this exchange.</string>
+    <string name="order_invalid_form" formatted="false">Enter positive quantities and required prices. Optional leverage must be a positive whole number.</string>
+    <string name="order_refresh_failed" formatted="false">The request was accepted, but the latest records could not be loaded. Refresh to check status.</string>
+    <string name="order_forbidden" formatted="false">You no longer have permission for this action.</string>
+    <string name="order_session_changed" formatted="false">The session or wallet changed. Open a new order from the current account.</string>
+    <string name="order_enabled" formatted="false">Ingeschakeld</string>
+    <string name="order_disabled" formatted="false">Uitgeschakeld</string>
+    <string name="system_tools" formatted="false">Overview</string>
+    <string name="desk_attach_button" formatted="false">Viewer toevoegen</string>
+    <string name="desk_attach_desk_label" formatted="false">Desk</string>
+    <string name="desk_nav_title" formatted="false">Mijn desks</string>
+    <string name="desk_primary_badge" formatted="false">Primair</string>
+    <string name="desk_attach_username_placeholder" formatted="false">Exacte gebruikersnaam van viewer</string>
+    <string name="desk_attach_validation_username" formatted="false">Voer de gebruikersnaam van een viewer in.</string>
+    <string name="desk_description_unavailable" formatted="false">Geen beschrijving opgegeven.</string>
+    <string name="desk_attach_help" formatted="false">Voer de exacte gebruikersnaam van de viewer in. De nieuwe desk is pas beschikbaar nadat de viewer zich heeft afgemeld en opnieuw heeft aangemeld.</string>
+    <string name="desk_attach_success_message" formatted="false">De viewer moet zich afmelden en opnieuw aanmelden voordat de nieuwe desk beschikbaar is.</string>
+    <string name="desk_empty_message" formatted="false">Je account is niet aan een desk gekoppeld.</string>
+    <string name="desk_load_error" formatted="false">Desks konden niet worden geladen. Probeer het opnieuw.</string>
+    <string name="settings_account_email" formatted="false">E-mail</string>
+    <string name="settings_account_role">Rol: %1$s</string>
+    <string name="settings_app_info_version" formatted="false">Versie</string>
+    <string name="settings_app_info_build" formatted="false">Build</string>
+    <string name="settings_logout_confirm_title" formatted="false">Uitloggen?</string>
+    <string name="settings_logout_confirm_message" formatted="false">Weet je zeker dat je wilt uitloggen?</string>
+    <string name="settings_connection_change_backend_title" formatted="false">Backend wijzigen?</string>
+    <string name="settings_connection_change_backend_message" formatted="false">Als je van backend wisselt, word je uitgelogd en wordt de lokale appstatus gewist. Je moet opnieuw inloggen op de nieuwe URL.</string>
+    <string name="common_continue" formatted="false">Doorgaan</string>
+    <string name="backend_url_cancel" formatted="false">Annuleren</string>
+    <string name="market_search" formatted="false">Instrumenten zoeken</string>
+    <string name="market_view_only" formatted="false">Alleen bekijken</string>
+    <string name="market_catalog_retry" formatted="false">Opnieuw proberen</string>
+    <string name="market_picker_close" formatted="false">Annuleren</string>
+    <string name="market_no_matches" formatted="false">\@string/empty</string>
+    <string name="market_catalog_error" formatted="false">\@string/error_unknown</string>
+    <string name="system_health" formatted="false">Systeemstatus</string>
+    <string name="system_strategies" formatted="false">Strategieën</string>
+    <string name="system_backtests" formatted="false">Backtests</string>
+    <string name="system_users" formatted="false">Gebruikers</string>
+    <string name="system_delegates" formatted="false">AI-gemachtigden</string>
+    <string name="system_version" formatted="false">Versie</string>
+    <string name="system_connections" formatted="false">Actieve verbindingen</string>
+    <string name="system_subscribers" formatted="false">ZMQ-abonnees</string>
+    <string name="system_tasks" formatted="false">Abonnee-taken</string>
+    <string name="system_topics" formatted="false">Actieve topics</string>
+    <string name="system_clients" formatted="false">Actieve clients</string>
+    <string name="system_gaps" formatted="false">Gedetecteerde gaps</string>
+    <string name="system_resets" formatted="false">Sessieresets</string>
+    <string name="system_duplicates" formatted="false">Duplicaten</string>
+    <string name="system_joins" formatted="false">Mid-stream-deelnames</string>
+    <string name="system_unstamped" formatted="false">Geweigerd (zonder stempel)</string>
+    <string name="system_rest_clients" formatted="false">Bijgehouden REST-clients</string>
+    <string name="system_initial_cash" formatted="false">Startkapitaal</string>
+    <string name="system_period" formatted="false">Periode</string>
+    <string name="system_created" formatted="false">Aangemaakt</string>
+    <string name="system_max_orders" formatted="false">Max. open orders</string>
+    <string name="system_max_daily" formatted="false">Max. USD/dag</string>
+    <string name="system_default" formatted="false">Standaard</string>
+    <string name="system_trader" formatted="false">Handelaarsstatus</string>
+    <string name="system_running" formatted="false">In uitvoering</string>
+    <string name="system_stopped" formatted="false">Gestopt</string>
+    <string name="system_mode" formatted="false">Modus</string>
+    <string name="system_autostart" formatted="false">Autostart</string>
+    <string name="system_active" formatted="false">Actief</string>
+    <string name="system_inactive" formatted="false">Inactief</string>
+    <string name="system_revoked" formatted="false">Ingetrokken</string>
+    <string name="records_open" formatted="false">Open</string>
+    <string name="records_recent" formatted="false">Recent</string>
+    <string name="records_fills" formatted="false">Uitvoeringen</string>
+    <string name="records_refresh" formatted="false">Refresh</string>
+    <string name="records_fee" formatted="false">Fee</string>
+    <string name="records_details" formatted="false">Details</string>
+    <string name="records_hide_details" formatted="false">\@string/close</string>
+    <string name="records_thread" formatted="false">Discussie</string>
+    <string name="records_source_topic" formatted="false">Brononderwerp</string>
+    <string name="notification_defaults_title" formatted="false">Standaardinstellingen gebruiker</string>
+    <string name="notification_defaults_footer" formatted="false">Standaardwaarden gelden wanneer geen apparaatspecifieke uitzondering overeenkomt met een binnenkomende alert.</string>
+    <string name="notification_defaults_enabled" formatted="false">Ingeschakeld</string>
+    <string name="notification_defaults_priority" formatted="false">Minimale prioriteit</string>
+    <string name="notification_defaults_load_failed" formatted="false">Kan voorkeuren niet laden</string>
+    <string name="notification_defaults_save_failed" formatted="false">Kan voorkeuren niet opslaan</string>
+    <string name="notification_defaults_low" formatted="false">Laag</string>
+    <string name="notification_defaults_medium" formatted="false">Gemiddeld</string>
+    <string name="notification_defaults_high" formatted="false">Hoog</string>
+    <string name="notification_defaults_fill" formatted="false">Order uitgevoerd</string>
+    <string name="notification_defaults_rejected" formatted="false">Order geweigerd</string>
+    <string name="notification_defaults_stop" formatted="false">Stop-loss geactiveerd</string>
+    <string name="notification_defaults_margin" formatted="false">Marginwaarschuwing</string>
+    <string name="notification_defaults_system" formatted="false">Systeemfout</string>
+    <string name="notification_defaults_saved" formatted="false">OK</string>
+    <string name="signals_title" formatted="false">Signalen</string>
+    <string name="signals_strength" formatted="false">Sterkte</string>
+    <string name="signals_price" formatted="false">Prijs</string>
+    <string name="signals_reason" formatted="false">Reden:</string>
+    <string name="signals_strong" formatted="false">Sterk</string>
+    <string name="signals_medium" formatted="false">Gemiddeld</string>
+    <string name="signals_weak" formatted="false">Zwak</string>
+    <string name="signals_very_weak" formatted="false">Zeer zwak</string>
+    <string name="signals_total" formatted="false">Totaal</string>
+    <string name="signals_buy" formatted="false">Kopen</string>
+    <string name="signals_sell" formatted="false">Verkopen</string>
+    <string name="signals_average_strength" formatted="false">Gem. sterkte</string>
+    <string name="signals_filter" formatted="false">Filteren op strategie</string>
+    <string name="signals_all_strategies" formatted="false">Alle strategieën</string>
+    <string name="signals_empty" formatted="false">Geen handelssignalen komen overeen met je huidige filters.</string>
+    <string name="signals_export" formatted="false">Exporteren</string>
+    <string name="signals_export_failed" formatted="false">Indienen mislukt</string>
+    <string name="venue_accounts_title" formatted="false">Beursaccounts</string>
+    <string name="venue_accounts_refresh" formatted="false">Refresh</string>
+    <string name="venue_accounts_failed" formatted="false">De status van het beursaccount kon niet worden geladen. Het account is niet leeg; de gegevens zijn momenteel gewoon niet beschikbaar.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Bindende realtime beursgegevens, waargenomen binnen de geldigheidsperiode.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Rijen zonder de markering Realtime tonen laatst bekende, gesimuleerde of niet-beschikbare gegevens — het zijn nooit gezaghebbende realtime beurssaldi.</string>
+    <string name="venue_accounts_valuation" formatted="false">Valuation</string>
+    <string name="venue_accounts_balances" formatted="false">Saldi</string>
+    <string name="venue_accounts_observed" formatted="false">Observed at</string>
+    <string name="venue_accounts_source" formatted="false">Source observation</string>
+    <string name="venue_accounts_total" formatted="false">Totaal</string>
+    <string name="venue_accounts_free" formatted="false">Beschikbaar</string>
+    <string name="venue_accounts_used" formatted="false">Gebruikt</string>
+    <string name="venue_accounts_numeric_source" formatted="false">Numeric provenance</string>
+    <string name="venue_accounts_positions" formatted="false">Open posities</string>
+    <string name="venue_accounts_funding" formatted="false">Financiering</string>
+    <string name="venue_accounts_reconciliation" formatted="false">Reconciliation status</string>
+    <string name="venue_accounts_evaluation" formatted="false">Evaluation status</string>
+    <string name="venue_accounts_deadline" formatted="false">Authority deadline</string>
+    <string name="positions_timeline_controls_window" formatted="false">Venster</string>
+    <string name="positions_timeline_controls_granularity" formatted="false">Granulariteit</string>
+    <string name="positions_timeline_controls_valuationcurrency" formatted="false">Waarderingsvaluta</string>
+    <string name="positions_timeline_controls_last24hours" formatted="false">Afgelopen 24 uur</string>
+    <string name="positions_timeline_controls_last7days" formatted="false">Afgelopen 7 dagen</string>
+    <string name="positions_timeline_controls_last30days" formatted="false">Afgelopen 30 dagen</string>
+    <string name="positions_timeline_controls_last90days" formatted="false">Afgelopen 90 dagen</string>
+    <string name="positions_timeline_error_title" formatted="false">P&amp;L-tijdlijn kon niet worden geladen</string>
+    <string name="positions_timeline_empty_message" formatted="false">Voor dit venster zijn geen P&amp;L-punten beschikbaar.</string>
+    <string name="positions_timeline_nowallet_message" formatted="false">Kies een portefeuille om de P&amp;L-tijdlijn te bekijken.</string>
+    <string name="positions_timeline_incompleteness_title" formatted="false">Waarom punten onvolledig zijn</string>
+    <string name="positions_timeline_incompleteness_description" formatted="false">De redenen hebben betrekking op het volledige geladen venster. Aantallen kunnen overlappen wanneer een punt meer dan één oorzaak heeft.</string>
+    <string name="positions_timeline_incompleteness_affectedpoints">Affected points: %1$s</string>
+    <string name="positions_timeline_chart_title" formatted="false">P&amp;L in de tijd</string>
+    <string name="positions_timeline_chart_net" formatted="false">Netto P&amp;L</string>
+    <string name="positions_timeline_chart_realized" formatted="false">Gerealiseerde P&amp;L</string>
+    <string name="positions_timeline_chart_unrealized" formatted="false">Unrealized P&amp;L</string>
+    <string name="positions_timeline_attribution_title" formatted="false">Laatste P&amp;L-attributie</string>
+    <string name="positions_timeline_attribution_nostrategy" formatted="false">Geen bewezen strategie</string>
+    <string name="positions_timeline_attribution_withheld" formatted="false">Niet verifieerbaar</string>
+    <string name="positions_timeline_attribution_valuesemantics" formatted="false">Een weergegeven nulwaarde is bewezen. Niet verifieerbaar betekent dat de waarde niet kon worden bewezen.</string>
+    <string name="positions_timeline_contributions_title" formatted="false">Laatste bijdragen per instrument</string>
+    <string name="positions_timeline_contributions_realized" formatted="false">Gerealiseerde P&amp;L</string>
+    <string name="positions_timeline_contributions_fees" formatted="false">Kosten</string>
+    <string name="positions_timeline_contributions_accrual" formatted="false">Opgebouwde funding</string>
+    <string name="positions_timeline_contributions_unrealized" formatted="false">Unrealized P&amp;L</string>
+    <string name="positions_timeline_incompleteness_reasons_scope_order_regression" formatted="false">Scopevolgorde is teruggelopen</string>
+    <string name="positions_timeline_incompleteness_reasons_before_activation" formatted="false">Punt ligt vóór de activering</string>
+    <string name="positions_timeline_incompleteness_reasons_activation_baseline_non_finite" formatted="false">Referentiewaarde bij activering is niet-eindig</string>
+    <string name="positions_timeline_incompleteness_reasons_fill_evidence_gap" formatted="false">Hiaat in permanent opgeslagen bewijs van orderuitvoering</string>
+    <string name="positions_timeline_incompleteness_reasons_seed_quantity_non_finite" formatted="false">Beginhoeveelheid is niet-eindig</string>
+    <string name="positions_timeline_incompleteness_reasons_cost_basis_unavailable" formatted="false">Kostprijs niet beschikbaar</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_provenance_unproven" formatted="false">Herkomst van de uitvoeringsprijs is niet bewezen</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_size_invalid" formatted="false">Ongeldige uitvoeringsomvang</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_invalid" formatted="false">Ongeldige uitvoeringsprijs</string>
+    <string name="positions_timeline_incompleteness_reasons_fx_conversion_unproven" formatted="false">FX-conversie niet bewezen</string>
+    <string name="positions_timeline_incompleteness_reasons_mark_unavailable" formatted="false">Markprijs niet beschikbaar</string>
+    <string name="positions_timeline_incompleteness_reasons_cumulative_non_finite" formatted="false">Cumulatieve waarde is niet-eindig</string>
+    <string name="positions_timeline_incompleteness_reasons_unrealized_non_finite" formatted="false">Niet-gerealiseerde P&amp;L is niet-eindig</string>
+    <string name="positions_timeline_incompleteness_reasons_net_non_finite" formatted="false">Netto P&amp;L is niet-eindig</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_value_non_finite" formatted="false">Attributiewaarde is niet-eindig</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">Afstemming van attributie mislukt</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">Afstemming van de P&amp;L per instrument is mislukt</string>
+    <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">Laat ontvangen orderexecutie met een tijdstempel van vóór activering</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Attribution sum is not representable</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Instrument sum is not representable</string>
+    <string name="positions_timeline_executionhistory_title" formatted="false">Operator-corrected execution history</string>
+    <string name="positions_timeline_executionhistory_summary" formatted="false">An operator repudiated recorded executions in this scope. Every correction listed here is excluded from the figures on this page.</string>
+    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Repudiated execution</string>
+    <string name="positions_timeline_executionhistory_correctionid" formatted="false">Correction record</string>
+    <string name="positions_timeline_equity_title" formatted="false">Equity overlay</string>
+    <string name="positions_timeline_equity_serieslabel" formatted="false">Eigen vermogen</string>
+    <string name="positions_timeline_equity_drawdown_current" formatted="false">Current drawdown</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Spot venue only — balances held on other venues are excluded.</string>
+    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">External deposits and withdrawals are not adjusted out.</string>
+    <string name="positions_timeline_equity_honesty_restatedfrom">These figures are restated from %1$s at each minute\'s close, not sampled natively in this currency.</string>
+    <string name="positions_timeline_equity_honesty_pricedon">Priced on %1$s.</string>
+    <string name="positions_timeline_equity_honesty_conversionwithheld">Minutes dropped for want of a proven close: %1$s.</string>
+    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Drawdown is withheld on a converted basis, because the running peak is tracked in the sampled currency.</string>
+    <string name="positions_timeline_equity_cashposition_position" formatted="false">Position value</string>
+    <string name="positions_timeline_equity_cashposition_cash" formatted="false">Cash</string>
+    <string name="pnl_provenance">Calculation: %1$s · Mark source: %2$s · As of: %3$s</string>
+    <string name="pnl_equity_coverage">Equity sampled: %1$s · Complete minutes: %2$s</string>
+    <string name="pnl_execution_history">Execution history: %1$s</string>
+    <string name="process_title" formatted="false">Processen</string>
+    <string name="process_running" formatted="false">In uitvoering</string>
+    <string name="process_stopped" formatted="false">Gestopt</string>
+    <string name="process_feeds" formatted="false">Feeds</string>
+    <string name="process_strategies" formatted="false">Strategieën</string>
+    <string name="process_executors" formatted="false">Uitvoerders</string>
+    <string name="process_brokers" formatted="false">Brokers</string>
+    <string name="process_memory" formatted="false">Geheugen</string>
+    <string name="process_cpu" formatted="false">CPU</string>
+    <string name="process_empty" formatted="false">Geen geconfigureerde processen.</string>
+    <string name="process_start" formatted="false">Starten</string>
+    <string name="process_stop" formatted="false">Stop</string>
+    <string name="process_restart" formatted="false">Herstarten</string>
+    <string name="process_cancel" formatted="false">Annuleren</string>
+    <string name="process_stale" formatted="false">Dit proces kan niet langer vanaf hier worden beheerd. Vernieuw de gegevens en probeer het opnieuw.</string>
+    <string name="process_partial" formatted="false">Het proces werd gestopt, maar kan niet langer vanaf hier worden herstart. Vernieuw de gegevens en probeer het opnieuw.</string>
+    <string name="process_confirm" formatted="false">Confirm process action</string>
+    <string name="process_confirm_message" formatted="false">Apply this action to the selected process?</string>
+    <string name="process_intent_saved" formatted="false">Desired state saved. The owning coordinator will apply it.</string>
+    <string name="process_accepted" formatted="false">Process action accepted.</string>
+    <string name="process_unknown" formatted="false">The command outcome is unknown. Controls remain locked: a status refresh cannot prove whether this command was applied.</string>
+    <string name="process_partial_unknown" formatted="false">The process was stopped, but the restart outcome is unknown. Controls remain locked: a status refresh cannot prove whether the restart was applied.</string>
+    <string name="process_rejected" formatted="false">The process action failed.</string>
+    <string name="process_load_failed" formatted="false">Could not refresh process status.</string>
+    <string name="process_config_failed" formatted="false">Process controls are unavailable because configuration could not be refreshed.</string>
+    <string name="process_enable" formatted="false">Enable</string>
+    <string name="process_disable" formatted="false">Disable</string>
+    <string name="ai_reviews_pending_title" formatted="false">Openstaande beoordelingen</string>
+    <string name="ai_reviews_decisions_title" formatted="false">AI-beslissingen</string>
+    <string name="ai_reviews_deadline" formatted="false">Deadline</string>
+    <string name="ai_reviews_expired" formatted="false">Verlopen</string>
+    <string name="ai_reviews_rationale" formatted="false">Motivering</string>
+    <string name="ai_reviews_rationale_long">De onderbouwing is te lang (limiet: %1$d tekens).</string>
+    <string name="ai_reviews_approve" formatted="false">Goedkeuren</string>
+    <string name="ai_reviews_reject" formatted="false">Afwijzen</string>
+    <string name="ai_reviews_pending" formatted="false">In wachtrij</string>
+    <string name="ai_reviews_superseded" formatted="false">Ingetrokken</string>
+    <string name="ai_reviews_decided" formatted="false">Besloten</string>
+    <string name="ai_reviews_reject_message" formatted="false">Door afwijzing wordt de transactie waarvoor deze beoordeling is geopend, tegengehouden. Dit kan niet ongedaan worden gemaakt.</string>
+    <string name="ai_reviews_cancel" formatted="false">Annuleren</string>
+    <string name="ai_reviews_peer_resolved" formatted="false">Een andere delegate heeft deze beoordeling al afgehandeld.</string>
+    <string name="ai_reviews_expired_message" formatted="false">Deze beoordeling overschreed de deadline en is verlopen.</string>
+    <string name="ai_reviews_missing" formatted="false">Deze beoordeling bestaat niet meer.</string>
+    <string name="ai_reviews_denied" formatted="false">Je delegate-toegang is gewijzigd. Laad opnieuw voordat je beslist.</string>
+    <string name="ai_reviews_load_failed" formatted="false">Could not refresh reviews. Previously loaded reviews remain visible.</string>
+    <string name="ai_reviews_check_status" formatted="false">Check status</string>
+    <string name="ai_reviews_retry" formatted="false">Retry original decision</string>
+    <string name="ai_reviews_confirm" formatted="false">Confirm review decision</string>
+    <string name="ai_reviews_accepted" formatted="false">Decision accepted</string>
+    <string name="ai_reviews_rejected" formatted="false">Decision rejected by the server</string>
+    <string name="ai_reviews_unknown" formatted="false">Outcome unknown. Check status before retrying.</string>
+    <string name="positions_accessibility_label_closebutton" formatted="false">Positie sluiten</string>
+    <string name="positions_accessibility_label_reducebutton" formatted="false">Positie verkleinen</string>
+    <string name="positions_reduce_cancel" formatted="false">Annuleren</string>
+    <string name="positions_reduce_footer" formatted="false">100% sluit de positie. Verstuurt een reduce-only marktorder aan de tegenovergestelde zijde.</string>
+    <string name="positions_reduce_sizelabel" formatted="false">Te verkleinen hoeveelheid</string>
+    <string name="trading_bracket_attach" formatted="false">SL / TP toevoegen</string>
+    <string name="trading_bracket_stoplosslabel" formatted="false">Stop-loss</string>
+    <string name="trading_bracket_takeprofitlabel" formatted="false">Take-profit</string>
+    <string name="trading_trailingstop_attach" formatted="false">Trailing stop toevoegen</string>
+    <string name="trading_trailingstop_trailamountlabel" formatted="false">Trailingafstand</string>
+    <string name="position_action_review" formatted="false">Review position action</string>
+    <string name="position_action_confirm" formatted="false">Confirm action</string>
+    <string name="position_action_accepted" formatted="false">Request accepted. Refresh to check execution status.</string>
+    <string name="position_action_retry" formatted="false">Retry same request</string>
+    <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
+    <string name="position_action_cycle" formatted="false">Position cycle</string>
+    <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+</resources>

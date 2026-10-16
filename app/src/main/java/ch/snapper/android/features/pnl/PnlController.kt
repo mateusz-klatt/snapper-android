@@ -97,9 +97,9 @@ class PnlController(private val scope: CoroutineScope, private val client: PnlCl
         val GRANULARITIES = listOf("1m", "5m", "1h", "1d")
         val CURRENCIES = listOf("USD", "PLN", "EUR")
         fun matches(query: PnlSeriesQuery, data: PnlSeriesDto): Boolean =
-            query.walletPublicId == data.wallet_public_id && query.mode == data.mode &&
-                query.granularity == data.granularity && query.valuationCcy == data.valuation_ccy &&
-                query.from == Instant.parse(data.from_time) && query.to == Instant.parse(data.to_time) &&
-                query.to <= Instant.parse(data.as_of)
+            query.walletPublicId == data.walletPublicId && query.mode == data.mode &&
+                query.granularity == data.granularity && query.valuationCcy == data.valuationCcy &&
+                query.from == Instant.parse(data.fromTime) && query.to == Instant.parse(data.toTime) &&
+                query.to <= Instant.parse(data.asOf)
     }
 }

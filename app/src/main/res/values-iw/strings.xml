@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="privacy_policy" formatted="false">Privacy policy</string>
+    <string name="username" formatted="false">שם משתמש</string>
+    <string name="password" formatted="false">סיסמה</string>
+    <string name="sign_in" formatted="false">כניסה</string>
+    <string name="session_retention_notice" formatted="false">Staying signed in requires Android 11+, a secure screen lock, and authentication with your PIN, pattern, password or strong biometrics within the last 5 minutes. Otherwise, sign in again after the app restarts.</string>
+    <string name="subtitle" formatted="false">פלטפורמת מסחר</string>
+    <string name="backend" formatted="false">URL בקאנד מותאם</string>
+    <string name="language" formatted="false">שפה</string>
+    <string name="logout" formatted="false">התנתקות</string>
+    <string name="positions" formatted="false">פוזיציות</string>
+    <string name="orders" formatted="false">פקודות</string>
+    <string name="market" formatted="false">נתוני שוק</string>
+    <string name="wallet" formatted="false">ארנק</string>
+    <string name="all_wallets" formatted="false">כל הארנקים</string>
+    <string name="retry" formatted="false">נסה שוב</string>
+    <string name="loading" formatted="false">טוען…</string>
+    <string name="size" formatted="false">גודל</string>
+    <string name="average_price" formatted="false">מחיר ממוצע</string>
+    <string name="mark_price" formatted="false">מחיר סימון</string>
+    <string name="pnl" formatted="false">PnL לא ממומש</string>
+    <string name="instrument" formatted="false">Instrument</string>
+    <string name="price" formatted="false">מחיר</string>
+    <string name="filled" formatted="false">Filled</string>
+    <string name="status" formatted="false">סטטוס</string>
+    <string name="side" formatted="false">צד</string>
+    <string name="open" formatted="false">Open</string>
+    <string name="high" formatted="false">High</string>
+    <string name="low" formatted="false">Low</string>
+    <string name="close" formatted="false">סגירה</string>
+    <string name="volume" formatted="false">ווליום</string>
+    <string name="timeframe" formatted="false">טווח זמן</string>
+    <string name="no_candles" formatted="false">עדיין אין נרות</string>
+    <string name="backend_warning" formatted="false">החלפת בקאנד תנתק אותך ותנקה את מצב האפליקציה המקומי. תצטרך להיכנס שוב ב-URL החדש.</string>
+    <string name="home" formatted="false">בית</string>
+    <string name="alerts" formatted="false">התראות</string>
+    <string name="settings" formatted="false">הגדרות</string>
+    <string name="save" formatted="false">שמור</string>
+    <string name="refresh" formatted="false">Refresh</string>
+    <string name="exchange" formatted="false">בורסה</string>
+    <string name="load_market" formatted="false">Load candles</string>
+    <string name="empty" formatted="false">No records available.</string>
+    <string name="snapshot_note" formatted="false">Snapshot data. Refresh to retrieve the latest available records.</string>
+    <string name="chart_description" formatted="false">Historical candle chart. Exact values are listed below.</string>
+    <string name="error_origin" formatted="false">Enter a valid HTTPS backend origin.</string>
+    <string name="error_credentials" formatted="false">The username or password is incorrect.</string>
+    <string name="error_session" formatted="false">Your session expired. Please sign in again.</string>
+    <string name="error_network" formatted="false">Could not reach the backend. Check your connection and try again.</string>
+    <string name="error_service" formatted="false">The backend could not complete this request. Please try again.</string>
+    <string name="error_unknown" formatted="false">Something went wrong. Please try again.</string>
+    <string name="dismiss" formatted="false">סגירה</string>
+    <string name="paper" formatted="false">הדגמה</string>
+    <string name="safety_critical" formatted="false">Safety critical</string>
+    <string name="snapshot_limit" formatted="false">This view shows current positions and up to 100 recent orders and alerts; it is not a complete history.</string>
+    <string name="chart_window" formatted="false">The chart shows the last 100 retrieved candles.</string>
+    <string name="local_network_explanation" formatted="false">For a backend on your local network, allow local network access before signing in. Public internet backends do not need this permission.</string>
+    <string name="local_network_allow" formatted="false">Allow local network</string>
+    <string name="local_network_settings" formatted="false">Open app settings</string>
+    <string name="order_new" formatted="false">New Order</string>
+    <string name="order_entry" formatted="false">New Manual Order</string>
+    <string name="order_confirm" formatted="false">Confirm Order</string>
+    <string name="order_quantity" formatted="false">כמות</string>
+    <string name="order_type" formatted="false">Order Type</string>
+    <string name="order_stop_price" formatted="false">Stop Price</string>
+    <string name="order_mode" formatted="false">מצב</string>
+    <string name="order_buy" formatted="false">קנייה</string>
+    <string name="order_sell" formatted="false">מכירה</string>
+    <string name="order_market" formatted="false">שוק</string>
+    <string name="order_limit" formatted="false">לימיט</string>
+    <string name="order_stop" formatted="false">Stop</string>
+    <string name="order_stop_limit" formatted="false">Stop Limit</string>
+    <string name="order_live" formatted="false">Live</string>
+    <string name="order_review" formatted="false">Review Order</string>
+    <string name="order_back" formatted="false">Back</string>
+    <string name="order_submit" formatted="false">Confirm Order</string>
+    <string name="order_submitting" formatted="false">Submitting…</string>
+    <string name="order_leverage" formatted="false">מינוף</string>
+    <string name="order_reduce_only" formatted="false">Reduce Only</string>
+    <string name="order_observation_only" formatted="false">This instrument is observation-only — place orders on an execution-capable instrument.</string>
+    <string name="order_unknown_instrument" formatted="false">This instrument is not recognised. Reload the list and try again.</string>
+    <string name="order_caps_violation" formatted="false">This order would exceed your account safety caps. Review your risk settings and retry.</string>
+    <string name="order_rejected" formatted="false">Order creation failed</string>
+    <string name="order_cancel_title" formatted="false">לבטל פקודה?</string>
+    <string name="order_cancel_confirm" formatted="false">ביטול פקודה</string>
+    <string name="order_keep_open" formatted="false">להשאיר פתוחה</string>
+    <string name="order_select_wallet" formatted="false">Select a wallet on Home before placing an order.</string>
+    <string name="order_created" formatted="false">Order submitted. Refresh to check execution status.</string>
+    <string name="order_cancel_requested" formatted="false">Cancellation requested. Refresh to check the order status.</string>
+    <string name="order_unknown_outcome" formatted="false">The request outcome is unknown. Check status before taking further action.</string>
+    <string name="order_check_status" formatted="false">Check status</string>
+    <string name="order_retry_intent" formatted="false">Retry same order</string>
+    <string name="order_catalog_error" formatted="false">Could not load exchanges or instruments. Try again.</string>
+    <string name="order_no_instruments" formatted="false">No instruments available for this exchange.</string>
+    <string name="order_invalid_form" formatted="false">Enter positive quantities and required prices. Optional leverage must be a positive whole number.</string>
+    <string name="order_refresh_failed" formatted="false">The request was accepted, but the latest records could not be loaded. Refresh to check status.</string>
+    <string name="order_forbidden" formatted="false">You no longer have permission for this action.</string>
+    <string name="order_session_changed" formatted="false">The session or wallet changed. Open a new order from the current account.</string>
+    <string name="order_enabled" formatted="false">פעיל</string>
+    <string name="order_disabled" formatted="false">כבוי</string>
+    <string name="system_tools" formatted="false">Overview</string>
+    <string name="desk_attach_button" formatted="false">הוספת צופה</string>
+    <string name="desk_attach_desk_label" formatted="false">דסק</string>
+    <string name="desk_nav_title" formatted="false">הדסקים שלי</string>
+    <string name="desk_primary_badge" formatted="false">ראשי</string>
+    <string name="desk_attach_username_placeholder" formatted="false">שם המשתמש המדויק של הצופה</string>
+    <string name="desk_attach_validation_username" formatted="false">יש להזין שם משתמש של צופה.</string>
+    <string name="desk_description_unavailable" formatted="false">לא סופק תיאור.</string>
+    <string name="desk_attach_help" formatted="false">יש להזין את שם המשתמש המדויק של הצופה. הדסק החדש יהיה זמין רק לאחר שהצופה יתנתק וייכנס שוב.</string>
+    <string name="desk_attach_success_message" formatted="false">על הצופה להתנתק ולהיכנס שוב לפני שהדסק החדש יהיה זמין.</string>
+    <string name="desk_empty_message" formatted="false">החשבון שלך אינו משויך לאף דסק.</string>
+    <string name="desk_load_error" formatted="false">לא ניתן לטעון את הדסקים. נסו שוב.</string>
+    <string name="settings_account_email" formatted="false">אימייל</string>
+    <string name="settings_account_role">תפקיד: %1$s</string>
+    <string name="settings_app_info_version" formatted="false">גרסה</string>
+    <string name="settings_app_info_build" formatted="false">Build</string>
+    <string name="settings_logout_confirm_title" formatted="false">להתנתק?</string>
+    <string name="settings_logout_confirm_message" formatted="false">בטוח שברצונך להתנתק?</string>
+    <string name="settings_connection_change_backend_title" formatted="false">להחליף בקאנד?</string>
+    <string name="settings_connection_change_backend_message" formatted="false">החלפת בקאנד תנתק אותך ותנקה את מצב האפליקציה המקומי. תצטרך להיכנס שוב ב-URL החדש.</string>
+    <string name="common_continue" formatted="false">המשך</string>
+    <string name="backend_url_cancel" formatted="false">Cancel</string>
+    <string name="market_search" formatted="false">חיפוש נכסים</string>
+    <string name="market_view_only" formatted="false">צפייה בלבד</string>
+    <string name="market_catalog_retry" formatted="false">נסה שוב</string>
+    <string name="market_picker_close" formatted="false">Cancel</string>
+    <string name="market_no_matches" formatted="false">\@string/empty</string>
+    <string name="market_catalog_error" formatted="false">\@string/error_unknown</string>
+    <string name="system_health" formatted="false">תקינות המערכת</string>
+    <string name="system_strategies" formatted="false">אסטרטגיות</string>
+    <string name="system_backtests" formatted="false">בדיקות לאחור</string>
+    <string name="system_users" formatted="false">משתמשים</string>
+    <string name="system_delegates" formatted="false">נציגי AI</string>
+    <string name="system_version" formatted="false">גרסה</string>
+    <string name="system_connections" formatted="false">חיבורים פעילים</string>
+    <string name="system_subscribers" formatted="false">מנויי ZMQ</string>
+    <string name="system_tasks" formatted="false">משימות מנויים</string>
+    <string name="system_topics" formatted="false">נושאים פעילים</string>
+    <string name="system_clients" formatted="false">לקוחות פעילים</string>
+    <string name="system_gaps" formatted="false">פערים שזוהו</string>
+    <string name="system_resets" formatted="false">איפוסי הפעלה</string>
+    <string name="system_duplicates" formatted="false">כפילויות</string>
+    <string name="system_joins" formatted="false">הצטרפויות באמצע הזרם</string>
+    <string name="system_unstamped" formatted="false">נדחו (ללא חותמת)</string>
+    <string name="system_rest_clients" formatted="false">לקוחות REST במעקב</string>
+    <string name="system_initial_cash" formatted="false">הון התחלתי</string>
+    <string name="system_period" formatted="false">תקופה</string>
+    <string name="system_created" formatted="false">נוצר</string>
+    <string name="system_max_orders" formatted="false">מקס\' פקודות פתוחות</string>
+    <string name="system_max_daily" formatted="false">מקס\' USD ליום</string>
+    <string name="system_default" formatted="false">ברירת מחדל</string>
+    <string name="system_trader" formatted="false">סטטוס טריידר</string>
+    <string name="system_running" formatted="false">פועל</string>
+    <string name="system_stopped" formatted="false">מופסק</string>
+    <string name="system_mode" formatted="false">מצב</string>
+    <string name="system_autostart" formatted="false">הפעלה אוטומטית</string>
+    <string name="system_active" formatted="false">פעיל</string>
+    <string name="system_inactive" formatted="false">לא פעיל</string>
+    <string name="system_revoked" formatted="false">בוטל</string>
+    <string name="records_open" formatted="false">Open</string>
+    <string name="records_recent" formatted="false">אחרונות</string>
+    <string name="records_fills" formatted="false">ביצועים</string>
+    <string name="records_refresh" formatted="false">Refresh</string>
+    <string name="records_fee" formatted="false">Fee</string>
+    <string name="records_details" formatted="false">Details</string>
+    <string name="records_hide_details" formatted="false">\@string/close</string>
+    <string name="records_thread" formatted="false">שרשור</string>
+    <string name="records_source_topic" formatted="false">נושא מקור</string>
+    <string name="notification_defaults_title" formatted="false">ברירות מחדל למשתמש</string>
+    <string name="notification_defaults_footer" formatted="false">ברירות המחדל חלות כשאין עקיפה לפי מכשיר שמתאימה להתראה נכנסת.</string>
+    <string name="notification_defaults_enabled" formatted="false">פעיל</string>
+    <string name="notification_defaults_priority" formatted="false">עדיפות מינימלית</string>
+    <string name="notification_defaults_load_failed" formatted="false">טעינת ההעדפות נכשלה</string>
+    <string name="notification_defaults_save_failed" formatted="false">שמירת ההעדפות נכשלה</string>
+    <string name="notification_defaults_low" formatted="false">Low</string>
+    <string name="notification_defaults_medium" formatted="false">Medium</string>
+    <string name="notification_defaults_high" formatted="false">High</string>
+    <string name="notification_defaults_fill" formatted="false">הפקודה בוצעה</string>
+    <string name="notification_defaults_rejected" formatted="false">הפקודה נדחתה</string>
+    <string name="notification_defaults_stop" formatted="false">סטופ-לוס הופעל</string>
+    <string name="notification_defaults_margin" formatted="false">אזהרת מרג\'ין</string>
+    <string name="notification_defaults_system" formatted="false">שגיאת מערכת</string>
+    <string name="notification_defaults_saved" formatted="false">אישור</string>
+    <string name="signals_title" formatted="false">איתותים</string>
+    <string name="signals_strength" formatted="false">עוצמה</string>
+    <string name="signals_price" formatted="false">מחיר</string>
+    <string name="signals_reason" formatted="false">סיבה:</string>
+    <string name="signals_strong" formatted="false">חזק</string>
+    <string name="signals_medium" formatted="false">Medium</string>
+    <string name="signals_weak" formatted="false">חלש</string>
+    <string name="signals_very_weak" formatted="false">חלש מאוד</string>
+    <string name="signals_total" formatted="false">Total</string>
+    <string name="signals_buy" formatted="false">קנייה</string>
+    <string name="signals_sell" formatted="false">מכירה</string>
+    <string name="signals_average_strength" formatted="false">עוצמה ממוצעת</string>
+    <string name="signals_filter" formatted="false">סינון לפי אסטרטגיה</string>
+    <string name="signals_all_strategies" formatted="false">כל האסטרטגיות</string>
+    <string name="signals_empty" formatted="false">אין איתותי מסחר שתואמים את הסינונים הנוכחיים שלך.</string>
+    <string name="signals_export" formatted="false">ייצא</string>
+    <string name="signals_export_failed" formatted="false">השליחה נכשלה</string>
+    <string name="venue_accounts_title" formatted="false">חשבונות בורסה</string>
+    <string name="venue_accounts_refresh" formatted="false">Refresh</string>
+    <string name="venue_accounts_failed" formatted="false">לא ניתן לטעון את מצב החשבון בבורסה. החשבון אינו ריק; הנתונים פשוט אינם זמינים כרגע.</string>
+    <string name="venue_accounts_authoritative" formatted="false">נתוני בורסה מהימנים בזמן אמת, שנצפו בתוך חלון הסמכות.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">שורות שאינן מסומנות כזמן אמת מציגות נתונים אחרונים, מדומים או לא זמינים — לעולם לא מדובר ביתרות בורסה מוסמכות בזמן אמת.</string>
+    <string name="venue_accounts_valuation" formatted="false">Valuation</string>
+    <string name="venue_accounts_balances" formatted="false">יתרות</string>
+    <string name="venue_accounts_observed" formatted="false">Observed at</string>
+    <string name="venue_accounts_source" formatted="false">Source observation</string>
+    <string name="venue_accounts_total" formatted="false">Total</string>
+    <string name="venue_accounts_free" formatted="false">פנוי</string>
+    <string name="venue_accounts_used" formatted="false">בשימוש</string>
+    <string name="venue_accounts_numeric_source" formatted="false">Numeric provenance</string>
+    <string name="venue_accounts_positions" formatted="false">פוזיציות פתוחות</string>
+    <string name="venue_accounts_funding" formatted="false">מימון</string>
+    <string name="venue_accounts_reconciliation" formatted="false">Reconciliation status</string>
+    <string name="venue_accounts_evaluation" formatted="false">Evaluation status</string>
+    <string name="venue_accounts_deadline" formatted="false">Authority deadline</string>
+    <string name="positions_timeline_controls_window" formatted="false">חלון זמן</string>
+    <string name="positions_timeline_controls_granularity" formatted="false">רזולוציה</string>
+    <string name="positions_timeline_controls_valuationcurrency" formatted="false">מטבע הערכת שווי</string>
+    <string name="positions_timeline_controls_last24hours" formatted="false">24 השעות האחרונות</string>
+    <string name="positions_timeline_controls_last7days" formatted="false">7 הימים האחרונים</string>
+    <string name="positions_timeline_controls_last30days" formatted="false">30 הימים האחרונים</string>
+    <string name="positions_timeline_controls_last90days" formatted="false">90 הימים האחרונים</string>
+    <string name="positions_timeline_error_title" formatted="false">לא ניתן לטעון את ציר הזמן של P&amp;L</string>
+    <string name="positions_timeline_empty_message" formatted="false">אין נקודות P&amp;L זמינות בחלון זמן זה.</string>
+    <string name="positions_timeline_nowallet_message" formatted="false">בחר ארנק כדי להציג את ציר הזמן של ה-P&amp;L שלו.</string>
+    <string name="positions_timeline_incompleteness_title" formatted="false">מדוע הנקודות אינן שלמות</string>
+    <string name="positions_timeline_incompleteness_description" formatted="false">הסיבות מתייחסות לכל חלון הזמן שנטען. נקודה בעלת יותר מסיבה אחת עשויה להיספר כמה פעמים.</string>
+    <string name="positions_timeline_incompleteness_affectedpoints">Affected points: %1$s</string>
+    <string name="positions_timeline_chart_title" formatted="false">P&amp;L לאורך זמן</string>
+    <string name="positions_timeline_chart_net" formatted="false">P&amp;L נטו</string>
+    <string name="positions_timeline_chart_realized" formatted="false">P&amp;L ממומש</string>
+    <string name="positions_timeline_chart_unrealized" formatted="false">P&amp;L לא ממומש</string>
+    <string name="positions_timeline_attribution_title" formatted="false">שיוך ה-P&amp;L העדכני</string>
+    <string name="positions_timeline_attribution_nostrategy" formatted="false">לא הוכחה אסטרטגיה</string>
+    <string name="positions_timeline_attribution_withheld" formatted="false">לא ניתן לאימות</string>
+    <string name="positions_timeline_attribution_valuesemantics" formatted="false">אפס שמוצג הוא ערך שהוכח. “לא ניתן לאימות” מציין שלא ניתן היה להוכיח את הערך.</string>
+    <string name="positions_timeline_contributions_title" formatted="false">תרומות עדכניות לפי מכשיר</string>
+    <string name="positions_timeline_contributions_realized" formatted="false">P&amp;L ממומש</string>
+    <string name="positions_timeline_contributions_fees" formatted="false">עמלות</string>
+    <string name="positions_timeline_contributions_accrual" formatted="false">מימון שנצבר</string>
+    <string name="positions_timeline_contributions_unrealized" formatted="false">P&amp;L לא ממומש</string>
+    <string name="positions_timeline_incompleteness_reasons_scope_order_regression" formatted="false">נסיגת זמן ברצף הטווח</string>
+    <string name="positions_timeline_incompleteness_reasons_before_activation" formatted="false">הנקודה קודמת להפעלה</string>
+    <string name="positions_timeline_incompleteness_reasons_activation_baseline_non_finite" formatted="false">ערך הבסיס בעת ההפעלה אינו מספר סופי</string>
+    <string name="positions_timeline_incompleteness_reasons_fill_evidence_gap" formatted="false">פער בתיעוד השמור של ביצוע הפקודה</string>
+    <string name="positions_timeline_incompleteness_reasons_seed_quantity_non_finite" formatted="false">הכמות ההתחלתית אינה מספר סופי</string>
+    <string name="positions_timeline_incompleteness_reasons_cost_basis_unavailable" formatted="false">בסיס העלות אינו זמין</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_provenance_unproven" formatted="false">לא ניתן לאמת את מקור מחיר הביצוע</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_size_invalid" formatted="false">גודל הביצוע אינו תקין</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_invalid" formatted="false">מחיר הביצוע אינו תקין</string>
+    <string name="positions_timeline_incompleteness_reasons_fx_conversion_unproven" formatted="false">לא ניתן לאמת את המרת ה-FX</string>
+    <string name="positions_timeline_incompleteness_reasons_mark_unavailable" formatted="false">מחיר הייחוס אינו זמין</string>
+    <string name="positions_timeline_incompleteness_reasons_cumulative_non_finite" formatted="false">הערך המצטבר אינו מספר סופי</string>
+    <string name="positions_timeline_incompleteness_reasons_unrealized_non_finite" formatted="false">ה-P&amp;L הלא ממומש אינו מספר סופי</string>
+    <string name="positions_timeline_incompleteness_reasons_net_non_finite" formatted="false">ה-P&amp;L נטו אינו מספר סופי</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_value_non_finite" formatted="false">ערך השיוך אינו מספר סופי</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">התאמת השיוך נכשלה</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">התאמת סכומי ה-P&amp;L לפי מכשיר לסכום ה-P&amp;L הכולל נכשלה</string>
+    <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">ביצוע פקודת מסחר שהתקבל באיחור וחותמת הזמן שלו קודמת להפעלה</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Attribution sum is not representable</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Instrument sum is not representable</string>
+    <string name="positions_timeline_executionhistory_title" formatted="false">Operator-corrected execution history</string>
+    <string name="positions_timeline_executionhistory_summary" formatted="false">An operator repudiated recorded executions in this scope. Every correction listed here is excluded from the figures on this page.</string>
+    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Repudiated execution</string>
+    <string name="positions_timeline_executionhistory_correctionid" formatted="false">Correction record</string>
+    <string name="positions_timeline_equity_title" formatted="false">Equity overlay</string>
+    <string name="positions_timeline_equity_serieslabel" formatted="false">הון</string>
+    <string name="positions_timeline_equity_drawdown_current" formatted="false">Current drawdown</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Spot venue only — balances held on other venues are excluded.</string>
+    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">External deposits and withdrawals are not adjusted out.</string>
+    <string name="positions_timeline_equity_honesty_restatedfrom">These figures are restated from %1$s at each minute\'s close, not sampled natively in this currency.</string>
+    <string name="positions_timeline_equity_honesty_pricedon">Priced on %1$s.</string>
+    <string name="positions_timeline_equity_honesty_conversionwithheld">Minutes dropped for want of a proven close: %1$s.</string>
+    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Drawdown is withheld on a converted basis, because the running peak is tracked in the sampled currency.</string>
+    <string name="positions_timeline_equity_cashposition_position" formatted="false">Position value</string>
+    <string name="positions_timeline_equity_cashposition_cash" formatted="false">Cash</string>
+    <string name="pnl_provenance">Calculation: %1$s · Mark source: %2$s · As of: %3$s</string>
+    <string name="pnl_equity_coverage">Equity sampled: %1$s · Complete minutes: %2$s</string>
+    <string name="pnl_execution_history">Execution history: %1$s</string>
+    <string name="process_title" formatted="false">תהליכים</string>
+    <string name="process_running" formatted="false">פועל</string>
+    <string name="process_stopped" formatted="false">מופסק</string>
+    <string name="process_feeds" formatted="false">הזנות</string>
+    <string name="process_strategies" formatted="false">אסטרטגיות</string>
+    <string name="process_executors" formatted="false">מבצעים</string>
+    <string name="process_brokers" formatted="false">ברוקרים</string>
+    <string name="process_memory" formatted="false">זיכרון</string>
+    <string name="process_cpu" formatted="false">CPU</string>
+    <string name="process_empty" formatted="false">אין תהליכים מוגדרים.</string>
+    <string name="process_start" formatted="false">התחל</string>
+    <string name="process_stop" formatted="false">Stop</string>
+    <string name="process_restart" formatted="false">הפעל מחדש</string>
+    <string name="process_cancel" formatted="false">Cancel</string>
+    <string name="process_stale" formatted="false">לא ניתן עוד לשלוט בתהליך הזה מכאן. יש לרענן את הנתונים ולנסות שוב.</string>
+    <string name="process_partial" formatted="false">התהליך נעצר, אך לא ניתן עוד להפעיל אותו מחדש מכאן. יש לרענן את הנתונים ולנסות שוב.</string>
+    <string name="process_confirm" formatted="false">Confirm process action</string>
+    <string name="process_confirm_message" formatted="false">Apply this action to the selected process?</string>
+    <string name="process_intent_saved" formatted="false">Desired state saved. The owning coordinator will apply it.</string>
+    <string name="process_accepted" formatted="false">Process action accepted.</string>
+    <string name="process_unknown" formatted="false">The command outcome is unknown. Controls remain locked: a status refresh cannot prove whether this command was applied.</string>
+    <string name="process_partial_unknown" formatted="false">The process was stopped, but the restart outcome is unknown. Controls remain locked: a status refresh cannot prove whether the restart was applied.</string>
+    <string name="process_rejected" formatted="false">The process action failed.</string>
+    <string name="process_load_failed" formatted="false">Could not refresh process status.</string>
+    <string name="process_config_failed" formatted="false">Process controls are unavailable because configuration could not be refreshed.</string>
+    <string name="process_enable" formatted="false">Enable</string>
+    <string name="process_disable" formatted="false">Disable</string>
+    <string name="ai_reviews_pending_title" formatted="false">סקירות ממתינות</string>
+    <string name="ai_reviews_decisions_title" formatted="false">החלטות AI</string>
+    <string name="ai_reviews_deadline" formatted="false">תאריך יעד</string>
+    <string name="ai_reviews_expired" formatted="false">פג תוקף</string>
+    <string name="ai_reviews_rationale" formatted="false">נימוק</string>
+    <string name="ai_reviews_rationale_long">הנימוק ארוך מדי (המגבלה היא %1$d תווים).</string>
+    <string name="ai_reviews_approve" formatted="false">אישור</string>
+    <string name="ai_reviews_reject" formatted="false">דחייה</string>
+    <string name="ai_reviews_pending" formatted="false">ממתין</string>
+    <string name="ai_reviews_superseded" formatted="false">נמשכה</string>
+    <string name="ai_reviews_decided" formatted="false">הוחלט</string>
+    <string name="ai_reviews_reject_message" formatted="false">דחייה מטילה וטו על העסקה שעבורה נפתחה הסקירה הזו. לא ניתן לבטל פעולה זו.</string>
+    <string name="ai_reviews_cancel" formatted="false">Cancel</string>
+    <string name="ai_reviews_peer_resolved" formatted="false">נציג אחר כבר הכריע בסקירה הזו.</string>
+    <string name="ai_reviews_expired_message" formatted="false">הסקירה הזו עברה את תאריך היעד ופג זמנה.</string>
+    <string name="ai_reviews_missing" formatted="false">הסקירה הזו כבר לא קיימת.</string>
+    <string name="ai_reviews_denied" formatted="false">גישת הנציג שלך השתנתה. יש לטעון מחדש לפני קבלת החלטה.</string>
+    <string name="ai_reviews_load_failed" formatted="false">Could not refresh reviews. Previously loaded reviews remain visible.</string>
+    <string name="ai_reviews_check_status" formatted="false">Check status</string>
+    <string name="ai_reviews_retry" formatted="false">Retry original decision</string>
+    <string name="ai_reviews_confirm" formatted="false">Confirm review decision</string>
+    <string name="ai_reviews_accepted" formatted="false">Decision accepted</string>
+    <string name="ai_reviews_rejected" formatted="false">Decision rejected by the server</string>
+    <string name="ai_reviews_unknown" formatted="false">Outcome unknown. Check status before retrying.</string>
+    <string name="positions_accessibility_label_closebutton" formatted="false">סגירת פוזיציה</string>
+    <string name="positions_accessibility_label_reducebutton" formatted="false">הקטנת פוזיציה</string>
+    <string name="positions_reduce_cancel" formatted="false">Cancel</string>
+    <string name="positions_reduce_footer" formatted="false">100% סוגר את הפוזיציה. שולח פקודת שוק reduce-only בצד הנגדי.</string>
+    <string name="positions_reduce_sizelabel" formatted="false">גודל ההקטנה</string>
+    <string name="trading_bracket_attach" formatted="false">צרף SL / TP</string>
+    <string name="trading_bracket_stoplosslabel" formatted="false">סטופ-לוס</string>
+    <string name="trading_bracket_takeprofitlabel" formatted="false">מימוש רווח</string>
+    <string name="trading_trailingstop_attach" formatted="false">Attach trailing stop</string>
+    <string name="trading_trailingstop_trailamountlabel" formatted="false">מרחק סטופ</string>
+    <string name="position_action_review" formatted="false">Review position action</string>
+    <string name="position_action_confirm" formatted="false">Confirm action</string>
+    <string name="position_action_accepted" formatted="false">Request accepted. Refresh to check execution status.</string>
+    <string name="position_action_retry" formatted="false">Retry same request</string>
+    <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
+    <string name="position_action_cycle" formatted="false">Position cycle</string>
+    <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+</resources>

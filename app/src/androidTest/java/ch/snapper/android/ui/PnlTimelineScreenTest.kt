@@ -77,9 +77,9 @@ class PnlTimelineScreenTest {
         compose.runOnIdle {
             assertEquals(1, retries)
             val original = pnlScreenFixture()
-            state.value = state.value.copy(failed = false, data = original.copy(points = emptyList(), rate_sources = emptyList(),
-                execution_history = original.execution_history.copy(status = "as_recorded", corrections = emptyList()),
-                equity_coverage = original.equity_coverage.copy(sampled = false, venue_scope = null, external_flows_adjusted = null, converted_from = null, conversion_rate_source = null, drawdown_withheld_reason = null)))
+            state.value = state.value.copy(failed = false, data = original.copy(points = emptyList(), rateSources = emptyList(),
+                executionHistory = original.executionHistory.copy(status = "as_recorded", corrections = emptyList()),
+                equityCoverage = original.equityCoverage.copy(sampled = false, venueScope = null, externalFlowsAdjusted = null, convertedFrom = null, conversionRateSource = null, drawdownWithheldReason = null)))
         }
         compose.onNodeWithText(copyText(R.string.positions_timeline_empty_message)).performScrollTo().assertExists()
         compose.onNodeWithText(copyText(R.string.positions_timeline_executionhistory_summary)).assertDoesNotExist()
@@ -100,7 +100,7 @@ class PnlTimelineScreenTest {
     @Test fun latestWithheldValueIsNotRenderedAsZero() {
         val original = pnlScreenFixture()
         val gap = original.points[1]
-        val data = original.copy(points = listOf(gap, gap.copy(point_time = "2026-10-16T00:02:00Z")))
+        val data = original.copy(points = listOf(gap, gap.copy(pointTime = "2026-10-16T00:02:00Z")))
         compose.setContent { Column(Modifier.verticalScroll(rememberScrollState())) {
             PnlTimelineScreen(PnlState(wallet = WalletDto("w", "Paper", isPaper = true), permitted = true, data = data), PnlActions({}, {}, {}, {}))
         } }

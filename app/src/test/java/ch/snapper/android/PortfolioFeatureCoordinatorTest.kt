@@ -67,7 +67,7 @@ class PortfolioFeatureCoordinatorTest {
         coordinator.pnlActions.currency("EUR")
         runCurrent()
         assertEquals("demo", state.signals.selectedStrategy)
-        assertEquals("EUR", state.pnl.data?.valuation_ccy)
+        assertEquals("EUR", state.pnl.data?.valuationCcy)
         assertEquals("paper", client.pnlQueries.last().mode)
         assertFalse(state.pnl.loading)
         coordinator.invalidate()

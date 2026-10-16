@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="privacy_policy" formatted="false">Privacy policy</string>
+    <string name="username" formatted="false">用戶名稱</string>
+    <string name="password" formatted="false">密碼</string>
+    <string name="sign_in" formatted="false">登入</string>
+    <string name="session_retention_notice" formatted="false">Staying signed in requires Android 11+, a secure screen lock, and authentication with your PIN, pattern, password or strong biometrics within the last 5 minutes. Otherwise, sign in again after the app restarts.</string>
+    <string name="subtitle" formatted="false">交易平臺</string>
+    <string name="backend" formatted="false">自訂後端 URL</string>
+    <string name="language" formatted="false">語言</string>
+    <string name="logout" formatted="false">登出</string>
+    <string name="positions" formatted="false">倉位</string>
+    <string name="orders" formatted="false">訂單</string>
+    <string name="market" formatted="false">市場數據</string>
+    <string name="wallet" formatted="false">錢包</string>
+    <string name="all_wallets" formatted="false">所有錢包</string>
+    <string name="retry" formatted="false">重試</string>
+    <string name="loading" formatted="false">正在載入…</string>
+    <string name="size" formatted="false">倉位大小</string>
+    <string name="average_price" formatted="false">平均價格</string>
+    <string name="mark_price" formatted="false">標記價格</string>
+    <string name="pnl" formatted="false">未實現盈虧</string>
+    <string name="instrument" formatted="false">Instrument</string>
+    <string name="price" formatted="false">價格</string>
+    <string name="filled" formatted="false">已成交</string>
+    <string name="status" formatted="false">狀態</string>
+    <string name="side" formatted="false">方向</string>
+    <string name="open" formatted="false">Open</string>
+    <string name="high" formatted="false">High</string>
+    <string name="low" formatted="false">Low</string>
+    <string name="close" formatted="false">Close</string>
+    <string name="volume" formatted="false">成交量</string>
+    <string name="timeframe" formatted="false">時間週期</string>
+    <string name="no_candles" formatted="false">暫無K線</string>
+    <string name="backend_warning" formatted="false">切換後端會將你登出，並清除本機 App 狀態。你需要在新的 URL 重新登入。</string>
+    <string name="home" formatted="false">主頁</string>
+    <string name="alerts" formatted="false">警示</string>
+    <string name="settings" formatted="false">設定</string>
+    <string name="save" formatted="false">儲存</string>
+    <string name="refresh" formatted="false">Refresh</string>
+    <string name="exchange" formatted="false">交易所</string>
+    <string name="load_market" formatted="false">Load candles</string>
+    <string name="empty" formatted="false">No records available.</string>
+    <string name="snapshot_note" formatted="false">Snapshot data. Refresh to retrieve the latest available records.</string>
+    <string name="chart_description" formatted="false">Historical candle chart. Exact values are listed below.</string>
+    <string name="error_origin" formatted="false">Enter a valid HTTPS backend origin.</string>
+    <string name="error_credentials" formatted="false">The username or password is incorrect.</string>
+    <string name="error_session" formatted="false">Your session expired. Please sign in again.</string>
+    <string name="error_network" formatted="false">Could not reach the backend. Check your connection and try again.</string>
+    <string name="error_service" formatted="false">The backend could not complete this request. Please try again.</string>
+    <string name="error_unknown" formatted="false">Something went wrong. Please try again.</string>
+    <string name="dismiss" formatted="false">關閉</string>
+    <string name="paper" formatted="false">模擬</string>
+    <string name="safety_critical" formatted="false">Safety critical</string>
+    <string name="snapshot_limit" formatted="false">This view shows current positions and up to 100 recent orders and alerts; it is not a complete history.</string>
+    <string name="chart_window" formatted="false">The chart shows the last 100 retrieved candles.</string>
+    <string name="local_network_explanation" formatted="false">For a backend on your local network, allow local network access before signing in. Public internet backends do not need this permission.</string>
+    <string name="local_network_allow" formatted="false">Allow local network</string>
+    <string name="local_network_settings" formatted="false">Open app settings</string>
+    <string name="order_new" formatted="false">New Order</string>
+    <string name="order_entry" formatted="false">New Manual Order</string>
+    <string name="order_confirm" formatted="false">Confirm Order</string>
+    <string name="order_quantity" formatted="false">數量</string>
+    <string name="order_type" formatted="false">Order Type</string>
+    <string name="order_stop_price" formatted="false">Stop Price</string>
+    <string name="order_mode" formatted="false">模式</string>
+    <string name="order_buy" formatted="false">買入</string>
+    <string name="order_sell" formatted="false">賣出</string>
+    <string name="order_market" formatted="false">市價</string>
+    <string name="order_limit" formatted="false">限價</string>
+    <string name="order_stop" formatted="false">Stop</string>
+    <string name="order_stop_limit" formatted="false">Stop Limit</string>
+    <string name="order_live" formatted="false">Live</string>
+    <string name="order_review" formatted="false">Review Order</string>
+    <string name="order_back" formatted="false">Back</string>
+    <string name="order_submit" formatted="false">Confirm Order</string>
+    <string name="order_submitting" formatted="false">Submitting…</string>
+    <string name="order_leverage" formatted="false">槓桿</string>
+    <string name="order_reduce_only" formatted="false">Reduce Only</string>
+    <string name="order_observation_only" formatted="false">This instrument is observation-only — place orders on an execution-capable instrument.</string>
+    <string name="order_unknown_instrument" formatted="false">This instrument is not recognised. Reload the list and try again.</string>
+    <string name="order_caps_violation" formatted="false">This order would exceed your account safety caps. Review your risk settings and retry.</string>
+    <string name="order_rejected" formatted="false">Order creation failed</string>
+    <string name="order_cancel_title" formatted="false">要取消訂單嗎？</string>
+    <string name="order_cancel_confirm" formatted="false">取消訂單</string>
+    <string name="order_keep_open" formatted="false">保留訂單</string>
+    <string name="order_select_wallet" formatted="false">Select a wallet on Home before placing an order.</string>
+    <string name="order_created" formatted="false">Order submitted. Refresh to check execution status.</string>
+    <string name="order_cancel_requested" formatted="false">Cancellation requested. Refresh to check the order status.</string>
+    <string name="order_unknown_outcome" formatted="false">The request outcome is unknown. Check status before taking further action.</string>
+    <string name="order_check_status" formatted="false">Check status</string>
+    <string name="order_retry_intent" formatted="false">Retry same order</string>
+    <string name="order_catalog_error" formatted="false">Could not load exchanges or instruments. Try again.</string>
+    <string name="order_no_instruments" formatted="false">No instruments available for this exchange.</string>
+    <string name="order_invalid_form" formatted="false">Enter positive quantities and required prices. Optional leverage must be a positive whole number.</string>
+    <string name="order_refresh_failed" formatted="false">The request was accepted, but the latest records could not be loaded. Refresh to check status.</string>
+    <string name="order_forbidden" formatted="false">You no longer have permission for this action.</string>
+    <string name="order_session_changed" formatted="false">The session or wallet changed. Open a new order from the current account.</string>
+    <string name="order_enabled" formatted="false">已啟用</string>
+    <string name="order_disabled" formatted="false">已停用</string>
+    <string name="system_tools" formatted="false">Overview</string>
+    <string name="desk_attach_button" formatted="false">新增檢視者</string>
+    <string name="desk_attach_desk_label" formatted="false">交易台</string>
+    <string name="desk_nav_title" formatted="false">我的交易台</string>
+    <string name="desk_primary_badge" formatted="false">主要</string>
+    <string name="desk_attach_username_placeholder" formatted="false">檢視者的確切使用者名稱</string>
+    <string name="desk_attach_validation_username" formatted="false">輸入檢視者的使用者名稱。</string>
+    <string name="desk_description_unavailable" formatted="false">未提供說明。</string>
+    <string name="desk_attach_help" formatted="false">輸入檢視者的確切使用者名稱。檢視者登出並重新登入後，新的交易台才會顯示。</string>
+    <string name="desk_attach_success_message" formatted="false">檢視者必須登出並重新登入，才能使用新的交易台。</string>
+    <string name="desk_empty_message" formatted="false">你的帳戶未連結至任何交易台。</string>
+    <string name="desk_load_error" formatted="false">無法載入交易台。請再試一次。</string>
+    <string name="settings_account_email" formatted="false">電子郵件</string>
+    <string name="settings_account_role">角色：%1$s</string>
+    <string name="settings_app_info_version" formatted="false">版本</string>
+    <string name="settings_app_info_build" formatted="false">建置版本</string>
+    <string name="settings_logout_confirm_title" formatted="false">要登出嗎？</string>
+    <string name="settings_logout_confirm_message" formatted="false">你確定要登出嗎？</string>
+    <string name="settings_connection_change_backend_title" formatted="false">要更改後端嗎？</string>
+    <string name="settings_connection_change_backend_message" formatted="false">切換後端會將你登出，並清除本機 App 狀態。你需要在新的 URL 重新登入。</string>
+    <string name="common_continue" formatted="false">繼續</string>
+    <string name="backend_url_cancel" formatted="false">取消</string>
+    <string name="market_search" formatted="false">搜尋交易品種</string>
+    <string name="market_view_only" formatted="false">只供檢視</string>
+    <string name="market_catalog_retry" formatted="false">重試</string>
+    <string name="market_picker_close" formatted="false">取消</string>
+    <string name="market_no_matches" formatted="false">\@string/empty</string>
+    <string name="market_catalog_error" formatted="false">\@string/error_unknown</string>
+    <string name="system_health" formatted="false">系統健康狀態</string>
+    <string name="system_strategies" formatted="false">策略</string>
+    <string name="system_backtests" formatted="false">回測</string>
+    <string name="system_users" formatted="false">使用者</string>
+    <string name="system_delegates" formatted="false">AI 代理帳戶</string>
+    <string name="system_version" formatted="false">版本</string>
+    <string name="system_connections" formatted="false">使用中的連線</string>
+    <string name="system_subscribers" formatted="false">ZMQ 訂閱者</string>
+    <string name="system_tasks" formatted="false">訂閱者工作</string>
+    <string name="system_topics" formatted="false">使用中的主題</string>
+    <string name="system_clients" formatted="false">使用中的用戶端</string>
+    <string name="system_gaps" formatted="false">偵測到的間隙</string>
+    <string name="system_resets" formatted="false">工作階段重設</string>
+    <string name="system_duplicates" formatted="false">重複項目</string>
+    <string name="system_joins" formatted="false">中途加入</string>
+    <string name="system_unstamped" formatted="false">已拒絕（無標記）</string>
+    <string name="system_rest_clients" formatted="false">已追蹤的 REST 用戶端</string>
+    <string name="system_initial_cash" formatted="false">初始資金</string>
+    <string name="system_period" formatted="false">時間範圍</string>
+    <string name="system_created" formatted="false">建立時間</string>
+    <string name="system_max_orders" formatted="false">最大掛單數</string>
+    <string name="system_max_daily" formatted="false">每日 USD 上限</string>
+    <string name="system_default" formatted="false">預設</string>
+    <string name="system_trader" formatted="false">交易員狀態</string>
+    <string name="system_running" formatted="false">執行中</string>
+    <string name="system_stopped" formatted="false">已停止</string>
+    <string name="system_mode" formatted="false">模式</string>
+    <string name="system_autostart" formatted="false">自動啟動</string>
+    <string name="system_active" formatted="false">已啟用</string>
+    <string name="system_inactive" formatted="false">已停用</string>
+    <string name="system_revoked" formatted="false">已撤銷</string>
+    <string name="records_open" formatted="false">Open</string>
+    <string name="records_recent" formatted="false">近期</string>
+    <string name="records_fills" formatted="false">成交</string>
+    <string name="records_refresh" formatted="false">Refresh</string>
+    <string name="records_fee" formatted="false">Fee</string>
+    <string name="records_details" formatted="false">Details</string>
+    <string name="records_hide_details" formatted="false">\@string/close</string>
+    <string name="records_thread" formatted="false">執行緒</string>
+    <string name="records_source_topic" formatted="false">來源主題</string>
+    <string name="notification_defaults_title" formatted="false">用戶預設值</string>
+    <string name="notification_defaults_footer" formatted="false">當沒有符合傳入警示的裝置例外設定時，會套用預設設定。</string>
+    <string name="notification_defaults_enabled" formatted="false">已啟用</string>
+    <string name="notification_defaults_priority" formatted="false">最低優先等級</string>
+    <string name="notification_defaults_load_failed" formatted="false">無法載入偏好設定</string>
+    <string name="notification_defaults_save_failed" formatted="false">無法儲存偏好設定</string>
+    <string name="notification_defaults_low" formatted="false">Low</string>
+    <string name="notification_defaults_medium" formatted="false">中</string>
+    <string name="notification_defaults_high" formatted="false">High</string>
+    <string name="notification_defaults_fill" formatted="false">訂單已成交</string>
+    <string name="notification_defaults_rejected" formatted="false">訂單已拒絕</string>
+    <string name="notification_defaults_stop" formatted="false">止損已觸發</string>
+    <string name="notification_defaults_margin" formatted="false">保證金警示</string>
+    <string name="notification_defaults_system" formatted="false">系統錯誤</string>
+    <string name="notification_defaults_saved" formatted="false">確定</string>
+    <string name="signals_title" formatted="false">訊號</string>
+    <string name="signals_strength" formatted="false">強度</string>
+    <string name="signals_price" formatted="false">價格</string>
+    <string name="signals_reason" formatted="false">原因：</string>
+    <string name="signals_strong" formatted="false">強</string>
+    <string name="signals_medium" formatted="false">中</string>
+    <string name="signals_weak" formatted="false">弱</string>
+    <string name="signals_very_weak" formatted="false">極弱</string>
+    <string name="signals_total" formatted="false">總計</string>
+    <string name="signals_buy" formatted="false">買入</string>
+    <string name="signals_sell" formatted="false">賣出</string>
+    <string name="signals_average_strength" formatted="false">平均強度</string>
+    <string name="signals_filter" formatted="false">依策略篩選</string>
+    <string name="signals_all_strategies" formatted="false">所有策略</string>
+    <string name="signals_empty" formatted="false">沒有交易訊號符合目前的篩選條件。</string>
+    <string name="signals_export" formatted="false">匯出</string>
+    <string name="signals_export_failed" formatted="false">送出失敗</string>
+    <string name="venue_accounts_title" formatted="false">交易所帳戶</string>
+    <string name="venue_accounts_refresh" formatted="false">Refresh</string>
+    <string name="venue_accounts_failed" formatted="false">無法載入交易所帳戶狀態。帳戶並非空白，只是目前暫時無法取得數據。</string>
+    <string name="venue_accounts_authoritative" formatted="false">在有效期內取得的交易所即時權威數據。</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">未標記為「即時」的行顯示最後已知、模擬或不可用的數據——絕不代表交易所權威的即時餘額。</string>
+    <string name="venue_accounts_valuation" formatted="false">Valuation</string>
+    <string name="venue_accounts_balances" formatted="false">餘額</string>
+    <string name="venue_accounts_observed" formatted="false">Observed at</string>
+    <string name="venue_accounts_source" formatted="false">Source observation</string>
+    <string name="venue_accounts_total" formatted="false">總計</string>
+    <string name="venue_accounts_free" formatted="false">可用</string>
+    <string name="venue_accounts_used" formatted="false">已用</string>
+    <string name="venue_accounts_numeric_source" formatted="false">Numeric provenance</string>
+    <string name="venue_accounts_positions" formatted="false">持倉</string>
+    <string name="venue_accounts_funding" formatted="false">資金費用</string>
+    <string name="venue_accounts_reconciliation" formatted="false">Reconciliation status</string>
+    <string name="venue_accounts_evaluation" formatted="false">Evaluation status</string>
+    <string name="venue_accounts_deadline" formatted="false">Authority deadline</string>
+    <string name="positions_timeline_controls_window" formatted="false">時間範圍</string>
+    <string name="positions_timeline_controls_granularity" formatted="false">粒度</string>
+    <string name="positions_timeline_controls_valuationcurrency" formatted="false">估值貨幣</string>
+    <string name="positions_timeline_controls_last24hours" formatted="false">過去24小時</string>
+    <string name="positions_timeline_controls_last7days" formatted="false">過去7天</string>
+    <string name="positions_timeline_controls_last30days" formatted="false">過去30天</string>
+    <string name="positions_timeline_controls_last90days" formatted="false">過去90天</string>
+    <string name="positions_timeline_error_title" formatted="false">無法載入 P&amp;L 時間線</string>
+    <string name="positions_timeline_empty_message" formatted="false">此時間範圍沒有可用的 P&amp;L 數據點。</string>
+    <string name="positions_timeline_nowallet_message" formatted="false">選擇錢包以檢視其 P&amp;L 時間線。</string>
+    <string name="positions_timeline_incompleteness_title" formatted="false">數據點不完整的原因</string>
+    <string name="positions_timeline_incompleteness_description" formatted="false">原因涵蓋整個已載入時間範圍。若一個數據點有多個原因，計數可能重疊。</string>
+    <string name="positions_timeline_incompleteness_affectedpoints">Affected points: %1$s</string>
+    <string name="positions_timeline_chart_title" formatted="false">P&amp;L 走勢</string>
+    <string name="positions_timeline_chart_net" formatted="false">淨 P&amp;L</string>
+    <string name="positions_timeline_chart_realized" formatted="false">已實現 P&amp;L</string>
+    <string name="positions_timeline_chart_unrealized" formatted="false">Unrealized P&amp;L</string>
+    <string name="positions_timeline_attribution_title" formatted="false">最新 P&amp;L 歸因</string>
+    <string name="positions_timeline_attribution_nostrategy" formatted="false">沒有已證實的策略</string>
+    <string name="positions_timeline_attribution_withheld" formatted="false">無法證實</string>
+    <string name="positions_timeline_attribution_valuesemantics" formatted="false">顯示為零表示數值已獲證實；「無法證實」表示未能證實該數值。</string>
+    <string name="positions_timeline_contributions_title" formatted="false">各品種最新貢獻明細</string>
+    <string name="positions_timeline_contributions_realized" formatted="false">已實現 P&amp;L</string>
+    <string name="positions_timeline_contributions_fees" formatted="false">手續費</string>
+    <string name="positions_timeline_contributions_accrual" formatted="false">應計資金費</string>
+    <string name="positions_timeline_contributions_unrealized" formatted="false">Unrealized P&amp;L</string>
+    <string name="positions_timeline_incompleteness_reasons_scope_order_regression" formatted="false">範圍次序倒退</string>
+    <string name="positions_timeline_incompleteness_reasons_before_activation" formatted="false">數據點早於啟用時間</string>
+    <string name="positions_timeline_incompleteness_reasons_activation_baseline_non_finite" formatted="false">啟用基準值並非有限數值</string>
+    <string name="positions_timeline_incompleteness_reasons_fill_evidence_gap" formatted="false">持久化成交證據存在缺口</string>
+    <string name="positions_timeline_incompleteness_reasons_seed_quantity_non_finite" formatted="false">初始數量並非有限數值</string>
+    <string name="positions_timeline_incompleteness_reasons_cost_basis_unavailable" formatted="false">成本基礎不可用</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_provenance_unproven" formatted="false">成交價格來源無法證實</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_size_invalid" formatted="false">成交數量無效</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_invalid" formatted="false">成交價格無效</string>
+    <string name="positions_timeline_incompleteness_reasons_fx_conversion_unproven" formatted="false">FX 換算無法證實</string>
+    <string name="positions_timeline_incompleteness_reasons_mark_unavailable" formatted="false">標記價格不可用</string>
+    <string name="positions_timeline_incompleteness_reasons_cumulative_non_finite" formatted="false">累計值並非有限數值</string>
+    <string name="positions_timeline_incompleteness_reasons_unrealized_non_finite" formatted="false">未實現 P&amp;L 並非有限數值</string>
+    <string name="positions_timeline_incompleteness_reasons_net_non_finite" formatted="false">淨 P&amp;L 並非有限數值</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_value_non_finite" formatted="false">歸因值並非有限數值</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">歸因對帳失敗</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">各品種的 P&amp;L 之和與總體 P&amp;L 不一致</string>
+    <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">延遲到達且時間戳記早於啟用時間的成交</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Attribution sum is not representable</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Instrument sum is not representable</string>
+    <string name="positions_timeline_executionhistory_title" formatted="false">Operator-corrected execution history</string>
+    <string name="positions_timeline_executionhistory_summary" formatted="false">An operator repudiated recorded executions in this scope. Every correction listed here is excluded from the figures on this page.</string>
+    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Repudiated execution</string>
+    <string name="positions_timeline_executionhistory_correctionid" formatted="false">Correction record</string>
+    <string name="positions_timeline_equity_title" formatted="false">Equity overlay</string>
+    <string name="positions_timeline_equity_serieslabel" formatted="false">權益</string>
+    <string name="positions_timeline_equity_drawdown_current" formatted="false">Current drawdown</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Spot venue only — balances held on other venues are excluded.</string>
+    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">External deposits and withdrawals are not adjusted out.</string>
+    <string name="positions_timeline_equity_honesty_restatedfrom">These figures are restated from %1$s at each minute\'s close, not sampled natively in this currency.</string>
+    <string name="positions_timeline_equity_honesty_pricedon">Priced on %1$s.</string>
+    <string name="positions_timeline_equity_honesty_conversionwithheld">Minutes dropped for want of a proven close: %1$s.</string>
+    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Drawdown is withheld on a converted basis, because the running peak is tracked in the sampled currency.</string>
+    <string name="positions_timeline_equity_cashposition_position" formatted="false">Position value</string>
+    <string name="positions_timeline_equity_cashposition_cash" formatted="false">Cash</string>
+    <string name="pnl_provenance">Calculation: %1$s · Mark source: %2$s · As of: %3$s</string>
+    <string name="pnl_equity_coverage">Equity sampled: %1$s · Complete minutes: %2$s</string>
+    <string name="pnl_execution_history">Execution history: %1$s</string>
+    <string name="process_title" formatted="false">處理程序</string>
+    <string name="process_running" formatted="false">執行中</string>
+    <string name="process_stopped" formatted="false">已停止</string>
+    <string name="process_feeds" formatted="false">資料來源</string>
+    <string name="process_strategies" formatted="false">策略</string>
+    <string name="process_executors" formatted="false">執行器</string>
+    <string name="process_brokers" formatted="false">券商</string>
+    <string name="process_memory" formatted="false">記憶體</string>
+    <string name="process_cpu" formatted="false">CPU</string>
+    <string name="process_empty" formatted="false">沒有已設定的處理程序。</string>
+    <string name="process_start" formatted="false">啟動</string>
+    <string name="process_stop" formatted="false">Stop</string>
+    <string name="process_restart" formatted="false">重啟</string>
+    <string name="process_cancel" formatted="false">取消</string>
+    <string name="process_stale" formatted="false">無法再從此處控制此進程。請重新整理後再試。</string>
+    <string name="process_partial" formatted="false">進程已停止，但無法再從此處重啟。請重新整理後再試。</string>
+    <string name="process_confirm" formatted="false">Confirm process action</string>
+    <string name="process_confirm_message" formatted="false">Apply this action to the selected process?</string>
+    <string name="process_intent_saved" formatted="false">Desired state saved. The owning coordinator will apply it.</string>
+    <string name="process_accepted" formatted="false">Process action accepted.</string>
+    <string name="process_unknown" formatted="false">The command outcome is unknown. Controls remain locked: a status refresh cannot prove whether this command was applied.</string>
+    <string name="process_partial_unknown" formatted="false">The process was stopped, but the restart outcome is unknown. Controls remain locked: a status refresh cannot prove whether the restart was applied.</string>
+    <string name="process_rejected" formatted="false">The process action failed.</string>
+    <string name="process_load_failed" formatted="false">Could not refresh process status.</string>
+    <string name="process_config_failed" formatted="false">Process controls are unavailable because configuration could not be refreshed.</string>
+    <string name="process_enable" formatted="false">Enable</string>
+    <string name="process_disable" formatted="false">Disable</string>
+    <string name="ai_reviews_pending_title" formatted="false">待處理審核</string>
+    <string name="ai_reviews_decisions_title" formatted="false">AI 決策</string>
+    <string name="ai_reviews_deadline" formatted="false">截止時間</string>
+    <string name="ai_reviews_expired" formatted="false">已過期</string>
+    <string name="ai_reviews_rationale" formatted="false">理由</string>
+    <string name="ai_reviews_rationale_long">理由過長（上限為 %1$d 個字元）。</string>
+    <string name="ai_reviews_approve" formatted="false">核准</string>
+    <string name="ai_reviews_reject" formatted="false">拒絕</string>
+    <string name="ai_reviews_pending" formatted="false">等待中</string>
+    <string name="ai_reviews_superseded" formatted="false">已撤回</string>
+    <string name="ai_reviews_decided" formatted="false">決定時間</string>
+    <string name="ai_reviews_reject_message" formatted="false">拒絕會否決發起此審核的交易。此操作無法撤銷。</string>
+    <string name="ai_reviews_cancel" formatted="false">取消</string>
+    <string name="ai_reviews_peer_resolved" formatted="false">另一個委託代理已解決此審核。</string>
+    <string name="ai_reviews_expired_message" formatted="false">此審核已超過截止時間並逾時。</string>
+    <string name="ai_reviews_missing" formatted="false">此審核已不存在。</string>
+    <string name="ai_reviews_denied" formatted="false">你的委託權限已變更。請在決定前重新載入。</string>
+    <string name="ai_reviews_load_failed" formatted="false">Could not refresh reviews. Previously loaded reviews remain visible.</string>
+    <string name="ai_reviews_check_status" formatted="false">Check status</string>
+    <string name="ai_reviews_retry" formatted="false">Retry original decision</string>
+    <string name="ai_reviews_confirm" formatted="false">Confirm review decision</string>
+    <string name="ai_reviews_accepted" formatted="false">Decision accepted</string>
+    <string name="ai_reviews_rejected" formatted="false">Decision rejected by the server</string>
+    <string name="ai_reviews_unknown" formatted="false">Outcome unknown. Check status before retrying.</string>
+    <string name="positions_accessibility_label_closebutton" formatted="false">平倉</string>
+    <string name="positions_accessibility_label_reducebutton" formatted="false">減倉</string>
+    <string name="positions_reduce_cancel" formatted="false">取消</string>
+    <string name="positions_reduce_footer" formatted="false">100% 會平掉倉位。提交一張相反方向的只減倉市價訂單。</string>
+    <string name="positions_reduce_sizelabel" formatted="false">減倉數量</string>
+    <string name="trading_bracket_attach" formatted="false">附加止損/止盈</string>
+    <string name="trading_bracket_stoplosslabel" formatted="false">止損</string>
+    <string name="trading_bracket_takeprofitlabel" formatted="false">止盈</string>
+    <string name="trading_trailingstop_attach" formatted="false">附加追蹤止損</string>
+    <string name="trading_trailingstop_trailamountlabel" formatted="false">追蹤距離</string>
+    <string name="position_action_review" formatted="false">Review position action</string>
+    <string name="position_action_confirm" formatted="false">Confirm action</string>
+    <string name="position_action_accepted" formatted="false">Request accepted. Refresh to check execution status.</string>
+    <string name="position_action_retry" formatted="false">Retry same request</string>
+    <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
+    <string name="position_action_cycle" formatted="false">Position cycle</string>
+    <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+</resources>

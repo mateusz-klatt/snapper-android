@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="privacy_policy" formatted="false">Privacy policy</string>
+    <string name="username" formatted="false">Pangalan ng gumagamit</string>
+    <string name="password" formatted="false">Password</string>
+    <string name="sign_in" formatted="false">Mag-login</string>
+    <string name="session_retention_notice" formatted="false">Staying signed in requires Android 11+, a secure screen lock, and authentication with your PIN, pattern, password or strong biometrics within the last 5 minutes. Otherwise, sign in again after the app restarts.</string>
+    <string name="subtitle" formatted="false">Plataporma ng pangangalakal</string>
+    <string name="backend" formatted="false">URL ng sariling server</string>
+    <string name="language" formatted="false">Wika</string>
+    <string name="logout" formatted="false">Mag-logout</string>
+    <string name="positions" formatted="false">Mga posisyon</string>
+    <string name="orders" formatted="false">Mga order</string>
+    <string name="market" formatted="false">Datos ng merkado</string>
+    <string name="wallet" formatted="false">Pitaka</string>
+    <string name="all_wallets" formatted="false">Lahat ng pitaka</string>
+    <string name="retry" formatted="false">Subukan muli</string>
+    <string name="loading" formatted="false">Kinukuha…</string>
+    <string name="size" formatted="false">Sukat</string>
+    <string name="average_price" formatted="false">Karaniwang presyo</string>
+    <string name="mark_price" formatted="false">Markang presyo</string>
+    <string name="pnl" formatted="false">Hindi pa naisasaakatuparang P&amp;L</string>
+    <string name="instrument" formatted="false">Instrumento</string>
+    <string name="price" formatted="false">Presyo</string>
+    <string name="filled" formatted="false">Naisagawa</string>
+    <string name="status" formatted="false">Katayuan</string>
+    <string name="side" formatted="false">Panig</string>
+    <string name="open" formatted="false">Open</string>
+    <string name="high" formatted="false">Mataas</string>
+    <string name="low" formatted="false">Mababa</string>
+    <string name="close" formatted="false">Close</string>
+    <string name="volume" formatted="false">Dami</string>
+    <string name="timeframe" formatted="false">Yugto ng panahon</string>
+    <string name="no_candles" formatted="false">Wala pang kandila</string>
+    <string name="backend_warning" formatted="false">Kapag pinalitan ang server, mala-logout ka at lilinisin ang lokal na estado ng app. Kakailanganin mong mag-login muli sa bagong URL.</string>
+    <string name="home" formatted="false">Pangunahin</string>
+    <string name="alerts" formatted="false">Alerts</string>
+    <string name="settings" formatted="false">Mga setting</string>
+    <string name="save" formatted="false">I-save</string>
+    <string name="refresh" formatted="false">Refresh</string>
+    <string name="exchange" formatted="false">Palitan</string>
+    <string name="load_market" formatted="false">Load candles</string>
+    <string name="empty" formatted="false">No records available.</string>
+    <string name="snapshot_note" formatted="false">Snapshot data. Refresh to retrieve the latest available records.</string>
+    <string name="chart_description" formatted="false">Historical candle chart. Exact values are listed below.</string>
+    <string name="error_origin" formatted="false">Enter a valid HTTPS backend origin.</string>
+    <string name="error_credentials" formatted="false">The username or password is incorrect.</string>
+    <string name="error_session" formatted="false">Your session expired. Please sign in again.</string>
+    <string name="error_network" formatted="false">Could not reach the backend. Check your connection and try again.</string>
+    <string name="error_service" formatted="false">The backend could not complete this request. Please try again.</string>
+    <string name="error_unknown" formatted="false">Something went wrong. Please try again.</string>
+    <string name="dismiss" formatted="false">Alisin</string>
+    <string name="paper" formatted="false">Demo</string>
+    <string name="safety_critical" formatted="false">Safety critical</string>
+    <string name="snapshot_limit" formatted="false">This view shows current positions and up to 100 recent orders and alerts; it is not a complete history.</string>
+    <string name="chart_window" formatted="false">The chart shows the last 100 retrieved candles.</string>
+    <string name="local_network_explanation" formatted="false">For a backend on your local network, allow local network access before signing in. Public internet backends do not need this permission.</string>
+    <string name="local_network_allow" formatted="false">Allow local network</string>
+    <string name="local_network_settings" formatted="false">Open app settings</string>
+    <string name="order_new" formatted="false">New Order</string>
+    <string name="order_entry" formatted="false">New Manual Order</string>
+    <string name="order_confirm" formatted="false">Confirm Order</string>
+    <string name="order_quantity" formatted="false">Dami</string>
+    <string name="order_type" formatted="false">Order Type</string>
+    <string name="order_stop_price" formatted="false">Stop Price</string>
+    <string name="order_mode" formatted="false">Paraan</string>
+    <string name="order_buy" formatted="false">Bumili</string>
+    <string name="order_sell" formatted="false">Magbenta</string>
+    <string name="order_market" formatted="false">Merkado</string>
+    <string name="order_limit" formatted="false">Limitasyon</string>
+    <string name="order_stop" formatted="false">Stop</string>
+    <string name="order_stop_limit" formatted="false">Stop Limit</string>
+    <string name="order_live" formatted="false">Live</string>
+    <string name="order_review" formatted="false">Review Order</string>
+    <string name="order_back" formatted="false">Back</string>
+    <string name="order_submit" formatted="false">Confirm Order</string>
+    <string name="order_submitting" formatted="false">Submitting…</string>
+    <string name="order_leverage" formatted="false">Leverage</string>
+    <string name="order_reduce_only" formatted="false">Reduce Only</string>
+    <string name="order_observation_only" formatted="false">This instrument is observation-only — place orders on an execution-capable instrument.</string>
+    <string name="order_unknown_instrument" formatted="false">This instrument is not recognised. Reload the list and try again.</string>
+    <string name="order_caps_violation" formatted="false">This order would exceed your account safety caps. Review your risk settings and retry.</string>
+    <string name="order_rejected" formatted="false">Order creation failed</string>
+    <string name="order_cancel_title" formatted="false">Kanselahin ang order?</string>
+    <string name="order_cancel_confirm" formatted="false">Kanselahin ang order</string>
+    <string name="order_keep_open" formatted="false">Panatilihing bukas</string>
+    <string name="order_select_wallet" formatted="false">Select a wallet on Home before placing an order.</string>
+    <string name="order_created" formatted="false">Order submitted. Refresh to check execution status.</string>
+    <string name="order_cancel_requested" formatted="false">Cancellation requested. Refresh to check the order status.</string>
+    <string name="order_unknown_outcome" formatted="false">The request outcome is unknown. Check status before taking further action.</string>
+    <string name="order_check_status" formatted="false">Check status</string>
+    <string name="order_retry_intent" formatted="false">Retry same order</string>
+    <string name="order_catalog_error" formatted="false">Could not load exchanges or instruments. Try again.</string>
+    <string name="order_no_instruments" formatted="false">No instruments available for this exchange.</string>
+    <string name="order_invalid_form" formatted="false">Enter positive quantities and required prices. Optional leverage must be a positive whole number.</string>
+    <string name="order_refresh_failed" formatted="false">The request was accepted, but the latest records could not be loaded. Refresh to check status.</string>
+    <string name="order_forbidden" formatted="false">You no longer have permission for this action.</string>
+    <string name="order_session_changed" formatted="false">The session or wallet changed. Open a new order from the current account.</string>
+    <string name="order_enabled" formatted="false">Enabled</string>
+    <string name="order_disabled" formatted="false">Disabled</string>
+    <string name="system_tools" formatted="false">Overview</string>
+    <string name="desk_attach_button" formatted="false">Magdagdag ng tagapanood</string>
+    <string name="desk_attach_desk_label" formatted="false">Desk</string>
+    <string name="desk_nav_title" formatted="false">Mga desk ko</string>
+    <string name="desk_primary_badge" formatted="false">Pangunahin</string>
+    <string name="desk_attach_username_placeholder" formatted="false">Eksaktong username ng tagapanood</string>
+    <string name="desk_attach_validation_username" formatted="false">Maglagay ng username ng tagapanood.</string>
+    <string name="desk_description_unavailable" formatted="false">Walang ibinigay na paglalarawan.</string>
+    <string name="desk_attach_help" formatted="false">Ilagay ang eksaktong username ng tagapanood. Magiging available lang ang bagong desk pagkatapos niyang mag-sign out at mag-sign in muli.</string>
+    <string name="desk_attach_success_message" formatted="false">Kailangang mag-sign out at mag-sign in muli ang tagapanood bago maging available ang bagong desk.</string>
+    <string name="desk_empty_message" formatted="false">Hindi naka-attach ang account mo sa anumang desk.</string>
+    <string name="desk_load_error" formatted="false">Hindi ma-load ang mga desk. Subukan muli.</string>
+    <string name="settings_account_email" formatted="false">Email</string>
+    <string name="settings_account_role">Tungkulin: %1$s</string>
+    <string name="settings_app_info_version" formatted="false">Bersyon</string>
+    <string name="settings_app_info_build" formatted="false">Build</string>
+    <string name="settings_logout_confirm_title" formatted="false">Mag-logout?</string>
+    <string name="settings_logout_confirm_message" formatted="false">Sigurado ka bang gusto mong mag-logout?</string>
+    <string name="settings_connection_change_backend_title" formatted="false">Palitan ang server?</string>
+    <string name="settings_connection_change_backend_message" formatted="false">Kapag pinalitan ang server, mala-logout ka at lilinisin ang lokal na estado ng app. Kakailanganin mong mag-login muli sa bagong URL.</string>
+    <string name="common_continue" formatted="false">Magpatuloy</string>
+    <string name="backend_url_cancel" formatted="false">Kanselahin</string>
+    <string name="market_search" formatted="false">Maghanap ng instrumento</string>
+    <string name="market_view_only" formatted="false">Tingnan lang</string>
+    <string name="market_catalog_retry" formatted="false">Subukan muli</string>
+    <string name="market_picker_close" formatted="false">Kanselahin</string>
+    <string name="market_no_matches" formatted="false">\@string/empty</string>
+    <string name="market_catalog_error" formatted="false">\@string/error_unknown</string>
+    <string name="system_health" formatted="false">Kalusugan ng System</string>
+    <string name="system_strategies" formatted="false">Mga Estratehiya</string>
+    <string name="system_backtests" formatted="false">Mga Backtest</string>
+    <string name="system_users" formatted="false">Mga User</string>
+    <string name="system_delegates" formatted="false">Mga AI Delegate</string>
+    <string name="system_version" formatted="false">Bersyon</string>
+    <string name="system_connections" formatted="false">Mga aktibong koneksyon</string>
+    <string name="system_subscribers" formatted="false">Mga ZMQ subscriber</string>
+    <string name="system_tasks" formatted="false">Mga gawain ng subscriber</string>
+    <string name="system_topics" formatted="false">Mga aktibong paksa</string>
+    <string name="system_clients" formatted="false">Mga aktibong client</string>
+    <string name="system_gaps" formatted="false">Mga natuklasang puwang</string>
+    <string name="system_resets" formatted="false">Mga pag-reset ng session</string>
+    <string name="system_duplicates" formatted="false">Mga duplicate</string>
+    <string name="system_joins" formatted="false">Mga pagsali sa gitna ng stream</string>
+    <string name="system_unstamped" formatted="false">Tinanggihan (walang tatak)</string>
+    <string name="system_rest_clients" formatted="false">Mga na-track na REST client</string>
+    <string name="system_initial_cash" formatted="false">Panimulang puhunan</string>
+    <string name="system_period" formatted="false">Panahon</string>
+    <string name="system_created" formatted="false">Ginawa</string>
+    <string name="system_max_orders" formatted="false">Max na bukas na order</string>
+    <string name="system_max_daily" formatted="false">Max USD kada araw</string>
+    <string name="system_default" formatted="false">Default</string>
+    <string name="system_trader" formatted="false">Katayuan ng mangangalakal</string>
+    <string name="system_running" formatted="false">Tumatakbo</string>
+    <string name="system_stopped" formatted="false">Nakahinto</string>
+    <string name="system_mode" formatted="false">Paraan</string>
+    <string name="system_autostart" formatted="false">Awtomatikong simula</string>
+    <string name="system_active" formatted="false">Aktibo</string>
+    <string name="system_inactive" formatted="false">Hindi aktibo</string>
+    <string name="system_revoked" formatted="false">Binawi</string>
+    <string name="records_open" formatted="false">Open</string>
+    <string name="records_recent" formatted="false">Kamakailan</string>
+    <string name="records_fills" formatted="false">Mga naisagawa</string>
+    <string name="records_refresh" formatted="false">Refresh</string>
+    <string name="records_fee" formatted="false">Fee</string>
+    <string name="records_details" formatted="false">Details</string>
+    <string name="records_hide_details" formatted="false">\@string/close</string>
+    <string name="records_thread" formatted="false">Talakayan</string>
+    <string name="records_source_topic" formatted="false">Paksa ng pinagmulan</string>
+    <string name="notification_defaults_title" formatted="false">Mga paunang itinakda ng gumagamit</string>
+    <string name="notification_defaults_footer" formatted="false">Nalalapat ang mga paunang itinakda kapag walang tanging tuntunin sa aparato na tumutugma sa papasok na alerto.</string>
+    <string name="notification_defaults_enabled" formatted="false">Enabled</string>
+    <string name="notification_defaults_priority" formatted="false">Pinakamababang priyoridad</string>
+    <string name="notification_defaults_load_failed" formatted="false">Hindi makuha ang mga kagustuhan</string>
+    <string name="notification_defaults_save_failed" formatted="false">Hindi ma-save ang mga kagustuhan</string>
+    <string name="notification_defaults_low" formatted="false">Mababa</string>
+    <string name="notification_defaults_medium" formatted="false">Katamtaman</string>
+    <string name="notification_defaults_high" formatted="false">Mataas</string>
+    <string name="notification_defaults_fill" formatted="false">Naisagawa ang order</string>
+    <string name="notification_defaults_rejected" formatted="false">Tinanggihan ang order</string>
+    <string name="notification_defaults_stop" formatted="false">Na-activate ang tigil-pagkalugi</string>
+    <string name="notification_defaults_margin" formatted="false">Babala sa margin</string>
+    <string name="notification_defaults_system" formatted="false">Error sa sistema</string>
+    <string name="notification_defaults_saved" formatted="false">OK</string>
+    <string name="signals_title" formatted="false">Mga Signal</string>
+    <string name="signals_strength" formatted="false">Lakas</string>
+    <string name="signals_price" formatted="false">Presyo</string>
+    <string name="signals_reason" formatted="false">Dahilan:</string>
+    <string name="signals_strong" formatted="false">Malakas</string>
+    <string name="signals_medium" formatted="false">Katamtaman</string>
+    <string name="signals_weak" formatted="false">Mahina</string>
+    <string name="signals_very_weak" formatted="false">Napakahina</string>
+    <string name="signals_total" formatted="false">Kabuuan</string>
+    <string name="signals_buy" formatted="false">Bumili</string>
+    <string name="signals_sell" formatted="false">Magbenta</string>
+    <string name="signals_average_strength" formatted="false">Karaniwang Lakas</string>
+    <string name="signals_filter" formatted="false">I-filter ayon sa strategy</string>
+    <string name="signals_all_strategies" formatted="false">Lahat ng strategy</string>
+    <string name="signals_empty" formatted="false">Walang trading signal na tumutugma sa iyong kasalukuyang mga filter.</string>
+    <string name="signals_export" formatted="false">I-export</string>
+    <string name="signals_export_failed" formatted="false">Nabigo ang pagsumite</string>
+    <string name="venue_accounts_title" formatted="false">Mga Account sa Palitan</string>
+    <string name="venue_accounts_refresh" formatted="false">Refresh</string>
+    <string name="venue_accounts_failed" formatted="false">Hindi ma-load ang estado ng account sa palitan. Hindi walang laman ang account; hindi lamang magagamit ang data sa ngayon.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Mapagkakatiwalaang real-time na data ng palitan, naitala sa loob ng panahon ng bisa.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Ang mga hanay na hindi minarkahang Real-time ay nagpapakita ng huling nalaman, ginaya, o hindi magagamit na data — hindi kailanman opisyal na real-time na balanse ng palitan ang mga ito.</string>
+    <string name="venue_accounts_valuation" formatted="false">Valuation</string>
+    <string name="venue_accounts_balances" formatted="false">Mga Balanse</string>
+    <string name="venue_accounts_observed" formatted="false">Observed at</string>
+    <string name="venue_accounts_source" formatted="false">Source observation</string>
+    <string name="venue_accounts_total" formatted="false">Kabuuan</string>
+    <string name="venue_accounts_free" formatted="false">Magagamit</string>
+    <string name="venue_accounts_used" formatted="false">Nagamit</string>
+    <string name="venue_accounts_numeric_source" formatted="false">Numeric provenance</string>
+    <string name="venue_accounts_positions" formatted="false">Mga bukas na posisyon</string>
+    <string name="venue_accounts_funding" formatted="false">Pagpopondo</string>
+    <string name="venue_accounts_reconciliation" formatted="false">Reconciliation status</string>
+    <string name="venue_accounts_evaluation" formatted="false">Evaluation status</string>
+    <string name="venue_accounts_deadline" formatted="false">Authority deadline</string>
+    <string name="positions_timeline_controls_window" formatted="false">Saklaw ng oras</string>
+    <string name="positions_timeline_controls_granularity" formatted="false">Resolusyon ng oras</string>
+    <string name="positions_timeline_controls_valuationcurrency" formatted="false">Currency ng valuation</string>
+    <string name="positions_timeline_controls_last24hours" formatted="false">Huling 24 oras</string>
+    <string name="positions_timeline_controls_last7days" formatted="false">Huling 7 araw</string>
+    <string name="positions_timeline_controls_last30days" formatted="false">Huling 30 araw</string>
+    <string name="positions_timeline_controls_last90days" formatted="false">Huling 90 araw</string>
+    <string name="positions_timeline_error_title" formatted="false">Hindi ma-load ang timeline ng P&amp;L</string>
+    <string name="positions_timeline_empty_message" formatted="false">Walang available na punto ng P&amp;L para sa saklaw na ito.</string>
+    <string name="positions_timeline_nowallet_message" formatted="false">Pumili ng wallet para makita ang timeline ng P&amp;L nito.</string>
+    <string name="positions_timeline_incompleteness_title" formatted="false">Bakit hindi kumpleto ang mga punto</string>
+    <string name="positions_timeline_incompleteness_description" formatted="false">Nalalapat ang mga dahilan sa buong na-load na saklaw. Maaaring mag-overlap ang mga bilang kapag mahigit sa isa ang sanhi ng isang punto.</string>
+    <string name="positions_timeline_incompleteness_affectedpoints">Affected points: %1$s</string>
+    <string name="positions_timeline_chart_title" formatted="false">P&amp;L sa paglipas ng panahon</string>
+    <string name="positions_timeline_chart_net" formatted="false">Netong P&amp;L</string>
+    <string name="positions_timeline_chart_realized" formatted="false">Na-realize na P&amp;L</string>
+    <string name="positions_timeline_chart_unrealized" formatted="false">Unrealized P&amp;L</string>
+    <string name="positions_timeline_attribution_title" formatted="false">Pinakabagong attribution ng P&amp;L</string>
+    <string name="positions_timeline_attribution_nostrategy" formatted="false">Walang napatunayang strategy</string>
+    <string name="positions_timeline_attribution_withheld" formatted="false">Hindi mapatunayan</string>
+    <string name="positions_timeline_attribution_valuesemantics" formatted="false">Napatunayan ang ipinapakitang zero. Ang “Hindi mapatunayan” ay nangangahulugang walang sapat na ebidensya upang beripikahin ang halaga.</string>
+    <string name="positions_timeline_contributions_title" formatted="false">Pinakabagong ambag ng bawat instrumento</string>
+    <string name="positions_timeline_contributions_realized" formatted="false">Na-realize na P&amp;L</string>
+    <string name="positions_timeline_contributions_fees" formatted="false">Mga bayarin</string>
+    <string name="positions_timeline_contributions_accrual" formatted="false">Naipong funding</string>
+    <string name="positions_timeline_contributions_unrealized" formatted="false">Unrealized P&amp;L</string>
+    <string name="positions_timeline_incompleteness_reasons_scope_order_regression" formatted="false">Bumaba ang pagkakasunod-sunod sa saklaw</string>
+    <string name="positions_timeline_incompleteness_reasons_before_activation" formatted="false">Nauna ang punto sa pag-activate</string>
+    <string name="positions_timeline_incompleteness_reasons_activation_baseline_non_finite" formatted="false">Hindi finite ang baseline ng pag-activate</string>
+    <string name="positions_timeline_incompleteness_reasons_fill_evidence_gap" formatted="false">May kulang na permanenteng tala ng execution</string>
+    <string name="positions_timeline_incompleteness_reasons_seed_quantity_non_finite" formatted="false">Hindi finite ang paunang dami</string>
+    <string name="positions_timeline_incompleteness_reasons_cost_basis_unavailable" formatted="false">Walang available na cost basis</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_provenance_unproven" formatted="false">Hindi napatunayan ang pinagmulan ng presyo ng execution</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_size_invalid" formatted="false">Hindi valid ang laki ng execution</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_invalid" formatted="false">Hindi valid ang presyo ng execution</string>
+    <string name="positions_timeline_incompleteness_reasons_fx_conversion_unproven" formatted="false">Hindi napatunayan ang conversion ng FX</string>
+    <string name="positions_timeline_incompleteness_reasons_mark_unavailable" formatted="false">Hindi magagamit ang presyong batayan</string>
+    <string name="positions_timeline_incompleteness_reasons_cumulative_non_finite" formatted="false">Hindi finite ang pinagsama-samang halaga</string>
+    <string name="positions_timeline_incompleteness_reasons_unrealized_non_finite" formatted="false">Hindi finite ang hindi pa na-realize na P&amp;L</string>
+    <string name="positions_timeline_incompleteness_reasons_net_non_finite" formatted="false">Hindi finite ang netong P&amp;L</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_value_non_finite" formatted="false">Hindi finite ang halaga ng attribution</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">Nabigo ang reconciliation ng attribution</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">Nabigo ang pagtutugma ng mga kabuuang P&amp;L ayon sa instrumento sa kabuuang P&amp;L</string>
+    <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">Nahuling dumating na execution ng order na may timestamp bago ang pag-activate</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Attribution sum is not representable</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Instrument sum is not representable</string>
+    <string name="positions_timeline_executionhistory_title" formatted="false">Operator-corrected execution history</string>
+    <string name="positions_timeline_executionhistory_summary" formatted="false">An operator repudiated recorded executions in this scope. Every correction listed here is excluded from the figures on this page.</string>
+    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Repudiated execution</string>
+    <string name="positions_timeline_executionhistory_correctionid" formatted="false">Correction record</string>
+    <string name="positions_timeline_equity_title" formatted="false">Equity overlay</string>
+    <string name="positions_timeline_equity_serieslabel" formatted="false">Kapital</string>
+    <string name="positions_timeline_equity_drawdown_current" formatted="false">Current drawdown</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Spot venue only — balances held on other venues are excluded.</string>
+    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">External deposits and withdrawals are not adjusted out.</string>
+    <string name="positions_timeline_equity_honesty_restatedfrom">These figures are restated from %1$s at each minute\'s close, not sampled natively in this currency.</string>
+    <string name="positions_timeline_equity_honesty_pricedon">Priced on %1$s.</string>
+    <string name="positions_timeline_equity_honesty_conversionwithheld">Minutes dropped for want of a proven close: %1$s.</string>
+    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Drawdown is withheld on a converted basis, because the running peak is tracked in the sampled currency.</string>
+    <string name="positions_timeline_equity_cashposition_position" formatted="false">Position value</string>
+    <string name="positions_timeline_equity_cashposition_cash" formatted="false">Cash</string>
+    <string name="pnl_provenance">Calculation: %1$s · Mark source: %2$s · As of: %3$s</string>
+    <string name="pnl_equity_coverage">Equity sampled: %1$s · Complete minutes: %2$s</string>
+    <string name="pnl_execution_history">Execution history: %1$s</string>
+    <string name="process_title" formatted="false">Mga Proseso</string>
+    <string name="process_running" formatted="false">Tumatakbo</string>
+    <string name="process_stopped" formatted="false">Nakahinto</string>
+    <string name="process_feeds" formatted="false">Mga Feed</string>
+    <string name="process_strategies" formatted="false">Mga Estratehiya</string>
+    <string name="process_executors" formatted="false">Mga Tagapagpatupad</string>
+    <string name="process_brokers" formatted="false">Mga Broker</string>
+    <string name="process_memory" formatted="false">Memory</string>
+    <string name="process_cpu" formatted="false">CPU</string>
+    <string name="process_empty" formatted="false">Walang naka-configure na proseso.</string>
+    <string name="process_start" formatted="false">I-start</string>
+    <string name="process_stop" formatted="false">Stop</string>
+    <string name="process_restart" formatted="false">I-restart</string>
+    <string name="process_cancel" formatted="false">Kanselahin</string>
+    <string name="process_stale" formatted="false">Hindi na makokontrol ang process na ito mula rito. I-refresh ang datos at subukan ulit.</string>
+    <string name="process_partial" formatted="false">Na-stop ang process pero hindi na ito ma-restart mula rito. I-refresh ang datos at subukan ulit.</string>
+    <string name="process_confirm" formatted="false">Confirm process action</string>
+    <string name="process_confirm_message" formatted="false">Apply this action to the selected process?</string>
+    <string name="process_intent_saved" formatted="false">Desired state saved. The owning coordinator will apply it.</string>
+    <string name="process_accepted" formatted="false">Process action accepted.</string>
+    <string name="process_unknown" formatted="false">The command outcome is unknown. Controls remain locked: a status refresh cannot prove whether this command was applied.</string>
+    <string name="process_partial_unknown" formatted="false">The process was stopped, but the restart outcome is unknown. Controls remain locked: a status refresh cannot prove whether the restart was applied.</string>
+    <string name="process_rejected" formatted="false">The process action failed.</string>
+    <string name="process_load_failed" formatted="false">Could not refresh process status.</string>
+    <string name="process_config_failed" formatted="false">Process controls are unavailable because configuration could not be refreshed.</string>
+    <string name="process_enable" formatted="false">Enable</string>
+    <string name="process_disable" formatted="false">Disable</string>
+    <string name="ai_reviews_pending_title" formatted="false">Naka-pending na reviews</string>
+    <string name="ai_reviews_decisions_title" formatted="false">Mga Desisyon ng AI</string>
+    <string name="ai_reviews_deadline" formatted="false">Takdang oras</string>
+    <string name="ai_reviews_expired" formatted="false">Nag-expire</string>
+    <string name="ai_reviews_rationale" formatted="false">Katwiran</string>
+    <string name="ai_reviews_rationale_long">Masyadong mahaba ang katwiran (limitasyon: %1$d karakter).</string>
+    <string name="ai_reviews_approve" formatted="false">Aprubahan</string>
+    <string name="ai_reviews_reject" formatted="false">Tanggihan</string>
+    <string name="ai_reviews_pending" formatted="false">Nakabinbin</string>
+    <string name="ai_reviews_superseded" formatted="false">Binawi</string>
+    <string name="ai_reviews_decided" formatted="false">Napagdesisyunan</string>
+    <string name="ai_reviews_reject_message" formatted="false">Kapag ni-reject, mabe-veto ang trade na pinagbuksan ng pagsusuring ito. Hindi ito maa-undo.</string>
+    <string name="ai_reviews_cancel" formatted="false">Kanselahin</string>
+    <string name="ai_reviews_peer_resolved" formatted="false">Na-resolve na ng ibang delegate ang pagsusuring ito.</string>
+    <string name="ai_reviews_expired_message" formatted="false">Lumampas sa takdang oras at nag-timeout ang pagsusuring ito.</string>
+    <string name="ai_reviews_missing" formatted="false">Wala na ang pagsusuring ito.</string>
+    <string name="ai_reviews_denied" formatted="false">Nagbago ang delegate access mo. Mag-reload bago magdesisyon.</string>
+    <string name="ai_reviews_load_failed" formatted="false">Could not refresh reviews. Previously loaded reviews remain visible.</string>
+    <string name="ai_reviews_check_status" formatted="false">Check status</string>
+    <string name="ai_reviews_retry" formatted="false">Retry original decision</string>
+    <string name="ai_reviews_confirm" formatted="false">Confirm review decision</string>
+    <string name="ai_reviews_accepted" formatted="false">Decision accepted</string>
+    <string name="ai_reviews_rejected" formatted="false">Decision rejected by the server</string>
+    <string name="ai_reviews_unknown" formatted="false">Outcome unknown. Check status before retrying.</string>
+    <string name="positions_accessibility_label_closebutton" formatted="false">Isara ang posisyon</string>
+    <string name="positions_accessibility_label_reducebutton" formatted="false">Bawasan ang posisyon</string>
+    <string name="positions_reduce_cancel" formatted="false">Kanselahin</string>
+    <string name="positions_reduce_footer" formatted="false">Isinasara ng 100% ang posisyon. Nagsusumite ito ng order sa merkado na pangbawas lang sa kabilang panig.</string>
+    <string name="positions_reduce_sizelabel" formatted="false">Bawasan ang sukat</string>
+    <string name="trading_bracket_attach" formatted="false">Magdagdag ng tigil-pagkalugi / kuha-tubo</string>
+    <string name="trading_bracket_stoplosslabel" formatted="false">Tigil-pagkalugi</string>
+    <string name="trading_bracket_takeprofitlabel" formatted="false">Kuha-tubo</string>
+    <string name="trading_trailingstop_attach" formatted="false">Magdagdag ng sumusunod na tigil</string>
+    <string name="trading_trailingstop_trailamountlabel" formatted="false">Halaga ng pagsunod</string>
+    <string name="position_action_review" formatted="false">Review position action</string>
+    <string name="position_action_confirm" formatted="false">Confirm action</string>
+    <string name="position_action_accepted" formatted="false">Request accepted. Refresh to check execution status.</string>
+    <string name="position_action_retry" formatted="false">Retry same request</string>
+    <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
+    <string name="position_action_cycle" formatted="false">Position cycle</string>
+    <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+</resources>

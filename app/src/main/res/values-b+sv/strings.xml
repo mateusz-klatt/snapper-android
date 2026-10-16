@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="privacy_policy" formatted="false">Privacy policy</string>
+    <string name="username" formatted="false">Användarnamn</string>
+    <string name="password" formatted="false">Lösenord</string>
+    <string name="sign_in" formatted="false">Logga in</string>
+    <string name="session_retention_notice" formatted="false">Staying signed in requires Android 11+, a secure screen lock, and authentication with your PIN, pattern, password or strong biometrics within the last 5 minutes. Otherwise, sign in again after the app restarts.</string>
+    <string name="subtitle" formatted="false">Handelsplattform</string>
+    <string name="backend" formatted="false">Anpassad backend-URL</string>
+    <string name="language" formatted="false">Språk</string>
+    <string name="logout" formatted="false">Logga ut</string>
+    <string name="positions" formatted="false">Positioner</string>
+    <string name="orders" formatted="false">Ordrar</string>
+    <string name="market" formatted="false">Marknadsdata</string>
+    <string name="wallet" formatted="false">Plånbok</string>
+    <string name="all_wallets" formatted="false">Alla plånböcker</string>
+    <string name="retry" formatted="false">Försök igen</string>
+    <string name="loading" formatted="false">Laddar…</string>
+    <string name="size" formatted="false">Storlek</string>
+    <string name="average_price" formatted="false">Genomsnittspris</string>
+    <string name="mark_price" formatted="false">Markpris</string>
+    <string name="pnl" formatted="false">Orealiserad PnL</string>
+    <string name="instrument" formatted="false">Instrument</string>
+    <string name="price" formatted="false">Pris</string>
+    <string name="filled" formatted="false">Utförd</string>
+    <string name="status" formatted="false">Status</string>
+    <string name="side" formatted="false">Köp/sälj</string>
+    <string name="open" formatted="false">Open</string>
+    <string name="high" formatted="false">High</string>
+    <string name="low" formatted="false">Low</string>
+    <string name="close" formatted="false">Close</string>
+    <string name="volume" formatted="false">Volym</string>
+    <string name="timeframe" formatted="false">Tidsintervall</string>
+    <string name="no_candles" formatted="false">Inga ljus än</string>
+    <string name="backend_warning" formatted="false">Att byta backend loggar ut dig och rensar lokala appdata. Du måste logga in igen på den nya URL:en.</string>
+    <string name="home" formatted="false">Hem</string>
+    <string name="alerts" formatted="false">Larm</string>
+    <string name="settings" formatted="false">Inställningar</string>
+    <string name="save" formatted="false">Spara</string>
+    <string name="refresh" formatted="false">Refresh</string>
+    <string name="exchange" formatted="false">Börs</string>
+    <string name="load_market" formatted="false">Load candles</string>
+    <string name="empty" formatted="false">No records available.</string>
+    <string name="snapshot_note" formatted="false">Snapshot data. Refresh to retrieve the latest available records.</string>
+    <string name="chart_description" formatted="false">Historical candle chart. Exact values are listed below.</string>
+    <string name="error_origin" formatted="false">Enter a valid HTTPS backend origin.</string>
+    <string name="error_credentials" formatted="false">The username or password is incorrect.</string>
+    <string name="error_session" formatted="false">Your session expired. Please sign in again.</string>
+    <string name="error_network" formatted="false">Could not reach the backend. Check your connection and try again.</string>
+    <string name="error_service" formatted="false">The backend could not complete this request. Please try again.</string>
+    <string name="error_unknown" formatted="false">Something went wrong. Please try again.</string>
+    <string name="dismiss" formatted="false">Avfärda</string>
+    <string name="paper" formatted="false">Demo</string>
+    <string name="safety_critical" formatted="false">Safety critical</string>
+    <string name="snapshot_limit" formatted="false">This view shows current positions and up to 100 recent orders and alerts; it is not a complete history.</string>
+    <string name="chart_window" formatted="false">The chart shows the last 100 retrieved candles.</string>
+    <string name="local_network_explanation" formatted="false">For a backend on your local network, allow local network access before signing in. Public internet backends do not need this permission.</string>
+    <string name="local_network_allow" formatted="false">Allow local network</string>
+    <string name="local_network_settings" formatted="false">Open app settings</string>
+    <string name="order_new" formatted="false">New Order</string>
+    <string name="order_entry" formatted="false">New Manual Order</string>
+    <string name="order_confirm" formatted="false">Confirm Order</string>
+    <string name="order_quantity" formatted="false">Antal</string>
+    <string name="order_type" formatted="false">Order Type</string>
+    <string name="order_stop_price" formatted="false">Stop Price</string>
+    <string name="order_mode" formatted="false">Läge</string>
+    <string name="order_buy" formatted="false">Köp</string>
+    <string name="order_sell" formatted="false">Sälj</string>
+    <string name="order_market" formatted="false">Marknadsorder</string>
+    <string name="order_limit" formatted="false">Limitorder</string>
+    <string name="order_stop" formatted="false">Stop</string>
+    <string name="order_stop_limit" formatted="false">Stop Limit</string>
+    <string name="order_live" formatted="false">Live</string>
+    <string name="order_review" formatted="false">Review Order</string>
+    <string name="order_back" formatted="false">Back</string>
+    <string name="order_submit" formatted="false">Confirm Order</string>
+    <string name="order_submitting" formatted="false">Submitting…</string>
+    <string name="order_leverage" formatted="false">Hävstång</string>
+    <string name="order_reduce_only" formatted="false">Reduce Only</string>
+    <string name="order_observation_only" formatted="false">This instrument is observation-only — place orders on an execution-capable instrument.</string>
+    <string name="order_unknown_instrument" formatted="false">This instrument is not recognised. Reload the list and try again.</string>
+    <string name="order_caps_violation" formatted="false">This order would exceed your account safety caps. Review your risk settings and retry.</string>
+    <string name="order_rejected" formatted="false">Order creation failed</string>
+    <string name="order_cancel_title" formatted="false">Avbryta order?</string>
+    <string name="order_cancel_confirm" formatted="false">Avbryt order</string>
+    <string name="order_keep_open" formatted="false">Behåll öppen</string>
+    <string name="order_select_wallet" formatted="false">Select a wallet on Home before placing an order.</string>
+    <string name="order_created" formatted="false">Order submitted. Refresh to check execution status.</string>
+    <string name="order_cancel_requested" formatted="false">Cancellation requested. Refresh to check the order status.</string>
+    <string name="order_unknown_outcome" formatted="false">The request outcome is unknown. Check status before taking further action.</string>
+    <string name="order_check_status" formatted="false">Check status</string>
+    <string name="order_retry_intent" formatted="false">Retry same order</string>
+    <string name="order_catalog_error" formatted="false">Could not load exchanges or instruments. Try again.</string>
+    <string name="order_no_instruments" formatted="false">No instruments available for this exchange.</string>
+    <string name="order_invalid_form" formatted="false">Enter positive quantities and required prices. Optional leverage must be a positive whole number.</string>
+    <string name="order_refresh_failed" formatted="false">The request was accepted, but the latest records could not be loaded. Refresh to check status.</string>
+    <string name="order_forbidden" formatted="false">You no longer have permission for this action.</string>
+    <string name="order_session_changed" formatted="false">The session or wallet changed. Open a new order from the current account.</string>
+    <string name="order_enabled" formatted="false">Aktiverad</string>
+    <string name="order_disabled" formatted="false">Inaktiverad</string>
+    <string name="system_tools" formatted="false">Overview</string>
+    <string name="desk_attach_button" formatted="false">Lägg till läsare</string>
+    <string name="desk_attach_desk_label" formatted="false">Desk</string>
+    <string name="desk_nav_title" formatted="false">Mina deskar</string>
+    <string name="desk_primary_badge" formatted="false">Primär</string>
+    <string name="desk_attach_username_placeholder" formatted="false">Läsarens exakta användarnamn</string>
+    <string name="desk_attach_validation_username" formatted="false">Ange ett användarnamn för läsaren.</string>
+    <string name="desk_description_unavailable" formatted="false">Ingen beskrivning angiven.</string>
+    <string name="desk_attach_help" formatted="false">Ange läsarens exakta användarnamn. Den nya desken blir tillgänglig först när läsaren har loggat ut och in igen.</string>
+    <string name="desk_attach_success_message" formatted="false">Läsaren måste logga ut och in igen innan den nya desken blir tillgänglig.</string>
+    <string name="desk_empty_message" formatted="false">Ditt konto är inte kopplat till någon desk.</string>
+    <string name="desk_load_error" formatted="false">Det gick inte att läsa in deskar. Försök igen.</string>
+    <string name="settings_account_email" formatted="false">E-post</string>
+    <string name="settings_account_role">Roll: %1$s</string>
+    <string name="settings_app_info_version" formatted="false">Version</string>
+    <string name="settings_app_info_build" formatted="false">Build</string>
+    <string name="settings_logout_confirm_title" formatted="false">Logga ut?</string>
+    <string name="settings_logout_confirm_message" formatted="false">Är du säker på att du vill logga ut?</string>
+    <string name="settings_connection_change_backend_title" formatted="false">Byta backend?</string>
+    <string name="settings_connection_change_backend_message" formatted="false">Att byta backend loggar ut dig och rensar lokala appdata. Du måste logga in igen på den nya URL:en.</string>
+    <string name="common_continue" formatted="false">Fortsätt</string>
+    <string name="backend_url_cancel" formatted="false">Avbryt</string>
+    <string name="market_search" formatted="false">Sök instrument</string>
+    <string name="market_view_only" formatted="false">Endast visning</string>
+    <string name="market_catalog_retry" formatted="false">Försök igen</string>
+    <string name="market_picker_close" formatted="false">Avbryt</string>
+    <string name="market_no_matches" formatted="false">\@string/empty</string>
+    <string name="market_catalog_error" formatted="false">\@string/error_unknown</string>
+    <string name="system_health" formatted="false">Systemhälsa</string>
+    <string name="system_strategies" formatted="false">Strategier</string>
+    <string name="system_backtests" formatted="false">Backtester</string>
+    <string name="system_users" formatted="false">Användare</string>
+    <string name="system_delegates" formatted="false">AI-delegater</string>
+    <string name="system_version" formatted="false">Version</string>
+    <string name="system_connections" formatted="false">Aktiva anslutningar</string>
+    <string name="system_subscribers" formatted="false">ZMQ-prenumeranter</string>
+    <string name="system_tasks" formatted="false">Prenumerantuppgifter</string>
+    <string name="system_topics" formatted="false">Aktiva ämnen</string>
+    <string name="system_clients" formatted="false">Aktiva klienter</string>
+    <string name="system_gaps" formatted="false">Upptäckta luckor</string>
+    <string name="system_resets" formatted="false">Sessionsåterställningar</string>
+    <string name="system_duplicates" formatted="false">Dubbletter</string>
+    <string name="system_joins" formatted="false">Anslutningar mitt i strömmen</string>
+    <string name="system_unstamped" formatted="false">Avvisade (utan stämpel)</string>
+    <string name="system_rest_clients" formatted="false">Spårade REST-klienter</string>
+    <string name="system_initial_cash" formatted="false">Startkapital</string>
+    <string name="system_period" formatted="false">Period</string>
+    <string name="system_created" formatted="false">Skapad</string>
+    <string name="system_max_orders" formatted="false">Max öppna ordrar</string>
+    <string name="system_max_daily" formatted="false">Max USD/dag</string>
+    <string name="system_default" formatted="false">Standard</string>
+    <string name="system_trader" formatted="false">Handlarstatus</string>
+    <string name="system_running" formatted="false">Körs</string>
+    <string name="system_stopped" formatted="false">Stoppad</string>
+    <string name="system_mode" formatted="false">Läge</string>
+    <string name="system_autostart" formatted="false">Autostart</string>
+    <string name="system_active" formatted="false">Aktiv</string>
+    <string name="system_inactive" formatted="false">Inaktiv</string>
+    <string name="system_revoked" formatted="false">Återkallad</string>
+    <string name="records_open" formatted="false">Open</string>
+    <string name="records_recent" formatted="false">Senaste</string>
+    <string name="records_fills" formatted="false">Utföranden</string>
+    <string name="records_refresh" formatted="false">Refresh</string>
+    <string name="records_fee" formatted="false">Fee</string>
+    <string name="records_details" formatted="false">Details</string>
+    <string name="records_hide_details" formatted="false">\@string/close</string>
+    <string name="records_thread" formatted="false">Tråd</string>
+    <string name="records_source_topic" formatted="false">Källämne</string>
+    <string name="notification_defaults_title" formatted="false">Användarens standardinställningar</string>
+    <string name="notification_defaults_footer" formatted="false">Standardvärden gäller när inget enhetsspecifikt åsidosättande matchar ett inkommande larm.</string>
+    <string name="notification_defaults_enabled" formatted="false">Aktiverad</string>
+    <string name="notification_defaults_priority" formatted="false">Lägsta prioritet</string>
+    <string name="notification_defaults_load_failed" formatted="false">Kunde inte ladda inställningar</string>
+    <string name="notification_defaults_save_failed" formatted="false">Kunde inte spara inställningar</string>
+    <string name="notification_defaults_low" formatted="false">Low</string>
+    <string name="notification_defaults_medium" formatted="false">Medel</string>
+    <string name="notification_defaults_high" formatted="false">High</string>
+    <string name="notification_defaults_fill" formatted="false">Order utförd</string>
+    <string name="notification_defaults_rejected" formatted="false">Order avvisad</string>
+    <string name="notification_defaults_stop" formatted="false">Stop-loss utlöst</string>
+    <string name="notification_defaults_margin" formatted="false">Marginalvarning</string>
+    <string name="notification_defaults_system" formatted="false">Systemfel</string>
+    <string name="notification_defaults_saved" formatted="false">OK</string>
+    <string name="signals_title" formatted="false">Signaler</string>
+    <string name="signals_strength" formatted="false">Styrka</string>
+    <string name="signals_price" formatted="false">Pris</string>
+    <string name="signals_reason" formatted="false">Orsak:</string>
+    <string name="signals_strong" formatted="false">Stark</string>
+    <string name="signals_medium" formatted="false">Medel</string>
+    <string name="signals_weak" formatted="false">Svag</string>
+    <string name="signals_very_weak" formatted="false">Mycket svag</string>
+    <string name="signals_total" formatted="false">Totalt</string>
+    <string name="signals_buy" formatted="false">Köp</string>
+    <string name="signals_sell" formatted="false">Sälj</string>
+    <string name="signals_average_strength" formatted="false">Snittstyrka</string>
+    <string name="signals_filter" formatted="false">Filtrera efter strategi</string>
+    <string name="signals_all_strategies" formatted="false">Alla strategier</string>
+    <string name="signals_empty" formatted="false">Inga handelssignaler matchar dina nuvarande filter.</string>
+    <string name="signals_export" formatted="false">Exportera</string>
+    <string name="signals_export_failed" formatted="false">Det gick inte att skicka</string>
+    <string name="venue_accounts_title" formatted="false">Börskonton</string>
+    <string name="venue_accounts_refresh" formatted="false">Refresh</string>
+    <string name="venue_accounts_failed" formatted="false">Börskontots status kunde inte läsas in. Kontot är inte tomt; uppgifterna är bara otillgängliga just nu.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Tillförlitliga börsdata i realtid, registrerade inom giltighetsperioden.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Rader som inte är märkta Realtid visar senast kända, simulerade eller otillgängliga data — de är aldrig auktoritativa börssaldon i realtid.</string>
+    <string name="venue_accounts_valuation" formatted="false">Valuation</string>
+    <string name="venue_accounts_balances" formatted="false">Saldon</string>
+    <string name="venue_accounts_observed" formatted="false">Observed at</string>
+    <string name="venue_accounts_source" formatted="false">Source observation</string>
+    <string name="venue_accounts_total" formatted="false">Totalt</string>
+    <string name="venue_accounts_free" formatted="false">Tillgängligt</string>
+    <string name="venue_accounts_used" formatted="false">Använt</string>
+    <string name="venue_accounts_numeric_source" formatted="false">Numeric provenance</string>
+    <string name="venue_accounts_positions" formatted="false">Öppna positioner</string>
+    <string name="venue_accounts_funding" formatted="false">Finansiering</string>
+    <string name="venue_accounts_reconciliation" formatted="false">Reconciliation status</string>
+    <string name="venue_accounts_evaluation" formatted="false">Evaluation status</string>
+    <string name="venue_accounts_deadline" formatted="false">Authority deadline</string>
+    <string name="positions_timeline_controls_window" formatted="false">Intervall</string>
+    <string name="positions_timeline_controls_granularity" formatted="false">Tidsupplösning</string>
+    <string name="positions_timeline_controls_valuationcurrency" formatted="false">Värderingsvaluta</string>
+    <string name="positions_timeline_controls_last24hours" formatted="false">Senaste 24 timmarna</string>
+    <string name="positions_timeline_controls_last7days" formatted="false">Senaste 7 dagarna</string>
+    <string name="positions_timeline_controls_last30days" formatted="false">Senaste 30 dagarna</string>
+    <string name="positions_timeline_controls_last90days" formatted="false">Senaste 90 dagarna</string>
+    <string name="positions_timeline_error_title" formatted="false">Det gick inte att ladda P&amp;L-tidslinjen</string>
+    <string name="positions_timeline_empty_message" formatted="false">Det finns inga P&amp;L-punkter för det här intervallet.</string>
+    <string name="positions_timeline_nowallet_message" formatted="false">Välj en plånbok för att visa dess P&amp;L-tidslinje.</string>
+    <string name="positions_timeline_incompleteness_title" formatted="false">Varför datapunkter är ofullständiga</string>
+    <string name="positions_timeline_incompleteness_description" formatted="false">Orsakerna gäller hela det inlästa intervallet. Antalen kan överlappa när en punkt har fler än en orsak.</string>
+    <string name="positions_timeline_incompleteness_affectedpoints">Affected points: %1$s</string>
+    <string name="positions_timeline_chart_title" formatted="false">P&amp;L över tid</string>
+    <string name="positions_timeline_chart_net" formatted="false">P&amp;L netto</string>
+    <string name="positions_timeline_chart_realized" formatted="false">Realiserad P&amp;L</string>
+    <string name="positions_timeline_chart_unrealized" formatted="false">Orealiserad P&amp;L</string>
+    <string name="positions_timeline_attribution_title" formatted="false">Senaste P&amp;L-attribution</string>
+    <string name="positions_timeline_attribution_nostrategy" formatted="false">Ingen styrkt strategi</string>
+    <string name="positions_timeline_attribution_withheld" formatted="false">Kan inte styrkas</string>
+    <string name="positions_timeline_attribution_valuesemantics" formatted="false">En visad nolla är styrkt. ”Kan inte styrkas” innebär att värdet inte kunde styrkas.</string>
+    <string name="positions_timeline_contributions_title" formatted="false">Senaste P&amp;L-bidrag per instrument</string>
+    <string name="positions_timeline_contributions_realized" formatted="false">Realiserad P&amp;L</string>
+    <string name="positions_timeline_contributions_fees" formatted="false">Avgifter</string>
+    <string name="positions_timeline_contributions_accrual" formatted="false">Upplupen finansiering</string>
+    <string name="positions_timeline_contributions_unrealized" formatted="false">Orealiserad P&amp;L</string>
+    <string name="positions_timeline_incompleteness_reasons_scope_order_regression" formatted="false">Ordningsföljden inom omfånget har gått bakåt</string>
+    <string name="positions_timeline_incompleteness_reasons_before_activation" formatted="false">Punkten föregår aktiveringen</string>
+    <string name="positions_timeline_incompleteness_reasons_activation_baseline_non_finite" formatted="false">Aktiveringsbaslinjen är inte ändlig</string>
+    <string name="positions_timeline_incompleteness_reasons_fill_evidence_gap" formatted="false">Beständiga belägg för orderutförande saknas</string>
+    <string name="positions_timeline_incompleteness_reasons_seed_quantity_non_finite" formatted="false">Startkvantiteten är inte ändlig</string>
+    <string name="positions_timeline_incompleteness_reasons_cost_basis_unavailable" formatted="false">Anskaffningsvärdet är inte tillgängligt</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_provenance_unproven" formatted="false">Utförandeprisets ursprung kan inte styrkas</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_size_invalid" formatted="false">Ogiltig utförandestorlek</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_invalid" formatted="false">Ogiltigt utförandepris</string>
+    <string name="positions_timeline_incompleteness_reasons_fx_conversion_unproven" formatted="false">FX-konverteringen kan inte styrkas</string>
+    <string name="positions_timeline_incompleteness_reasons_mark_unavailable" formatted="false">Referenspriset är inte tillgängligt</string>
+    <string name="positions_timeline_incompleteness_reasons_cumulative_non_finite" formatted="false">Det ackumulerade värdet är inte ändligt</string>
+    <string name="positions_timeline_incompleteness_reasons_unrealized_non_finite" formatted="false">Orealiserad P&amp;L är inte ändlig</string>
+    <string name="positions_timeline_incompleteness_reasons_net_non_finite" formatted="false">P&amp;L netto är inte ändlig</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_value_non_finite" formatted="false">Attributionsvärdet är inte ändligt</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">Attributionsavstämningen misslyckades</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">Summan av P&amp;L-värdena per instrument stämmer inte med det totala P&amp;L-värdet</string>
+    <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">Sent anlänt handelsutförande med tidsstämpel före aktiveringen</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Attribution sum is not representable</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Instrument sum is not representable</string>
+    <string name="positions_timeline_executionhistory_title" formatted="false">Operator-corrected execution history</string>
+    <string name="positions_timeline_executionhistory_summary" formatted="false">An operator repudiated recorded executions in this scope. Every correction listed here is excluded from the figures on this page.</string>
+    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Repudiated execution</string>
+    <string name="positions_timeline_executionhistory_correctionid" formatted="false">Correction record</string>
+    <string name="positions_timeline_equity_title" formatted="false">Equity overlay</string>
+    <string name="positions_timeline_equity_serieslabel" formatted="false">Eget kapital</string>
+    <string name="positions_timeline_equity_drawdown_current" formatted="false">Current drawdown</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Spot venue only — balances held on other venues are excluded.</string>
+    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">External deposits and withdrawals are not adjusted out.</string>
+    <string name="positions_timeline_equity_honesty_restatedfrom">These figures are restated from %1$s at each minute\'s close, not sampled natively in this currency.</string>
+    <string name="positions_timeline_equity_honesty_pricedon">Priced on %1$s.</string>
+    <string name="positions_timeline_equity_honesty_conversionwithheld">Minutes dropped for want of a proven close: %1$s.</string>
+    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Drawdown is withheld on a converted basis, because the running peak is tracked in the sampled currency.</string>
+    <string name="positions_timeline_equity_cashposition_position" formatted="false">Position value</string>
+    <string name="positions_timeline_equity_cashposition_cash" formatted="false">Cash</string>
+    <string name="pnl_provenance">Calculation: %1$s · Mark source: %2$s · As of: %3$s</string>
+    <string name="pnl_equity_coverage">Equity sampled: %1$s · Complete minutes: %2$s</string>
+    <string name="pnl_execution_history">Execution history: %1$s</string>
+    <string name="process_title" formatted="false">Processer</string>
+    <string name="process_running" formatted="false">Körs</string>
+    <string name="process_stopped" formatted="false">Stoppad</string>
+    <string name="process_feeds" formatted="false">Flöden</string>
+    <string name="process_strategies" formatted="false">Strategier</string>
+    <string name="process_executors" formatted="false">Utförare</string>
+    <string name="process_brokers" formatted="false">Mäklare</string>
+    <string name="process_memory" formatted="false">Minne</string>
+    <string name="process_cpu" formatted="false">CPU</string>
+    <string name="process_empty" formatted="false">Inga konfigurerade processer.</string>
+    <string name="process_start" formatted="false">Starta</string>
+    <string name="process_stop" formatted="false">Stop</string>
+    <string name="process_restart" formatted="false">Starta om</string>
+    <string name="process_cancel" formatted="false">Avbryt</string>
+    <string name="process_stale" formatted="false">Den här processen kan inte längre styras härifrån. Uppdatera data och försök igen.</string>
+    <string name="process_partial" formatted="false">Processen stoppades men kan inte längre startas om härifrån. Uppdatera data och försök igen.</string>
+    <string name="process_confirm" formatted="false">Confirm process action</string>
+    <string name="process_confirm_message" formatted="false">Apply this action to the selected process?</string>
+    <string name="process_intent_saved" formatted="false">Desired state saved. The owning coordinator will apply it.</string>
+    <string name="process_accepted" formatted="false">Process action accepted.</string>
+    <string name="process_unknown" formatted="false">The command outcome is unknown. Controls remain locked: a status refresh cannot prove whether this command was applied.</string>
+    <string name="process_partial_unknown" formatted="false">The process was stopped, but the restart outcome is unknown. Controls remain locked: a status refresh cannot prove whether the restart was applied.</string>
+    <string name="process_rejected" formatted="false">The process action failed.</string>
+    <string name="process_load_failed" formatted="false">Could not refresh process status.</string>
+    <string name="process_config_failed" formatted="false">Process controls are unavailable because configuration could not be refreshed.</string>
+    <string name="process_enable" formatted="false">Enable</string>
+    <string name="process_disable" formatted="false">Disable</string>
+    <string name="ai_reviews_pending_title" formatted="false">Väntande granskningar</string>
+    <string name="ai_reviews_decisions_title" formatted="false">AI-beslut</string>
+    <string name="ai_reviews_deadline" formatted="false">Tidsfrist</string>
+    <string name="ai_reviews_expired" formatted="false">Utgången</string>
+    <string name="ai_reviews_rationale" formatted="false">Motivering</string>
+    <string name="ai_reviews_rationale_long">Motiveringen är för lång (gränsen är %1$d tecken).</string>
+    <string name="ai_reviews_approve" formatted="false">Godkänn</string>
+    <string name="ai_reviews_reject" formatted="false">Avslå</string>
+    <string name="ai_reviews_pending" formatted="false">Väntande</string>
+    <string name="ai_reviews_superseded" formatted="false">Återkallad</string>
+    <string name="ai_reviews_decided" formatted="false">Beslutat</string>
+    <string name="ai_reviews_reject_message" formatted="false">Ett avvisande stoppar handeln som den här granskningen öppnades för. Det går inte att ångra.</string>
+    <string name="ai_reviews_cancel" formatted="false">Avbryt</string>
+    <string name="ai_reviews_peer_resolved" formatted="false">En annan delegat har redan löst den här granskningen.</string>
+    <string name="ai_reviews_expired_message" formatted="false">Den här granskningen passerade sin tidsfrist och löpte ut.</string>
+    <string name="ai_reviews_missing" formatted="false">Den här granskningen finns inte längre.</string>
+    <string name="ai_reviews_denied" formatted="false">Din delegatåtkomst har ändrats. Läs in igen innan du fattar beslut.</string>
+    <string name="ai_reviews_load_failed" formatted="false">Could not refresh reviews. Previously loaded reviews remain visible.</string>
+    <string name="ai_reviews_check_status" formatted="false">Check status</string>
+    <string name="ai_reviews_retry" formatted="false">Retry original decision</string>
+    <string name="ai_reviews_confirm" formatted="false">Confirm review decision</string>
+    <string name="ai_reviews_accepted" formatted="false">Decision accepted</string>
+    <string name="ai_reviews_rejected" formatted="false">Decision rejected by the server</string>
+    <string name="ai_reviews_unknown" formatted="false">Outcome unknown. Check status before retrying.</string>
+    <string name="positions_accessibility_label_closebutton" formatted="false">Stäng position</string>
+    <string name="positions_accessibility_label_reducebutton" formatted="false">Reducera position</string>
+    <string name="positions_reduce_cancel" formatted="false">Avbryt</string>
+    <string name="positions_reduce_footer" formatted="false">100 % stänger positionen. Skickar en marknadsorder som endast minskar positionen i motsatt riktning.</string>
+    <string name="positions_reduce_sizelabel" formatted="false">Minska med</string>
+    <string name="trading_bracket_attach" formatted="false">Koppla SL / TP</string>
+    <string name="trading_bracket_stoplosslabel" formatted="false">Stop-loss</string>
+    <string name="trading_bracket_takeprofitlabel" formatted="false">Take profit</string>
+    <string name="trading_trailingstop_attach" formatted="false">Koppla trailing stop</string>
+    <string name="trading_trailingstop_trailamountlabel" formatted="false">Avstånd för trailing stop</string>
+    <string name="position_action_review" formatted="false">Review position action</string>
+    <string name="position_action_confirm" formatted="false">Confirm action</string>
+    <string name="position_action_accepted" formatted="false">Request accepted. Refresh to check execution status.</string>
+    <string name="position_action_retry" formatted="false">Retry same request</string>
+    <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
+    <string name="position_action_cycle" formatted="false">Position cycle</string>
+    <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+</resources>

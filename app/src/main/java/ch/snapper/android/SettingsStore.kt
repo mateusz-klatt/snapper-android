@@ -1,6 +1,9 @@
 package ch.snapper.android
 
 import android.content.Context
+import ch.snapper.android.data.SupportedLanguages
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.emptyPreferences
 import androidx.datastore.preferences.core.stringPreferencesKey
@@ -20,21 +23,21 @@ interface SettingsStore {
 
 private val Context.settingsDataStore by preferencesDataStore(name = "snapper_settings")
 
-class DataStoreSettings(context: Context) : SettingsStore {
-    private val store = context.applicationContext.settingsDataStore
+class DataStoreSettings internal constructor(private val store: DataStore<Preferences>) : SettingsStore {
+    constructor(context: Context) : this(context.applicationContext.settingsDataStore)
     private val backendKey = stringPreferencesKey("backend_origin")
     private val languageKey = stringPreferencesKey("language")
 
     override val preferences: Flow<ClientPreferences> = store.data
         .catch { error -> if (error is IOException) emit(emptyPreferences()) else throw error }
-        .map { ClientPreferences(it[backendKey], it[languageKey].orEmpty()) }
+        .map { ClientPreferences(it[backendKey], it[languageKey].orEmpty().takeIf { tag -> tag.isEmpty() || SupportedLanguages.find(tag) != null }.orEmpty()) }
 
     override suspend fun setBackendUrl(origin: String) {
         store.edit { it[backendKey] = origin }
     }
 
     override suspend fun setLanguage(language: String) {
-        require(language in setOf("", "en", "pl"))
+        require(language.isEmpty() || SupportedLanguages.find(language) != null)
         store.edit { it[languageKey] = language }
     }
 }

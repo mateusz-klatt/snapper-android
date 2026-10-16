@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="privacy_policy" formatted="false">Privacy policy</string>
+    <string name="username" formatted="false">Uživatelské jméno</string>
+    <string name="password" formatted="false">Heslo</string>
+    <string name="sign_in" formatted="false">Přihlásit se</string>
+    <string name="session_retention_notice" formatted="false">Staying signed in requires Android 11+, a secure screen lock, and authentication with your PIN, pattern, password or strong biometrics within the last 5 minutes. Otherwise, sign in again after the app restarts.</string>
+    <string name="subtitle" formatted="false">Obchodní platforma</string>
+    <string name="backend" formatted="false">Vlastní URL backendu</string>
+    <string name="language" formatted="false">Jazyk</string>
+    <string name="logout" formatted="false">Odhlásit se</string>
+    <string name="positions" formatted="false">Pozice</string>
+    <string name="orders" formatted="false">Pokyny</string>
+    <string name="market" formatted="false">Tržní data</string>
+    <string name="wallet" formatted="false">Peněženka</string>
+    <string name="all_wallets" formatted="false">Všechny peněženky</string>
+    <string name="retry" formatted="false">Zkusit znovu</string>
+    <string name="loading" formatted="false">Načítání…</string>
+    <string name="size" formatted="false">Velikost</string>
+    <string name="average_price" formatted="false">Průměrná cena</string>
+    <string name="mark_price" formatted="false">Referenční cena</string>
+    <string name="pnl" formatted="false">Nerealizovaný PnL</string>
+    <string name="instrument" formatted="false">Instrument</string>
+    <string name="price" formatted="false">Cena</string>
+    <string name="filled" formatted="false">Provedeno</string>
+    <string name="status" formatted="false">Stav</string>
+    <string name="side" formatted="false">Směr</string>
+    <string name="open" formatted="false">Open</string>
+    <string name="high" formatted="false">High</string>
+    <string name="low" formatted="false">Low</string>
+    <string name="close" formatted="false">Close</string>
+    <string name="volume" formatted="false">Objem</string>
+    <string name="timeframe" formatted="false">Interval</string>
+    <string name="no_candles" formatted="false">Zatím žádné svíčky</string>
+    <string name="backend_warning" formatted="false">Změna backendu vás odhlásí a vymaže lokální stav aplikace. Budete se muset znovu přihlásit na nové URL.</string>
+    <string name="home" formatted="false">Domů</string>
+    <string name="alerts" formatted="false">Upozornění</string>
+    <string name="settings" formatted="false">Nastavení</string>
+    <string name="save" formatted="false">Uložit</string>
+    <string name="refresh" formatted="false">Refresh</string>
+    <string name="exchange" formatted="false">Burza</string>
+    <string name="load_market" formatted="false">Load candles</string>
+    <string name="empty" formatted="false">No records available.</string>
+    <string name="snapshot_note" formatted="false">Snapshot data. Refresh to retrieve the latest available records.</string>
+    <string name="chart_description" formatted="false">Historical candle chart. Exact values are listed below.</string>
+    <string name="error_origin" formatted="false">Enter a valid HTTPS backend origin.</string>
+    <string name="error_credentials" formatted="false">The username or password is incorrect.</string>
+    <string name="error_session" formatted="false">Your session expired. Please sign in again.</string>
+    <string name="error_network" formatted="false">Could not reach the backend. Check your connection and try again.</string>
+    <string name="error_service" formatted="false">The backend could not complete this request. Please try again.</string>
+    <string name="error_unknown" formatted="false">Something went wrong. Please try again.</string>
+    <string name="dismiss" formatted="false">Zavřít</string>
+    <string name="paper" formatted="false">Demo</string>
+    <string name="safety_critical" formatted="false">Safety critical</string>
+    <string name="snapshot_limit" formatted="false">This view shows current positions and up to 100 recent orders and alerts; it is not a complete history.</string>
+    <string name="chart_window" formatted="false">The chart shows the last 100 retrieved candles.</string>
+    <string name="local_network_explanation" formatted="false">For a backend on your local network, allow local network access before signing in. Public internet backends do not need this permission.</string>
+    <string name="local_network_allow" formatted="false">Allow local network</string>
+    <string name="local_network_settings" formatted="false">Open app settings</string>
+    <string name="order_new" formatted="false">New Order</string>
+    <string name="order_entry" formatted="false">New Manual Order</string>
+    <string name="order_confirm" formatted="false">Confirm Order</string>
+    <string name="order_quantity" formatted="false">Množství</string>
+    <string name="order_type" formatted="false">Order Type</string>
+    <string name="order_stop_price" formatted="false">Stop Price</string>
+    <string name="order_mode" formatted="false">Režim</string>
+    <string name="order_buy" formatted="false">Koupit</string>
+    <string name="order_sell" formatted="false">Prodat</string>
+    <string name="order_market" formatted="false">Tržní</string>
+    <string name="order_limit" formatted="false">Limit</string>
+    <string name="order_stop" formatted="false">Stop</string>
+    <string name="order_stop_limit" formatted="false">Stop Limit</string>
+    <string name="order_live" formatted="false">Live</string>
+    <string name="order_review" formatted="false">Review Order</string>
+    <string name="order_back" formatted="false">Back</string>
+    <string name="order_submit" formatted="false">Confirm Order</string>
+    <string name="order_submitting" formatted="false">Submitting…</string>
+    <string name="order_leverage" formatted="false">Páka</string>
+    <string name="order_reduce_only" formatted="false">Reduce Only</string>
+    <string name="order_observation_only" formatted="false">This instrument is observation-only — place orders on an execution-capable instrument.</string>
+    <string name="order_unknown_instrument" formatted="false">This instrument is not recognised. Reload the list and try again.</string>
+    <string name="order_caps_violation" formatted="false">This order would exceed your account safety caps. Review your risk settings and retry.</string>
+    <string name="order_rejected" formatted="false">Order creation failed</string>
+    <string name="order_cancel_title" formatted="false">Zrušit pokyn?</string>
+    <string name="order_cancel_confirm" formatted="false">Zrušit pokyn</string>
+    <string name="order_keep_open" formatted="false">Ponechat otevřený</string>
+    <string name="order_select_wallet" formatted="false">Select a wallet on Home before placing an order.</string>
+    <string name="order_created" formatted="false">Order submitted. Refresh to check execution status.</string>
+    <string name="order_cancel_requested" formatted="false">Cancellation requested. Refresh to check the order status.</string>
+    <string name="order_unknown_outcome" formatted="false">The request outcome is unknown. Check status before taking further action.</string>
+    <string name="order_check_status" formatted="false">Check status</string>
+    <string name="order_retry_intent" formatted="false">Retry same order</string>
+    <string name="order_catalog_error" formatted="false">Could not load exchanges or instruments. Try again.</string>
+    <string name="order_no_instruments" formatted="false">No instruments available for this exchange.</string>
+    <string name="order_invalid_form" formatted="false">Enter positive quantities and required prices. Optional leverage must be a positive whole number.</string>
+    <string name="order_refresh_failed" formatted="false">The request was accepted, but the latest records could not be loaded. Refresh to check status.</string>
+    <string name="order_forbidden" formatted="false">You no longer have permission for this action.</string>
+    <string name="order_session_changed" formatted="false">The session or wallet changed. Open a new order from the current account.</string>
+    <string name="order_enabled" formatted="false">Povoleno</string>
+    <string name="order_disabled" formatted="false">Zakázáno</string>
+    <string name="system_tools" formatted="false">Overview</string>
+    <string name="desk_attach_button" formatted="false">Přidat pozorovatele</string>
+    <string name="desk_attach_desk_label" formatted="false">Desk</string>
+    <string name="desk_nav_title" formatted="false">Moje desky</string>
+    <string name="desk_primary_badge" formatted="false">Primární</string>
+    <string name="desk_attach_username_placeholder" formatted="false">Přesné uživatelské jméno pozorovatele</string>
+    <string name="desk_attach_validation_username" formatted="false">Zadejte uživatelské jméno pozorovatele.</string>
+    <string name="desk_description_unavailable" formatted="false">Nebyl zadán žádný popis.</string>
+    <string name="desk_attach_help" formatted="false">Zadejte přesné uživatelské jméno pozorovatele. Nový desk bude dostupný až poté, co se pozorovatel odhlásí a znovu přihlásí.</string>
+    <string name="desk_attach_success_message" formatted="false">Pozorovatel se musí odhlásit a znovu přihlásit, aby byl nový desk dostupný.</string>
+    <string name="desk_empty_message" formatted="false">Váš účet není přiřazen k žádnému desku.</string>
+    <string name="desk_load_error" formatted="false">Desky se nepodařilo načíst. Zkuste to znovu.</string>
+    <string name="settings_account_email" formatted="false">E-mail</string>
+    <string name="settings_account_role">Role: %1$s</string>
+    <string name="settings_app_info_version" formatted="false">Verze</string>
+    <string name="settings_app_info_build" formatted="false">Číslo sestavení</string>
+    <string name="settings_logout_confirm_title" formatted="false">Odhlásit se?</string>
+    <string name="settings_logout_confirm_message" formatted="false">Opravdu se chcete odhlásit?</string>
+    <string name="settings_connection_change_backend_title" formatted="false">Změnit backend?</string>
+    <string name="settings_connection_change_backend_message" formatted="false">Změna backendu vás odhlásí a vymaže lokální stav aplikace. Budete se muset znovu přihlásit na nové URL.</string>
+    <string name="common_continue" formatted="false">Pokračovat</string>
+    <string name="backend_url_cancel" formatted="false">Zrušit</string>
+    <string name="market_search" formatted="false">Hledat instrumenty</string>
+    <string name="market_view_only" formatted="false">Pouze prohlížení</string>
+    <string name="market_catalog_retry" formatted="false">Zkusit znovu</string>
+    <string name="market_picker_close" formatted="false">Zrušit</string>
+    <string name="market_no_matches" formatted="false">\@string/empty</string>
+    <string name="market_catalog_error" formatted="false">\@string/error_unknown</string>
+    <string name="system_health" formatted="false">Stav systému</string>
+    <string name="system_strategies" formatted="false">Strategie</string>
+    <string name="system_backtests" formatted="false">Backtesty</string>
+    <string name="system_users" formatted="false">Uživatelé</string>
+    <string name="system_delegates" formatted="false">AI delegáti</string>
+    <string name="system_version" formatted="false">Verze</string>
+    <string name="system_connections" formatted="false">Aktivní připojení</string>
+    <string name="system_subscribers" formatted="false">Odběratelé ZMQ</string>
+    <string name="system_tasks" formatted="false">Úlohy odběratelů</string>
+    <string name="system_topics" formatted="false">Aktivní témata</string>
+    <string name="system_clients" formatted="false">Aktivní klienti</string>
+    <string name="system_gaps" formatted="false">Zjištěné mezery</string>
+    <string name="system_resets" formatted="false">Resety relace</string>
+    <string name="system_duplicates" formatted="false">Duplikáty</string>
+    <string name="system_joins" formatted="false">Připojení uprostřed streamu</string>
+    <string name="system_unstamped" formatted="false">Odmítnuté (bez razítka)</string>
+    <string name="system_rest_clients" formatted="false">Sledovaní klienti REST</string>
+    <string name="system_initial_cash" formatted="false">Počáteční kapitál</string>
+    <string name="system_period" formatted="false">Období</string>
+    <string name="system_created" formatted="false">Vytvořeno</string>
+    <string name="system_max_orders" formatted="false">Max. otevřené příkazy</string>
+    <string name="system_max_daily" formatted="false">Max. USD/den</string>
+    <string name="system_default" formatted="false">Výchozí</string>
+    <string name="system_trader" formatted="false">Stav obchodníka</string>
+    <string name="system_running" formatted="false">Probíhá</string>
+    <string name="system_stopped" formatted="false">Zastaveno</string>
+    <string name="system_mode" formatted="false">Režim</string>
+    <string name="system_autostart" formatted="false">Automatický start</string>
+    <string name="system_active" formatted="false">Aktivní</string>
+    <string name="system_inactive" formatted="false">Neaktivní</string>
+    <string name="system_revoked" formatted="false">Odvoláno</string>
+    <string name="records_open" formatted="false">Open</string>
+    <string name="records_recent" formatted="false">Nedávné</string>
+    <string name="records_fills" formatted="false">Provedení</string>
+    <string name="records_refresh" formatted="false">Refresh</string>
+    <string name="records_fee" formatted="false">Fee</string>
+    <string name="records_details" formatted="false">Details</string>
+    <string name="records_hide_details" formatted="false">\@string/close</string>
+    <string name="records_thread" formatted="false">Vlákno</string>
+    <string name="records_source_topic" formatted="false">Zdrojové téma</string>
+    <string name="notification_defaults_title" formatted="false">Výchozí pro uživatele</string>
+    <string name="notification_defaults_footer" formatted="false">Výchozí hodnoty se použijí, když příchozímu upozornění neodpovídá žádná výjimka pro zařízení.</string>
+    <string name="notification_defaults_enabled" formatted="false">Povoleno</string>
+    <string name="notification_defaults_priority" formatted="false">Minimální priorita</string>
+    <string name="notification_defaults_load_failed" formatted="false">Nepodařilo se načíst předvolby</string>
+    <string name="notification_defaults_save_failed" formatted="false">Nepodařilo se uložit předvolby</string>
+    <string name="notification_defaults_low" formatted="false">Low</string>
+    <string name="notification_defaults_medium" formatted="false">Střední</string>
+    <string name="notification_defaults_high" formatted="false">High</string>
+    <string name="notification_defaults_fill" formatted="false">Pokyn proveden</string>
+    <string name="notification_defaults_rejected" formatted="false">Pokyn zamítnut</string>
+    <string name="notification_defaults_stop" formatted="false">Stop-loss aktivován</string>
+    <string name="notification_defaults_margin" formatted="false">Upozornění na margin</string>
+    <string name="notification_defaults_system" formatted="false">Chyba systému</string>
+    <string name="notification_defaults_saved" formatted="false">OK</string>
+    <string name="signals_title" formatted="false">Signály</string>
+    <string name="signals_strength" formatted="false">Síla</string>
+    <string name="signals_price" formatted="false">Cena</string>
+    <string name="signals_reason" formatted="false">Důvod:</string>
+    <string name="signals_strong" formatted="false">Silný</string>
+    <string name="signals_medium" formatted="false">Střední</string>
+    <string name="signals_weak" formatted="false">Slabý</string>
+    <string name="signals_very_weak" formatted="false">Velmi slabý</string>
+    <string name="signals_total" formatted="false">Celkem</string>
+    <string name="signals_buy" formatted="false">Koupit</string>
+    <string name="signals_sell" formatted="false">Prodat</string>
+    <string name="signals_average_strength" formatted="false">Prům. síla</string>
+    <string name="signals_filter" formatted="false">Filtrovat podle strategie</string>
+    <string name="signals_all_strategies" formatted="false">Všechny strategie</string>
+    <string name="signals_empty" formatted="false">Žádné obchodní signály neodpovídají vašim aktuálním filtrům.</string>
+    <string name="signals_export" formatted="false">Exportovat</string>
+    <string name="signals_export_failed" formatted="false">Odeslání se nezdařilo</string>
+    <string name="venue_accounts_title" formatted="false">Účty na burze</string>
+    <string name="venue_accounts_refresh" formatted="false">Refresh</string>
+    <string name="venue_accounts_failed" formatted="false">Stav účtu na burze se nepodařilo načíst. Nejde o prázdný účet; data pouze momentálně nejsou dostupná.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Spolehlivá aktuální data burzy zaznamenaná během doby platnosti.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Řádky, které nejsou označeny jako Živé, zobrazují stará, simulovaná nebo nedostupná data — nikdy nejde o směrodatné živé zůstatky burzy.</string>
+    <string name="venue_accounts_valuation" formatted="false">Valuation</string>
+    <string name="venue_accounts_balances" formatted="false">Zůstatky</string>
+    <string name="venue_accounts_observed" formatted="false">Observed at</string>
+    <string name="venue_accounts_source" formatted="false">Source observation</string>
+    <string name="venue_accounts_total" formatted="false">Celkem</string>
+    <string name="venue_accounts_free" formatted="false">Volné</string>
+    <string name="venue_accounts_used" formatted="false">Použité</string>
+    <string name="venue_accounts_numeric_source" formatted="false">Numeric provenance</string>
+    <string name="venue_accounts_positions" formatted="false">Otevřené pozice</string>
+    <string name="venue_accounts_funding" formatted="false">Financování</string>
+    <string name="venue_accounts_reconciliation" formatted="false">Reconciliation status</string>
+    <string name="venue_accounts_evaluation" formatted="false">Evaluation status</string>
+    <string name="venue_accounts_deadline" formatted="false">Authority deadline</string>
+    <string name="positions_timeline_controls_window" formatted="false">Období</string>
+    <string name="positions_timeline_controls_granularity" formatted="false">Rozlišení</string>
+    <string name="positions_timeline_controls_valuationcurrency" formatted="false">Měna ocenění</string>
+    <string name="positions_timeline_controls_last24hours" formatted="false">Posledních 24 hodin</string>
+    <string name="positions_timeline_controls_last7days" formatted="false">Posledních 7 dnů</string>
+    <string name="positions_timeline_controls_last30days" formatted="false">Posledních 30 dnů</string>
+    <string name="positions_timeline_controls_last90days" formatted="false">Posledních 90 dnů</string>
+    <string name="positions_timeline_error_title" formatted="false">Časovou osu P&amp;L se nepodařilo načíst</string>
+    <string name="positions_timeline_empty_message" formatted="false">Pro toto období nejsou dostupné žádné body P&amp;L.</string>
+    <string name="positions_timeline_nowallet_message" formatted="false">Výběrem peněženky zobrazíte její časovou osu P&amp;L.</string>
+    <string name="positions_timeline_incompleteness_title" formatted="false">Proč jsou body neúplné</string>
+    <string name="positions_timeline_incompleteness_description" formatted="false">Důvody se vztahují na celé načtené období. Počty se mohou překrývat, pokud má bod více než jednu příčinu.</string>
+    <string name="positions_timeline_incompleteness_affectedpoints">Affected points: %1$s</string>
+    <string name="positions_timeline_chart_title" formatted="false">Vývoj P&amp;L v čase</string>
+    <string name="positions_timeline_chart_net" formatted="false">Čistý P&amp;L</string>
+    <string name="positions_timeline_chart_realized" formatted="false">Realizovaný P&amp;L</string>
+    <string name="positions_timeline_chart_unrealized" formatted="false">Nerealizovaný P&amp;L</string>
+    <string name="positions_timeline_attribution_title" formatted="false">Nejnovější rozklad P&amp;L</string>
+    <string name="positions_timeline_attribution_nostrategy" formatted="false">Žádná doložená strategie</string>
+    <string name="positions_timeline_attribution_withheld" formatted="false">Nedoloženo</string>
+    <string name="positions_timeline_attribution_valuesemantics" formatted="false">Zobrazená nula je doložená. Nedoloženo znamená, že hodnotu nebylo možné doložit.</string>
+    <string name="positions_timeline_contributions_title" formatted="false">Nejnovější příspěvky podle instrumentu</string>
+    <string name="positions_timeline_contributions_realized" formatted="false">Realizovaný P&amp;L</string>
+    <string name="positions_timeline_contributions_fees" formatted="false">Poplatky</string>
+    <string name="positions_timeline_contributions_accrual" formatted="false">Naběhlé financování</string>
+    <string name="positions_timeline_contributions_unrealized" formatted="false">Nerealizovaný P&amp;L</string>
+    <string name="positions_timeline_incompleteness_reasons_scope_order_regression" formatted="false">Nesprávné pořadí v rozsahu</string>
+    <string name="positions_timeline_incompleteness_reasons_before_activation" formatted="false">Bod předchází aktivaci</string>
+    <string name="positions_timeline_incompleteness_reasons_activation_baseline_non_finite" formatted="false">Výchozí hodnota při aktivaci není konečné číslo</string>
+    <string name="positions_timeline_incompleteness_reasons_fill_evidence_gap" formatted="false">Chybí trvalý doklad o provedení</string>
+    <string name="positions_timeline_incompleteness_reasons_seed_quantity_non_finite" formatted="false">Počáteční množství není konečné číslo</string>
+    <string name="positions_timeline_incompleteness_reasons_cost_basis_unavailable" formatted="false">Pořizovací cena není dostupná</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_provenance_unproven" formatted="false">Původ realizační ceny není doložen</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_size_invalid" formatted="false">Neplatná velikost provedení</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_invalid" formatted="false">Neplatná realizační cena</string>
+    <string name="positions_timeline_incompleteness_reasons_fx_conversion_unproven" formatted="false">Přepočet FX není doložen</string>
+    <string name="positions_timeline_incompleteness_reasons_mark_unavailable" formatted="false">Referenční cena není dostupná</string>
+    <string name="positions_timeline_incompleteness_reasons_cumulative_non_finite" formatted="false">Kumulativní hodnota není konečné číslo</string>
+    <string name="positions_timeline_incompleteness_reasons_unrealized_non_finite" formatted="false">Nerealizovaný P&amp;L nemá konečnou hodnotu</string>
+    <string name="positions_timeline_incompleteness_reasons_net_non_finite" formatted="false">Čistý P&amp;L nemá konečnou hodnotu</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_value_non_finite" formatted="false">Hodnota rozkladu není konečné číslo</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">Odsouhlasení rozkladu selhalo</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">Součty P&amp;L podle instrumentů se neshodují s celkovým P&amp;L</string>
+    <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">Opožděně doručené provedení obchodu s časem před aktivací</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Attribution sum is not representable</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Instrument sum is not representable</string>
+    <string name="positions_timeline_executionhistory_title" formatted="false">Operator-corrected execution history</string>
+    <string name="positions_timeline_executionhistory_summary" formatted="false">An operator repudiated recorded executions in this scope. Every correction listed here is excluded from the figures on this page.</string>
+    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Repudiated execution</string>
+    <string name="positions_timeline_executionhistory_correctionid" formatted="false">Correction record</string>
+    <string name="positions_timeline_equity_title" formatted="false">Equity overlay</string>
+    <string name="positions_timeline_equity_serieslabel" formatted="false">Kapitál</string>
+    <string name="positions_timeline_equity_drawdown_current" formatted="false">Current drawdown</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Spot venue only — balances held on other venues are excluded.</string>
+    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">External deposits and withdrawals are not adjusted out.</string>
+    <string name="positions_timeline_equity_honesty_restatedfrom">These figures are restated from %1$s at each minute\'s close, not sampled natively in this currency.</string>
+    <string name="positions_timeline_equity_honesty_pricedon">Priced on %1$s.</string>
+    <string name="positions_timeline_equity_honesty_conversionwithheld">Minutes dropped for want of a proven close: %1$s.</string>
+    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Drawdown is withheld on a converted basis, because the running peak is tracked in the sampled currency.</string>
+    <string name="positions_timeline_equity_cashposition_position" formatted="false">Position value</string>
+    <string name="positions_timeline_equity_cashposition_cash" formatted="false">Cash</string>
+    <string name="pnl_provenance">Calculation: %1$s · Mark source: %2$s · As of: %3$s</string>
+    <string name="pnl_equity_coverage">Equity sampled: %1$s · Complete minutes: %2$s</string>
+    <string name="pnl_execution_history">Execution history: %1$s</string>
+    <string name="process_title" formatted="false">Procesy</string>
+    <string name="process_running" formatted="false">Probíhá</string>
+    <string name="process_stopped" formatted="false">Zastaveno</string>
+    <string name="process_feeds" formatted="false">Kanály</string>
+    <string name="process_strategies" formatted="false">Strategie</string>
+    <string name="process_executors" formatted="false">Vykonavatelé</string>
+    <string name="process_brokers" formatted="false">Brokeři</string>
+    <string name="process_memory" formatted="false">Paměť</string>
+    <string name="process_cpu" formatted="false">CPU</string>
+    <string name="process_empty" formatted="false">Žádné nakonfigurované procesy.</string>
+    <string name="process_start" formatted="false">Spustit</string>
+    <string name="process_stop" formatted="false">Stop</string>
+    <string name="process_restart" formatted="false">Restartovat</string>
+    <string name="process_cancel" formatted="false">Zrušit</string>
+    <string name="process_stale" formatted="false">Tento proces již nelze ovládat odsud. Obnovte data a zkuste to znovu.</string>
+    <string name="process_partial" formatted="false">Proces byl zastaven, ale již jej nelze odsud restartovat. Obnovte data a zkuste to znovu.</string>
+    <string name="process_confirm" formatted="false">Confirm process action</string>
+    <string name="process_confirm_message" formatted="false">Apply this action to the selected process?</string>
+    <string name="process_intent_saved" formatted="false">Desired state saved. The owning coordinator will apply it.</string>
+    <string name="process_accepted" formatted="false">Process action accepted.</string>
+    <string name="process_unknown" formatted="false">The command outcome is unknown. Controls remain locked: a status refresh cannot prove whether this command was applied.</string>
+    <string name="process_partial_unknown" formatted="false">The process was stopped, but the restart outcome is unknown. Controls remain locked: a status refresh cannot prove whether the restart was applied.</string>
+    <string name="process_rejected" formatted="false">The process action failed.</string>
+    <string name="process_load_failed" formatted="false">Could not refresh process status.</string>
+    <string name="process_config_failed" formatted="false">Process controls are unavailable because configuration could not be refreshed.</string>
+    <string name="process_enable" formatted="false">Enable</string>
+    <string name="process_disable" formatted="false">Disable</string>
+    <string name="ai_reviews_pending_title" formatted="false">Čekající kontroly</string>
+    <string name="ai_reviews_decisions_title" formatted="false">Rozhodnutí AI</string>
+    <string name="ai_reviews_deadline" formatted="false">Termín</string>
+    <string name="ai_reviews_expired" formatted="false">Vypršela</string>
+    <string name="ai_reviews_rationale" formatted="false">Odůvodnění</string>
+    <string name="ai_reviews_rationale_long">Odůvodnění je příliš dlouhé (limit je %1$d znaků).</string>
+    <string name="ai_reviews_approve" formatted="false">Schválit</string>
+    <string name="ai_reviews_reject" formatted="false">Zamítnout</string>
+    <string name="ai_reviews_pending" formatted="false">Čeká</string>
+    <string name="ai_reviews_superseded" formatted="false">Stažena</string>
+    <string name="ai_reviews_decided" formatted="false">Rozhodnuto</string>
+    <string name="ai_reviews_reject_message" formatted="false">Zamítnutím vetujete obchod, kvůli kterému byla tato kontrola otevřena. Tuto akci nelze vrátit zpět.</string>
+    <string name="ai_reviews_cancel" formatted="false">Zrušit</string>
+    <string name="ai_reviews_peer_resolved" formatted="false">Tuto kontrolu již vyřešil jiný delegát.</string>
+    <string name="ai_reviews_expired_message" formatted="false">Tato kontrola překročila termín a vypršela.</string>
+    <string name="ai_reviews_missing" formatted="false">Tato kontrola již neexistuje.</string>
+    <string name="ai_reviews_denied" formatted="false">Váš přístup delegáta se změnil. Před rozhodnutím obsah znovu načtěte.</string>
+    <string name="ai_reviews_load_failed" formatted="false">Could not refresh reviews. Previously loaded reviews remain visible.</string>
+    <string name="ai_reviews_check_status" formatted="false">Check status</string>
+    <string name="ai_reviews_retry" formatted="false">Retry original decision</string>
+    <string name="ai_reviews_confirm" formatted="false">Confirm review decision</string>
+    <string name="ai_reviews_accepted" formatted="false">Decision accepted</string>
+    <string name="ai_reviews_rejected" formatted="false">Decision rejected by the server</string>
+    <string name="ai_reviews_unknown" formatted="false">Outcome unknown. Check status before retrying.</string>
+    <string name="positions_accessibility_label_closebutton" formatted="false">Zavřít pozici</string>
+    <string name="positions_accessibility_label_reducebutton" formatted="false">Snížit pozici</string>
+    <string name="positions_reduce_cancel" formatted="false">Zrušit</string>
+    <string name="positions_reduce_footer" formatted="false">100 % pozici zavře. Odešle se tržní pokyn pouze ke snížení pozice v opačném směru.</string>
+    <string name="positions_reduce_sizelabel" formatted="false">Velikost snížení</string>
+    <string name="trading_bracket_attach" formatted="false">Přidat SL/TP</string>
+    <string name="trading_bracket_stoplosslabel" formatted="false">Stop-loss</string>
+    <string name="trading_bracket_takeprofitlabel" formatted="false">Take-profit</string>
+    <string name="trading_trailingstop_attach" formatted="false">Attach trailing stop</string>
+    <string name="trading_trailingstop_trailamountlabel" formatted="false">Trailing vzdálenost</string>
+    <string name="position_action_review" formatted="false">Review position action</string>
+    <string name="position_action_confirm" formatted="false">Confirm action</string>
+    <string name="position_action_accepted" formatted="false">Request accepted. Refresh to check execution status.</string>
+    <string name="position_action_retry" formatted="false">Retry same request</string>
+    <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
+    <string name="position_action_cycle" formatted="false">Position cycle</string>
+    <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+</resources>

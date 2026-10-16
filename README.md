@@ -22,11 +22,14 @@ Native Android client for the [Snapper](https://github.com/mateusz-klatt/snapper
 - Request a wallet-scoped P&L timeline with window, granularity and valuation-currency controls, withholding reasons and valuation provenance.
 - Review and submit manual orders for a selected wallet using execution-capable instruments.
 - Confirm cancellation of eligible open orders.
+- Review close/reduce orders and attach bracket or percentage trailing protection to a position.
+- Inspect process summaries and confirm authorized local or remote process controls.
+- Inspect AI-review audit/pending feeds and confirm delegated approve/reject decisions with a rationale.
 - Show only the screens allowed by the session's effective permissions.
-- English and Polish interfaces, with light and dark themes.
+- Select from 45 language catalogs, including Arabic, Hebrew and Persian RTL layouts, with light and dark themes. Additional catalogs reuse reviewed iOS translations; missing reviewed text remains English.
 - Exact decimal quantities, prices and P&L; chart drawing converts coordinates separately.
 
-The app displays REST snapshots, refreshed on foreground entry or with Refresh. Orders, fills and alerts fetch up to 100 recent records; the Recent orders segment displays the newest 50. Positions are the current backend snapshot. Market charts request 100 candles. System feeds, fills, signals and P&L refresh independently, with their own errors. Venue accounts poll every five seconds only while their screen is active and the app is in the foreground; stale observation or polling evidence cannot be labelled authoritative. Position close/reduce/bracket/trailing actions, process controls, AI review decisions, WebSocket streaming and Android push notifications remain unavailable.
+The app displays REST snapshots, refreshed on foreground entry or with Refresh. Orders, fills and alerts fetch up to 100 recent records; the Recent orders segment displays the newest 50. Positions are the current backend snapshot. Market charts request 100 candles and display price/time axes and a grid. System feeds, fills, signals and P&L refresh independently, with their own errors. Venue accounts poll every five seconds only while their screen is active and the app is in the foreground; stale observation or polling evidence cannot be labelled authoritative. WebSocket streaming, market-context metrics, separate country/financial-color preferences and Android push notifications remain unavailable.
 
 The existing backend's device registration and delivery are APNs-only. FCM requires an Android provider contract and delivery integration before an Android device token can be registered; this app does not submit FCM tokens to the iOS endpoint.
 
@@ -35,6 +38,14 @@ The existing backend's device registration and delivery are APNs-only. FCM requi
 Order entry requires a selected wallet and `create:orders` plus `read:market_data`. The wallet determines paper or live mode. Review buy/sell market, limit, stop or stop-limit orders before confirming; leverage and reduce-only are optional. The exchange and instrument lists come from the backend, and observation-only instruments cannot be selected for trading.
 
 Cancellation requires `cancel:orders`, an eligible open order in the selected wallet and its execution plan. Acceptance means cancellation was requested, not that the venue has cancelled the order. After an uncertain submission, check status; an explicit creation retry retains the same reviewed payload and idempotency key. Dismissing the dialog does not discard that uncertain intent, and a later rejected retry does not resolve it. Accepted commands remain accepted if the subsequent snapshot refresh fails.
+
+## Position and administrative actions
+
+Position actions require a selected wallet, `read:positions`, `read:market_data` and `create:orders`. Close/reduce submits an opposite-side reduce-only market order with an exact quantity. Protection additionally requires the current position cycle and entry price. Bracket protection accepts stop loss, take profit or both; trailing protection uses percentage distance and an optional minimum locked profit. Every action is reviewed and revalidates the current position, wallet mode and execution capability before dispatch. An uncertain request retains its original payload and operation key across dismissal and explicit retry.
+
+Process summaries require `read:system_status`; configuration requires `read:processes`. Controls additionally require `manage:processes` and a fresh matching configuration. Strategy/backtest processes and templates are excluded. Local restart may stop successfully and fail before starting; remote controls save desired state for the owning coordinator. A saved intent is distinct from runtime convergence. A lost command acknowledgement remains unknown; refreshing status cannot prove that the command was applied.
+
+AI audits require `read:ai_reviews`. Pending reviews require a delegate identity and `read:signals`; decisions additionally require `submit:ai_review_decision`. Approve/reject requires explicit confirmation. After an uncertain submission, a fresh status read permits an explicit retry of the same decision and rationale, including when the review has left the pending list. Only the backend's matching receipt or terminal refusal resolves that uncertainty; there is no automatic decision replay.
 
 ## Open in Android Studio
 

@@ -3,6 +3,7 @@ package ch.snapper.android.data
 
 import java.math.BigDecimal
 import java.time.Instant
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.UseSerializers
 
@@ -30,83 +31,83 @@ data class PnlSeriesQuery(
 @Serializable
 data class PnlIncompletenessReasonDto(
     val reason: String,
-    val withholding_tier: String,
-    val withholding_scope: String,
-    val trigger_instrument_public_id: String?,
+    @SerialName("withholding_tier") val withholdingTier: String,
+    @SerialName("withholding_scope") val withholdingScope: String,
+    @SerialName("trigger_instrument_public_id") val triggerInstrumentPublicId: String?,
 )
 
 @Serializable
 data class PnlInstrumentContributionDto(
-    val instrument_public_id: String,
-    val native_symbol: String?,
+    @SerialName("instrument_public_id") val instrumentPublicId: String,
+    @SerialName("native_symbol") val nativeSymbol: String?,
     val exchange: String?,
-    val realized_pnl: BigDecimal?,
-    val fee_pnl: BigDecimal?,
-    val accrual_pnl: BigDecimal?,
-    val unrealized_pnl: BigDecimal?,
+    @SerialName("realized_pnl") val realizedPnl: BigDecimal?,
+    @SerialName("fee_pnl") val feePnl: BigDecimal?,
+    @SerialName("accrual_pnl") val accrualPnl: BigDecimal?,
+    @SerialName("unrealized_pnl") val unrealizedPnl: BigDecimal?,
 )
 
 @Serializable
 data class PnlAttributionContributionDto(
     val origin: String,
-    val strategy_name: String?,
-    val realized_pnl: BigDecimal?,
-    val fee_pnl: BigDecimal?,
-    val accrual_pnl: BigDecimal?,
-    val unrealized_pnl: BigDecimal?,
+    @SerialName("strategy_name") val strategyName: String?,
+    @SerialName("realized_pnl") val realizedPnl: BigDecimal?,
+    @SerialName("fee_pnl") val feePnl: BigDecimal?,
+    @SerialName("accrual_pnl") val accrualPnl: BigDecimal?,
+    @SerialName("unrealized_pnl") val unrealizedPnl: BigDecimal?,
 )
 
 @Serializable
 data class PnlTimelinePointDto(
-    val point_time: String,
-    val realized_pnl: BigDecimal?,
-    val fee_pnl: BigDecimal?,
-    val accrual_pnl: BigDecimal?,
-    val unrealized_pnl: BigDecimal?,
-    val net_pnl: BigDecimal?,
+    @SerialName("point_time") val pointTime: String,
+    @SerialName("realized_pnl") val realizedPnl: BigDecimal?,
+    @SerialName("fee_pnl") val feePnl: BigDecimal?,
+    @SerialName("accrual_pnl") val accrualPnl: BigDecimal?,
+    @SerialName("unrealized_pnl") val unrealizedPnl: BigDecimal?,
+    @SerialName("net_pnl") val netPnl: BigDecimal?,
     val equity: BigDecimal?,
     val cash: BigDecimal?,
-    val position_value: BigDecimal?,
+    @SerialName("position_value") val positionValue: BigDecimal?,
     val drawdown: BigDecimal?,
-    val valuation_status: String,
-    val incompleteness_reasons: List<PnlIncompletenessReasonDto>,
-    val per_instrument: List<PnlInstrumentContributionDto>,
+    @SerialName("valuation_status") val valuationStatus: String,
+    @SerialName("incompleteness_reasons") val incompletenessReasons: List<PnlIncompletenessReasonDto>,
+    @SerialName("per_instrument") val perInstrument: List<PnlInstrumentContributionDto>,
     val attribution: List<PnlAttributionContributionDto>,
 )
 
 @Serializable
 data class PnlFxRateSourceDto(
-    val source_currency: String,
-    val valuation_currency: String,
-    val base_currency: String,
-    val quote_currency: String,
+    @SerialName("source_currency") val sourceCurrency: String,
+    @SerialName("valuation_currency") val valuationCurrency: String,
+    @SerialName("base_currency") val baseCurrency: String,
+    @SerialName("quote_currency") val quoteCurrency: String,
     val exchange: String,
 )
 
 @Serializable
 data class PnlEquityCoverageDto(
     val sampled: Boolean,
-    val venue_scope: String?,
-    val external_flows_adjusted: Boolean?,
-    val complete_minutes: Long,
-    val first_minute: String?,
-    val last_minute: String?,
-    val sample_calc_version: String?,
-    val valuation_basis: String?,
-    val converted_from: String?,
-    val conversion_rate_source: String?,
-    val conversion_withheld_minutes: Long,
-    val drawdown_withheld_reason: String?,
+    @SerialName("venue_scope") val venueScope: String?,
+    @SerialName("external_flows_adjusted") val externalFlowsAdjusted: Boolean?,
+    @SerialName("complete_minutes") val completeMinutes: Long,
+    @SerialName("first_minute") val firstMinute: String?,
+    @SerialName("last_minute") val lastMinute: String?,
+    @SerialName("sample_calc_version") val sampleCalcVersion: String?,
+    @SerialName("valuation_basis") val valuationBasis: String?,
+    @SerialName("converted_from") val convertedFrom: String?,
+    @SerialName("conversion_rate_source") val conversionRateSource: String?,
+    @SerialName("conversion_withheld_minutes") val conversionWithheldMinutes: Long,
+    @SerialName("drawdown_withheld_reason") val drawdownWithheldReason: String?,
 )
 
 @Serializable
 data class PnlExecutionCorrectionDto(
-    val correction_public_id: String,
-    val target_execution_public_id: String,
+    @SerialName("correction_public_id") val correctionPublicId: String,
+    @SerialName("target_execution_public_id") val targetExecutionPublicId: String,
     val exchange: String,
-    val scope_sequence: Long,
+    @SerialName("scope_sequence") val scopeSequence: Long,
     val reason: String,
-    val correction_time: String,
+    @SerialName("correction_time") val correctionTime: String,
 )
 
 @Serializable
@@ -117,17 +118,17 @@ data class PnlExecutionHistoryDto(
 
 @Serializable
 data class PnlSeriesDto(
-    val wallet_public_id: String,
+    @SerialName("wallet_public_id") val walletPublicId: String,
     val mode: String,
     val granularity: String,
-    val valuation_ccy: String,
-    val from_time: String,
-    val to_time: String,
-    val as_of: String,
-    val mark_source: String,
-    val rate_sources: List<PnlFxRateSourceDto>,
-    val calc_version: String,
-    val equity_coverage: PnlEquityCoverageDto,
-    val execution_history: PnlExecutionHistoryDto,
+    @SerialName("valuation_ccy") val valuationCcy: String,
+    @SerialName("from_time") val fromTime: String,
+    @SerialName("to_time") val toTime: String,
+    @SerialName("as_of") val asOf: String,
+    @SerialName("mark_source") val markSource: String,
+    @SerialName("rate_sources") val rateSources: List<PnlFxRateSourceDto>,
+    @SerialName("calc_version") val calcVersion: String,
+    @SerialName("equity_coverage") val equityCoverage: PnlEquityCoverageDto,
+    @SerialName("execution_history") val executionHistory: PnlExecutionHistoryDto,
     val points: List<PnlTimelinePointDto>,
 )

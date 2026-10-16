@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="privacy_policy" formatted="false">Privacy policy</string>
+    <string name="username" formatted="false">Korisničko ime</string>
+    <string name="password" formatted="false">Lozinka</string>
+    <string name="sign_in" formatted="false">Prijava</string>
+    <string name="session_retention_notice" formatted="false">Staying signed in requires Android 11+, a secure screen lock, and authentication with your PIN, pattern, password or strong biometrics within the last 5 minutes. Otherwise, sign in again after the app restarts.</string>
+    <string name="subtitle" formatted="false">Platforma za trgovanje</string>
+    <string name="backend" formatted="false">Vlastiti URL backenda</string>
+    <string name="language" formatted="false">Jezik</string>
+    <string name="logout" formatted="false">Odjavi se</string>
+    <string name="positions" formatted="false">Pozicije</string>
+    <string name="orders" formatted="false">Nalozi</string>
+    <string name="market" formatted="false">Tržišni podaci</string>
+    <string name="wallet" formatted="false">Novčanik</string>
+    <string name="all_wallets" formatted="false">Svi novčanici</string>
+    <string name="retry" formatted="false">Pokušaj ponovo</string>
+    <string name="loading" formatted="false">Učitavanje…</string>
+    <string name="size" formatted="false">Veličina</string>
+    <string name="average_price" formatted="false">Prosječna cijena</string>
+    <string name="mark_price" formatted="false">Referentna cijena</string>
+    <string name="pnl" formatted="false">Nerealizirani PnL</string>
+    <string name="instrument" formatted="false">Instrument</string>
+    <string name="price" formatted="false">Cijena</string>
+    <string name="filled" formatted="false">Izvršeno</string>
+    <string name="status" formatted="false">Status</string>
+    <string name="side" formatted="false">Smjer</string>
+    <string name="open" formatted="false">Open</string>
+    <string name="high" formatted="false">High</string>
+    <string name="low" formatted="false">Low</string>
+    <string name="close" formatted="false">Close</string>
+    <string name="volume" formatted="false">Volumen</string>
+    <string name="timeframe" formatted="false">Interval</string>
+    <string name="no_candles" formatted="false">Još nema svijeća</string>
+    <string name="backend_warning" formatted="false">Promjena backenda odjavit će vas i obrisati lokalno stanje aplikacije. Morat ćete se ponovno prijaviti na novom URL-u.</string>
+    <string name="home" formatted="false">Početna</string>
+    <string name="alerts" formatted="false">Upozorenja</string>
+    <string name="settings" formatted="false">Postavke</string>
+    <string name="save" formatted="false">Spremi</string>
+    <string name="refresh" formatted="false">Refresh</string>
+    <string name="exchange" formatted="false">Burza</string>
+    <string name="load_market" formatted="false">Load candles</string>
+    <string name="empty" formatted="false">No records available.</string>
+    <string name="snapshot_note" formatted="false">Snapshot data. Refresh to retrieve the latest available records.</string>
+    <string name="chart_description" formatted="false">Historical candle chart. Exact values are listed below.</string>
+    <string name="error_origin" formatted="false">Enter a valid HTTPS backend origin.</string>
+    <string name="error_credentials" formatted="false">The username or password is incorrect.</string>
+    <string name="error_session" formatted="false">Your session expired. Please sign in again.</string>
+    <string name="error_network" formatted="false">Could not reach the backend. Check your connection and try again.</string>
+    <string name="error_service" formatted="false">The backend could not complete this request. Please try again.</string>
+    <string name="error_unknown" formatted="false">Something went wrong. Please try again.</string>
+    <string name="dismiss" formatted="false">Odbaci</string>
+    <string name="paper" formatted="false">Demo</string>
+    <string name="safety_critical" formatted="false">Safety critical</string>
+    <string name="snapshot_limit" formatted="false">This view shows current positions and up to 100 recent orders and alerts; it is not a complete history.</string>
+    <string name="chart_window" formatted="false">The chart shows the last 100 retrieved candles.</string>
+    <string name="local_network_explanation" formatted="false">For a backend on your local network, allow local network access before signing in. Public internet backends do not need this permission.</string>
+    <string name="local_network_allow" formatted="false">Allow local network</string>
+    <string name="local_network_settings" formatted="false">Open app settings</string>
+    <string name="order_new" formatted="false">New Order</string>
+    <string name="order_entry" formatted="false">New Manual Order</string>
+    <string name="order_confirm" formatted="false">Confirm Order</string>
+    <string name="order_quantity" formatted="false">Količina</string>
+    <string name="order_type" formatted="false">Order Type</string>
+    <string name="order_stop_price" formatted="false">Stop Price</string>
+    <string name="order_mode" formatted="false">Način</string>
+    <string name="order_buy" formatted="false">Kupnja</string>
+    <string name="order_sell" formatted="false">Prodaja</string>
+    <string name="order_market" formatted="false">Tržišni</string>
+    <string name="order_limit" formatted="false">Limit</string>
+    <string name="order_stop" formatted="false">Stop</string>
+    <string name="order_stop_limit" formatted="false">Stop Limit</string>
+    <string name="order_live" formatted="false">Live</string>
+    <string name="order_review" formatted="false">Review Order</string>
+    <string name="order_back" formatted="false">Back</string>
+    <string name="order_submit" formatted="false">Confirm Order</string>
+    <string name="order_submitting" formatted="false">Submitting…</string>
+    <string name="order_leverage" formatted="false">Poluga</string>
+    <string name="order_reduce_only" formatted="false">Reduce Only</string>
+    <string name="order_observation_only" formatted="false">This instrument is observation-only — place orders on an execution-capable instrument.</string>
+    <string name="order_unknown_instrument" formatted="false">This instrument is not recognised. Reload the list and try again.</string>
+    <string name="order_caps_violation" formatted="false">This order would exceed your account safety caps. Review your risk settings and retry.</string>
+    <string name="order_rejected" formatted="false">Order creation failed</string>
+    <string name="order_cancel_title" formatted="false">Otkazati nalog?</string>
+    <string name="order_cancel_confirm" formatted="false">Otkaži nalog</string>
+    <string name="order_keep_open" formatted="false">Ostavi otvoreno</string>
+    <string name="order_select_wallet" formatted="false">Select a wallet on Home before placing an order.</string>
+    <string name="order_created" formatted="false">Order submitted. Refresh to check execution status.</string>
+    <string name="order_cancel_requested" formatted="false">Cancellation requested. Refresh to check the order status.</string>
+    <string name="order_unknown_outcome" formatted="false">The request outcome is unknown. Check status before taking further action.</string>
+    <string name="order_check_status" formatted="false">Check status</string>
+    <string name="order_retry_intent" formatted="false">Retry same order</string>
+    <string name="order_catalog_error" formatted="false">Could not load exchanges or instruments. Try again.</string>
+    <string name="order_no_instruments" formatted="false">No instruments available for this exchange.</string>
+    <string name="order_invalid_form" formatted="false">Enter positive quantities and required prices. Optional leverage must be a positive whole number.</string>
+    <string name="order_refresh_failed" formatted="false">The request was accepted, but the latest records could not be loaded. Refresh to check status.</string>
+    <string name="order_forbidden" formatted="false">You no longer have permission for this action.</string>
+    <string name="order_session_changed" formatted="false">The session or wallet changed. Open a new order from the current account.</string>
+    <string name="order_enabled" formatted="false">Omogućeno</string>
+    <string name="order_disabled" formatted="false">Onemogućeno</string>
+    <string name="system_tools" formatted="false">Overview</string>
+    <string name="desk_attach_button" formatted="false">Dodaj promatrača</string>
+    <string name="desk_attach_desk_label" formatted="false">Desk</string>
+    <string name="desk_nav_title" formatted="false">Moji deskovi</string>
+    <string name="desk_primary_badge" formatted="false">Primarni</string>
+    <string name="desk_attach_username_placeholder" formatted="false">Točno korisničko ime promatrača</string>
+    <string name="desk_attach_validation_username" formatted="false">Unesite korisničko ime promatrača.</string>
+    <string name="desk_description_unavailable" formatted="false">Opis nije naveden.</string>
+    <string name="desk_attach_help" formatted="false">Unesite točno korisničko ime promatrača. Novi desk bit će dostupan tek nakon što se promatrač odjavi i ponovno prijavi.</string>
+    <string name="desk_attach_success_message" formatted="false">Promatrač se mora odjaviti i ponovno prijaviti kako bi novi desk bio dostupan.</string>
+    <string name="desk_empty_message" formatted="false">Vaš račun nije pridružen nijednom desku.</string>
+    <string name="desk_load_error" formatted="false">Deskove nije moguće učitati. Pokušajte ponovno.</string>
+    <string name="settings_account_email" formatted="false">E-pošta</string>
+    <string name="settings_account_role">Uloga: %1$s</string>
+    <string name="settings_app_info_version" formatted="false">Verzija</string>
+    <string name="settings_app_info_build" formatted="false">Izdanje</string>
+    <string name="settings_logout_confirm_title" formatted="false">Odjaviti se?</string>
+    <string name="settings_logout_confirm_message" formatted="false">Jeste li sigurni da se želite odjaviti?</string>
+    <string name="settings_connection_change_backend_title" formatted="false">Promijeniti backend?</string>
+    <string name="settings_connection_change_backend_message" formatted="false">Promjena backenda odjavit će vas i obrisati lokalno stanje aplikacije. Morat ćete se ponovno prijaviti na novom URL-u.</string>
+    <string name="common_continue" formatted="false">Nastavi</string>
+    <string name="backend_url_cancel" formatted="false">Cancel</string>
+    <string name="market_search" formatted="false">Pretraži instrumente</string>
+    <string name="market_view_only" formatted="false">Samo pregled</string>
+    <string name="market_catalog_retry" formatted="false">Pokušaj ponovo</string>
+    <string name="market_picker_close" formatted="false">Cancel</string>
+    <string name="market_no_matches" formatted="false">\@string/empty</string>
+    <string name="market_catalog_error" formatted="false">\@string/error_unknown</string>
+    <string name="system_health" formatted="false">Stanje sustava</string>
+    <string name="system_strategies" formatted="false">Strategije</string>
+    <string name="system_backtests" formatted="false">Backtestovi</string>
+    <string name="system_users" formatted="false">Korisnici</string>
+    <string name="system_delegates" formatted="false">AI delegati</string>
+    <string name="system_version" formatted="false">Verzija</string>
+    <string name="system_connections" formatted="false">Aktivne veze</string>
+    <string name="system_subscribers" formatted="false">ZMQ pretplatnici</string>
+    <string name="system_tasks" formatted="false">Zadaci pretplatnika</string>
+    <string name="system_topics" formatted="false">Aktivne teme</string>
+    <string name="system_clients" formatted="false">Aktivni klijenti</string>
+    <string name="system_gaps" formatted="false">Otkrivene praznine</string>
+    <string name="system_resets" formatted="false">Poništavanja sesije</string>
+    <string name="system_duplicates" formatted="false">Duplikati</string>
+    <string name="system_joins" formatted="false">Priključivanja usred toka</string>
+    <string name="system_unstamped" formatted="false">Odbijeno (bez pečata)</string>
+    <string name="system_rest_clients" formatted="false">Praćeni REST klijenti</string>
+    <string name="system_initial_cash" formatted="false">Početni kapital</string>
+    <string name="system_period" formatted="false">Razdoblje</string>
+    <string name="system_created" formatted="false">Kreirano</string>
+    <string name="system_max_orders" formatted="false">Maks. otvoreni nalozi</string>
+    <string name="system_max_daily" formatted="false">Maks. USD dnevno</string>
+    <string name="system_default" formatted="false">Zadano</string>
+    <string name="system_trader" formatted="false">Status tradera</string>
+    <string name="system_running" formatted="false">U tijeku</string>
+    <string name="system_stopped" formatted="false">Zaustavljeno</string>
+    <string name="system_mode" formatted="false">Način</string>
+    <string name="system_autostart" formatted="false">Automatsko pokretanje</string>
+    <string name="system_active" formatted="false">Aktivan</string>
+    <string name="system_inactive" formatted="false">Neaktivan</string>
+    <string name="system_revoked" formatted="false">Opozvano</string>
+    <string name="records_open" formatted="false">Open</string>
+    <string name="records_recent" formatted="false">Nedavni</string>
+    <string name="records_fills" formatted="false">Izvršenja</string>
+    <string name="records_refresh" formatted="false">Refresh</string>
+    <string name="records_fee" formatted="false">Fee</string>
+    <string name="records_details" formatted="false">Details</string>
+    <string name="records_hide_details" formatted="false">\@string/close</string>
+    <string name="records_thread" formatted="false">Nit</string>
+    <string name="records_source_topic" formatted="false">Tema izvora</string>
+    <string name="notification_defaults_title" formatted="false">Zadane postavke korisnika</string>
+    <string name="notification_defaults_footer" formatted="false">Zadane postavke primjenjuju se kad nijedna iznimka uređaja ne odgovara dolaznom upozorenju.</string>
+    <string name="notification_defaults_enabled" formatted="false">Omogućeno</string>
+    <string name="notification_defaults_priority" formatted="false">Minimalni prioritet</string>
+    <string name="notification_defaults_load_failed" formatted="false">Učitavanje postavki nije uspjelo</string>
+    <string name="notification_defaults_save_failed" formatted="false">Spremanje postavki nije uspjelo</string>
+    <string name="notification_defaults_low" formatted="false">Low</string>
+    <string name="notification_defaults_medium" formatted="false">Srednji</string>
+    <string name="notification_defaults_high" formatted="false">High</string>
+    <string name="notification_defaults_fill" formatted="false">Nalog izvršen</string>
+    <string name="notification_defaults_rejected" formatted="false">Nalog odbijen</string>
+    <string name="notification_defaults_stop" formatted="false">Stop-loss aktiviran</string>
+    <string name="notification_defaults_margin" formatted="false">Upozorenje o marži</string>
+    <string name="notification_defaults_system" formatted="false">Greška sustava</string>
+    <string name="notification_defaults_saved" formatted="false">OK</string>
+    <string name="signals_title" formatted="false">Signali</string>
+    <string name="signals_strength" formatted="false">Snaga</string>
+    <string name="signals_price" formatted="false">Cijena</string>
+    <string name="signals_reason" formatted="false">Razlog:</string>
+    <string name="signals_strong" formatted="false">Jak</string>
+    <string name="signals_medium" formatted="false">Srednji</string>
+    <string name="signals_weak" formatted="false">Slab</string>
+    <string name="signals_very_weak" formatted="false">Vrlo slab</string>
+    <string name="signals_total" formatted="false">Ukupno</string>
+    <string name="signals_buy" formatted="false">Kupnja</string>
+    <string name="signals_sell" formatted="false">Prodaja</string>
+    <string name="signals_average_strength" formatted="false">Pros. snaga</string>
+    <string name="signals_filter" formatted="false">Filtriraj po strategiji</string>
+    <string name="signals_all_strategies" formatted="false">Sve strategije</string>
+    <string name="signals_empty" formatted="false">Nijedan trgovinski signal ne odgovara vašim trenutnim filtrima.</string>
+    <string name="signals_export" formatted="false">Izvezi</string>
+    <string name="signals_export_failed" formatted="false">Slanje nije uspjelo</string>
+    <string name="venue_accounts_title" formatted="false">Računi na burzi</string>
+    <string name="venue_accounts_refresh" formatted="false">Refresh</string>
+    <string name="venue_accounts_failed" formatted="false">Stanje računa na burzi nije moguće učitati. Račun nije prazan; podaci su trenutačno nedostupni.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Pouzdani podaci burze u stvarnom vremenu, zabilježeni tijekom razdoblja valjanosti.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Redci koji nisu označeni kao Živo prikazuju stare, simulirane ili nedostupne podatke — nikad nisu mjerodavna stanja burze u stvarnom vremenu.</string>
+    <string name="venue_accounts_valuation" formatted="false">Valuation</string>
+    <string name="venue_accounts_balances" formatted="false">Salda</string>
+    <string name="venue_accounts_observed" formatted="false">Observed at</string>
+    <string name="venue_accounts_source" formatted="false">Source observation</string>
+    <string name="venue_accounts_total" formatted="false">Ukupno</string>
+    <string name="venue_accounts_free" formatted="false">Slobodno</string>
+    <string name="venue_accounts_used" formatted="false">Korišteno</string>
+    <string name="venue_accounts_numeric_source" formatted="false">Numeric provenance</string>
+    <string name="venue_accounts_positions" formatted="false">Otvorene pozicije</string>
+    <string name="venue_accounts_funding" formatted="false">Financiranje</string>
+    <string name="venue_accounts_reconciliation" formatted="false">Reconciliation status</string>
+    <string name="venue_accounts_evaluation" formatted="false">Evaluation status</string>
+    <string name="venue_accounts_deadline" formatted="false">Authority deadline</string>
+    <string name="positions_timeline_controls_window" formatted="false">Vremenski raspon</string>
+    <string name="positions_timeline_controls_granularity" formatted="false">Razlučivost</string>
+    <string name="positions_timeline_controls_valuationcurrency" formatted="false">Valuta vrednovanja</string>
+    <string name="positions_timeline_controls_last24hours" formatted="false">Posljednja 24 sata</string>
+    <string name="positions_timeline_controls_last7days" formatted="false">Posljednjih 7 dana</string>
+    <string name="positions_timeline_controls_last30days" formatted="false">Posljednjih 30 dana</string>
+    <string name="positions_timeline_controls_last90days" formatted="false">Posljednjih 90 dana</string>
+    <string name="positions_timeline_error_title" formatted="false">Nije moguće učitati vremenski prikaz P&amp;L-a</string>
+    <string name="positions_timeline_empty_message" formatted="false">Za ovaj vremenski raspon nema dostupnih točaka P&amp;L-a.</string>
+    <string name="positions_timeline_nowallet_message" formatted="false">Odaberite novčanik za prikaz njegova P&amp;L-a kroz vrijeme.</string>
+    <string name="positions_timeline_incompleteness_title" formatted="false">Zašto su točke nepotpune</string>
+    <string name="positions_timeline_incompleteness_description" formatted="false">Razlozi se odnose na cijeli učitani vremenski raspon. Brojevi se mogu preklapati ako točka ima više uzroka.</string>
+    <string name="positions_timeline_incompleteness_affectedpoints">Affected points: %1$s</string>
+    <string name="positions_timeline_chart_title" formatted="false">P&amp;L kroz vrijeme</string>
+    <string name="positions_timeline_chart_net" formatted="false">Neto P&amp;L</string>
+    <string name="positions_timeline_chart_realized" formatted="false">Realizirani P&amp;L</string>
+    <string name="positions_timeline_chart_unrealized" formatted="false">Nerealizirani P&amp;L</string>
+    <string name="positions_timeline_attribution_title" formatted="false">Najnovija atribucija P&amp;L-a</string>
+    <string name="positions_timeline_attribution_nostrategy" formatted="false">Nema dokazano povezane strategije</string>
+    <string name="positions_timeline_attribution_withheld" formatted="false">Nije dokazano</string>
+    <string name="positions_timeline_attribution_valuesemantics" formatted="false">Prikazana nula je dokazana vrijednost. „Nije dokazano” znači da vrijednost nije bilo moguće dokazati.</string>
+    <string name="positions_timeline_contributions_title" formatted="false">Najnoviji doprinosi po instrumentu</string>
+    <string name="positions_timeline_contributions_realized" formatted="false">Realizirani P&amp;L</string>
+    <string name="positions_timeline_contributions_fees" formatted="false">Naknade</string>
+    <string name="positions_timeline_contributions_accrual" formatted="false">Akumulirana naknada za financiranje</string>
+    <string name="positions_timeline_contributions_unrealized" formatted="false">Nerealizirani P&amp;L</string>
+    <string name="positions_timeline_incompleteness_reasons_scope_order_regression" formatted="false">Regresija redoslijeda opsega</string>
+    <string name="positions_timeline_incompleteness_reasons_before_activation" formatted="false">Točka prethodi aktivaciji</string>
+    <string name="positions_timeline_incompleteness_reasons_activation_baseline_non_finite" formatted="false">Aktivacijska osnovica nije konačan broj</string>
+    <string name="positions_timeline_incompleteness_reasons_fill_evidence_gap" formatted="false">Nedostaje trajno pohranjen dokaz o izvršenju</string>
+    <string name="positions_timeline_incompleteness_reasons_seed_quantity_non_finite" formatted="false">Početna količina nije konačan broj</string>
+    <string name="positions_timeline_incompleteness_reasons_cost_basis_unavailable" formatted="false">Troškovna osnovica nije dostupna</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_provenance_unproven" formatted="false">Podrijetlo cijene izvršenja nije dokazano</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_size_invalid" formatted="false">Veličina izvršenja nije valjana</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_invalid" formatted="false">Cijena izvršenja nije valjana</string>
+    <string name="positions_timeline_incompleteness_reasons_fx_conversion_unproven" formatted="false">FX konverzija nije dokazana</string>
+    <string name="positions_timeline_incompleteness_reasons_mark_unavailable" formatted="false">Referentna cijena nije dostupna</string>
+    <string name="positions_timeline_incompleteness_reasons_cumulative_non_finite" formatted="false">Kumulativna vrijednost nije konačan broj</string>
+    <string name="positions_timeline_incompleteness_reasons_unrealized_non_finite" formatted="false">Nerealizirani P&amp;L nije konačan broj</string>
+    <string name="positions_timeline_incompleteness_reasons_net_non_finite" formatted="false">Neto P&amp;L nije konačan broj</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_value_non_finite" formatted="false">Vrijednost atribucije nije konačan broj</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">Usklađivanje atribucije nije uspjelo</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">Usklađivanje zbrojeva P&amp;L-a po instrumentima s ukupnim P&amp;L-om nije uspjelo</string>
+    <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">Zakašnjelo izvršenje naloga s vremenskom oznakom prije aktivacije</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Attribution sum is not representable</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Instrument sum is not representable</string>
+    <string name="positions_timeline_executionhistory_title" formatted="false">Operator-corrected execution history</string>
+    <string name="positions_timeline_executionhistory_summary" formatted="false">An operator repudiated recorded executions in this scope. Every correction listed here is excluded from the figures on this page.</string>
+    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Repudiated execution</string>
+    <string name="positions_timeline_executionhistory_correctionid" formatted="false">Correction record</string>
+    <string name="positions_timeline_equity_title" formatted="false">Equity overlay</string>
+    <string name="positions_timeline_equity_serieslabel" formatted="false">Kapital</string>
+    <string name="positions_timeline_equity_drawdown_current" formatted="false">Current drawdown</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Spot venue only — balances held on other venues are excluded.</string>
+    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">External deposits and withdrawals are not adjusted out.</string>
+    <string name="positions_timeline_equity_honesty_restatedfrom">These figures are restated from %1$s at each minute\'s close, not sampled natively in this currency.</string>
+    <string name="positions_timeline_equity_honesty_pricedon">Priced on %1$s.</string>
+    <string name="positions_timeline_equity_honesty_conversionwithheld">Minutes dropped for want of a proven close: %1$s.</string>
+    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Drawdown is withheld on a converted basis, because the running peak is tracked in the sampled currency.</string>
+    <string name="positions_timeline_equity_cashposition_position" formatted="false">Position value</string>
+    <string name="positions_timeline_equity_cashposition_cash" formatted="false">Cash</string>
+    <string name="pnl_provenance">Calculation: %1$s · Mark source: %2$s · As of: %3$s</string>
+    <string name="pnl_equity_coverage">Equity sampled: %1$s · Complete minutes: %2$s</string>
+    <string name="pnl_execution_history">Execution history: %1$s</string>
+    <string name="process_title" formatted="false">Procesi</string>
+    <string name="process_running" formatted="false">U tijeku</string>
+    <string name="process_stopped" formatted="false">Zaustavljeno</string>
+    <string name="process_feeds" formatted="false">Tokovi</string>
+    <string name="process_strategies" formatted="false">Strategije</string>
+    <string name="process_executors" formatted="false">Izvršitelji</string>
+    <string name="process_brokers" formatted="false">Brokeri</string>
+    <string name="process_memory" formatted="false">Memorija</string>
+    <string name="process_cpu" formatted="false">CPU</string>
+    <string name="process_empty" formatted="false">Nema konfiguriranih procesa.</string>
+    <string name="process_start" formatted="false">Pokreni</string>
+    <string name="process_stop" formatted="false">Stop</string>
+    <string name="process_restart" formatted="false">Ponovno pokreni</string>
+    <string name="process_cancel" formatted="false">Cancel</string>
+    <string name="process_stale" formatted="false">Ovim se procesom više ne može upravljati odavde. Osvježite podatke i pokušajte ponovno.</string>
+    <string name="process_partial" formatted="false">Proces je zaustavljen, ali ga više nije moguće ponovno pokrenuti odavde. Osvježite podatke i pokušajte ponovno.</string>
+    <string name="process_confirm" formatted="false">Confirm process action</string>
+    <string name="process_confirm_message" formatted="false">Apply this action to the selected process?</string>
+    <string name="process_intent_saved" formatted="false">Desired state saved. The owning coordinator will apply it.</string>
+    <string name="process_accepted" formatted="false">Process action accepted.</string>
+    <string name="process_unknown" formatted="false">The command outcome is unknown. Controls remain locked: a status refresh cannot prove whether this command was applied.</string>
+    <string name="process_partial_unknown" formatted="false">The process was stopped, but the restart outcome is unknown. Controls remain locked: a status refresh cannot prove whether the restart was applied.</string>
+    <string name="process_rejected" formatted="false">The process action failed.</string>
+    <string name="process_load_failed" formatted="false">Could not refresh process status.</string>
+    <string name="process_config_failed" formatted="false">Process controls are unavailable because configuration could not be refreshed.</string>
+    <string name="process_enable" formatted="false">Enable</string>
+    <string name="process_disable" formatted="false">Disable</string>
+    <string name="ai_reviews_pending_title" formatted="false">Pregledi na čekanju</string>
+    <string name="ai_reviews_decisions_title" formatted="false">AI odluke</string>
+    <string name="ai_reviews_deadline" formatted="false">Rok</string>
+    <string name="ai_reviews_expired" formatted="false">Istekao</string>
+    <string name="ai_reviews_rationale" formatted="false">Obrazloženje</string>
+    <string name="ai_reviews_rationale_long">Obrazloženje je predugačko (ograničenje je %1$d znakova).</string>
+    <string name="ai_reviews_approve" formatted="false">Odobri</string>
+    <string name="ai_reviews_reject" formatted="false">Odbij</string>
+    <string name="ai_reviews_pending" formatted="false">Na čekanju</string>
+    <string name="ai_reviews_superseded" formatted="false">Povučen</string>
+    <string name="ai_reviews_decided" formatted="false">Odlučeno</string>
+    <string name="ai_reviews_reject_message" formatted="false">Odbijanjem se ulaže veto na trgovinu zbog koje je ovaj pregled otvoren. Ne može se poništiti.</string>
+    <string name="ai_reviews_cancel" formatted="false">Cancel</string>
+    <string name="ai_reviews_peer_resolved" formatted="false">Drugi delegat već je riješio ovaj pregled.</string>
+    <string name="ai_reviews_expired_message" formatted="false">Ovaj pregled prekoračio je rok i istekao.</string>
+    <string name="ai_reviews_missing" formatted="false">Ovaj pregled više ne postoji.</string>
+    <string name="ai_reviews_denied" formatted="false">Vaš delegatski pristup se promijenio. Ponovno učitajte prije odluke.</string>
+    <string name="ai_reviews_load_failed" formatted="false">Could not refresh reviews. Previously loaded reviews remain visible.</string>
+    <string name="ai_reviews_check_status" formatted="false">Check status</string>
+    <string name="ai_reviews_retry" formatted="false">Retry original decision</string>
+    <string name="ai_reviews_confirm" formatted="false">Confirm review decision</string>
+    <string name="ai_reviews_accepted" formatted="false">Decision accepted</string>
+    <string name="ai_reviews_rejected" formatted="false">Decision rejected by the server</string>
+    <string name="ai_reviews_unknown" formatted="false">Outcome unknown. Check status before retrying.</string>
+    <string name="positions_accessibility_label_closebutton" formatted="false">Zatvori poziciju</string>
+    <string name="positions_accessibility_label_reducebutton" formatted="false">Smanji poziciju</string>
+    <string name="positions_reduce_cancel" formatted="false">Cancel</string>
+    <string name="positions_reduce_footer" formatted="false">100% zatvara poziciju. Šalje reduce-only tržišni nalog na suprotnu stranu.</string>
+    <string name="positions_reduce_sizelabel" formatted="false">Veličina smanjenja</string>
+    <string name="trading_bracket_attach" formatted="false">Dodaj SL / TP</string>
+    <string name="trading_bracket_stoplosslabel" formatted="false">Stop loss</string>
+    <string name="trading_bracket_takeprofitlabel" formatted="false">Take profit</string>
+    <string name="trading_trailingstop_attach" formatted="false">Dodaj trailing stop</string>
+    <string name="trading_trailingstop_trailamountlabel" formatted="false">Iznos pomaka</string>
+    <string name="position_action_review" formatted="false">Review position action</string>
+    <string name="position_action_confirm" formatted="false">Confirm action</string>
+    <string name="position_action_accepted" formatted="false">Request accepted. Refresh to check execution status.</string>
+    <string name="position_action_retry" formatted="false">Retry same request</string>
+    <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
+    <string name="position_action_cycle" formatted="false">Position cycle</string>
+    <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+</resources>

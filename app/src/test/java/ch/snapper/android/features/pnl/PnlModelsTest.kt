@@ -17,10 +17,10 @@ class PnlModelsTest {
           "incompleteness_reasons":[{"reason":"mark_unavailable","withholding_tier":"mark_incomplete","withholding_scope":"instrument","trigger_instrument_public_id":"i1"}],
           "per_instrument":[],"attribution":[]
         }""")
-        assertEquals(BigDecimal("0.123456789012345678901"), point.realized_pnl)
-        assertEquals(BigDecimal.ZERO, point.fee_pnl)
-        assertNull(point.net_pnl)
+        assertEquals(BigDecimal("0.123456789012345678901"), point.realizedPnl)
+        assertEquals(BigDecimal.ZERO, point.feePnl)
+        assertNull(point.netPnl)
         assertNull(point.equity)
-        assertEquals("i1", point.incompleteness_reasons.single().trigger_instrument_public_id)
+        assertEquals("i1", point.incompletenessReasons.single().triggerInstrumentPublicId)
     }
 }

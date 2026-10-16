@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="privacy_policy" formatted="false">Privacy policy</string>
+    <string name="username" formatted="false">Kullanıcı adı</string>
+    <string name="password" formatted="false">Parola</string>
+    <string name="sign_in" formatted="false">Giriş yap</string>
+    <string name="session_retention_notice" formatted="false">Staying signed in requires Android 11+, a secure screen lock, and authentication with your PIN, pattern, password or strong biometrics within the last 5 minutes. Otherwise, sign in again after the app restarts.</string>
+    <string name="subtitle" formatted="false">Alım satım platformu</string>
+    <string name="backend" formatted="false">Özel sunucu URL\'si</string>
+    <string name="language" formatted="false">Dil</string>
+    <string name="logout" formatted="false">Çıkış yap</string>
+    <string name="positions" formatted="false">Pozisyonlar</string>
+    <string name="orders" formatted="false">Emirler</string>
+    <string name="market" formatted="false">Piyasa verileri</string>
+    <string name="wallet" formatted="false">Cüzdan</string>
+    <string name="all_wallets" formatted="false">Tüm cüzdanlar</string>
+    <string name="retry" formatted="false">Yeniden dene</string>
+    <string name="loading" formatted="false">Yükleniyor…</string>
+    <string name="size" formatted="false">Büyüklük</string>
+    <string name="average_price" formatted="false">Ortalama fiyat</string>
+    <string name="mark_price" formatted="false">Mark fiyatı</string>
+    <string name="pnl" formatted="false">Gerçekleşmemiş PnL</string>
+    <string name="instrument" formatted="false">Enstrüman</string>
+    <string name="price" formatted="false">Fiyat</string>
+    <string name="filled" formatted="false">Filled</string>
+    <string name="status" formatted="false">Durum</string>
+    <string name="side" formatted="false">Yön</string>
+    <string name="open" formatted="false">Open</string>
+    <string name="high" formatted="false">High</string>
+    <string name="low" formatted="false">Low</string>
+    <string name="close" formatted="false">Close</string>
+    <string name="volume" formatted="false">Hacim</string>
+    <string name="timeframe" formatted="false">Zaman aralığı</string>
+    <string name="no_candles" formatted="false">Henüz mum yok</string>
+    <string name="backend_warning" formatted="false">Sunucu değiştirildiğinde oturumunuz kapatılır ve yerel uygulama durumu temizlenir. Yeni URL\'de tekrar giriş yapmanız gerekir.</string>
+    <string name="home" formatted="false">Ana sayfa</string>
+    <string name="alerts" formatted="false">Uyarılar</string>
+    <string name="settings" formatted="false">Ayarlar</string>
+    <string name="save" formatted="false">Kaydet</string>
+    <string name="refresh" formatted="false">Refresh</string>
+    <string name="exchange" formatted="false">Borsa</string>
+    <string name="load_market" formatted="false">Load candles</string>
+    <string name="empty" formatted="false">No records available.</string>
+    <string name="snapshot_note" formatted="false">Snapshot data. Refresh to retrieve the latest available records.</string>
+    <string name="chart_description" formatted="false">Historical candle chart. Exact values are listed below.</string>
+    <string name="error_origin" formatted="false">Enter a valid HTTPS backend origin.</string>
+    <string name="error_credentials" formatted="false">The username or password is incorrect.</string>
+    <string name="error_session" formatted="false">Your session expired. Please sign in again.</string>
+    <string name="error_network" formatted="false">Could not reach the backend. Check your connection and try again.</string>
+    <string name="error_service" formatted="false">The backend could not complete this request. Please try again.</string>
+    <string name="error_unknown" formatted="false">Something went wrong. Please try again.</string>
+    <string name="dismiss" formatted="false">Kapat</string>
+    <string name="paper" formatted="false">Demo</string>
+    <string name="safety_critical" formatted="false">Safety critical</string>
+    <string name="snapshot_limit" formatted="false">This view shows current positions and up to 100 recent orders and alerts; it is not a complete history.</string>
+    <string name="chart_window" formatted="false">The chart shows the last 100 retrieved candles.</string>
+    <string name="local_network_explanation" formatted="false">For a backend on your local network, allow local network access before signing in. Public internet backends do not need this permission.</string>
+    <string name="local_network_allow" formatted="false">Allow local network</string>
+    <string name="local_network_settings" formatted="false">Open app settings</string>
+    <string name="order_new" formatted="false">New Order</string>
+    <string name="order_entry" formatted="false">New Manual Order</string>
+    <string name="order_confirm" formatted="false">Confirm Order</string>
+    <string name="order_quantity" formatted="false">Miktar</string>
+    <string name="order_type" formatted="false">Order Type</string>
+    <string name="order_stop_price" formatted="false">Stop Price</string>
+    <string name="order_mode" formatted="false">Mod</string>
+    <string name="order_buy" formatted="false">Al</string>
+    <string name="order_sell" formatted="false">Sat</string>
+    <string name="order_market" formatted="false">Piyasa</string>
+    <string name="order_limit" formatted="false">Limit</string>
+    <string name="order_stop" formatted="false">Stop</string>
+    <string name="order_stop_limit" formatted="false">Stop Limit</string>
+    <string name="order_live" formatted="false">Live</string>
+    <string name="order_review" formatted="false">Review Order</string>
+    <string name="order_back" formatted="false">Back</string>
+    <string name="order_submit" formatted="false">Confirm Order</string>
+    <string name="order_submitting" formatted="false">Submitting…</string>
+    <string name="order_leverage" formatted="false">Kaldıraç</string>
+    <string name="order_reduce_only" formatted="false">Reduce Only</string>
+    <string name="order_observation_only" formatted="false">This instrument is observation-only — place orders on an execution-capable instrument.</string>
+    <string name="order_unknown_instrument" formatted="false">This instrument is not recognised. Reload the list and try again.</string>
+    <string name="order_caps_violation" formatted="false">This order would exceed your account safety caps. Review your risk settings and retry.</string>
+    <string name="order_rejected" formatted="false">Order creation failed</string>
+    <string name="order_cancel_title" formatted="false">Emir iptal edilsin mi?</string>
+    <string name="order_cancel_confirm" formatted="false">Emri iptal et</string>
+    <string name="order_keep_open" formatted="false">Açık bırak</string>
+    <string name="order_select_wallet" formatted="false">Select a wallet on Home before placing an order.</string>
+    <string name="order_created" formatted="false">Order submitted. Refresh to check execution status.</string>
+    <string name="order_cancel_requested" formatted="false">Cancellation requested. Refresh to check the order status.</string>
+    <string name="order_unknown_outcome" formatted="false">The request outcome is unknown. Check status before taking further action.</string>
+    <string name="order_check_status" formatted="false">Check status</string>
+    <string name="order_retry_intent" formatted="false">Retry same order</string>
+    <string name="order_catalog_error" formatted="false">Could not load exchanges or instruments. Try again.</string>
+    <string name="order_no_instruments" formatted="false">No instruments available for this exchange.</string>
+    <string name="order_invalid_form" formatted="false">Enter positive quantities and required prices. Optional leverage must be a positive whole number.</string>
+    <string name="order_refresh_failed" formatted="false">The request was accepted, but the latest records could not be loaded. Refresh to check status.</string>
+    <string name="order_forbidden" formatted="false">You no longer have permission for this action.</string>
+    <string name="order_session_changed" formatted="false">The session or wallet changed. Open a new order from the current account.</string>
+    <string name="order_enabled" formatted="false">Etkin</string>
+    <string name="order_disabled" formatted="false">Devre dışı</string>
+    <string name="system_tools" formatted="false">Overview</string>
+    <string name="desk_attach_button" formatted="false">İzleyici ekle</string>
+    <string name="desk_attach_desk_label" formatted="false">Masa</string>
+    <string name="desk_nav_title" formatted="false">Masalarım</string>
+    <string name="desk_primary_badge" formatted="false">Birincil</string>
+    <string name="desk_attach_username_placeholder" formatted="false">İzleyicinin tam kullanıcı adı</string>
+    <string name="desk_attach_validation_username" formatted="false">Bir izleyici kullanıcı adı girin.</string>
+    <string name="desk_description_unavailable" formatted="false">Açıklama sağlanmadı.</string>
+    <string name="desk_attach_help" formatted="false">İzleyicinin tam kullanıcı adını girin. Yeni masa ancak izleyici çıkış yapıp tekrar giriş yaptıktan sonra kullanılabilir.</string>
+    <string name="desk_attach_success_message" formatted="false">İzleyici, yeni masaya erişmek için çıkış yapıp tekrar giriş yapmalıdır.</string>
+    <string name="desk_empty_message" formatted="false">Hesabınız hiçbir masaya bağlı değil.</string>
+    <string name="desk_load_error" formatted="false">Masalar yüklenemedi. Tekrar deneyin.</string>
+    <string name="settings_account_email" formatted="false">E-posta</string>
+    <string name="settings_account_role">Rol: %1$s</string>
+    <string name="settings_app_info_version" formatted="false">Sürüm</string>
+    <string name="settings_app_info_build" formatted="false">Derleme</string>
+    <string name="settings_logout_confirm_title" formatted="false">Çıkış yapılsın mı?</string>
+    <string name="settings_logout_confirm_message" formatted="false">Çıkış yapmak istediğinizden emin misiniz?</string>
+    <string name="settings_connection_change_backend_title" formatted="false">Sunucu değiştirilsin mi?</string>
+    <string name="settings_connection_change_backend_message" formatted="false">Sunucu değiştirildiğinde oturumunuz kapatılır ve yerel uygulama durumu temizlenir. Yeni URL\'de tekrar giriş yapmanız gerekir.</string>
+    <string name="common_continue" formatted="false">Devam et</string>
+    <string name="backend_url_cancel" formatted="false">İptal</string>
+    <string name="market_search" formatted="false">Enstrüman ara</string>
+    <string name="market_view_only" formatted="false">Yalnızca görüntüleme</string>
+    <string name="market_catalog_retry" formatted="false">Yeniden dene</string>
+    <string name="market_picker_close" formatted="false">İptal</string>
+    <string name="market_no_matches" formatted="false">\@string/empty</string>
+    <string name="market_catalog_error" formatted="false">\@string/error_unknown</string>
+    <string name="system_health" formatted="false">Sistem durumu</string>
+    <string name="system_strategies" formatted="false">Stratejiler</string>
+    <string name="system_backtests" formatted="false">Backtestler</string>
+    <string name="system_users" formatted="false">Kullanıcılar</string>
+    <string name="system_delegates" formatted="false">AI vekilleri</string>
+    <string name="system_version" formatted="false">Sürüm</string>
+    <string name="system_connections" formatted="false">Etkin bağlantılar</string>
+    <string name="system_subscribers" formatted="false">ZMQ aboneleri</string>
+    <string name="system_tasks" formatted="false">Abone görevleri</string>
+    <string name="system_topics" formatted="false">Etkin konular</string>
+    <string name="system_clients" formatted="false">Etkin istemciler</string>
+    <string name="system_gaps" formatted="false">Algılanan boşluklar</string>
+    <string name="system_resets" formatted="false">Oturum sıfırlamaları</string>
+    <string name="system_duplicates" formatted="false">Yinelenenler</string>
+    <string name="system_joins" formatted="false">Akış ortasında katılımlar</string>
+    <string name="system_unstamped" formatted="false">Reddedildi (damgasız)</string>
+    <string name="system_rest_clients" formatted="false">İzlenen REST istemcileri</string>
+    <string name="system_initial_cash" formatted="false">Başlangıç sermayesi</string>
+    <string name="system_period" formatted="false">Dönem</string>
+    <string name="system_created" formatted="false">Oluşturuldu</string>
+    <string name="system_max_orders" formatted="false">Maks. açık emirler</string>
+    <string name="system_max_daily" formatted="false">Maks. günlük USD</string>
+    <string name="system_default" formatted="false">Varsayılan</string>
+    <string name="system_trader" formatted="false">Yatırımcı durumu</string>
+    <string name="system_running" formatted="false">Çalışıyor</string>
+    <string name="system_stopped" formatted="false">Durduruldu</string>
+    <string name="system_mode" formatted="false">Mod</string>
+    <string name="system_autostart" formatted="false">Otomatik başlatma</string>
+    <string name="system_active" formatted="false">Etkin</string>
+    <string name="system_inactive" formatted="false">Devre dışı</string>
+    <string name="system_revoked" formatted="false">İptal edildi</string>
+    <string name="records_open" formatted="false">Open</string>
+    <string name="records_recent" formatted="false">Son</string>
+    <string name="records_fills" formatted="false">Gerçekleşmeler</string>
+    <string name="records_refresh" formatted="false">Refresh</string>
+    <string name="records_fee" formatted="false">Fee</string>
+    <string name="records_details" formatted="false">Details</string>
+    <string name="records_hide_details" formatted="false">\@string/close</string>
+    <string name="records_thread" formatted="false">Konu dizisi</string>
+    <string name="records_source_topic" formatted="false">Kaynak konu</string>
+    <string name="notification_defaults_title" formatted="false">Kullanıcı varsayılanları</string>
+    <string name="notification_defaults_footer" formatted="false">Varsayılanlar, gelen bir uyarıyla eşleşen cihaza özel ayar olmadığında uygulanır.</string>
+    <string name="notification_defaults_enabled" formatted="false">Etkin</string>
+    <string name="notification_defaults_priority" formatted="false">Minimum öncelik</string>
+    <string name="notification_defaults_load_failed" formatted="false">Tercihler yüklenemedi</string>
+    <string name="notification_defaults_save_failed" formatted="false">Tercihler kaydedilemedi</string>
+    <string name="notification_defaults_low" formatted="false">Low</string>
+    <string name="notification_defaults_medium" formatted="false">Orta</string>
+    <string name="notification_defaults_high" formatted="false">High</string>
+    <string name="notification_defaults_fill" formatted="false">Emir gerçekleşti</string>
+    <string name="notification_defaults_rejected" formatted="false">Emir reddedildi</string>
+    <string name="notification_defaults_stop" formatted="false">Zarar durdur tetiklendi</string>
+    <string name="notification_defaults_margin" formatted="false">Marjin uyarısı</string>
+    <string name="notification_defaults_system" formatted="false">Sistem hatası</string>
+    <string name="notification_defaults_saved" formatted="false">Tamam</string>
+    <string name="signals_title" formatted="false">Sinyaller</string>
+    <string name="signals_strength" formatted="false">Güç</string>
+    <string name="signals_price" formatted="false">Fiyat</string>
+    <string name="signals_reason" formatted="false">Neden:</string>
+    <string name="signals_strong" formatted="false">Güçlü</string>
+    <string name="signals_medium" formatted="false">Orta</string>
+    <string name="signals_weak" formatted="false">Zayıf</string>
+    <string name="signals_very_weak" formatted="false">Çok zayıf</string>
+    <string name="signals_total" formatted="false">Toplam</string>
+    <string name="signals_buy" formatted="false">Al</string>
+    <string name="signals_sell" formatted="false">Sat</string>
+    <string name="signals_average_strength" formatted="false">Ort. güç</string>
+    <string name="signals_filter" formatted="false">Stratejiye göre filtrele</string>
+    <string name="signals_all_strategies" formatted="false">Tüm Stratejiler</string>
+    <string name="signals_empty" formatted="false">Mevcut filtrelerinizle eşleşen işlem sinyali yok.</string>
+    <string name="signals_export" formatted="false">Dışa aktar</string>
+    <string name="signals_export_failed" formatted="false">Gönderim başarısız</string>
+    <string name="venue_accounts_title" formatted="false">Borsa Hesapları</string>
+    <string name="venue_accounts_refresh" formatted="false">Refresh</string>
+    <string name="venue_accounts_failed" formatted="false">Borsa hesabının durumu yüklenemedi. Hesap boş değil; veriler şu anda kullanılamıyor.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Geçerlilik süresi içinde alınmış güvenilir ve gerçek zamanlı borsa verileri.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Gerçek zamanlı olarak işaretlenmeyen satırlar son bilinen, simüle edilmiş veya kullanılamayan verileri gösterir — bunlar asla yetkili gerçek zamanlı borsa bakiyeleri değildir.</string>
+    <string name="venue_accounts_valuation" formatted="false">Valuation</string>
+    <string name="venue_accounts_balances" formatted="false">Bakiyeler</string>
+    <string name="venue_accounts_observed" formatted="false">Observed at</string>
+    <string name="venue_accounts_source" formatted="false">Source observation</string>
+    <string name="venue_accounts_total" formatted="false">Toplam</string>
+    <string name="venue_accounts_free" formatted="false">Serbest</string>
+    <string name="venue_accounts_used" formatted="false">Kullanılan</string>
+    <string name="venue_accounts_numeric_source" formatted="false">Numeric provenance</string>
+    <string name="venue_accounts_positions" formatted="false">Açık pozisyonlar</string>
+    <string name="venue_accounts_funding" formatted="false">Fonlama</string>
+    <string name="venue_accounts_reconciliation" formatted="false">Reconciliation status</string>
+    <string name="venue_accounts_evaluation" formatted="false">Evaluation status</string>
+    <string name="venue_accounts_deadline" formatted="false">Authority deadline</string>
+    <string name="positions_timeline_controls_window" formatted="false">Pencere</string>
+    <string name="positions_timeline_controls_granularity" formatted="false">Ayrıntı düzeyi</string>
+    <string name="positions_timeline_controls_valuationcurrency" formatted="false">Değerleme para birimi</string>
+    <string name="positions_timeline_controls_last24hours" formatted="false">Son 24 saat</string>
+    <string name="positions_timeline_controls_last7days" formatted="false">Son 7 gün</string>
+    <string name="positions_timeline_controls_last30days" formatted="false">Son 30 gün</string>
+    <string name="positions_timeline_controls_last90days" formatted="false">Son 90 gün</string>
+    <string name="positions_timeline_error_title" formatted="false">P&amp;L zaman çizelgesi yüklenemedi</string>
+    <string name="positions_timeline_empty_message" formatted="false">Bu pencere için P&amp;L noktası yok.</string>
+    <string name="positions_timeline_nowallet_message" formatted="false">P&amp;L zaman çizelgesini görüntülemek için bir cüzdan seçin.</string>
+    <string name="positions_timeline_incompleteness_title" formatted="false">Noktalar neden eksik?</string>
+    <string name="positions_timeline_incompleteness_description" formatted="false">Nedenler, yüklenen pencerenin tamamını kapsar. Bir noktanın birden fazla nedeni olduğunda sayılar çakışabilir.</string>
+    <string name="positions_timeline_incompleteness_affectedpoints">Affected points: %1$s</string>
+    <string name="positions_timeline_chart_title" formatted="false">Zaman içinde P&amp;L</string>
+    <string name="positions_timeline_chart_net" formatted="false">Net P&amp;L</string>
+    <string name="positions_timeline_chart_realized" formatted="false">Gerçekleşmiş P&amp;L</string>
+    <string name="positions_timeline_chart_unrealized" formatted="false">Gerçekleşmemiş P&amp;L</string>
+    <string name="positions_timeline_attribution_title" formatted="false">Son P&amp;L atfı</string>
+    <string name="positions_timeline_attribution_nostrategy" formatted="false">Kanıtlanmış strateji yok</string>
+    <string name="positions_timeline_attribution_withheld" formatted="false">Kanıtlanamadı</string>
+    <string name="positions_timeline_attribution_valuesemantics" formatted="false">Görüntülenen sıfır kanıtlanmış bir değerdir. “Kanıtlanamadı”, değerin kanıtlanamadığı anlamına gelir.</string>
+    <string name="positions_timeline_contributions_title" formatted="false">Enstrüman bazında son katkılar</string>
+    <string name="positions_timeline_contributions_realized" formatted="false">Gerçekleşmiş P&amp;L</string>
+    <string name="positions_timeline_contributions_fees" formatted="false">Ücretler</string>
+    <string name="positions_timeline_contributions_accrual" formatted="false">Fonlama tahakkuku</string>
+    <string name="positions_timeline_contributions_unrealized" formatted="false">Gerçekleşmemiş P&amp;L</string>
+    <string name="positions_timeline_incompleteness_reasons_scope_order_regression" formatted="false">Kapsam sırası gerilemesi</string>
+    <string name="positions_timeline_incompleteness_reasons_before_activation" formatted="false">Nokta, etkinleştirmeden önceye ait</string>
+    <string name="positions_timeline_incompleteness_reasons_activation_baseline_non_finite" formatted="false">Etkinleştirme baz değeri sonlu değil</string>
+    <string name="positions_timeline_incompleteness_reasons_fill_evidence_gap" formatted="false">Kalıcı emir gerçekleşmesi kanıtı eksik</string>
+    <string name="positions_timeline_incompleteness_reasons_seed_quantity_non_finite" formatted="false">Başlangıç miktarı sonlu değil</string>
+    <string name="positions_timeline_incompleteness_reasons_cost_basis_unavailable" formatted="false">Maliyet esası kullanılamıyor</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_provenance_unproven" formatted="false">Gerçekleşme fiyatının kaynağı kanıtlanamadı</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_size_invalid" formatted="false">Gerçekleşme miktarı geçersiz</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_invalid" formatted="false">Gerçekleşme fiyatı geçersiz</string>
+    <string name="positions_timeline_incompleteness_reasons_fx_conversion_unproven" formatted="false">FX dönüşümü kanıtlanamadı</string>
+    <string name="positions_timeline_incompleteness_reasons_mark_unavailable" formatted="false">Referans fiyatı kullanılamıyor</string>
+    <string name="positions_timeline_incompleteness_reasons_cumulative_non_finite" formatted="false">Birikimli değer sonlu değil</string>
+    <string name="positions_timeline_incompleteness_reasons_unrealized_non_finite" formatted="false">Gerçekleşmemiş P&amp;L sonlu değil</string>
+    <string name="positions_timeline_incompleteness_reasons_net_non_finite" formatted="false">Net P&amp;L sonlu değil</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_value_non_finite" formatted="false">Atıf değeri sonlu değil</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">Atıf mutabakatı başarısız</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">Enstrüman bazındaki P&amp;L değerlerinin toplamı genel P&amp;L toplamıyla uyuşmuyor</string>
+    <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">Etkinleştirme öncesine ait zaman damgası taşıyan ve geç ulaşan işlem gerçekleşmesi</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Attribution sum is not representable</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Instrument sum is not representable</string>
+    <string name="positions_timeline_executionhistory_title" formatted="false">Operator-corrected execution history</string>
+    <string name="positions_timeline_executionhistory_summary" formatted="false">An operator repudiated recorded executions in this scope. Every correction listed here is excluded from the figures on this page.</string>
+    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Repudiated execution</string>
+    <string name="positions_timeline_executionhistory_correctionid" formatted="false">Correction record</string>
+    <string name="positions_timeline_equity_title" formatted="false">Equity overlay</string>
+    <string name="positions_timeline_equity_serieslabel" formatted="false">Özkaynak</string>
+    <string name="positions_timeline_equity_drawdown_current" formatted="false">Current drawdown</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Spot venue only — balances held on other venues are excluded.</string>
+    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">External deposits and withdrawals are not adjusted out.</string>
+    <string name="positions_timeline_equity_honesty_restatedfrom">These figures are restated from %1$s at each minute\'s close, not sampled natively in this currency.</string>
+    <string name="positions_timeline_equity_honesty_pricedon">Priced on %1$s.</string>
+    <string name="positions_timeline_equity_honesty_conversionwithheld">Minutes dropped for want of a proven close: %1$s.</string>
+    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Drawdown is withheld on a converted basis, because the running peak is tracked in the sampled currency.</string>
+    <string name="positions_timeline_equity_cashposition_position" formatted="false">Position value</string>
+    <string name="positions_timeline_equity_cashposition_cash" formatted="false">Cash</string>
+    <string name="pnl_provenance">Calculation: %1$s · Mark source: %2$s · As of: %3$s</string>
+    <string name="pnl_equity_coverage">Equity sampled: %1$s · Complete minutes: %2$s</string>
+    <string name="pnl_execution_history">Execution history: %1$s</string>
+    <string name="process_title" formatted="false">İşlemler</string>
+    <string name="process_running" formatted="false">Çalışıyor</string>
+    <string name="process_stopped" formatted="false">Durduruldu</string>
+    <string name="process_feeds" formatted="false">Beslemeler</string>
+    <string name="process_strategies" formatted="false">Stratejiler</string>
+    <string name="process_executors" formatted="false">Yürütücüler</string>
+    <string name="process_brokers" formatted="false">Aracılar</string>
+    <string name="process_memory" formatted="false">Bellek</string>
+    <string name="process_cpu" formatted="false">CPU</string>
+    <string name="process_empty" formatted="false">Yapılandırılmış işlem yok.</string>
+    <string name="process_start" formatted="false">Başlat</string>
+    <string name="process_stop" formatted="false">Stop</string>
+    <string name="process_restart" formatted="false">Yeniden başlat</string>
+    <string name="process_cancel" formatted="false">İptal</string>
+    <string name="process_stale" formatted="false">Bu süreç artık buradan kontrol edilemez. Verileri yenileyip tekrar deneyin.</string>
+    <string name="process_partial" formatted="false">Süreç durduruldu ancak artık buradan yeniden başlatılamaz. Verileri yenileyip tekrar deneyin.</string>
+    <string name="process_confirm" formatted="false">Confirm process action</string>
+    <string name="process_confirm_message" formatted="false">Apply this action to the selected process?</string>
+    <string name="process_intent_saved" formatted="false">Desired state saved. The owning coordinator will apply it.</string>
+    <string name="process_accepted" formatted="false">Process action accepted.</string>
+    <string name="process_unknown" formatted="false">The command outcome is unknown. Controls remain locked: a status refresh cannot prove whether this command was applied.</string>
+    <string name="process_partial_unknown" formatted="false">The process was stopped, but the restart outcome is unknown. Controls remain locked: a status refresh cannot prove whether the restart was applied.</string>
+    <string name="process_rejected" formatted="false">The process action failed.</string>
+    <string name="process_load_failed" formatted="false">Could not refresh process status.</string>
+    <string name="process_config_failed" formatted="false">Process controls are unavailable because configuration could not be refreshed.</string>
+    <string name="process_enable" formatted="false">Enable</string>
+    <string name="process_disable" formatted="false">Disable</string>
+    <string name="ai_reviews_pending_title" formatted="false">Bekleyen incelemeler</string>
+    <string name="ai_reviews_decisions_title" formatted="false">AI kararları</string>
+    <string name="ai_reviews_deadline" formatted="false">Son tarih</string>
+    <string name="ai_reviews_expired" formatted="false">Süresi doldu</string>
+    <string name="ai_reviews_rationale" formatted="false">Gerekçe</string>
+    <string name="ai_reviews_rationale_long">Gerekçe çok uzun (sınır %1$d karakter).</string>
+    <string name="ai_reviews_approve" formatted="false">Onayla</string>
+    <string name="ai_reviews_reject" formatted="false">Reddet</string>
+    <string name="ai_reviews_pending" formatted="false">Beklemede</string>
+    <string name="ai_reviews_superseded" formatted="false">Geri çekildi</string>
+    <string name="ai_reviews_decided" formatted="false">Karar tarihi</string>
+    <string name="ai_reviews_reject_message" formatted="false">Reddetmek, bu incelemenin açılmasına neden olan işleme veto koyar. Bu işlem geri alınamaz.</string>
+    <string name="ai_reviews_cancel" formatted="false">İptal</string>
+    <string name="ai_reviews_peer_resolved" formatted="false">Başka bir delege bu incelemeyi zaten çözümledi.</string>
+    <string name="ai_reviews_expired_message" formatted="false">Bu inceleme son tarihini geçti ve zaman aşımına uğradı.</string>
+    <string name="ai_reviews_missing" formatted="false">Bu inceleme artık mevcut değil.</string>
+    <string name="ai_reviews_denied" formatted="false">Delege erişiminiz değişti. Karar vermeden önce yeniden yükleyin.</string>
+    <string name="ai_reviews_load_failed" formatted="false">Could not refresh reviews. Previously loaded reviews remain visible.</string>
+    <string name="ai_reviews_check_status" formatted="false">Check status</string>
+    <string name="ai_reviews_retry" formatted="false">Retry original decision</string>
+    <string name="ai_reviews_confirm" formatted="false">Confirm review decision</string>
+    <string name="ai_reviews_accepted" formatted="false">Decision accepted</string>
+    <string name="ai_reviews_rejected" formatted="false">Decision rejected by the server</string>
+    <string name="ai_reviews_unknown" formatted="false">Outcome unknown. Check status before retrying.</string>
+    <string name="positions_accessibility_label_closebutton" formatted="false">Pozisyonu kapat</string>
+    <string name="positions_accessibility_label_reducebutton" formatted="false">Pozisyonu azalt</string>
+    <string name="positions_reduce_cancel" formatted="false">İptal</string>
+    <string name="positions_reduce_footer" formatted="false">%100 pozisyonu kapatır. Karşı yönde yalnızca azaltma piyasa emri gönderir.</string>
+    <string name="positions_reduce_sizelabel" formatted="false">Azaltma miktarı</string>
+    <string name="trading_bracket_attach" formatted="false">SL / TP ekle</string>
+    <string name="trading_bracket_stoplosslabel" formatted="false">Zarar durdur</string>
+    <string name="trading_bracket_takeprofitlabel" formatted="false">Kâr al</string>
+    <string name="trading_trailingstop_attach" formatted="false">Takip eden stop ekle</string>
+    <string name="trading_trailingstop_trailamountlabel" formatted="false">Takip mesafesi</string>
+    <string name="position_action_review" formatted="false">Review position action</string>
+    <string name="position_action_confirm" formatted="false">Confirm action</string>
+    <string name="position_action_accepted" formatted="false">Request accepted. Refresh to check execution status.</string>
+    <string name="position_action_retry" formatted="false">Retry same request</string>
+    <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
+    <string name="position_action_cycle" formatted="false">Position cycle</string>
+    <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+</resources>

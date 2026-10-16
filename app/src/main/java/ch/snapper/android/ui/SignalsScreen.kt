@@ -18,6 +18,7 @@ import ch.snapper.android.R
 import ch.snapper.android.features.signals.*
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
@@ -72,7 +73,7 @@ private fun SignalControls(state: SignalsState, actions: SignalsActions) {
 
 /** Storage Access Framework grants only the document URI chosen by the user; no provider or storage permission. */
 @Composable
-private fun SignalExport(state: SignalsState) {
+private fun SignalExport(state: SignalsState, ioDispatcher: CoroutineDispatcher = Dispatchers.IO) {
     val context = LocalContext.current
     val coroutineScope = rememberCoroutineScope()
     var pending by remember { mutableStateOf<Pair<String, ByteArray>?>(null) }
@@ -87,7 +88,7 @@ private fun SignalExport(state: SignalsState) {
             coroutineScope.launch {
                 writing = true
                 try {
-                    withContext(Dispatchers.IO) {
+                    withContext(ioDispatcher) {
                         context.contentResolver.openOutputStream(uri, "wt")?.use { it.write(captured.second) }
                             ?: error("Document output stream unavailable")
                     }

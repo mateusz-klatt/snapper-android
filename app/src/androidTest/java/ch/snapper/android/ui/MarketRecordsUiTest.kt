@@ -20,6 +20,19 @@ import org.junit.Test
 class MarketRecordsUiTest {
     @get:Rule val compose = createComposeRule()
 
+    @Test fun flatCandlesWithDifferentDecimalScalesRenderFinitePriceAxes() {
+        val candle = CandleDto("BTC-USD", "kraken", "1h", "2026-10-16T10:00:00Z",
+            BigDecimal("1"), BigDecimal("1.0000"), BigDecimal("1.0"), BigDecimal("1.00"), BigDecimal.ZERO)
+        var description = ""
+        compose.setContent {
+            description = stringResource(R.string.chart_description)
+            MaterialTheme { CandleChart(listOf(candle)) }
+        }
+        compose.onNodeWithContentDescription(description).assertExists()
+        compose.onNodeWithText("1.01").assertExists()
+        compose.onNodeWithText("0.99").assertExists()
+    }
+
     private fun instrument(symbol: String, market: Boolean = true) =
         InstrumentDto(symbol, symbol, symbol, "kraken", false, true, canMarketData = market, instrumentKind = "spot")
 

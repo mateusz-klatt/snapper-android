@@ -18,11 +18,18 @@ import ch.snapper.android.R
 import ch.snapper.android.OrderActions
 import ch.snapper.android.OrderForm
 import ch.snapper.android.OrderOutcome
+import ch.snapper.android.AppActions
+import ch.snapper.android.data.OrderScope
+import ch.snapper.android.data.PositionDto
+import ch.snapper.android.features.positionactions.PositionActionForm
+import ch.snapper.android.features.positionactions.PositionActionKind
+import ch.snapper.android.positionActionTarget
 
-internal fun LazyListScope.positionsScreen(state: AppUiState) {
+internal fun LazyListScope.positionsScreen(state: AppUiState, actions: AppActions) {
     val records = state.snapshot?.positions.orEmpty()
     item { Text(stringResource(R.string.snapshot_limit), style = MaterialTheme.typography.bodySmall) }
     if (records.isEmpty() && !state.isLoading) item { Text(stringResource(R.string.empty)) }
+    item { PositionActionFeedback(state.positionActions, actions.positionActions, actions.refresh) }
     items(records) { position ->
         RecordCard(position.instrument) {
             Text(position.exchange, style = MaterialTheme.typography.labelMedium)
@@ -30,7 +37,28 @@ internal fun LazyListScope.positionsScreen(state: AppUiState) {
             Metric(R.string.average_price, position.averagePrice.display())
             Metric(R.string.mark_price, position.markPrice.display())
             Metric(R.string.pnl, position.unrealizedPnl.display())
+            PositionControls(position, state, actions)
         }
+    }
+}
+
+@Composable
+private fun PositionControls(position: PositionDto, state: AppUiState, actions: AppActions) {
+    val user = state.user ?: return
+    if (!user.hasPermission("read:market_data")) return
+    val wallet = state.snapshot?.wallets?.firstOrNull { it.publicId == user.activeWalletPublicId } ?: return
+    if (position.mode != if (wallet.isPaper) "paper" else "live") return
+    val scope = OrderScope.from(user)
+    val target = positionActionTarget(position)
+    PositionActionKind.entries.filter { PositionActionForm.eligible(scope, wallet, target, it) }.forEach { kind ->
+        val label = when (kind) {
+            PositionActionKind.CLOSE -> R.string.positions_accessibility_label_closebutton
+            PositionActionKind.REDUCE -> R.string.positions_accessibility_label_reducebutton
+            PositionActionKind.BRACKET -> R.string.trading_bracket_attach
+            PositionActionKind.TRAILING -> R.string.trading_trailingstop_attach
+        }
+        OutlinedButton(onClick = { actions.openPositionAction(position, kind) }, enabled = !state.positionActions.submitting,
+            modifier = Modifier.testTag("position.${position.publicId}.${kind.name.lowercase()}")) { Text(stringResource(label)) }
     }
 }
 

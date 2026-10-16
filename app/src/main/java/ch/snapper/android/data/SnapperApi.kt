@@ -10,6 +10,17 @@ import retrofit2.http.Query
 import retrofit2.http.Path
 
 internal interface SnapperApi {
+    @GET("api/processes/summary") suspend fun processSummary(): Envelope<ProcessSummaryDto>
+    @GET("api/processes/configured") suspend fun configuredProcesses(): Envelope<List<ConfiguredProcessDto>>
+    @POST("api/processes/{name}/start") suspend fun startProcess(@Path("name") name: String, @Body request: Envelope<ProcessStartPayload>): Envelope<ProcessStartDto>
+    @POST("api/processes/{name}/stop") suspend fun stopProcess(@Path("name") name: String): Envelope<ProcessStopDto>
+    @PATCH("api/processes/{name}/desired-state") suspend fun processDesiredState(@Path("name") name: String, @Body request: Envelope<ProcessDesiredStatePayload>): Envelope<ProcessDesiredStateDto>
+    @GET("api/ai-reviews") suspend fun auditReviews(): AiReviewListResponse<AiAuditReviewDto>
+    @GET("api/ai-reviews/pending") suspend fun pendingReviews(): AiReviewListResponse<AiPendingReviewDto>
+    @POST("api/ai-reviews/{review}/decision") suspend fun submitDecision(@Path("review") review: String, @Body request: Envelope<AiDecisionPayload>): AiDecisionResponse
+    @POST("api/execution-plans") suspend fun createBracket(@Body request: Envelope<PositionBracketPayload>): Envelope<ExecutionPlanDto>
+    @POST("api/trailing-stops") suspend fun createTrailing(@Body request: Envelope<PositionTrailingPayload>): Envelope<ExecutionPlanDto>
+
     @GET("api/operators") suspend fun desks(): Envelope<List<DeskDto>>
     @POST("api/auth/desks/{operator}/members/{username}") suspend fun attachViewer(
         @Path("operator") operator: String, @Path("username") username: String,

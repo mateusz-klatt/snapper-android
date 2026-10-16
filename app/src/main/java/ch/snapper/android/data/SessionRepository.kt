@@ -52,7 +52,7 @@ class SessionRepository private constructor(
     private val cookies: SessionCookies,
     private val client: OkHttpClient,
 ) : SessionClient, DeskClient, MarketCatalogClient, SystemClient, RecordsClient, NotificationDefaultsClient,
-    SignalsClient, VenueAccountsClient, PnlClient {
+    SignalsClient, VenueAccountsClient, PnlClient, ProcessClient, AiReviewsClient, PositionActionClient {
     private val mutableUser = MutableStateFlow<UserDto?>(null)
     override val user: StateFlow<UserDto?> = mutableUser.asStateFlow()
     private val operation = Mutex()
@@ -183,6 +183,190 @@ class SessionRepository private constructor(
         authorized(generation) {
             requireFeatureScope(expectedScope, permission)
             action()
+        }
+    }
+
+    override suspend fun processSummary(): ProcessSummaryDto = featureRead("read:system_status") { api.processSummary().payload }
+    override suspend fun configuredProcesses(): List<ConfiguredProcessDto> = featureRead("read:processes") { api.configuredProcesses().payload }
+
+    private suspend fun <T> actionRead(generation: Long, scope: OrderScope, permission: String, action: suspend () -> T): T =
+        authorized(generation) {
+            requireFeatureScope(scope, permission)
+            action().also { requireFeatureScope(scope, permission) }
+        }
+
+    private suspend fun prepareProcess(scope: OrderScope, target: ConfiguredProcessDto, remote: Boolean): Pair<Long, ConfiguredProcessDto> {
+        try {
+            val generation = featureMutationPreflight(scope, "manage:processes")
+            val rows = actionRead(generation, scope, "read:processes") { api.configuredProcesses().payload }
+            val fresh = rows.singleOrNull { it.name == target.name } ?: throw OrderScopeChangedException()
+            ActionTransport.processTarget(target, fresh, remote)
+            return generation to fresh
+        } catch (error: OrderRejectedException) {
+            throw ProcessRejectedException(error.statusCode)
+        } catch (_: IllegalArgumentException) {
+            throw OrderScopeChangedException()
+        }
+    }
+
+    override suspend fun startProcess(scope: OrderScope, target: ConfiguredProcessDto): ProcessStartDto = operation.withLock {
+        val (generation, _) = prepareProcess(scope, target, false)
+        dispatchProcess(generation) {
+            mutationApi.startProcess(target.name, envelope("process_start_request", ProcessStartPayload())).payload.also {
+                check(it.name == target.name && it.status in setOf("success", "already_running", "error"))
+            }
+        }
+    }
+
+    override suspend fun stopProcess(scope: OrderScope, target: ConfiguredProcessDto): ProcessStopDto = operation.withLock {
+        val (generation, _) = prepareProcess(scope, target, false)
+        dispatchProcess(generation) {
+            mutationApi.stopProcess(target.name).payload.also {
+                check(it.name == target.name && it.status in setOf("success", "not_running", "error"))
+            }
+        }
+    }
+
+    override suspend fun processDesiredState(scope: OrderScope, target: ConfiguredProcessDto, payload: ProcessDesiredStatePayload): ProcessDesiredStateDto = operation.withLock {
+        val (generation, fresh) = prepareProcess(scope, target, true)
+        ActionTransport.desiredState(payload, fresh)
+        dispatchProcess(generation) {
+            mutationApi.processDesiredState(target.name, envelope("process_desired_state_request", payload)).payload.also {
+                check(it.name == target.name && it.action == payload.action && it.status == "success")
+            }
+        }
+    }
+
+    private suspend fun <T> dispatchProcess(generation: Long, action: suspend () -> T): T {
+        ensureCurrent(generation)
+        try {
+            return action().also { ensureCurrent(generation) }
+        } catch (error: CancellationException) {
+            throw error
+        } catch (error: HttpException) {
+            ensureCurrent(generation)
+            if (error.code() == 401) expire(generation)
+            if (error.code() in 400..499 && error.code() !in setOf(408, 425)) throw ProcessRejectedException(error.code())
+            throw ProcessOutcomeUnknownException(error)
+        } catch (error: Exception) {
+            throw ProcessOutcomeUnknownException(error)
+        }
+    }
+
+    override suspend fun auditReviews(): List<AiAuditReviewDto> = featureRead("read:ai_reviews") { api.auditReviews().items }
+
+    override suspend fun pendingReviews(): List<AiPendingReviewDto> {
+        val delegate = mutableUser.value?.delegatePublicId
+        return featureRead("read:signals") {
+            requireDelegate(delegate)
+            api.pendingReviews().items.also { requireDelegate(delegate) }
+        }
+    }
+
+    private fun requireDelegate(expected: String?) {
+        if (expected.isNullOrBlank() || mutableUser.value?.delegatePublicId != expected) throw OrderScopeChangedException()
+    }
+
+    override suspend fun submitDecision(scope: OrderScope, reviewId: String, payload: AiDecisionPayload): AiDecisionResponse = operation.withLock {
+        val generation = prepareDecision(scope, reviewId, payload, requirePending = true)
+        dispatchDecision(generation, reviewId, payload)
+    }
+
+    override suspend fun retryDecision(scope: OrderScope, reviewId: String, payload: AiDecisionPayload): AiDecisionResponse = operation.withLock {
+        val generation = prepareDecision(scope, reviewId, payload, requirePending = false)
+        dispatchDecision(generation, reviewId, payload)
+    }
+
+    private suspend fun prepareDecision(scope: OrderScope, reviewId: String, payload: AiDecisionPayload, requirePending: Boolean): Long {
+        try {
+            require(reviewId.isNotBlank() && payload.decision in setOf("approve", "reject"))
+            require(payload.rationale?.let { it.codePointCount(0, it.length) <= 4096 } != false)
+            val delegate = mutableUser.value?.delegatePublicId
+            val generation = featureMutationPreflight(scope, "submit:ai_review_decision")
+            requireDelegate(delegate)
+            requireFeatureScope(scope, "read:signals")
+            if (requirePending) requirePendingDecision(generation, scope, reviewId, delegate)
+            return generation
+        } catch (error: CancellationException) {
+            throw error
+        } catch (error: Exception) {
+            throw AiDecisionPreparationException(error)
+        }
+    }
+
+    private suspend fun requirePendingDecision(generation: Long, scope: OrderScope, reviewId: String, delegate: String?) {
+        val rows = actionRead(generation, scope, "read:signals") {
+            requireDelegate(delegate)
+            api.pendingReviews().items
+        }
+        requireDelegate(delegate)
+        val pending = rows.singleOrNull { it.reviewPublicId == reviewId } ?: throw OrderScopeChangedException()
+        require(pending.status in setOf("pending", "fanout_dispatched"))
+        require(Instant.parse(pending.deadline).isAfter(Instant.now()))
+    }
+
+    private suspend fun dispatchDecision(generation: Long, reviewId: String, payload: AiDecisionPayload): AiDecisionResponse {
+        ensureCurrent(generation)
+        try {
+            return mutationApi.submitDecision(reviewId, envelope("ai_review_decision_command", payload)).also { ensureCurrent(generation) }
+        } catch (error: HttpException) {
+            ensureCurrent(generation)
+            if (error.code() == 401) {
+                expire(generation)
+                throw SessionExpiredException()
+            }
+            val response = ActionTransport.aiError(error.response()?.errorBody()?.string()) ?: throw error
+            ensureCurrent(generation)
+            return response
+        }
+    }
+
+    override suspend fun submit(scope: OrderScope, intent: PositionActionIntent): ExecutionPlanDto = operation.withLock {
+        val generation = preparePosition(scope, intent)
+        dispatchPosition(generation, intent)
+    }
+
+    private suspend fun preparePosition(scope: OrderScope, intent: PositionActionIntent): Long {
+        try {
+            val generation = featureMutationPreflight(scope, CREATE_ORDERS_PERMISSION)
+            require(intent.target.walletPublicId == scope.activeWalletPublicId)
+            val wallet = actionRead(generation, scope, "read:positions") { api.wallets().payload }
+                .single { it.publicId == intent.target.walletPublicId }
+            val position = actionRead(generation, scope, "read:positions") { api.positions(scope.activeWalletPublicId).payload }
+                .single { it.publicId == intent.target.positionPublicId }
+            ActionTransport.positionTarget(intent.target, position, wallet)
+            ActionTransport.positionIntent(intent, position, wallet)
+            validatePositionInstrument(generation, scope, position)
+            return generation
+        } catch (error: CancellationException) {
+            throw error
+        } catch (error: Exception) {
+            throw PositionPreparationException(error)
+        }
+    }
+
+    private suspend fun validatePositionInstrument(generation: Long, scope: OrderScope, position: PositionDto) {
+        val instrument = actionRead(generation, scope, READ_MARKET_DATA_PERMISSION) { api.instruments(position.exchange).payload }
+            .single { it.instrumentPublicId == position.instrumentPublicId && it.symbol == position.instrument && it.exchange == position.exchange }
+        require(instrument.instrumentResolved && instrument.canTrade)
+    }
+
+    private suspend fun dispatchPosition(generation: Long, intent: PositionActionIntent): ExecutionPlanDto {
+        ensureCurrent(generation)
+        try {
+            val result = when (intent) {
+                is PositionActionIntent.Order -> mutationApi.createOrder(envelope("create_order_command", intent.payload)).payload
+                is PositionActionIntent.Bracket -> mutationApi.createBracket(envelope("create_bracket_command", intent.payload)).payload
+                is PositionActionIntent.Trailing -> mutationApi.createTrailing(envelope("create_trailing_stop_command", intent.payload)).payload
+            }
+            ensureCurrent(generation)
+            check(result.publicId.isNotBlank() && result.walletPublicId == intent.target.walletPublicId)
+            return result
+        } catch (error: HttpException) {
+            ensureCurrent(generation)
+            if (error.code() == 401) expire(generation)
+            if (error.code() in 400..499 && error.code() !in setOf(408, 409, 425)) throw PositionRejectedException(error.code())
+            throw OrderOutcomeUnknownException(error)
         }
     }
 

@@ -28,6 +28,8 @@ The app retrieves wallet identifiers and labels, positions, quantities, prices, 
 
 When you have the required permissions, the app sends order submissions and cancellation requests to your configured backend. Requests include the selected wallet, instrument, order details and identifiers used to track or deduplicate the operation. The backend is responsible for processing these commands and any exchange integration. The Android app does not hold exchange API credentials or connect directly to an exchange.
 
+With the corresponding permissions, you can also request position reductions and protective bracket or trailing plans, manage backend processes, and approve or reject AI reviews. The app sends the selected target, command details, relevant operation identifiers and any review rationale you enter to your backend. A process command may change a remote coordinator's desired state rather than immediately change the running process.
+
 With the required permissions, the app also retrieves execution records and fees, venue balances and reconciliation status, trading signals, historical P&L and valuation metadata, accessible desk information, backend health and process status, strategy and backtest records, user-directory information and AI-delegate metadata.
 
 When authorized to manage desk memberships, you can submit an existing viewer's username and the selected desk identifier to your backend.

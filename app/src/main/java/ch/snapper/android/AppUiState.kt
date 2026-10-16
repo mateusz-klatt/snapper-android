@@ -18,6 +18,14 @@ import ch.snapper.android.features.signals.SignalsState
 import ch.snapper.android.features.accounts.VenueAccountsState
 import ch.snapper.android.features.pnl.PnlActions
 import ch.snapper.android.features.pnl.PnlState
+import ch.snapper.android.data.PositionDto
+import ch.snapper.android.features.operations.ProcessesActions
+import ch.snapper.android.features.operations.ProcessesState
+import ch.snapper.android.features.aireviews.AiReviewsActions
+import ch.snapper.android.features.aireviews.AiReviewsState
+import ch.snapper.android.features.positionactions.PositionActionActions
+import ch.snapper.android.features.positionactions.PositionActionKind
+import ch.snapper.android.features.positionactions.PositionActionState
 
 enum class UiError {
     INVALID_ORIGIN, INVALID_CREDENTIALS, SESSION_EXPIRED, NETWORK, SERVICE, UNKNOWN
@@ -50,6 +58,9 @@ data class AppUiState(
     val signals: SignalsState = SignalsState(),
     val venueAccounts: VenueAccountsState = VenueAccountsState(),
     val pnl: PnlState = PnlState(),
+    val processes: ProcessesState = ProcessesState(),
+    val aiReviews: AiReviewsState = AiReviewsState(),
+    val positionActions: PositionActionState = PositionActionState(),
 )
 
 data class AppActions(
@@ -72,4 +83,10 @@ data class AppActions(
     val pnl: PnlActions = PnlActions({}, {}, {}, {}),
     val refreshVenueAccounts: () -> Unit = {},
     val venueAccountsVisible: (Boolean) -> Unit = {},
+    val processes: ProcessesActions = ProcessesActions({}, { _, _ -> }, {}, {}),
+    val aiReviews: AiReviewsActions = AiReviewsActions(),
+    val positionActions: PositionActionActions = PositionActionActions({}, {}, {}, {}, {}, {}),
+    val loadProcesses: () -> Unit = {},
+    val loadAiReviews: () -> Unit = {},
+    val openPositionAction: (PositionDto, PositionActionKind) -> Unit = { _, _ -> },
 )

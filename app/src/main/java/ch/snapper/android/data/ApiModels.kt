@@ -28,6 +28,7 @@ data class UserDto(
     @SerialName("primary_operator_public_id") val primaryOperatorPublicId: String? = null,
     @SerialName("active_wallet_public_id") val activeWalletPublicId: String? = null,
     @SerialName("effective_permissions") val effectivePermissions: List<String>? = null,
+    @SerialName("delegate_public_id") val delegatePublicId: String? = null,
 ) {
     fun hasPermission(permission: String): Boolean = effectivePermissions?.contains(permission) == true
 }
@@ -51,6 +52,9 @@ data class PositionDto(
     @SerialName("unrealized_pnl") val unrealizedPnl: BigDecimal? = null,
     @SerialName("mark_price") val markPrice: BigDecimal? = null,
     @SerialName("wallet_public_id") val walletPublicId: String? = null,
+    @SerialName("instrument_public_id") val instrumentPublicId: String = "",
+    val mode: String = "",
+    @SerialName("position_cycle_public_id") val positionCyclePublicId: String? = null,
 )
 
 @Serializable

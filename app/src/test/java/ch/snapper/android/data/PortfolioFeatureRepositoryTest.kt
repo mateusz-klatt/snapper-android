@@ -103,7 +103,7 @@ class PortfolioFeatureRepositoryTest {
         signIn(); server.enqueue(response(profile()))
         server.enqueue(response("""[{"public_id":"w1","label":"Paper","is_paper":true}]"""))
         server.enqueue(response(pnl))
-        assertEquals("PLN", repository.pnlSeries(query).valuation_ccy)
+        assertEquals("PLN", repository.pnlSeries(query).valuationCcy)
         assertEquals("/api/auth/me", server.takeRequest().path)
         assertEquals("/api/wallets", server.takeRequest().path)
         val request = server.takeRequest()

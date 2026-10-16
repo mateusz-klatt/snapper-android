@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="privacy_policy" formatted="false">Privacy policy</string>
+    <string name="username" formatted="false">Naudotojo vardas</string>
+    <string name="password" formatted="false">Slaptažodis</string>
+    <string name="sign_in" formatted="false">Prisijungti</string>
+    <string name="session_retention_notice" formatted="false">Staying signed in requires Android 11+, a secure screen lock, and authentication with your PIN, pattern, password or strong biometrics within the last 5 minutes. Otherwise, sign in again after the app restarts.</string>
+    <string name="subtitle" formatted="false">Prekybos platforma</string>
+    <string name="backend" formatted="false">Tinkinto serverio URL</string>
+    <string name="language" formatted="false">Kalba</string>
+    <string name="logout" formatted="false">Atsijungti</string>
+    <string name="positions" formatted="false">Pozicijos</string>
+    <string name="orders" formatted="false">Pavedimai</string>
+    <string name="market" formatted="false">Rinkos duomenys</string>
+    <string name="wallet" formatted="false">Piniginė</string>
+    <string name="all_wallets" formatted="false">Visos piniginės</string>
+    <string name="retry" formatted="false">Bandyti dar kartą</string>
+    <string name="loading" formatted="false">Įkeliama…</string>
+    <string name="size" formatted="false">Dydis</string>
+    <string name="average_price" formatted="false">Vidutinė kaina</string>
+    <string name="mark_price" formatted="false">Žymos kaina</string>
+    <string name="pnl" formatted="false">Nerealizuotas PnL</string>
+    <string name="instrument" formatted="false">Instrumentas</string>
+    <string name="price" formatted="false">Kaina</string>
+    <string name="filled" formatted="false">Filled</string>
+    <string name="status" formatted="false">Būsena</string>
+    <string name="side" formatted="false">Kryptis</string>
+    <string name="open" formatted="false">Open</string>
+    <string name="high" formatted="false">High</string>
+    <string name="low" formatted="false">Low</string>
+    <string name="close" formatted="false">Close</string>
+    <string name="volume" formatted="false">Apyvarta</string>
+    <string name="timeframe" formatted="false">Intervalas</string>
+    <string name="no_candles" formatted="false">Žvakių dar nėra</string>
+    <string name="backend_warning" formatted="false">Pakeitus serverį būsite atjungti, o vietinė programos būsena bus išvalyta. Nauju URL reikės prisijungti iš naujo.</string>
+    <string name="home" formatted="false">Pradžia</string>
+    <string name="alerts" formatted="false">Įspėjimai</string>
+    <string name="settings" formatted="false">Nustatymai</string>
+    <string name="save" formatted="false">Išsaugoti</string>
+    <string name="refresh" formatted="false">Refresh</string>
+    <string name="exchange" formatted="false">Birža</string>
+    <string name="load_market" formatted="false">Load candles</string>
+    <string name="empty" formatted="false">No records available.</string>
+    <string name="snapshot_note" formatted="false">Snapshot data. Refresh to retrieve the latest available records.</string>
+    <string name="chart_description" formatted="false">Historical candle chart. Exact values are listed below.</string>
+    <string name="error_origin" formatted="false">Enter a valid HTTPS backend origin.</string>
+    <string name="error_credentials" formatted="false">The username or password is incorrect.</string>
+    <string name="error_session" formatted="false">Your session expired. Please sign in again.</string>
+    <string name="error_network" formatted="false">Could not reach the backend. Check your connection and try again.</string>
+    <string name="error_service" formatted="false">The backend could not complete this request. Please try again.</string>
+    <string name="error_unknown" formatted="false">Something went wrong. Please try again.</string>
+    <string name="dismiss" formatted="false">Atmesti</string>
+    <string name="paper" formatted="false">Demonstracinė</string>
+    <string name="safety_critical" formatted="false">Safety critical</string>
+    <string name="snapshot_limit" formatted="false">This view shows current positions and up to 100 recent orders and alerts; it is not a complete history.</string>
+    <string name="chart_window" formatted="false">The chart shows the last 100 retrieved candles.</string>
+    <string name="local_network_explanation" formatted="false">For a backend on your local network, allow local network access before signing in. Public internet backends do not need this permission.</string>
+    <string name="local_network_allow" formatted="false">Allow local network</string>
+    <string name="local_network_settings" formatted="false">Open app settings</string>
+    <string name="order_new" formatted="false">New Order</string>
+    <string name="order_entry" formatted="false">New Manual Order</string>
+    <string name="order_confirm" formatted="false">Confirm Order</string>
+    <string name="order_quantity" formatted="false">Kiekis</string>
+    <string name="order_type" formatted="false">Order Type</string>
+    <string name="order_stop_price" formatted="false">Stop Price</string>
+    <string name="order_mode" formatted="false">Režimas</string>
+    <string name="order_buy" formatted="false">Pirkti</string>
+    <string name="order_sell" formatted="false">Parduoti</string>
+    <string name="order_market" formatted="false">Rinkos</string>
+    <string name="order_limit" formatted="false">Limitinis</string>
+    <string name="order_stop" formatted="false">Stop</string>
+    <string name="order_stop_limit" formatted="false">Stop Limit</string>
+    <string name="order_live" formatted="false">Live</string>
+    <string name="order_review" formatted="false">Review Order</string>
+    <string name="order_back" formatted="false">Back</string>
+    <string name="order_submit" formatted="false">Confirm Order</string>
+    <string name="order_submitting" formatted="false">Submitting…</string>
+    <string name="order_leverage" formatted="false">Svertas</string>
+    <string name="order_reduce_only" formatted="false">Reduce Only</string>
+    <string name="order_observation_only" formatted="false">This instrument is observation-only — place orders on an execution-capable instrument.</string>
+    <string name="order_unknown_instrument" formatted="false">This instrument is not recognised. Reload the list and try again.</string>
+    <string name="order_caps_violation" formatted="false">This order would exceed your account safety caps. Review your risk settings and retry.</string>
+    <string name="order_rejected" formatted="false">Order creation failed</string>
+    <string name="order_cancel_title" formatted="false">Atšaukti pavedimą?</string>
+    <string name="order_cancel_confirm" formatted="false">Atšaukti pavedimą</string>
+    <string name="order_keep_open" formatted="false">Palikti atvirą</string>
+    <string name="order_select_wallet" formatted="false">Select a wallet on Home before placing an order.</string>
+    <string name="order_created" formatted="false">Order submitted. Refresh to check execution status.</string>
+    <string name="order_cancel_requested" formatted="false">Cancellation requested. Refresh to check the order status.</string>
+    <string name="order_unknown_outcome" formatted="false">The request outcome is unknown. Check status before taking further action.</string>
+    <string name="order_check_status" formatted="false">Check status</string>
+    <string name="order_retry_intent" formatted="false">Retry same order</string>
+    <string name="order_catalog_error" formatted="false">Could not load exchanges or instruments. Try again.</string>
+    <string name="order_no_instruments" formatted="false">No instruments available for this exchange.</string>
+    <string name="order_invalid_form" formatted="false">Enter positive quantities and required prices. Optional leverage must be a positive whole number.</string>
+    <string name="order_refresh_failed" formatted="false">The request was accepted, but the latest records could not be loaded. Refresh to check status.</string>
+    <string name="order_forbidden" formatted="false">You no longer have permission for this action.</string>
+    <string name="order_session_changed" formatted="false">The session or wallet changed. Open a new order from the current account.</string>
+    <string name="order_enabled" formatted="false">Įjungta</string>
+    <string name="order_disabled" formatted="false">Išjungta</string>
+    <string name="system_tools" formatted="false">Overview</string>
+    <string name="desk_attach_button" formatted="false">Pridėti stebėtoją</string>
+    <string name="desk_attach_desk_label" formatted="false">Padalinys</string>
+    <string name="desk_nav_title" formatted="false">Mano padaliniai</string>
+    <string name="desk_primary_badge" formatted="false">Pagrindinis</string>
+    <string name="desk_attach_username_placeholder" formatted="false">Tikslus stebėtojo naudotojo vardas</string>
+    <string name="desk_attach_validation_username" formatted="false">Įveskite stebėtojo naudotojo vardą.</string>
+    <string name="desk_description_unavailable" formatted="false">Aprašymas nepateiktas.</string>
+    <string name="desk_attach_help" formatted="false">Įveskite tikslų stebėtojo naudotojo vardą. Naujas padalinys bus pasiekiamas tik jam atsijungus ir vėl prisijungus.</string>
+    <string name="desk_attach_success_message" formatted="false">Stebėtojas turi atsijungti ir vėl prisijungti, kad galėtų pasiekti naują padalinį.</string>
+    <string name="desk_empty_message" formatted="false">Jūsų paskyra nepriskirta jokiam padaliniui.</string>
+    <string name="desk_load_error" formatted="false">Nepavyko įkelti padalinių. Bandykite dar kartą.</string>
+    <string name="settings_account_email" formatted="false">El. paštas</string>
+    <string name="settings_account_role">Vaidmuo: %1$s</string>
+    <string name="settings_app_info_version" formatted="false">Versija</string>
+    <string name="settings_app_info_build" formatted="false">Komponuotė</string>
+    <string name="settings_logout_confirm_title" formatted="false">Atsijungti?</string>
+    <string name="settings_logout_confirm_message" formatted="false">Ar tikrai norite atsijungti?</string>
+    <string name="settings_connection_change_backend_title" formatted="false">Keisti serverį?</string>
+    <string name="settings_connection_change_backend_message" formatted="false">Pakeitus serverį būsite atjungti, o vietinė programos būsena bus išvalyta. Nauju URL reikės prisijungti iš naujo.</string>
+    <string name="common_continue" formatted="false">Tęsti</string>
+    <string name="backend_url_cancel" formatted="false">Atšaukti</string>
+    <string name="market_search" formatted="false">Ieškoti instrumentų</string>
+    <string name="market_view_only" formatted="false">Tik peržiūrai</string>
+    <string name="market_catalog_retry" formatted="false">Bandyti dar kartą</string>
+    <string name="market_picker_close" formatted="false">Atšaukti</string>
+    <string name="market_no_matches" formatted="false">\@string/empty</string>
+    <string name="market_catalog_error" formatted="false">\@string/error_unknown</string>
+    <string name="system_health" formatted="false">Sistemos būklė</string>
+    <string name="system_strategies" formatted="false">Strategijos</string>
+    <string name="system_backtests" formatted="false">Backtestai</string>
+    <string name="system_users" formatted="false">Naudotojai</string>
+    <string name="system_delegates" formatted="false">AI delegatai</string>
+    <string name="system_version" formatted="false">Versija</string>
+    <string name="system_connections" formatted="false">Aktyvūs ryšiai</string>
+    <string name="system_subscribers" formatted="false">ZMQ prenumeratoriai</string>
+    <string name="system_tasks" formatted="false">Prenumeratorių užduotys</string>
+    <string name="system_topics" formatted="false">Aktyvios temos</string>
+    <string name="system_clients" formatted="false">Aktyvūs klientai</string>
+    <string name="system_gaps" formatted="false">Aptikti tarpai</string>
+    <string name="system_resets" formatted="false">Seansų atstatymai</string>
+    <string name="system_duplicates" formatted="false">Dublikatai</string>
+    <string name="system_joins" formatted="false">Prisijungimai srauto viduryje</string>
+    <string name="system_unstamped" formatted="false">Atmesti (be žymos)</string>
+    <string name="system_rest_clients" formatted="false">Stebimi REST klientai</string>
+    <string name="system_initial_cash" formatted="false">Pradinis kapitalas</string>
+    <string name="system_period" formatted="false">Laikotarpis</string>
+    <string name="system_created" formatted="false">Sukurta</string>
+    <string name="system_max_orders" formatted="false">Maks. atviri orderiai</string>
+    <string name="system_max_daily" formatted="false">Maks. USD per dieną</string>
+    <string name="system_default" formatted="false">Numatytasis</string>
+    <string name="system_trader" formatted="false">Prekiautojo būsena</string>
+    <string name="system_running" formatted="false">Vykdoma</string>
+    <string name="system_stopped" formatted="false">Sustabdyta</string>
+    <string name="system_mode" formatted="false">Režimas</string>
+    <string name="system_autostart" formatted="false">Automatinis paleidimas</string>
+    <string name="system_active" formatted="false">Aktyvus</string>
+    <string name="system_inactive" formatted="false">Neaktyvus</string>
+    <string name="system_revoked" formatted="false">Atšaukta</string>
+    <string name="records_open" formatted="false">Open</string>
+    <string name="records_recent" formatted="false">Naujausi</string>
+    <string name="records_fills" formatted="false">Įvykdymai</string>
+    <string name="records_refresh" formatted="false">Refresh</string>
+    <string name="records_fee" formatted="false">Fee</string>
+    <string name="records_details" formatted="false">Details</string>
+    <string name="records_hide_details" formatted="false">\@string/close</string>
+    <string name="records_thread" formatted="false">Gija</string>
+    <string name="records_source_topic" formatted="false">Šaltinio tema</string>
+    <string name="notification_defaults_title" formatted="false">Naudotojo numatytosios nuostatos</string>
+    <string name="notification_defaults_footer" formatted="false">Numatytosios reikšmės taikomos, kai gaunamam įspėjimui netinka nė viena įrenginio išimtis.</string>
+    <string name="notification_defaults_enabled" formatted="false">Įjungta</string>
+    <string name="notification_defaults_priority" formatted="false">Mažiausias prioritetas</string>
+    <string name="notification_defaults_load_failed" formatted="false">Nepavyko įkelti nuostatų</string>
+    <string name="notification_defaults_save_failed" formatted="false">Nepavyko išsaugoti nuostatų</string>
+    <string name="notification_defaults_low" formatted="false">Low</string>
+    <string name="notification_defaults_medium" formatted="false">Vidutinis</string>
+    <string name="notification_defaults_high" formatted="false">High</string>
+    <string name="notification_defaults_fill" formatted="false">Pavedimas įvykdytas</string>
+    <string name="notification_defaults_rejected" formatted="false">Pavedimas atmestas</string>
+    <string name="notification_defaults_stop" formatted="false">Suveikė stop-loss</string>
+    <string name="notification_defaults_margin" formatted="false">Įspėjimas dėl maržos</string>
+    <string name="notification_defaults_system" formatted="false">Sistemos klaida</string>
+    <string name="notification_defaults_saved" formatted="false">Gerai</string>
+    <string name="signals_title" formatted="false">Signalai</string>
+    <string name="signals_strength" formatted="false">Stiprumas</string>
+    <string name="signals_price" formatted="false">Kaina</string>
+    <string name="signals_reason" formatted="false">Priežastis:</string>
+    <string name="signals_strong" formatted="false">Stiprus</string>
+    <string name="signals_medium" formatted="false">Vidutinis</string>
+    <string name="signals_weak" formatted="false">Silpnas</string>
+    <string name="signals_very_weak" formatted="false">Labai silpnas</string>
+    <string name="signals_total" formatted="false">Iš viso</string>
+    <string name="signals_buy" formatted="false">Pirkti</string>
+    <string name="signals_sell" formatted="false">Parduoti</string>
+    <string name="signals_average_strength" formatted="false">Vid. stiprumas</string>
+    <string name="signals_filter" formatted="false">Filtruoti pagal strategiją</string>
+    <string name="signals_all_strategies" formatted="false">Visos strategijos</string>
+    <string name="signals_empty" formatted="false">Nė vienas prekybos signalas neatitinka jūsų dabartinių filtrų.</string>
+    <string name="signals_export" formatted="false">Eksportuoti</string>
+    <string name="signals_export_failed" formatted="false">Pateikti nepavyko</string>
+    <string name="venue_accounts_title" formatted="false">Biržos sąskaitos</string>
+    <string name="venue_accounts_refresh" formatted="false">Refresh</string>
+    <string name="venue_accounts_failed" formatted="false">Nepavyko įkelti biržos sąskaitos būsenos. Sąskaita nėra tuščia; duomenys šiuo metu tiesiog nepasiekiami.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Patikimi tiesioginiai biržos duomenys, stebėti galiojimo laikotarpiu.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Eilutėse, nepažymėtose „Tiesiogiai“, rodomi pasenę, imituoti arba nepasiekiami duomenys — tai niekada nėra patikimi biržos likučiai realiuoju laiku.</string>
+    <string name="venue_accounts_valuation" formatted="false">Valuation</string>
+    <string name="venue_accounts_balances" formatted="false">Likučiai</string>
+    <string name="venue_accounts_observed" formatted="false">Observed at</string>
+    <string name="venue_accounts_source" formatted="false">Source observation</string>
+    <string name="venue_accounts_total" formatted="false">Iš viso</string>
+    <string name="venue_accounts_free" formatted="false">Prieinama</string>
+    <string name="venue_accounts_used" formatted="false">Naudojama</string>
+    <string name="venue_accounts_numeric_source" formatted="false">Numeric provenance</string>
+    <string name="venue_accounts_positions" formatted="false">Atviros pozicijos</string>
+    <string name="venue_accounts_funding" formatted="false">Finansavimas</string>
+    <string name="venue_accounts_reconciliation" formatted="false">Reconciliation status</string>
+    <string name="venue_accounts_evaluation" formatted="false">Evaluation status</string>
+    <string name="venue_accounts_deadline" formatted="false">Authority deadline</string>
+    <string name="positions_timeline_controls_window" formatted="false">Laikotarpis</string>
+    <string name="positions_timeline_controls_granularity" formatted="false">Intervalas</string>
+    <string name="positions_timeline_controls_valuationcurrency" formatted="false">Vertinimo valiuta</string>
+    <string name="positions_timeline_controls_last24hours" formatted="false">Pastarosios 24 val.</string>
+    <string name="positions_timeline_controls_last7days" formatted="false">Pastarosios 7 d.</string>
+    <string name="positions_timeline_controls_last30days" formatted="false">Pastarosios 30 d.</string>
+    <string name="positions_timeline_controls_last90days" formatted="false">Pastarosios 90 d.</string>
+    <string name="positions_timeline_error_title" formatted="false">Nepavyko įkelti P&amp;L laiko skalės</string>
+    <string name="positions_timeline_empty_message" formatted="false">Šiam laikotarpiui P&amp;L taškų nėra.</string>
+    <string name="positions_timeline_nowallet_message" formatted="false">Pasirinkite piniginę, kad peržiūrėtumėte jos P&amp;L laiko skalę.</string>
+    <string name="positions_timeline_incompleteness_title" formatted="false">Kodėl taškai neišsamūs</string>
+    <string name="positions_timeline_incompleteness_description" formatted="false">Priežastys apima visą įkeltą laikotarpį. Daugiau nei vieną priežastį turintis taškas gali būti įskaičiuotas kelis kartus.</string>
+    <string name="positions_timeline_incompleteness_affectedpoints">Affected points: %1$s</string>
+    <string name="positions_timeline_chart_title" formatted="false">P&amp;L dinamika</string>
+    <string name="positions_timeline_chart_net" formatted="false">Grynasis P&amp;L</string>
+    <string name="positions_timeline_chart_realized" formatted="false">Realizuotas P&amp;L</string>
+    <string name="positions_timeline_chart_unrealized" formatted="false">Nerealizuotas P&amp;L</string>
+    <string name="positions_timeline_attribution_title" formatted="false">Naujausia P&amp;L atribucija</string>
+    <string name="positions_timeline_attribution_nostrategy" formatted="false">Nėra patikimai nustatytos strategijos</string>
+    <string name="positions_timeline_attribution_withheld" formatted="false">Nepavyko patvirtinti</string>
+    <string name="positions_timeline_attribution_valuesemantics" formatted="false">Rodomas nulis yra patvirtinta reikšmė. „Nepavyko patvirtinti“ reiškia, kad reikšmės nebuvo galima patvirtinti.</string>
+    <string name="positions_timeline_contributions_title" formatted="false">Naujausi instrumentų P&amp;L indėliai</string>
+    <string name="positions_timeline_contributions_realized" formatted="false">Realizuotas P&amp;L</string>
+    <string name="positions_timeline_contributions_fees" formatted="false">Mokesčiai</string>
+    <string name="positions_timeline_contributions_accrual" formatted="false">Sukauptas finansavimas</string>
+    <string name="positions_timeline_contributions_unrealized" formatted="false">Nerealizuotas P&amp;L</string>
+    <string name="positions_timeline_incompleteness_reasons_scope_order_regression" formatted="false">Laiko žymos regresija srities sekoje</string>
+    <string name="positions_timeline_incompleteness_reasons_before_activation" formatted="false">Taškas užfiksuotas prieš aktyvavimą</string>
+    <string name="positions_timeline_incompleteness_reasons_activation_baseline_non_finite" formatted="false">Aktyvavimo bazinė reikšmė nėra baigtinė</string>
+    <string name="positions_timeline_incompleteness_reasons_fill_evidence_gap" formatted="false">Spraga išsaugotuose pavedimų įvykdymo duomenyse</string>
+    <string name="positions_timeline_incompleteness_reasons_seed_quantity_non_finite" formatted="false">Pradinis kiekis nėra baigtinis</string>
+    <string name="positions_timeline_incompleteness_reasons_cost_basis_unavailable" formatted="false">Savikainos duomenys nepasiekiami</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_provenance_unproven" formatted="false">Vykdymo kainos kilmė nepatvirtinta</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_size_invalid" formatted="false">Netinkamas vykdymo dydis</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_invalid" formatted="false">Netinkama vykdymo kaina</string>
+    <string name="positions_timeline_incompleteness_reasons_fx_conversion_unproven" formatted="false">FX konvertavimas nepatvirtintas</string>
+    <string name="positions_timeline_incompleteness_reasons_mark_unavailable" formatted="false">Orientacinė kaina nepasiekiama</string>
+    <string name="positions_timeline_incompleteness_reasons_cumulative_non_finite" formatted="false">Sukauptoji reikšmė nėra baigtinė</string>
+    <string name="positions_timeline_incompleteness_reasons_unrealized_non_finite" formatted="false">Nerealizuoto P&amp;L reikšmė nėra baigtinė</string>
+    <string name="positions_timeline_incompleteness_reasons_net_non_finite" formatted="false">Grynojo P&amp;L reikšmė nėra baigtinė</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_value_non_finite" formatted="false">Atribucijos reikšmė nėra baigtinė</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">Nepavyko suderinti atribucijos</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">Nepavyko suderinti instrumentų P&amp;L sumų</string>
+    <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">Pavėluotai gautas vykdymas, kurio laiko žyma yra ankstesnė už aktyvavimą</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Attribution sum is not representable</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Instrument sum is not representable</string>
+    <string name="positions_timeline_executionhistory_title" formatted="false">Operator-corrected execution history</string>
+    <string name="positions_timeline_executionhistory_summary" formatted="false">An operator repudiated recorded executions in this scope. Every correction listed here is excluded from the figures on this page.</string>
+    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Repudiated execution</string>
+    <string name="positions_timeline_executionhistory_correctionid" formatted="false">Correction record</string>
+    <string name="positions_timeline_equity_title" formatted="false">Equity overlay</string>
+    <string name="positions_timeline_equity_serieslabel" formatted="false">Kapitalas</string>
+    <string name="positions_timeline_equity_drawdown_current" formatted="false">Current drawdown</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Spot venue only — balances held on other venues are excluded.</string>
+    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">External deposits and withdrawals are not adjusted out.</string>
+    <string name="positions_timeline_equity_honesty_restatedfrom">These figures are restated from %1$s at each minute\'s close, not sampled natively in this currency.</string>
+    <string name="positions_timeline_equity_honesty_pricedon">Priced on %1$s.</string>
+    <string name="positions_timeline_equity_honesty_conversionwithheld">Minutes dropped for want of a proven close: %1$s.</string>
+    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Drawdown is withheld on a converted basis, because the running peak is tracked in the sampled currency.</string>
+    <string name="positions_timeline_equity_cashposition_position" formatted="false">Position value</string>
+    <string name="positions_timeline_equity_cashposition_cash" formatted="false">Cash</string>
+    <string name="pnl_provenance">Calculation: %1$s · Mark source: %2$s · As of: %3$s</string>
+    <string name="pnl_equity_coverage">Equity sampled: %1$s · Complete minutes: %2$s</string>
+    <string name="pnl_execution_history">Execution history: %1$s</string>
+    <string name="process_title" formatted="false">Procesai</string>
+    <string name="process_running" formatted="false">Vykdoma</string>
+    <string name="process_stopped" formatted="false">Sustabdyta</string>
+    <string name="process_feeds" formatted="false">Srautai</string>
+    <string name="process_strategies" formatted="false">Strategijos</string>
+    <string name="process_executors" formatted="false">Vykdytojai</string>
+    <string name="process_brokers" formatted="false">Brokeriai</string>
+    <string name="process_memory" formatted="false">Atmintis</string>
+    <string name="process_cpu" formatted="false">CPU</string>
+    <string name="process_empty" formatted="false">Nėra sukonfigūruotų procesų.</string>
+    <string name="process_start" formatted="false">Paleisti</string>
+    <string name="process_stop" formatted="false">Stop</string>
+    <string name="process_restart" formatted="false">Paleisti iš naujo</string>
+    <string name="process_cancel" formatted="false">Atšaukti</string>
+    <string name="process_stale" formatted="false">Šio proceso iš čia valdyti nebegalima. Atnaujinkite duomenis ir bandykite dar kartą.</string>
+    <string name="process_partial" formatted="false">Procesas buvo sustabdytas, bet iš čia jo paleisti iš naujo nebegalima. Atnaujinkite duomenis ir bandykite dar kartą.</string>
+    <string name="process_confirm" formatted="false">Confirm process action</string>
+    <string name="process_confirm_message" formatted="false">Apply this action to the selected process?</string>
+    <string name="process_intent_saved" formatted="false">Desired state saved. The owning coordinator will apply it.</string>
+    <string name="process_accepted" formatted="false">Process action accepted.</string>
+    <string name="process_unknown" formatted="false">The command outcome is unknown. Controls remain locked: a status refresh cannot prove whether this command was applied.</string>
+    <string name="process_partial_unknown" formatted="false">The process was stopped, but the restart outcome is unknown. Controls remain locked: a status refresh cannot prove whether the restart was applied.</string>
+    <string name="process_rejected" formatted="false">The process action failed.</string>
+    <string name="process_load_failed" formatted="false">Could not refresh process status.</string>
+    <string name="process_config_failed" formatted="false">Process controls are unavailable because configuration could not be refreshed.</string>
+    <string name="process_enable" formatted="false">Enable</string>
+    <string name="process_disable" formatted="false">Disable</string>
+    <string name="ai_reviews_pending_title" formatted="false">Laukiančios peržiūros</string>
+    <string name="ai_reviews_decisions_title" formatted="false">AI sprendimai</string>
+    <string name="ai_reviews_deadline" formatted="false">Terminas</string>
+    <string name="ai_reviews_expired" formatted="false">Pasibaigė</string>
+    <string name="ai_reviews_rationale" formatted="false">Pagrindimas</string>
+    <string name="ai_reviews_rationale_long">Pagrindimas per ilgas (riba – %1$d simbolių).</string>
+    <string name="ai_reviews_approve" formatted="false">Patvirtinti</string>
+    <string name="ai_reviews_reject" formatted="false">Atmesti</string>
+    <string name="ai_reviews_pending" formatted="false">Laukiama</string>
+    <string name="ai_reviews_superseded" formatted="false">Atšaukta</string>
+    <string name="ai_reviews_decided" formatted="false">Nuspręsta</string>
+    <string name="ai_reviews_reject_message" formatted="false">Atmetus vetuojamas sandoris, dėl kurio buvo pradėta ši peržiūra. Šio veiksmo anuliuoti negalima.</string>
+    <string name="ai_reviews_cancel" formatted="false">Atšaukti</string>
+    <string name="ai_reviews_peer_resolved" formatted="false">Kitas delegatas jau išsprendė šią peržiūrą.</string>
+    <string name="ai_reviews_expired_message" formatted="false">Ši peržiūra viršijo terminą ir jos laikas baigėsi.</string>
+    <string name="ai_reviews_missing" formatted="false">Šios peržiūros nebėra.</string>
+    <string name="ai_reviews_denied" formatted="false">Jūsų delegato prieiga pasikeitė. Prieš priimdami sprendimą įkelkite iš naujo.</string>
+    <string name="ai_reviews_load_failed" formatted="false">Could not refresh reviews. Previously loaded reviews remain visible.</string>
+    <string name="ai_reviews_check_status" formatted="false">Check status</string>
+    <string name="ai_reviews_retry" formatted="false">Retry original decision</string>
+    <string name="ai_reviews_confirm" formatted="false">Confirm review decision</string>
+    <string name="ai_reviews_accepted" formatted="false">Decision accepted</string>
+    <string name="ai_reviews_rejected" formatted="false">Decision rejected by the server</string>
+    <string name="ai_reviews_unknown" formatted="false">Outcome unknown. Check status before retrying.</string>
+    <string name="positions_accessibility_label_closebutton" formatted="false">Uždaryti poziciją</string>
+    <string name="positions_accessibility_label_reducebutton" formatted="false">Sumažinti poziciją</string>
+    <string name="positions_reduce_cancel" formatted="false">Atšaukti</string>
+    <string name="positions_reduce_footer" formatted="false">100 % uždaro poziciją. Pateikia tik mažinantį (reduce-only) rinkos pavedimą priešingoje pusėje.</string>
+    <string name="positions_reduce_sizelabel" formatted="false">Sumažinimo dydis</string>
+    <string name="trading_bracket_attach" formatted="false">Pridėti SL / TP</string>
+    <string name="trading_bracket_stoplosslabel" formatted="false">Stop-loss</string>
+    <string name="trading_bracket_takeprofitlabel" formatted="false">Take-profit</string>
+    <string name="trading_trailingstop_attach" formatted="false">Pridėti slenkantį stopą</string>
+    <string name="trading_trailingstop_trailamountlabel" formatted="false">Sekimo atstumas</string>
+    <string name="position_action_review" formatted="false">Review position action</string>
+    <string name="position_action_confirm" formatted="false">Confirm action</string>
+    <string name="position_action_accepted" formatted="false">Request accepted. Refresh to check execution status.</string>
+    <string name="position_action_retry" formatted="false">Retry same request</string>
+    <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
+    <string name="position_action_cycle" formatted="false">Position cycle</string>
+    <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+</resources>

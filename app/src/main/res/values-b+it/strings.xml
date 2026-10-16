@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="privacy_policy" formatted="false">Privacy policy</string>
+    <string name="username" formatted="false">Nome utente</string>
+    <string name="password" formatted="false">Password</string>
+    <string name="sign_in" formatted="false">Accedi</string>
+    <string name="session_retention_notice" formatted="false">Staying signed in requires Android 11+, a secure screen lock, and authentication with your PIN, pattern, password or strong biometrics within the last 5 minutes. Otherwise, sign in again after the app restarts.</string>
+    <string name="subtitle" formatted="false">Piattaforma di trading</string>
+    <string name="backend" formatted="false">URL backend personalizzato</string>
+    <string name="language" formatted="false">Lingua</string>
+    <string name="logout" formatted="false">Disconnetti</string>
+    <string name="positions" formatted="false">Posizioni</string>
+    <string name="orders" formatted="false">Ordini</string>
+    <string name="market" formatted="false">Dati di mercato</string>
+    <string name="wallet" formatted="false">Wallet</string>
+    <string name="all_wallets" formatted="false">Tutti i wallet</string>
+    <string name="retry" formatted="false">Riprova</string>
+    <string name="loading" formatted="false">Caricamento…</string>
+    <string name="size" formatted="false">Dimensione</string>
+    <string name="average_price" formatted="false">Prezzo medio</string>
+    <string name="mark_price" formatted="false">Prezzo di riferimento</string>
+    <string name="pnl" formatted="false">PnL non realizzato</string>
+    <string name="instrument" formatted="false">Strumento</string>
+    <string name="price" formatted="false">Prezzo</string>
+    <string name="filled" formatted="false">Eseguito</string>
+    <string name="status" formatted="false">Stato</string>
+    <string name="side" formatted="false">Direzione</string>
+    <string name="open" formatted="false">Open</string>
+    <string name="high" formatted="false">High</string>
+    <string name="low" formatted="false">Low</string>
+    <string name="close" formatted="false">Close</string>
+    <string name="volume" formatted="false">Volume</string>
+    <string name="timeframe" formatted="false">Intervallo</string>
+    <string name="no_candles" formatted="false">Nessuna candela disponibile</string>
+    <string name="backend_warning" formatted="false">Cambiare backend ti disconnetterà e azzererà lo stato locale dell\'app. Dovrai accedere di nuovo al nuovo URL.</string>
+    <string name="home" formatted="false">Home</string>
+    <string name="alerts" formatted="false">Avvisi</string>
+    <string name="settings" formatted="false">Impostazioni</string>
+    <string name="save" formatted="false">Salva</string>
+    <string name="refresh" formatted="false">Refresh</string>
+    <string name="exchange" formatted="false">Exchange</string>
+    <string name="load_market" formatted="false">Load candles</string>
+    <string name="empty" formatted="false">No records available.</string>
+    <string name="snapshot_note" formatted="false">Snapshot data. Refresh to retrieve the latest available records.</string>
+    <string name="chart_description" formatted="false">Historical candle chart. Exact values are listed below.</string>
+    <string name="error_origin" formatted="false">Enter a valid HTTPS backend origin.</string>
+    <string name="error_credentials" formatted="false">The username or password is incorrect.</string>
+    <string name="error_session" formatted="false">Your session expired. Please sign in again.</string>
+    <string name="error_network" formatted="false">Could not reach the backend. Check your connection and try again.</string>
+    <string name="error_service" formatted="false">The backend could not complete this request. Please try again.</string>
+    <string name="error_unknown" formatted="false">Something went wrong. Please try again.</string>
+    <string name="dismiss" formatted="false">Ignora</string>
+    <string name="paper" formatted="false">Demo</string>
+    <string name="safety_critical" formatted="false">Safety critical</string>
+    <string name="snapshot_limit" formatted="false">This view shows current positions and up to 100 recent orders and alerts; it is not a complete history.</string>
+    <string name="chart_window" formatted="false">The chart shows the last 100 retrieved candles.</string>
+    <string name="local_network_explanation" formatted="false">For a backend on your local network, allow local network access before signing in. Public internet backends do not need this permission.</string>
+    <string name="local_network_allow" formatted="false">Allow local network</string>
+    <string name="local_network_settings" formatted="false">Open app settings</string>
+    <string name="order_new" formatted="false">New Order</string>
+    <string name="order_entry" formatted="false">New Manual Order</string>
+    <string name="order_confirm" formatted="false">Confirm Order</string>
+    <string name="order_quantity" formatted="false">Quantità</string>
+    <string name="order_type" formatted="false">Order Type</string>
+    <string name="order_stop_price" formatted="false">Stop Price</string>
+    <string name="order_mode" formatted="false">Modalità</string>
+    <string name="order_buy" formatted="false">Acquista</string>
+    <string name="order_sell" formatted="false">Vendi</string>
+    <string name="order_market" formatted="false">Mercato</string>
+    <string name="order_limit" formatted="false">Limite</string>
+    <string name="order_stop" formatted="false">Stop</string>
+    <string name="order_stop_limit" formatted="false">Stop Limit</string>
+    <string name="order_live" formatted="false">Live</string>
+    <string name="order_review" formatted="false">Review Order</string>
+    <string name="order_back" formatted="false">Back</string>
+    <string name="order_submit" formatted="false">Confirm Order</string>
+    <string name="order_submitting" formatted="false">Submitting…</string>
+    <string name="order_leverage" formatted="false">Leva</string>
+    <string name="order_reduce_only" formatted="false">Reduce Only</string>
+    <string name="order_observation_only" formatted="false">This instrument is observation-only — place orders on an execution-capable instrument.</string>
+    <string name="order_unknown_instrument" formatted="false">This instrument is not recognised. Reload the list and try again.</string>
+    <string name="order_caps_violation" formatted="false">This order would exceed your account safety caps. Review your risk settings and retry.</string>
+    <string name="order_rejected" formatted="false">Order creation failed</string>
+    <string name="order_cancel_title" formatted="false">Annullare l\'ordine?</string>
+    <string name="order_cancel_confirm" formatted="false">Annulla ordine</string>
+    <string name="order_keep_open" formatted="false">Mantieni aperto</string>
+    <string name="order_select_wallet" formatted="false">Select a wallet on Home before placing an order.</string>
+    <string name="order_created" formatted="false">Order submitted. Refresh to check execution status.</string>
+    <string name="order_cancel_requested" formatted="false">Cancellation requested. Refresh to check the order status.</string>
+    <string name="order_unknown_outcome" formatted="false">The request outcome is unknown. Check status before taking further action.</string>
+    <string name="order_check_status" formatted="false">Check status</string>
+    <string name="order_retry_intent" formatted="false">Retry same order</string>
+    <string name="order_catalog_error" formatted="false">Could not load exchanges or instruments. Try again.</string>
+    <string name="order_no_instruments" formatted="false">No instruments available for this exchange.</string>
+    <string name="order_invalid_form" formatted="false">Enter positive quantities and required prices. Optional leverage must be a positive whole number.</string>
+    <string name="order_refresh_failed" formatted="false">The request was accepted, but the latest records could not be loaded. Refresh to check status.</string>
+    <string name="order_forbidden" formatted="false">You no longer have permission for this action.</string>
+    <string name="order_session_changed" formatted="false">The session or wallet changed. Open a new order from the current account.</string>
+    <string name="order_enabled" formatted="false">Enabled</string>
+    <string name="order_disabled" formatted="false">Disabled</string>
+    <string name="system_tools" formatted="false">Overview</string>
+    <string name="desk_attach_button" formatted="false">Aggiungi osservatore</string>
+    <string name="desk_attach_desk_label" formatted="false">Desk</string>
+    <string name="desk_nav_title" formatted="false">I miei desk</string>
+    <string name="desk_primary_badge" formatted="false">Principale</string>
+    <string name="desk_attach_username_placeholder" formatted="false">Nome utente esatto dell’osservatore</string>
+    <string name="desk_attach_validation_username" formatted="false">Inserisci il nome utente di un osservatore.</string>
+    <string name="desk_description_unavailable" formatted="false">Nessuna descrizione fornita.</string>
+    <string name="desk_attach_help" formatted="false">Inserisci il nome utente esatto dell’osservatore. Il nuovo desk sarà disponibile solo dopo la disconnessione e un nuovo accesso.</string>
+    <string name="desk_attach_success_message" formatted="false">L’osservatore deve disconnettersi e accedere di nuovo per usare il nuovo desk.</string>
+    <string name="desk_empty_message" formatted="false">Il tuo account non è associato ad alcun desk.</string>
+    <string name="desk_load_error" formatted="false">Impossibile caricare i desk. Riprova.</string>
+    <string name="settings_account_email" formatted="false">Email</string>
+    <string name="settings_account_role">Ruolo: %1$s</string>
+    <string name="settings_app_info_version" formatted="false">Versione</string>
+    <string name="settings_app_info_build" formatted="false">Build</string>
+    <string name="settings_logout_confirm_title" formatted="false">Disconnettersi?</string>
+    <string name="settings_logout_confirm_message" formatted="false">Sei sicuro di voler uscire?</string>
+    <string name="settings_connection_change_backend_title" formatted="false">Cambiare backend?</string>
+    <string name="settings_connection_change_backend_message" formatted="false">Cambiare backend ti disconnetterà e azzererà lo stato locale dell\'app. Dovrai accedere di nuovo al nuovo URL.</string>
+    <string name="common_continue" formatted="false">Continua</string>
+    <string name="backend_url_cancel" formatted="false">Annulla</string>
+    <string name="market_search" formatted="false">Cerca strumenti</string>
+    <string name="market_view_only" formatted="false">Solo visualizzazione</string>
+    <string name="market_catalog_retry" formatted="false">Riprova</string>
+    <string name="market_picker_close" formatted="false">Annulla</string>
+    <string name="market_no_matches" formatted="false">\@string/empty</string>
+    <string name="market_catalog_error" formatted="false">\@string/error_unknown</string>
+    <string name="system_health" formatted="false">Stato del sistema</string>
+    <string name="system_strategies" formatted="false">Strategie</string>
+    <string name="system_backtests" formatted="false">Backtest</string>
+    <string name="system_users" formatted="false">Utenti</string>
+    <string name="system_delegates" formatted="false">Delegati AI</string>
+    <string name="system_version" formatted="false">Versione</string>
+    <string name="system_connections" formatted="false">Connessioni attive</string>
+    <string name="system_subscribers" formatted="false">Sottoscrittori ZMQ</string>
+    <string name="system_tasks" formatted="false">Task dei sottoscrittori</string>
+    <string name="system_topics" formatted="false">Argomenti attivi</string>
+    <string name="system_clients" formatted="false">Client attivi</string>
+    <string name="system_gaps" formatted="false">Lacune rilevate</string>
+    <string name="system_resets" formatted="false">Reset di sessione</string>
+    <string name="system_duplicates" formatted="false">Duplicati</string>
+    <string name="system_joins" formatted="false">Ingressi a metà flusso</string>
+    <string name="system_unstamped" formatted="false">Rifiutati (senza timbro)</string>
+    <string name="system_rest_clients" formatted="false">Client REST monitorati</string>
+    <string name="system_initial_cash" formatted="false">Capitale iniziale</string>
+    <string name="system_period" formatted="false">Periodo</string>
+    <string name="system_created" formatted="false">Creato</string>
+    <string name="system_max_orders" formatted="false">Max ordini aperti</string>
+    <string name="system_max_daily" formatted="false">Max USD giornaliero</string>
+    <string name="system_default" formatted="false">Predefinito</string>
+    <string name="system_trader" formatted="false">Stato del trader</string>
+    <string name="system_running" formatted="false">In esecuzione</string>
+    <string name="system_stopped" formatted="false">Arrestato</string>
+    <string name="system_mode" formatted="false">Modalità</string>
+    <string name="system_autostart" formatted="false">Avvio automatico</string>
+    <string name="system_active" formatted="false">Attivo</string>
+    <string name="system_inactive" formatted="false">Inattivo</string>
+    <string name="system_revoked" formatted="false">Revocato</string>
+    <string name="records_open" formatted="false">Open</string>
+    <string name="records_recent" formatted="false">Recenti</string>
+    <string name="records_fills" formatted="false">Esecuzioni</string>
+    <string name="records_refresh" formatted="false">Refresh</string>
+    <string name="records_fee" formatted="false">Fee</string>
+    <string name="records_details" formatted="false">Details</string>
+    <string name="records_hide_details" formatted="false">\@string/close</string>
+    <string name="records_thread" formatted="false">Thread</string>
+    <string name="records_source_topic" formatted="false">Argomento di origine</string>
+    <string name="notification_defaults_title" formatted="false">Impostazioni predefinite utente</string>
+    <string name="notification_defaults_footer" formatted="false">I valori predefiniti si applicano quando nessun override del dispositivo corrisponde a un\'allerta in arrivo.</string>
+    <string name="notification_defaults_enabled" formatted="false">Enabled</string>
+    <string name="notification_defaults_priority" formatted="false">Priorità minima</string>
+    <string name="notification_defaults_load_failed" formatted="false">Impossibile caricare le preferenze</string>
+    <string name="notification_defaults_save_failed" formatted="false">Impossibile salvare le preferenze</string>
+    <string name="notification_defaults_low" formatted="false">Low</string>
+    <string name="notification_defaults_medium" formatted="false">Media</string>
+    <string name="notification_defaults_high" formatted="false">High</string>
+    <string name="notification_defaults_fill" formatted="false">Ordine eseguito</string>
+    <string name="notification_defaults_rejected" formatted="false">Ordine rifiutato</string>
+    <string name="notification_defaults_stop" formatted="false">Stop-loss attivato</string>
+    <string name="notification_defaults_margin" formatted="false">Avviso di margine</string>
+    <string name="notification_defaults_system" formatted="false">Errore di sistema</string>
+    <string name="notification_defaults_saved" formatted="false">OK</string>
+    <string name="signals_title" formatted="false">Segnali</string>
+    <string name="signals_strength" formatted="false">Forza</string>
+    <string name="signals_price" formatted="false">Prezzo</string>
+    <string name="signals_reason" formatted="false">Motivo:</string>
+    <string name="signals_strong" formatted="false">Forte</string>
+    <string name="signals_medium" formatted="false">Media</string>
+    <string name="signals_weak" formatted="false">Debole</string>
+    <string name="signals_very_weak" formatted="false">Molto debole</string>
+    <string name="signals_total" formatted="false">Totale</string>
+    <string name="signals_buy" formatted="false">Acquista</string>
+    <string name="signals_sell" formatted="false">Vendi</string>
+    <string name="signals_average_strength" formatted="false">Forza media</string>
+    <string name="signals_filter" formatted="false">Filtra per strategia</string>
+    <string name="signals_all_strategies" formatted="false">Tutte le strategie</string>
+    <string name="signals_empty" formatted="false">Nessun segnale di trading corrisponde ai filtri attuali.</string>
+    <string name="signals_export" formatted="false">Esporta</string>
+    <string name="signals_export_failed" formatted="false">Invio non riuscito</string>
+    <string name="venue_accounts_title" formatted="false">Conti della piattaforma</string>
+    <string name="venue_accounts_refresh" formatted="false">Refresh</string>
+    <string name="venue_accounts_failed" formatted="false">Impossibile caricare lo stato del conto della piattaforma. Il conto non è vuoto; al momento i dati sono semplicemente indisponibili.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Dati autorevoli della piattaforma in tempo reale, rilevati nel periodo di validità.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Le righe non contrassegnate come Tempo reale mostrano gli ultimi dati noti, simulati o non disponibili — non sono mai saldi ufficiali della piattaforma in tempo reale.</string>
+    <string name="venue_accounts_valuation" formatted="false">Valuation</string>
+    <string name="venue_accounts_balances" formatted="false">Saldi</string>
+    <string name="venue_accounts_observed" formatted="false">Observed at</string>
+    <string name="venue_accounts_source" formatted="false">Source observation</string>
+    <string name="venue_accounts_total" formatted="false">Totale</string>
+    <string name="venue_accounts_free" formatted="false">Disponibile</string>
+    <string name="venue_accounts_used" formatted="false">Usato</string>
+    <string name="venue_accounts_numeric_source" formatted="false">Numeric provenance</string>
+    <string name="venue_accounts_positions" formatted="false">Posizioni aperte</string>
+    <string name="venue_accounts_funding" formatted="false">Finanziamento</string>
+    <string name="venue_accounts_reconciliation" formatted="false">Reconciliation status</string>
+    <string name="venue_accounts_evaluation" formatted="false">Evaluation status</string>
+    <string name="venue_accounts_deadline" formatted="false">Authority deadline</string>
+    <string name="positions_timeline_controls_window" formatted="false">Intervallo</string>
+    <string name="positions_timeline_controls_granularity" formatted="false">Granularità</string>
+    <string name="positions_timeline_controls_valuationcurrency" formatted="false">Valuta di riferimento</string>
+    <string name="positions_timeline_controls_last24hours" formatted="false">Ultime 24 ore</string>
+    <string name="positions_timeline_controls_last7days" formatted="false">Ultimi 7 giorni</string>
+    <string name="positions_timeline_controls_last30days" formatted="false">Ultimi 30 giorni</string>
+    <string name="positions_timeline_controls_last90days" formatted="false">Ultimi 90 giorni</string>
+    <string name="positions_timeline_error_title" formatted="false">Impossibile caricare la cronologia P&amp;L</string>
+    <string name="positions_timeline_empty_message" formatted="false">Nessun punto P&amp;L disponibile per questo intervallo.</string>
+    <string name="positions_timeline_nowallet_message" formatted="false">Scegli un portafoglio per visualizzarne la cronologia P&amp;L.</string>
+    <string name="positions_timeline_incompleteness_title" formatted="false">Perché alcuni punti sono incompleti</string>
+    <string name="positions_timeline_incompleteness_description" formatted="false">I motivi si riferiscono all\'intero intervallo caricato. I conteggi possono sovrapporsi quando un punto ha più di una causa.</string>
+    <string name="positions_timeline_incompleteness_affectedpoints">Affected points: %1$s</string>
+    <string name="positions_timeline_chart_title" formatted="false">Andamento del P&amp;L</string>
+    <string name="positions_timeline_chart_net" formatted="false">P&amp;L netto</string>
+    <string name="positions_timeline_chart_realized" formatted="false">P&amp;L realizzato</string>
+    <string name="positions_timeline_chart_unrealized" formatted="false">P&amp;L non realizzato</string>
+    <string name="positions_timeline_attribution_title" formatted="false">Attribuzione P&amp;L più recente</string>
+    <string name="positions_timeline_attribution_nostrategy" formatted="false">Nessuna strategia comprovata</string>
+    <string name="positions_timeline_attribution_withheld" formatted="false">Non verificabile</string>
+    <string name="positions_timeline_attribution_valuesemantics" formatted="false">Il valore zero visualizzato è comprovato. «Non verificabile» indica che non è stato possibile comprovare il valore.</string>
+    <string name="positions_timeline_contributions_title" formatted="false">Contributi più recenti per strumento</string>
+    <string name="positions_timeline_contributions_realized" formatted="false">P&amp;L realizzato</string>
+    <string name="positions_timeline_contributions_fees" formatted="false">Commissioni</string>
+    <string name="positions_timeline_contributions_accrual" formatted="false">Funding maturato</string>
+    <string name="positions_timeline_contributions_unrealized" formatted="false">P&amp;L non realizzato</string>
+    <string name="positions_timeline_incompleteness_reasons_scope_order_regression" formatted="false">Regressione temporale nell\'ordine dell\'ambito</string>
+    <string name="positions_timeline_incompleteness_reasons_before_activation" formatted="false">Il punto precede l\'attivazione</string>
+    <string name="positions_timeline_incompleteness_reasons_activation_baseline_non_finite" formatted="false">Il valore iniziale all\'attivazione non è finito</string>
+    <string name="positions_timeline_incompleteness_reasons_fill_evidence_gap" formatted="false">Lacuna nelle evidenze persistenti delle esecuzioni</string>
+    <string name="positions_timeline_incompleteness_reasons_seed_quantity_non_finite" formatted="false">La quantità iniziale non è finita</string>
+    <string name="positions_timeline_incompleteness_reasons_cost_basis_unavailable" formatted="false">Prezzo di carico non disponibile</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_provenance_unproven" formatted="false">Provenienza del prezzo di esecuzione non comprovata</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_size_invalid" formatted="false">Quantità di esecuzione non valida</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_invalid" formatted="false">Prezzo di esecuzione non valido</string>
+    <string name="positions_timeline_incompleteness_reasons_fx_conversion_unproven" formatted="false">Conversione FX non comprovata</string>
+    <string name="positions_timeline_incompleteness_reasons_mark_unavailable" formatted="false">Prezzo di riferimento non disponibile</string>
+    <string name="positions_timeline_incompleteness_reasons_cumulative_non_finite" formatted="false">Il valore cumulativo non è finito</string>
+    <string name="positions_timeline_incompleteness_reasons_unrealized_non_finite" formatted="false">Il P&amp;L non realizzato non è finito</string>
+    <string name="positions_timeline_incompleteness_reasons_net_non_finite" formatted="false">Il P&amp;L netto non è finito</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_value_non_finite" formatted="false">Il valore di attribuzione non è finito</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">Riconciliazione dell\'attribuzione non riuscita</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">Riconciliazione dei totali P&amp;L per strumento non riuscita</string>
+    <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">Esecuzione di transazione arrivata in ritardo con timestamp precedente all\'attivazione</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Attribution sum is not representable</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Instrument sum is not representable</string>
+    <string name="positions_timeline_executionhistory_title" formatted="false">Operator-corrected execution history</string>
+    <string name="positions_timeline_executionhistory_summary" formatted="false">An operator repudiated recorded executions in this scope. Every correction listed here is excluded from the figures on this page.</string>
+    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Repudiated execution</string>
+    <string name="positions_timeline_executionhistory_correctionid" formatted="false">Correction record</string>
+    <string name="positions_timeline_equity_title" formatted="false">Equity overlay</string>
+    <string name="positions_timeline_equity_serieslabel" formatted="false">Patrimonio</string>
+    <string name="positions_timeline_equity_drawdown_current" formatted="false">Current drawdown</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Spot venue only — balances held on other venues are excluded.</string>
+    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">External deposits and withdrawals are not adjusted out.</string>
+    <string name="positions_timeline_equity_honesty_restatedfrom">These figures are restated from %1$s at each minute\'s close, not sampled natively in this currency.</string>
+    <string name="positions_timeline_equity_honesty_pricedon">Priced on %1$s.</string>
+    <string name="positions_timeline_equity_honesty_conversionwithheld">Minutes dropped for want of a proven close: %1$s.</string>
+    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Drawdown is withheld on a converted basis, because the running peak is tracked in the sampled currency.</string>
+    <string name="positions_timeline_equity_cashposition_position" formatted="false">Position value</string>
+    <string name="positions_timeline_equity_cashposition_cash" formatted="false">Cash</string>
+    <string name="pnl_provenance">Calculation: %1$s · Mark source: %2$s · As of: %3$s</string>
+    <string name="pnl_equity_coverage">Equity sampled: %1$s · Complete minutes: %2$s</string>
+    <string name="pnl_execution_history">Execution history: %1$s</string>
+    <string name="process_title" formatted="false">Processi</string>
+    <string name="process_running" formatted="false">In esecuzione</string>
+    <string name="process_stopped" formatted="false">Arrestato</string>
+    <string name="process_feeds" formatted="false">Feed</string>
+    <string name="process_strategies" formatted="false">Strategie</string>
+    <string name="process_executors" formatted="false">Esecutori</string>
+    <string name="process_brokers" formatted="false">Broker</string>
+    <string name="process_memory" formatted="false">Memoria</string>
+    <string name="process_cpu" formatted="false">CPU</string>
+    <string name="process_empty" formatted="false">Nessun processo configurato.</string>
+    <string name="process_start" formatted="false">Avvia</string>
+    <string name="process_stop" formatted="false">Stop</string>
+    <string name="process_restart" formatted="false">Riavvia</string>
+    <string name="process_cancel" formatted="false">Annulla</string>
+    <string name="process_stale" formatted="false">Questo processo non può più essere controllato da qui. Aggiorna i dati e riprova.</string>
+    <string name="process_partial" formatted="false">Il processo è stato arrestato, ma non può più essere riavviato da qui. Aggiorna i dati e riprova.</string>
+    <string name="process_confirm" formatted="false">Confirm process action</string>
+    <string name="process_confirm_message" formatted="false">Apply this action to the selected process?</string>
+    <string name="process_intent_saved" formatted="false">Desired state saved. The owning coordinator will apply it.</string>
+    <string name="process_accepted" formatted="false">Process action accepted.</string>
+    <string name="process_unknown" formatted="false">The command outcome is unknown. Controls remain locked: a status refresh cannot prove whether this command was applied.</string>
+    <string name="process_partial_unknown" formatted="false">The process was stopped, but the restart outcome is unknown. Controls remain locked: a status refresh cannot prove whether the restart was applied.</string>
+    <string name="process_rejected" formatted="false">The process action failed.</string>
+    <string name="process_load_failed" formatted="false">Could not refresh process status.</string>
+    <string name="process_config_failed" formatted="false">Process controls are unavailable because configuration could not be refreshed.</string>
+    <string name="process_enable" formatted="false">Enable</string>
+    <string name="process_disable" formatted="false">Disable</string>
+    <string name="ai_reviews_pending_title" formatted="false">Revisioni in attesa</string>
+    <string name="ai_reviews_decisions_title" formatted="false">Decisioni AI</string>
+    <string name="ai_reviews_deadline" formatted="false">Scadenza</string>
+    <string name="ai_reviews_expired" formatted="false">Scaduta</string>
+    <string name="ai_reviews_rationale" formatted="false">Motivazione</string>
+    <string name="ai_reviews_rationale_long">La motivazione è troppo lunga (limite: %1$d caratteri).</string>
+    <string name="ai_reviews_approve" formatted="false">Approva</string>
+    <string name="ai_reviews_reject" formatted="false">Rifiuta</string>
+    <string name="ai_reviews_pending" formatted="false">In attesa</string>
+    <string name="ai_reviews_superseded" formatted="false">Ritirata</string>
+    <string name="ai_reviews_decided" formatted="false">Deciso il</string>
+    <string name="ai_reviews_reject_message" formatted="false">Il rifiuto pone il veto all\'operazione per cui è stata aperta questa revisione. Questa azione non può essere annullata.</string>
+    <string name="ai_reviews_cancel" formatted="false">Annulla</string>
+    <string name="ai_reviews_peer_resolved" formatted="false">Un altro delegato ha già risolto questa revisione.</string>
+    <string name="ai_reviews_expired_message" formatted="false">Questa revisione ha superato la scadenza ed è scaduta.</string>
+    <string name="ai_reviews_missing" formatted="false">Questa revisione non esiste più.</string>
+    <string name="ai_reviews_denied" formatted="false">Il tuo accesso come delegato è cambiato. Ricarica prima di decidere.</string>
+    <string name="ai_reviews_load_failed" formatted="false">Could not refresh reviews. Previously loaded reviews remain visible.</string>
+    <string name="ai_reviews_check_status" formatted="false">Check status</string>
+    <string name="ai_reviews_retry" formatted="false">Retry original decision</string>
+    <string name="ai_reviews_confirm" formatted="false">Confirm review decision</string>
+    <string name="ai_reviews_accepted" formatted="false">Decision accepted</string>
+    <string name="ai_reviews_rejected" formatted="false">Decision rejected by the server</string>
+    <string name="ai_reviews_unknown" formatted="false">Outcome unknown. Check status before retrying.</string>
+    <string name="positions_accessibility_label_closebutton" formatted="false">Chiudi posizione</string>
+    <string name="positions_accessibility_label_reducebutton" formatted="false">Riduci posizione</string>
+    <string name="positions_reduce_cancel" formatted="false">Annulla</string>
+    <string name="positions_reduce_footer" formatted="false">Il 100% chiude la posizione. Invia un ordine a mercato reduce-only di segno opposto.</string>
+    <string name="positions_reduce_sizelabel" formatted="false">Quantità da ridurre</string>
+    <string name="trading_bracket_attach" formatted="false">Aggiungi SL / TP</string>
+    <string name="trading_bracket_stoplosslabel" formatted="false">Stop loss</string>
+    <string name="trading_bracket_takeprofitlabel" formatted="false">Take profit</string>
+    <string name="trading_trailingstop_attach" formatted="false">Aggiungi trailing stop</string>
+    <string name="trading_trailingstop_trailamountlabel" formatted="false">Distanza di trailing</string>
+    <string name="position_action_review" formatted="false">Review position action</string>
+    <string name="position_action_confirm" formatted="false">Confirm action</string>
+    <string name="position_action_accepted" formatted="false">Request accepted. Refresh to check execution status.</string>
+    <string name="position_action_retry" formatted="false">Retry same request</string>
+    <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
+    <string name="position_action_cycle" formatted="false">Position cycle</string>
+    <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+</resources>

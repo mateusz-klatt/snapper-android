@@ -19,6 +19,7 @@ import androidx.compose.ui.unit.dp
 import ch.snapper.android.AppActions
 import ch.snapper.android.AppUiState
 import ch.snapper.android.R
+import ch.snapper.android.data.SupportedLanguages
 
 @Composable
 internal fun LoginScreen(state: AppUiState, actions: AppActions) {
@@ -55,10 +56,33 @@ internal fun LoginScreen(state: AppUiState, actions: AppActions) {
 
 @Composable
 internal fun LanguagePicker(language: String, onSelect: (String) -> Unit) {
-    Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
-        Text(stringResource(R.string.language))
-        FilterChip(selected = language == "en", onClick = { onSelect("en") }, label = { Text(stringResource(R.string.english)) })
-        FilterChip(selected = language == "pl", onClick = { onSelect("pl") }, label = { Text(stringResource(R.string.polish)) })
+    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
+            Text(stringResource(R.string.language))
+            FilterChip(selected = language == "en", onClick = { onSelect("en") }, label = { Text(stringResource(R.string.english)) })
+            FilterChip(selected = language == "pl", onClick = { onSelect("pl") }, label = { Text(stringResource(R.string.polish)) })
+        }
+        LanguageMenu(language, onSelect)
+    }
+}
+
+@Composable
+private fun LanguageMenu(language: String, onSelect: (String) -> Unit) {
+    var expanded by remember { mutableStateOf(false) }
+    var query by remember { mutableStateOf("") }
+    val label = SupportedLanguages.find(language)?.nativeName ?: stringResource(R.string.system_default)
+    Box {
+        OutlinedButton(onClick = { query = ""; expanded = true }, modifier = Modifier.testTag("language.menu")) { Text("${stringResource(R.string.language)}: $label") }
+        DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }, modifier = Modifier.heightIn(max = 360.dp).testTag("language.options")) {
+            OutlinedTextField(value = query, onValueChange = { query = it }, singleLine = true,
+                label = { Text(stringResource(R.string.language)) }, modifier = Modifier.padding(8.dp).testTag("language.search"))
+            DropdownMenuItem(text = { Text(stringResource(R.string.system_default)) },
+                onClick = { expanded = false; onSelect("") }, modifier = Modifier.testTag("language.option.default"))
+            SupportedLanguages.options.filter { it.tag.contains(query, ignoreCase = true) || it.nativeName.contains(query, ignoreCase = true) }.forEach { option ->
+                DropdownMenuItem(text = { Text(option.nativeName) }, onClick = { expanded = false; onSelect(option.tag) },
+                    modifier = Modifier.testTag("language.option.${option.tag}"))
+            }
+        }
     }
 }
 

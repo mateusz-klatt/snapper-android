@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="privacy_policy" formatted="false">Privacy policy</string>
+    <string name="username" formatted="false">Имя пользователя</string>
+    <string name="password" formatted="false">Пароль</string>
+    <string name="sign_in" formatted="false">Войти</string>
+    <string name="session_retention_notice" formatted="false">Staying signed in requires Android 11+, a secure screen lock, and authentication with your PIN, pattern, password or strong biometrics within the last 5 minutes. Otherwise, sign in again after the app restarts.</string>
+    <string name="subtitle" formatted="false">Торговая платформа</string>
+    <string name="backend" formatted="false">Свой URL бэкенда</string>
+    <string name="language" formatted="false">Язык</string>
+    <string name="logout" formatted="false">Выйти</string>
+    <string name="positions" formatted="false">Позиции</string>
+    <string name="orders" formatted="false">Ордера</string>
+    <string name="market" formatted="false">Рыночные данные</string>
+    <string name="wallet" formatted="false">Кошелёк</string>
+    <string name="all_wallets" formatted="false">Все кошельки</string>
+    <string name="retry" formatted="false">Повторить</string>
+    <string name="loading" formatted="false">Загрузка…</string>
+    <string name="size" formatted="false">Размер</string>
+    <string name="average_price" formatted="false">Средняя цена</string>
+    <string name="mark_price" formatted="false">Маркировочная цена</string>
+    <string name="pnl" formatted="false">Нереализованный PnL</string>
+    <string name="instrument" formatted="false">Инструмент</string>
+    <string name="price" formatted="false">Цена</string>
+    <string name="filled" formatted="false">Filled</string>
+    <string name="status" formatted="false">Статус</string>
+    <string name="side" formatted="false">Сторона</string>
+    <string name="open" formatted="false">Open</string>
+    <string name="high" formatted="false">High</string>
+    <string name="low" formatted="false">Low</string>
+    <string name="close" formatted="false">Close</string>
+    <string name="volume" formatted="false">Объём</string>
+    <string name="timeframe" formatted="false">Интервал</string>
+    <string name="no_candles" formatted="false">Пока нет свечей</string>
+    <string name="backend_warning" formatted="false">При смене бэкенда будет выполнен выход, а локальное состояние приложения будет очищено. Нужно будет снова войти по новому URL.</string>
+    <string name="home" formatted="false">Главная</string>
+    <string name="alerts" formatted="false">Оповещения</string>
+    <string name="settings" formatted="false">Настройки</string>
+    <string name="save" formatted="false">Сохранить</string>
+    <string name="refresh" formatted="false">Refresh</string>
+    <string name="exchange" formatted="false">Биржа</string>
+    <string name="load_market" formatted="false">Load candles</string>
+    <string name="empty" formatted="false">No records available.</string>
+    <string name="snapshot_note" formatted="false">Snapshot data. Refresh to retrieve the latest available records.</string>
+    <string name="chart_description" formatted="false">Historical candle chart. Exact values are listed below.</string>
+    <string name="error_origin" formatted="false">Enter a valid HTTPS backend origin.</string>
+    <string name="error_credentials" formatted="false">The username or password is incorrect.</string>
+    <string name="error_session" formatted="false">Your session expired. Please sign in again.</string>
+    <string name="error_network" formatted="false">Could not reach the backend. Check your connection and try again.</string>
+    <string name="error_service" formatted="false">The backend could not complete this request. Please try again.</string>
+    <string name="error_unknown" formatted="false">Something went wrong. Please try again.</string>
+    <string name="dismiss" formatted="false">Закрыть</string>
+    <string name="paper" formatted="false">Демо</string>
+    <string name="safety_critical" formatted="false">Safety critical</string>
+    <string name="snapshot_limit" formatted="false">This view shows current positions and up to 100 recent orders and alerts; it is not a complete history.</string>
+    <string name="chart_window" formatted="false">The chart shows the last 100 retrieved candles.</string>
+    <string name="local_network_explanation" formatted="false">For a backend on your local network, allow local network access before signing in. Public internet backends do not need this permission.</string>
+    <string name="local_network_allow" formatted="false">Allow local network</string>
+    <string name="local_network_settings" formatted="false">Open app settings</string>
+    <string name="order_new" formatted="false">New Order</string>
+    <string name="order_entry" formatted="false">New Manual Order</string>
+    <string name="order_confirm" formatted="false">Confirm Order</string>
+    <string name="order_quantity" formatted="false">Количество</string>
+    <string name="order_type" formatted="false">Order Type</string>
+    <string name="order_stop_price" formatted="false">Stop Price</string>
+    <string name="order_mode" formatted="false">Режим</string>
+    <string name="order_buy" formatted="false">Купить</string>
+    <string name="order_sell" formatted="false">Продать</string>
+    <string name="order_market" formatted="false">Рыночный</string>
+    <string name="order_limit" formatted="false">Лимит</string>
+    <string name="order_stop" formatted="false">Stop</string>
+    <string name="order_stop_limit" formatted="false">Stop Limit</string>
+    <string name="order_live" formatted="false">Live</string>
+    <string name="order_review" formatted="false">Review Order</string>
+    <string name="order_back" formatted="false">Back</string>
+    <string name="order_submit" formatted="false">Confirm Order</string>
+    <string name="order_submitting" formatted="false">Submitting…</string>
+    <string name="order_leverage" formatted="false">Плечо</string>
+    <string name="order_reduce_only" formatted="false">Reduce Only</string>
+    <string name="order_observation_only" formatted="false">This instrument is observation-only — place orders on an execution-capable instrument.</string>
+    <string name="order_unknown_instrument" formatted="false">This instrument is not recognised. Reload the list and try again.</string>
+    <string name="order_caps_violation" formatted="false">This order would exceed your account safety caps. Review your risk settings and retry.</string>
+    <string name="order_rejected" formatted="false">Order creation failed</string>
+    <string name="order_cancel_title" formatted="false">Отменить ордер?</string>
+    <string name="order_cancel_confirm" formatted="false">Отменить ордер</string>
+    <string name="order_keep_open" formatted="false">Оставить открытым</string>
+    <string name="order_select_wallet" formatted="false">Select a wallet on Home before placing an order.</string>
+    <string name="order_created" formatted="false">Order submitted. Refresh to check execution status.</string>
+    <string name="order_cancel_requested" formatted="false">Cancellation requested. Refresh to check the order status.</string>
+    <string name="order_unknown_outcome" formatted="false">The request outcome is unknown. Check status before taking further action.</string>
+    <string name="order_check_status" formatted="false">Check status</string>
+    <string name="order_retry_intent" formatted="false">Retry same order</string>
+    <string name="order_catalog_error" formatted="false">Could not load exchanges or instruments. Try again.</string>
+    <string name="order_no_instruments" formatted="false">No instruments available for this exchange.</string>
+    <string name="order_invalid_form" formatted="false">Enter positive quantities and required prices. Optional leverage must be a positive whole number.</string>
+    <string name="order_refresh_failed" formatted="false">The request was accepted, but the latest records could not be loaded. Refresh to check status.</string>
+    <string name="order_forbidden" formatted="false">You no longer have permission for this action.</string>
+    <string name="order_session_changed" formatted="false">The session or wallet changed. Open a new order from the current account.</string>
+    <string name="order_enabled" formatted="false">Включено</string>
+    <string name="order_disabled" formatted="false">Отключено</string>
+    <string name="system_tools" formatted="false">Overview</string>
+    <string name="desk_attach_button" formatted="false">Добавить наблюдателя</string>
+    <string name="desk_attach_desk_label" formatted="false">Деск</string>
+    <string name="desk_nav_title" formatted="false">Мои дески</string>
+    <string name="desk_primary_badge" formatted="false">Основной</string>
+    <string name="desk_attach_username_placeholder" formatted="false">Точное имя пользователя наблюдателя</string>
+    <string name="desk_attach_validation_username" formatted="false">Введите имя пользователя наблюдателя.</string>
+    <string name="desk_description_unavailable" formatted="false">Описание отсутствует.</string>
+    <string name="desk_attach_help" formatted="false">Введите точное имя пользователя наблюдателя. Новый деск станет доступен только после выхода и повторного входа.</string>
+    <string name="desk_attach_success_message" formatted="false">Наблюдатель должен выйти и войти снова, чтобы получить доступ к новому деску.</string>
+    <string name="desk_empty_message" formatted="false">Ваш аккаунт не привязан ни к одному деску.</string>
+    <string name="desk_load_error" formatted="false">Не удалось загрузить дески. Попробуйте снова.</string>
+    <string name="settings_account_email" formatted="false">Эл. почта</string>
+    <string name="settings_account_role">Роль: %1$s</string>
+    <string name="settings_app_info_version" formatted="false">Версия</string>
+    <string name="settings_app_info_build" formatted="false">Сборка</string>
+    <string name="settings_logout_confirm_title" formatted="false">Выйти из аккаунта?</string>
+    <string name="settings_logout_confirm_message" formatted="false">Вы уверены, что хотите выйти?</string>
+    <string name="settings_connection_change_backend_title" formatted="false">Сменить бэкенд?</string>
+    <string name="settings_connection_change_backend_message" formatted="false">При смене бэкенда будет выполнен выход, а локальное состояние приложения будет очищено. Нужно будет снова войти по новому URL.</string>
+    <string name="common_continue" formatted="false">Продолжить</string>
+    <string name="backend_url_cancel" formatted="false">Cancel</string>
+    <string name="market_search" formatted="false">Поиск инструментов</string>
+    <string name="market_view_only" formatted="false">Только просмотр</string>
+    <string name="market_catalog_retry" formatted="false">Повторить</string>
+    <string name="market_picker_close" formatted="false">Cancel</string>
+    <string name="market_no_matches" formatted="false">\@string/empty</string>
+    <string name="market_catalog_error" formatted="false">\@string/error_unknown</string>
+    <string name="system_health" formatted="false">Состояние системы</string>
+    <string name="system_strategies" formatted="false">Стратегии</string>
+    <string name="system_backtests" formatted="false">Бэктесты</string>
+    <string name="system_users" formatted="false">Пользователи</string>
+    <string name="system_delegates" formatted="false">ИИ-делегаты</string>
+    <string name="system_version" formatted="false">Версия</string>
+    <string name="system_connections" formatted="false">Активные соединения</string>
+    <string name="system_subscribers" formatted="false">Подписчики ZMQ</string>
+    <string name="system_tasks" formatted="false">Задачи подписчиков</string>
+    <string name="system_topics" formatted="false">Активные темы</string>
+    <string name="system_clients" formatted="false">Активные клиенты</string>
+    <string name="system_gaps" formatted="false">Обнаруженные пропуски</string>
+    <string name="system_resets" formatted="false">Сбросы сессий</string>
+    <string name="system_duplicates" formatted="false">Дубликаты</string>
+    <string name="system_joins" formatted="false">Подключения в середине потока</string>
+    <string name="system_unstamped" formatted="false">Отклонённые (без метки)</string>
+    <string name="system_rest_clients" formatted="false">Отслеживаемые клиенты REST</string>
+    <string name="system_initial_cash" formatted="false">Начальный капитал</string>
+    <string name="system_period" formatted="false">Период</string>
+    <string name="system_created" formatted="false">Создан</string>
+    <string name="system_max_orders" formatted="false">Макс. открытые ордера</string>
+    <string name="system_max_daily" formatted="false">Макс. USD/день</string>
+    <string name="system_default" formatted="false">По умолчанию</string>
+    <string name="system_trader" formatted="false">Статус трейдера</string>
+    <string name="system_running" formatted="false">Выполняется</string>
+    <string name="system_stopped" formatted="false">Остановлен</string>
+    <string name="system_mode" formatted="false">Режим</string>
+    <string name="system_autostart" formatted="false">Автозапуск</string>
+    <string name="system_active" formatted="false">Активен</string>
+    <string name="system_inactive" formatted="false">Неактивен</string>
+    <string name="system_revoked" formatted="false">Отозван</string>
+    <string name="records_open" formatted="false">Open</string>
+    <string name="records_recent" formatted="false">Недавние</string>
+    <string name="records_fills" formatted="false">Исполнения</string>
+    <string name="records_refresh" formatted="false">Refresh</string>
+    <string name="records_fee" formatted="false">Fee</string>
+    <string name="records_details" formatted="false">Details</string>
+    <string name="records_hide_details" formatted="false">\@string/close</string>
+    <string name="records_thread" formatted="false">Поток</string>
+    <string name="records_source_topic" formatted="false">Исходный топик</string>
+    <string name="notification_defaults_title" formatted="false">Настройки пользователя по умолчанию</string>
+    <string name="notification_defaults_footer" formatted="false">Настройки по умолчанию применяются, если ни одна индивидуальная настройка устройства не подходит для входящего оповещения.</string>
+    <string name="notification_defaults_enabled" formatted="false">Включено</string>
+    <string name="notification_defaults_priority" formatted="false">Минимальный приоритет</string>
+    <string name="notification_defaults_load_failed" formatted="false">Не удалось загрузить настройки</string>
+    <string name="notification_defaults_save_failed" formatted="false">Не удалось сохранить настройки</string>
+    <string name="notification_defaults_low" formatted="false">Low</string>
+    <string name="notification_defaults_medium" formatted="false">Средний</string>
+    <string name="notification_defaults_high" formatted="false">High</string>
+    <string name="notification_defaults_fill" formatted="false">Ордер исполнен</string>
+    <string name="notification_defaults_rejected" formatted="false">Ордер отклонён</string>
+    <string name="notification_defaults_stop" formatted="false">Стоп-лосс сработал</string>
+    <string name="notification_defaults_margin" formatted="false">Предупреждение о марже</string>
+    <string name="notification_defaults_system" formatted="false">Системная ошибка</string>
+    <string name="notification_defaults_saved" formatted="false">OK</string>
+    <string name="signals_title" formatted="false">Сигналы</string>
+    <string name="signals_strength" formatted="false">Сила</string>
+    <string name="signals_price" formatted="false">Цена</string>
+    <string name="signals_reason" formatted="false">Причина:</string>
+    <string name="signals_strong" formatted="false">Сильный</string>
+    <string name="signals_medium" formatted="false">Средний</string>
+    <string name="signals_weak" formatted="false">Слабый</string>
+    <string name="signals_very_weak" formatted="false">Очень слабый</string>
+    <string name="signals_total" formatted="false">Всего</string>
+    <string name="signals_buy" formatted="false">Купить</string>
+    <string name="signals_sell" formatted="false">Продать</string>
+    <string name="signals_average_strength" formatted="false">Ср. сила</string>
+    <string name="signals_filter" formatted="false">Фильтр по стратегии</string>
+    <string name="signals_all_strategies" formatted="false">Все стратегии</string>
+    <string name="signals_empty" formatted="false">Ни один торговый сигнал не соответствует текущим фильтрам.</string>
+    <string name="signals_export" formatted="false">Экспорт</string>
+    <string name="signals_export_failed" formatted="false">Не удалось отправить</string>
+    <string name="venue_accounts_title" formatted="false">Биржевые счета</string>
+    <string name="venue_accounts_refresh" formatted="false">Refresh</string>
+    <string name="venue_accounts_failed" formatted="false">Не удалось загрузить состояние биржевого счёта. Счёт не пуст; данные просто временно недоступны.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Фактические данные биржи, полученные в рамках окна достоверности.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Строки без отметки «В реальном времени» показывают последние известные, смоделированные или недоступные данные — это никогда не достоверные биржевые балансы в реальном времени.</string>
+    <string name="venue_accounts_valuation" formatted="false">Valuation</string>
+    <string name="venue_accounts_balances" formatted="false">Балансы</string>
+    <string name="venue_accounts_observed" formatted="false">Observed at</string>
+    <string name="venue_accounts_source" formatted="false">Source observation</string>
+    <string name="venue_accounts_total" formatted="false">Всего</string>
+    <string name="venue_accounts_free" formatted="false">Доступно</string>
+    <string name="venue_accounts_used" formatted="false">Используется</string>
+    <string name="venue_accounts_numeric_source" formatted="false">Numeric provenance</string>
+    <string name="venue_accounts_positions" formatted="false">Открытые позиции</string>
+    <string name="venue_accounts_funding" formatted="false">Фандинг</string>
+    <string name="venue_accounts_reconciliation" formatted="false">Reconciliation status</string>
+    <string name="venue_accounts_evaluation" formatted="false">Evaluation status</string>
+    <string name="venue_accounts_deadline" formatted="false">Authority deadline</string>
+    <string name="positions_timeline_controls_window" formatted="false">Период</string>
+    <string name="positions_timeline_controls_granularity" formatted="false">Детализация</string>
+    <string name="positions_timeline_controls_valuationcurrency" formatted="false">Валюта оценки</string>
+    <string name="positions_timeline_controls_last24hours" formatted="false">Последние 24 часа</string>
+    <string name="positions_timeline_controls_last7days" formatted="false">Последние 7 дней</string>
+    <string name="positions_timeline_controls_last30days" formatted="false">Последние 30 дней</string>
+    <string name="positions_timeline_controls_last90days" formatted="false">Последние 90 дней</string>
+    <string name="positions_timeline_error_title" formatted="false">Не удалось загрузить динамику P&amp;L</string>
+    <string name="positions_timeline_empty_message" formatted="false">Для выбранного периода нет точек P&amp;L.</string>
+    <string name="positions_timeline_nowallet_message" formatted="false">Выберите кошелёк, чтобы посмотреть динамику его P&amp;L.</string>
+    <string name="positions_timeline_incompleteness_title" formatted="false">Причины неполноты точек P&amp;L</string>
+    <string name="positions_timeline_incompleteness_description" formatted="false">Причины относятся ко всему загруженному периоду. Если у точки несколько причин, она учитывается в каждой соответствующей категории.</string>
+    <string name="positions_timeline_incompleteness_affectedpoints">Affected points: %1$s</string>
+    <string name="positions_timeline_chart_title" formatted="false">Динамика P&amp;L</string>
+    <string name="positions_timeline_chart_net" formatted="false">Чистый P&amp;L</string>
+    <string name="positions_timeline_chart_realized" formatted="false">Реализованный P&amp;L</string>
+    <string name="positions_timeline_chart_unrealized" formatted="false">Unrealized P&amp;L</string>
+    <string name="positions_timeline_attribution_title" formatted="false">Атрибуция последней точки P&amp;L</string>
+    <string name="positions_timeline_attribution_nostrategy" formatted="false">Нет подтверждённой стратегии</string>
+    <string name="positions_timeline_attribution_withheld" formatted="false">Не подтверждено</string>
+    <string name="positions_timeline_attribution_valuesemantics" formatted="false">Отображаемое нулевое значение подтверждено. «Не подтверждено» означает, что достоверность значения установить не удалось.</string>
+    <string name="positions_timeline_contributions_title" formatted="false">Составляющие последней точки P&amp;L по инструментам</string>
+    <string name="positions_timeline_contributions_realized" formatted="false">Реализованный P&amp;L</string>
+    <string name="positions_timeline_contributions_fees" formatted="false">Комиссии</string>
+    <string name="positions_timeline_contributions_accrual" formatted="false">Начисленный фандинг</string>
+    <string name="positions_timeline_contributions_unrealized" formatted="false">Unrealized P&amp;L</string>
+    <string name="positions_timeline_incompleteness_reasons_scope_order_regression" formatted="false">Нарушена последовательность данных в области</string>
+    <string name="positions_timeline_incompleteness_reasons_before_activation" formatted="false">Точка предшествует активации</string>
+    <string name="positions_timeline_incompleteness_reasons_activation_baseline_non_finite" formatted="false">Базовое значение при активации не является конечным числом</string>
+    <string name="positions_timeline_incompleteness_reasons_fill_evidence_gap" formatted="false">Недостаточно сохранённых данных для подтверждения исполнения заявки</string>
+    <string name="positions_timeline_incompleteness_reasons_seed_quantity_non_finite" formatted="false">Начальное количество не является конечным числом</string>
+    <string name="positions_timeline_incompleteness_reasons_cost_basis_unavailable" formatted="false">Себестоимость недоступна</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_provenance_unproven" formatted="false">Происхождение цены исполнения не подтверждено</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_size_invalid" formatted="false">Некорректный объём исполнения</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_invalid" formatted="false">Некорректная цена исполнения</string>
+    <string name="positions_timeline_incompleteness_reasons_fx_conversion_unproven" formatted="false">FX-конвертация не подтверждена</string>
+    <string name="positions_timeline_incompleteness_reasons_mark_unavailable" formatted="false">Маркировочная цена недоступна</string>
+    <string name="positions_timeline_incompleteness_reasons_cumulative_non_finite" formatted="false">Накопленное значение не является конечным числом</string>
+    <string name="positions_timeline_incompleteness_reasons_unrealized_non_finite" formatted="false">Нереализованный P&amp;L не является конечным числом</string>
+    <string name="positions_timeline_incompleteness_reasons_net_non_finite" formatted="false">Чистый P&amp;L не является конечным числом</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_value_non_finite" formatted="false">Значение атрибуции не является конечным числом</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">Не удалось выполнить сверку атрибуции</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">Не удалось сверить суммы P&amp;L по инструментам</string>
+    <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">Поздно поступившее исполнение заявки с меткой времени до активации</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Attribution sum is not representable</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Instrument sum is not representable</string>
+    <string name="positions_timeline_executionhistory_title" formatted="false">Operator-corrected execution history</string>
+    <string name="positions_timeline_executionhistory_summary" formatted="false">An operator repudiated recorded executions in this scope. Every correction listed here is excluded from the figures on this page.</string>
+    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Repudiated execution</string>
+    <string name="positions_timeline_executionhistory_correctionid" formatted="false">Correction record</string>
+    <string name="positions_timeline_equity_title" formatted="false">Equity overlay</string>
+    <string name="positions_timeline_equity_serieslabel" formatted="false">Капитал</string>
+    <string name="positions_timeline_equity_drawdown_current" formatted="false">Current drawdown</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Spot venue only — balances held on other venues are excluded.</string>
+    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">External deposits and withdrawals are not adjusted out.</string>
+    <string name="positions_timeline_equity_honesty_restatedfrom">These figures are restated from %1$s at each minute\'s close, not sampled natively in this currency.</string>
+    <string name="positions_timeline_equity_honesty_pricedon">Priced on %1$s.</string>
+    <string name="positions_timeline_equity_honesty_conversionwithheld">Minutes dropped for want of a proven close: %1$s.</string>
+    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Drawdown is withheld on a converted basis, because the running peak is tracked in the sampled currency.</string>
+    <string name="positions_timeline_equity_cashposition_position" formatted="false">Position value</string>
+    <string name="positions_timeline_equity_cashposition_cash" formatted="false">Cash</string>
+    <string name="pnl_provenance">Calculation: %1$s · Mark source: %2$s · As of: %3$s</string>
+    <string name="pnl_equity_coverage">Equity sampled: %1$s · Complete minutes: %2$s</string>
+    <string name="pnl_execution_history">Execution history: %1$s</string>
+    <string name="process_title" formatted="false">Процессы</string>
+    <string name="process_running" formatted="false">Выполняется</string>
+    <string name="process_stopped" formatted="false">Остановлен</string>
+    <string name="process_feeds" formatted="false">Потоки</string>
+    <string name="process_strategies" formatted="false">Стратегии</string>
+    <string name="process_executors" formatted="false">Исполнители</string>
+    <string name="process_brokers" formatted="false">Брокеры</string>
+    <string name="process_memory" formatted="false">Память</string>
+    <string name="process_cpu" formatted="false">CPU</string>
+    <string name="process_empty" formatted="false">Нет настроенных процессов.</string>
+    <string name="process_start" formatted="false">Запустить</string>
+    <string name="process_stop" formatted="false">Stop</string>
+    <string name="process_restart" formatted="false">Перезапустить</string>
+    <string name="process_cancel" formatted="false">Cancel</string>
+    <string name="process_stale" formatted="false">Этим процессом больше нельзя управлять отсюда. Обновите данные и повторите попытку.</string>
+    <string name="process_partial" formatted="false">Процесс был остановлен, но перезапустить его отсюда больше нельзя. Обновите данные и повторите попытку.</string>
+    <string name="process_confirm" formatted="false">Confirm process action</string>
+    <string name="process_confirm_message" formatted="false">Apply this action to the selected process?</string>
+    <string name="process_intent_saved" formatted="false">Desired state saved. The owning coordinator will apply it.</string>
+    <string name="process_accepted" formatted="false">Process action accepted.</string>
+    <string name="process_unknown" formatted="false">The command outcome is unknown. Controls remain locked: a status refresh cannot prove whether this command was applied.</string>
+    <string name="process_partial_unknown" formatted="false">The process was stopped, but the restart outcome is unknown. Controls remain locked: a status refresh cannot prove whether the restart was applied.</string>
+    <string name="process_rejected" formatted="false">The process action failed.</string>
+    <string name="process_load_failed" formatted="false">Could not refresh process status.</string>
+    <string name="process_config_failed" formatted="false">Process controls are unavailable because configuration could not be refreshed.</string>
+    <string name="process_enable" formatted="false">Enable</string>
+    <string name="process_disable" formatted="false">Disable</string>
+    <string name="ai_reviews_pending_title" formatted="false">Ожидающие проверки</string>
+    <string name="ai_reviews_decisions_title" formatted="false">Решения AI</string>
+    <string name="ai_reviews_deadline" formatted="false">Дедлайн</string>
+    <string name="ai_reviews_expired" formatted="false">Просрочена</string>
+    <string name="ai_reviews_rationale" formatted="false">Обоснование</string>
+    <string name="ai_reviews_rationale_long">Обоснование слишком длинное (ограничение: %1$d символов).</string>
+    <string name="ai_reviews_approve" formatted="false">Одобрить</string>
+    <string name="ai_reviews_reject" formatted="false">Отклонить</string>
+    <string name="ai_reviews_pending" formatted="false">Ожидает</string>
+    <string name="ai_reviews_superseded" formatted="false">Отозвана</string>
+    <string name="ai_reviews_decided" formatted="false">Решено</string>
+    <string name="ai_reviews_reject_message" formatted="false">Отклонение накладывает вето на сделку, для которой была открыта эта проверка. Это действие нельзя отменить.</string>
+    <string name="ai_reviews_cancel" formatted="false">Cancel</string>
+    <string name="ai_reviews_peer_resolved" formatted="false">Другой делегат уже завершил эту проверку.</string>
+    <string name="ai_reviews_expired_message" formatted="false">Дедлайн этой проверки прошёл, и время ожидания истекло.</string>
+    <string name="ai_reviews_missing" formatted="false">Эта проверка больше не существует.</string>
+    <string name="ai_reviews_denied" formatted="false">Ваш доступ делегата изменился. Перезагрузите данные перед принятием решения.</string>
+    <string name="ai_reviews_load_failed" formatted="false">Could not refresh reviews. Previously loaded reviews remain visible.</string>
+    <string name="ai_reviews_check_status" formatted="false">Check status</string>
+    <string name="ai_reviews_retry" formatted="false">Retry original decision</string>
+    <string name="ai_reviews_confirm" formatted="false">Confirm review decision</string>
+    <string name="ai_reviews_accepted" formatted="false">Decision accepted</string>
+    <string name="ai_reviews_rejected" formatted="false">Decision rejected by the server</string>
+    <string name="ai_reviews_unknown" formatted="false">Outcome unknown. Check status before retrying.</string>
+    <string name="positions_accessibility_label_closebutton" formatted="false">Закрыть позицию</string>
+    <string name="positions_accessibility_label_reducebutton" formatted="false">Уменьшить позицию</string>
+    <string name="positions_reduce_cancel" formatted="false">Cancel</string>
+    <string name="positions_reduce_footer" formatted="false">100% закрывает позицию. Отправляется рыночный ордер только на сокращение в противоположном направлении.</string>
+    <string name="positions_reduce_sizelabel" formatted="false">Размер уменьшения</string>
+    <string name="trading_bracket_attach" formatted="false">Добавить SL/TP</string>
+    <string name="trading_bracket_stoplosslabel" formatted="false">Стоп-лосс</string>
+    <string name="trading_bracket_takeprofitlabel" formatted="false">Тейк-профит</string>
+    <string name="trading_trailingstop_attach" formatted="false">Добавить трейлинг-стоп</string>
+    <string name="trading_trailingstop_trailamountlabel" formatted="false">Дистанция трейлинга</string>
+    <string name="position_action_review" formatted="false">Review position action</string>
+    <string name="position_action_confirm" formatted="false">Confirm action</string>
+    <string name="position_action_accepted" formatted="false">Request accepted. Refresh to check execution status.</string>
+    <string name="position_action_retry" formatted="false">Retry same request</string>
+    <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
+    <string name="position_action_cycle" formatted="false">Position cycle</string>
+    <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+</resources>

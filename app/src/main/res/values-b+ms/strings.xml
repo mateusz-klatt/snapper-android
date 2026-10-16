@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="privacy_policy" formatted="false">Privacy policy</string>
+    <string name="username" formatted="false">Nama pengguna</string>
+    <string name="password" formatted="false">Kata laluan</string>
+    <string name="sign_in" formatted="false">Log Masuk</string>
+    <string name="session_retention_notice" formatted="false">Staying signed in requires Android 11+, a secure screen lock, and authentication with your PIN, pattern, password or strong biometrics within the last 5 minutes. Otherwise, sign in again after the app restarts.</string>
+    <string name="subtitle" formatted="false">Platform Dagangan</string>
+    <string name="backend" formatted="false">URL backend tersuai</string>
+    <string name="language" formatted="false">Bahasa</string>
+    <string name="logout" formatted="false">Log keluar</string>
+    <string name="positions" formatted="false">Posisi</string>
+    <string name="orders" formatted="false">Pesanan</string>
+    <string name="market" formatted="false">Data pasaran</string>
+    <string name="wallet" formatted="false">Dompet</string>
+    <string name="all_wallets" formatted="false">Semua dompet</string>
+    <string name="retry" formatted="false">Cuba Lagi</string>
+    <string name="loading" formatted="false">Memuatkan…</string>
+    <string name="size" formatted="false">Saiz</string>
+    <string name="average_price" formatted="false">Harga purata</string>
+    <string name="mark_price" formatted="false">Harga rujukan</string>
+    <string name="pnl" formatted="false">PnL belum terealisasi</string>
+    <string name="instrument" formatted="false">Instrumen</string>
+    <string name="price" formatted="false">Harga</string>
+    <string name="filled" formatted="false">Dipenuhi</string>
+    <string name="status" formatted="false">Status</string>
+    <string name="side" formatted="false">Sisi</string>
+    <string name="open" formatted="false">Open</string>
+    <string name="high" formatted="false">High</string>
+    <string name="low" formatted="false">Low</string>
+    <string name="close" formatted="false">Tutup</string>
+    <string name="volume" formatted="false">Volum</string>
+    <string name="timeframe" formatted="false">Jangka masa</string>
+    <string name="no_candles" formatted="false">Tiada candle lagi</string>
+    <string name="backend_warning" formatted="false">Menukar backend akan melog anda keluar dan mengosongkan keadaan aplikasi tempatan. Anda perlu log masuk semula di URL baharu.</string>
+    <string name="home" formatted="false">Utama</string>
+    <string name="alerts" formatted="false">Amaran</string>
+    <string name="settings" formatted="false">Tetapan</string>
+    <string name="save" formatted="false">Simpan</string>
+    <string name="refresh" formatted="false">Refresh</string>
+    <string name="exchange" formatted="false">Bursa</string>
+    <string name="load_market" formatted="false">Load candles</string>
+    <string name="empty" formatted="false">No records available.</string>
+    <string name="snapshot_note" formatted="false">Snapshot data. Refresh to retrieve the latest available records.</string>
+    <string name="chart_description" formatted="false">Historical candle chart. Exact values are listed below.</string>
+    <string name="error_origin" formatted="false">Enter a valid HTTPS backend origin.</string>
+    <string name="error_credentials" formatted="false">The username or password is incorrect.</string>
+    <string name="error_session" formatted="false">Your session expired. Please sign in again.</string>
+    <string name="error_network" formatted="false">Could not reach the backend. Check your connection and try again.</string>
+    <string name="error_service" formatted="false">The backend could not complete this request. Please try again.</string>
+    <string name="error_unknown" formatted="false">Something went wrong. Please try again.</string>
+    <string name="dismiss" formatted="false">Ketepikan</string>
+    <string name="paper" formatted="false">Demo</string>
+    <string name="safety_critical" formatted="false">Safety critical</string>
+    <string name="snapshot_limit" formatted="false">This view shows current positions and up to 100 recent orders and alerts; it is not a complete history.</string>
+    <string name="chart_window" formatted="false">The chart shows the last 100 retrieved candles.</string>
+    <string name="local_network_explanation" formatted="false">For a backend on your local network, allow local network access before signing in. Public internet backends do not need this permission.</string>
+    <string name="local_network_allow" formatted="false">Allow local network</string>
+    <string name="local_network_settings" formatted="false">Open app settings</string>
+    <string name="order_new" formatted="false">New Order</string>
+    <string name="order_entry" formatted="false">New Manual Order</string>
+    <string name="order_confirm" formatted="false">Confirm Order</string>
+    <string name="order_quantity" formatted="false">Kuantiti</string>
+    <string name="order_type" formatted="false">Order Type</string>
+    <string name="order_stop_price" formatted="false">Stop Price</string>
+    <string name="order_mode" formatted="false">Mod</string>
+    <string name="order_buy" formatted="false">Beli</string>
+    <string name="order_sell" formatted="false">Jual</string>
+    <string name="order_market" formatted="false">Pasaran</string>
+    <string name="order_limit" formatted="false">Limit</string>
+    <string name="order_stop" formatted="false">Stop</string>
+    <string name="order_stop_limit" formatted="false">Stop Limit</string>
+    <string name="order_live" formatted="false">Live</string>
+    <string name="order_review" formatted="false">Review Order</string>
+    <string name="order_back" formatted="false">Back</string>
+    <string name="order_submit" formatted="false">Confirm Order</string>
+    <string name="order_submitting" formatted="false">Submitting…</string>
+    <string name="order_leverage" formatted="false">Leveraj</string>
+    <string name="order_reduce_only" formatted="false">Reduce Only</string>
+    <string name="order_observation_only" formatted="false">This instrument is observation-only — place orders on an execution-capable instrument.</string>
+    <string name="order_unknown_instrument" formatted="false">This instrument is not recognised. Reload the list and try again.</string>
+    <string name="order_caps_violation" formatted="false">This order would exceed your account safety caps. Review your risk settings and retry.</string>
+    <string name="order_rejected" formatted="false">Order creation failed</string>
+    <string name="order_cancel_title" formatted="false">Batal pesanan?</string>
+    <string name="order_cancel_confirm" formatted="false">Batal pesanan</string>
+    <string name="order_keep_open" formatted="false">Biarkan terbuka</string>
+    <string name="order_select_wallet" formatted="false">Select a wallet on Home before placing an order.</string>
+    <string name="order_created" formatted="false">Order submitted. Refresh to check execution status.</string>
+    <string name="order_cancel_requested" formatted="false">Cancellation requested. Refresh to check the order status.</string>
+    <string name="order_unknown_outcome" formatted="false">The request outcome is unknown. Check status before taking further action.</string>
+    <string name="order_check_status" formatted="false">Check status</string>
+    <string name="order_retry_intent" formatted="false">Retry same order</string>
+    <string name="order_catalog_error" formatted="false">Could not load exchanges or instruments. Try again.</string>
+    <string name="order_no_instruments" formatted="false">No instruments available for this exchange.</string>
+    <string name="order_invalid_form" formatted="false">Enter positive quantities and required prices. Optional leverage must be a positive whole number.</string>
+    <string name="order_refresh_failed" formatted="false">The request was accepted, but the latest records could not be loaded. Refresh to check status.</string>
+    <string name="order_forbidden" formatted="false">You no longer have permission for this action.</string>
+    <string name="order_session_changed" formatted="false">The session or wallet changed. Open a new order from the current account.</string>
+    <string name="order_enabled" formatted="false">Didayakan</string>
+    <string name="order_disabled" formatted="false">Dinyahdayakan</string>
+    <string name="system_tools" formatted="false">Overview</string>
+    <string name="desk_attach_button" formatted="false">Tambah pemerhati</string>
+    <string name="desk_attach_desk_label" formatted="false">Meja</string>
+    <string name="desk_nav_title" formatted="false">Meja saya</string>
+    <string name="desk_primary_badge" formatted="false">Utama</string>
+    <string name="desk_attach_username_placeholder" formatted="false">Nama pengguna tepat pemerhati</string>
+    <string name="desk_attach_validation_username" formatted="false">Masukkan nama pengguna pemerhati.</string>
+    <string name="desk_description_unavailable" formatted="false">Tiada penerangan diberikan.</string>
+    <string name="desk_attach_help" formatted="false">Masukkan nama pengguna tepat pemerhati. Meja baharu hanya tersedia selepas pemerhati log keluar dan log masuk semula.</string>
+    <string name="desk_attach_success_message" formatted="false">Pemerhati mesti log keluar dan log masuk semula sebelum meja baharu tersedia.</string>
+    <string name="desk_empty_message" formatted="false">Akaun anda tidak dilampirkan pada mana-mana meja.</string>
+    <string name="desk_load_error" formatted="false">Meja tidak dapat dimuatkan. Cuba lagi.</string>
+    <string name="settings_account_email" formatted="false">E-mel</string>
+    <string name="settings_account_role">Peranan: %1$s</string>
+    <string name="settings_app_info_version" formatted="false">Versi</string>
+    <string name="settings_app_info_build" formatted="false">Build</string>
+    <string name="settings_logout_confirm_title" formatted="false">Log keluar?</string>
+    <string name="settings_logout_confirm_message" formatted="false">Adakah anda pasti mahu log keluar?</string>
+    <string name="settings_connection_change_backend_title" formatted="false">Tukar backend?</string>
+    <string name="settings_connection_change_backend_message" formatted="false">Menukar backend akan melog anda keluar dan mengosongkan keadaan aplikasi tempatan. Anda perlu log masuk semula di URL baharu.</string>
+    <string name="common_continue" formatted="false">Teruskan</string>
+    <string name="backend_url_cancel" formatted="false">Batal</string>
+    <string name="market_search" formatted="false">Cari instrumen</string>
+    <string name="market_view_only" formatted="false">Lihat sahaja</string>
+    <string name="market_catalog_retry" formatted="false">Cuba Lagi</string>
+    <string name="market_picker_close" formatted="false">Batal</string>
+    <string name="market_no_matches" formatted="false">\@string/empty</string>
+    <string name="market_catalog_error" formatted="false">\@string/error_unknown</string>
+    <string name="system_health" formatted="false">Kesihatan sistem</string>
+    <string name="system_strategies" formatted="false">Strategi</string>
+    <string name="system_backtests" formatted="false">Backtest</string>
+    <string name="system_users" formatted="false">Pengguna</string>
+    <string name="system_delegates" formatted="false">Delegat AI</string>
+    <string name="system_version" formatted="false">Versi</string>
+    <string name="system_connections" formatted="false">Sambungan aktif</string>
+    <string name="system_subscribers" formatted="false">Pelanggan ZMQ</string>
+    <string name="system_tasks" formatted="false">Tugas pelanggan</string>
+    <string name="system_topics" formatted="false">Topik aktif</string>
+    <string name="system_clients" formatted="false">Klien aktif</string>
+    <string name="system_gaps" formatted="false">Jurang dikesan</string>
+    <string name="system_resets" formatted="false">Set semula sesi</string>
+    <string name="system_duplicates" formatted="false">Pendua</string>
+    <string name="system_joins" formatted="false">Penyertaan pertengahan strim</string>
+    <string name="system_unstamped" formatted="false">Ditolak (tiada cap)</string>
+    <string name="system_rest_clients" formatted="false">Klien REST dijejak</string>
+    <string name="system_initial_cash" formatted="false">Modal permulaan</string>
+    <string name="system_period" formatted="false">Tempoh</string>
+    <string name="system_created" formatted="false">Dicipta</string>
+    <string name="system_max_orders" formatted="false">Maks. pesanan terbuka</string>
+    <string name="system_max_daily" formatted="false">Maks. USD harian</string>
+    <string name="system_default" formatted="false">Lalai</string>
+    <string name="system_trader" formatted="false">Status Trader</string>
+    <string name="system_running" formatted="false">Sedang berjalan</string>
+    <string name="system_stopped" formatted="false">Dihentikan</string>
+    <string name="system_mode" formatted="false">Mod</string>
+    <string name="system_autostart" formatted="false">Mula automatik</string>
+    <string name="system_active" formatted="false">Aktif</string>
+    <string name="system_inactive" formatted="false">Tidak aktif</string>
+    <string name="system_revoked" formatted="false">Dibatalkan</string>
+    <string name="records_open" formatted="false">Open</string>
+    <string name="records_recent" formatted="false">Terkini</string>
+    <string name="records_fills" formatted="false">Pelaksanaan</string>
+    <string name="records_refresh" formatted="false">Refresh</string>
+    <string name="records_fee" formatted="false">Fee</string>
+    <string name="records_details" formatted="false">Details</string>
+    <string name="records_hide_details" formatted="false">\@string/close</string>
+    <string name="records_thread" formatted="false">Bebenang</string>
+    <string name="records_source_topic" formatted="false">Topik sumber</string>
+    <string name="notification_defaults_title" formatted="false">Lalai pengguna</string>
+    <string name="notification_defaults_footer" formatted="false">Lalai diguna pakai apabila tiada penggantian per-peranti sepadan dengan amaran masuk.</string>
+    <string name="notification_defaults_enabled" formatted="false">Didayakan</string>
+    <string name="notification_defaults_priority" formatted="false">Keutamaan minimum</string>
+    <string name="notification_defaults_load_failed" formatted="false">Gagal memuatkan keutamaan</string>
+    <string name="notification_defaults_save_failed" formatted="false">Gagal menyimpan keutamaan</string>
+    <string name="notification_defaults_low" formatted="false">Low</string>
+    <string name="notification_defaults_medium" formatted="false">Sederhana</string>
+    <string name="notification_defaults_high" formatted="false">High</string>
+    <string name="notification_defaults_fill" formatted="false">Pesanan dipenuhi</string>
+    <string name="notification_defaults_rejected" formatted="false">Pesanan ditolak</string>
+    <string name="notification_defaults_stop" formatted="false">Stop-loss dicetuskan</string>
+    <string name="notification_defaults_margin" formatted="false">Amaran margin</string>
+    <string name="notification_defaults_system" formatted="false">Ralat sistem</string>
+    <string name="notification_defaults_saved" formatted="false">OK</string>
+    <string name="signals_title" formatted="false">Isyarat</string>
+    <string name="signals_strength" formatted="false">Kekuatan</string>
+    <string name="signals_price" formatted="false">Harga</string>
+    <string name="signals_reason" formatted="false">Sebab:</string>
+    <string name="signals_strong" formatted="false">Kuat</string>
+    <string name="signals_medium" formatted="false">Sederhana</string>
+    <string name="signals_weak" formatted="false">Lemah</string>
+    <string name="signals_very_weak" formatted="false">Sangat lemah</string>
+    <string name="signals_total" formatted="false">Jumlah</string>
+    <string name="signals_buy" formatted="false">Beli</string>
+    <string name="signals_sell" formatted="false">Jual</string>
+    <string name="signals_average_strength" formatted="false">Purata Kekuatan</string>
+    <string name="signals_filter" formatted="false">Tapis mengikut strategi</string>
+    <string name="signals_all_strategies" formatted="false">Semua Strategi</string>
+    <string name="signals_empty" formatted="false">Tiada isyarat dagangan sepadan dengan penapis semasa anda.</string>
+    <string name="signals_export" formatted="false">Eksport</string>
+    <string name="signals_export_failed" formatted="false">Penghantaran gagal</string>
+    <string name="venue_accounts_title" formatted="false">Akaun Bursa</string>
+    <string name="venue_accounts_refresh" formatted="false">Refresh</string>
+    <string name="venue_accounts_failed" formatted="false">Status akaun bursa tidak dapat dimuatkan. Akaun ini bukan kosong; datanya hanya tidak tersedia buat masa ini.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Data bursa masa nyata yang boleh dipercayai, direkodkan dalam tempoh sah.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Baris yang tidak ditandakan Masa nyata menunjukkan data terakhir diketahui, simulasi atau tidak tersedia — ia bukan sekali-kali baki bursa masa nyata yang berautoriti.</string>
+    <string name="venue_accounts_valuation" formatted="false">Valuation</string>
+    <string name="venue_accounts_balances" formatted="false">Baki</string>
+    <string name="venue_accounts_observed" formatted="false">Observed at</string>
+    <string name="venue_accounts_source" formatted="false">Source observation</string>
+    <string name="venue_accounts_total" formatted="false">Jumlah</string>
+    <string name="venue_accounts_free" formatted="false">Tersedia</string>
+    <string name="venue_accounts_used" formatted="false">Digunakan</string>
+    <string name="venue_accounts_numeric_source" formatted="false">Numeric provenance</string>
+    <string name="venue_accounts_positions" formatted="false">Posisi terbuka</string>
+    <string name="venue_accounts_funding" formatted="false">Pembiayaan</string>
+    <string name="venue_accounts_reconciliation" formatted="false">Reconciliation status</string>
+    <string name="venue_accounts_evaluation" formatted="false">Evaluation status</string>
+    <string name="venue_accounts_deadline" formatted="false">Authority deadline</string>
+    <string name="positions_timeline_controls_window" formatted="false">Julat</string>
+    <string name="positions_timeline_controls_granularity" formatted="false">Resolusi</string>
+    <string name="positions_timeline_controls_valuationcurrency" formatted="false">Mata wang penilaian</string>
+    <string name="positions_timeline_controls_last24hours" formatted="false">24 jam terakhir</string>
+    <string name="positions_timeline_controls_last7days" formatted="false">7 hari terakhir</string>
+    <string name="positions_timeline_controls_last30days" formatted="false">30 hari terakhir</string>
+    <string name="positions_timeline_controls_last90days" formatted="false">90 hari terakhir</string>
+    <string name="positions_timeline_error_title" formatted="false">Garis masa P&amp;L tidak dapat dimuatkan</string>
+    <string name="positions_timeline_empty_message" formatted="false">Tiada titik P&amp;L tersedia untuk julat ini.</string>
+    <string name="positions_timeline_nowallet_message" formatted="false">Pilih dompet untuk melihat garis masa P&amp;L dompet tersebut.</string>
+    <string name="positions_timeline_incompleteness_title" formatted="false">Mengapa titik tidak lengkap</string>
+    <string name="positions_timeline_incompleteness_description" formatted="false">Sebab merangkumi keseluruhan julat yang dimuatkan. Bilangan boleh bertindih apabila satu titik mempunyai lebih daripada satu punca.</string>
+    <string name="positions_timeline_incompleteness_affectedpoints">Affected points: %1$s</string>
+    <string name="positions_timeline_chart_title" formatted="false">P&amp;L mengikut masa</string>
+    <string name="positions_timeline_chart_net" formatted="false">P&amp;L bersih</string>
+    <string name="positions_timeline_chart_realized" formatted="false">P&amp;L direalisasikan</string>
+    <string name="positions_timeline_chart_unrealized" formatted="false">Unrealized P&amp;L</string>
+    <string name="positions_timeline_attribution_title" formatted="false">Atribusi P&amp;L terkini</string>
+    <string name="positions_timeline_attribution_nostrategy" formatted="false">Tiada strategi yang dapat dibuktikan</string>
+    <string name="positions_timeline_attribution_withheld" formatted="false">Tidak dapat dibuktikan</string>
+    <string name="positions_timeline_attribution_valuesemantics" formatted="false">Sifar yang dipaparkan ialah nilai yang terbukti. ‘Tidak dapat dibuktikan’ bermaksud nilainya tidak dapat dibuktikan.</string>
+    <string name="positions_timeline_contributions_title" formatted="false">Sumbangan terkini bagi setiap instrumen</string>
+    <string name="positions_timeline_contributions_realized" formatted="false">P&amp;L direalisasikan</string>
+    <string name="positions_timeline_contributions_fees" formatted="false">Fi</string>
+    <string name="positions_timeline_contributions_accrual" formatted="false">Pembiayaan terakru</string>
+    <string name="positions_timeline_contributions_unrealized" formatted="false">Unrealized P&amp;L</string>
+    <string name="positions_timeline_incompleteness_reasons_scope_order_regression" formatted="false">Regresi urutan skop</string>
+    <string name="positions_timeline_incompleteness_reasons_before_activation" formatted="false">Titik mendahului pengaktifan</string>
+    <string name="positions_timeline_incompleteness_reasons_activation_baseline_non_finite" formatted="false">Garis dasar pengaktifan bukan nombor terhingga</string>
+    <string name="positions_timeline_incompleteness_reasons_fill_evidence_gap" formatted="false">Jurang dalam rekod kekal pelaksanaan pesanan</string>
+    <string name="positions_timeline_incompleteness_reasons_seed_quantity_non_finite" formatted="false">Kuantiti awal bukan nombor terhingga</string>
+    <string name="positions_timeline_incompleteness_reasons_cost_basis_unavailable" formatted="false">Asas kos tidak tersedia</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_provenance_unproven" formatted="false">Asal usul harga pelaksanaan tidak dapat dibuktikan</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_size_invalid" formatted="false">Saiz pelaksanaan tidak sah</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_invalid" formatted="false">Harga pelaksanaan tidak sah</string>
+    <string name="positions_timeline_incompleteness_reasons_fx_conversion_unproven" formatted="false">Penukaran FX tidak dapat dibuktikan</string>
+    <string name="positions_timeline_incompleteness_reasons_mark_unavailable" formatted="false">Harga rujukan tidak tersedia</string>
+    <string name="positions_timeline_incompleteness_reasons_cumulative_non_finite" formatted="false">Nilai terkumpul bukan nombor terhingga</string>
+    <string name="positions_timeline_incompleteness_reasons_unrealized_non_finite" formatted="false">P&amp;L belum direalisasikan bukan nombor terhingga</string>
+    <string name="positions_timeline_incompleteness_reasons_net_non_finite" formatted="false">P&amp;L bersih bukan nombor terhingga</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_value_non_finite" formatted="false">Nilai atribusi bukan nombor terhingga</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">Penyelarasan atribusi gagal</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">Penyelarasan jumlah P&amp;L mengikut instrumen gagal</string>
+    <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">Pelaksanaan dagangan yang tiba lewat dengan cap masa sebelum pengaktifan</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Attribution sum is not representable</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Instrument sum is not representable</string>
+    <string name="positions_timeline_executionhistory_title" formatted="false">Operator-corrected execution history</string>
+    <string name="positions_timeline_executionhistory_summary" formatted="false">An operator repudiated recorded executions in this scope. Every correction listed here is excluded from the figures on this page.</string>
+    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Repudiated execution</string>
+    <string name="positions_timeline_executionhistory_correctionid" formatted="false">Correction record</string>
+    <string name="positions_timeline_equity_title" formatted="false">Equity overlay</string>
+    <string name="positions_timeline_equity_serieslabel" formatted="false">Ekuiti</string>
+    <string name="positions_timeline_equity_drawdown_current" formatted="false">Current drawdown</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Spot venue only — balances held on other venues are excluded.</string>
+    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">External deposits and withdrawals are not adjusted out.</string>
+    <string name="positions_timeline_equity_honesty_restatedfrom">These figures are restated from %1$s at each minute\'s close, not sampled natively in this currency.</string>
+    <string name="positions_timeline_equity_honesty_pricedon">Priced on %1$s.</string>
+    <string name="positions_timeline_equity_honesty_conversionwithheld">Minutes dropped for want of a proven close: %1$s.</string>
+    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Drawdown is withheld on a converted basis, because the running peak is tracked in the sampled currency.</string>
+    <string name="positions_timeline_equity_cashposition_position" formatted="false">Position value</string>
+    <string name="positions_timeline_equity_cashposition_cash" formatted="false">Cash</string>
+    <string name="pnl_provenance">Calculation: %1$s · Mark source: %2$s · As of: %3$s</string>
+    <string name="pnl_equity_coverage">Equity sampled: %1$s · Complete minutes: %2$s</string>
+    <string name="pnl_execution_history">Execution history: %1$s</string>
+    <string name="process_title" formatted="false">Proses</string>
+    <string name="process_running" formatted="false">Sedang berjalan</string>
+    <string name="process_stopped" formatted="false">Dihentikan</string>
+    <string name="process_feeds" formatted="false">Suapan</string>
+    <string name="process_strategies" formatted="false">Strategi</string>
+    <string name="process_executors" formatted="false">Pelaksana</string>
+    <string name="process_brokers" formatted="false">Broker</string>
+    <string name="process_memory" formatted="false">Memori</string>
+    <string name="process_cpu" formatted="false">CPU</string>
+    <string name="process_empty" formatted="false">Tiada proses dikonfigurasikan.</string>
+    <string name="process_start" formatted="false">Mula</string>
+    <string name="process_stop" formatted="false">Stop</string>
+    <string name="process_restart" formatted="false">Mulakan semula</string>
+    <string name="process_cancel" formatted="false">Batal</string>
+    <string name="process_stale" formatted="false">Proses ini tidak lagi boleh dikawal dari sini. Muat semula data dan cuba lagi.</string>
+    <string name="process_partial" formatted="false">Proses telah dihentikan tetapi tidak lagi boleh dimulakan semula dari sini. Muat semula data dan cuba lagi.</string>
+    <string name="process_confirm" formatted="false">Confirm process action</string>
+    <string name="process_confirm_message" formatted="false">Apply this action to the selected process?</string>
+    <string name="process_intent_saved" formatted="false">Desired state saved. The owning coordinator will apply it.</string>
+    <string name="process_accepted" formatted="false">Process action accepted.</string>
+    <string name="process_unknown" formatted="false">The command outcome is unknown. Controls remain locked: a status refresh cannot prove whether this command was applied.</string>
+    <string name="process_partial_unknown" formatted="false">The process was stopped, but the restart outcome is unknown. Controls remain locked: a status refresh cannot prove whether the restart was applied.</string>
+    <string name="process_rejected" formatted="false">The process action failed.</string>
+    <string name="process_load_failed" formatted="false">Could not refresh process status.</string>
+    <string name="process_config_failed" formatted="false">Process controls are unavailable because configuration could not be refreshed.</string>
+    <string name="process_enable" formatted="false">Enable</string>
+    <string name="process_disable" formatted="false">Disable</string>
+    <string name="ai_reviews_pending_title" formatted="false">Semakan tertunda</string>
+    <string name="ai_reviews_decisions_title" formatted="false">Keputusan AI</string>
+    <string name="ai_reviews_deadline" formatted="false">Tarikh akhir</string>
+    <string name="ai_reviews_expired" formatted="false">Tamat tempoh</string>
+    <string name="ai_reviews_rationale" formatted="false">Rasional</string>
+    <string name="ai_reviews_rationale_long">Rasional terlalu panjang (had: %1$d aksara).</string>
+    <string name="ai_reviews_approve" formatted="false">Luluskan</string>
+    <string name="ai_reviews_reject" formatted="false">Tolak</string>
+    <string name="ai_reviews_pending" formatted="false">Menunggu</string>
+    <string name="ai_reviews_superseded" formatted="false">Ditarik balik</string>
+    <string name="ai_reviews_decided" formatted="false">Diputuskan</string>
+    <string name="ai_reviews_reject_message" formatted="false">Penolakan memveto dagangan yang menyebabkan semakan ini dibuka. Tindakan ini tidak boleh dibuat asal.</string>
+    <string name="ai_reviews_cancel" formatted="false">Batal</string>
+    <string name="ai_reviews_peer_resolved" formatted="false">Delegat lain telah menyelesaikan semakan ini.</string>
+    <string name="ai_reviews_expired_message" formatted="false">Semakan ini melepasi tarikh akhir dan tamat masa.</string>
+    <string name="ai_reviews_missing" formatted="false">Semakan ini tidak lagi wujud.</string>
+    <string name="ai_reviews_denied" formatted="false">Akses delegat anda telah berubah. Muat semula sebelum membuat keputusan.</string>
+    <string name="ai_reviews_load_failed" formatted="false">Could not refresh reviews. Previously loaded reviews remain visible.</string>
+    <string name="ai_reviews_check_status" formatted="false">Check status</string>
+    <string name="ai_reviews_retry" formatted="false">Retry original decision</string>
+    <string name="ai_reviews_confirm" formatted="false">Confirm review decision</string>
+    <string name="ai_reviews_accepted" formatted="false">Decision accepted</string>
+    <string name="ai_reviews_rejected" formatted="false">Decision rejected by the server</string>
+    <string name="ai_reviews_unknown" formatted="false">Outcome unknown. Check status before retrying.</string>
+    <string name="positions_accessibility_label_closebutton" formatted="false">Tutup posisi</string>
+    <string name="positions_accessibility_label_reducebutton" formatted="false">Kurangkan posisi</string>
+    <string name="positions_reduce_cancel" formatted="false">Batal</string>
+    <string name="positions_reduce_footer" formatted="false">100% menutup posisi. Menghantar pesanan pasaran reduce-only pada sisi bertentangan.</string>
+    <string name="positions_reduce_sizelabel" formatted="false">Kurangkan saiz</string>
+    <string name="trading_bracket_attach" formatted="false">Lampirkan SL / TP</string>
+    <string name="trading_bracket_stoplosslabel" formatted="false">Stop loss</string>
+    <string name="trading_bracket_takeprofitlabel" formatted="false">Take profit</string>
+    <string name="trading_trailingstop_attach" formatted="false">Lampirkan trailing stop</string>
+    <string name="trading_trailingstop_trailamountlabel" formatted="false">Jumlah trail</string>
+    <string name="position_action_review" formatted="false">Review position action</string>
+    <string name="position_action_confirm" formatted="false">Confirm action</string>
+    <string name="position_action_accepted" formatted="false">Request accepted. Refresh to check execution status.</string>
+    <string name="position_action_retry" formatted="false">Retry same request</string>
+    <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
+    <string name="position_action_cycle" formatted="false">Position cycle</string>
+    <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+</resources>

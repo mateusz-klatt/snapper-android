@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="privacy_policy" formatted="false">Privacy policy</string>
+    <string name="username" formatted="false">Tên đăng nhập</string>
+    <string name="password" formatted="false">Mật khẩu</string>
+    <string name="sign_in" formatted="false">Đăng nhập</string>
+    <string name="session_retention_notice" formatted="false">Staying signed in requires Android 11+, a secure screen lock, and authentication with your PIN, pattern, password or strong biometrics within the last 5 minutes. Otherwise, sign in again after the app restarts.</string>
+    <string name="subtitle" formatted="false">Nền tảng giao dịch</string>
+    <string name="backend" formatted="false">URL backend tùy chỉnh</string>
+    <string name="language" formatted="false">Ngôn ngữ</string>
+    <string name="logout" formatted="false">Đăng xuất</string>
+    <string name="positions" formatted="false">Vị thế</string>
+    <string name="orders" formatted="false">Lệnh</string>
+    <string name="market" formatted="false">Dữ liệu thị trường</string>
+    <string name="wallet" formatted="false">Ví</string>
+    <string name="all_wallets" formatted="false">Tất cả ví</string>
+    <string name="retry" formatted="false">Thử lại</string>
+    <string name="loading" formatted="false">Đang tải…</string>
+    <string name="size" formatted="false">Khối lượng</string>
+    <string name="average_price" formatted="false">Giá trung bình</string>
+    <string name="mark_price" formatted="false">Giá đánh dấu</string>
+    <string name="pnl" formatted="false">PnL chưa thực hiện</string>
+    <string name="instrument" formatted="false">Instrument</string>
+    <string name="price" formatted="false">Giá</string>
+    <string name="filled" formatted="false">Đã khớp</string>
+    <string name="status" formatted="false">Trạng thái</string>
+    <string name="side" formatted="false">Chiều lệnh</string>
+    <string name="open" formatted="false">Open</string>
+    <string name="high" formatted="false">High</string>
+    <string name="low" formatted="false">Low</string>
+    <string name="close" formatted="false">Close</string>
+    <string name="volume" formatted="false">Khối lượng</string>
+    <string name="timeframe" formatted="false">Khung thời gian</string>
+    <string name="no_candles" formatted="false">Chưa có nến</string>
+    <string name="backend_warning" formatted="false">Đổi backend sẽ đăng xuất bạn và xóa trạng thái ứng dụng cục bộ. Bạn cần đăng nhập lại tại URL mới.</string>
+    <string name="home" formatted="false">Trang chủ</string>
+    <string name="alerts" formatted="false">Cảnh báo</string>
+    <string name="settings" formatted="false">Cài đặt</string>
+    <string name="save" formatted="false">Lưu</string>
+    <string name="refresh" formatted="false">Refresh</string>
+    <string name="exchange" formatted="false">Sàn</string>
+    <string name="load_market" formatted="false">Load candles</string>
+    <string name="empty" formatted="false">No records available.</string>
+    <string name="snapshot_note" formatted="false">Snapshot data. Refresh to retrieve the latest available records.</string>
+    <string name="chart_description" formatted="false">Historical candle chart. Exact values are listed below.</string>
+    <string name="error_origin" formatted="false">Enter a valid HTTPS backend origin.</string>
+    <string name="error_credentials" formatted="false">The username or password is incorrect.</string>
+    <string name="error_session" formatted="false">Your session expired. Please sign in again.</string>
+    <string name="error_network" formatted="false">Could not reach the backend. Check your connection and try again.</string>
+    <string name="error_service" formatted="false">The backend could not complete this request. Please try again.</string>
+    <string name="error_unknown" formatted="false">Something went wrong. Please try again.</string>
+    <string name="dismiss" formatted="false">Bỏ qua</string>
+    <string name="paper" formatted="false">Mô phỏng</string>
+    <string name="safety_critical" formatted="false">Safety critical</string>
+    <string name="snapshot_limit" formatted="false">This view shows current positions and up to 100 recent orders and alerts; it is not a complete history.</string>
+    <string name="chart_window" formatted="false">The chart shows the last 100 retrieved candles.</string>
+    <string name="local_network_explanation" formatted="false">For a backend on your local network, allow local network access before signing in. Public internet backends do not need this permission.</string>
+    <string name="local_network_allow" formatted="false">Allow local network</string>
+    <string name="local_network_settings" formatted="false">Open app settings</string>
+    <string name="order_new" formatted="false">New Order</string>
+    <string name="order_entry" formatted="false">New Manual Order</string>
+    <string name="order_confirm" formatted="false">Confirm Order</string>
+    <string name="order_quantity" formatted="false">Số lượng</string>
+    <string name="order_type" formatted="false">Order Type</string>
+    <string name="order_stop_price" formatted="false">Stop Price</string>
+    <string name="order_mode" formatted="false">Chế độ</string>
+    <string name="order_buy" formatted="false">Mua</string>
+    <string name="order_sell" formatted="false">Bán</string>
+    <string name="order_market" formatted="false">Thị trường</string>
+    <string name="order_limit" formatted="false">Giới hạn</string>
+    <string name="order_stop" formatted="false">Dừng</string>
+    <string name="order_stop_limit" formatted="false">Stop Limit</string>
+    <string name="order_live" formatted="false">Live</string>
+    <string name="order_review" formatted="false">Review Order</string>
+    <string name="order_back" formatted="false">Back</string>
+    <string name="order_submit" formatted="false">Confirm Order</string>
+    <string name="order_submitting" formatted="false">Submitting…</string>
+    <string name="order_leverage" formatted="false">Đòn bẩy</string>
+    <string name="order_reduce_only" formatted="false">Reduce Only</string>
+    <string name="order_observation_only" formatted="false">This instrument is observation-only — place orders on an execution-capable instrument.</string>
+    <string name="order_unknown_instrument" formatted="false">This instrument is not recognised. Reload the list and try again.</string>
+    <string name="order_caps_violation" formatted="false">This order would exceed your account safety caps. Review your risk settings and retry.</string>
+    <string name="order_rejected" formatted="false">Order creation failed</string>
+    <string name="order_cancel_title" formatted="false">Hủy lệnh?</string>
+    <string name="order_cancel_confirm" formatted="false">Hủy lệnh</string>
+    <string name="order_keep_open" formatted="false">Giữ lệnh mở</string>
+    <string name="order_select_wallet" formatted="false">Select a wallet on Home before placing an order.</string>
+    <string name="order_created" formatted="false">Order submitted. Refresh to check execution status.</string>
+    <string name="order_cancel_requested" formatted="false">Cancellation requested. Refresh to check the order status.</string>
+    <string name="order_unknown_outcome" formatted="false">The request outcome is unknown. Check status before taking further action.</string>
+    <string name="order_check_status" formatted="false">Check status</string>
+    <string name="order_retry_intent" formatted="false">Retry same order</string>
+    <string name="order_catalog_error" formatted="false">Could not load exchanges or instruments. Try again.</string>
+    <string name="order_no_instruments" formatted="false">No instruments available for this exchange.</string>
+    <string name="order_invalid_form" formatted="false">Enter positive quantities and required prices. Optional leverage must be a positive whole number.</string>
+    <string name="order_refresh_failed" formatted="false">The request was accepted, but the latest records could not be loaded. Refresh to check status.</string>
+    <string name="order_forbidden" formatted="false">You no longer have permission for this action.</string>
+    <string name="order_session_changed" formatted="false">The session or wallet changed. Open a new order from the current account.</string>
+    <string name="order_enabled" formatted="false">Đã bật</string>
+    <string name="order_disabled" formatted="false">Đã tắt</string>
+    <string name="system_tools" formatted="false">Overview</string>
+    <string name="desk_attach_button" formatted="false">Thêm người xem</string>
+    <string name="desk_attach_desk_label" formatted="false">Bàn giao dịch</string>
+    <string name="desk_nav_title" formatted="false">Bàn giao dịch của tôi</string>
+    <string name="desk_primary_badge" formatted="false">Chính</string>
+    <string name="desk_attach_username_placeholder" formatted="false">Tên người dùng chính xác của người xem</string>
+    <string name="desk_attach_validation_username" formatted="false">Nhập tên người dùng của người xem.</string>
+    <string name="desk_description_unavailable" formatted="false">Không có mô tả.</string>
+    <string name="desk_attach_help" formatted="false">Nhập tên người dùng chính xác của người xem. Bàn giao dịch mới chỉ khả dụng sau khi người xem đăng xuất rồi đăng nhập lại.</string>
+    <string name="desk_attach_success_message" formatted="false">Người xem phải đăng xuất rồi đăng nhập lại trước khi có thể dùng bàn giao dịch mới.</string>
+    <string name="desk_empty_message" formatted="false">Tài khoản của bạn chưa được gắn với bàn giao dịch nào.</string>
+    <string name="desk_load_error" formatted="false">Không thể tải bàn giao dịch. Hãy thử lại.</string>
+    <string name="settings_account_email" formatted="false">Email</string>
+    <string name="settings_account_role">Vai trò: %1$s</string>
+    <string name="settings_app_info_version" formatted="false">Phiên bản</string>
+    <string name="settings_app_info_build" formatted="false">Bản dựng</string>
+    <string name="settings_logout_confirm_title" formatted="false">Đăng xuất?</string>
+    <string name="settings_logout_confirm_message" formatted="false">Bạn có chắc muốn đăng xuất không?</string>
+    <string name="settings_connection_change_backend_title" formatted="false">Đổi backend?</string>
+    <string name="settings_connection_change_backend_message" formatted="false">Đổi backend sẽ đăng xuất bạn và xóa trạng thái ứng dụng cục bộ. Bạn cần đăng nhập lại tại URL mới.</string>
+    <string name="common_continue" formatted="false">Tiếp tục</string>
+    <string name="backend_url_cancel" formatted="false">Hủy</string>
+    <string name="market_search" formatted="false">Tìm sản phẩm giao dịch</string>
+    <string name="market_view_only" formatted="false">Chỉ xem</string>
+    <string name="market_catalog_retry" formatted="false">Thử lại</string>
+    <string name="market_picker_close" formatted="false">Hủy</string>
+    <string name="market_no_matches" formatted="false">\@string/empty</string>
+    <string name="market_catalog_error" formatted="false">\@string/error_unknown</string>
+    <string name="system_health" formatted="false">Tình trạng hệ thống</string>
+    <string name="system_strategies" formatted="false">Chiến lược</string>
+    <string name="system_backtests" formatted="false">Backtest</string>
+    <string name="system_users" formatted="false">Người dùng</string>
+    <string name="system_delegates" formatted="false">Đại diện AI</string>
+    <string name="system_version" formatted="false">Phiên bản</string>
+    <string name="system_connections" formatted="false">Kết nối đang hoạt động</string>
+    <string name="system_subscribers" formatted="false">Người đăng ký ZMQ</string>
+    <string name="system_tasks" formatted="false">Tác vụ đăng ký</string>
+    <string name="system_topics" formatted="false">Chủ đề đang hoạt động</string>
+    <string name="system_clients" formatted="false">Máy khách đang hoạt động</string>
+    <string name="system_gaps" formatted="false">Khoảng trống đã phát hiện</string>
+    <string name="system_resets" formatted="false">Đặt lại phiên</string>
+    <string name="system_duplicates" formatted="false">Bản trùng lặp</string>
+    <string name="system_joins" formatted="false">Tham gia giữa luồng</string>
+    <string name="system_unstamped" formatted="false">Bị từ chối (không có dấu)</string>
+    <string name="system_rest_clients" formatted="false">Máy khách REST được theo dõi</string>
+    <string name="system_initial_cash" formatted="false">Vốn ban đầu</string>
+    <string name="system_period" formatted="false">Khoảng thời gian</string>
+    <string name="system_created" formatted="false">Ngày tạo</string>
+    <string name="system_max_orders" formatted="false">Tối đa lệnh đang mở</string>
+    <string name="system_max_daily" formatted="false">USD tối đa mỗi ngày</string>
+    <string name="system_default" formatted="false">Mặc định</string>
+    <string name="system_trader" formatted="false">Trạng thái nhà giao dịch</string>
+    <string name="system_running" formatted="false">Đang chạy</string>
+    <string name="system_stopped" formatted="false">Đã dừng</string>
+    <string name="system_mode" formatted="false">Chế độ</string>
+    <string name="system_autostart" formatted="false">Tự động khởi động</string>
+    <string name="system_active" formatted="false">Hoạt động</string>
+    <string name="system_inactive" formatted="false">Ngừng hoạt động</string>
+    <string name="system_revoked" formatted="false">Đã thu hồi</string>
+    <string name="records_open" formatted="false">Open</string>
+    <string name="records_recent" formatted="false">Gần đây</string>
+    <string name="records_fills" formatted="false">Khớp lệnh</string>
+    <string name="records_refresh" formatted="false">Refresh</string>
+    <string name="records_fee" formatted="false">Fee</string>
+    <string name="records_details" formatted="false">Details</string>
+    <string name="records_hide_details" formatted="false">\@string/close</string>
+    <string name="records_thread" formatted="false">Luồng</string>
+    <string name="records_source_topic" formatted="false">Chủ đề nguồn</string>
+    <string name="notification_defaults_title" formatted="false">Mặc định người dùng</string>
+    <string name="notification_defaults_footer" formatted="false">Mặc định được áp dụng khi không có ghi đè thiết bị nào khớp với cảnh báo đến.</string>
+    <string name="notification_defaults_enabled" formatted="false">Đã bật</string>
+    <string name="notification_defaults_priority" formatted="false">Mức ưu tiên tối thiểu</string>
+    <string name="notification_defaults_load_failed" formatted="false">Không thể tải tùy chọn</string>
+    <string name="notification_defaults_save_failed" formatted="false">Không thể lưu tùy chọn</string>
+    <string name="notification_defaults_low" formatted="false">Low</string>
+    <string name="notification_defaults_medium" formatted="false">Trung bình</string>
+    <string name="notification_defaults_high" formatted="false">High</string>
+    <string name="notification_defaults_fill" formatted="false">Lệnh đã khớp</string>
+    <string name="notification_defaults_rejected" formatted="false">Lệnh bị từ chối</string>
+    <string name="notification_defaults_stop" formatted="false">Cắt lỗ đã kích hoạt</string>
+    <string name="notification_defaults_margin" formatted="false">Cảnh báo ký quỹ</string>
+    <string name="notification_defaults_system" formatted="false">Lỗi hệ thống</string>
+    <string name="notification_defaults_saved" formatted="false">OK</string>
+    <string name="signals_title" formatted="false">Tín hiệu</string>
+    <string name="signals_strength" formatted="false">Sức mạnh</string>
+    <string name="signals_price" formatted="false">Giá</string>
+    <string name="signals_reason" formatted="false">Lý do:</string>
+    <string name="signals_strong" formatted="false">Mạnh</string>
+    <string name="signals_medium" formatted="false">Trung bình</string>
+    <string name="signals_weak" formatted="false">Yếu</string>
+    <string name="signals_very_weak" formatted="false">Rất yếu</string>
+    <string name="signals_total" formatted="false">Total</string>
+    <string name="signals_buy" formatted="false">Mua</string>
+    <string name="signals_sell" formatted="false">Bán</string>
+    <string name="signals_average_strength" formatted="false">Sức mạnh TB</string>
+    <string name="signals_filter" formatted="false">Lọc theo chiến lược</string>
+    <string name="signals_all_strategies" formatted="false">Tất cả chiến lược</string>
+    <string name="signals_empty" formatted="false">Không có tín hiệu giao dịch nào khớp với bộ lọc hiện tại của bạn.</string>
+    <string name="signals_export" formatted="false">Xuất</string>
+    <string name="signals_export_failed" formatted="false">Gửi thất bại</string>
+    <string name="venue_accounts_title" formatted="false">Tài khoản Sàn</string>
+    <string name="venue_accounts_refresh" formatted="false">Refresh</string>
+    <string name="venue_accounts_failed" formatted="false">Không thể tải trạng thái tài khoản sàn giao dịch. Tài khoản không trống; dữ liệu chỉ đang tạm thời không khả dụng.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Sự thật trực tiếp của sàn, được ghi nhận trong khung thời gian hợp lệ.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Các hàng không được đánh dấu Thời gian thực hiển thị dữ liệu mới nhất đã biết, dữ liệu mô phỏng hoặc dữ liệu không khả dụng — tuyệt đối không phải số dư chính thức của sàn theo thời gian thực.</string>
+    <string name="venue_accounts_valuation" formatted="false">Valuation</string>
+    <string name="venue_accounts_balances" formatted="false">Số dư</string>
+    <string name="venue_accounts_observed" formatted="false">Observed at</string>
+    <string name="venue_accounts_source" formatted="false">Source observation</string>
+    <string name="venue_accounts_total" formatted="false">Total</string>
+    <string name="venue_accounts_free" formatted="false">Khả dụng</string>
+    <string name="venue_accounts_used" formatted="false">Đã dùng</string>
+    <string name="venue_accounts_numeric_source" formatted="false">Numeric provenance</string>
+    <string name="venue_accounts_positions" formatted="false">Vị thế mở</string>
+    <string name="venue_accounts_funding" formatted="false">Phí cấp vốn</string>
+    <string name="venue_accounts_reconciliation" formatted="false">Reconciliation status</string>
+    <string name="venue_accounts_evaluation" formatted="false">Evaluation status</string>
+    <string name="venue_accounts_deadline" formatted="false">Authority deadline</string>
+    <string name="positions_timeline_controls_window" formatted="false">Khoảng thời gian</string>
+    <string name="positions_timeline_controls_granularity" formatted="false">Độ phân giải</string>
+    <string name="positions_timeline_controls_valuationcurrency" formatted="false">Đồng tiền định giá</string>
+    <string name="positions_timeline_controls_last24hours" formatted="false">24 giờ qua</string>
+    <string name="positions_timeline_controls_last7days" formatted="false">7 ngày qua</string>
+    <string name="positions_timeline_controls_last30days" formatted="false">30 ngày qua</string>
+    <string name="positions_timeline_controls_last90days" formatted="false">90 ngày qua</string>
+    <string name="positions_timeline_error_title" formatted="false">Không tải được dòng thời gian P&amp;L</string>
+    <string name="positions_timeline_empty_message" formatted="false">Không có điểm dữ liệu P&amp;L nào trong khoảng thời gian này.</string>
+    <string name="positions_timeline_nowallet_message" formatted="false">Chọn một ví để xem dòng thời gian P&amp;L của ví đó.</string>
+    <string name="positions_timeline_incompleteness_title" formatted="false">Vì sao điểm dữ liệu chưa đầy đủ</string>
+    <string name="positions_timeline_incompleteness_description" formatted="false">Các lý do áp dụng cho toàn bộ khoảng thời gian đã tải. Số lượng có thể trùng lặp khi một điểm có nhiều nguyên nhân.</string>
+    <string name="positions_timeline_incompleteness_affectedpoints">Affected points: %1$s</string>
+    <string name="positions_timeline_chart_title" formatted="false">P&amp;L theo thời gian</string>
+    <string name="positions_timeline_chart_net" formatted="false">P&amp;L ròng</string>
+    <string name="positions_timeline_chart_realized" formatted="false">P&amp;L đã thực hiện</string>
+    <string name="positions_timeline_chart_unrealized" formatted="false">P&amp;L chưa thực hiện</string>
+    <string name="positions_timeline_attribution_title" formatted="false">Phân bổ P&amp;L mới nhất</string>
+    <string name="positions_timeline_attribution_nostrategy" formatted="false">Không xác minh được chiến lược</string>
+    <string name="positions_timeline_attribution_withheld" formatted="false">Không thể xác minh</string>
+    <string name="positions_timeline_attribution_valuesemantics" formatted="false">Số 0 hiển thị là giá trị đã được xác minh. “Không thể xác minh” nghĩa là không đủ bằng chứng để xác thực giá trị.</string>
+    <string name="positions_timeline_contributions_title" formatted="false">Đóng góp mới nhất theo từng công cụ</string>
+    <string name="positions_timeline_contributions_realized" formatted="false">P&amp;L đã thực hiện</string>
+    <string name="positions_timeline_contributions_fees" formatted="false">Phí</string>
+    <string name="positions_timeline_contributions_accrual" formatted="false">Phí cấp vốn dồn tích</string>
+    <string name="positions_timeline_contributions_unrealized" formatted="false">P&amp;L chưa thực hiện</string>
+    <string name="positions_timeline_incompleteness_reasons_scope_order_regression" formatted="false">Thứ tự phạm vi bị đảo ngược</string>
+    <string name="positions_timeline_incompleteness_reasons_before_activation" formatted="false">Điểm dữ liệu có trước thời điểm kích hoạt</string>
+    <string name="positions_timeline_incompleteness_reasons_activation_baseline_non_finite" formatted="false">Mốc cơ sở kích hoạt không hữu hạn</string>
+    <string name="positions_timeline_incompleteness_reasons_fill_evidence_gap" formatted="false">Thiếu bằng chứng khớp lệnh được lưu trữ bền vững</string>
+    <string name="positions_timeline_incompleteness_reasons_seed_quantity_non_finite" formatted="false">Số lượng khởi tạo không hữu hạn</string>
+    <string name="positions_timeline_incompleteness_reasons_cost_basis_unavailable" formatted="false">Không có giá vốn</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_provenance_unproven" formatted="false">Chưa xác minh được nguồn gốc giá khớp lệnh</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_size_invalid" formatted="false">Khối lượng khớp lệnh không hợp lệ</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_invalid" formatted="false">Giá khớp lệnh không hợp lệ</string>
+    <string name="positions_timeline_incompleteness_reasons_fx_conversion_unproven" formatted="false">Chưa xác minh được quy đổi FX</string>
+    <string name="positions_timeline_incompleteness_reasons_mark_unavailable" formatted="false">Không có giá tham chiếu</string>
+    <string name="positions_timeline_incompleteness_reasons_cumulative_non_finite" formatted="false">Giá trị lũy kế không hữu hạn</string>
+    <string name="positions_timeline_incompleteness_reasons_unrealized_non_finite" formatted="false">P&amp;L chưa thực hiện không hữu hạn</string>
+    <string name="positions_timeline_incompleteness_reasons_net_non_finite" formatted="false">P&amp;L ròng không hữu hạn</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_value_non_finite" formatted="false">Giá trị phân bổ không hữu hạn</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">Đối soát phân bổ thất bại</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">Tổng các giá trị P&amp;L theo công cụ không khớp với tổng P&amp;L chung</string>
+    <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">Lần khớp lệnh đến muộn có dấu thời gian trước khi kích hoạt</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Attribution sum is not representable</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Instrument sum is not representable</string>
+    <string name="positions_timeline_executionhistory_title" formatted="false">Operator-corrected execution history</string>
+    <string name="positions_timeline_executionhistory_summary" formatted="false">An operator repudiated recorded executions in this scope. Every correction listed here is excluded from the figures on this page.</string>
+    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Repudiated execution</string>
+    <string name="positions_timeline_executionhistory_correctionid" formatted="false">Correction record</string>
+    <string name="positions_timeline_equity_title" formatted="false">Equity overlay</string>
+    <string name="positions_timeline_equity_serieslabel" formatted="false">Vốn chủ sở hữu</string>
+    <string name="positions_timeline_equity_drawdown_current" formatted="false">Current drawdown</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Spot venue only — balances held on other venues are excluded.</string>
+    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">External deposits and withdrawals are not adjusted out.</string>
+    <string name="positions_timeline_equity_honesty_restatedfrom">These figures are restated from %1$s at each minute\'s close, not sampled natively in this currency.</string>
+    <string name="positions_timeline_equity_honesty_pricedon">Priced on %1$s.</string>
+    <string name="positions_timeline_equity_honesty_conversionwithheld">Minutes dropped for want of a proven close: %1$s.</string>
+    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Drawdown is withheld on a converted basis, because the running peak is tracked in the sampled currency.</string>
+    <string name="positions_timeline_equity_cashposition_position" formatted="false">Position value</string>
+    <string name="positions_timeline_equity_cashposition_cash" formatted="false">Cash</string>
+    <string name="pnl_provenance">Calculation: %1$s · Mark source: %2$s · As of: %3$s</string>
+    <string name="pnl_equity_coverage">Equity sampled: %1$s · Complete minutes: %2$s</string>
+    <string name="pnl_execution_history">Execution history: %1$s</string>
+    <string name="process_title" formatted="false">Tiến trình</string>
+    <string name="process_running" formatted="false">Đang chạy</string>
+    <string name="process_stopped" formatted="false">Đã dừng</string>
+    <string name="process_feeds" formatted="false">Nguồn cấp</string>
+    <string name="process_strategies" formatted="false">Chiến lược</string>
+    <string name="process_executors" formatted="false">Bộ thực thi</string>
+    <string name="process_brokers" formatted="false">Nhà môi giới</string>
+    <string name="process_memory" formatted="false">Bộ nhớ</string>
+    <string name="process_cpu" formatted="false">CPU</string>
+    <string name="process_empty" formatted="false">Không có tiến trình nào được cấu hình.</string>
+    <string name="process_start" formatted="false">Bắt đầu</string>
+    <string name="process_stop" formatted="false">Dừng</string>
+    <string name="process_restart" formatted="false">Khởi động lại</string>
+    <string name="process_cancel" formatted="false">Hủy</string>
+    <string name="process_stale" formatted="false">Không thể điều khiển tiến trình này từ đây nữa. Hãy làm mới dữ liệu rồi thử lại.</string>
+    <string name="process_partial" formatted="false">Tiến trình đã được dừng nhưng không thể khởi động lại từ đây nữa. Hãy làm mới dữ liệu rồi thử lại.</string>
+    <string name="process_confirm" formatted="false">Confirm process action</string>
+    <string name="process_confirm_message" formatted="false">Apply this action to the selected process?</string>
+    <string name="process_intent_saved" formatted="false">Desired state saved. The owning coordinator will apply it.</string>
+    <string name="process_accepted" formatted="false">Process action accepted.</string>
+    <string name="process_unknown" formatted="false">The command outcome is unknown. Controls remain locked: a status refresh cannot prove whether this command was applied.</string>
+    <string name="process_partial_unknown" formatted="false">The process was stopped, but the restart outcome is unknown. Controls remain locked: a status refresh cannot prove whether the restart was applied.</string>
+    <string name="process_rejected" formatted="false">The process action failed.</string>
+    <string name="process_load_failed" formatted="false">Could not refresh process status.</string>
+    <string name="process_config_failed" formatted="false">Process controls are unavailable because configuration could not be refreshed.</string>
+    <string name="process_enable" formatted="false">Enable</string>
+    <string name="process_disable" formatted="false">Disable</string>
+    <string name="ai_reviews_pending_title" formatted="false">Duyệt xét đang chờ</string>
+    <string name="ai_reviews_decisions_title" formatted="false">Quyết định AI</string>
+    <string name="ai_reviews_deadline" formatted="false">Hạn chót</string>
+    <string name="ai_reviews_expired" formatted="false">Đã hết hạn</string>
+    <string name="ai_reviews_rationale" formatted="false">Lý do</string>
+    <string name="ai_reviews_rationale_long">Lý do quá dài (giới hạn %1$d ký tự).</string>
+    <string name="ai_reviews_approve" formatted="false">Chấp thuận</string>
+    <string name="ai_reviews_reject" formatted="false">Từ chối</string>
+    <string name="ai_reviews_pending" formatted="false">Đang chờ</string>
+    <string name="ai_reviews_superseded" formatted="false">Đã rút lại</string>
+    <string name="ai_reviews_decided" formatted="false">Đã quyết định</string>
+    <string name="ai_reviews_reject_message" formatted="false">Việc từ chối sẽ phủ quyết giao dịch mà duyệt xét này được mở để xem xét. Không thể hoàn tác.</string>
+    <string name="ai_reviews_cancel" formatted="false">Hủy</string>
+    <string name="ai_reviews_peer_resolved" formatted="false">Một delegate khác đã giải quyết duyệt xét này.</string>
+    <string name="ai_reviews_expired_message" formatted="false">Duyệt xét này đã quá hạn chót và hết thời gian chờ.</string>
+    <string name="ai_reviews_missing" formatted="false">Duyệt xét này không còn tồn tại.</string>
+    <string name="ai_reviews_denied" formatted="false">Quyền truy cập delegate của bạn đã thay đổi. Hãy tải lại trước khi quyết định.</string>
+    <string name="ai_reviews_load_failed" formatted="false">Could not refresh reviews. Previously loaded reviews remain visible.</string>
+    <string name="ai_reviews_check_status" formatted="false">Check status</string>
+    <string name="ai_reviews_retry" formatted="false">Retry original decision</string>
+    <string name="ai_reviews_confirm" formatted="false">Confirm review decision</string>
+    <string name="ai_reviews_accepted" formatted="false">Decision accepted</string>
+    <string name="ai_reviews_rejected" formatted="false">Decision rejected by the server</string>
+    <string name="ai_reviews_unknown" formatted="false">Outcome unknown. Check status before retrying.</string>
+    <string name="positions_accessibility_label_closebutton" formatted="false">Đóng vị thế</string>
+    <string name="positions_accessibility_label_reducebutton" formatted="false">Giảm vị thế</string>
+    <string name="positions_reduce_cancel" formatted="false">Hủy</string>
+    <string name="positions_reduce_footer" formatted="false">100% sẽ đóng vị thế. Gửi lệnh thị trường chỉ giảm ở chiều đối ứng.</string>
+    <string name="positions_reduce_sizelabel" formatted="false">Khối lượng giảm</string>
+    <string name="trading_bracket_attach" formatted="false">Đính kèm SL / TP</string>
+    <string name="trading_bracket_stoplosslabel" formatted="false">Cắt lỗ</string>
+    <string name="trading_bracket_takeprofitlabel" formatted="false">Chốt lời</string>
+    <string name="trading_trailingstop_attach" formatted="false">Đính kèm lệnh dừng lỗ động</string>
+    <string name="trading_trailingstop_trailamountlabel" formatted="false">Khoảng cách dừng lỗ động</string>
+    <string name="position_action_review" formatted="false">Review position action</string>
+    <string name="position_action_confirm" formatted="false">Confirm action</string>
+    <string name="position_action_accepted" formatted="false">Request accepted. Refresh to check execution status.</string>
+    <string name="position_action_retry" formatted="false">Retry same request</string>
+    <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
+    <string name="position_action_cycle" formatted="false">Position cycle</string>
+    <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+</resources>

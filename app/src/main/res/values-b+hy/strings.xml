@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="privacy_policy" formatted="false">Privacy policy</string>
+    <string name="username" formatted="false">Օգտանուն</string>
+    <string name="password" formatted="false">Գաղտնաբառ</string>
+    <string name="sign_in" formatted="false">Մուտք գործել</string>
+    <string name="session_retention_notice" formatted="false">Staying signed in requires Android 11+, a secure screen lock, and authentication with your PIN, pattern, password or strong biometrics within the last 5 minutes. Otherwise, sign in again after the app restarts.</string>
+    <string name="subtitle" formatted="false">Թրեյդինգի հարթակ</string>
+    <string name="backend" formatted="false">Սեփական սերվերային մասի URL</string>
+    <string name="language" formatted="false">Լեզու</string>
+    <string name="logout" formatted="false">Դուրս գալ</string>
+    <string name="positions" formatted="false">Դիրքեր</string>
+    <string name="orders" formatted="false">Orders</string>
+    <string name="market" formatted="false">Շուկայի տվյալներ</string>
+    <string name="wallet" formatted="false">Դրամապանակ</string>
+    <string name="all_wallets" formatted="false">Բոլոր դրամապանակները</string>
+    <string name="retry" formatted="false">Կրկին փորձել</string>
+    <string name="loading" formatted="false">Բեռնվում է…</string>
+    <string name="size" formatted="false">Չափ</string>
+    <string name="average_price" formatted="false">Միջին գին</string>
+    <string name="mark_price" formatted="false">Հաշվարկային գին</string>
+    <string name="pnl" formatted="false">Չիրացված PnL</string>
+    <string name="instrument" formatted="false">Գործիք</string>
+    <string name="price" formatted="false">Գին</string>
+    <string name="filled" formatted="false">Կատարված</string>
+    <string name="status" formatted="false">Կարգավիճակ</string>
+    <string name="side" formatted="false">Ուղղություն</string>
+    <string name="open" formatted="false">Open</string>
+    <string name="high" formatted="false">High</string>
+    <string name="low" formatted="false">Low</string>
+    <string name="close" formatted="false">Close</string>
+    <string name="volume" formatted="false">Ծավալ</string>
+    <string name="timeframe" formatted="false">Ժամանակային միջակայք</string>
+    <string name="no_candles" formatted="false">Դեռ մոմեր չկան</string>
+    <string name="backend_warning" formatted="false">Սերվերային մասի փոփոխությունը ձեզ դուրս կբերի և կջնջի հավելվածի տեղային վիճակը։ Նոր URL-ով պետք է կրկին մուտք գործեք։</string>
+    <string name="home" formatted="false">Գլխավոր</string>
+    <string name="alerts" formatted="false">Alerts</string>
+    <string name="settings" formatted="false">Կարգավոր.</string>
+    <string name="save" formatted="false">Պահպանել</string>
+    <string name="refresh" formatted="false">Refresh</string>
+    <string name="exchange" formatted="false">Բորսա</string>
+    <string name="load_market" formatted="false">Load candles</string>
+    <string name="empty" formatted="false">No records available.</string>
+    <string name="snapshot_note" formatted="false">Snapshot data. Refresh to retrieve the latest available records.</string>
+    <string name="chart_description" formatted="false">Historical candle chart. Exact values are listed below.</string>
+    <string name="error_origin" formatted="false">Enter a valid HTTPS backend origin.</string>
+    <string name="error_credentials" formatted="false">The username or password is incorrect.</string>
+    <string name="error_session" formatted="false">Your session expired. Please sign in again.</string>
+    <string name="error_network" formatted="false">Could not reach the backend. Check your connection and try again.</string>
+    <string name="error_service" formatted="false">The backend could not complete this request. Please try again.</string>
+    <string name="error_unknown" formatted="false">Something went wrong. Please try again.</string>
+    <string name="dismiss" formatted="false">Հեռացնել</string>
+    <string name="paper" formatted="false">Փորձնական</string>
+    <string name="safety_critical" formatted="false">Safety critical</string>
+    <string name="snapshot_limit" formatted="false">This view shows current positions and up to 100 recent orders and alerts; it is not a complete history.</string>
+    <string name="chart_window" formatted="false">The chart shows the last 100 retrieved candles.</string>
+    <string name="local_network_explanation" formatted="false">For a backend on your local network, allow local network access before signing in. Public internet backends do not need this permission.</string>
+    <string name="local_network_allow" formatted="false">Allow local network</string>
+    <string name="local_network_settings" formatted="false">Open app settings</string>
+    <string name="order_new" formatted="false">New Order</string>
+    <string name="order_entry" formatted="false">New Manual Order</string>
+    <string name="order_confirm" formatted="false">Confirm Order</string>
+    <string name="order_quantity" formatted="false">Քանակ</string>
+    <string name="order_type" formatted="false">Order Type</string>
+    <string name="order_stop_price" formatted="false">Stop Price</string>
+    <string name="order_mode" formatted="false">Ռեժիմ</string>
+    <string name="order_buy" formatted="false">Գնել</string>
+    <string name="order_sell" formatted="false">Վաճառել</string>
+    <string name="order_market" formatted="false">Շուկայական</string>
+    <string name="order_limit" formatted="false">Լիմիտային</string>
+    <string name="order_stop" formatted="false">Stop</string>
+    <string name="order_stop_limit" formatted="false">Stop Limit</string>
+    <string name="order_live" formatted="false">Live</string>
+    <string name="order_review" formatted="false">Review Order</string>
+    <string name="order_back" formatted="false">Back</string>
+    <string name="order_submit" formatted="false">Confirm Order</string>
+    <string name="order_submitting" formatted="false">Submitting…</string>
+    <string name="order_leverage" formatted="false">Լծակ</string>
+    <string name="order_reduce_only" formatted="false">Reduce Only</string>
+    <string name="order_observation_only" formatted="false">This instrument is observation-only — place orders on an execution-capable instrument.</string>
+    <string name="order_unknown_instrument" formatted="false">This instrument is not recognised. Reload the list and try again.</string>
+    <string name="order_caps_violation" formatted="false">This order would exceed your account safety caps. Review your risk settings and retry.</string>
+    <string name="order_rejected" formatted="false">Order creation failed</string>
+    <string name="order_cancel_title" formatted="false">Չեղարկե՞լ հանձնարարականը։</string>
+    <string name="order_cancel_confirm" formatted="false">Չեղարկել հանձնարարականը</string>
+    <string name="order_keep_open" formatted="false">Թողնել բաց</string>
+    <string name="order_select_wallet" formatted="false">Select a wallet on Home before placing an order.</string>
+    <string name="order_created" formatted="false">Order submitted. Refresh to check execution status.</string>
+    <string name="order_cancel_requested" formatted="false">Cancellation requested. Refresh to check the order status.</string>
+    <string name="order_unknown_outcome" formatted="false">The request outcome is unknown. Check status before taking further action.</string>
+    <string name="order_check_status" formatted="false">Check status</string>
+    <string name="order_retry_intent" formatted="false">Retry same order</string>
+    <string name="order_catalog_error" formatted="false">Could not load exchanges or instruments. Try again.</string>
+    <string name="order_no_instruments" formatted="false">No instruments available for this exchange.</string>
+    <string name="order_invalid_form" formatted="false">Enter positive quantities and required prices. Optional leverage must be a positive whole number.</string>
+    <string name="order_refresh_failed" formatted="false">The request was accepted, but the latest records could not be loaded. Refresh to check status.</string>
+    <string name="order_forbidden" formatted="false">You no longer have permission for this action.</string>
+    <string name="order_session_changed" formatted="false">The session or wallet changed. Open a new order from the current account.</string>
+    <string name="order_enabled" formatted="false">Միացված</string>
+    <string name="order_disabled" formatted="false">Անջատված</string>
+    <string name="system_tools" formatted="false">Overview</string>
+    <string name="desk_attach_button" formatted="false">Ավելացնել դիտող</string>
+    <string name="desk_attach_desk_label" formatted="false">Դեսք</string>
+    <string name="desk_nav_title" formatted="false">Իմ դեսքերը</string>
+    <string name="desk_primary_badge" formatted="false">Հիմնական</string>
+    <string name="desk_attach_username_placeholder" formatted="false">Դիտողի ճշգրիտ օգտանունը</string>
+    <string name="desk_attach_validation_username" formatted="false">Մուտքագրեք դիտողի օգտանունը։</string>
+    <string name="desk_description_unavailable" formatted="false">Նկարագրություն չի տրամադրվել։</string>
+    <string name="desk_attach_help" formatted="false">Մուտքագրեք դիտողի ճշգրիտ օգտանունը։ Նոր դեսքը հասանելի կլինի միայն դիտողի դուրս գալուց և կրկին մուտք գործելուց հետո։</string>
+    <string name="desk_attach_success_message" formatted="false">Նոր դեսքը հասանելի լինելու համար դիտողը պետք է դուրս գա և կրկին մուտք գործի։</string>
+    <string name="desk_empty_message" formatted="false">Ձեր հաշիվը կցված չէ որևէ դեսքի։</string>
+    <string name="desk_load_error" formatted="false">Չհաջողվեց բեռնել դեսքերը։ Կրկին փորձեք։</string>
+    <string name="settings_account_email" formatted="false">Էլ. փոստ</string>
+    <string name="settings_account_role">Դեր՝ %1$s</string>
+    <string name="settings_app_info_version" formatted="false">Տարբերակ</string>
+    <string name="settings_app_info_build" formatted="false">Կառուցում</string>
+    <string name="settings_logout_confirm_title" formatted="false">Դուրս գա՞լ։</string>
+    <string name="settings_logout_confirm_message" formatted="false">Վստա՞հ եք, որ ուզում եք դուրս գալ։</string>
+    <string name="settings_connection_change_backend_title" formatted="false">Փոխե՞լ սերվերային մասը։</string>
+    <string name="settings_connection_change_backend_message" formatted="false">Սերվերային մասի փոփոխությունը ձեզ դուրս կբերի և կջնջի հավելվածի տեղային վիճակը։ Նոր URL-ով պետք է կրկին մուտք գործեք։</string>
+    <string name="common_continue" formatted="false">Շարունակել</string>
+    <string name="backend_url_cancel" formatted="false">Չեղարկել</string>
+    <string name="market_search" formatted="false">Որոնել գործիքներ</string>
+    <string name="market_view_only" formatted="false">Միայն դիտում</string>
+    <string name="market_catalog_retry" formatted="false">Կրկին փորձել</string>
+    <string name="market_picker_close" formatted="false">Չեղարկել</string>
+    <string name="market_no_matches" formatted="false">\@string/empty</string>
+    <string name="market_catalog_error" formatted="false">\@string/error_unknown</string>
+    <string name="system_health" formatted="false">Համակարգի վիճակ</string>
+    <string name="system_strategies" formatted="false">Ռազմավարություններ</string>
+    <string name="system_backtests" formatted="false">Բեքթեստեր</string>
+    <string name="system_users" formatted="false">Օգտատերեր</string>
+    <string name="system_delegates" formatted="false">AI պատվիրակներ</string>
+    <string name="system_version" formatted="false">Տարբերակ</string>
+    <string name="system_connections" formatted="false">Ակտիվ կապեր</string>
+    <string name="system_subscribers" formatted="false">ZMQ բաժանորդներ</string>
+    <string name="system_tasks" formatted="false">Բաժանորդների առաջադրանքներ</string>
+    <string name="system_topics" formatted="false">Ակտիվ թեմաներ</string>
+    <string name="system_clients" formatted="false">Ակտիվ հաճախորդներ</string>
+    <string name="system_gaps" formatted="false">Հայտնաբերված բացեր</string>
+    <string name="system_resets" formatted="false">Սեսիայի վերակայումներ</string>
+    <string name="system_duplicates" formatted="false">Կրկնօրինակներ</string>
+    <string name="system_joins" formatted="false">Միացումներ հոսքի կեսին</string>
+    <string name="system_unstamped" formatted="false">Մերժված (առանց դրոշմի)</string>
+    <string name="system_rest_clients" formatted="false">Հետևվող REST հաճախորդներ</string>
+    <string name="system_initial_cash" formatted="false">Սկզբնական կապիտալ</string>
+    <string name="system_period" formatted="false">Ժամանակահատված</string>
+    <string name="system_created" formatted="false">Ստեղծվել է</string>
+    <string name="system_max_orders" formatted="false">Առավելագույն բաց հայտեր</string>
+    <string name="system_max_daily" formatted="false">Օրական առավելագույն USD</string>
+    <string name="system_default" formatted="false">Կանխադրված</string>
+    <string name="system_trader" formatted="false">Թրեյդերի կարգավիճակ</string>
+    <string name="system_running" formatted="false">Ընթացքի մեջ</string>
+    <string name="system_stopped" formatted="false">Կանգնեցված</string>
+    <string name="system_mode" formatted="false">Ռեժիմ</string>
+    <string name="system_autostart" formatted="false">Ինքնագործարկում</string>
+    <string name="system_active" formatted="false">Ակտիվ</string>
+    <string name="system_inactive" formatted="false">Ոչ ակտիվ</string>
+    <string name="system_revoked" formatted="false">Չեղարկված</string>
+    <string name="records_open" formatted="false">Open</string>
+    <string name="records_recent" formatted="false">Վերջին</string>
+    <string name="records_fills" formatted="false">Կատարումներ</string>
+    <string name="records_refresh" formatted="false">Refresh</string>
+    <string name="records_fee" formatted="false">Fee</string>
+    <string name="records_details" formatted="false">Details</string>
+    <string name="records_hide_details" formatted="false">\@string/close</string>
+    <string name="records_thread" formatted="false">Շղթա</string>
+    <string name="records_source_topic" formatted="false">Աղբյուրի թեմա</string>
+    <string name="notification_defaults_title" formatted="false">Օգտատիրոջ լռելյայն կարգավորումներ</string>
+    <string name="notification_defaults_footer" formatted="false">Լռելյայնները կիրառվում են, երբ սարքի որևէ վերագրում չի համապատասխանում մուտքային ազդանշանին։</string>
+    <string name="notification_defaults_enabled" formatted="false">Միացված</string>
+    <string name="notification_defaults_priority" formatted="false">Նվազագույն առաջնահերթություն</string>
+    <string name="notification_defaults_load_failed" formatted="false">Չհաջողվեց բեռնել նախապատվությունները</string>
+    <string name="notification_defaults_save_failed" formatted="false">Չհաջողվեց պահպանել նախապատվությունները</string>
+    <string name="notification_defaults_low" formatted="false">Low</string>
+    <string name="notification_defaults_medium" formatted="false">Միջին</string>
+    <string name="notification_defaults_high" formatted="false">High</string>
+    <string name="notification_defaults_fill" formatted="false">Հանձնարարականը կատարված է</string>
+    <string name="notification_defaults_rejected" formatted="false">Հանձնարարականը մերժվել է</string>
+    <string name="notification_defaults_stop" formatted="false">Կորստի սահմանափակումը գործարկվեց</string>
+    <string name="notification_defaults_margin" formatted="false">Մարժայի զգուշացում</string>
+    <string name="notification_defaults_system" formatted="false">Համակարգային սխալ</string>
+    <string name="notification_defaults_saved" formatted="false">OK</string>
+    <string name="signals_title" formatted="false">Ազդանշաններ</string>
+    <string name="signals_strength" formatted="false">Ուժ</string>
+    <string name="signals_price" formatted="false">Գին</string>
+    <string name="signals_reason" formatted="false">Պատճառ:</string>
+    <string name="signals_strong" formatted="false">Ուժեղ</string>
+    <string name="signals_medium" formatted="false">Միջին</string>
+    <string name="signals_weak" formatted="false">Թույլ</string>
+    <string name="signals_very_weak" formatted="false">Շատ թույլ</string>
+    <string name="signals_total" formatted="false">Ընդամենը</string>
+    <string name="signals_buy" formatted="false">Գնել</string>
+    <string name="signals_sell" formatted="false">Վաճառել</string>
+    <string name="signals_average_strength" formatted="false">Միջին ուժ</string>
+    <string name="signals_filter" formatted="false">Զտել ըստ ռազմավարության</string>
+    <string name="signals_all_strategies" formatted="false">Բոլոր ռազմավարությունները</string>
+    <string name="signals_empty" formatted="false">Ոչ մի առևտրային ազդանշան չի համապատասխանում ձեր ընթացիկ զտիչներին։</string>
+    <string name="signals_export" formatted="false">Արտահանել</string>
+    <string name="signals_export_failed" formatted="false">Ներկայացումը չհաջողվեց</string>
+    <string name="venue_accounts_title" formatted="false">Բորսայի հաշիվներ</string>
+    <string name="venue_accounts_refresh" formatted="false">Refresh</string>
+    <string name="venue_accounts_failed" formatted="false">Չհաջողվեց բեռնել բորսայի հաշվի վիճակը։ Հաշիվը դատարկ չէ։ Տվյալներն այս պահին պարզապես անհասանելի են։</string>
+    <string name="venue_accounts_authoritative" formatted="false">Բորսայի հավաստի իրական ժամանակի տվյալներ՝ դիտարկված վստահելիության պատուհանի ընթացքում։</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Ոչ կենդանի նշված տողերը ցույց են տալիս հին, սիմուլյացված կամ անհասանելի տվյալներ — դրանք երբեք բորսայի հավաստի իրական ժամանակի մնացորդներ չեն։</string>
+    <string name="venue_accounts_valuation" formatted="false">Valuation</string>
+    <string name="venue_accounts_balances" formatted="false">Մնացորդներ</string>
+    <string name="venue_accounts_observed" formatted="false">Observed at</string>
+    <string name="venue_accounts_source" formatted="false">Source observation</string>
+    <string name="venue_accounts_total" formatted="false">Ընդամենը</string>
+    <string name="venue_accounts_free" formatted="false">Հասանելի</string>
+    <string name="venue_accounts_used" formatted="false">Օգտագործված</string>
+    <string name="venue_accounts_numeric_source" formatted="false">Numeric provenance</string>
+    <string name="venue_accounts_positions" formatted="false">Բաց դիրքեր</string>
+    <string name="venue_accounts_funding" formatted="false">Ֆինանսավորում</string>
+    <string name="venue_accounts_reconciliation" formatted="false">Reconciliation status</string>
+    <string name="venue_accounts_evaluation" formatted="false">Evaluation status</string>
+    <string name="venue_accounts_deadline" formatted="false">Authority deadline</string>
+    <string name="positions_timeline_controls_window" formatted="false">Ժամանակահատված</string>
+    <string name="positions_timeline_controls_granularity" formatted="false">Ժամանակային քայլ</string>
+    <string name="positions_timeline_controls_valuationcurrency" formatted="false">Գնահատման արժույթ</string>
+    <string name="positions_timeline_controls_last24hours" formatted="false">Վերջին 24 ժամը</string>
+    <string name="positions_timeline_controls_last7days" formatted="false">Վերջին 7 օրը</string>
+    <string name="positions_timeline_controls_last30days" formatted="false">Վերջին 30 օրը</string>
+    <string name="positions_timeline_controls_last90days" formatted="false">Վերջին 90 օրը</string>
+    <string name="positions_timeline_error_title" formatted="false">Չհաջողվեց բեռնել P&amp;L-ի ժամանակագիծը</string>
+    <string name="positions_timeline_empty_message" formatted="false">Այս ժամանակահատվածի համար P&amp;L-ի կետեր չկան։</string>
+    <string name="positions_timeline_nowallet_message" formatted="false">Ընտրեք դրամապանակ՝ դրա P&amp;L-ի ժամանակագիծը դիտելու համար։</string>
+    <string name="positions_timeline_incompleteness_title" formatted="false">Ինչու են կետերը թերի</string>
+    <string name="positions_timeline_incompleteness_description" formatted="false">Պատճառները վերաբերում են բեռնված ժամանակահատվածի ամբողջ տևողությանը։ Քանակները կարող են համընկնել, եթե կետն ունի մեկից ավելի պատճառ։</string>
+    <string name="positions_timeline_incompleteness_affectedpoints">Affected points: %1$s</string>
+    <string name="positions_timeline_chart_title" formatted="false">P&amp;L-ն ըստ ժամանակի</string>
+    <string name="positions_timeline_chart_net" formatted="false">Զուտ P&amp;L</string>
+    <string name="positions_timeline_chart_realized" formatted="false">Իրացված P&amp;L</string>
+    <string name="positions_timeline_chart_unrealized" formatted="false">Չիրացված P&amp;L</string>
+    <string name="positions_timeline_attribution_title" formatted="false">P&amp;L-ի վերջին վերագրում</string>
+    <string name="positions_timeline_attribution_nostrategy" formatted="false">Հաստատված ռազմավարություն չկա</string>
+    <string name="positions_timeline_attribution_withheld" formatted="false">Հաստատել չի հաջողվել</string>
+    <string name="positions_timeline_attribution_valuesemantics" formatted="false">Ցուցադրված զրոյի արժեքը հաստատված է։ «Հաստատել չի հաջողվել» նշանակում է, որ արժեքը հնարավոր չի եղել հաստատել։</string>
+    <string name="positions_timeline_contributions_title" formatted="false">Վերջին ներդրումներն ըստ գործիքների</string>
+    <string name="positions_timeline_contributions_realized" formatted="false">Իրացված P&amp;L</string>
+    <string name="positions_timeline_contributions_fees" formatted="false">Վճարներ</string>
+    <string name="positions_timeline_contributions_accrual" formatted="false">Կուտակված ֆանդինգ</string>
+    <string name="positions_timeline_contributions_unrealized" formatted="false">Չիրացված P&amp;L</string>
+    <string name="positions_timeline_incompleteness_reasons_scope_order_regression" formatted="false">Շրջանակի հերթականության հետընթաց</string>
+    <string name="positions_timeline_incompleteness_reasons_before_activation" formatted="false">Կետն ակտիվացումից առաջ է</string>
+    <string name="positions_timeline_incompleteness_reasons_activation_baseline_non_finite" formatted="false">Ակտիվացման բազային արժեքը վերջավոր չէ</string>
+    <string name="positions_timeline_incompleteness_reasons_fill_evidence_gap" formatted="false">Հանձնարարականի կատարման պահպանված ապացույցների բացակայություն</string>
+    <string name="positions_timeline_incompleteness_reasons_seed_quantity_non_finite" formatted="false">Սկզբնական քանակը վերջավոր չէ</string>
+    <string name="positions_timeline_incompleteness_reasons_cost_basis_unavailable" formatted="false">Ինքնարժեքը հասանելի չէ</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_provenance_unproven" formatted="false">Կատարման գնի ծագումը հաստատված չէ</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_size_invalid" formatted="false">Կատարման չափն անվավեր է</string>
+    <string name="positions_timeline_incompleteness_reasons_execution_price_invalid" formatted="false">Կատարման գինն անվավեր է</string>
+    <string name="positions_timeline_incompleteness_reasons_fx_conversion_unproven" formatted="false">FX փոխարկումը հաստատված չէ</string>
+    <string name="positions_timeline_incompleteness_reasons_mark_unavailable" formatted="false">Հաշվարկային գինը հասանելի չէ</string>
+    <string name="positions_timeline_incompleteness_reasons_cumulative_non_finite" formatted="false">Կուտակային արժեքը վերջավոր չէ</string>
+    <string name="positions_timeline_incompleteness_reasons_unrealized_non_finite" formatted="false">Չիրացված P&amp;L-ը վերջավոր չէ</string>
+    <string name="positions_timeline_incompleteness_reasons_net_non_finite" formatted="false">Զուտ P&amp;L-ը վերջավոր չէ</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_value_non_finite" formatted="false">Վերագրման արժեքը վերջավոր չէ</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">Վերագրման համաձայնեցումը ձախողվել է</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">Գործիքների P&amp;L հանրագումարների համաձայնեցումը ձախողվել է</string>
+    <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">Ակտիվացումից առաջ ժամանակագրված, ուշ հասած առևտրային կատարում</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Attribution sum is not representable</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Instrument sum is not representable</string>
+    <string name="positions_timeline_executionhistory_title" formatted="false">Operator-corrected execution history</string>
+    <string name="positions_timeline_executionhistory_summary" formatted="false">An operator repudiated recorded executions in this scope. Every correction listed here is excluded from the figures on this page.</string>
+    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Repudiated execution</string>
+    <string name="positions_timeline_executionhistory_correctionid" formatted="false">Correction record</string>
+    <string name="positions_timeline_equity_title" formatted="false">Equity overlay</string>
+    <string name="positions_timeline_equity_serieslabel" formatted="false">Կապիտալ</string>
+    <string name="positions_timeline_equity_drawdown_current" formatted="false">Current drawdown</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Spot venue only — balances held on other venues are excluded.</string>
+    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">External deposits and withdrawals are not adjusted out.</string>
+    <string name="positions_timeline_equity_honesty_restatedfrom">These figures are restated from %1$s at each minute\'s close, not sampled natively in this currency.</string>
+    <string name="positions_timeline_equity_honesty_pricedon">Priced on %1$s.</string>
+    <string name="positions_timeline_equity_honesty_conversionwithheld">Minutes dropped for want of a proven close: %1$s.</string>
+    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Drawdown is withheld on a converted basis, because the running peak is tracked in the sampled currency.</string>
+    <string name="positions_timeline_equity_cashposition_position" formatted="false">Position value</string>
+    <string name="positions_timeline_equity_cashposition_cash" formatted="false">Cash</string>
+    <string name="pnl_provenance">Calculation: %1$s · Mark source: %2$s · As of: %3$s</string>
+    <string name="pnl_equity_coverage">Equity sampled: %1$s · Complete minutes: %2$s</string>
+    <string name="pnl_execution_history">Execution history: %1$s</string>
+    <string name="process_title" formatted="false">Գործընթացներ</string>
+    <string name="process_running" formatted="false">Ընթացքի մեջ</string>
+    <string name="process_stopped" formatted="false">Կանգնեցված</string>
+    <string name="process_feeds" formatted="false">Հոսքեր</string>
+    <string name="process_strategies" formatted="false">Ռազմավարություններ</string>
+    <string name="process_executors" formatted="false">Կատարիչներ</string>
+    <string name="process_brokers" formatted="false">Բրոքերներ</string>
+    <string name="process_memory" formatted="false">Հիշողություն</string>
+    <string name="process_cpu" formatted="false">CPU</string>
+    <string name="process_empty" formatted="false">Կարգավորված գործընթացներ չկան։</string>
+    <string name="process_start" formatted="false">Գործարկել</string>
+    <string name="process_stop" formatted="false">Stop</string>
+    <string name="process_restart" formatted="false">Վերագործարկել</string>
+    <string name="process_cancel" formatted="false">Չեղարկել</string>
+    <string name="process_stale" formatted="false">Այս գործընթացն այլևս հնարավոր չէ կառավարել այստեղից։ Թարմացրեք տվյալները և կրկին փորձեք։</string>
+    <string name="process_partial" formatted="false">Գործընթացը դադարեցվեց, սակայն այն այլևս հնարավոր չէ վերագործարկել այստեղից։ Թարմացրեք տվյալները և կրկին փորձեք։</string>
+    <string name="process_confirm" formatted="false">Confirm process action</string>
+    <string name="process_confirm_message" formatted="false">Apply this action to the selected process?</string>
+    <string name="process_intent_saved" formatted="false">Desired state saved. The owning coordinator will apply it.</string>
+    <string name="process_accepted" formatted="false">Process action accepted.</string>
+    <string name="process_unknown" formatted="false">The command outcome is unknown. Controls remain locked: a status refresh cannot prove whether this command was applied.</string>
+    <string name="process_partial_unknown" formatted="false">The process was stopped, but the restart outcome is unknown. Controls remain locked: a status refresh cannot prove whether the restart was applied.</string>
+    <string name="process_rejected" formatted="false">The process action failed.</string>
+    <string name="process_load_failed" formatted="false">Could not refresh process status.</string>
+    <string name="process_config_failed" formatted="false">Process controls are unavailable because configuration could not be refreshed.</string>
+    <string name="process_enable" formatted="false">Enable</string>
+    <string name="process_disable" formatted="false">Disable</string>
+    <string name="ai_reviews_pending_title" formatted="false">Սպասող վերանայումներ</string>
+    <string name="ai_reviews_decisions_title" formatted="false">AI որոշումներ</string>
+    <string name="ai_reviews_deadline" formatted="false">Վերջնաժամկետ</string>
+    <string name="ai_reviews_expired" formatted="false">Ժամկետանց</string>
+    <string name="ai_reviews_rationale" formatted="false">Հիմնավորում</string>
+    <string name="ai_reviews_rationale_long">Հիմնավորումը չափազանց երկար է (սահմանաչափը՝ %1$d նիշ).</string>
+    <string name="ai_reviews_approve" formatted="false">Հաստատել</string>
+    <string name="ai_reviews_reject" formatted="false">Մերժել</string>
+    <string name="ai_reviews_pending" formatted="false">Սպասման մեջ</string>
+    <string name="ai_reviews_superseded" formatted="false">Հետ կանչված</string>
+    <string name="ai_reviews_decided" formatted="false">Որոշվել է</string>
+    <string name="ai_reviews_reject_message" formatted="false">Մերժումը վետո է դնում այն գործարքի վրա, որի համար բացվել էր այս վերանայումը։ Այն հնարավոր չէ հետարկել։</string>
+    <string name="ai_reviews_cancel" formatted="false">Չեղարկել</string>
+    <string name="ai_reviews_peer_resolved" formatted="false">Մեկ այլ դելեգատ արդեն լուծել է այս վերանայումը։</string>
+    <string name="ai_reviews_expired_message" formatted="false">Այս վերանայման վերջնաժամկետն անցել է, և այն սպառվել է։</string>
+    <string name="ai_reviews_missing" formatted="false">Այս վերանայումն այլևս գոյություն չունի։</string>
+    <string name="ai_reviews_denied" formatted="false">Ձեր դելեգատի հասանելիությունը փոխվել է։ Որոշումից առաջ վերաբեռնեք։</string>
+    <string name="ai_reviews_load_failed" formatted="false">Could not refresh reviews. Previously loaded reviews remain visible.</string>
+    <string name="ai_reviews_check_status" formatted="false">Check status</string>
+    <string name="ai_reviews_retry" formatted="false">Retry original decision</string>
+    <string name="ai_reviews_confirm" formatted="false">Confirm review decision</string>
+    <string name="ai_reviews_accepted" formatted="false">Decision accepted</string>
+    <string name="ai_reviews_rejected" formatted="false">Decision rejected by the server</string>
+    <string name="ai_reviews_unknown" formatted="false">Outcome unknown. Check status before retrying.</string>
+    <string name="positions_accessibility_label_closebutton" formatted="false">Փակել դիրքը</string>
+    <string name="positions_accessibility_label_reducebutton" formatted="false">Նվազեցնել դիրքը</string>
+    <string name="positions_reduce_cancel" formatted="false">Չեղարկել</string>
+    <string name="positions_reduce_footer" formatted="false">100%-ը փակում է դիրքը։ Ուղարկում է միայն նվազեցման շուկայական հանձնարարական հակառակ ուղղությամբ։</string>
+    <string name="positions_reduce_sizelabel" formatted="false">Նվազեցման չափ</string>
+    <string name="trading_bracket_attach" formatted="false">Կցել SL / TP</string>
+    <string name="trading_bracket_stoplosslabel" formatted="false">Կորստի սահմանափակում</string>
+    <string name="trading_bracket_takeprofitlabel" formatted="false">Շահույթի ֆիքսում</string>
+    <string name="trading_trailingstop_attach" formatted="false">Կցել հետևող ստոպ</string>
+    <string name="trading_trailingstop_trailamountlabel" formatted="false">Հետևման չափ</string>
+    <string name="position_action_review" formatted="false">Review position action</string>
+    <string name="position_action_confirm" formatted="false">Confirm action</string>
+    <string name="position_action_accepted" formatted="false">Request accepted. Refresh to check execution status.</string>
+    <string name="position_action_retry" formatted="false">Retry same request</string>
+    <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
+    <string name="position_action_cycle" formatted="false">Position cycle</string>
+    <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+</resources>
