@@ -22,6 +22,24 @@ or failed latest run blocks upload. Wait for those workflows to finish before di
 
 ## Configure signing and Play access
 
+Publication assets are indexed in [store/visuals/README.md](store/visuals/README.md).
+Use the Android-specific [privacy policy](docs/privacy-policy.md), whose canonical URL
+is `https://snapper.ch/android-privacy-policy.html`. Deployment of the matching
+`android-privacy-policy.html` web page is a separate prerequisite: confirm that an
+unauthenticated request returns the Android policy content, not an SPA fallback, login
+screen or the iOS policy. Adding the source file does not establish public availability.
+
+Keep listing and declarations consistent with the app: open-source client software for
+a user-controlled backend and an existing backend account, with permission-gated financial
+commands. The publisher does not operate an exchange, brokerage, custody or investment
+advisory service through this client. Backend operators control account data, retention
+and deletion; do not describe logout as account deletion or claim no data leaves the phone.
+
+For a personal account subject to Google's
+[new-account testing requirements](https://support.google.com/googleplay/android-developer/answer/14151465),
+internal testing does not replace the required closed test: at least 12 testers must
+remain opted in continuously for 14 days before applying for production access.
+
 1. Create the application in Google Play Console using package `ch.snapper.android`.
    Complete the required store listing, privacy policy, data safety, content declarations,
    developer verification and testing requirements for the account.

@@ -92,6 +92,24 @@ Session encryption keys are specific to the backend origin and require device au
 
 ## Design
 
+### Privacy and publication
+
+Snapper distributes open-source client software for a backend controlled by you or your
+operator. It does not itself operate an exchange, brokerage, custody or investment
+advisory service. An existing backend account is required.
+
+The [Android privacy policy](docs/privacy-policy.md) describes authentication, local
+storage, financial requests and backend-operator retention/deletion responsibilities.
+The in-app link opens `https://snapper.ch/android-privacy-policy.html`; the separate iOS
+policy remains at its existing URL. Before store submission, verify that the Android URL
+serves this policy publicly rather than a login page, SPA fallback or the iOS policy.
+
+Reviewed listing assets and their synthetic-data provenance are indexed in
+[store/visuals/README.md](store/visuals/README.md). See [RELEASING.md](RELEASING.md) for
+signing and Play submission requirements.
+
+### Implementation
+
 - A single application module with Compose screens, a ViewModel/StateFlow UI state, and injected session and settings dependencies.
 - Retrofit, OkHttp and kotlinx.serialization use the backend's typed `payload` envelopes, cookie authentication and URL-scoped CSRF headers.
 - Session rotations and wallet operations are serialized. Authenticated reads can refresh expired credentials and retry once; order mutations are never replayed automatically. Backend, session, wallet and permission changes discard stale account data and order drafts.

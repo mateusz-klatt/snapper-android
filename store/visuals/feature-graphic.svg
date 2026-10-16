@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="500" viewBox="0 0 1024 500">
+  <title>Snapper — Your backend. Your markets.</title>
+  <desc>Open-source Android client with the existing Snapper mountain and wave logo.</desc>
+  <rect width="1024" height="500" fill="#ffffff"/>
+  <rect x="0" y="0" width="12" height="500" fill="#149b65"/>
+  <rect x="64" y="84" width="54" height="6" rx="3" fill="#df1923"/>
+  <text x="64" y="213" font-family="DejaVu Sans, sans-serif" font-size="80" font-weight="700" fill="#16392e">Snapper</text>
+  <text x="68" y="274" font-family="DejaVu Sans, sans-serif" font-size="26" fill="#285b48">Your backend. Your markets.</text>
+  <text x="68" y="360" font-family="DejaVu Sans, sans-serif" font-size="20" fill="#52635d">Open-source Android client</text>
+  <image x="596" y="50" width="400" height="400" xlink:href="logo-source.png"/>
+</svg>

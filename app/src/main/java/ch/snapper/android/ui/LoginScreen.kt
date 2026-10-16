@@ -49,6 +49,7 @@ internal fun LoginScreen(state: AppUiState, actions: AppActions) {
             modifier = Modifier.fillMaxWidth(),
         )
         BackendEditor(state.backendUrl, actions.saveBackend)
+        PrivacyPolicyLink()
     }
 }
 

@@ -1,6 +1,9 @@
 package ch.snapper.android.ui
 
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.platform.UriHandler
 import androidx.compose.ui.semantics.SemanticsProperties
 import androidx.compose.ui.test.SemanticsMatcher
 import androidx.compose.ui.test.assert
@@ -111,5 +114,26 @@ class SnapperAppTest {
         compose.runOnIdle { state.value = state.value.copy(user = user.copy(effectivePermissions = emptyList())) }
         compose.onNodeWithTag("nav.positions").assertDoesNotExist()
         compose.onNodeWithTag("home.wallet").assertExists()
+    }
+
+    @Test
+    fun privacyPolicyOpensFromLoginAndAuthenticatedSettings() {
+        val state = mutableStateOf(AppUiState(isRestoring = false))
+        val opened = mutableListOf<String>()
+        val handler = object : UriHandler {
+            override fun openUri(uri: String) { opened.add(uri) }
+        }
+        compose.setContent {
+            CompositionLocalProvider(LocalUriHandler provides handler) {
+                SnapperTheme { SnapperApp(state.value, actions()) }
+            }
+        }
+        compose.onNodeWithTag("privacy.policy").performScrollTo().performClick()
+        compose.runOnIdle { state.value = state.value.copy(user = UserDto("reader", "viewer")) }
+        compose.onNodeWithTag("nav.settings").performClick()
+        compose.onNodeWithTag("privacy.policy").performScrollTo().performClick()
+        compose.runOnIdle {
+            assertEquals(List(2) { "https://snapper.ch/android-privacy-policy.html" }, opened)
+        }
     }
 }

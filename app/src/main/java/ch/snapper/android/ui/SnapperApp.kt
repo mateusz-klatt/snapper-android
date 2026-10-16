@@ -102,5 +102,6 @@ private fun SettingsScreen(state: AppUiState, actions: AppActions) {
     LanguagePicker(state.language, actions.selectLanguage)
     Text(stringResource(R.string.backend_warning), style = MaterialTheme.typography.bodySmall)
     BackendEditor(state.backendUrl, actions.saveBackend)
+    PrivacyPolicyLink()
     Button(onClick = actions.logout, modifier = Modifier.testTag("settings.logout")) { Text(stringResource(R.string.logout)) }
 }
