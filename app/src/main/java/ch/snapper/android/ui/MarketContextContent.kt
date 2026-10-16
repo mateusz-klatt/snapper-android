@@ -34,7 +34,7 @@ private fun MarketMetricsContent(state: MarketContextState, actions: MarketConte
     state.metrics?.let { metrics ->
         MarketMetric(stringResource(R.string.market_context_last), metrics.lastPrice, "last")
         metrics.asOfMillis?.let { timestamp ->
-            Text(stringResource(R.string.market_context_as_of, Instant.ofEpochMilli(timestamp).toString()),
+            Text(stringResource(R.string.market_context_as_of, Instant.ofEpochMilli(timestamp).toString().displayTimestamp()),
                 Modifier.testTag("marketContext.metrics.asOf"))
         }
         MarketMetric(stringResource(R.string.market_context_change), metrics.changePercent, "change", "%")

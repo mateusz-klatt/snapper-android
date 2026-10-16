@@ -53,7 +53,7 @@ private fun PendingReview(row: AiPendingReviewDto, state: AiReviewsState, action
     RecordCard(row.instrument ?: row.reviewPublicId) {
         Text(row.reviewPublicId)
         Metric(R.string.status, row.status)
-        Metric(R.string.ai_reviews_deadline, row.deadline)
+        Metric(R.string.ai_reviews_deadline, row.deadline.displayTimestamp())
         if (aiReviewExpired(row.deadline, state.now)) Text(stringResource(R.string.ai_reviews_expired))
         if (state.identity?.canDecide == true) DecisionControls(row, state, actions)
     }
@@ -84,7 +84,7 @@ private fun AuditReview(row: AiAuditReviewDto) {
         Metric(R.string.status, stringResource(decisionLabel(aiReviewVerdict(row))))
         row.rationale?.let { Metric(R.string.ai_reviews_rationale, it) }
         row.resolvedAt?.let { Metric(R.string.ai_reviews_decided, it) }
-        Metric(R.string.ai_reviews_deadline, row.deadline)
+        Metric(R.string.ai_reviews_deadline, row.deadline.displayTimestamp())
         Text(row.strategyPublicId)
         Text(row.respondingDelegatePublicId ?: row.selectedDelegatePublicId)
     }

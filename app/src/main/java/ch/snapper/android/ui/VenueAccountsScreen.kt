@@ -25,16 +25,16 @@ internal fun LazyListScope.venueAccountsScreen(state: VenueAccountsState, refres
             Text(stringResource(if (truth.authoritative) R.string.venue_accounts_authoritative else R.string.venue_accounts_not_authoritative))
             Metric(R.string.venue_accounts_valuation, account.valuationStatus)
             Metric(R.string.venue_accounts_balances, account.balanceStatus)
-            Metric(R.string.venue_accounts_observed, account.balanceObservedAt ?: "—")
+            Metric(R.string.venue_accounts_observed, account.balanceObservedAt.displayTimestamp())
             Metric(R.string.venue_accounts_source, account.balancePayloadSourceObservationId?.toString() ?: "—")
             AccountBalances(account)
             Metric(R.string.venue_accounts_positions, account.positionStatus)
-            Metric(R.string.venue_accounts_observed, account.positionObservedAt ?: "—")
+            Metric(R.string.venue_accounts_observed, account.positionObservedAt.displayTimestamp())
             Metric(R.string.venue_accounts_source, account.positionPayloadSourceObservationId?.toString() ?: "—")
             AccountPositions(account)
             Metric(R.string.venue_accounts_reconciliation, account.reconciliation.effectiveStatus)
             Metric(R.string.venue_accounts_evaluation, account.reconciliation.evaluationStatus ?: "—")
-            Metric(R.string.venue_accounts_deadline, account.authoritativeUntil ?: "—")
+            Metric(R.string.venue_accounts_deadline, account.authoritativeUntil.displayTimestamp())
         }
     }
 }

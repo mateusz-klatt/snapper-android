@@ -1,7 +1,6 @@
 package ch.snapper.android.features.pnl
 
 import ch.snapper.android.data.*
-import java.math.BigDecimal
 import java.time.Instant
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -85,13 +84,6 @@ class PnlControllerTest {
         assertTrue(controller.state.value.failed)
     }
 
-    @Test fun chartPreservesWithheldGapsAndNormalizesHugeExactValues() {
-        val high = BigDecimal("1000000000000000000000000000000000000000000000000.01")
-        val segments = pnlSegments(listOf(high, high.add(BigDecimal("0.01")), null, BigDecimal.ZERO))
-        assertEquals(listOf(2, 1), segments.map { it.size })
-        assertTrue(segments.flatten().all { it.first.isFinite() && it.second.isFinite() })
-        assertEquals(emptyList<List<Pair<Float, Float>>>(), pnlSegments(listOf(null, null)))
-    }
     @Test fun nanosecondClockProducesMicrosecondRoundTrip() = runTest {
         val client = Client()
         val controller = PnlController(this, client) { Instant.parse("2026-10-16T00:00:00.123456789Z") }

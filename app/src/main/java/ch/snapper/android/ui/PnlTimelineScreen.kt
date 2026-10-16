@@ -1,15 +1,11 @@
 package ch.snapper.android.ui
 
-import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.semantics.contentDescription
-import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import ch.snapper.android.R
 import ch.snapper.android.data.*
@@ -61,10 +57,7 @@ fun PnlTimelineScreen(state: PnlState, actions: PnlActions) {
 @Composable
 private fun PnlContent(data: PnlSeriesDto) {
     if (data.points.isEmpty()) Text(stringResource(R.string.positions_timeline_empty_message))
-    Text(data.valuationCcy)
-    PnlCurve(R.string.positions_timeline_chart_net, data.points.map { it.netPnl })
-    PnlCurve(R.string.positions_timeline_chart_realized, data.points.map { it.realizedPnl })
-    PnlCurve(R.string.positions_timeline_chart_unrealized, data.points.map { it.unrealizedPnl })
+    PnlLineChart(data.points, data.valuationCcy, zone = LocalDisplayTimeZone.current)
     Text(stringResource(R.string.positions_timeline_incompleteness_title))
     Text(stringResource(R.string.positions_timeline_incompleteness_description))
     data.points.flatMap { it.incompletenessReasons }.groupingBy { it }.eachCount().forEach { (reason, count) ->
@@ -82,7 +75,7 @@ private fun PnlContent(data: PnlSeriesDto) {
 private fun PnlCoverage(coverage: PnlEquityCoverageDto) {
     Text(stringResource(R.string.positions_timeline_equity_title))
     Text(stringResource(R.string.pnl_equity_coverage, coverage.sampled.toString(), coverage.completeMinutes.toString()))
-    Text(listOfNotNull(coverage.valuationBasis, coverage.sampleCalcVersion, coverage.firstMinute, coverage.lastMinute).joinToString(" · "))
+    Text(listOfNotNull(coverage.valuationBasis, coverage.sampleCalcVersion, coverage.firstMinute?.displayTimestamp(), coverage.lastMinute?.displayTimestamp()).joinToString(" · "))
     Text(stringResource(R.string.positions_timeline_equity_honesty_conversionwithheld, coverage.conversionWithheldMinutes.toString()))
     coverage.convertedFrom?.let { Text(stringResource(R.string.positions_timeline_equity_honesty_restatedfrom, it)) }
     coverage.conversionRateSource?.let { Text(stringResource(R.string.positions_timeline_equity_honesty_pricedon, it)) }
@@ -98,7 +91,7 @@ private fun PnlExecutionHistory(history: PnlExecutionHistoryDto) {
         Text(stringResource(R.string.positions_timeline_executionhistory_title))
         Text(stringResource(R.string.positions_timeline_executionhistory_summary))
         history.corrections.forEach { correction ->
-            Text(correction.exchange + " #" + correction.scopeSequence + " · " + correction.correctionTime)
+            Text(correction.exchange + " #" + correction.scopeSequence + " · " + correction.correctionTime.displayTimestamp())
             Text(stringResource(R.string.positions_timeline_executionhistory_targetexecutionid) + ": " + correction.targetExecutionPublicId)
             Text(stringResource(R.string.positions_timeline_executionhistory_correctionid) + ": " + correction.correctionPublicId)
             Text(correction.reason)
@@ -108,8 +101,8 @@ private fun PnlExecutionHistory(history: PnlExecutionHistoryDto) {
 
 @Composable
 private fun PnlSources(data: PnlSeriesDto) {
-    Text(data.fromTime + " — " + data.toTime + " · " + data.asOf)
-    Text(stringResource(R.string.pnl_provenance, data.calcVersion, data.markSource, data.asOf))
+    Text(data.fromTime.displayTimestamp() + " — " + data.toTime.displayTimestamp() + " · " + data.asOf.displayTimestamp())
+    Text(stringResource(R.string.pnl_provenance, data.calcVersion, data.markSource, data.asOf.displayTimestamp()))
     data.rateSources.forEach { Text(it.sourceCurrency + " → " + it.valuationCurrency + " · " + it.baseCurrency + "/" + it.quoteCurrency + "@" + it.exchange) }
 }
 
@@ -137,24 +130,6 @@ private fun PnlComponents(realized: BigDecimal?, fees: BigDecimal?, accrual: Big
     val fields = listOf(R.string.positions_timeline_contributions_realized to realized, R.string.positions_timeline_contributions_fees to fees,
         R.string.positions_timeline_contributions_accrual to accrual, R.string.positions_timeline_contributions_unrealized to unrealized)
     fields.forEach { (label, value) -> Text(stringResource(label) + ": " + (if (value == null) stringResource(R.string.positions_timeline_attribution_withheld) else value.display()), color = financialColor(value)) }
-}
-
-@Composable
-private fun PnlCurve(label: Int, values: List<BigDecimal?>) {
-    val title = stringResource(label)
-    val withheld = stringResource(R.string.positions_timeline_attribution_withheld)
-    val latest = values.lastOrNull()
-    Text(title + ": " + (if (latest == null) withheld else latest.display()), color = financialColor(latest))
-    val segments = pnlSegments(values)
-    val color = MaterialTheme.colorScheme.primary
-    Canvas(Modifier.fillMaxWidth().height(140.dp).semantics { contentDescription = title }) {
-        segments.forEach { segment ->
-            segment.zipWithNext().forEach { (a, b) ->
-                drawLine(color, Offset(a.first * size.width, (1 - a.second) * size.height), Offset(b.first * size.width, (1 - b.second) * size.height), 3.dp.toPx())
-            }
-            if (segment.size == 1) { val p = segment.single(); drawCircle(color, 3.dp.toPx(), Offset(p.first * size.width, (1 - p.second) * size.height)) }
-        }
-    }
 }
 
 @Composable

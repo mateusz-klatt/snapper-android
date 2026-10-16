@@ -366,4 +366,15 @@
     <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
     <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
     <string name="market_context_as_of">Cached close as of %1$s</string>
+    <string name="market_cachebanner_message">Aquecendo cache: %1$s / %2$s candles disponíveis %3$s</string>
+    <string name="market_cachebanner_sources_cache" formatted="false"></string>
+    <string name="market_cachebanner_sources_db" formatted="false">(do DB)</string>
+    <string name="market_cachebanner_sources_derived" formatted="false">(derivado de 1m)</string>
+    <string name="market_pairstats_chiparialabel">Estatísticas do par com %1$s em %2$s: Pearson %3$s, valor p %4$s</string>
+    <string name="market_pairstats_label" formatted="false">Cointegração:</string>
+    <string name="market_pairstats_metric">ρ %1$s · p %2$s</string>
+    <string name="market_pair_status_cold" formatted="false">Warming up</string>
+    <string name="market_pair_status_cointegrated" formatted="false">Cointegrated</string>
+    <string name="market_pair_status_warm" formatted="false">Warm</string>
+    <string name="positions_timeline_chart_valuationcurrency">Moeda de avaliação: %1$s</string>
 </resources>

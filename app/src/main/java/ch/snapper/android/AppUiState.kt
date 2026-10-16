@@ -30,6 +30,8 @@ import ch.snapper.android.data.DisplayPreferences
 import ch.snapper.android.data.FinancialColorPreference
 import ch.snapper.android.data.LiveMarketFrame
 import ch.snapper.android.features.live.LiveConnectionStatus
+import ch.snapper.android.features.marketdiagnostics.MarketDiagnosticsState
+import ch.snapper.android.features.marketdiagnostics.MarketDiagnosticsActions
 import ch.snapper.android.features.marketcontext.MarketContextState
 import ch.snapper.android.features.marketcontext.MarketContextActions
 
@@ -70,6 +72,7 @@ data class AppUiState(
     val aiReviews: AiReviewsState = AiReviewsState(),
     val positionActions: PositionActionState = PositionActionState(),
     val displayPreferences: DisplayPreferences = DisplayPreferences(),
+    val marketDiagnostics: MarketDiagnosticsState = MarketDiagnosticsState(),
     val marketContext: MarketContextState = MarketContextState(),
 )
 
@@ -103,5 +106,6 @@ data class AppActions(
     val selectFinancialColor: (FinancialColorPreference) -> Unit = {},
     val marketVisible: (Boolean) -> Unit = {},
     val selectMarket: (String, String, String) -> Unit = { _, _, _ -> },
+    val marketDiagnostics: MarketDiagnosticsActions = MarketDiagnosticsActions({}, {}, {}),
     val marketContext: MarketContextActions = MarketContextActions({}, {}, {}),
 )

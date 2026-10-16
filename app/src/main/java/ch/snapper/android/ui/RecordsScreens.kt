@@ -108,7 +108,7 @@ private fun LazyListScope.orderFills(state: AppUiState, records: RecordsState, r
             Metric(R.string.price, fill.price.display())
             Metric(R.string.records_fee, "${fill.fee.display()} ${fill.feeAsset}")
             Metric(R.string.status, fill.status)
-            Text(fill.executedAt, style = MaterialTheme.typography.bodySmall)
+            Text(fill.executedAt.displayTimestamp(), style = MaterialTheme.typography.bodySmall)
         }
     }
 }
@@ -125,7 +125,7 @@ private fun LazyListScope.orderRows(state: AppUiState, actions: OrderActions, re
             Metric(R.string.size, order.size.display())
             Metric(R.string.filled, order.filledSize.display())
             Metric(R.string.price, order.price.display())
-            Text(order.createdAt, style = MaterialTheme.typography.bodySmall)
+            Text(order.createdAt.displayTimestamp(), style = MaterialTheme.typography.bodySmall)
             if (OrderForm.canCancel(order, state.user)) {
                 OutlinedButton(onClick = { actions.requestCancel(order) },
                     enabled = !state.isLoading && !state.orders.isSubmitting && state.orders.draft == null &&
@@ -148,7 +148,7 @@ internal fun LazyListScope.alertsScreen(state: AppUiState) {
             if (alert.isSafetyCritical) Text(stringResource(R.string.safety_critical), color = MaterialTheme.colorScheme.error)
             Text(alert.body)
             Text("${alert.priority} · ${alert.alertType}", style = MaterialTheme.typography.labelMedium)
-            Text(alert.timestamp, style = MaterialTheme.typography.bodySmall)
+            Text(alert.timestamp.displayTimestamp(), style = MaterialTheme.typography.bodySmall)
             OutlinedButton(onClick = { expanded = !expanded }, modifier = Modifier.testTag("alert.details.${alert.publicId}")) {
                 Text(stringResource(if (expanded) R.string.records_hide_details else R.string.records_details))
             }

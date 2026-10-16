@@ -366,4 +366,15 @@
     <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
     <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
     <string name="market_context_as_of">Cached close as of %1$s</string>
+    <string name="market_cachebanner_message">Cache á théamh: %1$s / %2$s coinneal ar fáil %3$s</string>
+    <string name="market_cachebanner_sources_cache" formatted="false"></string>
+    <string name="market_cachebanner_sources_db" formatted="false">(ón DB)</string>
+    <string name="market_cachebanner_sources_derived" formatted="false">(díorthaithe ó 1m)</string>
+    <string name="market_pairstats_chiparialabel">Staitisticí péire le %1$s ar %2$s: Pearson %3$s, p-luach %4$s</string>
+    <string name="market_pairstats_label" formatted="false">Comhtháthú:</string>
+    <string name="market_pairstats_metric">ρ %1$s · p %2$s</string>
+    <string name="market_pair_status_cold" formatted="false">Warming up</string>
+    <string name="market_pair_status_cointegrated" formatted="false">Cointegrated</string>
+    <string name="market_pair_status_warm" formatted="false">Warm</string>
+    <string name="positions_timeline_chart_valuationcurrency">Airgeadra luachála: %1$s</string>
 </resources>

@@ -100,6 +100,7 @@ private fun AuthenticatedApp(state: AppUiState, actions: AppActions) {
                 Destination.MARKET -> {
                     marketScreen(state.market, actions.loadMarket, state.marketCatalog, actions.marketCatalog)
                     item { MarketContextContent(state.marketContext, actions.marketContext) }
+                    item { MarketDiagnosticsContent(state.marketDiagnostics, actions.marketDiagnostics) }
                 }
                 Destination.SYSTEM -> systemScreen(state.system, actions.system)
                 Destination.SIGNALS -> signalsScreen(state.signals, actions.signals)

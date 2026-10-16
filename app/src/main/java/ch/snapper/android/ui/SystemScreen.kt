@@ -102,7 +102,7 @@ private fun LazyListScope.usersSection(state: SystemState, actions: SystemAction
                 Text(row.role)
                 row.email?.let { Text(it) }
                 Metric(R.string.status, row.isActive?.let { stringResource(if (it) R.string.system_active else R.string.system_inactive) } ?: "—")
-                Metric(R.string.system_created, row.createdAt)
+                Metric(R.string.system_created, row.createdAt.displayTimestamp())
             } }
         }
     }
@@ -115,7 +115,7 @@ private fun LazyListScope.delegatesSection(state: SystemState, actions: SystemAc
             rows.sortedBy { it.label }.forEach { row -> RecordCard(row.label) {
                 Text(row.username)
                 Metric(R.string.status, stringResource(if (row.isActive) R.string.system_active else R.string.system_revoked))
-                Metric(R.string.system_created, row.createdAt)
+                Metric(R.string.system_created, row.createdAt.displayTimestamp())
                 Metric(R.string.system_max_orders, row.caps.maxOpenOrders?.toString() ?: stringResource(R.string.system_default))
                 Metric(R.string.system_max_daily, row.caps.maxDailyNotionalUsd?.display() ?: stringResource(R.string.system_default))
             } }

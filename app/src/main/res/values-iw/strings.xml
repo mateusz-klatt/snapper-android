@@ -366,4 +366,15 @@
     <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
     <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
     <string name="market_context_as_of">Cached close as of %1$s</string>
+    <string name="market_cachebanner_message">החימום של המטמון מתבצע: %1$s / %2$s נרות זמינים %3$s</string>
+    <string name="market_cachebanner_sources_cache" formatted="false"></string>
+    <string name="market_cachebanner_sources_db" formatted="false">(מ-DB)</string>
+    <string name="market_cachebanner_sources_derived" formatted="false">(נגזר מ-1m)</string>
+    <string name="market_pairstats_chiparialabel">סטטיסטיקת זוג עם %1$s ב-%2$s: פירסון %3$s, ערך p %4$s</string>
+    <string name="market_pairstats_label" formatted="false">קו-אינטגרציה:</string>
+    <string name="market_pairstats_metric">ρ %1$s · p %2$s</string>
+    <string name="market_pair_status_cold" formatted="false">Warming up</string>
+    <string name="market_pair_status_cointegrated" formatted="false">Cointegrated</string>
+    <string name="market_pair_status_warm" formatted="false">Warm</string>
+    <string name="positions_timeline_chart_valuationcurrency">מטבע הערכת שווי: %1$s</string>
 </resources>

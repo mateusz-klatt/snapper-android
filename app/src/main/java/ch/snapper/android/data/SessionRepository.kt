@@ -54,7 +54,7 @@ class SessionRepository private constructor(
     private val client: OkHttpClient,
     private val origin: HttpUrl,
 ) : SessionClient, DeskClient, MarketCatalogClient, SystemClient, RecordsClient, NotificationDefaultsClient,
-    SignalsClient, VenueAccountsClient, PnlClient, ProcessClient, AiReviewsClient, PositionActionClient, LiveSessionClient, LiveTransportClient, MarketContextClient {
+    SignalsClient, VenueAccountsClient, PnlClient, ProcessClient, AiReviewsClient, PositionActionClient, LiveSessionClient, LiveTransportClient, MarketContextClient, MarketDiagnosticsClient {
     private val mutableUser = MutableStateFlow<UserDto?>(null)
     override val user: StateFlow<UserDto?> = mutableUser.asStateFlow()
     private val operation = Mutex()
@@ -170,7 +170,7 @@ class SessionRepository private constructor(
         val profile = authorized(generation) { api.me().payload }
         commitUser(generation, profile)
         val wallets = snapshotRead(generation, profile) { api.wallets().payload }
-        val positions = if (profile.hasPermission("read:positions")) snapshotRead(generation, profile) { api.positions(profile.activeWalletPublicId).payload } else emptyList()
+        val positions = if (profile.hasPermission(READ_POSITIONS_PERMISSION)) snapshotRead(generation, profile) { api.positions(profile.activeWalletPublicId).payload } else emptyList()
         val orders = if (profile.hasPermission("read:orders")) snapshotRead(generation, profile) { api.orders(profile.activeWalletPublicId).payload } else emptyList()
         val alerts = if (profile.hasPermission("read:notifications")) snapshotRead(generation, profile) { api.alerts().payload } else emptyList()
         ensureCurrent(generation)
@@ -204,7 +204,7 @@ class SessionRepository private constructor(
         }
     }
 
-    override suspend fun processSummary(): ProcessSummaryDto = featureRead("read:system_status") { api.processSummary().payload }
+    override suspend fun processSummary(): ProcessSummaryDto = featureRead(READ_SYSTEM_STATUS_PERMISSION) { api.processSummary().payload }
     override suspend fun configuredProcesses(): List<ConfiguredProcessDto> = featureRead("read:processes") { api.configuredProcesses().payload }
 
     private suspend fun <T> actionRead(generation: Long, scope: OrderScope, permission: String, action: suspend () -> T): T =
@@ -275,7 +275,7 @@ class SessionRepository private constructor(
 
     override suspend fun pendingReviews(): List<AiPendingReviewDto> {
         val delegate = mutableUser.value?.delegatePublicId
-        return featureRead("read:signals") {
+        return featureRead(READ_SIGNALS_PERMISSION) {
             requireDelegate(delegate)
             api.pendingReviews().items.also { requireDelegate(delegate) }
         }
@@ -302,7 +302,7 @@ class SessionRepository private constructor(
             val delegate = mutableUser.value?.delegatePublicId
             val generation = featureMutationPreflight(scope, "submit:ai_review_decision")
             requireDelegate(delegate)
-            requireFeatureScope(scope, "read:signals")
+            requireFeatureScope(scope, READ_SIGNALS_PERMISSION)
             if (requirePending) requirePendingDecision(generation, scope, reviewId, delegate)
             return generation
         } catch (error: CancellationException) {
@@ -313,7 +313,7 @@ class SessionRepository private constructor(
     }
 
     private suspend fun requirePendingDecision(generation: Long, scope: OrderScope, reviewId: String, delegate: String?) {
-        val rows = actionRead(generation, scope, "read:signals") {
+        val rows = actionRead(generation, scope, READ_SIGNALS_PERMISSION) {
             requireDelegate(delegate)
             api.pendingReviews().items
         }
@@ -348,9 +348,9 @@ class SessionRepository private constructor(
         try {
             val generation = featureMutationPreflight(scope, CREATE_ORDERS_PERMISSION)
             require(intent.target.walletPublicId == scope.activeWalletPublicId)
-            val wallet = actionRead(generation, scope, "read:positions") { api.wallets().payload }
+            val wallet = actionRead(generation, scope, READ_POSITIONS_PERMISSION) { api.wallets().payload }
                 .single { it.publicId == intent.target.walletPublicId }
-            val position = actionRead(generation, scope, "read:positions") { api.positions(scope.activeWalletPublicId).payload }
+            val position = actionRead(generation, scope, READ_POSITIONS_PERMISSION) { api.positions(scope.activeWalletPublicId).payload }
                 .single { it.publicId == intent.target.positionPublicId }
             ActionTransport.positionTarget(intent.target, position, wallet)
             ActionTransport.positionIntent(intent, position, wallet)
@@ -391,6 +391,15 @@ class SessionRepository private constructor(
     override suspend fun cachedHourly(exchange: String, symbol: String): MarketCachedCandlesDto {
         require(exchange.isNotBlank() && symbol.isNotBlank())
         return featureRead(READ_MARKET_DATA_PERMISSION) { api.cachedHourly(exchange, symbol).payload }
+    }
+
+    override suspend fun configuredPairStats(): ConfiguredPairStatsDto =
+        featureRead(READ_MARKET_DATA_PERMISSION) { api.configuredPairStats().payload }
+
+    override suspend fun chartCache(exchange: String, instrument: String, timeframe: String, limit: Int): MarketCachedCandlesDto {
+        require(exchange.isNotBlank() && instrument.isNotBlank())
+        require(timeframe in setOf("1m", "5m", "15m", "1h", "4h", "1d") && limit in 1..1000)
+        return featureRead(READ_MARKET_DATA_PERMISSION) { api.cachedHourly(exchange, instrument, timeframe, limit).payload }
     }
 
     override suspend fun related(exchange: String, symbol: String): RelatedMarketPayloadDto {
@@ -495,8 +504,8 @@ class SessionRepository private constructor(
         return generation
     }
 
-    override suspend fun systemHealth(): SystemHealthCheckDataDto = featureRead("read:system_status") { api.systemHealth().payload }
-    override suspend fun systemStatus(): SystemSystemStatusDataDto = featureRead("read:system_status") { api.systemStatus().payload }
+    override suspend fun systemHealth(): SystemHealthCheckDataDto = featureRead(READ_SYSTEM_STATUS_PERMISSION) { api.systemHealth().payload }
+    override suspend fun systemStatus(): SystemSystemStatusDataDto = featureRead(READ_SYSTEM_STATUS_PERMISSION) { api.systemStatus().payload }
     override suspend fun systemStrategies(): List<SystemStrategyProcessDto> = featureRead("read:strategies") { api.systemStrategies().payload }
     override suspend fun systemBacktests(): List<SystemBacktestRunDataDto> = featureRead("read:backtests") { api.systemBacktests().payload }
     override suspend fun systemUsers(): List<SystemUserProfileDto> = featureRead("manage:users") { api.systemUsers().payload }
@@ -513,7 +522,7 @@ class SessionRepository private constructor(
         if (mutableUser.value?.activeWalletPublicId != walletPublicId) throw OrderScopeChangedException()
     }
 
-    override suspend fun signals(walletPublicId: String?): List<SignalDto> = featureRead("read:signals") {
+    override suspend fun signals(walletPublicId: String?): List<SignalDto> = featureRead(READ_SIGNALS_PERMISSION) {
         requireSelectedWallet(walletPublicId)
         api.signals(walletPublicId).payload
     }
@@ -523,7 +532,7 @@ class SessionRepository private constructor(
         api.venueAccounts(walletPublicId).payload
     }
 
-    override suspend fun pnlSeries(query: PnlSeriesQuery): PnlSeriesDto = featureRead("read:positions") {
+    override suspend fun pnlSeries(query: PnlSeriesQuery): PnlSeriesDto = featureRead(READ_POSITIONS_PERMISSION) {
         requireSelectedWallet(query.walletPublicId)
         val wallet = api.wallets().payload.firstOrNull { it.publicId == query.walletPublicId } ?: throw OrderScopeChangedException()
         require(query.mode == if (wallet.isPaper) "paper" else "live") { "Wallet mode changed" }
@@ -689,6 +698,9 @@ class SessionRepository private constructor(
     }
 
     companion object {
+        private const val READ_SIGNALS_PERMISSION = "read:signals"
+        private const val READ_SYSTEM_STATUS_PERMISSION = "read:system_status"
+        private const val READ_POSITIONS_PERMISSION = "read:positions"
         private const val CREATE_ORDERS_PERMISSION = "create:orders"
         private const val READ_MARKET_DATA_PERMISSION = "read:market_data"
 

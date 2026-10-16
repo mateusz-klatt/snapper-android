@@ -40,7 +40,7 @@ internal fun LazyListScope.signalsScreen(state: SignalsState, actions: SignalsAc
             signal.strategyName?.let { Text(it) }
             Text(stringResource(R.string.signals_reason))
             Text(signal.reason)
-            Text(signal.firedAt)
+            Text(signal.firedAt.displayTimestamp())
         }
     }
 }

@@ -10,9 +10,12 @@ data class OrderScope(
     val username: String,
     val activeWalletPublicId: String?,
     val effectivePermissions: Set<String>,
+    val primaryOperatorPublicId: String? = null,
+    val delegatePublicId: String? = null,
 ) {
     companion object {
-        fun from(user: UserDto): OrderScope = OrderScope(user.publicId, user.username, user.activeWalletPublicId, user.effectivePermissions.orEmpty().toSet())
+        fun from(user: UserDto): OrderScope = OrderScope(user.publicId, user.username, user.activeWalletPublicId, user.effectivePermissions.orEmpty().toSet(),
+            user.primaryOperatorPublicId, user.delegatePublicId)
     }
 }
 

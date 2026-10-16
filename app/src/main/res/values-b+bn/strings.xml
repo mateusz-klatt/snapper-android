@@ -366,4 +366,15 @@
     <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
     <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
     <string name="market_context_as_of">Cached close as of %1$s</string>
+    <string name="market_cachebanner_message">Cache warm হচ্ছে: %1$s / %2$s ক্যান্ডল উপলভ্য %3$s</string>
+    <string name="market_cachebanner_sources_cache" formatted="false"></string>
+    <string name="market_cachebanner_sources_db" formatted="false">(DB থেকে)</string>
+    <string name="market_cachebanner_sources_derived" formatted="false">(1m থেকে derived)</string>
+    <string name="market_pairstats_chiparialabel">%2$s-এ %1$s-এর সঙ্গে জোড়ার পরিসংখ্যান: Pearson %3$s, p-মান %4$s</string>
+    <string name="market_pairstats_label" formatted="false">সহ-সমাকলন:</string>
+    <string name="market_pairstats_metric">ρ %1$s · p %2$s</string>
+    <string name="market_pair_status_cold" formatted="false">Warming up</string>
+    <string name="market_pair_status_cointegrated" formatted="false">Cointegrated</string>
+    <string name="market_pair_status_warm" formatted="false">Warm</string>
+    <string name="positions_timeline_chart_valuationcurrency">মূল্যায়ন মুদ্রা: %1$s</string>
 </resources>

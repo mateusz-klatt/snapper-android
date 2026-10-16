@@ -366,4 +366,15 @@
     <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
     <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
     <string name="market_context_as_of">Cached close as of %1$s</string>
+    <string name="market_cachebanner_message">Cache warm up လုပ်နေသည်: candle %1$s / %2$s ရနိုင်သည် %3$s</string>
+    <string name="market_cachebanner_sources_cache" formatted="false"></string>
+    <string name="market_cachebanner_sources_db" formatted="false">(DB မှ)</string>
+    <string name="market_cachebanner_sources_derived" formatted="false">(1m မှ derive လုပ်ထားသည်)</string>
+    <string name="market_pairstats_chiparialabel">%2$s ပေါ်ရှိ %1$s နှင့် တွဲဖက်စာရင်းအင်း: Pearson %3$s, p-value %4$s</string>
+    <string name="market_pairstats_label" formatted="false">ပူးတွဲပေါင်းစည်းမှု:</string>
+    <string name="market_pairstats_metric">ρ %1$s · p %2$s</string>
+    <string name="market_pair_status_cold" formatted="false">Warming up</string>
+    <string name="market_pair_status_cointegrated" formatted="false">Cointegrated</string>
+    <string name="market_pair_status_warm" formatted="false">Warm</string>
+    <string name="positions_timeline_chart_valuationcurrency">တန်ဖိုးဖြတ် ငွေကြေး: %1$s</string>
 </resources>

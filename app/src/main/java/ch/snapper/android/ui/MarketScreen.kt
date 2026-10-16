@@ -53,7 +53,7 @@ internal fun LazyListScope.marketScreen(
             }
         }
         items(state.candles.asReversed()) { candle ->
-            RecordCard(candle.openAt) {
+            RecordCard(candle.openAt.displayTimestamp()) {
                 Metric(R.string.open, candle.open.display())
                 Metric(R.string.high, candle.high.display())
                 Metric(R.string.low, candle.low.display())

@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLayoutDirection
@@ -25,8 +26,11 @@ import ch.snapper.android.ui.SnapperTheme
 import ch.snapper.android.ui.LocalNumberLocale
 import ch.snapper.android.ui.LocalFinancialColorConvention
 import java.util.Locale
+import java.time.ZoneId
+import ch.snapper.android.ui.LocalDisplayTimeZone
 
 class MainActivity : ComponentActivity() {
+    private val displayTimeZone = mutableStateOf(ZoneId.systemDefault())
     private val model: SnapperViewModel by viewModels {
         viewModelFactory {
             initializer {
@@ -48,6 +52,7 @@ class MainActivity : ComponentActivity() {
             LocalizedContent(state.language) {
                 CompositionLocalProvider(
                     LocalNumberLocale provides state.displayPreferences.formattingLocale(),
+                    LocalDisplayTimeZone provides displayTimeZone.value,
                     LocalFinancialColorConvention provides state.displayPreferences.convention(),
                 ) {
                     SnapperTheme { SnapperApp(state, model.actions) }
@@ -58,6 +63,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onStart() {
         super.onStart()
+        displayTimeZone.value = ZoneId.systemDefault()
         model.onForeground()
     }
 

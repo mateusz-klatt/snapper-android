@@ -83,6 +83,7 @@ class SnapperViewModel(
         selectCountry = ::selectCountry,
         selectFinancialColor = ::selectFinancialColor,
         marketContext = features.marketContextActions,
+        marketDiagnostics = features.marketDiagnosticsActions,
         marketVisible = ::setMarketVisible,
         selectMarket = ::selectMarket,
         orders = OrderActions(
@@ -563,6 +564,7 @@ class SnapperViewModel(
     private fun selectMarket(exchange: String, instrument: String, timeframe: String, force: Boolean) {
         if (state.value.user?.hasPermission("read:market_data") != true) return
         val selection = LiveSelection(exchange.trim(), instrument.trim(), timeframe.trim())
+        features.prepareMarketDiagnostics(selection.exchange, selection.instrument, selection.timeframe)
         features.selectMarketContext(selection.exchange, selection.instrument)
         if (liveBinding() != null) live.selectMarket(selection, force)
         else {
@@ -580,26 +582,32 @@ class SnapperViewModel(
 
     private fun loadMarketSnapshot(selection: LiveSelection, ticket: MarketLoadTicket?) {
         val client = session ?: return
+        features.probeMarketDiagnostics(selection.exchange, selection.instrument, selection.timeframe)
         marketRequest?.cancel()
         val request = ++marketRevision
         val epoch = sessionEpoch
         val query = MarketState(selection.exchange, selection.instrument, selection.timeframe, isLoading = true)
         if (ticket == null) mutableState.update { it.copy(market = query) }
-        marketRequest = viewModelScope.launch {
-            try {
-                val candles = client.candles(query.exchange, query.instrument, query.timeframe)
-                if (session === client && epoch == sessionEpoch && request == marketRevision) {
-                    if (ticket != null) live.snapshotCompleted(ticket, candles)
-                    else mutableState.update { it.copy(market = query.copy(candles = candles, isLoading = false)) }
-                }
-            } catch (error: CancellationException) {
-                throw error
-            } catch (error: Exception) {
-                if (session === client && epoch == sessionEpoch && request == marketRevision) {
-                    if (ticket != null) live.snapshotFailed(ticket)
-                    else mutableState.update { it.copy(market = query.copy(isLoading = false, error = classify(error))) }
-                }
-            }
+        marketRequest = viewModelScope.launch { fetchMarketSnapshot(client, epoch, request, query, ticket) }
+    }
+
+    private fun marketSnapshotCurrent(client: SessionClient, epoch: Long, request: Long): Boolean =
+        session === client && epoch == sessionEpoch && request == marketRevision
+
+    private suspend fun fetchMarketSnapshot(
+        client: SessionClient, epoch: Long, request: Long, query: MarketState, ticket: MarketLoadTicket?,
+    ) {
+        try {
+            val candles = client.candles(query.exchange, query.instrument, query.timeframe)
+            if (!marketSnapshotCurrent(client, epoch, request)) return
+            if (ticket != null) live.snapshotCompleted(ticket, candles)
+            else mutableState.update { it.copy(market = query.copy(candles = candles, isLoading = false)) }
+        } catch (error: CancellationException) {
+            throw error
+        } catch (error: Exception) {
+            if (!marketSnapshotCurrent(client, epoch, request)) return
+            if (ticket != null) live.snapshotFailed(ticket)
+            else mutableState.update { it.copy(market = query.copy(isLoading = false, error = classify(error))) }
         }
     }
 

@@ -366,4 +366,15 @@
     <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
     <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
     <string name="market_context_as_of">Cached close as of %1$s</string>
+    <string name="market_cachebanner_message">Քեշը տաքացվում է՝ հասանելի է %1$s / %2$s մոմ %3$s</string>
+    <string name="market_cachebanner_sources_cache" formatted="false"></string>
+    <string name="market_cachebanner_sources_db" formatted="false">(DB-ից)</string>
+    <string name="market_cachebanner_sources_derived" formatted="false">(ստացված է 1m-ից)</string>
+    <string name="market_pairstats_chiparialabel">Զույգի վիճակագրություն %2$s բորսայում %1$s-ի հետ՝ Pearson %3$s, p-արժեք %4$s</string>
+    <string name="market_pairstats_label" formatted="false">Կոինտեգրացիա՝</string>
+    <string name="market_pairstats_metric">ρ %1$s · p %2$s</string>
+    <string name="market_pair_status_cold" formatted="false">Warming up</string>
+    <string name="market_pair_status_cointegrated" formatted="false">Cointegrated</string>
+    <string name="market_pair_status_warm" formatted="false">Warm</string>
+    <string name="positions_timeline_chart_valuationcurrency">Գնահատման արժույթ՝ %1$s</string>
 </resources>

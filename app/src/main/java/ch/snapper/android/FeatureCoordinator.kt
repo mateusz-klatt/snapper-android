@@ -10,6 +10,7 @@ import ch.snapper.android.features.signals.*
 import ch.snapper.android.features.accounts.*
 import ch.snapper.android.features.pnl.*
 import ch.snapper.android.features.marketcontext.*
+import ch.snapper.android.features.marketdiagnostics.*
 import ch.snapper.android.features.live.LiveRefreshTarget
 import java.time.Clock
 import java.io.IOException
@@ -19,6 +20,8 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import retrofit2.HttpException
 
+private const val READ_MARKET_DATA_PERMISSION = "read:market_data"
+
 /** One UI scope; all network work remains in the existing authenticated session. */
 internal class FeatureCoordinator(
     private val coroutineScope: CoroutineScope,
@@ -27,6 +30,9 @@ internal class FeatureCoordinator(
     private val update: ((AppUiState) -> AppUiState) -> Unit,
 ) {
     private data class Context(val client: SessionClient, val scope: OrderScope, val primary: String?, val delegate: String?, val epoch: Long)
+    private var diagnosticsController: MarketDiagnosticsController? = null
+    private var diagnosticsScope: Context? = null
+    private var diagnosticsObserver: Job? = null
     private var marketContextController: MarketContextController? = null
     private var marketContextScope: Context? = null
     private var marketContextSelection: MarketContextSelection? = null
@@ -109,6 +115,10 @@ internal class FeatureCoordinator(
 
     fun invalidate() {
         epoch++
+        diagnosticsController?.invalidate()
+        diagnosticsObserver?.cancel()
+        diagnosticsController = null
+        diagnosticsScope = null
         marketContextController?.invalidate()
         marketContextObserver?.cancel()
         marketContextController = null
@@ -142,7 +152,58 @@ internal class FeatureCoordinator(
         accountsContext = null
         update { it.copy(marketCatalog = MarketCatalogState(), desks = DeskState(), system = SystemState(),
             records = RecordsState(), notificationDefaults = NotificationDefaultsState(), signals = SignalsState(),
-            venueAccounts = VenueAccountsState(), pnl = PnlState(), marketContext = MarketContextState()) }
+            venueAccounts = VenueAccountsState(), pnl = PnlState(), marketContext = MarketContextState(), marketDiagnostics = MarketDiagnosticsState()) }
+    }
+
+    val marketDiagnosticsActions = MarketDiagnosticsActions(
+        { activeDiagnostics()?.actions?.retryPairs?.invoke() },
+        { activeDiagnostics()?.refreshChartCache() },
+        { chip -> activeDiagnostics()?.actions?.selectPeer?.invoke(chip) },
+    )
+
+    private fun validDiagnostics(selection: MarketDiagnosticsSelection?): Boolean {
+        val catalog = state().marketCatalog
+        return selection != null && catalog.canLoad && selection.exchange in catalog.exchanges &&
+            selection.exchange == catalog.exchange && selection.instrument == catalog.instrument &&
+            selection.timeframe == catalog.timeframe
+    }
+
+    private fun activeDiagnostics(): MarketDiagnosticsController? = diagnosticsController?.takeIf {
+        diagnosticsScope?.let(::current) == true && validDiagnostics(it.state.value.selection)
+    }
+
+    fun prepareMarketDiagnostics(exchange: String, instrument: String, timeframe: String) {
+        val captured = context()
+        val api = captured?.client as? MarketDiagnosticsClient
+        if (captured == null || api == null || READ_MARKET_DATA_PERMISSION !in captured.scope.effectivePermissions) {
+            diagnosticsController?.invalidate()
+            diagnosticsObserver?.cancel()
+            diagnosticsController = null
+            diagnosticsScope = null
+            update { it.copy(marketDiagnostics = MarketDiagnosticsState()) }
+            return
+        }
+        if (diagnosticsScope != captured) {
+            diagnosticsController?.invalidate()
+            diagnosticsObserver?.cancel()
+            val controller = MarketDiagnosticsController(coroutineScope, api) { venue, symbol -> selectRelatedMarket(captured, venue, symbol) }
+            controller.reset(MarketDiagnosticsContext(state().backendUrl, captured.epoch, captured.scope, captured.primary, captured.delegate))
+            diagnosticsController = controller
+            diagnosticsScope = captured
+            diagnosticsObserver = coroutineScope.launch {
+                controller.state.collect { value ->
+                    if (current(captured) && diagnosticsController === controller) update { it.copy(marketDiagnostics = value) }
+                }
+            }
+        }
+        val selection = MarketDiagnosticsSelection(exchange, instrument, timeframe).takeIf(::validDiagnostics)
+        diagnosticsController?.select(selection, probeCache = false)
+        update { it.copy(marketDiagnostics = diagnosticsController?.state?.value ?: MarketDiagnosticsState()) }
+    }
+
+    fun probeMarketDiagnostics(exchange: String, instrument: String, timeframe: String) {
+        prepareMarketDiagnostics(exchange, instrument, timeframe)
+        activeDiagnostics()?.refreshChartCache()
     }
 
     val marketContextActions = MarketContextActions(
@@ -165,7 +226,7 @@ internal class FeatureCoordinator(
         marketContextController = controller
         marketContextScope = captured
         marketContextSelection = selection
-        controller.reset(selection, "read:market_data" in captured.scope.effectivePermissions)
+        controller.reset(selection, READ_MARKET_DATA_PERMISSION in captured.scope.effectivePermissions)
         marketContextObserver = coroutineScope.launch {
             controller.state.collect { value ->
                 if (current(captured) && marketContextController === controller) update { it.copy(marketContext = value) }
@@ -180,7 +241,7 @@ internal class FeatureCoordinator(
     }
 
     private fun selectRelatedMarket(captured: Context, exchange: String, symbol: String) {
-        if (!current(captured) || "read:market_data" !in captured.scope.effectivePermissions) return
+        if (!current(captured) || READ_MARKET_DATA_PERMISSION !in captured.scope.effectivePermissions) return
         val api = captured.client as? MarketCatalogClient ?: return
         catalogJob?.cancel()
         val request = ++catalogRevision
@@ -348,7 +409,7 @@ internal class FeatureCoordinator(
     fun loadCatalog() {
         val context = context() ?: return
         val api = context.client as? MarketCatalogClient ?: return
-        if ("read:market_data" !in context.scope.effectivePermissions) return
+        if (READ_MARKET_DATA_PERMISSION !in context.scope.effectivePermissions) return
         catalogJob?.cancel()
         val request = ++catalogRevision
         update { it.copy(marketCatalog = it.marketCatalog.copy(isLoading = true, error = null)) }
@@ -375,7 +436,7 @@ internal class FeatureCoordinator(
     private fun selectExchange(exchange: String) {
         val context = context() ?: return
         val api = context.client as? MarketCatalogClient ?: return
-        if ("read:market_data" !in context.scope.effectivePermissions || exchange !in state().marketCatalog.exchanges) return
+        if (READ_MARKET_DATA_PERMISSION !in context.scope.effectivePermissions || exchange !in state().marketCatalog.exchanges) return
         catalogJob?.cancel()
         val request = ++catalogRevision
         update { it.copy(marketCatalog = MarketSelection.exchange(it.marketCatalog, exchange).copy(isLoading = true)) }
