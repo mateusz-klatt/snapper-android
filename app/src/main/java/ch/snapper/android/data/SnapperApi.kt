@@ -3,6 +3,7 @@ package ch.snapper.android.data
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.DELETE
 import retrofit2.http.Header
 import retrofit2.http.POST
 import retrofit2.http.PATCH
@@ -10,6 +11,14 @@ import retrofit2.http.Query
 import retrofit2.http.Path
 
 internal interface SnapperApi {
+    @GET("api/devices/android/config") suspend fun pushConfiguration(): Envelope<PushConfigurationInfo>
+    @GET("api/devices/android/registration-state") suspend fun pushRegistrationState(@Query("configuration_id") configurationId: String, @Query("installation_id") installationId: String): Envelope<PushRegistrationState>
+    @POST("api/devices/android") suspend fun registerPush(@Body request: Envelope<PushRegistrationCommand>): Envelope<PushRegistration>
+    @GET("api/devices/android") suspend fun pushInventory(): Envelope<List<PushRegistration>>
+    @GET("api/devices/{registration}/prefs") suspend fun pushPreferences(@Path("registration") registration: String): Envelope<List<PushPreference>>
+    @DELETE("api/devices/{registration}") suspend fun revokePush(@Path("registration") registration: String): Response<Unit>
+    @GET("api/alerts/{alert}") suspend fun pushAlert(@Path("alert") alert: String): Envelope<AlertDto>
+
     @POST("api/auth/me/update") suspend fun updateAccountLanguage(@Body request: Envelope<UpdateAccountLanguagePayload>): Envelope<UserDto>
     @GET("api/market/cache/stats/configured") suspend fun configuredPairStats(): Envelope<ConfiguredPairStatsDto>
     @POST("api/auth/ws_token") suspend fun liveTicket(): Envelope<LiveTicketPayload>

@@ -38,7 +38,7 @@ fun SnapperApp(state: AppUiState, actions: AppActions) {
                 CircularProgressIndicator()
                 Text(stringResource(R.string.account_language_syncing))
             }
-            else -> AuthenticatedApp(state, actions)
+            else -> { AuthenticatedApp(state, actions); PushAlertContent(state.push, actions.push) }
         }
     }
 }
@@ -165,6 +165,7 @@ private fun SettingsScreen(state: AppUiState, actions: AppActions) {
     Text(state.backendUrl)
     LanguagePicker(state.language, actions.selectLanguage)
     AccountLanguageStatusContent(state.accountLanguage, actions.retryAccountLanguage)
+    PushSettingsContent(state.push, actions.push)
     DisplayPreferencesContent(state.displayPreferences, actions.selectCountry, actions.selectFinancialColor)
     Text(stringResource(R.string.backend_warning), style = MaterialTheme.typography.bodySmall)
     BackendEditor(state.backendUrl) { value -> pendingBackend = value; confirmation = AccountConfirmation.CHANGE_BACKEND }

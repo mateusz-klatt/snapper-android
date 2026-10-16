@@ -115,6 +115,9 @@ kotlin {
 }
 
 dependencies {
+    implementation(libs.firebase.messaging)
+    implementation(libs.firebase.common)
+    implementation(libs.firebase.installations)
     val composeBom = platform(libs.compose.bom)
     implementation(composeBom)
     androidTestImplementation(composeBom)

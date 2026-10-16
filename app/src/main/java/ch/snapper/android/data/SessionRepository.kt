@@ -57,7 +57,7 @@ class SessionRepository private constructor(
     private val client: OkHttpClient,
     private val origin: HttpUrl,
 ) : SessionClient, DeskClient, MarketCatalogClient, SystemClient, RecordsClient, NotificationDefaultsClient,
-    SignalsClient, VenueAccountsClient, PnlClient, ProcessClient, AiReviewsClient, PositionActionClient, LiveSessionClient, LiveTransportClient, MarketContextClient, MarketDiagnosticsClient, AccountLanguageClient {
+    SignalsClient, VenueAccountsClient, PnlClient, ProcessClient, AiReviewsClient, PositionActionClient, LiveSessionClient, LiveTransportClient, MarketContextClient, MarketDiagnosticsClient, AccountLanguageClient, PushClient {
     private val mutableUser = MutableStateFlow<UserDto?>(null)
     override val user: StateFlow<UserDto?> = mutableUser.asStateFlow()
     private val operation = Mutex()
@@ -392,6 +392,84 @@ class SessionRepository private constructor(
     }
 
     /** Bind the UI identity to this precise login's cookie generation, not to the unrelated UI epoch. */
+    override fun bindPush(identity: PushIdentity): PushBinding {
+        val generation = cookies.generation()
+        val bound = object : PushClient {
+            override suspend fun pushConfiguration(): PushConfigurationInfo = pushRead(identity, generation) { api.pushConfiguration().payload }
+            override suspend fun pushRegistrationState(configurationId: String, installationId: String): PushRegistrationState =
+                pushRead(identity, generation) { api.pushRegistrationState(configurationId, installationId).payload }
+            override suspend fun pushInventory(): List<PushRegistration> = pushRead(identity, generation) { api.pushInventory().payload }
+            override suspend fun pushPreferences(registrationId: String): List<PushPreference> = pushRead(identity, generation) { api.pushPreferences(registrationId).payload }
+            override suspend fun pushAlert(alertId: String): AlertDto = pushRead(identity, generation, "read:notifications") { api.pushAlert(alertId).payload }
+            override suspend fun registerPush(command: PushRegistrationCommand): PushRegistration = operation.withLock {
+                pushPreflight(identity, generation)
+                require(command.expectedUserPublicId == identity.actor.publicId)
+                dispatchPush(identity, generation) { mutationApi.registerPush(envelope("register_android_device_command", command)).payload }
+            }
+            override suspend fun revokePush(registrationId: String) = operation.withLock {
+                pushPreflight(identity, generation)
+                dispatchPush(identity, generation) {
+                    val response = mutationApi.revokePush(registrationId)
+                    if (!response.isSuccessful) throw HttpException(response)
+                }
+            }
+        }
+        return PushBinding(identity, bound)
+    }
+
+    private fun requirePushIdentity(identity: PushIdentity, generation: Long, permission: String? = null) {
+        ensureCurrent(generation)
+        if (identity.backend.toHttpUrlOrNull() != origin) throw PushScopeChangedException()
+        requireFeatureScope(identity.actor, permission)
+    }
+
+    private suspend fun pushPreflight(identity: PushIdentity, generation: Long, permission: String? = null) {
+        requirePushIdentity(identity, generation, permission)
+        authorized(generation) {
+            requirePushIdentity(identity, generation, permission)
+            commitUser(generation, api.me().payload)
+            requirePushIdentity(identity, generation, permission)
+        }
+        currentCoroutineContext().ensureActive()
+    }
+
+    private suspend fun <T> pushRead(identity: PushIdentity, generation: Long, permission: String? = null, action: suspend () -> T): T = operation.withLock {
+        pushPreflight(identity, generation, permission)
+        authorized(generation) {
+            requirePushIdentity(identity, generation, permission)
+            action().also { requirePushIdentity(identity, generation, permission) }
+        }
+    }
+
+    private suspend fun <T> dispatchPush(identity: PushIdentity, generation: Long, action: suspend () -> T): T {
+        try {
+            requirePushIdentity(identity, generation)
+            return action().also { requirePushIdentity(identity, generation) }
+        } catch (error: CancellationException) {
+            throw error
+        } catch (error: HttpException) {
+            if (error.code() == 401) expire(generation)
+            val code = runCatching {
+                error.response()?.errorBody()?.string()?.let { Json.parseToJsonElement(it).jsonObject["detail"]?.jsonPrimitive?.content }
+            }.getOrNull()
+            if ((error.code() in 400..499 && error.code() !in setOf(408, 425)) || code == "android_push_unavailable") {
+                throw PushRejectedException(code, error.code())
+            }
+            throw PushUncertainException()
+        } catch (_: Exception) {
+            throw PushUncertainException()
+        }
+    }
+
+    // Capability calls must use the immutable client produced by bindPush.
+    override suspend fun pushConfiguration(): PushConfigurationInfo = throw PushScopeChangedException()
+    override suspend fun pushRegistrationState(configurationId: String, installationId: String): PushRegistrationState = throw PushScopeChangedException()
+    override suspend fun registerPush(command: PushRegistrationCommand): PushRegistration = throw PushScopeChangedException()
+    override suspend fun pushInventory(): List<PushRegistration> = throw PushScopeChangedException()
+    override suspend fun pushPreferences(registrationId: String): List<PushPreference> = throw PushScopeChangedException()
+    override suspend fun revokePush(registrationId: String): Unit = throw PushScopeChangedException()
+    override suspend fun pushAlert(alertId: String): AlertDto = throw PushScopeChangedException()
+
     override fun bindLanguage(identity: AccountLanguageIdentity): AccountLanguageBinding {
         val generation = cookies.generation()
         val scoped = AccountLanguageClient { supplied, language ->

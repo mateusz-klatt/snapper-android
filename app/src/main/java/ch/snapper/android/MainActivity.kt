@@ -43,6 +43,7 @@ class MainActivity : ComponentActivity() {
                     defaultOrigin = BuildConfig.DEFAULT_BACKEND_URL,
                     allowLocalHttp = BuildConfig.DEBUG,
                     deviceLanguages = { applicationLanguages(appContext) },
+                    pushPlatform = (application as SnapperApplication).push,
                 )
             }
         }
@@ -51,6 +52,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        ch.snapper.android.features.push.AndroidPushPlatform.hint(intent)?.let(model::openPushHint)
         setContent {
             val state by model.state.collectAsStateWithLifecycle()
             LocalizedContent(state.language) {
@@ -63,6 +65,11 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+
+    override fun onNewIntent(intent: android.content.Intent) {
+        super.onNewIntent(intent)
+        ch.snapper.android.features.push.AndroidPushPlatform.hint(intent)?.let(model::openPushHint)
     }
 
     override fun onStart() {
