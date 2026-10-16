@@ -421,7 +421,7 @@ class SessionRepository private constructor(
 
     private fun prepareLanguage(identity: AccountLanguageIdentity, language: String, generation: Long) {
         try {
-            require(SupportedLanguages.find(language) != null)
+            requireNotNull(SupportedLanguages.find(language))
             requireLanguageIdentity(identity, generation)
         } catch (error: Exception) {
             throw AccountLanguageException(AccountLanguageFailureKind.PREPARATION)

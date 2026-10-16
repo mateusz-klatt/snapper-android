@@ -221,43 +221,42 @@ class SnapperViewModel(
         val client = sessionFactory(state.value.backendUrl)
         session = client
         sessionObserver = viewModelScope.launch {
-            client.user.collect { profile ->
-                if (session === client && profile == null && state.value.user != null) {
-                    invalidateLanguage()
-                    features.invalidate()
-                    privileged.invalidate()
-                    live.invalidate()
-                    resetOrderFlow()
-                    sessionEpoch++
-                    marketRevision++
-                    marketRequest?.cancel()
-                    mutableState.update { it.copy(user = null, snapshot = null, market = MarketState()) }
-                } else if (session === client && profile != null && state.value.user != null) {
-                    if (!sameScope(profile, state.value.user)) {
-                        invalidateLanguage()
-                        features.invalidate()
-                        privileged.invalidate()
-                        live.invalidate()
-                        resetOrderFlow()
-                        sessionEpoch++
-                        marketRevision++
-                        marketRequest?.cancel()
-                        mutableState.update { it.copy(user = profile, snapshot = null, market = MarketState()) }
-                        live.synchronizeBinding()
-                        val languageEpoch = sessionEpoch
-                        viewModelScope.launch {
-                            val settled = synchronizeLanguage()
-                            if (settled && session === client && sessionEpoch == languageEpoch && state.value.snapshot == null &&
-                                state.value.accountLanguageReady && languageBinding() != null) queueDescriptionRefresh()
-                        }
-                    } else {
-                        mutableState.update { it.copy(user = profile) }
-                        live.synchronizeBinding()
-                    }
-                }
-            }
+            client.user.collect { profile -> updateObservedProfile(client, profile) }
         }
         return client
+    }
+
+    private fun updateObservedProfile(client: SessionClient, profile: UserDto?) {
+        if (session !== client || state.value.user == null) return
+        if (profile == null) {
+            invalidateObservedProfile(null)
+            return
+        }
+        if (sameScope(profile, state.value.user)) {
+            mutableState.update { it.copy(user = profile) }
+            live.synchronizeBinding()
+            return
+        }
+        invalidateObservedProfile(profile)
+        live.synchronizeBinding()
+        val languageEpoch = sessionEpoch
+        viewModelScope.launch {
+            val settled = synchronizeLanguage()
+            if (settled && session === client && sessionEpoch == languageEpoch && state.value.snapshot == null &&
+                state.value.accountLanguageReady && languageBinding() != null) queueDescriptionRefresh()
+        }
+    }
+
+    private fun invalidateObservedProfile(profile: UserDto?) {
+        invalidateLanguage()
+        features.invalidate()
+        privileged.invalidate()
+        live.invalidate()
+        resetOrderFlow()
+        sessionEpoch++
+        marketRevision++
+        marketRequest?.cancel()
+        mutableState.update { it.copy(user = profile, snapshot = null, market = MarketState()) }
     }
 
     fun login(username: String, password: String) {
