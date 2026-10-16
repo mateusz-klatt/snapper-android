@@ -387,4 +387,21 @@
     <string name="backtests_status_failed">失敗</string>
     <string name="backtests_status_cancelled">已取消</string>
     <string name="backtests_status_unknown">未知</string>
+    <string name="push_title">Snapper updates</string>
+    <string name="push_generic">Open Snapper to view updates</string>
+    <string name="push_privacy">Notifications show only a generic invitation. Open the app and sign in to view authorized details. Enabling push sends an installation identifier to Google and your configured backend.</string>
+    <string name="push_enable">Enable notifications</string>
+    <string name="push_disable">Disable notifications</string>
+    <string name="push_check">Check registration status</string>
+    <string name="push_off">Notifications are off.</string>
+    <string name="push_busy">Updating notification registration…</string>
+    <string name="push_unavailable">Push is unavailable for this backend.</string>
+    <string name="push_permission">Allow Android notifications to enable push.</string>
+    <string name="push_ready">Push is available. Enable it to register this installation.</string>
+    <string name="push_accepted">Notification registration confirmed. Delivery depends on your backend and device.</string>
+    <string name="push_rejected">Registration was not completed. You can try again explicitly.</string>
+    <string name="push_uncertain">Registration could not be confirmed. Check status before another registration.</string>
+    <string name="push_restart">Close and reopen the app before activating a different Firebase configuration.</string>
+    <string name="push_close">Close</string>
+    <string name="push_cleanup">Local notifications are off. Remote cleanup is pending; disable again while signed in to retry.</string>
 </resources>

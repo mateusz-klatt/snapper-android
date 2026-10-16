@@ -35,12 +35,17 @@ import ch.snapper.android.data.AccountLanguageClient
 import ch.snapper.android.features.accountlanguage.*
 import kotlinx.coroutines.sync.withLock
 import java.util.Locale
+import ch.snapper.android.features.push.*
+import ch.snapper.android.data.PushClient
+import ch.snapper.android.data.PushIdentity
+import ch.snapper.android.data.PushBinding
 
 class SnapperViewModel(
     private val settings: SettingsStore,
     private val sessionFactory: (String) -> SessionClient,
     private val defaultOrigin: String,
     private val allowLocalHttp: Boolean,
+    private val pushPlatform: PushPlatform? = null,
     private val deviceLanguages: () -> List<Locale> = { listOf(Locale.getDefault()) },
 ) : ViewModel() {
     private val languagePreferenceMutex = kotlinx.coroutines.sync.Mutex()
@@ -70,6 +75,34 @@ class SnapperViewModel(
     private var languageSession: SessionClient? = null
     private var cachedLanguageBinding: AccountLanguageBinding? = null
 
+    private var pushSession: SessionClient? = null
+    private var cachedPushBinding: PushBinding? = null
+    private var pendingPushHint: PushHint? = null
+    private val push = pushPlatform?.let { PushController(viewModelScope, ::pushBinding, it, BuildConfig.APPLICATION_ID, BuildConfig.VERSION_NAME) }
+    private fun pushBinding(): PushBinding? {
+        val client = session as? PushClient ?: return null
+        val profile = session?.user?.value ?: return null
+        if (!sameScope(profile, state.value.user)) return null
+        val identity = PushIdentity(state.value.backendUrl, sessionEpoch, OrderScope.from(profile))
+        if (pushSession !== session || cachedPushBinding?.identity != identity) {
+            pushSession = session
+            cachedPushBinding = client.bindPush(identity)
+        }
+        return cachedPushBinding
+    }
+    fun openPushHint(hint: PushHint) {
+        pendingPushHint = hint
+        consumePushHint()
+    }
+    private fun consumePushHint() {
+        if (!state.value.accountLanguageReady || state.value.user == null) return
+        val owner = pushBinding() ?: return
+        val saved = pushPlatform?.delivery?.binding()
+        if (saved != null && saved.scopeDigest != owner.identity.scopeDigest()) push?.invalidate()
+        pendingPushHint?.let { push?.open(it) }
+        pendingPushHint = null
+    }
+
     private fun languageBinding(): AccountLanguageBinding? {
         val client = session as? AccountLanguageClient ?: return null
         val profile = session?.user?.value ?: return null
@@ -83,6 +116,9 @@ class SnapperViewModel(
     }
 
     private fun invalidateLanguage() {
+        if (state.value.user != null) push?.disable()
+        pushSession = null
+        cachedPushBinding = null
         languageDescriptionRevision++
         languageDescriptionJob?.cancel()
         accountLanguage.invalidate()
@@ -104,6 +140,7 @@ class SnapperViewModel(
         if (session !== client || sessionEpoch != epoch || !sameScope(profile, state.value.user) ||
             !sameScope(profile, client.user.value)) return false
         mutableState.update { it.copy(accountLanguageReady = true) }
+        consumePushHint()
         live.synchronizeBinding()
         return true
     }
@@ -146,6 +183,7 @@ class SnapperViewModel(
         saveBackend = ::saveBackend,
         selectLanguage = ::selectLanguage,
         retryAccountLanguage = accountLanguage::retry,
+        push = push?.actions ?: PushActions(),
         clearError = { mutableState.update { it.copy(error = null) } },
         loadMarket = ::loadMarket,
         loadCatalog = features::loadCatalog,
@@ -182,6 +220,7 @@ class SnapperViewModel(
     )
 
     init {
+        push?.let { controller -> viewModelScope.launch { controller.state.collect { value -> mutableState.update { it.copy(push = value) } } } }
         viewModelScope.launch { accountLanguage.state.collect { value -> mutableState.update { it.copy(accountLanguage = value) } } }
         runOperation { request ->
             val preferences = settings.preferences.first()
@@ -351,6 +390,7 @@ class SnapperViewModel(
     }
 
     private fun clearVisibleSession() {
+        pendingPushHint = null
         invalidateLanguage()
         features.invalidate()
         privileged.invalidate()

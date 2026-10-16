@@ -78,6 +78,7 @@ data class AppUiState(
     val marketContext: MarketContextState = MarketContextState(),
     val accountLanguage: AccountLanguageState = AccountLanguageState(),
     val accountLanguageReady: Boolean = true,
+    val push: ch.snapper.android.features.push.PushState = ch.snapper.android.features.push.PushState(),
 )
 
 data class AppActions(
@@ -113,4 +114,5 @@ data class AppActions(
     val marketDiagnostics: MarketDiagnosticsActions = MarketDiagnosticsActions({}, {}, {}),
     val marketContext: MarketContextActions = MarketContextActions({}, {}, {}),
     val retryAccountLanguage: () -> Unit = {},
+    val push: ch.snapper.android.features.push.PushActions = ch.snapper.android.features.push.PushActions(),
 )

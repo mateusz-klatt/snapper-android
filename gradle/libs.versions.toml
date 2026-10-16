@@ -1,4 +1,7 @@
 [versions]
+firebaseMessaging = "26.0.0"
+firebaseCommon = "23.0.0"
+firebaseInstallations = "20.0.0"
 agp = "9.4.1"
 kotlin = "2.4.21"
 jacoco = "0.8.15"
@@ -15,6 +18,9 @@ espresso = "3.7.0"
 composeBom = "2026.09.00"
 
 [libraries]
+firebase-messaging = { module = "com.google.firebase:firebase-messaging", version.ref = "firebaseMessaging" }
+firebase-common = { module = "com.google.firebase:firebase-common", version.ref = "firebaseCommon" }
+firebase-installations = { module = "com.google.firebase:firebase-installations", version.ref = "firebaseInstallations" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity" }
 androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycle" }
 androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
