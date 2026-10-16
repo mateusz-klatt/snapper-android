@@ -91,6 +91,47 @@ class ActionRepositoryTest {
         assertEquals(4, server.requestCount)
     }
 
+    @Test fun processStopDecodesSuccessAndOperationalFailureWithoutReplay() = runBlocking {
+        login()
+        for (status in listOf("success", "not_running", "error")) {
+            processReads()
+            server.enqueue(envelope("""{"name":"feed","status":"$status","message":"operational result"}"""))
+            val result = repository.stopProcess(scope(), target())
+            assertEquals(status, result.status)
+            assertEquals("operational result", result.message)
+            drain(2)
+            val request = server.takeRequest()
+            assertEquals("/api/processes/feed/stop", request.path)
+            assertEquals("POST", request.method)
+            assertEquals("csrf", request.getHeader("X-CSRF-Token"))
+        }
+        assertEquals(10, server.requestCount)
+    }
+
+    @Test fun processStopMismatchedNameAndUnsupportedStatusRemainUnknown() = runBlocking {
+        login()
+        val receipts = listOf("""{"name":"different","status":"success"}""", """{"name":"feed","status":"queued"}""")
+        for (receipt in receipts) {
+            processReads()
+            server.enqueue(envelope(receipt))
+            val failure = runCatching { repository.stopProcess(scope(), target()) }.exceptionOrNull()
+            assertTrue(failure is ProcessOutcomeUnknownException)
+            drain(3)
+        }
+        assertEquals(7, server.requestCount)
+    }
+
+    @Test fun processStopLostResponseNeverRetriesTheMutation() = runBlocking {
+        login(); processReads()
+        server.enqueue(MockResponse().setSocketPolicy(SocketPolicy.DISCONNECT_AFTER_REQUEST))
+        server.enqueue(envelope("""{"name":"feed","status":"success"}"""))
+        val failure = runCatching { repository.stopProcess(scope(), target()) }.exceptionOrNull()
+        assertTrue(failure is ProcessOutcomeUnknownException)
+        drain(2)
+        assertEquals("/api/processes/feed/stop", server.takeRequest().path)
+        assertEquals(4, server.requestCount)
+    }
+
     @Test fun remoteRestartSendsSameNonceAndPersistedIntent() = runBlocking {
         login(); processReads(configured(true))
         server.enqueue(envelope("""{"name":"feed","status":"success","action":"restart","managed_remotely":true,"coordinator":"api"}"""))

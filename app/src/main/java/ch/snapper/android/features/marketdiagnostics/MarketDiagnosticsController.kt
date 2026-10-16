@@ -82,20 +82,27 @@ class MarketDiagnosticsController(
         mutable.value = state.value.copy(cacheLoading = true, cacheFailed = false)
         cacheJob = scope.launch {
             try {
-                val result = client.chartCache(selected.exchange, selected.instrument, selected.timeframe, limit)
-                check(result.sampleCount == result.candles.size && result.sampleCount <= limit)
-                check(result.isWarm == (result.sampleCount >= limit))
-                check(result.source == MarketDiagnosticsLogic.chartSource(selected.timeframe))
-                check(result.candles.all { it.timeframe == selected.timeframe })
-                val cache = ChartCacheStatus(result.sampleCount, limit, result.source, result.isWarm)
-                if (token == epoch && revision == selectionRevision) mutable.value = state.value.copy(cache = cache, cacheLoading = false)
+                val cache = validatedChartCache(selected, limit)
+                if (isCurrentCacheRequest(token, revision)) mutable.value = state.value.copy(cache = cache, cacheLoading = false)
             } catch (cancelled: CancellationException) {
-                if (token == epoch && revision == selectionRevision) mutable.value = state.value.copy(cacheLoading = false)
+                if (isCurrentCacheRequest(token, revision)) mutable.value = state.value.copy(cacheLoading = false)
                 throw cancelled
             } catch (_: Exception) {
-                if (token == epoch && revision == selectionRevision) mutable.value = state.value.copy(cache = null, cacheLoading = false, cacheFailed = true)
+                if (isCurrentCacheRequest(token, revision)) mutable.value = state.value.copy(cache = null, cacheLoading = false, cacheFailed = true)
             }
         }
+    }
+
+    private fun isCurrentCacheRequest(token: Long, revision: Long): Boolean =
+        token == epoch && revision == selectionRevision
+
+    private suspend fun validatedChartCache(selected: MarketDiagnosticsSelection, limit: Int): ChartCacheStatus {
+        val result = client.chartCache(selected.exchange, selected.instrument, selected.timeframe, limit)
+        check(result.sampleCount == result.candles.size && result.sampleCount <= limit)
+        check(result.isWarm == (result.sampleCount >= limit))
+        check(result.source == MarketDiagnosticsLogic.chartSource(selected.timeframe))
+        check(result.candles.all { it.timeframe == selected.timeframe })
+        return ChartCacheStatus(result.sampleCount, limit, result.source, result.isWarm)
     }
 
     private fun selectPeer(chip: MarketPairChip) {
