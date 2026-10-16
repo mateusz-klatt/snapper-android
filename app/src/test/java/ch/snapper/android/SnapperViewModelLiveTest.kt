@@ -125,6 +125,51 @@ class SnapperViewModelLiveTest {
         assertNotNull(model.state.value.user)
     }
 
+    @Test fun initialLanguageBarrierBlocksLiveAndDescriptionReadsUntilSettledThenAckRecovers() = runTest(dispatcher) {
+        val language = LanguageClient()
+        val model = SnapperViewModel(Settings(), { language }, "https://example.test", false)
+        models.put("language-live", model)
+        try {
+        model.onForeground()
+        runCurrent()
+        assertFalse(model.state.value.accountLanguageReady)
+        assertEquals(0, language.ticketReads)
+        assertTrue(language.sockets.isEmpty())
+        assertEquals(0, language.snapshotReads)
+        assertEquals(0, language.signalReads)
+        assertEquals(0, language.reviewReads)
+        language.gate.complete(Unit)
+        runCurrent()
+        assertTrue(model.state.value.accountLanguageReady)
+        assertEquals(1, language.ticketReads)
+        val socket = language.sockets.single()
+        socket.control("auth_required")
+        socket.control("auth_complete", """, "available_topics":["orders.events.","signals.","ai_reviews."],"ws_token_exp":"${Instant.now().plusSeconds(3600)}"""")
+        runCurrent()
+        assertEquals(0, language.signalReads)
+        assertEquals(0, language.reviewReads)
+        acknowledge(socket); runCurrent(); advanceTimeBy(201); runCurrent()
+        assertEquals(1, language.signalReads)
+        assertEquals(2, language.reviewReads)
+        } finally { language.gate.complete(Unit); models.clear(); runCurrent() }
+    }
+
+    @Test fun logoutWhileInitialLanguageIsHeldNeverStartsLiveWhenItCompletes() = runTest(dispatcher) {
+        val language = LanguageClient()
+        val model = SnapperViewModel(Settings(), { language }, "https://example.test", false)
+        models.put("language-logout", model)
+        try {
+        model.onForeground(); runCurrent()
+        model.logout(); runCurrent()
+        language.gate.complete(Unit); runCurrent()
+        assertFalse(model.state.value.accountLanguageReady)
+        assertEquals(0, language.ticketReads)
+        assertTrue(language.sockets.isEmpty())
+        assertEquals(0, language.signalReads)
+        assertEquals(0, language.reviewReads)
+        } finally { language.gate.complete(Unit); models.clear(); runCurrent() }
+    }
+
     private fun row(value: BigDecimal) = CandleDto("BTC", "venue", "1m", observed.minusSeconds(60).toString(),
         value, value, value, value, BigDecimal.ZERO, complete = false,
         timestamp = observed.minusSeconds(1).toString(), sessionId = "publisher", sequenceId = 1)
@@ -162,7 +207,7 @@ class SnapperViewModelLiveTest {
         }
     }
 
-    private class Client : SessionClient, LiveSessionClient, LiveTransportClient {
+    private open class Client : SessionClient, LiveSessionClient, LiveTransportClient {
         override val user = MutableStateFlow<UserDto?>(null)
         val sockets = mutableListOf<Socket>()
         var candleReads = 0
@@ -193,6 +238,25 @@ class SnapperViewModelLiveTest {
         override suspend fun createOrder(scope: OrderScope, payload: CreateOrderPayload): ExecutionPlanDto = error("Unexpected mutation")
         override suspend fun cancelOrder(scope: OrderScope, order: OrderDto): ExecutionPlanDto = error("Unexpected mutation")
         override fun close() { closed = true }
+    }
+
+    private class LanguageClient : Client(), AccountLanguageClient, SignalsClient, AiReviewsClient {
+        val gate = CompletableDeferred<Unit>()
+        var ticketReads = 0
+        var signalReads = 0
+        var reviewReads = 0
+        override suspend fun restore(): UserDto = super.restore().copy(
+            effectivePermissions = listOf("read:orders", "read:signals", "read:ai_reviews"),
+        ).also { user.value = it }
+        override suspend fun updateLanguage(identity: AccountLanguageIdentity, language: String): AccountLanguageReceipt {
+            withContext(NonCancellable) { gate.await() }
+            return AccountLanguageReceipt(identity, language)
+        }
+        override suspend fun liveTicket(): LiveTicket { ticketReads++; return super.liveTicket() }
+        override suspend fun signals(walletPublicId: String?): List<SignalDto> { signalReads++; return emptyList() }
+        override suspend fun auditReviews(): List<AiAuditReviewDto> { reviewReads++; return emptyList() }
+        override suspend fun pendingReviews(): List<AiPendingReviewDto> = emptyList()
+        override suspend fun submitDecision(scope: OrderScope, reviewId: String, payload: AiDecisionPayload): AiDecisionResponse = error("Unexpected mutation")
     }
 
     private class Settings : SettingsStore {

@@ -44,6 +44,8 @@ If you export trading signals as CSV, you choose the document destination throug
 
 Android DataStore stores the configured backend origin, interface language, selected country/region and financial-color preference. Country/region controls display formatting independently of the interface language; the financial-color preference controls how rising and falling values are displayed. The selected wallet is also communicated through the backend session contract. Account and financial screens are cleared when you sign out or switch backend.
 
+While signed in, the selected interface language is also sent to your configured backend and stored as an account language preference. When you use the system language setting, the app resolves a supported language from your device language preferences, including any Android per-app language override, and sends that resolved language. Your backend may use this preference for descriptions, alerts and notifications. Country/region and financial-color preferences remain independent and are not sent as part of language synchronization. This feature adds no advertising, analytics or other third-party SDK.
+
 The app disables Android cloud backup and device-transfer backup for its data. Signing out removes local session credentials. Clearing the app's storage or uninstalling removes its local preferences and session files; it does not delete your account or records on the backend.
 
 ## Connections, permissions and third-party services

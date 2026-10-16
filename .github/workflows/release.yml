@@ -142,6 +142,7 @@ jobs:
             export ANDROID_UPLOAD_KEYSTORE_PATH="$RUNNER_TEMP/snapper-release-private/upload.jks"
           fi
           ./gradlew --no-daemon :app:assembleDebug :app:testDebugUnitTest :app:lintDebug :app:lintRelease
+          bash scripts/check-packaged-locales.sh
           ./gradlew --no-daemon :app:bundleRelease
       - name: Verify release signature and pinned upload certificate
         env:

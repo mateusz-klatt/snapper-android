@@ -377,4 +377,14 @@
     <string name="market_pair_status_cointegrated" formatted="false">Cointegrated</string>
     <string name="market_pair_status_warm" formatted="false">Warm</string>
     <string name="positions_timeline_chart_valuationcurrency">মূল্যায়ন মুদ্রা: %1$s</string>
+    <string name="account_language_syncing">Saving your language choice to your backend account…</string>
+    <string name="account_language_confirmed">Backend account language confirmed: %1$s</string>
+    <string name="account_language_uncertain">The backend account language could not be confirmed. Your local language choice is unchanged.</string>
+    <string name="account_language_retry">Retry language sync</string>
+    <string name="backtests_status_pending">অপেক্ষমাণ</string>
+    <string name="backtests_status_running">চলছে</string>
+    <string name="backtests_status_completed">সম্পন্ন</string>
+    <string name="backtests_status_failed">ব্যর্থ</string>
+    <string name="backtests_status_cancelled">বাতিল</string>
+    <string name="backtests_status_unknown">অজানা</string>
 </resources>

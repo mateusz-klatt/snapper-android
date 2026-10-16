@@ -29,6 +29,7 @@ data class UserDto(
     @SerialName("active_wallet_public_id") val activeWalletPublicId: String? = null,
     @SerialName("effective_permissions") val effectivePermissions: List<String>? = null,
     @SerialName("delegate_public_id") val delegatePublicId: String? = null,
+    @SerialName("default_language") val defaultLanguage: String? = null,
 ) {
     fun hasPermission(permission: String): Boolean = effectivePermissions?.contains(permission) == true
 }

@@ -1,5 +1,7 @@
 package ch.snapper.android
 
+import ch.snapper.android.features.accountlanguage.AccountLanguageState
+
 import ch.snapper.android.data.CandleDto
 import ch.snapper.android.data.DashboardSnapshot
 import ch.snapper.android.data.UserDto
@@ -74,6 +76,8 @@ data class AppUiState(
     val displayPreferences: DisplayPreferences = DisplayPreferences(),
     val marketDiagnostics: MarketDiagnosticsState = MarketDiagnosticsState(),
     val marketContext: MarketContextState = MarketContextState(),
+    val accountLanguage: AccountLanguageState = AccountLanguageState(),
+    val accountLanguageReady: Boolean = true,
 )
 
 data class AppActions(
@@ -108,4 +112,5 @@ data class AppActions(
     val selectMarket: (String, String, String) -> Unit = { _, _, _ -> },
     val marketDiagnostics: MarketDiagnosticsActions = MarketDiagnosticsActions({}, {}, {}),
     val marketContext: MarketContextActions = MarketContextActions({}, {}, {}),
+    val retryAccountLanguage: () -> Unit = {},
 )

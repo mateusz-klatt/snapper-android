@@ -2,6 +2,9 @@ package ch.snapper.android.ui
 
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.CompositionLocalProvider
+import java.util.Locale
+import java.time.ZoneId
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.test.*
@@ -58,7 +61,7 @@ class SystemScreenUiTest {
         compose.onNodeWithText("instrument-fallback").assertExists()
         compose.onNodeWithText("source-venue").assertExists()
         compose.onNodeWithText("target-venue").assertExists()
-        compose.onNodeWithText("123.123456789").assertExists()
+        compose.onNodeWithText(BacktestPresentation.initialCash(BigDecimal("123.123456789"), Locale.ROOT)).assertExists()
         compose.onNodeWithText("Fixture execution error").assertExists()
         compose.onNodeWithTag("system-list").performScrollToIndex(4)
         compose.onNodeWithText("fixture@example.invalid").assertExists()
@@ -66,6 +69,31 @@ class SystemScreenUiTest {
         compose.onNodeWithTag("system-list").performScrollToIndex(5)
         compose.onNodeWithText("987.123456789").assertExists()
         compose.onNodeWithText("Revoked fixture").assertExists()
+    }
+
+    @Test fun backtestCountryFormattingKeepsUtcDatesAndUsdWhileStatusUsesInterfaceLanguage() {
+        val locale = mutableStateOf(Locale.US)
+        val zone = mutableStateOf(ZoneId.of("Pacific/Kiritimati"))
+        val row = populated().backtests.value!!.single().copy(
+            status = "COMPLETED", startDate = "2026-10-02T00:30:00+02:00", endDate = "2026-10-02T23:30:00-02:00",
+            initialCash = BigDecimal("1234.125"),
+        )
+        val state = mutableStateOf(SystemState(permissions = setOf("read:backtests"), backtests = SystemFeedState(listOf(row))))
+        compose.setContent {
+            CompositionLocalProvider(LocalNumberLocale provides locale.value, LocalDisplayTimeZone provides zone.value) {
+                LazyColumn { systemScreen(state.value, SystemActions {}) }
+            }
+        }
+        compose.onNodeWithText("Completed").assertExists()
+        compose.onNodeWithText("Oct 1, 2026 – Oct 3, 2026").assertExists()
+        compose.onNodeWithText("$1,234.12").assertExists()
+        compose.runOnIdle { locale.value = Locale.GERMANY; zone.value = ZoneId.of("America/Los_Angeles") }
+        compose.onNodeWithText("Completed").assertExists()
+        compose.onNodeWithText("01.10.2026 – 03.10.2026").assertExists()
+        compose.onNodeWithText(BacktestPresentation.initialCash(row.initialCash, Locale.GERMANY)).assertExists()
+        compose.runOnIdle { state.value = state.value.copy(backtests = SystemFeedState(listOf(row.copy(status = "future-status", startDate = "invalid", endDate = "unknown")))) }
+        compose.onNodeWithText("Unknown").assertExists()
+        compose.onNodeWithText("invalid – unknown").assertExists()
     }
 
     @Test fun revokedDirectoryAndDelegatePermissionsRemovePreviouslyRenderedRows() {
@@ -88,7 +116,7 @@ class SystemScreenUiTest {
         compose.runOnIdle { assertEquals(listOf(SystemFeed.STRATEGIES), requests) }
         compose.onNodeWithTag("system-list").performScrollToIndex(1)
         compose.onNodeWithText("Backtest fixture").assertExists()
-        compose.onNodeWithText("123.123456789").assertExists()
+        compose.onNodeWithText(BacktestPresentation.initialCash(BigDecimal("123.123456789"), Locale.ROOT)).assertExists()
     }
 
     @Test fun missingHealthCountersAndEmptyFeedRemainVisibleDuringIndependentLoad() {

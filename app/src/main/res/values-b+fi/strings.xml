@@ -377,4 +377,14 @@
     <string name="market_pair_status_cointegrated" formatted="false">Cointegrated</string>
     <string name="market_pair_status_warm" formatted="false">Warm</string>
     <string name="positions_timeline_chart_valuationcurrency">Arvostusvaluutta: %1$s</string>
+    <string name="account_language_syncing">Saving your language choice to your backend account…</string>
+    <string name="account_language_confirmed">Backend account language confirmed: %1$s</string>
+    <string name="account_language_uncertain">The backend account language could not be confirmed. Your local language choice is unchanged.</string>
+    <string name="account_language_retry">Retry language sync</string>
+    <string name="backtests_status_pending">Odottaa</string>
+    <string name="backtests_status_running">Käynnissä</string>
+    <string name="backtests_status_completed">Valmis</string>
+    <string name="backtests_status_failed">Epäonnistui</string>
+    <string name="backtests_status_cancelled">Peruutettu</string>
+    <string name="backtests_status_unknown">Tuntematon</string>
 </resources>

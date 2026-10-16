@@ -91,7 +91,10 @@ android {
 
     androidResources {
         generateLocaleConfig = true
-        localeFilters += listOf("en", "pl")
+        localeFilters += file("src/main/res").listFiles().orEmpty()
+            .filter { it.isDirectory && it.name.startsWith("values-") && it.resolve("strings.xml").isFile }
+            .map { it.name.removePrefix("values-") }
+            .plus("en")
     }
 
     bundle {

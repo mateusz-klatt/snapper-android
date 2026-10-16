@@ -134,8 +134,8 @@ internal fun CandleChart(candles: List<CandleDto>) {
             }
         }
         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-            Text(visible.first().openAt, Modifier.weight(1f), style = MaterialTheme.typography.labelSmall)
-            Text(visible.last().openAt, Modifier.weight(1f), style = MaterialTheme.typography.labelSmall)
+            Text(visible.first().openAt.displayTimestamp(), Modifier.weight(1f).testTag("market.axis.start"), style = MaterialTheme.typography.labelSmall)
+            Text(visible.last().openAt.displayTimestamp(), Modifier.weight(1f).testTag("market.axis.end"), style = MaterialTheme.typography.labelSmall)
         }
     }
 }

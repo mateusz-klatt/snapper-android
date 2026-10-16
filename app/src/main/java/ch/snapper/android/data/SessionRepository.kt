@@ -10,6 +10,8 @@ import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicBoolean
 import java.util.concurrent.atomic.AtomicLong
 import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.currentCoroutineContext
+import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -20,6 +22,7 @@ import kotlinx.serialization.SerializationException
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import okhttp3.HttpUrl
+import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -54,7 +57,7 @@ class SessionRepository private constructor(
     private val client: OkHttpClient,
     private val origin: HttpUrl,
 ) : SessionClient, DeskClient, MarketCatalogClient, SystemClient, RecordsClient, NotificationDefaultsClient,
-    SignalsClient, VenueAccountsClient, PnlClient, ProcessClient, AiReviewsClient, PositionActionClient, LiveSessionClient, LiveTransportClient, MarketContextClient, MarketDiagnosticsClient {
+    SignalsClient, VenueAccountsClient, PnlClient, ProcessClient, AiReviewsClient, PositionActionClient, LiveSessionClient, LiveTransportClient, MarketContextClient, MarketDiagnosticsClient, AccountLanguageClient {
     private val mutableUser = MutableStateFlow<UserDto?>(null)
     override val user: StateFlow<UserDto?> = mutableUser.asStateFlow()
     private val operation = Mutex()
@@ -385,6 +388,100 @@ class SessionRepository private constructor(
             if (error.code() == 401) expire(generation)
             if (error.code() in 400..499 && error.code() !in setOf(408, 409, 425)) throw PositionRejectedException(error.code())
             throw OrderOutcomeUnknownException(error)
+        }
+    }
+
+    /** Bind the UI identity to this precise login's cookie generation, not to the unrelated UI epoch. */
+    override fun bindLanguage(identity: AccountLanguageIdentity): AccountLanguageBinding {
+        val generation = cookies.generation()
+        val scoped = AccountLanguageClient { supplied, language ->
+            if (supplied != identity) throw AccountLanguageException(AccountLanguageFailureKind.PREPARATION)
+            updateLanguageBound(identity, language, generation)
+        }
+        return AccountLanguageBinding(identity, scoped)
+    }
+
+    override suspend fun updateLanguage(identity: AccountLanguageIdentity, language: String): AccountLanguageReceipt =
+        updateLanguageBound(identity, language, cookies.generation())
+
+    private suspend fun updateLanguageBound(identity: AccountLanguageIdentity, language: String, generation: Long): AccountLanguageReceipt {
+        prepareLanguage(identity, language, generation)
+        return operation.withLock {
+            preflightLanguage(identity, language, generation)
+            currentCoroutineContext().ensureActive()
+            dispatchLanguage(identity, language, generation)
+        }
+    }
+
+    private fun requireLanguageIdentity(identity: AccountLanguageIdentity, generation: Long) {
+        ensureCurrent(generation)
+        require(identity.backend.toHttpUrlOrNull() == origin)
+        requireFeatureScope(identity.actor, null)
+    }
+
+    private fun prepareLanguage(identity: AccountLanguageIdentity, language: String, generation: Long) {
+        try {
+            require(SupportedLanguages.find(language) != null)
+            requireLanguageIdentity(identity, generation)
+        } catch (error: Exception) {
+            throw AccountLanguageException(AccountLanguageFailureKind.PREPARATION)
+        }
+    }
+
+    private suspend fun preflightLanguage(identity: AccountLanguageIdentity, language: String, generation: Long) {
+        try {
+            prepareLanguage(identity, language, generation)
+            authorized(generation) {
+                requireLanguageIdentity(identity, generation)
+                val profile = api.me().payload
+                commitUser(generation, profile)
+                requireLanguageIdentity(identity, generation)
+            }
+        } catch (error: CancellationException) {
+            throw error
+        } catch (error: Exception) {
+            throw AccountLanguageException(AccountLanguageFailureKind.PREPARATION)
+        }
+    }
+
+    private suspend fun dispatchLanguage(identity: AccountLanguageIdentity, language: String, generation: Long): AccountLanguageReceipt {
+        try {
+            val profile = mutationApi.updateAccountLanguage(envelope("update_auth_me_request", UpdateAccountLanguagePayload(language))).payload
+            requireLanguageIdentity(identity, generation)
+            val rawScope = OrderScope.from(profile).copy(primaryOperatorPublicId = profile.primaryOperatorPublicId ?: identity.actor.primaryOperatorPublicId)
+            require(rawScope == identity.actor && profile.defaultLanguage == language)
+        } catch (error: CancellationException) {
+            throw error
+        } catch (error: HttpException) {
+            if (error.code() == 401) expire(generation)
+            val kind = if (error.code() in 400..499 && error.code() !in setOf(408, 425))
+                AccountLanguageFailureKind.REJECTED else AccountLanguageFailureKind.UNKNOWN
+            throw AccountLanguageException(kind)
+        } catch (error: Exception) {
+            throw AccountLanguageException(AccountLanguageFailureKind.UNKNOWN)
+        }
+        return confirmLanguage(identity, language, generation)
+    }
+
+    /** Write projections may omit the derived primary operator; only canonical /me can confirm acceptance. */
+    private suspend fun confirmLanguage(identity: AccountLanguageIdentity, language: String, generation: Long): AccountLanguageReceipt {
+        try {
+            val canonical = authorized(generation) {
+                requireLanguageIdentity(identity, generation)
+                api.me().payload.also {
+                    // Canonical security changes must invalidate old live/UI scope even when this receipt is refused.
+                    commitUser(generation, it)
+                    requireLanguageIdentity(identity, generation)
+                    require(it.defaultLanguage == language)
+                }
+            }
+            commitUser(generation, canonical)
+            return AccountLanguageReceipt(identity, language)
+        } catch (error: CancellationException) {
+            throw error
+        } catch (error: Exception) {
+            // The POST has already succeeded. Failed confirmation cannot become a known rejection.
+            throw AccountLanguageException(AccountLanguageFailureKind.UNKNOWN)
         }
     }
 

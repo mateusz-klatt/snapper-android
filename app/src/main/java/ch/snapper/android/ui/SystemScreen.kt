@@ -13,6 +13,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import ch.snapper.android.data.BacktestPresentation
+import ch.snapper.android.data.BacktestStatus
 import ch.snapper.android.R
 import ch.snapper.android.features.system.SystemActions
 import ch.snapper.android.features.system.SystemFeed
@@ -81,12 +83,12 @@ private fun LazyListScope.backtestsSection(state: SystemState, actions: SystemAc
             EmptySystemRows(rows.isEmpty())
             rows.forEach { row -> RecordCard(row.strategyName) {
                 Text(row.instrument ?: row.instrumentPublicId)
-                Metric(R.string.status, row.status)
+                Metric(R.string.status, backtestStatusLabel(row.status))
                 Metric(R.string.exchange, row.exchange)
                 row.targetExecutionExchange?.let { Text(it) }
                 Metric(R.string.timeframe, row.timeframe)
-                Metric(R.string.system_period, "${row.startDate} – ${row.endDate}")
-                Metric(R.string.system_initial_cash, row.initialCash.display())
+                Metric(R.string.system_period, "${BacktestPresentation.date(row.startDate, LocalNumberLocale.current)} – ${BacktestPresentation.date(row.endDate, LocalNumberLocale.current)}")
+                Metric(R.string.system_initial_cash, BacktestPresentation.initialCash(row.initialCash, LocalNumberLocale.current))
                 Text(row.publicId, style = MaterialTheme.typography.bodySmall)
                 row.error?.let { Text(it) }
             } }
@@ -140,3 +142,13 @@ private fun EmptySystemRows(empty: Boolean) {
 }
 
 private fun Long?.counter(): String = this?.toString() ?: "—"
+
+@Composable
+private fun backtestStatusLabel(raw: String): String = stringResource(when (BacktestPresentation.status(raw)) {
+    BacktestStatus.PENDING -> R.string.backtests_status_pending
+    BacktestStatus.RUNNING -> R.string.backtests_status_running
+    BacktestStatus.COMPLETED -> R.string.backtests_status_completed
+    BacktestStatus.FAILED -> R.string.backtests_status_failed
+    BacktestStatus.CANCELLED -> R.string.backtests_status_cancelled
+    BacktestStatus.UNKNOWN -> R.string.backtests_status_unknown
+})

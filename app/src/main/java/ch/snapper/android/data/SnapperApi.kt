@@ -10,6 +10,7 @@ import retrofit2.http.Query
 import retrofit2.http.Path
 
 internal interface SnapperApi {
+    @POST("api/auth/me/update") suspend fun updateAccountLanguage(@Body request: Envelope<UpdateAccountLanguagePayload>): Envelope<UserDto>
     @GET("api/market/cache/stats/configured") suspend fun configuredPairStats(): Envelope<ConfiguredPairStatsDto>
     @POST("api/auth/ws_token") suspend fun liveTicket(): Envelope<LiveTicketPayload>
     @GET("api/candles/cache") suspend fun cachedHourly(

@@ -377,4 +377,14 @@
     <string name="market_pair_status_cointegrated" formatted="false">Cointegrated</string>
     <string name="market_pair_status_warm" formatted="false">Warm</string>
     <string name="positions_timeline_chart_valuationcurrency">Waluta wyceny: %1$s</string>
+    <string name="account_language_syncing">Saving your language choice to your backend account…</string>
+    <string name="account_language_confirmed">Backend account language confirmed: %1$s</string>
+    <string name="account_language_uncertain">The backend account language could not be confirmed. Your local language choice is unchanged.</string>
+    <string name="account_language_retry">Retry language sync</string>
+    <string name="backtests_status_pending">Oczekujące</string>
+    <string name="backtests_status_running">W toku</string>
+    <string name="backtests_status_completed">Ukończone</string>
+    <string name="backtests_status_failed">Nieudane</string>
+    <string name="backtests_status_cancelled">Anulowane</string>
+    <string name="backtests_status_unknown">Nieznane</string>
 </resources>

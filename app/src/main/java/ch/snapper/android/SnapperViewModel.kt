@@ -29,15 +29,23 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withTimeoutOrNull
 import retrofit2.HttpException
+import ch.snapper.android.data.AccountLanguageBinding
+import ch.snapper.android.data.AccountLanguageIdentity
+import ch.snapper.android.data.AccountLanguageClient
+import ch.snapper.android.features.accountlanguage.*
+import kotlinx.coroutines.sync.withLock
+import java.util.Locale
 
 class SnapperViewModel(
     private val settings: SettingsStore,
     private val sessionFactory: (String) -> SessionClient,
     private val defaultOrigin: String,
     private val allowLocalHttp: Boolean,
+    private val deviceLanguages: () -> List<Locale> = { listOf(Locale.getDefault()) },
 ) : ViewModel() {
+    private val languagePreferenceMutex = kotlinx.coroutines.sync.Mutex()
     private val displayPreferenceMutex = kotlinx.coroutines.sync.Mutex()
-    private val mutableState = MutableStateFlow(AppUiState())
+    private val mutableState = MutableStateFlow(AppUiState(accountLanguageReady = false))
     val state = mutableState.asStateFlow()
     private var session: SessionClient? = null
     private var sessionObserver: Job? = null
@@ -55,6 +63,81 @@ class SnapperViewModel(
         { change -> mutableState.update(change) }, ::refresh)
     private val live = LiveCoordinator(viewModelScope, ::liveBinding, ::requestLiveSnapshot, ::refreshLiveFeature, ::publishLive)
 
+    private val accountLanguage = AccountLanguageController(viewModelScope, ::languageBinding, ::languageAccepted)
+
+    private var languageDescriptionRevision = 0L
+    private var languageDescriptionJob: Job? = null
+    private var languageSession: SessionClient? = null
+    private var cachedLanguageBinding: AccountLanguageBinding? = null
+
+    private fun languageBinding(): AccountLanguageBinding? {
+        val client = session as? AccountLanguageClient ?: return null
+        val profile = session?.user?.value ?: return null
+        if (!sameScope(profile, state.value.user)) return null
+        val identity = AccountLanguageIdentity(state.value.backendUrl, sessionEpoch, OrderScope.from(profile))
+        if (languageSession !== session || cachedLanguageBinding?.identity != identity) {
+            languageSession = session
+            cachedLanguageBinding = client.bindLanguage(identity)
+        }
+        return cachedLanguageBinding
+    }
+
+    private fun invalidateLanguage() {
+        languageDescriptionRevision++
+        languageDescriptionJob?.cancel()
+        accountLanguage.invalidate()
+        languageSession = null
+        cachedLanguageBinding = null
+        mutableState.update { it.copy(accountLanguageReady = false, accountLanguage = AccountLanguageState()) }
+    }
+
+    private suspend fun synchronizeLanguage(): Boolean {
+        val client = session ?: return false
+        val profile = state.value.user ?: return false
+        val epoch = sessionEpoch
+        val binding = languageBinding()
+        if (binding != null) {
+            AccountLanguageResolver.resolve(state.value.language, deviceLanguages())?.let(accountLanguage::choose)
+            accountLanguage.awaitSettled()
+            if (languageBinding() != binding) return false
+        }
+        if (session !== client || sessionEpoch != epoch || !sameScope(profile, state.value.user) ||
+            !sameScope(profile, client.user.value)) return false
+        mutableState.update { it.copy(accountLanguageReady = true) }
+        live.synchronizeBinding()
+        return true
+    }
+
+    private fun languageAccepted(identity: AccountLanguageIdentity, language: String) {
+        if (languageBinding()?.identity != identity || !state.value.accountLanguageReady ||
+            accountLanguage.state.value.desired != language) return
+        queueDescriptionRefresh()
+    }
+
+    private fun queueDescriptionRefresh() {
+        val capturedClient = session ?: return
+        val capturedEpoch = sessionEpoch
+        val captured = languageBinding()
+        val desired = accountLanguage.state.value.desired
+        val request = languageDescriptionRevision
+        languageDescriptionJob?.cancel()
+        languageDescriptionJob = viewModelScope.launch {
+            state.first { !it.isLoading && !it.isRestoring }
+            if (session !== capturedClient || sessionEpoch != capturedEpoch || languageBinding() != captured ||
+                request != languageDescriptionRevision ||
+                accountLanguage.state.value.desired != desired || !state.value.accountLanguageReady) return@launch
+            features.marketContextActions.retryRelated()
+            refresh()
+        }
+    }
+
+    private fun chooseAccountLanguage(language: String) {
+        if (accountLanguage.state.value.desired == language) return
+        languageDescriptionRevision++
+        languageDescriptionJob?.cancel()
+        accountLanguage.choose(language)
+    }
+
     val actions = AppActions(
         login = ::login,
         refresh = ::refresh,
@@ -62,6 +145,7 @@ class SnapperViewModel(
         logout = ::logout,
         saveBackend = ::saveBackend,
         selectLanguage = ::selectLanguage,
+        retryAccountLanguage = accountLanguage::retry,
         clearError = { mutableState.update { it.copy(error = null) } },
         loadMarket = ::loadMarket,
         loadCatalog = features::loadCatalog,
@@ -98,6 +182,7 @@ class SnapperViewModel(
     )
 
     init {
+        viewModelScope.launch { accountLanguage.state.collect { value -> mutableState.update { it.copy(accountLanguage = value) } } }
         runOperation { request ->
             val preferences = settings.preferences.first()
             if (request != revision) return@runOperation
@@ -109,13 +194,16 @@ class SnapperViewModel(
                 if (user != null && request == revision && session === client) {
                     mutableState.update { it.copy(user = user) }
                     live.synchronizeBinding()
-                    refreshSnapshot(client, request)
+                    if (synchronizeLanguage() && request == revision && session === client) refreshSnapshot(client, request)
                 }
             }
         }
     }
 
     fun onForeground() {
+        if (state.value.user != null && state.value.language.isEmpty()) {
+            AccountLanguageResolver.resolve("", deviceLanguages())?.let(::chooseAccountLanguage)
+        }
         features.setForeground(true)
         live.setForeground(true)
         if (state.value.user != null && !state.value.isLoading && !state.value.isRestoring) refresh()
@@ -135,6 +223,7 @@ class SnapperViewModel(
         sessionObserver = viewModelScope.launch {
             client.user.collect { profile ->
                 if (session === client && profile == null && state.value.user != null) {
+                    invalidateLanguage()
                     features.invalidate()
                     privileged.invalidate()
                     live.invalidate()
@@ -145,6 +234,7 @@ class SnapperViewModel(
                     mutableState.update { it.copy(user = null, snapshot = null, market = MarketState()) }
                 } else if (session === client && profile != null && state.value.user != null) {
                     if (!sameScope(profile, state.value.user)) {
+                        invalidateLanguage()
                         features.invalidate()
                         privileged.invalidate()
                         live.invalidate()
@@ -154,6 +244,12 @@ class SnapperViewModel(
                         marketRequest?.cancel()
                         mutableState.update { it.copy(user = profile, snapshot = null, market = MarketState()) }
                         live.synchronizeBinding()
+                        val languageEpoch = sessionEpoch
+                        viewModelScope.launch {
+                            val settled = synchronizeLanguage()
+                            if (settled && session === client && sessionEpoch == languageEpoch && state.value.snapshot == null &&
+                                state.value.accountLanguageReady && languageBinding() != null) queueDescriptionRefresh()
+                        }
                     } else {
                         mutableState.update { it.copy(user = profile) }
                         live.synchronizeBinding()
@@ -171,20 +267,22 @@ class SnapperViewModel(
             val epoch = sessionEpoch
             val user = client.login(username.trim(), password)
             if (request != revision || session !== client || epoch != sessionEpoch) return@runOperation
+            invalidateLanguage()
             mutableState.update { it.copy(user = user, snapshot = null) }
             live.synchronizeBinding()
-            refreshSnapshot(client, request)
+            if (synchronizeLanguage() && request == revision && session === client) refreshSnapshot(client, request)
         }
     }
 
     fun refresh() {
-        if (state.value.isLoading || state.value.user == null) return
+        if (state.value.isLoading || state.value.user == null || !state.value.accountLanguageReady) return
         runOperation { request -> refreshSnapshot(currentSession(), request) }
     }
 
     fun selectWallet(publicId: String?) {
         if (state.value.isLoading || state.value.user == null) return
         resetOrderFlow()
+        invalidateLanguage()
         features.invalidate()
         privileged.invalidate()
         live.invalidate()
@@ -194,11 +292,26 @@ class SnapperViewModel(
         mutableState.update { it.copy(snapshot = null, market = MarketState()) }
         runOperation { request ->
             val client = currentSession()
-            val profile = client.selectWallet(publicId)
+            val profile = selectWalletProfile(client, publicId, request, sessionEpoch)
             if (request != revision || session !== client) return@runOperation
             mutableState.update { it.copy(user = profile) }
             live.synchronizeBinding()
-            refreshSnapshot(client, request)
+            if (synchronizeLanguage() && request == revision && session === client) refreshSnapshot(client, request)
+        }
+    }
+
+    private suspend fun selectWalletProfile(client: SessionClient, publicId: String?, request: Long, epoch: Long): UserDto {
+        val previous = state.value.user
+        try {
+            return client.selectWallet(publicId)
+        } catch (error: CancellationException) {
+            throw error
+        } catch (error: Exception) {
+            if (request == revision && session === client && sessionEpoch == epoch && previous != null &&
+                sameScope(previous, state.value.user) && sameScope(previous, client.user.value)) {
+                synchronizeLanguage()
+            }
+            throw error
         }
     }
 
@@ -239,6 +352,7 @@ class SnapperViewModel(
     }
 
     private fun clearVisibleSession() {
+        invalidateLanguage()
         features.invalidate()
         privileged.invalidate()
         live.invalidate()
@@ -273,11 +387,14 @@ class SnapperViewModel(
     fun selectLanguage(language: String) {
         if (language.isNotEmpty() && ch.snapper.android.data.SupportedLanguages.find(language) == null) return
         viewModelScope.launch {
-            try {
-                settings.setLanguage(language)
-                mutableState.update { it.copy(language = language) }
-            } catch (_: IOException) {
-                mutableState.update { it.copy(error = UiError.SERVICE) }
+            languagePreferenceMutex.withLock {
+                try {
+                    settings.setLanguage(language)
+                    mutableState.update { it.copy(language = language) }
+                    AccountLanguageResolver.resolve(language, deviceLanguages())?.let(::chooseAccountLanguage)
+                } catch (_: IOException) {
+                    mutableState.update { it.copy(error = UiError.SERVICE) }
+                }
             }
         }
     }
@@ -513,6 +630,7 @@ class SnapperViewModel(
     }
 
     private fun liveBinding(): LiveBinding? {
+        if (!state.value.accountLanguageReady) return null
         val client = session ?: return null
         val profile = state.value.user ?: return null
         val current = client.user.value ?: return null
@@ -565,7 +683,7 @@ class SnapperViewModel(
         if (state.value.user?.hasPermission("read:market_data") != true) return
         val selection = LiveSelection(exchange.trim(), instrument.trim(), timeframe.trim())
         features.prepareMarketDiagnostics(selection.exchange, selection.instrument, selection.timeframe)
-        features.selectMarketContext(selection.exchange, selection.instrument)
+        if (state.value.accountLanguageReady) features.selectMarketContext(selection.exchange, selection.instrument)
         if (liveBinding() != null) live.selectMarket(selection, force)
         else {
             val previous = state.value.market

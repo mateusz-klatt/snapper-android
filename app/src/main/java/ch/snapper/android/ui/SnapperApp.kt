@@ -34,6 +34,10 @@ fun SnapperApp(state: AppUiState, actions: AppActions) {
         when {
             state.isRestoring -> Column(Modifier.padding(32.dp)) { CircularProgressIndicator(); Text(stringResource(R.string.loading)) }
             state.user == null -> LoginScreen(state, actions)
+            !state.accountLanguageReady -> Column(Modifier.padding(32.dp).testTag("accountLanguage.preparing")) {
+                CircularProgressIndicator()
+                Text(stringResource(R.string.account_language_syncing))
+            }
             else -> AuthenticatedApp(state, actions)
         }
     }
@@ -160,6 +164,7 @@ private fun SettingsScreen(state: AppUiState, actions: AppActions) {
     state.user?.let { AccountSettingsContent(it, BuildConfig.VERSION_NAME, BuildConfig.VERSION_CODE.toString()) }
     Text(state.backendUrl)
     LanguagePicker(state.language, actions.selectLanguage)
+    AccountLanguageStatusContent(state.accountLanguage, actions.retryAccountLanguage)
     DisplayPreferencesContent(state.displayPreferences, actions.selectCountry, actions.selectFinancialColor)
     Text(stringResource(R.string.backend_warning), style = MaterialTheme.typography.bodySmall)
     BackendEditor(state.backendUrl) { value -> pendingBackend = value; confirmation = AccountConfirmation.CHANGE_BACKEND }

@@ -1,6 +1,7 @@
 package ch.snapper.android
 
 import android.content.res.Configuration
+import android.content.Context
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.LocalActivity
@@ -21,6 +22,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import ch.snapper.android.data.SessionRepository
+import ch.snapper.android.features.accountlanguage.AccountLanguageResolver
 import ch.snapper.android.ui.SnapperApp
 import ch.snapper.android.ui.SnapperTheme
 import ch.snapper.android.ui.LocalNumberLocale
@@ -34,11 +36,13 @@ class MainActivity : ComponentActivity() {
     private val model: SnapperViewModel by viewModels {
         viewModelFactory {
             initializer {
+                val appContext = application.applicationContext
                 SnapperViewModel(
                     settings = (application as SnapperApplication).settings,
-                    sessionFactory = { origin -> SessionRepository.create(applicationContext, origin, BuildConfig.DEBUG) },
+                    sessionFactory = { origin -> SessionRepository.create(appContext, origin, BuildConfig.DEBUG) },
                     defaultOrigin = BuildConfig.DEFAULT_BACKEND_URL,
                     allowLocalHttp = BuildConfig.DEBUG,
+                    deviceLanguages = { applicationLanguages(appContext) },
                 )
             }
         }
@@ -80,11 +84,10 @@ private fun LocalizedContent(language: String, content: @Composable () -> Unit) 
     val activityResultRegistryOwner = checkNotNull(LocalActivityResultRegistryOwner.current)
     val configuration = LocalConfiguration.current
     val localized = remember(context, configuration, language) {
-        if (language.isEmpty()) context else {
-            val copy = Configuration(configuration)
-            copy.setLocale(Locale.forLanguageTag(language))
-            context.createConfigurationContext(copy)
-        }
+        val resolved = AccountLanguageResolver.resolve(language, applicationLanguages(context)) ?: "en"
+        val copy = Configuration(configuration)
+        copy.setLocale(Locale.forLanguageTag(resolved))
+        context.createConfigurationContext(copy)
     }
     val direction = if (localized.resources.configuration.layoutDirection == android.view.View.LAYOUT_DIRECTION_RTL) {
         LayoutDirection.Rtl
@@ -99,4 +102,9 @@ private fun LocalizedContent(language: String, content: @Composable () -> Unit) 
         LocalLayoutDirection provides direction,
         content = content,
     )
+}
+
+internal fun applicationLanguages(context: Context): List<Locale> {
+    val locales = context.applicationContext.resources.configuration.locales
+    return List(locales.size()) { locales[it] }
 }

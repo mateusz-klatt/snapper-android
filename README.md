@@ -16,7 +16,7 @@ Native Android client for the [Snapper](https://github.com/mateusz-klatt/snapper
 - Receive authenticated foreground market updates and refresh authorized record feeds after backend events.
 - Inspect related instruments and underlying descriptions; navigate through a freshly validated exchange/instrument catalog. View cached hourly price metrics with their observation time; 24-hour metrics require a fresh, complete hourly window.
 - Inspect accessible desks and, with explicit membership permissions, attach an existing viewer.
-- Read permission-gated health/status, strategy, backtest, user and AI-delegate inventories.
+- Read permission-gated health/status, strategy, backtest, user and AI-delegate inventories. Backtest rows translate status labels and format UTC calendar periods using the selected country, and display initial cash in USD with two decimal places; the underlying decimal value remains unchanged.
 - Edit account-level notification defaults independently of Android push registration.
 - Inspect profile email/role and app version; confirm sign-out or backend changes before clearing the session.
 - Filter trading signals by strategy and export the selected rows as CSV to an Android document destination.
@@ -36,7 +36,11 @@ The app combines REST snapshots with authenticated WebSocket updates while in th
 
 Configured-pair statistics show correlation, cointegration and cold/warm status; selecting a peer revalidates the market catalog. Selected-chart cache diagnostics report available versus expected candles independently of hourly metrics, with separate retry controls. Warmth reports the requested row count, not data freshness. Cache probes accompany chart snapshots and explicit retries, rather than each live frame. Android push notifications remain unavailable.
 
-Record timestamps use country formatting and the current device time zone with an explicit UTC offset. Presentation formatting leaves domain timestamps and API queries unchanged; CSV retains its canonical UTC millisecond format. Candle axis labels retain ISO instants; P&L axis labels include dates or offsets when needed to distinguish midnight and daylight-saving transitions. Dense P&L series preserve bucket extrema, endpoints and missing-value gaps when reduced for drawing. Series colors and line patterns identify net, realized and unrealized values independently of the financial-direction preference.
+The interface language also synchronizes to the configured backend account preference so backend descriptions can use the same language. System language follows Android's per-app language override when configured, otherwise resolving the first supported device language, with English as the fallback; country/region formatting remains independent. Initial authenticated navigation waits for the language attempt to settle. Settings shows synchronization, confirmation or an uncertain result and offers an explicit retry. A failed attempt preserves the local interface choice and never retries automatically.
+
+Builds package every supported translation catalog, with English as the default. Native CI and release builds run `bash scripts/check-packaged-locales.sh` against the built APK to detect missing catalogs; device tests also compare visible labels with independent reviewed translations.
+
+Record timestamps use country formatting and the current device time zone with an explicit UTC offset. Presentation formatting leaves domain timestamps and API queries unchanged; CSV retains its canonical UTC millisecond format. Candle axis endpoints use the same country and device-time-zone formatter with explicit UTC offsets, distinguishing repeated times during daylight-saving transitions. P&L axis labels include dates or offsets when needed to distinguish midnight and daylight-saving transitions. Dense P&L series preserve bucket extrema, endpoints and missing-value gaps when reduced for drawing. Series colors and line patterns identify net, realized and unrealized values independently of the financial-direction preference.
 
 The existing backend's device registration and delivery are APNs-only. FCM requires an Android provider contract and delivery integration before an Android device token can be registered; this app does not submit FCM tokens to the iOS endpoint.
 

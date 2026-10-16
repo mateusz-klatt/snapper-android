@@ -38,6 +38,8 @@ jobs:
           "$ANDROID_HOME/cmdline-tools/snapper-ci/bin/sdkmanager" --sdk_root="$ANDROID_HOME" 'platforms;android-37.0' 'build-tools;36.0.0'
       - name: Build, test and lint
         run: ./gradlew --no-daemon :app:assembleDebug :app:testDebugUnitTest :app:lintDebug :app:assembleDebugAndroidTest
+      - name: Verify packaged translation catalogs
+        run: bash scripts/check-packaged-locales.sh
       - name: Install Android 17 emulator
         shell: bash
         run: |
