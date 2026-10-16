@@ -22,6 +22,7 @@ import kotlinx.serialization.json.jsonPrimitive
 import okhttp3.HttpUrl
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
+import okhttp3.Request
 import okhttp3.RequestBody
 import okio.BufferedSink
 import retrofit2.HttpException
@@ -51,11 +52,13 @@ class SessionRepository private constructor(
     private val mutationApi: SnapperApi,
     private val cookies: SessionCookies,
     private val client: OkHttpClient,
+    private val origin: HttpUrl,
 ) : SessionClient, DeskClient, MarketCatalogClient, SystemClient, RecordsClient, NotificationDefaultsClient,
-    SignalsClient, VenueAccountsClient, PnlClient, ProcessClient, AiReviewsClient, PositionActionClient {
+    SignalsClient, VenueAccountsClient, PnlClient, ProcessClient, AiReviewsClient, PositionActionClient, LiveSessionClient, LiveTransportClient, MarketContextClient {
     private val mutableUser = MutableStateFlow<UserDto?>(null)
     override val user: StateFlow<UserDto?> = mutableUser.asStateFlow()
     private val operation = Mutex()
+    private val liveSockets = SessionLiveSockets()
     private val stateLock = Any()
     private val closed = AtomicBoolean(false)
     private val loggingOut = AtomicBoolean(false)
@@ -66,16 +69,25 @@ class SessionRepository private constructor(
         if (closed.get() || loggingOut.get() || cookies.generation() != generation) throw SessionExpiredException()
     }
 
-    private fun commitUser(generation: Long, profile: UserDto) = synchronized(stateLock) {
-        ensureCurrent(generation)
-        mutableUser.value = profile
+    private fun commitUser(generation: Long, profile: UserDto) {
+        val changed = synchronized(stateLock) {
+            ensureCurrent(generation)
+            val previous = mutableUser.value
+            mutableUser.value = profile
+            previous != null && !sameLiveScope(previous, profile)
+        }
+        if (changed) liveSockets.cancelAll()
     }
 
-    private fun expire(generation: Long) = synchronized(stateLock) {
-        if (cookies.generation() == generation) {
-            mutableUser.value = null
-            cookies.invalidate()
+    private fun expire(generation: Long) {
+        val expired = synchronized(stateLock) {
+            if (cookies.generation() == generation) {
+                mutableUser.value = null
+                cookies.invalidate()
+                true
+            } else false
         }
+        if (expired) liveSockets.cancelAll()
     }
 
     private fun <T> envelope(type: String, payload: T): Envelope<T> = Envelope(
@@ -90,6 +102,7 @@ class SessionRepository private constructor(
             cookies.setPersistence(rememberMe)
             cookies.invalidate()
         }
+        liveSockets.cancelAll()
         try {
             val result = api.login(envelope("login_request", LoginPayload(username, password, rememberMe))).payload.user
             commitUser(generation, result)
@@ -156,15 +169,20 @@ class SessionRepository private constructor(
         val generation = cookies.generation()
         val profile = authorized(generation) { api.me().payload }
         commitUser(generation, profile)
-        val wallets = authorized(generation) { api.wallets().payload }
-        val positions = if (profile.hasPermission("read:positions")) authorized(generation) { api.positions(profile.activeWalletPublicId).payload } else emptyList()
-        val orders = if (profile.hasPermission("read:orders")) authorized(generation) { api.orders(profile.activeWalletPublicId).payload } else emptyList()
-        val alerts = if (profile.hasPermission("read:notifications")) authorized(generation) { api.alerts().payload } else emptyList()
+        val wallets = snapshotRead(generation, profile) { api.wallets().payload }
+        val positions = if (profile.hasPermission("read:positions")) snapshotRead(generation, profile) { api.positions(profile.activeWalletPublicId).payload } else emptyList()
+        val orders = if (profile.hasPermission("read:orders")) snapshotRead(generation, profile) { api.orders(profile.activeWalletPublicId).payload } else emptyList()
+        val alerts = if (profile.hasPermission("read:notifications")) snapshotRead(generation, profile) { api.alerts().payload } else emptyList()
         ensureCurrent(generation)
-        val current = mutableUser.value ?: throw SessionExpiredException()
-        check(current.publicId == profile.publicId && current.activeWalletPublicId == profile.activeWalletPublicId && current.effectivePermissions == profile.effectivePermissions) { "Session scope changed while loading. Refresh again." }
-        DashboardSnapshot(current, wallets, positions, orders, alerts)
+        requireLiveScope(profile)
+        DashboardSnapshot(profile, wallets, positions, orders, alerts)
     }
+
+    private suspend fun <T> snapshotRead(generation: Long, profile: UserDto, action: suspend () -> T): T =
+        authorized(generation) {
+            requireLiveScope(profile)
+            action().also { requireLiveScope(profile) }
+        }
 
     override suspend fun candles(exchange: String, instrument: String, timeframe: String, limit: Int): List<CandleDto> = operation.withLock {
         require(limit in 1..1000) { "Candle limit must be between 1 and 1000" }
@@ -367,6 +385,55 @@ class SessionRepository private constructor(
             if (error.code() == 401) expire(generation)
             if (error.code() in 400..499 && error.code() !in setOf(408, 409, 425)) throw PositionRejectedException(error.code())
             throw OrderOutcomeUnknownException(error)
+        }
+    }
+
+    override suspend fun cachedHourly(exchange: String, symbol: String): MarketCachedCandlesDto {
+        require(exchange.isNotBlank() && symbol.isNotBlank())
+        return featureRead(READ_MARKET_DATA_PERMISSION) { api.cachedHourly(exchange, symbol).payload }
+    }
+
+    override suspend fun related(exchange: String, symbol: String): RelatedMarketPayloadDto {
+        require(exchange.isNotBlank() && symbol.isNotBlank())
+        return featureRead(READ_MARKET_DATA_PERMISSION) { api.related(exchange, symbol).payload }
+    }
+
+    override suspend fun liveTicket(): LiveTicket = operation.withLock {
+        val initial = mutableUser.value ?: throw SessionExpiredException()
+        val scope = OrderScope.from(initial)
+        val generation = featureMutationPreflight(scope)
+        val payload = authorized(generation) {
+            requireLiveScope(initial)
+            mutationApi.liveTicket().payload
+        }
+        requireLiveScope(initial)
+        require(payload.expiresIn > 0)
+        LiveTicket(payload.token)
+    }
+
+    private fun sameLiveScope(current: UserDto, expected: UserDto): Boolean =
+        OrderScope.from(current) == OrderScope.from(expected) && current.delegatePublicId == expected.delegatePublicId &&
+            current.primaryOperatorPublicId == expected.primaryOperatorPublicId
+
+    private fun requireLiveScope(expected: UserDto) {
+        val current = mutableUser.value ?: throw SessionExpiredException()
+        if (!sameLiveScope(current, expected)) throw OrderScopeChangedException()
+    }
+
+    override fun liveTransport(): LiveSocketTransport {
+        val captured = synchronized(stateLock) {
+            val generation = cookies.generation()
+            ensureCurrent(generation)
+            val profile = mutableUser.value ?: throw SessionExpiredException()
+            generation to profile
+        }
+        val request = Request.Builder().url(origin.newBuilder().encodedPath("/api/ws").query(null).build()).build()
+        return liveSockets.transport(OkHttpLiveSocketTransport(client, request)) {
+            synchronized(stateLock) {
+                val profile = mutableUser.value
+                !closed.get() && !loggingOut.get() && cookies.generation() == captured.first &&
+                    profile != null && sameLiveScope(profile, captured.second)
+            }
         }
     }
 
@@ -582,6 +649,7 @@ class SessionRepository private constructor(
                     captured
                 }
             } finally {
+                liveSockets.cancelAll()
                 client.dispatcher.cancelAll()
             }
             operation.withLock { api.logout(headers.first, headers.second) }
@@ -614,6 +682,7 @@ class SessionRepository private constructor(
                 cookies.pause()
             }
         } finally {
+            liveSockets.cancelAll()
             client.dispatcher.cancelAll()
             client.connectionPool.evictAll()
         }
@@ -661,7 +730,7 @@ class SessionRepository private constructor(
             val mutationApi = Retrofit.Builder().baseUrl(url).client(mutationClient)
                 .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
                 .build().create(SnapperApi::class.java)
-            return SessionRepository(api, mutationApi, cookies, client)
+            return SessionRepository(api, mutationApi, cookies, client, url)
         }
     }
 }

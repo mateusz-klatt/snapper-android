@@ -48,7 +48,7 @@ private fun PositionIdentity(state: PositionActionState) {
     state.wallet?.let { Text(it.label + " · " + stringResource(if (it.isPaper) R.string.paper else R.string.order_live)) }
     state.target?.let {
         Text(it.instrument + " · " + it.exchange)
-        Text(stringResource(R.string.order_quantity) + ": " + it.quantity.toPlainString())
+        Text(stringResource(R.string.order_quantity) + ": " + it.quantity.display())
         Text(stringResource(R.string.position_action_cycle) + ": " + it.cyclePublicId)
     }
 }
@@ -95,15 +95,15 @@ private fun PositionIntentDetails(intent: PositionActionIntent) {
         is PositionActionIntent.Order -> {
             Text(stringResource(if (intent.payload.side == "buy") R.string.order_buy else R.string.order_sell))
             Text(stringResource(R.string.order_market) + " · " + stringResource(R.string.order_reduce_only))
-            Text(stringResource(R.string.order_quantity) + ": " + intent.payload.quantity.toPlainString())
+            Text(stringResource(R.string.order_quantity) + ": " + intent.payload.quantity.display())
         }
         is PositionActionIntent.Bracket -> {
-            intent.payload.stopLoss?.let { Text(stringResource(R.string.trading_bracket_stoplosslabel) + ": " + it.toPlainString()) }
-            intent.payload.takeProfit?.let { Text(stringResource(R.string.trading_bracket_takeprofitlabel) + ": " + it.toPlainString()) }
+            intent.payload.stopLoss?.let { Text(stringResource(R.string.trading_bracket_stoplosslabel) + ": " + it.display()) }
+            intent.payload.takeProfit?.let { Text(stringResource(R.string.trading_bracket_takeprofitlabel) + ": " + it.display()) }
         }
         is PositionActionIntent.Trailing -> {
-            Text(stringResource(R.string.trading_trailingstop_trailamountlabel) + ": " + intent.payload.distance.toPlainString() + "%")
-            Text(stringResource(R.string.position_action_minimum_lock) + ": " + intent.payload.minimumLock.toPlainString())
+            Text(stringResource(R.string.trading_trailingstop_trailamountlabel) + ": " + intent.payload.distance.display() + "%")
+            Text(stringResource(R.string.position_action_minimum_lock) + ": " + intent.payload.minimumLock.display())
         }
     }
 }

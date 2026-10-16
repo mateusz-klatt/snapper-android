@@ -3,23 +3,33 @@ package ch.snapper.android.ui
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 import ch.snapper.android.R
 import ch.snapper.android.UiError
 import java.math.BigDecimal
+import java.util.Locale
+import ch.snapper.android.data.DisplayNumbers
 
-internal fun BigDecimal?.display(): String = this?.stripTrailingZeros()?.toPlainString() ?: "—"
+internal val LocalNumberLocale = staticCompositionLocalOf { Locale.ROOT }
 
 @Composable
-internal fun Metric(label: Int, value: String) {
+internal fun BigDecimal?.display(): String = DisplayNumbers.format(this, LocalNumberLocale.current)
+
+@Composable
+internal fun Metric(label: Int, value: String, color: Color = LocalContentColor.current) {
     Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
         Text(stringResource(label), style = MaterialTheme.typography.bodyMedium, modifier = Modifier.weight(1f))
-        Text(value, style = MaterialTheme.typography.bodyMedium, modifier = Modifier.weight(1f))
+        Text(value, style = MaterialTheme.typography.bodyMedium, color = color, modifier = Modifier.weight(1f))
     }
 }
+
+@Composable
+internal fun FinancialMetric(label: Int, value: BigDecimal?) = Metric(label, value.display(), financialColor(value))
 
 @Composable
 internal fun RecordCard(title: String, content: @Composable ColumnScope.() -> Unit) {

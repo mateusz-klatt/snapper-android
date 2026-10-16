@@ -348,4 +348,22 @@
     <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
     <string name="position_action_cycle" formatted="false">Position cycle</string>
     <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+    <string name="display_financial_title" formatted="false">قرارداد رنگ‌های مالی</string>
+    <string name="display_financial_auto" formatted="false">مطابق با منطقه من (خودکار)</string>
+    <string name="display_financial_green" formatted="false">سبز = صعود، قرمز = نزول (غربی)</string>
+    <string name="display_financial_red" formatted="false">قرمز = صعود، سبز = نزول (رسم شرق آسیا)</string>
+    <string name="display_financial_current">در حال حاضر: %1$s</string>
+    <string name="display_financial_green_short" formatted="false">سبز صعود / قرمز نزول</string>
+    <string name="display_financial_red_short" formatted="false">قرمز صعود / سبز نزول</string>
+    <string name="display_country" formatted="false">Country / region</string>
+    <string name="market_context_last" formatted="false">آخرین قیمت</string>
+    <string name="market_context_change" formatted="false">تغییر 24ساعته</string>
+    <string name="market_context_high" formatted="false">بیشترین</string>
+    <string name="market_context_low" formatted="false">کمترین</string>
+    <string name="market_context_related_empty">هیچ ابزار مرتبطی برای %1$s در %2$s پیکربندی نشده است.</string>
+    <string name="market_live_connected" formatted="false">Live updates connected.</string>
+    <string name="market_live_connecting" formatted="false">Connecting to live updates…</string>
+    <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
+    <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
+    <string name="market_context_as_of">Cached close as of %1$s</string>
 </resources>

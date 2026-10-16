@@ -4,6 +4,7 @@ import ch.snapper.android.data.*
 import ch.snapper.android.features.aireviews.*
 import ch.snapper.android.features.operations.*
 import ch.snapper.android.features.positionactions.*
+import ch.snapper.android.features.live.LiveRefreshTarget
 import java.time.Clock
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
@@ -61,6 +62,15 @@ internal class ActionsCoordinator(
 
     fun loadProcesses() { processController()?.load() }
     fun loadAiReviews() { aiController()?.refresh() }
+
+    suspend fun refreshLive(target: LiveRefreshTarget) {
+        val captured = context() ?: return
+        when (target) {
+            LiveRefreshTarget.AI_REVIEWS -> aiController()?.takeIf { current(captured) }?.refreshAwaited { current(captured) }
+            LiveRefreshTarget.PROCESSES -> processController()?.takeIf { current(captured) }?.refreshAwaited { current(captured) }
+            else -> Unit
+        }
+    }
 
     private fun confirmProcess() {
         val controller = processController() ?: return

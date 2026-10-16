@@ -348,4 +348,22 @@
     <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
     <string name="position_action_cycle" formatted="false">Position cycle</string>
     <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+    <string name="display_financial_title" formatted="false">Convenția culorilor financiare</string>
+    <string name="display_financial_auto" formatted="false">Potrivește cu regiunea mea (auto)</string>
+    <string name="display_financial_green" formatted="false">Verde = creștere, roșu = scădere (occidental)</string>
+    <string name="display_financial_red" formatted="false">Roșu = creștere, verde = scădere (convenție est-asiatică)</string>
+    <string name="display_financial_current">În prezent: %1$s</string>
+    <string name="display_financial_green_short" formatted="false">verde creștere / roșu scădere</string>
+    <string name="display_financial_red_short" formatted="false">roșu creștere / verde scădere</string>
+    <string name="display_country" formatted="false">Country / region</string>
+    <string name="market_context_last" formatted="false">Ultimul preț</string>
+    <string name="market_context_change" formatted="false">Variație 24h</string>
+    <string name="market_context_high" formatted="false">Maxim</string>
+    <string name="market_context_low" formatted="false">Minim</string>
+    <string name="market_context_related_empty">Nu există instrumente asociate configurate pentru %1$s pe %2$s.</string>
+    <string name="market_live_connected" formatted="false">Live updates connected.</string>
+    <string name="market_live_connecting" formatted="false">Connecting to live updates…</string>
+    <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
+    <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
+    <string name="market_context_as_of">Cached close as of %1$s</string>
 </resources>

@@ -348,4 +348,22 @@
     <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
     <string name="position_action_cycle" formatted="false">Position cycle</string>
     <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+    <string name="display_financial_title" formatted="false">Фінансова колірна схема</string>
+    <string name="display_financial_auto" formatted="false">За моїм регіоном (авто)</string>
+    <string name="display_financial_green" formatted="false">Зелений = зростання, червоний = падіння (західна)</string>
+    <string name="display_financial_red" formatted="false">Червоний = зростання, зелений = падіння (східноазійська конвенція)</string>
+    <string name="display_financial_current">Зараз: %1$s</string>
+    <string name="display_financial_green_short" formatted="false">зелений зростання / червоний падіння</string>
+    <string name="display_financial_red_short" formatted="false">червоний зростання / зелений падіння</string>
+    <string name="display_country" formatted="false">Country / region</string>
+    <string name="market_context_last" formatted="false">Остання ціна</string>
+    <string name="market_context_change" formatted="false">Зміна за 24 год</string>
+    <string name="market_context_high" formatted="false">Максимум</string>
+    <string name="market_context_low" formatted="false">Мінімум</string>
+    <string name="market_context_related_empty">Для %1$s на %2$s не налаштовано пов\'язаних інструментів.</string>
+    <string name="market_live_connected" formatted="false">Live updates connected.</string>
+    <string name="market_live_connecting" formatted="false">Connecting to live updates…</string>
+    <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
+    <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
+    <string name="market_context_as_of">Cached close as of %1$s</string>
 </resources>

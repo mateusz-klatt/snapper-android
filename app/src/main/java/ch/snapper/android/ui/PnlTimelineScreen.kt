@@ -136,14 +136,15 @@ private fun PnlContributions(point: PnlTimelinePointDto) {
 private fun PnlComponents(realized: BigDecimal?, fees: BigDecimal?, accrual: BigDecimal?, unrealized: BigDecimal?) {
     val fields = listOf(R.string.positions_timeline_contributions_realized to realized, R.string.positions_timeline_contributions_fees to fees,
         R.string.positions_timeline_contributions_accrual to accrual, R.string.positions_timeline_contributions_unrealized to unrealized)
-    fields.forEach { (label, value) -> Text(stringResource(label) + ": " + (value?.toPlainString() ?: stringResource(R.string.positions_timeline_attribution_withheld))) }
+    fields.forEach { (label, value) -> Text(stringResource(label) + ": " + (if (value == null) stringResource(R.string.positions_timeline_attribution_withheld) else value.display()), color = financialColor(value)) }
 }
 
 @Composable
 private fun PnlCurve(label: Int, values: List<BigDecimal?>) {
     val title = stringResource(label)
     val withheld = stringResource(R.string.positions_timeline_attribution_withheld)
-    Text(title + ": " + (values.lastOrNull()?.toPlainString() ?: withheld))
+    val latest = values.lastOrNull()
+    Text(title + ": " + (if (latest == null) withheld else latest.display()), color = financialColor(latest))
     val segments = pnlSegments(values)
     val color = MaterialTheme.colorScheme.primary
     Canvas(Modifier.fillMaxWidth().height(140.dp).semantics { contentDescription = title }) {
@@ -158,7 +159,7 @@ private fun PnlCurve(label: Int, values: List<BigDecimal?>) {
 
 @Composable
 private fun PnlStock(label: Int, value: BigDecimal?) {
-    Text(stringResource(label) + ": " + (value?.toPlainString() ?: stringResource(R.string.positions_timeline_attribution_withheld)))
+    Text(stringResource(label) + ": " + (if (value == null) stringResource(R.string.positions_timeline_attribution_withheld) else value.display()))
 }
 
 @Composable

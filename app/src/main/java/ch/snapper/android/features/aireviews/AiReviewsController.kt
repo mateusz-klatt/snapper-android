@@ -47,6 +47,14 @@ class AiReviewsController(
         if (person.canPending && pendingJob?.isActive != true) loadPending(person, epoch)
     }
 
+    suspend fun refreshAwaited(stillCurrent: () -> Boolean = { true }) {
+        val captured = epoch
+        listOfNotNull(auditJob, pendingJob).forEach { it.join() }
+        if (captured != epoch || !stillCurrent()) return
+        refresh()
+        listOfNotNull(auditJob, pendingJob).forEach { it.join() }
+    }
+
     private fun loadAudit(person: AiReviewIdentity, generation: Long) {
         mutable.value = mutable.value.copy(auditLoading = true, auditFailed = false)
         auditJob = scope.launch {

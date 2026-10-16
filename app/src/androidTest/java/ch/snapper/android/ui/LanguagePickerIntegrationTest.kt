@@ -11,6 +11,7 @@ import java.util.Locale
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import org.junit.After
+import org.junit.Before
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Rule
@@ -20,7 +21,17 @@ class LanguagePickerIntegrationTest {
     @get:Rule val compose = createAndroidComposeRule<MainActivity>()
     private val context get() = InstrumentationRegistry.getInstrumentation().targetContext
 
-    @After fun restoreLanguage() { runBlocking { DataStoreSettings(context).setLanguage("") } }
+    private var originalLanguage = ""
+
+    @Before fun isolateLanguage() {
+        originalLanguage = runBlocking { DataStoreSettings(context).preferences.first().language }
+        runBlocking { DataStoreSettings(context).setLanguage("") }
+        compose.activityRule.scenario.recreate()
+    }
+
+    @After fun restoreLanguage() {
+        runBlocking { DataStoreSettings(context).setLanguage(originalLanguage) }
+    }
 
     @Test fun frenchAndScriptLocaleSurviveRecreationAndSystemDefaultRemainsAvailable() {
         choose("fr")

@@ -348,4 +348,22 @@
     <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
     <string name="position_action_cycle" formatted="false">Position cycle</string>
     <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+    <string name="display_financial_title" formatted="false">ဘဏ္ဍာရေးအရောင် စနစ်</string>
+    <string name="display_financial_auto" formatted="false">ကျွန်ုပ်၏ ဒေသနှင့် ကိုက်ညီစေ (အလိုအလျောက်)</string>
+    <string name="display_financial_green" formatted="false">အစိမ်း = တက်, အနီ = ကျ (အနောက်တိုင်း)</string>
+    <string name="display_financial_red" formatted="false">အနီ = တက်, အစိမ်း = ကျ (အရှေ့အာရှ စနစ်)</string>
+    <string name="display_financial_current">လက်ရှိ: %1$s</string>
+    <string name="display_financial_green_short" formatted="false">အစိမ်း တက် / အနီ ကျ</string>
+    <string name="display_financial_red_short" formatted="false">အနီ တက် / အစိမ်း ကျ</string>
+    <string name="display_country" formatted="false">Country / region</string>
+    <string name="market_context_last" formatted="false">နောက်ဆုံးဈေးနှုန်း</string>
+    <string name="market_context_change" formatted="false">၂၄ နာရီ ပြောင်းလဲမှု</string>
+    <string name="market_context_high" formatted="false">အမြင့်ဆုံး</string>
+    <string name="market_context_low" formatted="false">အနိမ့်ဆုံး</string>
+    <string name="market_context_related_empty">%2$s ပေါ်ရှိ %1$s အတွက် related instrument များ configure မလုပ်ထားပါ။</string>
+    <string name="market_live_connected" formatted="false">Live updates connected.</string>
+    <string name="market_live_connecting" formatted="false">Connecting to live updates…</string>
+    <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
+    <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
+    <string name="market_context_as_of">Cached close as of %1$s</string>
 </resources>

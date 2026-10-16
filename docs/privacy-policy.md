@@ -24,7 +24,9 @@ Remembered session cookies are encrypted with AES-GCM using an origin-specific A
 
 ## Financial data and commands
 
-The app retrieves wallet identifiers and labels, positions, quantities, prices, profit and loss, order history, alert history, exchange and instrument metadata, and historical candles from your backend. These records are displayed in memory during the app session.
+The app retrieves wallet identifiers and labels, positions, quantities, prices, profit and loss, order history, alert history, exchange and instrument metadata, historical candles, related instruments and underlying descriptions from your backend. These records are displayed in memory during the app session.
+
+While the app is in the foreground, it can obtain short-lived authentication tickets from your backend and establish an authenticated WebSocket connection to that backend. It sends subscription topics for permitted feeds and the selected market, receives live market updates and uses relevant events to refresh account and operational records. The connection stops when the app goes into the background.
 
 When you have the required permissions, the app sends order submissions and cancellation requests to your configured backend. Requests include the selected wallet, instrument, order details and identifiers used to track or deduplicate the operation. The backend is responsible for processing these commands and any exchange integration. The Android app does not hold exchange API credentials or connect directly to an exchange.
 
@@ -40,7 +42,7 @@ If you export trading signals as CSV, you choose the document destination throug
 
 ## Preferences and local storage
 
-Android DataStore stores the configured backend origin and interface language. The selected wallet is also communicated through the backend session contract. Account and financial screens are cleared when you sign out or switch backend.
+Android DataStore stores the configured backend origin, interface language, selected country/region and financial-color preference. Country/region controls display formatting independently of the interface language; the financial-color preference controls how rising and falling values are displayed. The selected wallet is also communicated through the backend session contract. Account and financial screens are cleared when you sign out or switch backend.
 
 The app disables Android cloud backup and device-transfer backup for its data. Signing out removes local session credentials. Clearing the app's storage or uninstalling removes its local preferences and session files; it does not delete your account or records on the backend.
 

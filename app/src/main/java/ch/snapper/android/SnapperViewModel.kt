@@ -12,6 +12,12 @@ import ch.snapper.android.data.OrderScopeChangedException
 import ch.snapper.android.data.OrderRejectedException
 import ch.snapper.android.data.OrderOutcomeUnknownException
 import ch.snapper.android.data.WalletDto
+import ch.snapper.android.data.LiveSelection
+import ch.snapper.android.data.LiveSessionClient
+import ch.snapper.android.data.LiveTransportClient
+import ch.snapper.android.features.live.LiveConnectionStatus
+import ch.snapper.android.features.live.LiveRefreshTarget
+import java.time.Clock
 import java.io.IOException
 import java.util.UUID
 import kotlinx.coroutines.CancellationException
@@ -30,6 +36,7 @@ class SnapperViewModel(
     private val defaultOrigin: String,
     private val allowLocalHttp: Boolean,
 ) : ViewModel() {
+    private val displayPreferenceMutex = kotlinx.coroutines.sync.Mutex()
     private val mutableState = MutableStateFlow(AppUiState())
     val state = mutableState.asStateFlow()
     private var session: SessionClient? = null
@@ -46,6 +53,7 @@ class SnapperViewModel(
     private val features = FeatureCoordinator(viewModelScope, { session }, { state.value }, { change -> mutableState.update(change) })
     private val privileged = ActionsCoordinator(viewModelScope, { session }, { state.value },
         { change -> mutableState.update(change) }, ::refresh)
+    private val live = LiveCoordinator(viewModelScope, ::liveBinding, ::requestLiveSnapshot, ::refreshLiveFeature, ::publishLive)
 
     val actions = AppActions(
         login = ::login,
@@ -72,6 +80,11 @@ class SnapperViewModel(
         loadProcesses = privileged::loadProcesses,
         loadAiReviews = privileged::loadAiReviews,
         openPositionAction = privileged::openPosition,
+        selectCountry = ::selectCountry,
+        selectFinancialColor = ::selectFinancialColor,
+        marketContext = features.marketContextActions,
+        marketVisible = ::setMarketVisible,
+        selectMarket = ::selectMarket,
         orders = OrderActions(
             open = ::openOrder, dismiss = ::dismissOrder, updateDraft = ::updateOrderDraft,
             selectExchange = ::selectOrderExchange, review = ::reviewOrder, back = ::editOrder,
@@ -88,12 +101,13 @@ class SnapperViewModel(
             val preferences = settings.preferences.first()
             if (request != revision) return@runOperation
             val origin = preferences.backendUrl ?: defaultOrigin
-            mutableState.update { it.copy(backendUrl = origin, language = preferences.language) }
+            mutableState.update { it.copy(backendUrl = origin, language = preferences.language, displayPreferences = preferences.displayPreferences) }
             if (origin.isNotBlank()) {
                 val client = currentSession()
                 val user = client.restore()
                 if (user != null && request == revision && session === client) {
                     mutableState.update { it.copy(user = user) }
+                    live.synchronizeBinding()
                     refreshSnapshot(client, request)
                 }
             }
@@ -102,11 +116,15 @@ class SnapperViewModel(
 
     fun onForeground() {
         features.setForeground(true)
+        live.setForeground(true)
         if (state.value.user != null && !state.value.isLoading && !state.value.isRestoring) refresh()
     }
 
     fun onBackground() {
         features.setForeground(false)
+        live.setForeground(false)
+        marketRequest?.cancel()
+        marketRevision++
     }
 
     private fun currentSession(): SessionClient {
@@ -118,6 +136,7 @@ class SnapperViewModel(
                 if (session === client && profile == null && state.value.user != null) {
                     features.invalidate()
                     privileged.invalidate()
+                    live.invalidate()
                     resetOrderFlow()
                     sessionEpoch++
                     marketRevision++
@@ -127,13 +146,16 @@ class SnapperViewModel(
                     if (!sameScope(profile, state.value.user)) {
                         features.invalidate()
                         privileged.invalidate()
+                        live.invalidate()
                         resetOrderFlow()
                         sessionEpoch++
                         marketRevision++
                         marketRequest?.cancel()
                         mutableState.update { it.copy(user = profile, snapshot = null, market = MarketState()) }
+                        live.synchronizeBinding()
                     } else {
                         mutableState.update { it.copy(user = profile) }
+                        live.synchronizeBinding()
                     }
                 }
             }
@@ -149,6 +171,7 @@ class SnapperViewModel(
             val user = client.login(username.trim(), password)
             if (request != revision || session !== client || epoch != sessionEpoch) return@runOperation
             mutableState.update { it.copy(user = user, snapshot = null) }
+            live.synchronizeBinding()
             refreshSnapshot(client, request)
         }
     }
@@ -163,6 +186,7 @@ class SnapperViewModel(
         resetOrderFlow()
         features.invalidate()
         privileged.invalidate()
+        live.invalidate()
         marketRequest?.cancel()
         marketRevision++
         sessionEpoch++
@@ -172,6 +196,7 @@ class SnapperViewModel(
             val profile = client.selectWallet(publicId)
             if (request != revision || session !== client) return@runOperation
             mutableState.update { it.copy(user = profile) }
+            live.synchronizeBinding()
             refreshSnapshot(client, request)
         }
     }
@@ -215,6 +240,7 @@ class SnapperViewModel(
     private fun clearVisibleSession() {
         features.invalidate()
         privileged.invalidate()
+        live.invalidate()
         resetOrderFlow()
         revision++
         sessionEpoch++
@@ -251,6 +277,29 @@ class SnapperViewModel(
                 mutableState.update { it.copy(language = language) }
             } catch (_: IOException) {
                 mutableState.update { it.copy(error = UiError.SERVICE) }
+            }
+        }
+    }
+
+    fun selectCountry(country: String) {
+        if (country.isNotEmpty() && ch.snapper.android.data.DisplayCountries.find(country) == null) return
+        updateDisplayPreferences { it.copy(countryCode = country) }
+    }
+
+    fun selectFinancialColor(preference: ch.snapper.android.data.FinancialColorPreference) {
+        updateDisplayPreferences { it.copy(financialColor = preference) }
+    }
+
+    private fun updateDisplayPreferences(transform: (ch.snapper.android.data.DisplayPreferences) -> ch.snapper.android.data.DisplayPreferences) {
+        viewModelScope.launch {
+            displayPreferenceMutex.lock()
+            try {
+                val committed = settings.updateDisplayPreferences(transform)
+                mutableState.update { it.copy(displayPreferences = committed) }
+            } catch (_: IOException) {
+                mutableState.update { it.copy(error = UiError.SERVICE) }
+            } finally {
+                displayPreferenceMutex.unlock()
             }
         }
     }
@@ -462,25 +511,93 @@ class SnapperViewModel(
         else -> OrderIssue.REJECTED
     }
 
-    fun loadMarket(exchange: String, instrument: String, timeframe: String) {
-        val client = session ?: return
+    private fun liveBinding(): LiveBinding? {
+        val client = session ?: return null
+        val profile = state.value.user ?: return null
+        val current = client.user.value ?: return null
+        if (!sameScope(profile, current)) return null
+        val tickets = client as? LiveSessionClient ?: return null
+        val transport = client as? LiveTransportClient ?: return null
+        val identity = LiveIdentity(state.value.backendUrl, OrderScope.from(profile), profile.primaryOperatorPublicId,
+            profile.delegatePublicId, sessionEpoch)
+        return LiveBinding(identity, tickets, transport.liveTransport(), Clock.systemUTC())
+    }
+
+    fun setMarketVisible(visible: Boolean) {
+        live.setMarketVisible(visible)
+        if (!visible) { marketRequest?.cancel(); marketRevision++ }
+    }
+
+    private fun publishLive(value: LiveViewState) {
+        mutableState.update { previous ->
+            val selection = value.market.selection
+            val market = if (selection == null) previous.market.copy(liveStatus = value.status) else MarketState(
+                exchange = selection.exchange, instrument = selection.instrument, timeframe = selection.timeframe,
+                candles = value.market.candles, isLoading = value.market.loading,
+                error = if (value.market.snapshotFailed) UiError.NETWORK else null,
+                liveStatus = if (value.status == LiveConnectionStatus.SUBSCRIBED && selection.candleTopic !in value.acceptedTopics)
+                    LiveConnectionStatus.STOPPED else value.status,
+                tick = value.market.tick,
+            )
+            previous.copy(market = market)
+        }
+    }
+
+    private suspend fun refreshLiveFeature(target: LiveRefreshTarget) {
+        when (target) {
+            LiveRefreshTarget.ORDERS -> {
+                val identity = liveBinding()?.identity ?: return
+                operation?.join()
+                if (liveBinding()?.identity != identity) return
+                refresh()
+                operation?.join()
+            }
+            LiveRefreshTarget.AI_REVIEWS, LiveRefreshTarget.PROCESSES -> privileged.refreshLive(target)
+            else -> features.refreshLive(target)
+        }
+    }
+
+    fun selectMarket(exchange: String, instrument: String, timeframe: String) = selectMarket(exchange, instrument, timeframe, false)
+    fun loadMarket(exchange: String, instrument: String, timeframe: String) = selectMarket(exchange, instrument, timeframe, true)
+
+    private fun selectMarket(exchange: String, instrument: String, timeframe: String, force: Boolean) {
         if (state.value.user?.hasPermission("read:market_data") != true) return
+        val selection = LiveSelection(exchange.trim(), instrument.trim(), timeframe.trim())
+        features.selectMarketContext(selection.exchange, selection.instrument)
+        if (liveBinding() != null) live.selectMarket(selection, force)
+        else {
+            val previous = state.value.market
+            if (force || previous.exchange != selection.exchange || previous.instrument != selection.instrument ||
+                previous.timeframe != selection.timeframe || previous.candles.isEmpty()) {
+                loadMarketSnapshot(selection, null)
+            }
+        }
+    }
+
+    private fun requestLiveSnapshot(ticket: MarketLoadTicket) {
+        if (liveBinding()?.identity == ticket.identity) loadMarketSnapshot(ticket.selection, ticket)
+    }
+
+    private fun loadMarketSnapshot(selection: LiveSelection, ticket: MarketLoadTicket?) {
+        val client = session ?: return
         marketRequest?.cancel()
         val request = ++marketRevision
         val epoch = sessionEpoch
-        val query = MarketState(exchange.trim(), instrument.trim(), timeframe.trim(), isLoading = true)
-        mutableState.update { it.copy(market = query) }
+        val query = MarketState(selection.exchange, selection.instrument, selection.timeframe, isLoading = true)
+        if (ticket == null) mutableState.update { it.copy(market = query) }
         marketRequest = viewModelScope.launch {
             try {
                 val candles = client.candles(query.exchange, query.instrument, query.timeframe)
                 if (session === client && epoch == sessionEpoch && request == marketRevision) {
-                    mutableState.update { it.copy(market = query.copy(candles = candles, isLoading = false)) }
+                    if (ticket != null) live.snapshotCompleted(ticket, candles)
+                    else mutableState.update { it.copy(market = query.copy(candles = candles, isLoading = false)) }
                 }
             } catch (error: CancellationException) {
                 throw error
             } catch (error: Exception) {
                 if (session === client && epoch == sessionEpoch && request == marketRevision) {
-                    mutableState.update { it.copy(market = query.copy(isLoading = false, error = classify(error))) }
+                    if (ticket != null) live.snapshotFailed(ticket)
+                    else mutableState.update { it.copy(market = query.copy(isLoading = false, error = classify(error))) }
                 }
             }
         }
@@ -514,5 +631,12 @@ class SnapperViewModel(
         error is IllegalArgumentException -> UiError.INVALID_ORIGIN
         error is IOException -> UiError.NETWORK
         else -> UiError.UNKNOWN
+    }
+
+    override fun onCleared() {
+        live.invalidate()
+        sessionObserver?.cancel()
+        session?.close()
+        session = null
     }
 }

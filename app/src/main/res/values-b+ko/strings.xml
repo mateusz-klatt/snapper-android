@@ -348,4 +348,22 @@
     <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
     <string name="position_action_cycle" formatted="false">Position cycle</string>
     <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+    <string name="display_financial_title" formatted="false">금융 색상 관례</string>
+    <string name="display_financial_auto" formatted="false">내 지역 설정에 맞춤(자동)</string>
+    <string name="display_financial_green" formatted="false">초록색 = 상승, 빨간색 = 하락(서구식)</string>
+    <string name="display_financial_red" formatted="false">빨간색 = 상승, 초록색 = 하락</string>
+    <string name="display_financial_current">현재: %1$s</string>
+    <string name="display_financial_green_short" formatted="false">초록 상승 / 빨강 하락</string>
+    <string name="display_financial_red_short" formatted="false">빨강 상승 / 초록 하락</string>
+    <string name="display_country" formatted="false">Country / region</string>
+    <string name="market_context_last" formatted="false">최신 가격</string>
+    <string name="market_context_change" formatted="false">24시간 변동</string>
+    <string name="market_context_high" formatted="false">고가</string>
+    <string name="market_context_low" formatted="false">저가</string>
+    <string name="market_context_related_empty">%2$s의 %1$s에 설정된 관련 종목이 없습니다.</string>
+    <string name="market_live_connected" formatted="false">Live updates connected.</string>
+    <string name="market_live_connecting" formatted="false">Connecting to live updates…</string>
+    <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
+    <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
+    <string name="market_context_as_of">Cached close as of %1$s</string>
 </resources>

@@ -9,6 +9,8 @@ import ch.snapper.android.features.notifications.*
 import ch.snapper.android.features.signals.*
 import ch.snapper.android.features.accounts.*
 import ch.snapper.android.features.pnl.*
+import ch.snapper.android.features.marketcontext.*
+import ch.snapper.android.features.live.LiveRefreshTarget
 import java.time.Clock
 import java.io.IOException
 import kotlinx.coroutines.CancellationException
@@ -24,7 +26,11 @@ internal class FeatureCoordinator(
     private val state: () -> AppUiState,
     private val update: ((AppUiState) -> AppUiState) -> Unit,
 ) {
-    private data class Context(val client: SessionClient, val scope: OrderScope, val epoch: Long)
+    private data class Context(val client: SessionClient, val scope: OrderScope, val primary: String?, val delegate: String?, val epoch: Long)
+    private var marketContextController: MarketContextController? = null
+    private var marketContextScope: Context? = null
+    private var marketContextSelection: MarketContextSelection? = null
+    private var marketContextObserver: Job? = null
     private var epoch = 0L
     private var catalogRevision = 0L
     private var catalogJob: Job? = null
@@ -51,7 +57,7 @@ internal class FeatureCoordinator(
 
     val catalogActions = MarketCatalogActions(
         selectExchange = ::selectExchange,
-        selectInstrument = { value -> update { it.copy(marketCatalog = MarketSelection.instrument(it.marketCatalog, value)) } },
+        selectInstrument = ::selectInstrument,
         selectTimeframe = { value -> update { it.copy(marketCatalog = MarketSelection.timeframe(it.marketCatalog, value)) } },
         search = { value -> update { it.copy(marketCatalog = it.marketCatalog.copy(query = value)) } },
         retry = ::loadCatalog,
@@ -92,16 +98,22 @@ internal class FeatureCoordinator(
         val user = state().user ?: return null
         val scope = OrderScope.from(user)
         if (client.user.value?.let(OrderScope::from) != scope) return null
-        return Context(client, scope, epoch)
+        val current = client.user.value ?: return null
+        if (current.primaryOperatorPublicId != user.primaryOperatorPublicId || current.delegatePublicId != user.delegatePublicId) return null
+        return Context(client, scope, user.primaryOperatorPublicId, user.delegatePublicId, epoch)
     }
 
-    private fun current(context: Context): Boolean = context.epoch == epoch && session() === context.client &&
-        state().user?.let(OrderScope::from) == context.scope && context.client.user.value?.let(OrderScope::from) == context.scope
+    private fun current(captured: Context): Boolean = session() === captured.client && context() == captured
 
     private fun catalogCurrent(context: Context, request: Long): Boolean = current(context) && request == catalogRevision
 
     fun invalidate() {
         epoch++
+        marketContextController?.invalidate()
+        marketContextObserver?.cancel()
+        marketContextController = null
+        marketContextScope = null
+        marketContextSelection = null
         catalogRevision++
         catalogJob?.cancel()
         deskController?.invalidate()
@@ -130,7 +142,88 @@ internal class FeatureCoordinator(
         accountsContext = null
         update { it.copy(marketCatalog = MarketCatalogState(), desks = DeskState(), system = SystemState(),
             records = RecordsState(), notificationDefaults = NotificationDefaultsState(), signals = SignalsState(),
-            venueAccounts = VenueAccountsState(), pnl = PnlState()) }
+            venueAccounts = VenueAccountsState(), pnl = PnlState(), marketContext = MarketContextState()) }
+    }
+
+    val marketContextActions = MarketContextActions(
+        { marketContextController?.takeIf { marketContextScope?.let(::current) == true }?.actions?.retryMetrics?.invoke() },
+        { marketContextController?.takeIf { marketContextScope?.let(::current) == true }?.actions?.retryRelated?.invoke() },
+        { item -> marketContextController?.takeIf { marketContextScope?.let(::current) == true }?.actions?.selectRelated?.invoke(item) },
+    )
+
+    fun selectMarketContext(exchange: String, instrument: String) {
+        val captured = context() ?: return
+        val api = captured.client as? MarketContextClient ?: return
+        val catalog = state().marketCatalog
+        val selection = MarketContextSelection(exchange, instrument).takeIf {
+            catalog.exchange == exchange && catalog.instrument == instrument && catalog.selectedInstrument != null
+        }
+        if (marketContextScope == captured && marketContextSelection == selection) return
+        marketContextController?.invalidate()
+        marketContextObserver?.cancel()
+        val controller = MarketContextController(coroutineScope, api, { venue, symbol -> selectRelatedMarket(captured, venue, symbol) })
+        marketContextController = controller
+        marketContextScope = captured
+        marketContextSelection = selection
+        controller.reset(selection, "read:market_data" in captured.scope.effectivePermissions)
+        marketContextObserver = coroutineScope.launch {
+            controller.state.collect { value ->
+                if (current(captured) && marketContextController === controller) update { it.copy(marketContext = value) }
+            }
+        }
+    }
+
+    private fun selectInstrument(symbol: String) {
+        catalogJob?.cancel()
+        catalogRevision++
+        update { it.copy(marketCatalog = MarketSelection.instrument(it.marketCatalog, symbol).copy(isLoading = false)) }
+    }
+
+    private fun selectRelatedMarket(captured: Context, exchange: String, symbol: String) {
+        if (!current(captured) || "read:market_data" !in captured.scope.effectivePermissions) return
+        val api = captured.client as? MarketCatalogClient ?: return
+        catalogJob?.cancel()
+        val request = ++catalogRevision
+        update { it.copy(marketCatalog = it.marketCatalog.copy(isLoading = true, error = null)) }
+        catalogJob = coroutineScope.launch {
+            try {
+                val exchanges = api.marketExchanges()
+                check(exchange in exchanges)
+                if (!catalogCurrent(captured, request)) return@launch
+                val instruments = api.marketInstruments(exchange)
+                check(instruments.any { it.exchange == exchange && it.symbol == symbol && it.canMarketData })
+                if (!catalogCurrent(captured, request)) return@launch
+                update {
+                    val target = it.marketCatalog.copy(exchanges = exchanges, exchange = exchange, instrument = symbol, query = "")
+                    it.copy(marketCatalog = MarketSelection.instruments(target, exchange, instruments))
+                }
+                selectMarketContext(exchange, symbol)
+            } catch (error: CancellationException) {
+                throw error
+            } catch (error: Exception) {
+                if (catalogCurrent(captured, request)) update { it.copy(marketCatalog = it.marketCatalog.copy(isLoading = false, error = classify(error))) }
+            }
+        }
+    }
+
+    suspend fun refreshLive(target: LiveRefreshTarget) {
+        val captured = context() ?: return
+        when (target) {
+            LiveRefreshTarget.SIGNALS -> signals()?.takeIf { current(captured) }?.refreshAwaited { current(captured) }
+            LiveRefreshTarget.STRATEGIES -> refreshSystemAwaited(captured, SystemFeed.STRATEGIES)
+            LiveRefreshTarget.SYSTEM -> {
+                refreshSystemAwaited(captured, SystemFeed.HEALTH)
+                refreshSystemAwaited(captured, SystemFeed.STATUS)
+            }
+            else -> Unit
+        }
+    }
+
+    private suspend fun refreshSystemAwaited(captured: Context, feed: SystemFeed) {
+        systemJobs[feed]?.join()
+        if (!current(captured)) return
+        refreshSystem(feed)
+        systemJobs[feed]?.join()
     }
 
     private fun signals(): SignalsController? {

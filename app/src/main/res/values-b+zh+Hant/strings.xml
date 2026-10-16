@@ -348,4 +348,22 @@
     <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
     <string name="position_action_cycle" formatted="false">Position cycle</string>
     <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+    <string name="display_financial_title" formatted="false">金融顏色慣例</string>
+    <string name="display_financial_auto" formatted="false">符合我的地區（自動）</string>
+    <string name="display_financial_green" formatted="false">綠色 = 上漲，紅色 = 下跌（西方）</string>
+    <string name="display_financial_red" formatted="false">紅色 = 上漲，綠色 = 下跌</string>
+    <string name="display_financial_current">目前：%1$s</string>
+    <string name="display_financial_green_short" formatted="false">綠漲 / 紅跌</string>
+    <string name="display_financial_red_short" formatted="false">紅漲 / 綠跌</string>
+    <string name="display_country" formatted="false">Country / region</string>
+    <string name="market_context_last" formatted="false">最新價</string>
+    <string name="market_context_change" formatted="false">24小時變動</string>
+    <string name="market_context_high" formatted="false">最高</string>
+    <string name="market_context_low" formatted="false">最低</string>
+    <string name="market_context_related_empty">%1$s 在 %2$s 上未配置相關品種。</string>
+    <string name="market_live_connected" formatted="false">Live updates connected.</string>
+    <string name="market_live_connecting" formatted="false">Connecting to live updates…</string>
+    <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
+    <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
+    <string name="market_context_as_of">Cached close as of %1$s</string>
 </resources>

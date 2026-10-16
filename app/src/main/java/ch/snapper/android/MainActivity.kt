@@ -22,6 +22,8 @@ import androidx.lifecycle.viewmodel.viewModelFactory
 import ch.snapper.android.data.SessionRepository
 import ch.snapper.android.ui.SnapperApp
 import ch.snapper.android.ui.SnapperTheme
+import ch.snapper.android.ui.LocalNumberLocale
+import ch.snapper.android.ui.LocalFinancialColorConvention
 import java.util.Locale
 
 class MainActivity : ComponentActivity() {
@@ -44,7 +46,12 @@ class MainActivity : ComponentActivity() {
         setContent {
             val state by model.state.collectAsStateWithLifecycle()
             LocalizedContent(state.language) {
-                SnapperTheme { SnapperApp(state, model.actions) }
+                CompositionLocalProvider(
+                    LocalNumberLocale provides state.displayPreferences.formattingLocale(),
+                    LocalFinancialColorConvention provides state.displayPreferences.convention(),
+                ) {
+                    SnapperTheme { SnapperApp(state, model.actions) }
+                }
             }
         }
     }

@@ -37,6 +37,14 @@ class SignalsController(private val coroutineScope: CoroutineScope, private val 
         mutableState.value = current.copy(selectedStrategy = value)
     }
 
+    suspend fun refreshAwaited(stillCurrent: () -> Boolean = { true }) {
+        val captured = epoch
+        job?.join()
+        if (captured != epoch || !stillCurrent()) return
+        load()
+        job?.join()
+    }
+
     /** Root also calls this on signal events/reconnection; overlapping reloads are collapsed. */
     fun load() {
         val current = mutableState.value

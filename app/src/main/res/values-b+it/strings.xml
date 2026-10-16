@@ -348,4 +348,22 @@
     <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
     <string name="position_action_cycle" formatted="false">Position cycle</string>
     <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+    <string name="display_financial_title" formatted="false">Convenzione colori finanziari</string>
+    <string name="display_financial_auto" formatted="false">Abbina alla mia area geografica (auto)</string>
+    <string name="display_financial_green" formatted="false">Verde = rialzo, rosso = ribasso (occidentale)</string>
+    <string name="display_financial_red" formatted="false">Rosso = rialzo, verde = ribasso (convenzione dell\'Asia orientale)</string>
+    <string name="display_financial_current">Attualmente: %1$s</string>
+    <string name="display_financial_green_short" formatted="false">verde rialzo / rosso ribasso</string>
+    <string name="display_financial_red_short" formatted="false">rosso rialzo / verde ribasso</string>
+    <string name="display_country" formatted="false">Country / region</string>
+    <string name="market_context_last" formatted="false">Ultimo prezzo</string>
+    <string name="market_context_change" formatted="false">Variazione 24h</string>
+    <string name="market_context_high" formatted="false">Massimo</string>
+    <string name="market_context_low" formatted="false">Minimo</string>
+    <string name="market_context_related_empty">Nessuno strumento correlato configurato per %1$s su %2$s.</string>
+    <string name="market_live_connected" formatted="false">Live updates connected.</string>
+    <string name="market_live_connecting" formatted="false">Connecting to live updates…</string>
+    <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
+    <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
+    <string name="market_context_as_of">Cached close as of %1$s</string>
 </resources>

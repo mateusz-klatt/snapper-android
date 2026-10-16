@@ -44,9 +44,9 @@ private fun AccountBalances(account: VenueAccountDto) {
     if (account.balances == null) Text("—")
     account.balances?.forEach { balance ->
         Text(balance.currency, style = MaterialTheme.typography.titleSmall)
-        Metric(R.string.venue_accounts_total, venueDecimal(balance.totalDecimal, balance.total))
-        Metric(R.string.venue_accounts_free, venueDecimal(balance.freeDecimal, balance.free))
-        Metric(R.string.venue_accounts_used, venueDecimal(balance.usedDecimal, balance.used))
+        Metric(R.string.venue_accounts_total, venueDecimal(balance.totalDecimal, balance.total).toBigDecimalOrNull().display())
+        Metric(R.string.venue_accounts_free, venueDecimal(balance.freeDecimal, balance.free).toBigDecimalOrNull().display())
+        Metric(R.string.venue_accounts_used, venueDecimal(balance.usedDecimal, balance.used).toBigDecimalOrNull().display())
         Metric(R.string.venue_accounts_numeric_source, balance.numericProvenance ?: "—")
     }
 }
@@ -59,7 +59,7 @@ private fun AccountPositions(account: VenueAccountDto) {
         Metric(R.string.size, position.size.display())
         Metric(R.string.average_price, position.entryPrice.display())
         Metric(R.string.mark_price, position.markPrice.display())
-        Metric(R.string.pnl, position.unrealizedPnl.display())
-        Metric(R.string.venue_accounts_funding, position.unrealizedFunding.display())
+        FinancialMetric(R.string.pnl, position.unrealizedPnl)
+        FinancialMetric(R.string.venue_accounts_funding, position.unrealizedFunding)
     }
 }

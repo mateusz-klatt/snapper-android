@@ -38,6 +38,12 @@ class LanguageViewModelTest {
 
     private class LanguageSettings : SettingsStore {
         override val preferences = MutableStateFlow(ClientPreferences(null))
+    override suspend fun updateDisplayPreferences(transform: (ch.snapper.android.data.DisplayPreferences) -> ch.snapper.android.data.DisplayPreferences): ch.snapper.android.data.DisplayPreferences {
+        val updated = transform(preferences.value.displayPreferences)
+        preferences.value = preferences.value.copy(displayPreferences = updated)
+        return updated
+    }
+
         var writes = 0
         override suspend fun setBackendUrl(origin: String) { error("Unexpected backend mutation") }
         override suspend fun setLanguage(language: String) {

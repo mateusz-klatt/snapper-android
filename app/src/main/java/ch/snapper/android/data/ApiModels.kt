@@ -102,6 +102,10 @@ data class CandleDto(
     val close: BigDecimal,
     val volume: BigDecimal,
     @SerialName("public_id") val publicId: String = "",
+    val complete: Boolean? = null,
+    val timestamp: String? = null,
+    @SerialName("session_id") val sessionId: String? = null,
+    @SerialName("sequence_id") val sequenceId: Long? = null,
 )
 
 data class DashboardSnapshot(
@@ -121,3 +125,13 @@ internal data class RefreshPayload(
 )
 @Serializable
 internal data class AuthPayload(val user: UserDto)
+
+
+@Serializable
+internal class LiveTicketPayload(
+    @SerialName("ws_token") val token: String,
+    @SerialName("ws_token_exp") val expiresAt: String,
+    @SerialName("expires_in") val expiresIn: Int,
+) {
+    override fun toString(): String = "LiveTicketPayload(redacted)"
+}

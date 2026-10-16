@@ -10,7 +10,6 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
@@ -22,6 +21,7 @@ import ch.snapper.android.data.CandleDto
 import ch.snapper.android.features.market.MarketCatalogState
 import ch.snapper.android.features.market.MarketCatalogActions
 import ch.snapper.android.features.market.MarketCatalogControls
+import ch.snapper.android.features.live.LiveConnectionStatus
 import java.math.BigDecimal
 import java.math.MathContext
 
@@ -40,9 +40,9 @@ internal fun LazyListScope.marketScreen(
             }
             if (state.isLoading) LinearProgressIndicator(Modifier.fillMaxWidth())
             state.error?.let { ErrorCard(it, request) }
-            Text(stringResource(R.string.snapshot_note), style = MaterialTheme.typography.bodySmall)
             if (state.candles.isEmpty() && !state.isLoading) Text(stringResource(R.string.no_candles))
         }
+        MarketLiveStatus(state)
     }
     if (state.candles.isNotEmpty()) {
         item {
@@ -62,6 +62,18 @@ internal fun LazyListScope.marketScreen(
             }
         }
     }
+}
+
+@Composable
+private fun MarketLiveStatus(state: MarketState) {
+    val label = when (state.liveStatus) {
+        LiveConnectionStatus.SUBSCRIBED -> R.string.market_live_connected
+        LiveConnectionStatus.CONNECTING, LiveConnectionStatus.AUTHENTICATING, LiveConnectionStatus.RECONNECTING -> R.string.market_live_connecting
+        LiveConnectionStatus.FAILED -> R.string.market_live_unavailable
+        LiveConnectionStatus.STOPPED -> R.string.market_snapshot_mode
+    }
+    Text(stringResource(label), Modifier.testTag("market.connection"), style = MaterialTheme.typography.bodySmall)
+    state.tick?.last?.let { Metric(R.string.market_context_last, it.display()) }
 }
 
 @Composable
@@ -93,8 +105,8 @@ internal fun CandleChart(candles: List<CandleDto>) {
     val high = maximum + padding
     val range = high - low
     val description = stringResource(R.string.chart_description)
-    val rising = MaterialTheme.colorScheme.primary
-    val falling = Color(0xFFD94848)
+    val rising = financialColor(BigDecimal.ONE)
+    val falling = financialColor(BigDecimal.ONE.negate())
     val grid = MaterialTheme.colorScheme.outlineVariant
     Column(Modifier.semantics { contentDescription = description }) {
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {

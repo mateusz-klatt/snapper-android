@@ -36,7 +36,7 @@ internal fun LazyListScope.positionsScreen(state: AppUiState, actions: AppAction
             Metric(R.string.size, position.quantity.display())
             Metric(R.string.average_price, position.averagePrice.display())
             Metric(R.string.mark_price, position.markPrice.display())
-            Metric(R.string.pnl, position.unrealizedPnl.display())
+            FinancialMetric(R.string.pnl, position.unrealizedPnl)
             PositionControls(position, state, actions)
         }
     }

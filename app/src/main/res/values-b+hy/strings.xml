@@ -348,4 +348,22 @@
     <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
     <string name="position_action_cycle" formatted="false">Position cycle</string>
     <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+    <string name="display_financial_title" formatted="false">Ֆինանսական գույների պայմանականություն</string>
+    <string name="display_financial_auto" formatted="false">Համապատասխանեցնել իմ տարածաշրջանին (ավտոմատ)</string>
+    <string name="display_financial_green" formatted="false">Կանաչ = աճ, կարմիր = անկում (արևմտյան)</string>
+    <string name="display_financial_red" formatted="false">Կարմիր = աճ, կանաչ = անկում (արևելաասիական պայմանականություն)</string>
+    <string name="display_financial_current">Ներկա պահին՝ %1$s</string>
+    <string name="display_financial_green_short" formatted="false">կանաչ աճ / կարմիր անկում</string>
+    <string name="display_financial_red_short" formatted="false">կարմիր աճ / կանաչ անկում</string>
+    <string name="display_country" formatted="false">Country / region</string>
+    <string name="market_context_last" formatted="false">Վերջին գին</string>
+    <string name="market_context_change" formatted="false">24ժ փոփոխություն</string>
+    <string name="market_context_high" formatted="false">Առավելագույն</string>
+    <string name="market_context_low" formatted="false">Նվազագույն</string>
+    <string name="market_context_related_empty">%2$s բորսայում %1$s գործիքի համար հարակից գործիքներ կազմաձևված չեն։</string>
+    <string name="market_live_connected" formatted="false">Live updates connected.</string>
+    <string name="market_live_connecting" formatted="false">Connecting to live updates…</string>
+    <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
+    <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
+    <string name="market_context_as_of">Cached close as of %1$s</string>
 </resources>

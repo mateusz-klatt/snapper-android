@@ -348,4 +348,22 @@
     <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
     <string name="position_action_cycle" formatted="false">Position cycle</string>
     <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+    <string name="display_financial_title" formatted="false">আর্থিক রঙের রীতি</string>
+    <string name="display_financial_auto" formatted="false">আমার অঞ্চলের সঙ্গে মিলান (স্বয়ংক্রিয়)</string>
+    <string name="display_financial_green" formatted="false">সবুজ = ঊর্ধ্বগতি, লাল = নিম্নগতি (পশ্চিমা)</string>
+    <string name="display_financial_red" formatted="false">লাল = ঊর্ধ্বগতি, সবুজ = নিম্নগতি (পূর্ব এশীয় রীতি)</string>
+    <string name="display_financial_current">বর্তমানে: %1$s</string>
+    <string name="display_financial_green_short" formatted="false">সবুজ ঊর্ধ্বগতি / লাল নিম্নগতি</string>
+    <string name="display_financial_red_short" formatted="false">লাল ঊর্ধ্বগতি / সবুজ নিম্নগতি</string>
+    <string name="display_country" formatted="false">Country / region</string>
+    <string name="market_context_last" formatted="false">সর্বশেষ দাম</string>
+    <string name="market_context_change" formatted="false">২৪ ঘণ্টার পরিবর্তন</string>
+    <string name="market_context_high" formatted="false">সর্বোচ্চ</string>
+    <string name="market_context_low" formatted="false">সর্বনিম্ন</string>
+    <string name="market_context_related_empty">%2$s-এ %1$s-এর জন্য কোনো সম্পর্কিত ইনস্ট্রুমেন্ট কনফিগার করা নেই।</string>
+    <string name="market_live_connected" formatted="false">Live updates connected.</string>
+    <string name="market_live_connecting" formatted="false">Connecting to live updates…</string>
+    <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
+    <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
+    <string name="market_context_as_of">Cached close as of %1$s</string>
 </resources>

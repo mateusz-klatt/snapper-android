@@ -6,6 +6,7 @@ import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
 /** UI dispatcher confined; root resets on identity, wallet, permission or backend changes. */
@@ -31,6 +32,14 @@ class ProcessesController(private val scope: CoroutineScope, private val client:
         val session = epoch
         mutable.value = state.value.copy(loading = true)
         scope.launch { refresh(session) }
+    }
+
+    suspend fun refreshAwaited(stillCurrent: () -> Boolean = { true }) {
+        val captured = epoch
+        state.first { !it.loading && it.operations.values.none { operation -> operation.pending } }
+        if (captured != epoch || !stillCurrent()) return
+        load()
+        state.first { !it.loading }
     }
 
     private suspend fun refresh(session: Long) {

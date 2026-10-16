@@ -348,4 +348,22 @@
     <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
     <string name="position_action_cycle" formatted="false">Position cycle</string>
     <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+    <string name="display_financial_title" formatted="false">Mpangilio wa rangi za fedha</string>
+    <string name="display_financial_auto" formatted="false">Linganishwa na eneo langu (auto)</string>
+    <string name="display_financial_green" formatted="false">Kijani = juu, nyekundu = chini (Magharibi)</string>
+    <string name="display_financial_red" formatted="false">Nyekundu = juu, kijani = chini (utaratibu wa Asia Mashariki)</string>
+    <string name="display_financial_current">Kwa sasa: %1$s</string>
+    <string name="display_financial_green_short" formatted="false">kijani juu / nyekundu chini</string>
+    <string name="display_financial_red_short" formatted="false">nyekundu juu / kijani chini</string>
+    <string name="display_country" formatted="false">Country / region</string>
+    <string name="market_context_last" formatted="false">Bei ya mwisho</string>
+    <string name="market_context_change" formatted="false">Mabadiliko ya saa 24</string>
+    <string name="market_context_high" formatted="false">Juu</string>
+    <string name="market_context_low" formatted="false">Chini</string>
+    <string name="market_context_related_empty">Hakuna instrumenti zinazohusiana zilizosanidiwa kwa %1$s kwenye %2$s.</string>
+    <string name="market_live_connected" formatted="false">Live updates connected.</string>
+    <string name="market_live_connecting" formatted="false">Connecting to live updates…</string>
+    <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
+    <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
+    <string name="market_context_as_of">Cached close as of %1$s</string>
 </resources>

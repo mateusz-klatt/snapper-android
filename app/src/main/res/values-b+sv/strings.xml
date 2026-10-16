@@ -348,4 +348,22 @@
     <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
     <string name="position_action_cycle" formatted="false">Position cycle</string>
     <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+    <string name="display_financial_title" formatted="false">Finansiell färgkonvention</string>
+    <string name="display_financial_auto" formatted="false">Matcha min region (auto)</string>
+    <string name="display_financial_green" formatted="false">Grönt = upp, rött = ned (västerländsk)</string>
+    <string name="display_financial_red" formatted="false">Rött = upp, grönt = ned (östasiatisk konvention)</string>
+    <string name="display_financial_current">Aktuellt: %1$s</string>
+    <string name="display_financial_green_short" formatted="false">grönt upp / rött ned</string>
+    <string name="display_financial_red_short" formatted="false">rött upp / grönt ned</string>
+    <string name="display_country" formatted="false">Country / region</string>
+    <string name="market_context_last" formatted="false">Senaste pris</string>
+    <string name="market_context_change" formatted="false">24-timmarsförändring</string>
+    <string name="market_context_high" formatted="false">Högsta</string>
+    <string name="market_context_low" formatted="false">Lägsta</string>
+    <string name="market_context_related_empty">Inga relaterade instrument konfigurerade för %1$s på %2$s.</string>
+    <string name="market_live_connected" formatted="false">Live updates connected.</string>
+    <string name="market_live_connecting" formatted="false">Connecting to live updates…</string>
+    <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
+    <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
+    <string name="market_context_as_of">Cached close as of %1$s</string>
 </resources>

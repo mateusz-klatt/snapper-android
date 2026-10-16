@@ -13,6 +13,8 @@ Native Android client for the [Snapper](https://github.com/mateusz-klatt/snapper
 - Select a wallet through the backend session contract and request wallet-scoped positions and orders.
 - View current positions, open/recent orders, fills with fees, expandable alert details and historical candle charts.
 - Search the backend market catalog without trading permissions or a selected wallet; choose 1m, 5m, 15m, 1h, 4h or 1d candles.
+- Receive authenticated foreground market updates and refresh authorized record feeds after backend events.
+- Inspect related instruments and underlying descriptions; navigate through a freshly validated exchange/instrument catalog. View cached hourly price metrics with their observation time; 24-hour metrics require a fresh, complete hourly window.
 - Inspect accessible desks and, with explicit membership permissions, attach an existing viewer.
 - Read permission-gated health/status, strategy, backtest, user and AI-delegate inventories.
 - Edit account-level notification defaults independently of Android push registration.
@@ -27,9 +29,10 @@ Native Android client for the [Snapper](https://github.com/mateusz-klatt/snapper
 - Inspect AI-review audit/pending feeds and confirm delegated approve/reject decisions with a rationale.
 - Show only the screens allowed by the session's effective permissions.
 - Select from 45 language catalogs, including Arabic, Hebrew and Persian RTL layouts, with light and dark themes. Additional catalogs reuse reviewed iOS translations; missing reviewed text remains English.
+- Choose a country/region independently of the interface language for numeric formatting, and select automatic or explicit financial-direction colors. Automatic colors use red for rising values in China, Hong Kong, Japan and South Korea; other supported countries use green. Error and health-status colors retain their severity meaning.
 - Exact decimal quantities, prices and P&L; chart drawing converts coordinates separately.
 
-The app displays REST snapshots, refreshed on foreground entry or with Refresh. Orders, fills and alerts fetch up to 100 recent records; the Recent orders segment displays the newest 50. Positions are the current backend snapshot. Market charts request 100 candles and display price/time axes and a grid. System feeds, fills, signals and P&L refresh independently, with their own errors. Venue accounts poll every five seconds only while their screen is active and the app is in the foreground; stale observation or polling evidence cannot be labelled authoritative. WebSocket streaming, market-context metrics, separate country/financial-color preferences and Android push notifications remain unavailable.
+The app combines REST snapshots with authenticated WebSocket updates while in the foreground. Market frames update the selected chart; authorized order, signal, AI-review, process, strategy and system events trigger fresh REST reads. Live connections stop in the background and reconnect on foreground entry. Refresh remains available. Orders, fills and alerts fetch up to 100 recent records; the Recent orders segment displays the newest 50. Positions are the current backend snapshot. Market charts request 100 candles and display price/time axes and a grid. System feeds, fills, signals and P&L refresh independently, with their own errors. Venue accounts poll every five seconds only while their screen is active and the app is in the foreground; stale observation or polling evidence cannot be labelled authoritative. Configured-pair statistics, selected-chart cache-warming status and Android push notifications remain unavailable. Dates and timestamps are not yet consistently formatted by country.
 
 The existing backend's device registration and delivery are APNs-only. FCM requires an Android provider contract and delivery integration before an Android device token can be registered; this app does not submit FCM tokens to the iOS endpoint.
 
@@ -132,7 +135,7 @@ signing and Play submission requirements.
 - A single application module with Compose screens, a ViewModel/StateFlow UI state, and injected session and settings dependencies.
 - Retrofit, OkHttp and kotlinx.serialization use the backend's typed `payload` envelopes, cookie authentication and URL-scoped CSRF headers.
 - Session rotations and wallet operations are serialized. Authenticated reads can refresh expired credentials and retry once; mutations are never replayed automatically. An uncertain desk attachment remains blocked until the account scope changes; notification defaults can be reconciled through an explicit read before another write. Backend, session, wallet and permission changes discard stale account data and order drafts.
-- Persistent cookies use AES-GCM with a device-authenticated, origin-specific Android Keystore key and private backup-excluded storage. DataStore contains only the backend and language preferences.
+- Persistent cookies use AES-GCM with a device-authenticated, origin-specific Android Keystore key and private backup-excluded storage. DataStore contains the backend origin, interface language, country/region and financial-color preferences. Country and color changes do not change the backend session or translation language.
 - Backend and network failures are visible; an unavailable resource is not silently shown as an empty successful result.
 - Room, WorkManager, Hilt and Firebase are added only when an implemented feature needs them.
 

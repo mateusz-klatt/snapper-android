@@ -348,4 +348,22 @@
     <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
     <string name="position_action_cycle" formatted="false">Position cycle</string>
     <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+    <string name="display_financial_title" formatted="false">Finansinių spalvų schema</string>
+    <string name="display_financial_auto" formatted="false">Derinti prie mano regiono (automatiškai)</string>
+    <string name="display_financial_green" formatted="false">Žalia = kilimas, raudona = kritimas (vakarietiška)</string>
+    <string name="display_financial_red" formatted="false">Raudona = kilimas, žalia = kritimas (Rytų Azijos konvencija)</string>
+    <string name="display_financial_current">Dabar: %1$s</string>
+    <string name="display_financial_green_short" formatted="false">žalia kilimas / raudona kritimas</string>
+    <string name="display_financial_red_short" formatted="false">raudona kilimas / žalia kritimas</string>
+    <string name="display_country" formatted="false">Country / region</string>
+    <string name="market_context_last" formatted="false">Paskutinė kaina</string>
+    <string name="market_context_change" formatted="false">24 val. pokytis</string>
+    <string name="market_context_high" formatted="false">Aukščiausia</string>
+    <string name="market_context_low" formatted="false">Žemiausia</string>
+    <string name="market_context_related_empty">Susijusių instrumentų %1$s biržoje %2$s nesukonfigūruota.</string>
+    <string name="market_live_connected" formatted="false">Live updates connected.</string>
+    <string name="market_live_connecting" formatted="false">Connecting to live updates…</string>
+    <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
+    <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
+    <string name="market_context_as_of">Cached close as of %1$s</string>
 </resources>

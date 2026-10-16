@@ -26,6 +26,12 @@ import ch.snapper.android.features.aireviews.AiReviewsState
 import ch.snapper.android.features.positionactions.PositionActionActions
 import ch.snapper.android.features.positionactions.PositionActionKind
 import ch.snapper.android.features.positionactions.PositionActionState
+import ch.snapper.android.data.DisplayPreferences
+import ch.snapper.android.data.FinancialColorPreference
+import ch.snapper.android.data.LiveMarketFrame
+import ch.snapper.android.features.live.LiveConnectionStatus
+import ch.snapper.android.features.marketcontext.MarketContextState
+import ch.snapper.android.features.marketcontext.MarketContextActions
 
 enum class UiError {
     INVALID_ORIGIN, INVALID_CREDENTIALS, SESSION_EXPIRED, NETWORK, SERVICE, UNKNOWN
@@ -38,6 +44,8 @@ data class MarketState(
     val candles: List<CandleDto> = emptyList(),
     val isLoading: Boolean = false,
     val error: UiError? = null,
+    val liveStatus: LiveConnectionStatus = LiveConnectionStatus.STOPPED,
+    val tick: LiveMarketFrame.Tick? = null,
 )
 
 data class AppUiState(
@@ -61,6 +69,8 @@ data class AppUiState(
     val processes: ProcessesState = ProcessesState(),
     val aiReviews: AiReviewsState = AiReviewsState(),
     val positionActions: PositionActionState = PositionActionState(),
+    val displayPreferences: DisplayPreferences = DisplayPreferences(),
+    val marketContext: MarketContextState = MarketContextState(),
 )
 
 data class AppActions(
@@ -89,4 +99,9 @@ data class AppActions(
     val loadProcesses: () -> Unit = {},
     val loadAiReviews: () -> Unit = {},
     val openPositionAction: (PositionDto, PositionActionKind) -> Unit = { _, _ -> },
+    val selectCountry: (String) -> Unit = {},
+    val selectFinancialColor: (FinancialColorPreference) -> Unit = {},
+    val marketVisible: (Boolean) -> Unit = {},
+    val selectMarket: (String, String, String) -> Unit = { _, _, _ -> },
+    val marketContext: MarketContextActions = MarketContextActions({}, {}, {}),
 )

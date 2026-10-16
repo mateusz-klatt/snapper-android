@@ -348,4 +348,22 @@
     <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
     <string name="position_action_cycle" formatted="false">Position cycle</string>
     <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+    <string name="display_financial_title" formatted="false">Finančná farebná konvencia</string>
+    <string name="display_financial_auto" formatted="false">Prispôsobiť môjmu regiónu (auto)</string>
+    <string name="display_financial_green" formatted="false">Zelená = rast, červená = pokles (západná)</string>
+    <string name="display_financial_red" formatted="false">Červená = rast, zelená = pokles (východoázijská konvencia)</string>
+    <string name="display_financial_current">Aktuálne: %1$s</string>
+    <string name="display_financial_green_short" formatted="false">zelená rast / červená pokles</string>
+    <string name="display_financial_red_short" formatted="false">červená rast / zelená pokles</string>
+    <string name="display_country" formatted="false">Country / region</string>
+    <string name="market_context_last" formatted="false">Posledná cena</string>
+    <string name="market_context_change" formatted="false">Zmena za 24 h</string>
+    <string name="market_context_high" formatted="false">Najvyššia</string>
+    <string name="market_context_low" formatted="false">Najnižšia</string>
+    <string name="market_context_related_empty">Pre inštrument %1$s na burze %2$s nie sú nakonfigurované žiadne súvisiace inštrumenty.</string>
+    <string name="market_live_connected" formatted="false">Live updates connected.</string>
+    <string name="market_live_connecting" formatted="false">Connecting to live updates…</string>
+    <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
+    <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
+    <string name="market_context_as_of">Cached close as of %1$s</string>
 </resources>

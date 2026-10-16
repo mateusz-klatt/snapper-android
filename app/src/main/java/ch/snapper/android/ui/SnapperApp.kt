@@ -70,7 +70,13 @@ private fun AuthenticatedApp(state: AppUiState, actions: AppActions) {
     }
     DisposableEffect(current, state.backendUrl, sessionScope) {
         actions.venueAccountsVisible(current == Destination.ACCOUNTS)
-        onDispose { actions.venueAccountsVisible(false) }
+        actions.marketVisible(current == Destination.MARKET)
+        onDispose { actions.venueAccountsVisible(false); actions.marketVisible(false) }
+    }
+    LaunchedEffect(current, state.backendUrl, sessionScope, state.marketCatalog.exchange,
+        state.marketCatalog.instrument, state.marketCatalog.timeframe, state.marketCatalog.canLoad) {
+        val catalog = state.marketCatalog
+        if (current == Destination.MARKET && catalog.canLoad) actions.selectMarket(catalog.exchange, catalog.instrument, catalog.timeframe)
     }
     Column(Modifier.fillMaxSize().safeDrawingPadding()) {
         PrimaryScrollableTabRow(selectedTabIndex = destinations.indexOf(current), edgePadding = 0.dp) {
@@ -91,7 +97,10 @@ private fun AuthenticatedApp(state: AppUiState, actions: AppActions) {
                 Destination.POSITIONS -> positionsScreen(state, actions)
                 Destination.ORDERS -> ordersScreen(state, actions.orders, state.records, actions.records)
                 Destination.ALERTS -> alertsScreen(state)
-                Destination.MARKET -> marketScreen(state.market, actions.loadMarket, state.marketCatalog, actions.marketCatalog)
+                Destination.MARKET -> {
+                    marketScreen(state.market, actions.loadMarket, state.marketCatalog, actions.marketCatalog)
+                    item { MarketContextContent(state.marketContext, actions.marketContext) }
+                }
                 Destination.SYSTEM -> systemScreen(state.system, actions.system)
                 Destination.SIGNALS -> signalsScreen(state.signals, actions.signals)
                 Destination.ACCOUNTS -> venueAccountsScreen(state.venueAccounts, actions.refreshVenueAccounts)
@@ -150,6 +159,7 @@ private fun SettingsScreen(state: AppUiState, actions: AppActions) {
     state.user?.let { AccountSettingsContent(it, BuildConfig.VERSION_NAME, BuildConfig.VERSION_CODE.toString()) }
     Text(state.backendUrl)
     LanguagePicker(state.language, actions.selectLanguage)
+    DisplayPreferencesContent(state.displayPreferences, actions.selectCountry, actions.selectFinancialColor)
     Text(stringResource(R.string.backend_warning), style = MaterialTheme.typography.bodySmall)
     BackendEditor(state.backendUrl) { value -> pendingBackend = value; confirmation = AccountConfirmation.CHANGE_BACKEND }
     PrivacyPolicyLink()

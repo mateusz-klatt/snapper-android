@@ -351,4 +351,22 @@
     <string name="position_action_minimum_lock">Minimum locked profit (%)</string>
     <string name="position_action_cycle">Position cycle</string>
     <string name="position_action_invalid">Review the entered values before continuing.</string>
+    <string name="display_financial_title" formatted="false">Financial color convention</string>
+    <string name="display_financial_auto" formatted="false">Match my locale (auto)</string>
+    <string name="display_financial_green" formatted="false">Green = up, red = down (Western)</string>
+    <string name="display_financial_red" formatted="false">Red = up, green = down (East Asian convention)</string>
+    <string name="display_financial_current">Currently: %1$s</string>
+    <string name="display_financial_green_short" formatted="false">green up / red down</string>
+    <string name="display_financial_red_short" formatted="false">red up / green down</string>
+    <string name="display_country" formatted="false">Country / region</string>
+    <string name="market_context_last" formatted="false">Last price</string>
+    <string name="market_context_change" formatted="false">24h change</string>
+    <string name="market_context_high" formatted="false">High</string>
+    <string name="market_context_low" formatted="false">Low</string>
+    <string name="market_context_related_empty">No related instruments configured for %1$s on %2$s.</string>
+    <string name="market_live_connected" formatted="false">Live updates connected.</string>
+    <string name="market_live_connecting" formatted="false">Connecting to live updates…</string>
+    <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
+    <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
+    <string name="market_context_as_of">Cached close as of %1$s</string>
 </resources>

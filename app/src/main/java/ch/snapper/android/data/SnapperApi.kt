@@ -10,6 +10,15 @@ import retrofit2.http.Query
 import retrofit2.http.Path
 
 internal interface SnapperApi {
+    @POST("api/auth/ws_token") suspend fun liveTicket(): Envelope<LiveTicketPayload>
+    @GET("api/candles/cache") suspend fun cachedHourly(
+        @Query("exchange") exchange: String, @Query("instrument") instrument: String,
+        @Query("timeframe") timeframe: String = "1h", @Query("limit") limit: Int = 25,
+    ): Envelope<MarketCachedCandlesDto>
+    @GET("api/instruments/{exchange}/{symbol}/related") suspend fun related(
+        @Path("exchange") exchange: String, @Path("symbol") symbol: String,
+    ): Envelope<RelatedMarketPayloadDto>
+
     @GET("api/processes/summary") suspend fun processSummary(): Envelope<ProcessSummaryDto>
     @GET("api/processes/configured") suspend fun configuredProcesses(): Envelope<List<ConfiguredProcessDto>>
     @POST("api/processes/{name}/start") suspend fun startProcess(@Path("name") name: String, @Body request: Envelope<ProcessStartPayload>): Envelope<ProcessStartDto>

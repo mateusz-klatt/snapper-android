@@ -348,4 +348,22 @@
     <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
     <string name="position_action_cycle" formatted="false">Position cycle</string>
     <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+    <string name="display_financial_title" formatted="false">Pénzügyi színséma</string>
+    <string name="display_financial_auto" formatted="false">Igazítás a régiómhoz (automatikus)</string>
+    <string name="display_financial_green" formatted="false">Zöld = emelkedés, piros = csökkenés (nyugati)</string>
+    <string name="display_financial_red" formatted="false">Piros = emelkedés, zöld = csökkenés (kelet-ázsiai konvenció)</string>
+    <string name="display_financial_current">Jelenleg: %1$s</string>
+    <string name="display_financial_green_short" formatted="false">zöld emelkedés / piros csökkenés</string>
+    <string name="display_financial_red_short" formatted="false">piros emelkedés / zöld csökkenés</string>
+    <string name="display_country" formatted="false">Country / region</string>
+    <string name="market_context_last" formatted="false">Utolsó ár</string>
+    <string name="market_context_change" formatted="false">24 órás változás</string>
+    <string name="market_context_high" formatted="false">Legmagasabb</string>
+    <string name="market_context_low" formatted="false">Legalacsonyabb</string>
+    <string name="market_context_related_empty">Nincsenek kapcsolódó instrumentumok konfigurálva ehhez: %1$s ezen a tőzsdén: %2$s.</string>
+    <string name="market_live_connected" formatted="false">Live updates connected.</string>
+    <string name="market_live_connecting" formatted="false">Connecting to live updates…</string>
+    <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
+    <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
+    <string name="market_context_as_of">Cached close as of %1$s</string>
 </resources>

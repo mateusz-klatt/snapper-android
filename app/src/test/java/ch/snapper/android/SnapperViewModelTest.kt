@@ -650,6 +650,12 @@ class SnapperViewModelTest {
 
 private class FakeSettingsStore : SettingsStore {
     override val preferences = MutableStateFlow(ClientPreferences(null))
+    override suspend fun updateDisplayPreferences(transform: (ch.snapper.android.data.DisplayPreferences) -> ch.snapper.android.data.DisplayPreferences): ch.snapper.android.data.DisplayPreferences {
+        val updated = transform(preferences.value.displayPreferences)
+        preferences.value = preferences.value.copy(displayPreferences = updated)
+        return updated
+    }
+
     override suspend fun setBackendUrl(origin: String) {
         preferences.value = preferences.value.copy(backendUrl = origin)
     }

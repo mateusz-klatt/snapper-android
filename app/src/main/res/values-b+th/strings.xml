@@ -348,4 +348,22 @@
     <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
     <string name="position_action_cycle" formatted="false">Position cycle</string>
     <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+    <string name="display_financial_title" formatted="false">รูปแบบสีทางการเงิน</string>
+    <string name="display_financial_auto" formatted="false">ตรงกับภูมิภาคของฉัน (อัตโนมัติ)</string>
+    <string name="display_financial_green" formatted="false">สีเขียว = ขึ้น, สีแดง = ลง (ตะวันตก)</string>
+    <string name="display_financial_red" formatted="false">สีแดง = ขึ้น, สีเขียว = ลง (ธรรมเนียมเอเชียตะวันออก)</string>
+    <string name="display_financial_current">ปัจจุบัน: %1$s</string>
+    <string name="display_financial_green_short" formatted="false">เขียวขึ้น / แดงลง</string>
+    <string name="display_financial_red_short" formatted="false">แดงขึ้น / เขียวลง</string>
+    <string name="display_country" formatted="false">Country / region</string>
+    <string name="market_context_last" formatted="false">ราคาล่าสุด</string>
+    <string name="market_context_change" formatted="false">เปลี่ยนแปลง 24 ชม.</string>
+    <string name="market_context_high" formatted="false">สูงสุด</string>
+    <string name="market_context_low" formatted="false">ต่ำสุด</string>
+    <string name="market_context_related_empty">ไม่มี instrument ที่เกี่ยวข้องซึ่งกำหนดค่าไว้สำหรับ %1$s บน %2$s</string>
+    <string name="market_live_connected" formatted="false">Live updates connected.</string>
+    <string name="market_live_connecting" formatted="false">Connecting to live updates…</string>
+    <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
+    <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
+    <string name="market_context_as_of">Cached close as of %1$s</string>
 </resources>
