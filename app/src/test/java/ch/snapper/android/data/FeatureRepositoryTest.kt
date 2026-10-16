@@ -62,7 +62,11 @@ class FeatureRepositoryTest {
     }
 
     @Test fun desksRequireAuthenticationButNoManagementPermission() = runBlocking {
-        server.enqueue(response(profile.replace("manage:desk_memberships", "read:orders")))
+        val viewerProfile = profile.replace("manage:desk_memberships", "read:orders")
+        server.enqueue(response(viewerProfile))
+        repository.restore()
+        assertEquals("/api/auth/me", server.takeRequest().path)
+        server.enqueue(response(viewerProfile))
         server.enqueue(response("[$desk]"))
         assertEquals("desk/a", repository.desks().single().publicId)
         assertEquals("/api/auth/me", server.takeRequest().path)
@@ -119,6 +123,10 @@ class FeatureRepositoryTest {
     @Test fun systemReadChecksFreshPermissionWithoutWallet() = runBlocking {
         val allowed = profile.replace("read:market_data", "read:strategies")
         server.enqueue(response(allowed))
+        repository.restore()
+        assertEquals("/api/auth/me", server.takeRequest().path)
+        val beforeRead = server.requestCount
+        server.enqueue(response(allowed))
         server.enqueue(response("[]"))
         assertTrue(repository.systemStrategies().isEmpty())
         assertEquals("/api/auth/me", server.takeRequest().path)
@@ -126,7 +134,7 @@ class FeatureRepositoryTest {
         server.enqueue(response(profile))
         assertTrue(runCatching { repository.systemStrategies() }.isFailure)
         assertEquals("/api/auth/me", server.takeRequest().path)
-        assertEquals(4, server.requestCount)
+        assertEquals(beforeRead + 3, server.requestCount)
     }
 
     @Test fun logoutInvalidatesPendingCatalogueRead() = runBlocking {

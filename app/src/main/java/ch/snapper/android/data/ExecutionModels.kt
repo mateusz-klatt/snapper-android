@@ -7,7 +7,7 @@ import kotlinx.serialization.Serializable
 import kotlinx.serialization.UseSerializers
 
 /** GET /api/executions requires read:orders and accepts an optional wallet_public_id. */
-interface RecordsClient {
+fun interface RecordsClient {
     suspend fun executions(walletPublicId: String?): List<ExecutionDto>
 }
 

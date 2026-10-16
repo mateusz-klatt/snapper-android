@@ -53,6 +53,11 @@ class MainActivity : ComponentActivity() {
         super.onStart()
         model.onForeground()
     }
+
+    override fun onStop() {
+        model.onBackground()
+        super.onStop()
+    }
 }
 
 @Composable

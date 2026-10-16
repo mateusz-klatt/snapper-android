@@ -12,11 +12,13 @@ import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import ch.snapper.android.R
+import ch.snapper.android.features.notifications.NotificationDefaultRow
 import ch.snapper.android.features.notifications.NotificationDefaultIssue
 import ch.snapper.android.features.notifications.NotificationDefaultsActions
 import ch.snapper.android.features.notifications.NotificationDefaultsState
@@ -31,34 +33,44 @@ internal fun LazyListScope.notificationDefaultsScreen(state: NotificationDefault
         if (state.loadFailed) Text(stringResource(R.string.notification_defaults_load_failed))
     }
     items(state.rows, key = { it.alertType }) { row ->
-        val editable = state.active && state.loaded && !state.loading && row.editable
-        RecordCard(stringResource(notificationTypeLabel(row.alertType))) {
-            Column(Modifier.testTag("notification.${row.alertType}"), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Text(stringResource(R.string.notification_defaults_enabled))
-                    Switch(checked = row.enabled, onCheckedChange = { actions.setEnabled(row.alertType, it) }, enabled = editable)
-                }
-                Text(stringResource(R.string.notification_defaults_priority))
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    notificationPriorities.forEach { priority ->
-                        FilterChip(selected = row.minPriority == priority, onClick = { actions.setPriority(row.alertType, priority) }, enabled = editable,
-                            label = { Text(stringResource(notificationPriorityLabel(priority))) })
-                    }
-                }
-                if (row.pending) LinearProgressIndicator(Modifier.fillMaxWidth())
-                row.issue?.let { issue ->
-                    Text(stringResource(when (issue) {
-                        NotificationDefaultIssue.UNKNOWN -> R.string.order_unknown_outcome
-                        NotificationDefaultIssue.LOAD -> R.string.notification_defaults_load_failed
-                        NotificationDefaultIssue.REJECTED, NotificationDefaultIssue.SCOPE_CHANGED -> R.string.notification_defaults_save_failed
-                    }))
-                }
-                if (row.saved) Text(stringResource(R.string.notification_defaults_saved))
-                Button(onClick = { actions.save(row.alertType) }, enabled = editable && row.canSave,
-                    modifier = Modifier.testTag("notification.${row.alertType}.save")) { Text(stringResource(R.string.save)) }
+        NotificationDefaultCard(state, row, actions)
+    }
+}
+
+@Composable
+private fun NotificationDefaultCard(state: NotificationDefaultsState, row: NotificationDefaultRow, actions: NotificationDefaultsActions) {
+    val editable = state.active && state.loaded && !state.loading && row.editable
+    RecordCard(stringResource(notificationTypeLabel(row.alertType))) {
+        Column(Modifier.testTag("notification.${row.alertType}"), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                Text(stringResource(R.string.notification_defaults_enabled))
+                Switch(checked = row.enabled, onCheckedChange = { actions.setEnabled(row.alertType, it) }, enabled = editable)
             }
+            Text(stringResource(R.string.notification_defaults_priority))
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                notificationPriorities.forEach { priority ->
+                    FilterChip(selected = row.minPriority == priority, onClick = { actions.setPriority(row.alertType, priority) }, enabled = editable,
+                        label = { Text(stringResource(notificationPriorityLabel(priority))) })
+                }
+            }
+            NotificationDefaultStatus(row)
+            Button(onClick = { actions.save(row.alertType) }, enabled = editable && row.canSave,
+                modifier = Modifier.testTag("notification.${row.alertType}.save")) { Text(stringResource(R.string.save)) }
         }
     }
+}
+
+@Composable
+private fun NotificationDefaultStatus(row: NotificationDefaultRow) {
+    if (row.pending) LinearProgressIndicator(Modifier.fillMaxWidth())
+    row.issue?.let { issue ->
+        Text(stringResource(when (issue) {
+            NotificationDefaultIssue.UNKNOWN -> R.string.order_unknown_outcome
+            NotificationDefaultIssue.LOAD -> R.string.notification_defaults_load_failed
+            NotificationDefaultIssue.REJECTED, NotificationDefaultIssue.SCOPE_CHANGED -> R.string.notification_defaults_save_failed
+        }))
+    }
+    if (row.saved) Text(stringResource(R.string.notification_defaults_saved))
 }
 
 private fun notificationTypeLabel(type: String): Int = when (type) {

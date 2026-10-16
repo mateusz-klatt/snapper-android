@@ -17,13 +17,16 @@ Native Android client for the [Snapper](https://github.com/mateusz-klatt/snapper
 - Read permission-gated health/status, strategy, backtest, user and AI-delegate inventories.
 - Edit account-level notification defaults independently of Android push registration.
 - Inspect profile email/role and app version; confirm sign-out or backend changes before clearing the session.
+- Filter trading signals by strategy and export the selected rows as CSV to an Android document destination.
+- Inspect venue balances, positions and reconciliation with explicit observation/freshness status.
+- Request a wallet-scoped P&L timeline with window, granularity and valuation-currency controls, withholding reasons and valuation provenance.
 - Review and submit manual orders for a selected wallet using execution-capable instruments.
 - Confirm cancellation of eligible open orders.
 - Show only the screens allowed by the session's effective permissions.
 - English and Polish interfaces, with light and dark themes.
 - Exact decimal quantities, prices and P&L; chart drawing converts coordinates separately.
 
-The app displays REST snapshots, refreshed on foreground entry or with Refresh. Orders, fills and alerts fetch up to 100 recent records; the Recent orders segment displays the newest 50. Positions are the current backend snapshot. Market charts request 100 candles. System feeds and fills refresh independently, with their own errors. Position close/reduce/bracket/trailing actions, venue-account truth, signals, P&L timelines, process controls, AI review decisions, WebSocket streaming and Android push notifications remain unavailable.
+The app displays REST snapshots, refreshed on foreground entry or with Refresh. Orders, fills and alerts fetch up to 100 recent records; the Recent orders segment displays the newest 50. Positions are the current backend snapshot. Market charts request 100 candles. System feeds, fills, signals and P&L refresh independently, with their own errors. Venue accounts poll every five seconds only while their screen is active and the app is in the foreground; stale observation or polling evidence cannot be labelled authoritative. Position close/reduce/bracket/trailing actions, process controls, AI review decisions, WebSocket streaming and Android push notifications remain unavailable.
 
 The existing backend's device registration and delivery are APNs-only. FCM requires an Android provider contract and delivery integration before an Android device token can be registered; this app does not submit FCM tokens to the iOS endpoint.
 

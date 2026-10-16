@@ -22,6 +22,13 @@ internal interface SnapperApi {
     @GET("api/ai-delegates") suspend fun systemDelegates(): Envelope<List<SystemDelegateReadDto>>
     @GET("api/executions") suspend fun executions(@Query("wallet_public_id") walletPublicId: String?): Envelope<List<ExecutionDto>>
     @GET("api/alert_defaults") suspend fun notificationDefaults(): Envelope<List<NotificationDefaultDto>>
+    @GET("api/signals") suspend fun signals(@Query("wallet_public_id") walletPublicId: String?): Envelope<List<SignalDto>>
+    @GET("api/portfolio/accounts") suspend fun venueAccounts(@Query("wallet_public_id") walletPublicId: String?): Envelope<List<VenueAccountDto>>
+    @GET("api/portfolio/pnl/series") suspend fun pnlSeries(
+        @Query("wallet_public_id") walletPublicId: String, @Query("mode") mode: String,
+        @Query("granularity") granularity: String, @Query("from") from: String,
+        @Query("to") to: String, @Query("valuation_ccy") valuationCcy: String,
+    ): Envelope<PnlSeriesDto>
     @PATCH("api/alert_defaults") suspend fun updateNotificationDefaults(@Body request: Envelope<UpdateNotificationDefaultPayload>): Envelope<NotificationDefaultDto>
     @GET("api/exchanges") suspend fun exchanges(): Envelope<List<String>>
     @GET("api/exchanges/{exchange}/instruments/detail") suspend fun instruments(@Path("exchange") exchange: String): Envelope<List<InstrumentDto>>

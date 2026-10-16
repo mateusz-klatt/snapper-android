@@ -13,6 +13,11 @@ import ch.snapper.android.features.records.RecordsActions
 import ch.snapper.android.features.records.RecordsState
 import ch.snapper.android.features.notifications.NotificationDefaultsActions
 import ch.snapper.android.features.notifications.NotificationDefaultsState
+import ch.snapper.android.features.signals.SignalsActions
+import ch.snapper.android.features.signals.SignalsState
+import ch.snapper.android.features.accounts.VenueAccountsState
+import ch.snapper.android.features.pnl.PnlActions
+import ch.snapper.android.features.pnl.PnlState
 
 enum class UiError {
     INVALID_ORIGIN, INVALID_CREDENTIALS, SESSION_EXPIRED, NETWORK, SERVICE, UNKNOWN
@@ -42,6 +47,9 @@ data class AppUiState(
     val system: SystemState = SystemState(),
     val records: RecordsState = RecordsState(),
     val notificationDefaults: NotificationDefaultsState = NotificationDefaultsState(),
+    val signals: SignalsState = SignalsState(),
+    val venueAccounts: VenueAccountsState = VenueAccountsState(),
+    val pnl: PnlState = PnlState(),
 )
 
 data class AppActions(
@@ -60,4 +68,8 @@ data class AppActions(
     val system: SystemActions = SystemActions {},
     val records: RecordsActions = RecordsActions(),
     val notificationDefaults: NotificationDefaultsActions = NotificationDefaultsActions({}, { _, _ -> }, { _, _ -> }, {}),
+    val signals: SignalsActions = SignalsActions({}, {}),
+    val pnl: PnlActions = PnlActions({}, {}, {}, {}),
+    val refreshVenueAccounts: () -> Unit = {},
+    val venueAccountsVisible: (Boolean) -> Unit = {},
 )

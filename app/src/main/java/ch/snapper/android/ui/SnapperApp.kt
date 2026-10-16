@@ -13,13 +13,16 @@ import ch.snapper.android.AppActions
 import ch.snapper.android.AppUiState
 import ch.snapper.android.R
 import ch.snapper.android.BuildConfig
+import ch.snapper.android.data.OrderScope
 import ch.snapper.android.features.system.SystemFeed
 
 private enum class Destination(val label: Int, val permission: String? = null) {
     HOME(R.string.home), POSITIONS(R.string.positions, "read:positions"),
     ORDERS(R.string.orders, "read:orders"), ALERTS(R.string.alerts, "read:notifications"),
     MARKET(R.string.market, "read:market_data"), SYSTEM(R.string.system_tools),
-    DESKS(R.string.desk_nav_title), NOTIFICATIONS(R.string.notification_defaults_title), SETTINGS(R.string.settings)
+    ACCOUNTS(R.string.venue_accounts_title, "read:account_state"), SIGNALS(R.string.signals_title, "read:signals"),
+    PNL(R.string.positions_timeline_chart_title, "read:positions"), DESKS(R.string.desk_nav_title),
+    NOTIFICATIONS(R.string.notification_defaults_title), SETTINGS(R.string.settings)
 }
 
 @Composable
@@ -42,14 +45,22 @@ private fun AuthenticatedApp(state: AppUiState, actions: AppActions) {
         else it.permission == null || it.permission in permissions
     }
     val current = destinations.firstOrNull { it.name == selected } ?: Destination.HOME
-    LaunchedEffect(current, state.backendUrl, state.user?.publicId, state.user?.activeWalletPublicId, permissions) {
+    val sessionScope = state.user?.let { OrderScope.from(it) to it.primaryOperatorPublicId }
+    val pnlWallet = state.snapshot?.wallets?.firstOrNull { it.publicId == state.user?.activeWalletPublicId }
+    LaunchedEffect(current, state.backendUrl, sessionScope, if (current == Destination.PNL) pnlWallet else null) {
         when (current) {
             Destination.MARKET -> actions.loadCatalog()
             Destination.DESKS -> actions.desks.reload()
             Destination.NOTIFICATIONS -> actions.notificationDefaults.refresh()
             Destination.SYSTEM -> SystemFeed.entries.filter { it.isAllowed(permissions) }.forEach(actions.system::refresh)
+            Destination.SIGNALS -> actions.signals.refresh()
+            Destination.PNL -> actions.pnl.refresh()
             else -> Unit
         }
+    }
+    DisposableEffect(current, state.backendUrl, sessionScope) {
+        actions.venueAccountsVisible(current == Destination.ACCOUNTS)
+        onDispose { actions.venueAccountsVisible(false) }
     }
     Column(Modifier.fillMaxSize().safeDrawingPadding()) {
         PrimaryScrollableTabRow(selectedTabIndex = destinations.indexOf(current), edgePadding = 0.dp) {
@@ -72,6 +83,9 @@ private fun AuthenticatedApp(state: AppUiState, actions: AppActions) {
                 Destination.ALERTS -> alertsScreen(state)
                 Destination.MARKET -> marketScreen(state.market, actions.loadMarket, state.marketCatalog, actions.marketCatalog)
                 Destination.SYSTEM -> systemScreen(state.system, actions.system)
+                Destination.SIGNALS -> signalsScreen(state.signals, actions.signals)
+                Destination.ACCOUNTS -> venueAccountsScreen(state.venueAccounts, actions.refreshVenueAccounts)
+                Destination.PNL -> item { PnlTimelineScreen(state.pnl, actions.pnl) }
                 Destination.DESKS -> item { DeskScreen(state.desks, actions.desks) }
                 Destination.NOTIFICATIONS -> notificationDefaultsScreen(state.notificationDefaults, actions.notificationDefaults)
                 Destination.SETTINGS -> item { Column(verticalArrangement = Arrangement.spacedBy(16.dp)) { SettingsScreen(state, actions) } }
@@ -116,7 +130,8 @@ private fun HomeScreen(state: AppUiState, actions: AppActions) {
 
 @Composable
 private fun SettingsScreen(state: AppUiState, actions: AppActions) {
-    var confirmation by remember(state.backendUrl, state.user?.publicId, state.user?.activeWalletPublicId, state.user?.effectivePermissions) { mutableStateOf<AccountConfirmation?>(null) }
+    val sessionScope = state.user?.let { OrderScope.from(it) to it.primaryOperatorPublicId }
+    var confirmation by remember(state.backendUrl, sessionScope) { mutableStateOf<AccountConfirmation?>(null) }
     var pendingBackend by remember(state.backendUrl, state.user?.publicId) { mutableStateOf("") }
     state.user?.let { AccountSettingsContent(it, BuildConfig.VERSION_NAME, BuildConfig.VERSION_CODE.toString()) }
     Text(state.backendUrl)

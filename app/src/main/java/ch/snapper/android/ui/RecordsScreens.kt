@@ -40,9 +40,16 @@ internal fun LazyListScope.ordersScreen(
     records: RecordsState = RecordsState(),
     recordActions: RecordsActions = RecordsActions(),
 ) {
-    val orders = RecordFilters.orders(state.snapshot?.orders.orEmpty(), records.segment, state.user?.activeWalletPublicId)
-    val fills = RecordFilters.fills(records.executions, state.user?.activeWalletPublicId)
     item { OrderControls(state, actions) }
+    orderSegments(records, recordActions)
+    if (records.segment == OrderSegment.FILLS) {
+        orderFills(state, records, recordActions)
+    } else {
+        orderRows(state, actions, records)
+    }
+}
+
+private fun LazyListScope.orderSegments(records: RecordsState, recordActions: RecordsActions) {
     item {
         Row {
             OrderSegment.entries.forEach { segment ->
@@ -55,26 +62,31 @@ internal fun LazyListScope.ordersScreen(
             }
         }
     }
-    if (records.segment == OrderSegment.FILLS) {
-        item {
-            if (records.isLoading) LinearProgressIndicator()
-            records.error?.let { ErrorCard(it, recordActions.refreshExecutions) }
-            OutlinedButton(onClick = recordActions.refreshExecutions, enabled = !records.isLoading) { Text(stringResource(R.string.records_refresh)) }
-            if (fills.isEmpty() && !records.isLoading) Text(stringResource(R.string.empty))
-        }
-        items(fills) { fill ->
-            RecordCard(fill.instrument) {
-                Text(fill.exchange, style = MaterialTheme.typography.labelMedium)
-                Metric(R.string.side, fill.side)
-                Metric(R.string.size, fill.size.display())
-                Metric(R.string.price, fill.price.display())
-                Metric(R.string.records_fee, "${fill.fee.display()} ${fill.feeAsset}")
-                Metric(R.string.status, fill.status)
-                Text(fill.executedAt, style = MaterialTheme.typography.bodySmall)
-            }
-        }
-        return
+}
+
+private fun LazyListScope.orderFills(state: AppUiState, records: RecordsState, recordActions: RecordsActions) {
+    val fills = RecordFilters.fills(records.executions, state.user?.activeWalletPublicId)
+    item {
+        if (records.isLoading) LinearProgressIndicator()
+        records.error?.let { ErrorCard(it, recordActions.refreshExecutions) }
+        OutlinedButton(onClick = recordActions.refreshExecutions, enabled = !records.isLoading) { Text(stringResource(R.string.records_refresh)) }
+        if (fills.isEmpty() && !records.isLoading) Text(stringResource(R.string.empty))
     }
+    items(fills) { fill ->
+        RecordCard(fill.instrument) {
+            Text(fill.exchange, style = MaterialTheme.typography.labelMedium)
+            Metric(R.string.side, fill.side)
+            Metric(R.string.size, fill.size.display())
+            Metric(R.string.price, fill.price.display())
+            Metric(R.string.records_fee, "${fill.fee.display()} ${fill.feeAsset}")
+            Metric(R.string.status, fill.status)
+            Text(fill.executedAt, style = MaterialTheme.typography.bodySmall)
+        }
+    }
+}
+
+private fun LazyListScope.orderRows(state: AppUiState, actions: OrderActions, records: RecordsState) {
+    val orders = RecordFilters.orders(state.snapshot?.orders.orEmpty(), records.segment, state.user?.activeWalletPublicId)
     item { Text(stringResource(R.string.snapshot_limit), style = MaterialTheme.typography.bodySmall) }
     if (orders.isEmpty() && !state.isLoading) item { Text(stringResource(R.string.empty)) }
     items(orders) { order ->

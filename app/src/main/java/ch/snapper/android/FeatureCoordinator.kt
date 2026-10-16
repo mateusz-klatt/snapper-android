@@ -6,6 +6,10 @@ import ch.snapper.android.features.market.*
 import ch.snapper.android.features.system.*
 import ch.snapper.android.features.records.*
 import ch.snapper.android.features.notifications.*
+import ch.snapper.android.features.signals.*
+import ch.snapper.android.features.accounts.*
+import ch.snapper.android.features.pnl.*
+import java.time.Clock
 import java.io.IOException
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
@@ -32,6 +36,18 @@ internal class FeatureCoordinator(
     private var notificationController: NotificationDefaultsController? = null
     private var notificationContext: Context? = null
     private var notificationObserver: Job? = null
+    private var signalController: SignalsController? = null
+    private var signalContext: Context? = null
+    private var signalObserver: Job? = null
+    private var pnlController: PnlController? = null
+    private var pnlContext: Context? = null
+    private var pnlWallet: WalletDto? = null
+    private var pnlObserver: Job? = null
+    private var accountsController: VenueAccountsController? = null
+    private var accountsContext: Context? = null
+    private var accountsObserver: Job? = null
+    private var accountsVisible = false
+    private var foreground = false
 
     val catalogActions = MarketCatalogActions(
         selectExchange = ::selectExchange,
@@ -60,6 +76,16 @@ internal class FeatureCoordinator(
         setPriority = { type, priority -> notifications()?.actions?.setPriority?.invoke(type, priority) },
         save = { type -> notifications()?.actions?.save?.invoke(type) },
     )
+    val signalActions = SignalsActions(
+        refresh = { signals()?.load() },
+        selectStrategy = { value -> signals()?.actions?.selectStrategy?.invoke(value) },
+    )
+    val pnlActions = PnlActions(
+        refresh = { pnl()?.load() },
+        window = { value -> pnl()?.actions?.window?.invoke(value) },
+        granularity = { value -> pnl()?.actions?.granularity?.invoke(value) },
+        currency = { value -> pnl()?.actions?.currency?.invoke(value) },
+    )
 
     private fun context(): Context? {
         val client = session() ?: return null
@@ -71,6 +97,8 @@ internal class FeatureCoordinator(
 
     private fun current(context: Context): Boolean = context.epoch == epoch && session() === context.client &&
         state().user?.let(OrderScope::from) == context.scope && context.client.user.value?.let(OrderScope::from) == context.scope
+
+    private fun catalogCurrent(context: Context, request: Long): Boolean = current(context) && request == catalogRevision
 
     fun invalidate() {
         epoch++
@@ -87,7 +115,91 @@ internal class FeatureCoordinator(
         notificationObserver?.cancel()
         notificationController = null
         notificationContext = null
-        update { it.copy(marketCatalog = MarketCatalogState(), desks = DeskState(), system = SystemState(), records = RecordsState(), notificationDefaults = NotificationDefaultsState()) }
+        signalController?.invalidate()
+        signalObserver?.cancel()
+        signalController = null
+        signalContext = null
+        pnlController?.invalidate()
+        pnlObserver?.cancel()
+        pnlController = null
+        pnlContext = null
+        pnlWallet = null
+        accountsController?.invalidate()
+        accountsObserver?.cancel()
+        accountsController = null
+        accountsContext = null
+        update { it.copy(marketCatalog = MarketCatalogState(), desks = DeskState(), system = SystemState(),
+            records = RecordsState(), notificationDefaults = NotificationDefaultsState(), signals = SignalsState(),
+            venueAccounts = VenueAccountsState(), pnl = PnlState()) }
+    }
+
+    private fun signals(): SignalsController? {
+        val context = context() ?: return null
+        val api = context.client as? SignalsClient ?: return null
+        if (signalContext != context) {
+            signalController?.invalidate()
+            signalObserver?.cancel()
+            val controller = SignalsController(coroutineScope, api, state().user ?: return null)
+            signalController = controller
+            signalContext = context
+            signalObserver = coroutineScope.launch {
+                controller.state.collect { value -> if (current(context)) update { it.copy(signals = value) } }
+            }
+        }
+        return signalController
+    }
+
+    private fun pnl(): PnlController? {
+        val context = context() ?: return null
+        val api = context.client as? PnlClient ?: return null
+        val wallet = state().snapshot?.wallets?.firstOrNull { it.publicId == context.scope.activeWalletPublicId }
+        if (pnlContext != context || pnlWallet != wallet) {
+            pnlController?.invalidate()
+            pnlObserver?.cancel()
+            val controller = PnlController(coroutineScope, api)
+            controller.reset(wallet, "read:positions" in context.scope.effectivePermissions)
+            pnlController = controller
+            pnlContext = context
+            pnlWallet = wallet
+            pnlObserver = coroutineScope.launch {
+                controller.state.collect { value -> if (current(context)) update { it.copy(pnl = value) } }
+            }
+        }
+        return pnlController
+    }
+
+    fun setForeground(value: Boolean) {
+        foreground = value
+        activateAccounts()
+    }
+
+    fun setAccountsVisible(value: Boolean) {
+        accountsVisible = value
+        activateAccounts()
+    }
+
+    fun refreshAccounts() {
+        if (foreground && accountsVisible) accountsController?.refresh()
+    }
+
+    private fun activateAccounts() {
+        val context = context()
+        if (!foreground || !accountsVisible || context == null) {
+            accountsController?.invalidate()
+            return
+        }
+        val api = context.client as? VenueAccountsClient ?: return
+        if (accountsContext != context) {
+            accountsController?.invalidate()
+            accountsObserver?.cancel()
+            val controller = VenueAccountsController(coroutineScope, api, Clock.systemUTC())
+            accountsController = controller
+            accountsContext = context
+            accountsObserver = coroutineScope.launch {
+                controller.state.collect { value -> if (current(context)) update { it.copy(venueAccounts = value) } }
+            }
+        }
+        accountsController?.activate(context.scope.activeWalletPublicId, context.scope.effectivePermissions, foreground, accountsVisible)
     }
 
     private fun notifications(): NotificationDefaultsController? {
@@ -150,17 +262,17 @@ internal class FeatureCoordinator(
         catalogJob = coroutineScope.launch {
             try {
                 val exchanges = api.marketExchanges()
-                if (!current(context) || request != catalogRevision) return@launch
+                if (!catalogCurrent(context, request)) return@launch
                 update { it.copy(marketCatalog = MarketSelection.exchanges(it.marketCatalog, exchanges)) }
                 val selected = state().marketCatalog.exchange
                 val instruments = if (selected.isNotBlank()) api.marketInstruments(selected) else emptyList()
-                if (current(context) && request == catalogRevision) update {
+                if (catalogCurrent(context, request)) update {
                     it.copy(marketCatalog = MarketSelection.instruments(it.marketCatalog, selected, instruments))
                 }
             } catch (error: CancellationException) {
                 throw error
             } catch (error: Exception) {
-                if (current(context) && request == catalogRevision) update {
+                if (catalogCurrent(context, request)) update {
                     it.copy(marketCatalog = it.marketCatalog.copy(isLoading = false, error = classify(error)))
                 }
             }
@@ -177,13 +289,13 @@ internal class FeatureCoordinator(
         catalogJob = coroutineScope.launch {
             try {
                 val instruments = api.marketInstruments(exchange)
-                if (current(context) && request == catalogRevision) update {
+                if (catalogCurrent(context, request)) update {
                     it.copy(marketCatalog = MarketSelection.instruments(it.marketCatalog, exchange, instruments))
                 }
             } catch (error: CancellationException) {
                 throw error
             } catch (error: Exception) {
-                if (current(context) && request == catalogRevision) update {
+                if (catalogCurrent(context, request)) update {
                     it.copy(marketCatalog = it.marketCatalog.copy(isLoading = false, error = classify(error)))
                 }
             }

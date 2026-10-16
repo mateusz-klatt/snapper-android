@@ -1,5 +1,6 @@
 package ch.snapper.android.features.notifications
 
+import ch.snapper.android.data.NotificationDefaultDto
 import ch.snapper.android.data.NotificationDefaultsClient
 import ch.snapper.android.data.NotificationDefaultRejectedException
 import ch.snapper.android.data.OrderScope
@@ -47,16 +48,7 @@ class NotificationDefaultsController(
                 check(values.all { it.userPublicId == scope.publicId })
                 check(values.map { it.alertType }.distinct().size == values.size)
                 if (epoch != requestEpoch) return@launch
-                val rows = mutableState.value.rows.map { row ->
-                    val server = values.find { it.alertType == row.alertType }
-                    // An explicit refresh reconciles an uncertain write; never automatically repeats it.
-                    if (row.dirty && row.issue != NotificationDefaultIssue.UNKNOWN) row else row.copy(
-                        enabled = server?.enabled ?: true,
-                        minPriority = server?.minPriority ?: "medium",
-                        inherited = server == null, dirty = false, saved = false, issue = null,
-                    )
-                }
-                mutableState.value = mutableState.value.copy(rows = rows, loading = false, loaded = true)
+                applySnapshot(values)
             } catch (error: CancellationException) {
                 if (epoch == requestEpoch) mutableState.value = mutableState.value.copy(loading = false)
                 throw error
@@ -64,6 +56,18 @@ class NotificationDefaultsController(
                 if (epoch == requestEpoch) mutableState.value = mutableState.value.copy(loading = false, loadFailed = true)
             }
         }
+    }
+
+    private fun applySnapshot(values: List<NotificationDefaultDto>) {
+        val rows = mutableState.value.rows.map { row -> reconcile(row, values.find { it.alertType == row.alertType }) }
+        mutableState.value = mutableState.value.copy(rows = rows, loading = false, loaded = true)
+    }
+
+    private fun reconcile(row: NotificationDefaultRow, server: NotificationDefaultDto?): NotificationDefaultRow {
+        // Explicit refresh reconciles uncertain writes without repeating them; unsaved drafts survive.
+        if (row.dirty && row.issue != NotificationDefaultIssue.UNKNOWN) return row
+        return row.copy(enabled = server?.enabled ?: true, minPriority = server?.minPriority ?: "medium",
+            inherited = server == null, dirty = false, saved = false, issue = null)
     }
 
     private fun edit(type: String, change: (NotificationDefaultRow) -> NotificationDefaultRow) {
@@ -91,22 +95,33 @@ class NotificationDefaultsController(
         val scope = userScope
         val payload = UpdateNotificationDefaultPayload(type, row.enabled, row.minPriority)
         update(type) { it.copy(pending = true, saved = false, issue = null) }
-        coroutineScope.launch {
-            try {
-                val result = client.updateNotificationDefaults(scope, payload)
-                check(result.userPublicId == scope.publicId && result.alertType == type)
-                check(result.enabled == payload.enabled && result.minPriority == payload.minPriority)
-                if (epoch == requestEpoch) update(type) { it.copy(pending = false, dirty = false, inherited = false, saved = true) }
-            } catch (error: CancellationException) {
-                if (epoch == requestEpoch) update(type) { it.copy(pending = false, issue = NotificationDefaultIssue.UNKNOWN) }
-                throw error
-            } catch (_: OrderScopeChangedException) {
-                if (epoch == requestEpoch) update(type) { it.copy(pending = false, issue = NotificationDefaultIssue.SCOPE_CHANGED) }
-            } catch (_: NotificationDefaultRejectedException) {
-                if (epoch == requestEpoch) update(type) { it.copy(pending = false, issue = NotificationDefaultIssue.REJECTED) }
-            } catch (_: Exception) {
-                if (epoch == requestEpoch) update(type) { it.copy(pending = false, issue = NotificationDefaultIssue.UNKNOWN) }
-            }
+        coroutineScope.launch { submit(requestEpoch, scope, payload) }
+    }
+
+    private fun updateCurrent(requestEpoch: Long, type: String, change: (NotificationDefaultRow) -> NotificationDefaultRow) {
+        if (epoch == requestEpoch) update(type, change)
+    }
+
+    private fun failCurrent(requestEpoch: Long, type: String, issue: NotificationDefaultIssue) {
+        updateCurrent(requestEpoch, type) { it.copy(pending = false, issue = issue) }
+    }
+
+    private suspend fun submit(requestEpoch: Long, scope: OrderScope, payload: UpdateNotificationDefaultPayload) {
+        val type = payload.alertType
+        try {
+            val result = client.updateNotificationDefaults(scope, payload)
+            check(result.userPublicId == scope.publicId && result.alertType == type)
+            check(result.enabled == payload.enabled && result.minPriority == payload.minPriority)
+            updateCurrent(requestEpoch, type) { it.copy(pending = false, dirty = false, inherited = false, saved = true) }
+        } catch (error: CancellationException) {
+            failCurrent(requestEpoch, type, NotificationDefaultIssue.UNKNOWN)
+            throw error
+        } catch (_: OrderScopeChangedException) {
+            failCurrent(requestEpoch, type, NotificationDefaultIssue.SCOPE_CHANGED)
+        } catch (_: NotificationDefaultRejectedException) {
+            failCurrent(requestEpoch, type, NotificationDefaultIssue.REJECTED)
+        } catch (_: Exception) {
+            failCurrent(requestEpoch, type, NotificationDefaultIssue.UNKNOWN)
         }
     }
 }

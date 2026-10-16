@@ -28,11 +28,13 @@ The app retrieves wallet identifiers and labels, positions, quantities, prices, 
 
 When you have the required permissions, the app sends order submissions and cancellation requests to your configured backend. Requests include the selected wallet, instrument, order details and identifiers used to track or deduplicate the operation. The backend is responsible for processing these commands and any exchange integration. The Android app does not hold exchange API credentials or connect directly to an exchange.
 
-With the required permissions, the app also retrieves execution records and fees, accessible desk information, backend health and process status, strategy and backtest records, user-directory information and AI-delegate metadata.
+With the required permissions, the app also retrieves execution records and fees, venue balances and reconciliation status, trading signals, historical P&L and valuation metadata, accessible desk information, backend health and process status, strategy and backtest records, user-directory information and AI-delegate metadata.
 
 When authorized to manage desk memberships, you can submit an existing viewer's username and the selected desk identifier to your backend.
 
 The app retrieves and updates account-level notification defaults, including alert type, enabled status and minimum priority. These settings are stored by your backend; changing them does not register this Android device for push notifications.
+
+If you export trading signals as CSV, you choose the document destination through Android. The app writes the selected records to that destination. Access and retention then depend on the destination provider and your choices.
 
 ## Preferences and local storage
 

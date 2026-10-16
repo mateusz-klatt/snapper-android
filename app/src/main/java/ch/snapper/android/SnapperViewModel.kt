@@ -60,6 +60,10 @@ class SnapperViewModel(
         system = features.systemActions,
         records = features.recordsActions,
         notificationDefaults = features.notificationActions,
+        signals = features.signalActions,
+        pnl = features.pnlActions,
+        refreshVenueAccounts = features::refreshAccounts,
+        venueAccountsVisible = features::setAccountsVisible,
         orders = OrderActions(
             open = ::openOrder, dismiss = ::dismissOrder, updateDraft = ::updateOrderDraft,
             selectExchange = ::selectOrderExchange, review = ::reviewOrder, back = ::editOrder,
@@ -89,7 +93,12 @@ class SnapperViewModel(
     }
 
     fun onForeground() {
+        features.setForeground(true)
         if (state.value.user != null && !state.value.isLoading && !state.value.isRestoring) refresh()
+    }
+
+    fun onBackground() {
+        features.setForeground(false)
     }
 
     private fun currentSession(): SessionClient {

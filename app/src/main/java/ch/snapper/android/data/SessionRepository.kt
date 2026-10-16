@@ -51,7 +51,8 @@ class SessionRepository private constructor(
     private val mutationApi: SnapperApi,
     private val cookies: SessionCookies,
     private val client: OkHttpClient,
-) : SessionClient, DeskClient, MarketCatalogClient, SystemClient, RecordsClient, NotificationDefaultsClient {
+) : SessionClient, DeskClient, MarketCatalogClient, SystemClient, RecordsClient, NotificationDefaultsClient,
+    SignalsClient, VenueAccountsClient, PnlClient {
     private val mutableUser = MutableStateFlow<UserDto?>(null)
     override val user: StateFlow<UserDto?> = mutableUser.asStateFlow()
     private val operation = Mutex()
@@ -174,11 +175,15 @@ class SessionRepository private constructor(
     private suspend fun <T> featureRead(permission: String? = null, action: suspend () -> T): T = operation.withLock {
         val generation = cookies.generation()
         ensureCurrent(generation)
-        check(mutableUser.value != null) { "Sign in first" }
+        val expectedScope = OrderScope.from(mutableUser.value ?: throw SessionExpiredException())
         val profile = authorized(generation) { api.me().payload }
         commitUser(generation, profile)
         if (permission != null && !profile.hasPermission(permission)) throw OrderRejectedException(403)
-        authorized(generation, action)
+        requireFeatureScope(expectedScope, permission)
+        authorized(generation) {
+            requireFeatureScope(expectedScope, permission)
+            action()
+        }
     }
 
     override suspend fun marketExchanges(): List<String> = featureRead(READ_MARKET_DATA_PERMISSION) { api.exchanges().payload }
@@ -191,12 +196,17 @@ class SessionRepository private constructor(
 
     override suspend fun attachViewer(scope: OrderScope, operatorPublicId: String, username: String) = operation.withLock {
         require(operatorPublicId.isNotBlank() && username.isNotBlank() && username == username.trim())
-        val generation: Long
+        val generation = prepareDeskAttachment(scope, operatorPublicId)
+        dispatchDeskAttachment(generation, operatorPublicId, username)
+    }
+
+    private suspend fun prepareDeskAttachment(scope: OrderScope, operatorPublicId: String): Long {
         try {
-            generation = featureMutationPreflight(scope, "manage:desk_memberships")
+            val generation = featureMutationPreflight(scope, "manage:desk_memberships")
             val desks = authorized(generation) { api.desks().payload }
             if (desks.none { it.publicId == operatorPublicId }) throw DeskRejectedException(403)
             requireFeatureScope(scope, "manage:desk_memberships")
+            return generation
         } catch (error: CancellationException) {
             throw error
         } catch (error: DeskRejectedException) {
@@ -206,6 +216,9 @@ class SessionRepository private constructor(
         } catch (error: Exception) {
             throw DeskPreparationException(error)
         }
+    }
+
+    private suspend fun dispatchDeskAttachment(generation: Long, operatorPublicId: String, username: String) {
         try {
             mutationApi.attachViewer(operatorPublicId, username)
             ensureCurrent(generation)
@@ -214,7 +227,6 @@ class SessionRepository private constructor(
             if (error.code() in 400..499 && error.code() !in setOf(408, 425)) throw DeskRejectedException(error.code())
             throw error
         }
-        Unit
     }
 
     private fun requireFeatureScope(scope: OrderScope, permission: String?) {
@@ -245,6 +257,27 @@ class SessionRepository private constructor(
     }
 
     override suspend fun notificationDefaults(): List<NotificationDefaultDto> = featureRead { api.notificationDefaults().payload }
+
+    private fun requireSelectedWallet(walletPublicId: String?) {
+        if (mutableUser.value?.activeWalletPublicId != walletPublicId) throw OrderScopeChangedException()
+    }
+
+    override suspend fun signals(walletPublicId: String?): List<SignalDto> = featureRead("read:signals") {
+        requireSelectedWallet(walletPublicId)
+        api.signals(walletPublicId).payload
+    }
+
+    override suspend fun venueAccounts(walletPublicId: String?): List<VenueAccountDto> = featureRead("read:account_state") {
+        requireSelectedWallet(walletPublicId)
+        api.venueAccounts(walletPublicId).payload
+    }
+
+    override suspend fun pnlSeries(query: PnlSeriesQuery): PnlSeriesDto = featureRead("read:positions") {
+        requireSelectedWallet(query.walletPublicId)
+        val wallet = api.wallets().payload.firstOrNull { it.publicId == query.walletPublicId } ?: throw OrderScopeChangedException()
+        require(query.mode == if (wallet.isPaper) "paper" else "live") { "Wallet mode changed" }
+        api.pnlSeries(query.walletPublicId, query.mode, query.granularity, query.from.toString(), query.to.toString(), query.valuationCcy).payload
+    }
 
     override suspend fun updateNotificationDefaults(scope: OrderScope, payload: UpdateNotificationDefaultPayload): NotificationDefaultDto = operation.withLock {
         require(payload.alertType in setOf("order_fill_full", "order_rejected", "position_stop_loss_fired", "margin_warning", "critical_system_error", "order_unknown", "drift"))

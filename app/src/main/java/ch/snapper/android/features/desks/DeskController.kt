@@ -87,19 +87,22 @@ class DeskController(
         val scope = userScope
         val requestEpoch = epoch
         mutableState.value = current.copy(submitting = true, succeeded = false, issue = null)
-        coroutineScope.launch {
-            try {
-                client.attachViewer(scope, desk, username)
-                if (epoch == requestEpoch) mutableState.value = mutableState.value.copy(submitting = false, username = "", succeeded = true)
-            } catch (error: CancellationException) {
-                throw error
-            } catch (_: DeskPreparationException) {
-                if (epoch == requestEpoch) mutableState.value = mutableState.value.copy(submitting = false, issue = DeskIssue.PREPARATION)
-            } catch (_: DeskRejectedException) {
-                if (epoch == requestEpoch) mutableState.value = mutableState.value.copy(submitting = false, issue = DeskIssue.REJECTED)
-            } catch (_: Exception) {
-                if (epoch == requestEpoch) mutableState.value = mutableState.value.copy(submitting = false, issue = DeskIssue.UNKNOWN)
+        coroutineScope.launch { submit(scope, desk, username, requestEpoch) }
+    }
+
+    private suspend fun submit(scope: OrderScope, desk: String, username: String, requestEpoch: Long) {
+        try {
+            client.attachViewer(scope, desk, username)
+            if (epoch == requestEpoch) mutableState.value = mutableState.value.copy(submitting = false, username = "", succeeded = true)
+        } catch (error: CancellationException) {
+            throw error
+        } catch (error: Exception) {
+            val issue = when (error) {
+                is DeskPreparationException -> DeskIssue.PREPARATION
+                is DeskRejectedException -> DeskIssue.REJECTED
+                else -> DeskIssue.UNKNOWN
             }
+            if (epoch == requestEpoch) mutableState.value = mutableState.value.copy(submitting = false, issue = issue)
         }
     }
 }

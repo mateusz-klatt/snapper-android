@@ -21,6 +21,15 @@ import ch.snapper.android.features.system.SystemState
 
 /** Stateless, permission-gated feeds. Session scope and request generations belong to the caller. */
 internal fun LazyListScope.systemScreen(state: SystemState, actions: SystemActions) {
+    statusSection(state, actions)
+    healthSection(state, actions)
+    strategiesSection(state, actions)
+    backtestsSection(state, actions)
+    usersSection(state, actions)
+    delegatesSection(state, actions)
+}
+
+private fun LazyListScope.statusSection(state: SystemState, actions: SystemActions) {
     if (SystemFeed.STATUS.isAllowed(state.permissions)) item {
         SystemSection(R.string.system_trader, SystemFeed.STATUS, state.status, actions) { data ->
             Metric(R.string.status, data.trader.status)
@@ -29,6 +38,9 @@ internal fun LazyListScope.systemScreen(state: SystemState, actions: SystemActio
             data.strategies.orEmpty().forEach { strategy -> RecordCard(strategy.strategyName) { Text(strategy.status) } }
         }
     }
+}
+
+private fun LazyListScope.healthSection(state: SystemState, actions: SystemActions) {
     if (SystemFeed.HEALTH.isAllowed(state.permissions)) item {
         SystemSection(R.string.system_health, SystemFeed.HEALTH, state.health, actions) { data ->
             Metric(R.string.status, data.status)
@@ -46,6 +58,9 @@ internal fun LazyListScope.systemScreen(state: SystemState, actions: SystemActio
             Metric(R.string.system_rest_clients, data.gapDetection.restClients?.size?.toString() ?: "—")
         }
     }
+}
+
+private fun LazyListScope.strategiesSection(state: SystemState, actions: SystemActions) {
     if (SystemFeed.STRATEGIES.isAllowed(state.permissions)) item {
         SystemSection(R.string.system_strategies, SystemFeed.STRATEGIES, state.strategies, actions) { rows ->
             EmptySystemRows(rows.isEmpty())
@@ -58,6 +73,9 @@ internal fun LazyListScope.systemScreen(state: SystemState, actions: SystemActio
             } }
         }
     }
+}
+
+private fun LazyListScope.backtestsSection(state: SystemState, actions: SystemActions) {
     if (SystemFeed.BACKTESTS.isAllowed(state.permissions)) item {
         SystemSection(R.string.system_backtests, SystemFeed.BACKTESTS, state.backtests, actions) { rows ->
             EmptySystemRows(rows.isEmpty())
@@ -74,6 +92,9 @@ internal fun LazyListScope.systemScreen(state: SystemState, actions: SystemActio
             } }
         }
     }
+}
+
+private fun LazyListScope.usersSection(state: SystemState, actions: SystemActions) {
     if (SystemFeed.USERS.isAllowed(state.permissions)) item {
         SystemSection(R.string.system_users, SystemFeed.USERS, state.users, actions) { rows ->
             EmptySystemRows(rows.isEmpty())
@@ -85,6 +106,9 @@ internal fun LazyListScope.systemScreen(state: SystemState, actions: SystemActio
             } }
         }
     }
+}
+
+private fun LazyListScope.delegatesSection(state: SystemState, actions: SystemActions) {
     if (SystemFeed.DELEGATES.isAllowed(state.permissions)) item {
         SystemSection(R.string.system_delegates, SystemFeed.DELEGATES, state.delegates, actions) { rows ->
             EmptySystemRows(rows.isEmpty())
