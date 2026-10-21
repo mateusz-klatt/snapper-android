@@ -209,7 +209,7 @@ class AndroidPushPlatform internal constructor(
 }
 
 /** Waiting remains attached to the actual SDK task, preventing overlapping cleanup after cancellation. */
-private suspend fun <T> Task<T>.awaitCompletion(): T = suspendCoroutine { continuation ->
+internal suspend fun <T> Task<T>.awaitCompletion(): T = suspendCoroutine { continuation ->
     addOnCompleteListener { task ->
         if (task.isSuccessful) continuation.resume(task.result)
         else continuation.resumeWithException(task.exception ?: IllegalStateException("Push operation failed"))

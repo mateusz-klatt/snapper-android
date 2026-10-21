@@ -16,6 +16,57 @@ import org.junit.Test
 
 class PushSettingsContentTest {
     @get:Rule val compose = createComposeRule()
+    @Test fun permissionResultControlsExplicitRegistrationWithoutLaunchingSystemUi() {
+        val registry = PushPermissionRegistry()
+        var enables = 0
+        val config = ch.snapper.android.data.PushConfiguration("config", "fcm_fid", "test.app", "project", "app", "public", "sender")
+        compose.setContent {
+            androidx.compose.runtime.CompositionLocalProvider(androidx.activity.compose.LocalActivityResultRegistryOwner provides registry) {
+                PushSettingsContent(PushState(PushStatus.READY, config), PushActions(enable = { enables++ }))
+            }
+        }
+        compose.onNodeWithTag("push.enable").assertIsEnabled().performClick()
+        if (android.os.Build.VERSION.SDK_INT >= 33) {
+            compose.runOnIdle { assertEquals(0, enables); registry.complete(false) }
+            compose.runOnIdle { assertEquals(0, enables) }
+            compose.onNodeWithTag("push.enable").performClick()
+            compose.runOnIdle { registry.complete(true) }
+        }
+        compose.runOnIdle { assertEquals(1, enables) }
+    }
+
+    @Test fun lifecycleStatusesExposeRecoveryWithoutImplicitRegistration() {
+        val context = InstrumentationRegistry.getInstrumentation().targetContext
+        val config = ch.snapper.android.data.PushConfiguration("config", "fcm_fid", "test.app", "project", "app", "public", "sender")
+        val state = androidx.compose.runtime.mutableStateOf(PushState())
+        var refreshes = 0; var disables = 0; var enables = 0
+        compose.setContent { PushSettingsContent(state.value, PushActions(refresh = { refreshes++ }, enable = { enables++ }, disable = { disables++ })) }
+        val cases = listOf(
+            PushStatus.OFF to ch.snapper.android.R.string.push_off,
+            PushStatus.LOADING to ch.snapper.android.R.string.push_busy,
+            PushStatus.REGISTERING to ch.snapper.android.R.string.push_busy,
+            PushStatus.UNAVAILABLE to ch.snapper.android.R.string.push_unavailable,
+            PushStatus.PERMISSION_REQUIRED to ch.snapper.android.R.string.push_permission,
+            PushStatus.READY to ch.snapper.android.R.string.push_ready,
+            PushStatus.ACCEPTED to ch.snapper.android.R.string.push_accepted,
+            PushStatus.REJECTED to ch.snapper.android.R.string.push_rejected,
+            PushStatus.RESTART_REQUIRED to ch.snapper.android.R.string.push_restart,
+            PushStatus.CLEANUP_PENDING to ch.snapper.android.R.string.push_cleanup,
+        )
+        for ((status, message) in cases) {
+            compose.runOnIdle { state.value = PushState(status, config) }
+            compose.onNodeWithTag("push.status").assertTextEquals(context.getString(message))
+            if (status in listOf(PushStatus.READY, PushStatus.PERMISSION_REQUIRED, PushStatus.REJECTED)) compose.onNodeWithTag("push.enable").assertIsEnabled()
+            else compose.onNodeWithTag("push.enable").assertIsNotEnabled()
+            if (status in listOf(PushStatus.LOADING, PushStatus.REGISTERING)) compose.onNodeWithText(context.getString(ch.snapper.android.R.string.refresh)).assertIsNotEnabled()
+            else compose.onNodeWithText(context.getString(ch.snapper.android.R.string.refresh)).assertIsEnabled()
+            compose.onNodeWithTag("push.disable").assertIsEnabled()
+        }
+        compose.onNodeWithTag("push.disable").performClick()
+        compose.onNodeWithText(context.getString(ch.snapper.android.R.string.refresh)).performClick()
+        compose.runOnIdle { assertEquals(1, disables); assertEquals(1, refreshes); assertEquals(0, enables) }
+    }
+
     @Test fun mergedManifestHasOnlyOwnedDeliveryServiceAndNoAutomaticFirebaseInitializer() {
         val context = InstrumentationRegistry.getInstrumentation().targetContext
         val services = context.packageManager.queryIntentServices(
@@ -56,5 +107,21 @@ class PushSettingsContentTest {
         compose.onNodeWithText("Fresh detail").assertExists()
         compose.onNodeWithText("Close").performClick()
         compose.runOnIdle { assertEquals(1, dismissed) }
+    }
+}
+
+private class PushPermissionRegistry : androidx.activity.result.ActivityResultRegistry(), androidx.activity.result.ActivityResultRegistryOwner {
+    override val activityResultRegistry: androidx.activity.result.ActivityResultRegistry get() = this
+    private var pendingCode: Int? = null
+    override fun <I, O> onLaunch(requestCode: Int, contract: androidx.activity.result.contract.ActivityResultContract<I, O>, input: I,
+        options: androidx.core.app.ActivityOptionsCompat?) {
+        check(contract is androidx.activity.result.contract.ActivityResultContracts.RequestPermission)
+        check(input == android.Manifest.permission.POST_NOTIFICATIONS)
+        check(pendingCode == null)
+        pendingCode = requestCode
+    }
+    fun complete(granted: Boolean) {
+        val code = checkNotNull(pendingCode); pendingCode = null
+        dispatchResult(code, granted)
     }
 }

@@ -12,6 +12,13 @@ import android.content.pm.PackageManager
 import androidx.test.platform.app.InstrumentationRegistry
 import ch.snapper.android.data.PushConfiguration
 import ch.snapper.android.data.PushRegistration
+import ch.snapper.android.data.PushRegistrationCommand
+import com.google.android.gms.tasks.Tasks
+import com.google.android.gms.tasks.TaskCompletionSource
+import com.google.android.gms.tasks.CancellationTokenSource
+import kotlinx.coroutines.CompletableDeferred
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import com.google.firebase.FirebaseApp
 import java.io.File
 import java.util.UUID
@@ -46,6 +53,39 @@ class AndroidPushPlatformTest {
         val folder = File(context.cacheDir, "push-test-" + UUID.randomUUID()).apply { mkdirs() }
         val isolated = object : ContextWrapper(context) { override fun getNoBackupFilesDir() = folder }
         try { block(isolated, AndroidPushStore(isolated)) } finally { folder.deleteRecursively() }
+    }
+    @Test fun releasedTaskBridgePreservesSuccessFailureAndCancellationWithoutFirebase() = runBlocking {
+        assertEquals("observed", Tasks.forResult("observed").awaitCompletion())
+        val failure = java.io.IOException("Synthetic task failure")
+        assertSame(failure, runCatching { Tasks.forException<String>(failure).awaitCompletion() }.exceptionOrNull())
+        val cancellation = CancellationTokenSource()
+        val cancelled = TaskCompletionSource<String>(cancellation.token)
+        cancellation.cancel()
+        assertTrue(runCatching { cancelled.task.awaitCompletion() }.exceptionOrNull() is IllegalStateException)
+    }
+    @Test fun coroutineCancellationDoesNotDetachPendingSdkTaskAndPermitOverlappingCleanup() = runBlocking {
+        val sdk = TaskCompletionSource<String>()
+        val started = CompletableDeferred<Unit>()
+        val operation = launch(Dispatchers.Default) {
+            started.complete(Unit)
+            sdk.task.awaitCompletion()
+        }
+        started.await()
+        operation.cancel()
+        assertFalse(operation.isCompleted)
+        sdk.setResult("completed")
+        operation.join()
+        assertTrue(operation.isCompleted)
+    }
+    @Test fun pendingPostJournalSurvivesRealAtomicStoreReconstructionBeforeAnyReceipt() = storage { isolated, store ->
+        val command = PushRegistrationCommand("fcm_fid", config.configurationId, "test.app", "installation", "binding", "a".repeat(64), "observed-fid", "user", "1")
+        val pending = PendingPushBinding("https://example.invalid", "scope", config, command)
+        store.pendingRegistrations = listOf(pending)
+        val cold = AndroidPushStore(isolated)
+        assertEquals(listOf(pending), cold.pendingRegistrations)
+        assertNull(cold.accepted)
+        cold.pendingRegistrations = emptyList()
+        assertTrue(store.pendingRegistrations.isEmpty())
     }
     @Test fun genericNoticeContainsOnlyStaticInvitationAndImmutableExplicitAppIntent() {
         val notice = AndroidPushNotice(context).notification(PushHint("configuration", "binding", "registration", "alert", 2000))

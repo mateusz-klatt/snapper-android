@@ -106,13 +106,21 @@ class PushDelivery(private val store: PushStore, private val notice: PushNotice,
             hint.bindingId == accepted.registration.bindingId && hint.registrationId == accepted.registration.publicId
     }
     @Synchronized fun receive(data: Map<String, String>, sender: String?) {
+        try {
+            receiveAccepted(data, sender)
+        } catch (_: Exception) {
+            // Storage failures and permission races must not escape the background service.
+            invalidate()
+        }
+    }
+    private fun receiveAccepted(data: Map<String, String>, sender: String?) {
         val accepted = mutableBinding.value ?: return
         if (sender != accepted.configuration.messagingSenderId || !notice.allowed()) return
         val hint = PushHint.parse(data, now()) ?: return
         if (!matches(hint)) return
         val key = "${hint.registrationId}:${hint.alertId}"
         if (store.seen(key)) return
-        notice.show(hint)
         store.remember(key)
+        notice.show(hint)
     }
 }
