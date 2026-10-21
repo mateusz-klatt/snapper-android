@@ -44,7 +44,7 @@ Builds package every supported translation catalog, with English as the default.
 
 Record timestamps use country formatting and the current device time zone with an explicit UTC offset. Presentation formatting leaves domain timestamps and API queries unchanged; CSV retains its canonical UTC millisecond format. Candle axis endpoints use the same country and device-time-zone formatter with explicit UTC offsets, distinguishing repeated times during daylight-saving transitions. P&L axis labels include dates or offsets when needed to distinguish midnight and daylight-saving transitions. Dense P&L series preserve bucket extrema, endpoints and missing-value gaps when reduced for drawing. Series colors and line patterns identify net, realized and unrealized values independently of the financial-direction preference.
 
-The existing backend's device registration and delivery are APNs-only. FCM requires an Android provider contract and delivery integration before an Android device token can be registered; this app does not submit FCM tokens to the iOS endpoint.
+Existing APNs registration and delivery remain unchanged. Android uses the separate `/api/devices/android` FID contract and runtime configuration supplied by the backend; absent or unavailable configuration leaves push disabled. The app never submits a Firebase installation ID to the legacy iOS registration endpoint. Active Google Play internal-testing build 1006 contains no Firebase SDK; publication of the optional push feature still requires real project and device-lifecycle validation.
 
 ## Manual orders
 

@@ -43,12 +43,13 @@ internal class FakePlatform : PushPlatform {
     var unregisters = 0
     var gate: CompletableDeferred<Unit>? = null
     var restart = false
+    var fid = "fid-value"
     override fun permissionGranted() = notice.permission
     override suspend fun register(configuration: PushConfiguration): String {
         registrations++; lease++
         if (restart) throw PushRestartRequiredException()
         withContext(NonCancellable) { gate?.await() }
-        return "fid-value"
+        return fid
     }
     override suspend fun unregister(expectedLease: Long) { if (expectedLease == lease) unregisters++ }
 }
@@ -63,13 +64,14 @@ internal class FakePushClient : PushClient {
     var revokeFailure = false
     var revokeGate: CompletableDeferred<Unit>? = null
     var detailGate: CompletableDeferred<Unit>? = null
+    var prepareGate: CompletableDeferred<Unit>? = null
     var transform: (PushRegistration) -> PushRegistration = { it }
     var config = configuration
     var command: PushRegistrationCommand? = null
     var gate: CompletableDeferred<Unit>? = null
     var rows = emptyList<PushRegistration>()
     override suspend fun pushConfiguration() = PushConfigurationInfo(if (unavailable) "unavailable" else "configured", if (unavailable) null else config)
-    override suspend fun pushRegistrationState(configurationId: String, installationId: String): PushRegistrationState { reads++; return PushRegistrationState("opaque-revision") }
+    override suspend fun pushRegistrationState(configurationId: String, installationId: String): PushRegistrationState { reads++; withContext(NonCancellable) { prepareGate?.await() }; return PushRegistrationState("opaque-revision") }
     override suspend fun registerPush(command: PushRegistrationCommand): PushRegistration {
         posts++; this.command = command
         withContext(NonCancellable) { gate?.await() }
@@ -89,6 +91,26 @@ internal class FakePushClient : PushClient {
 
 @OptIn(kotlinx.coroutines.ExperimentalCoroutinesApi::class)
 class PushControllerTest {
+    @Test fun invalidObservedFidNeverPreparesOrDispatchesBackendRegistration() = runTest {
+        listOf("", "a".repeat(257), "contains space", "nonascii-ą").forEach { fid ->
+            val client = FakePushClient(); val platform = FakePlatform().apply { this.fid = fid }
+            val controller = PushController(backgroundScope, { PushBinding(identity, client) }, platform, "test.app", "1")
+            controller.refresh(); runCurrent(); controller.enable(); runCurrent()
+            assertEquals(PushStatus.REJECTED, controller.state.value.status)
+            assertEquals(0, client.reads); assertEquals(0, client.posts)
+        }
+    }
+    @Test fun stalePreparationCompletionCannotDispatchUnderReplacementSession() = runTest {
+        val client = FakePushClient().apply { prepareGate = CompletableDeferred() }; val platform = FakePlatform()
+        var owner = PushBinding(identity, client)
+        val controller = PushController(backgroundScope, { owner }, platform, "test.app", "1")
+        controller.refresh(); runCurrent(); controller.enable(); runCurrent()
+        owner = PushBinding(identity.copy(epoch = 2), client)
+        controller.invalidate(); client.prepareGate!!.complete(Unit); runCurrent()
+        assertEquals(0, client.posts); assertTrue(platform.delivery.pendingRegistrations().isEmpty())
+        assertNull(platform.delivery.binding())
+    }
+
     @Test fun heldCleanupBlocksSameControllerAndCannotUnregisterNewerControllerLease() = runTest {
         val client = FakePushClient(); val platform = FakePlatform()
         val first = PushController(backgroundScope, { PushBinding(identity, client) }, platform, "test.app", "1")

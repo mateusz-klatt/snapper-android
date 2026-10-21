@@ -127,18 +127,26 @@ class PushController(
         scope.launch {
             try {
                 register(owner, request, config)
-            } catch (_: PushRestartRequiredException) {
-                if (current(owner, request)) mutable.value = state.value.copy(status = PushStatus.RESTART_REQUIRED)
-            } catch (_: PushRejectedException) {
-                if (current(owner, request)) {
-                    val cleared = runCatching { intent?.let { platform.delivery.resolved(it.command.bindingId) } }.isSuccess
-                    intent = null
-                    mutable.value = state.value.copy(status = if (cleared) PushStatus.REJECTED else PushStatus.CLEANUP_PENDING)
-                }
-            } catch (_: Exception) {
-                if (current(owner, request)) mutable.value = state.value.copy(status = if (intent != null) PushStatus.UNCERTAIN else PushStatus.REJECTED)
+            } catch (error: Exception) {
+                registrationFailed(owner, request, error)
             } finally { busy = false }
         }
+    }
+
+    private fun registrationFailed(owner: PushBinding, request: Long, error: Exception) {
+        if (!current(owner, request)) return
+        val status = when (error) {
+            is PushRestartRequiredException -> PushStatus.RESTART_REQUIRED
+            is PushRejectedException -> clearRejectedIntent()
+            else -> if (intent != null) PushStatus.UNCERTAIN else PushStatus.REJECTED
+        }
+        mutable.value = state.value.copy(status = status)
+    }
+
+    private fun clearRejectedIntent(): PushStatus {
+        val cleared = runCatching { intent?.let { platform.delivery.resolved(it.command.bindingId) } }.isSuccess
+        intent = null
+        return if (cleared) PushStatus.REJECTED else PushStatus.CLEANUP_PENDING
     }
 
     private suspend fun register(owner: PushBinding, request: Long, config: PushConfiguration) {

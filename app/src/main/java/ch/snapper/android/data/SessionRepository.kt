@@ -905,12 +905,11 @@ class SessionRepository private constructor(
                 .addInterceptor { chain ->
                     val request = chain.request()
                     val body = request.body
-                    if (body == null) return@addInterceptor chain.proceed(request)
                     val oneShot = object : RequestBody() {
-                        override fun contentType() = body.contentType()
-                        override fun contentLength() = body.contentLength()
+                        override fun contentType() = body?.contentType()
+                        override fun contentLength() = body?.contentLength() ?: 0L
                         override fun isOneShot() = true
-                        override fun writeTo(sink: BufferedSink) = body.writeTo(sink)
+                        override fun writeTo(sink: BufferedSink) { body?.writeTo(sink) }
                     }
                     chain.proceed(request.newBuilder().method(request.method, oneShot).build())
                 }.build()

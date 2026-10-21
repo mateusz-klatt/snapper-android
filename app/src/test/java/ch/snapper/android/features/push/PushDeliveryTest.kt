@@ -13,6 +13,54 @@ class PushDeliveryTest {
         "binding_id" to bindingId, "registration_public_id" to REG_ID, "alert_public_id" to ALERT_ID,
         "expires_at" to Instant.ofEpochMilli(2000).toString())
 
+    @Test fun storageAndNotificationFaultsDoNotEscapeServiceAndBlockFurtherDelivery() {
+        listOf("read", "write", "notification").forEach { fault ->
+            val durable = MemoryPushStore()
+            val store = object : PushStore by durable {
+                override fun seen(key: String): Boolean {
+                    if (fault == "read") throw java.io.IOException("Read failed")
+                    return durable.seen(key)
+                }
+                override fun remember(key: String) {
+                    if (fault == "write") throw java.io.IOException("Write failed")
+                    durable.remember(key)
+                }
+            }
+            val notices = FakeNotice()
+            val notice = object : PushNotice by notices {
+                override fun show(hint: PushHint) {
+                    if (fault == "notification") throw SecurityException("Permission changed")
+                    notices.show(hint)
+                }
+            }
+            val guard = MemoryPushDeliveryGuard()
+            val delivery = PushDelivery(store, notice, guard) { 1000 }
+            delivery.accept(accepted())
+            delivery.receive(payload(), "123")
+            assertNull(delivery.binding())
+            assertTrue(guard.blocked())
+            assertTrue(notices.shown.isEmpty())
+            delivery.receive(payload(), "123")
+            assertTrue(notices.shown.isEmpty())
+        }
+    }
+
+    @Test fun deduplicationIsDurableBeforeNotificationPresentation() {
+        val store = MemoryPushStore()
+        val notices = FakeNotice()
+        val notice = object : PushNotice by notices {
+            override fun show(hint: PushHint) {
+                assertTrue(store.seen("${hint.registrationId}:${hint.alertId}"))
+                notices.show(hint)
+            }
+        }
+        val delivery = PushDelivery(store, notice) { 1000 }
+        delivery.accept(accepted())
+        delivery.receive(payload(), "123")
+        PushDelivery(store, notice) { 1000 }.receive(payload(), "123")
+        assertEquals(1, notices.shown.size)
+    }
+
     @Test fun notificationPayloadIsRejectedBeforeSdkDispatchIncludingLegacyAliases() {
         assertFalse(PushPayloadPolicy.permits(setOf("gcm.n.e", "body")))
         assertFalse(PushPayloadPolicy.permits(setOf("gcm.notification.e")))
