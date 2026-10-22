@@ -67,6 +67,7 @@ jobs:
           SNAPPER_TEST_DEVICE_PIN=$(python3 -c 'import secrets; print(secrets.randbelow(900000) + 100000)')
           adb -s "$ANDROID_SERIAL" shell locksettings set-pin "$SNAPPER_TEST_DEVICE_PIN"
           adb -s "$ANDROID_SERIAL" shell locksettings verify --old "$SNAPPER_TEST_DEVICE_PIN"
+          SNAPPER_TEST_DEVICE_PIN="$SNAPPER_TEST_DEVICE_PIN" bash scripts/prepare-test-device.sh
           ./gradlew --no-daemon --max-workers=2 -Pandroid.injected.device.serial=emulator-5554 "-Pandroid.testInstrumentationRunnerArguments.snapperTestDevicePin=$SNAPPER_TEST_DEVICE_PIN" :app:combinedDebugCoverageReport
       - name: Resolve Sonar analysis classpaths
         run: ./gradlew --no-daemon :app:writeSonarProperties
