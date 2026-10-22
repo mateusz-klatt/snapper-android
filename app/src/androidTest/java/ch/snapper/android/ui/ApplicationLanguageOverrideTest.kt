@@ -11,6 +11,8 @@ import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
 import androidx.test.platform.app.InstrumentationRegistry
+import androidx.test.runner.lifecycle.ActivityLifecycleMonitorRegistry
+import androidx.test.runner.lifecycle.Stage
 import ch.snapper.android.DataStoreSettings
 import ch.snapper.android.MainActivity
 import ch.snapper.android.R
@@ -61,11 +63,23 @@ class ApplicationLanguageOverrideTest {
             assertEquals(preferences.displayPreferences, runBlocking { settings.preferences.first().displayPreferences })
         } finally {
             runBlocking { settings.setLanguage(preferences.language) }
+            val activityBeforeRestore = compose.activity
+            val originalLocaleTags = LocaleList(*originalConfigurationLocales.toTypedArray()).toLanguageTags()
+            val recreationExpected = activityBeforeRestore.resources.configuration.locales.toLanguageTags() != originalLocaleTags
             manager.applicationLocales = originalLocales
             compose.waitUntil(10_000) {
-                manager.applicationLocales == originalLocales && applicationLanguages(context) == originalConfigurationLocales
+                var restoredActivityResumed = false
+                InstrumentationRegistry.getInstrumentation().runOnMainSync {
+                    restoredActivityResumed = ActivityLifecycleMonitorRegistry.getInstance()
+                        .getActivitiesInStage(Stage.RESUMED).filterIsInstance<MainActivity>().any { activity ->
+                            (!recreationExpected || activity !== activityBeforeRestore) &&
+                                activity.resources.configuration.locales.toLanguageTags() ==
+                                originalLocaleTags
+                        }
+                }
+                manager.applicationLocales == originalLocales &&
+                    applicationLanguages(context) == originalConfigurationLocales && restoredActivityResumed
             }
-            compose.activityRule.scenario.recreate()
             compose.waitForIdle()
         }
     }
