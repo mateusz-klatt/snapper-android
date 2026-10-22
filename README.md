@@ -149,4 +149,10 @@ signing and Play submission requirements.
 - Backend and network failures are visible; an unavailable resource is not silently shown as an empty successful result.
 - Firebase Messaging 26.0.1, Firebase Common 23.0.0 and Firebase Installations 20.0.0 support optional push delivery. Firebase initializes for an explicitly enabled registration, restoration of an accepted binding, or pending cleanup of a previously enabled registration; analytics, automatic messaging initialization, notification delegation and delivery-metric export are disabled. Background delivery does not access session cookies. Logout blocks local delivery before best-effort server and SDK cleanup; failed cleanup remains pending. The service-component block protects cold restarts when binding storage cannot be cleared; simultaneous operating-system component-state and storage failure cannot provide that persistence guarantee.
 
-Brand assets and existing translations are reused from the MIT-licensed iOS project. This repository is also licensed under [MIT](LICENSE), copyright 2026 Mateusz Klatt.
+Brand assets and existing translations are reused from the Apache-2.0-licensed
+iOS project. This repository is licensed under the
+[Apache License, Version 2.0](LICENSE), copyright 2026 Mateusz Klatt. See
+[NOTICE](NOTICE) for attribution. Third-party components retain their own licenses.
+
+Revisions through the `last-mit` tag were released under MIT. Subsequent original
+work is licensed under Apache-2.0; earlier MIT grants remain valid.

@@ -13,7 +13,7 @@ or imply that the publisher operates a trading service or supplies a backend.
 ## Brand provenance
 
 `logo-source.png` is a byte-for-byte copy of
-`app/src/main/res/drawable-nodpi/snapper_logo.png`, the existing MIT-licensed Snapper
+`app/src/main/res/drawable-nodpi/snapper_logo.png`, the existing Apache-2.0-licensed Snapper
 logo inherited from the iOS project. No original vector logo was available. The SVG
 sources therefore reference this unchanged bitmap rather than approximate or redraw
 its mountain, cross and wave shapes. Keep `logo-source.png` beside both SVG files.

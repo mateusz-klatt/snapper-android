@@ -74,6 +74,6 @@ For questions about the Android client or this policy, contact [mateusz@klatt.ie
 
 ## Changes and source code
 
-Material policy changes will be reflected in the last-updated date and published at the canonical policy URL. The Android source and policy history are available in the [MIT-licensed Snapper Android repository](https://github.com/mateusz-klatt/snapper-android).
+Material policy changes will be reflected in the last-updated date and published at the canonical policy URL. The Android source and policy history are available in the [Apache-2.0-licensed Snapper Android repository](https://github.com/mateusz-klatt/snapper-android).
 
 The separate [Snapper iOS policy](https://snapper.ch/privacy-policy.html) describes the iOS app.
