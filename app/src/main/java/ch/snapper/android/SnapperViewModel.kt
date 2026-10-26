@@ -96,7 +96,12 @@ class SnapperViewModel(
     }
     private fun consumePushHint() {
         if (!state.value.accountLanguageReady || state.value.user == null) return
-        val owner = pushBinding() ?: return
+        val owner = pushBinding()
+        if (owner == null) {
+            push?.invalidate()
+            pendingPushHint = null
+            return
+        }
         val saved = pushPlatform?.delivery?.binding()
         if (saved != null && saved.scopeDigest != owner.identity.scopeDigest()) push?.invalidate()
         pendingPushHint?.let { push?.open(it) }

@@ -11,6 +11,36 @@ import org.junit.Test
 
 @OptIn(ExperimentalCoroutinesApi::class)
 class SnapperViewModelPushTest {
+    @Test fun coldReadOnlySessionDiscardsPersistedPushDeliveryWithoutBackendMutation() = runTest {
+        Dispatchers.setMain(StandardTestDispatcher(testScheduler)); val store = ViewModelStore()
+        try {
+            val client = PushSession().apply {
+                user.value = profile.copy(effectivePermissions = listOf("read:notifications"))
+            }
+            val platform = FakePlatform()
+            accept(platform, client.profile)
+            val saved = requireNotNull(platform.delivery.binding())
+            client.push.rows = listOf(saved.registration)
+            platform.notice.show(hint())
+            val model = SnapperViewModel(PushSettings(), { client }, ORIGIN, false, platform)
+            store.put("read-only", model)
+            model.openPushHint(hint()); advanceUntilIdle()
+
+            assertTrue(model.state.value.accountLanguageReady)
+            assertNull(platform.delivery.binding())
+            assertNull(platform.store.accepted)
+            assertTrue(platform.notice.shown.isEmpty())
+            assertFalse(platform.delivery.matches(hint()))
+            assertEquals(listOf(saved), platform.delivery.pendingCleanup())
+            assertEquals(listOf(saved.registration), client.push.rows)
+            assertTrue(client.bindings.isEmpty())
+            assertEquals(0, client.push.posts)
+            assertEquals(0, client.push.details)
+            assertEquals(0, platform.registrations)
+            assertEquals(0, platform.unregisters)
+        } finally { store.clear(); Dispatchers.resetMain() }
+    }
+
     @Test fun auditorDoesNotBindOrRegisterPush() = runTest {
         Dispatchers.setMain(StandardTestDispatcher(testScheduler)); val store = ViewModelStore()
         try {
