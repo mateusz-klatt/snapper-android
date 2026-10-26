@@ -18,6 +18,7 @@ class PushRepositoryTest {
     private lateinit var repository: SessionRepository
     private lateinit var bound: PushClient
     private val profile = """{"username":"viewer","role":"viewer","public_id":"00000000-0000-4000-8000-000000000011","effective_permissions":["manage:self_account"]}"""
+    private val alertProfile = profile.replace("\"manage:self_account\"", "\"manage:self_account\",\"read:notifications\"")
     private fun response(payload: String) = MockResponse().setHeader("Content-Type", "application/json").setBody("""{"payload":$payload}""")
     @Before fun setup() = runBlocking {
         server = MockWebServer(); server.start()
@@ -139,7 +140,7 @@ class PushRepositoryTest {
     }
 
     @Test fun notificationDetailRequiresFreshPermissionAndParsesPrivateContentOnlyOnForegroundRead() = runBlocking {
-        val permitted = profile.replace("[]", "[\"read:notifications\"]")
+        val permitted = alertProfile
         loginAgain(permitted)
         server.enqueue(response(permitted))
         server.enqueue(response("""{"public_id":"alert","timestamp":"2026-10-16T12:00:00Z","alert_type":"signal","priority":"high","is_safety_critical":true,"title":"Synthetic title","body":"Synthetic details","thread_key":"thread","source_topic":"signals.test"}"""))
@@ -153,7 +154,7 @@ class PushRepositoryTest {
         assertRequests("/api/auth/me", "/api/alerts/alert")
         server.enqueue(response(profile))
         assertTrue(runCatching { bound.pushAlert("alert") }.isFailure)
-        assertTrue(requireNotNull(repository.user.value).effectivePermissions.orEmpty().isEmpty())
+        assertEquals(listOf("manage:self_account"), requireNotNull(repository.user.value).effectivePermissions)
         assertRequests("/api/auth/me")
     }
 
@@ -208,7 +209,7 @@ class PushRepositoryTest {
 
     @Test fun refreshedActorChangePreventsReadReplay() = runBlocking {
         server.enqueue(response(profile)); server.enqueue(MockResponse().setResponseCode(401))
-        server.enqueue(response("""{"user":${profile.replace("[]", "[\"read:notifications\"]")}}"""))
+        server.enqueue(response("""{"user":$alertProfile}"""))
         assertTrue(runCatching { bound.pushInventory() }.isFailure)
         assertRequests("/api/auth/me", "/api/devices/android", "/api/auth/refresh")
     }
