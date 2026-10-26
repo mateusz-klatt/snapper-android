@@ -15,6 +15,25 @@ import okhttp3.ResponseBody.Companion.toResponseBody
 
 @OptIn(ExperimentalCoroutinesApi::class)
 class AccountLanguageViewModelTest {
+    @Test fun auditorKeepsLanguageLocalWithoutAccountSyncOrErrors() = runTest {
+        Dispatchers.setMain(StandardTestDispatcher(testScheduler)); val store = ViewModelStore()
+        try {
+            val client = LanguageSession().apply {
+                user.value = requireNotNull(user.value).copy(role = "auditor", effectivePermissions = listOf("read:users", "read:all_scopes"))
+            }
+            val model = SnapperViewModel(LanguageSettings(), { client }, "https://example.test", false)
+            store.put("auditor", model); advanceUntilIdle()
+            assertTrue(model.state.value.accountLanguageReady)
+            assertTrue(client.languages.isEmpty())
+            assertEquals(1, client.snapshots)
+            model.selectLanguage("fr"); advanceUntilIdle()
+            assertEquals("fr", model.state.value.language)
+            assertTrue(client.languages.isEmpty())
+            assertEquals(AccountLanguageStatus.IDLE, model.state.value.accountLanguage.status)
+            assertNull(model.state.value.error)
+        } finally { store.clear(); Dispatchers.resetMain() }
+    }
+
     @Test fun restoreWaitsForLanguageBeforeInitialDescriptionSnapshot() = runTest {
         Dispatchers.setMain(StandardTestDispatcher(testScheduler)); val store = ViewModelStore()
         try {
@@ -235,7 +254,7 @@ private class LanguageSettings : SettingsStore {
 }
 
 private class LanguageSession : SessionClient, AccountLanguageClient {
-    override val user = MutableStateFlow<UserDto?>(UserDto("reader", "viewer", "u", effectivePermissions = emptyList()))
+    override val user = MutableStateFlow<UserDto?>(UserDto("reader", "viewer", "u", effectivePermissions = listOf("manage:self_account")))
     val languages = mutableListOf<String>()
     var gate: CompletableDeferred<Unit>? = null
     var fail = false
@@ -269,7 +288,7 @@ private class LanguageSession : SessionClient, AccountLanguageClient {
     override suspend fun candles(exchange: String, instrument: String, timeframe: String, limit: Int): List<CandleDto> { candleReads++; return emptyList() }
     override suspend fun restore() = user.value
     override suspend fun login(username: String, password: String, rememberMe: Boolean): UserDto =
-        UserDto(username, "viewer", "u", effectivePermissions = emptyList()).also { user.value = it }
+        UserDto(username, "viewer", "u", effectivePermissions = listOf("manage:self_account")).also { user.value = it }
     override suspend fun selectWallet(publicId: String?): UserDto {
         walletCalls++
         throw (walletFailure ?: IllegalStateException("Unexpected wallet mutation"))

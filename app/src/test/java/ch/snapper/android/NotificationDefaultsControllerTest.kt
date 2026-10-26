@@ -20,7 +20,7 @@ import org.junit.Test
 
 @OptIn(ExperimentalCoroutinesApi::class)
 class NotificationDefaultsControllerTest {
-    private val user = UserDto("viewer", "viewer", "u1")
+    private val user = UserDto("viewer", "viewer", "u1", effectivePermissions = listOf("manage:self_account"))
     private val type = "order_fill_full"
     private class Client : NotificationDefaultsClient {
         var rows = emptyList<NotificationDefaultDto>()
@@ -34,6 +34,20 @@ class NotificationDefaultsControllerTest {
             failure?.let { throw it }
             return NotificationDefaultDto("p1", scope.publicId, payload.alertType, payload.enabled, payload.minPriority)
         }
+    }
+
+    @Test fun auditorCanReadDefaultsButCannotEditOrSaveThem() = runTest {
+        val client = Client()
+        val auditor = user.copy(role = "auditor", effectivePermissions = emptyList())
+        val controller = NotificationDefaultsController(this, client, auditor)
+        controller.load(); runCurrent()
+        controller.actions.setEnabled(type, false)
+        controller.actions.setPriority(type, "high")
+        controller.actions.save(type); runCurrent()
+        assertTrue(controller.state.value.loaded)
+        assertFalse(controller.state.value.canManage)
+        assertTrue(controller.state.value.rows.all { !it.dirty && !it.pending })
+        assertEquals(0, client.writes)
     }
 
     @Test fun emptyDefaultsExposeFiveInheritedRowsWithoutPushOrPermissions() = runTest {

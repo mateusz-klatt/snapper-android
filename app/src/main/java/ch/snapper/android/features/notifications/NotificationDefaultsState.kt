@@ -25,6 +25,7 @@ data class NotificationDefaultsState(
     val loading: Boolean = false,
     val loaded: Boolean = false,
     val active: Boolean = false,
+    val canManage: Boolean = false,
     val loadFailed: Boolean = false,
 )
 

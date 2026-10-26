@@ -17,7 +17,7 @@ class PushRepositoryTest {
     private lateinit var server: MockWebServer
     private lateinit var repository: SessionRepository
     private lateinit var bound: PushClient
-    private val profile = """{"username":"viewer","role":"viewer","public_id":"00000000-0000-4000-8000-000000000011","effective_permissions":[]}"""
+    private val profile = """{"username":"viewer","role":"viewer","public_id":"00000000-0000-4000-8000-000000000011","effective_permissions":["manage:self_account"]}"""
     private fun response(payload: String) = MockResponse().setHeader("Content-Type", "application/json").setBody("""{"payload":$payload}""")
     @Before fun setup() = runBlocking {
         server = MockWebServer(); server.start()
@@ -30,7 +30,7 @@ class PushRepositoryTest {
     private fun command() = PushRegistrationCommand(protocol = "fcm_fid", configurationId = "00000000-0000-4000-8000-000000000001", packageName = "test.app", installationId = "00000000-0000-4000-8000-000000000002",
         bindingId = "00000000-0000-4000-8000-000000000003", expectedRevision = "a".repeat(64), firebaseInstallationId = "fid", expectedUserPublicId = "00000000-0000-4000-8000-000000000011", appVersion = "1")
 
-    @Test fun permissionlessConfigurationReadUsesFreshAuthorityAndUnavailableIsOrdinaryState() = runBlocking {
+    @Test fun configurationReadUsesFreshAuthorityAndUnavailableIsOrdinaryState() = runBlocking {
         server.enqueue(response(profile)); server.enqueue(response("""{"availability":"unavailable","configuration":null}"""))
         assertEquals("unavailable", bound.pushConfiguration().availability)
         assertEquals("/api/auth/me", server.takeRequest().path)

@@ -13,12 +13,12 @@ interface SystemClient {
     suspend fun systemDelegates(): List<SystemDelegateReadDto>
 }
 
-enum class SystemFeed(val permission: String) {
+enum class SystemFeed(val permission: String, val legacyPermission: String? = null) {
     HEALTH("read:system_status"), STATUS("read:system_status"),
     STRATEGIES("read:strategies"), BACKTESTS("read:backtests"),
-    USERS("manage:users"), DELEGATES("read:ai_integration");
+    USERS("read:users", "manage:users"), DELEGATES("read:ai_integration");
 
-    fun isAllowed(permissions: Set<String>): Boolean = permission in permissions
+    fun isAllowed(permissions: Set<String>): Boolean = permission in permissions || (legacyPermission != null && legacyPermission in permissions)
 }
 
 data class SystemFeedState<T>(val value: T? = null, val isLoading: Boolean = false, val error: UiError? = null)

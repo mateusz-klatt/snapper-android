@@ -28,6 +28,10 @@ Native Android client for the [Snapper](https://github.com/mateusz-klatt/snapper
 - Inspect process summaries and confirm authorized local or remote process controls.
 - Inspect AI-review audit/pending feeds and confirm delegated approve/reject decisions with a rationale.
 - Show only the screens allowed by the session's effective permissions.
+- Support the `auditor` role through effective permissions: the user directory
+  accepts `read:users`, while account-language synchronization, push registration
+  and notification-default changes require `manage:self_account`. Read-only
+  accounts can change the local interface language and inspect preferences.
 - Select from 45 language catalogs, including Arabic, Hebrew and Persian RTL layouts, with light and dark themes. Additional catalogs reuse reviewed iOS translations; missing reviewed text remains English.
 - Choose a country/region independently of the interface language for numeric and record-timestamp formatting, and select automatic or explicit financial-direction colors. Automatic colors use red for rising values in China, Hong Kong, Japan and South Korea; other supported countries use green. Error and health-status colors retain their severity meaning.
 - Exact decimal quantities, prices and P&L; chart drawing converts coordinates separately.
