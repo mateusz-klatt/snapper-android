@@ -13,9 +13,10 @@ class SystemStateTest {
         SystemFeed.entries.forEach { assertFalse(it.isAllowed(emptySet())) }
     }
 
-    @Test fun userDirectoryRequiresManageUsersRatherThanRoleName() {
+    @Test fun userDirectoryAcceptsReadOrManageCapabilityRatherThanRoleName() {
         assertFalse(SystemFeed.USERS.isAllowed(setOf("admin", "read:system_status")))
         assertTrue(SystemFeed.USERS.isAllowed(setOf("manage:users")))
+        assertTrue(SystemFeed.USERS.isAllowed(setOf("read:users")))
     }
 
     @Test fun oneFeedFailureDoesNotReplaceAnotherFeedState() {

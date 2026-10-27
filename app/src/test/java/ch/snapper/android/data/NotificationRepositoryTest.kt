@@ -21,7 +21,7 @@ import org.junit.Test
 class NotificationRepositoryTest {
     private lateinit var server: MockWebServer
     private lateinit var repository: SessionRepository
-    private val profile = """{"username":"viewer","role":"viewer","public_id":"u1","effective_permissions":[]}"""
+    private val profile = """{"username":"viewer","role":"viewer","public_id":"u1","effective_permissions":["manage:self_account"]}"""
     private val preference = """{"public_id":"p1","user_public_id":"u1","alert_type":"margin_warning","enabled":false,"min_priority":"high"}"""
     private val payload = UpdateNotificationDefaultPayload("margin_warning", false, "high")
     private fun scope() = OrderScope.from(requireNotNull(repository.user.value))

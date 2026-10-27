@@ -39,7 +39,7 @@ internal fun LazyListScope.notificationDefaultsScreen(state: NotificationDefault
 
 @Composable
 private fun NotificationDefaultCard(state: NotificationDefaultsState, row: NotificationDefaultRow, actions: NotificationDefaultsActions) {
-    val editable = state.active && state.loaded && !state.loading && row.editable
+    val editable = state.active && state.canManage && state.loaded && !state.loading && row.editable
     RecordCard(stringResource(notificationTypeLabel(row.alertType))) {
         Column(Modifier.testTag("notification.${row.alertType}"), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {

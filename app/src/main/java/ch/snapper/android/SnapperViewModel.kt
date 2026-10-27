@@ -82,7 +82,7 @@ class SnapperViewModel(
     private fun pushBinding(): PushBinding? {
         val client = session as? PushClient ?: return null
         val profile = session?.user?.value ?: return null
-        if (!sameScope(profile, state.value.user)) return null
+        if (!sameScope(profile, state.value.user) || !profile.hasPermission("manage:self_account")) return null
         val identity = PushIdentity(state.value.backendUrl, sessionEpoch, OrderScope.from(profile))
         if (pushSession !== session || cachedPushBinding?.identity != identity) {
             pushSession = session
@@ -96,7 +96,12 @@ class SnapperViewModel(
     }
     private fun consumePushHint() {
         if (!state.value.accountLanguageReady || state.value.user == null) return
-        val owner = pushBinding() ?: return
+        val owner = pushBinding()
+        if (owner == null) {
+            push?.invalidate()
+            pendingPushHint = null
+            return
+        }
         val saved = pushPlatform?.delivery?.binding()
         if (saved != null && saved.scopeDigest != owner.identity.scopeDigest()) push?.invalidate()
         pendingPushHint?.let { push?.open(it) }
@@ -106,7 +111,7 @@ class SnapperViewModel(
     private fun languageBinding(): AccountLanguageBinding? {
         val client = session as? AccountLanguageClient ?: return null
         val profile = session?.user?.value ?: return null
-        if (!sameScope(profile, state.value.user)) return null
+        if (!sameScope(profile, state.value.user) || !profile.hasPermission("manage:self_account")) return null
         val identity = AccountLanguageIdentity(state.value.backendUrl, sessionEpoch, OrderScope.from(profile))
         if (languageSession !== session || cachedLanguageBinding?.identity != identity) {
             languageSession = session

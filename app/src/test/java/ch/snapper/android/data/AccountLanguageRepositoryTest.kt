@@ -22,7 +22,7 @@ class AccountLanguageRepositoryTest {
     private lateinit var server: MockWebServer
     private lateinit var repository: SessionRepository
     private fun profile(language: String = "en", actor: String = "desk", delegate: String = "delegate") =
-        """{"username":"viewer","role":"viewer","public_id":"u1","primary_operator_public_id":"$actor","delegate_public_id":"$delegate","effective_permissions":[],"default_language":"$language"}"""
+        """{"username":"viewer","role":"viewer","public_id":"u1","primary_operator_public_id":"$actor","delegate_public_id":"$delegate","effective_permissions":["manage:self_account"],"default_language":"$language"}"""
     private fun response(payload: String) = MockResponse().setHeader("Content-Type", "application/json").setBody("""{"payload":$payload}""")
     private fun identity() = AccountLanguageIdentity(server.url("/").toString(), 97, OrderScope.from(requireNotNull(repository.user.value)))
     private suspend fun login() {
@@ -42,7 +42,7 @@ class AccountLanguageRepositoryTest {
         return (error as AccountLanguageException).kind
     }
 
-    @Test fun permissionlessViewerUsesFreshProfileExactEnvelopeCsrfAndDirectUserResponse() = runBlocking {
+    @Test fun selfAccountViewerUsesFreshProfileExactEnvelopeCsrfAndDirectUserResponse() = runBlocking {
         val captured = identity()
         val binding = repository.bindLanguage(captured)
         server.enqueue(response(profile())); server.enqueue(response(profile("pl"))); server.enqueue(response(profile("pl")))
@@ -177,7 +177,7 @@ class AccountLanguageRepositoryTest {
         val profiles = listOf(
             profile().replace("\"username\":\"viewer\"", "\"username\":\"other\""),
             profile().replace("\"public_id\":\"u1\"", "\"public_id\":\"u2\""),
-            profile().replace("\"effective_permissions\":[]", "\"effective_permissions\":[\"read:market_data\"]"),
+            profile().replace("\"effective_permissions\":[\"manage:self_account\"]", "\"effective_permissions\":[\"read:market_data\"]"),
             profile().dropLast(1) + ",\"active_wallet_public_id\":\"other-wallet\"}",
         )
         for (fresh in profiles) {

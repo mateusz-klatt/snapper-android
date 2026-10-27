@@ -11,6 +11,54 @@ import org.junit.Test
 
 @OptIn(ExperimentalCoroutinesApi::class)
 class SnapperViewModelPushTest {
+    @Test fun coldReadOnlySessionDiscardsPersistedPushDeliveryWithoutBackendMutation() = runTest {
+        Dispatchers.setMain(StandardTestDispatcher(testScheduler)); val store = ViewModelStore()
+        try {
+            val client = PushSession().apply {
+                user.value = profile.copy(effectivePermissions = listOf("read:notifications"))
+            }
+            val platform = FakePlatform()
+            accept(platform, client.profile)
+            val saved = requireNotNull(platform.delivery.binding())
+            client.push.rows = listOf(saved.registration)
+            platform.notice.show(hint())
+            val model = SnapperViewModel(PushSettings(), { client }, ORIGIN, false, platform)
+            store.put("read-only", model)
+            model.openPushHint(hint()); advanceUntilIdle()
+
+            assertTrue(model.state.value.accountLanguageReady)
+            assertNull(platform.delivery.binding())
+            assertNull(platform.store.accepted)
+            assertTrue(platform.notice.shown.isEmpty())
+            assertFalse(platform.delivery.matches(hint()))
+            assertEquals(listOf(saved), platform.delivery.pendingCleanup())
+            assertEquals(listOf(saved.registration), client.push.rows)
+            assertTrue(client.bindings.isEmpty())
+            assertEquals(0, client.push.posts)
+            assertEquals(0, client.push.details)
+            assertEquals(0, platform.registrations)
+            assertEquals(0, platform.unregisters)
+        } finally { store.clear(); Dispatchers.resetMain() }
+    }
+
+    @Test fun auditorDoesNotBindOrRegisterPush() = runTest {
+        Dispatchers.setMain(StandardTestDispatcher(testScheduler)); val store = ViewModelStore()
+        try {
+            val client = PushSession().apply {
+                user.value = profile.copy(role = "auditor", effectivePermissions = listOf("read:notifications"))
+            }
+            val platform = FakePlatform()
+            val model = SnapperViewModel(PushSettings(), { client }, ORIGIN, false, platform)
+            store.put("auditor", model); advanceUntilIdle()
+            model.actions.push.refresh(); model.actions.push.enable(); advanceUntilIdle()
+            assertTrue(client.bindings.isEmpty())
+            assertEquals(0, client.push.posts)
+            assertEquals(0, platform.registrations)
+            assertTrue(model.state.value.accountLanguageReady)
+            assertNull(model.state.value.error)
+        } finally { store.clear(); Dispatchers.resetMain() }
+    }
+
     @Test fun coldHintWaitsForAuthenticationAndLanguageBeforeReadingPrivateAlert() = runTest {
         Dispatchers.setMain(StandardTestDispatcher(testScheduler)); val store = ViewModelStore()
         val client = PushSession().apply { languageGate = CompletableDeferred() }
@@ -119,7 +167,7 @@ private class PushSettings : SettingsStore {
         transform(preferences.value.displayPreferences).also { preferences.value = preferences.value.copy(displayPreferences = it) }
 }
 private class PushSession : SessionClient, PushClient, AccountLanguageClient {
-    val profile = UserDto("viewer", "viewer", "user", effectivePermissions = listOf("read:notifications"))
+    val profile = UserDto("viewer", "viewer", "user", effectivePermissions = listOf("read:notifications", "manage:self_account"))
     override val user = MutableStateFlow<UserDto?>(profile)
     val push = FakePushClient()
     val bindings = mutableListOf<PushIdentity>()

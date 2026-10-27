@@ -402,12 +402,12 @@ class SessionRepository private constructor(
             override suspend fun pushPreferences(registrationId: String): List<PushPreference> = pushRead(identity, generation) { api.pushPreferences(registrationId).payload }
             override suspend fun pushAlert(alertId: String): AlertDto = pushRead(identity, generation, "read:notifications") { api.pushAlert(alertId).payload }
             override suspend fun registerPush(command: PushRegistrationCommand): PushRegistration = operation.withLock {
-                pushPreflight(identity, generation)
+                pushPreflight(identity, generation, MANAGE_SELF_ACCOUNT_PERMISSION)
                 require(command.expectedUserPublicId == identity.actor.publicId)
                 dispatchPush(identity, generation) { mutationApi.registerPush(envelope("register_android_device_command", command)).payload }
             }
             override suspend fun revokePush(registrationId: String) = operation.withLock {
-                pushPreflight(identity, generation)
+                pushPreflight(identity, generation, MANAGE_SELF_ACCOUNT_PERMISSION)
                 dispatchPush(identity, generation) {
                     val response = mutationApi.revokePush(registrationId)
                     if (!response.isSuccessful) throw HttpException(response)
@@ -443,8 +443,8 @@ class SessionRepository private constructor(
 
     private suspend fun <T> dispatchPush(identity: PushIdentity, generation: Long, action: suspend () -> T): T {
         try {
-            requirePushIdentity(identity, generation)
-            return action().also { requirePushIdentity(identity, generation) }
+            requirePushIdentity(identity, generation, MANAGE_SELF_ACCOUNT_PERMISSION)
+            return action().also { requirePushIdentity(identity, generation, MANAGE_SELF_ACCOUNT_PERMISSION) }
         } catch (error: CancellationException) {
             throw error
         } catch (error: HttpException) {
@@ -494,7 +494,7 @@ class SessionRepository private constructor(
     private fun requireLanguageIdentity(identity: AccountLanguageIdentity, generation: Long) {
         ensureCurrent(generation)
         require(identity.backend.toHttpUrlOrNull() == origin)
-        requireFeatureScope(identity.actor, null)
+        requireFeatureScope(identity.actor, MANAGE_SELF_ACCOUNT_PERMISSION)
     }
 
     private fun prepareLanguage(identity: AccountLanguageIdentity, language: String, generation: Long) {
@@ -683,7 +683,11 @@ class SessionRepository private constructor(
     override suspend fun systemStatus(): SystemSystemStatusDataDto = featureRead(READ_SYSTEM_STATUS_PERMISSION) { api.systemStatus().payload }
     override suspend fun systemStrategies(): List<SystemStrategyProcessDto> = featureRead("read:strategies") { api.systemStrategies().payload }
     override suspend fun systemBacktests(): List<SystemBacktestRunDataDto> = featureRead("read:backtests") { api.systemBacktests().payload }
-    override suspend fun systemUsers(): List<SystemUserProfileDto> = featureRead("manage:users") { api.systemUsers().payload }
+    override suspend fun systemUsers(): List<SystemUserProfileDto> = featureRead {
+        val profile = mutableUser.value ?: throw SessionExpiredException()
+        if (!profile.hasPermission("read:users") && !profile.hasPermission("manage:users")) throw OrderRejectedException(403)
+        api.systemUsers().payload
+    }
     override suspend fun systemDelegates(): List<SystemDelegateReadDto> = featureRead("read:ai_integration") { api.systemDelegates().payload }
 
     override suspend fun executions(walletPublicId: String?): List<ExecutionDto> = featureRead("read:orders") {
@@ -717,7 +721,7 @@ class SessionRepository private constructor(
     override suspend fun updateNotificationDefaults(scope: OrderScope, payload: UpdateNotificationDefaultPayload): NotificationDefaultDto = operation.withLock {
         require(payload.alertType in setOf("order_fill_full", "order_rejected", "position_stop_loss_fired", "margin_warning", "critical_system_error", "order_unknown", "drift"))
         require(payload.minPriority in setOf("low", "medium", "high"))
-        val generation = featureMutationPreflight(scope)
+        val generation = featureMutationPreflight(scope, MANAGE_SELF_ACCOUNT_PERMISSION)
         try {
             val result = mutationApi.updateNotificationDefaults(envelope("update_user_alert_default_command", payload)).payload
             ensureCurrent(generation)
@@ -873,6 +877,7 @@ class SessionRepository private constructor(
     }
 
     companion object {
+        private const val MANAGE_SELF_ACCOUNT_PERMISSION = "manage:self_account"
         private const val READ_SIGNALS_PERMISSION = "read:signals"
         private const val READ_SYSTEM_STATUS_PERMISSION = "read:system_status"
         private const val READ_POSITIONS_PERMISSION = "read:positions"

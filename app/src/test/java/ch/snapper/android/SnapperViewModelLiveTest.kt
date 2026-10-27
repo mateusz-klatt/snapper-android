@@ -246,7 +246,7 @@ class SnapperViewModelLiveTest {
         var signalReads = 0
         var reviewReads = 0
         override suspend fun restore(): UserDto = super.restore().copy(
-            effectivePermissions = listOf("read:orders", "read:signals", "read:ai_reviews"),
+            effectivePermissions = listOf("read:orders", "read:signals", "read:ai_reviews", "manage:self_account"),
         ).also { user.value = it }
         override suspend fun updateLanguage(identity: AccountLanguageIdentity, language: String): AccountLanguageReceipt {
             withContext(NonCancellable) { gate.await() }

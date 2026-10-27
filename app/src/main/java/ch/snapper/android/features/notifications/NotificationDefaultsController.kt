@@ -21,14 +21,14 @@ class NotificationDefaultsController(
 ) {
     private var userScope = OrderScope.from(initialUser)
     private var epoch = 0L
-    private val mutableState = MutableStateFlow(NotificationDefaultsState(active = true))
+    private val mutableState = MutableStateFlow(NotificationDefaultsState(active = true, canManage = initialUser.hasPermission("manage:self_account")))
     val state = mutableState.asStateFlow()
     val actions = NotificationDefaultsActions(::load, ::setEnabled, ::setPriority, ::save)
 
     fun reset(user: UserDto) {
         epoch++
         userScope = OrderScope.from(user)
-        mutableState.value = NotificationDefaultsState(active = true)
+        mutableState.value = NotificationDefaultsState(active = true, canManage = user.hasPermission("manage:self_account"))
     }
 
     fun invalidate() {
@@ -72,7 +72,7 @@ class NotificationDefaultsController(
 
     private fun edit(type: String, change: (NotificationDefaultRow) -> NotificationDefaultRow) {
         val current = mutableState.value
-        if (!current.active || !current.loaded || current.loading) return
+        if (!current.active || !current.canManage || !current.loaded || current.loading) return
         mutableState.value = current.copy(rows = current.rows.map { row ->
             if (row.alertType == type && row.editable) change(row).copy(dirty = true, saved = false, issue = null) else row
         })
@@ -90,7 +90,7 @@ class NotificationDefaultsController(
     private fun save(type: String) {
         val current = mutableState.value
         val row = current.rows.find { it.alertType == type } ?: return
-        if (!current.active || !current.loaded || current.loading || !row.canSave) return
+        if (!current.active || !current.canManage || !current.loaded || current.loading || !row.canSave) return
         val requestEpoch = epoch
         val scope = userScope
         val payload = UpdateNotificationDefaultPayload(type, row.enabled, row.minPriority)

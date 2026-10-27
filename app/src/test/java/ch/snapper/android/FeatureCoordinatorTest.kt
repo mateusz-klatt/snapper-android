@@ -185,7 +185,7 @@ class FeatureCoordinatorTest {
     }
 
     @Test fun notificationActionsReachControllerAndSaveObservedPreference() = runTest {
-        val client = FeatureClient(viewer())
+        val client = FeatureClient(viewer(listOf("read:market_data", "manage:self_account")))
         var state = AppUiState(user = client.user.value)
         val coordinator = FeatureCoordinator(this, { client }, { state }, { state = it(state) })
         coordinator.notificationActions.refresh()

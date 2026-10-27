@@ -14,10 +14,18 @@ import org.junit.Rule
 import org.junit.Test
 
 class NotificationDefaultsScreenUiTest {
+    @Test fun auditorCanRefreshButCannotChangeNotificationDefaults() {
+        val state = NotificationDefaultsState(active = true, loaded = true, canManage = false)
+        compose.setContent { LazyColumn { notificationDefaultsScreen(state, NotificationDefaultsActions({}, { _, _ -> }, { _, _ -> }, {})) } }
+        compose.onNodeWithText("Refresh").assertIsEnabled()
+        compose.onNodeWithTag("notification.order_fill_full.save").assertIsNotEnabled()
+        compose.onNode(isToggleable() and hasAnyAncestor(hasTestTag("notification.order_fill_full"))).assertIsNotEnabled()
+    }
+
     @get:Rule val compose = createComposeRule()
 
-    @Test fun permissionlessDefaultsFreezeUnknownSaveUntilExplicitRefresh() {
-        val initial = NotificationDefaultsState(active = true, loaded = true)
+    @Test fun editableDefaultsFreezeUnknownSaveUntilExplicitRefresh() {
+        val initial = NotificationDefaultsState(active = true, loaded = true, canManage = true)
         val state = mutableStateOf(initial.copy(rows = initial.rows.mapIndexed { index, row -> if (index == 0) row.copy(dirty = true) else row }))
         var saves = 0
         var refreshes = 0
@@ -46,7 +54,7 @@ class NotificationDefaultsScreenUiTest {
     }
 
     @Test fun pendingSaveAndInitialLoadDisableEditing() {
-        val initial = NotificationDefaultsState(active = true, loaded = true)
+        val initial = NotificationDefaultsState(active = true, loaded = true, canManage = true)
         val state = mutableStateOf(initial.copy(rows = initial.rows.map { it.copy(pending = true, dirty = true) }))
         compose.setContent { LazyColumn(Modifier.testTag("notification-list")) { notificationDefaultsScreen(state.value, NotificationDefaultsActions({}, { _, _ -> }, { _, _ -> }, {})) } }
         compose.onNodeWithText("Refresh").assertIsNotEnabled()
