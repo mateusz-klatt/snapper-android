@@ -68,7 +68,7 @@ AI audits require `read:ai_reviews`. Pending reviews require a delegate identity
 
 Open this directory as a project in a current stable Android Studio. Install Android SDK Platform 37.0 and Build Tools 36.0.0 from SDK Manager, then let Gradle sync. Android 8.0 (API 26) or newer is required to run the app.
 
-The project pins AGP 9.4.1, Gradle 9.8.2 and Kotlin 2.4.21. Gradle runs on JDK 17 or a compatible newer JDK; Android Studio can supply the JDK. `local.properties` and signing credentials are not committed.
+The project pins AGP 9.5.0, Gradle 9.8.2 and Kotlin 2.4.21. Gradle runs on JDK 17 or a compatible newer JDK; Android Studio can supply the JDK. `local.properties` and signing credentials are not committed.
 
 Library and plugin versions are declared in `gradle/libs.versions.toml`; the early Kotlin buildscript bootstrap in `build.gradle.kts` must retain the same Kotlin pin. Gradle verifies dependency artifacts and metadata against the committed SHA-256 checksums in `gradle/verification-metadata.xml`.
 
