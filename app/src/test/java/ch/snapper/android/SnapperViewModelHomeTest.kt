@@ -17,7 +17,6 @@ import kotlin.time.Duration.Companion.seconds
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.test.*
 import kotlinx.serialization.json.*
@@ -117,19 +116,19 @@ class SnapperViewModelHomeTest {
             val socket = client.sockets.single()
             authenticateAndSubscribe(socket, clock().instant())
             runCurrent()
-            val ticker = model.homeTickerJob()
+            val ticker = model.homeTickerJob
             assertNotNull(ticker)
             assertTrue(ticker?.isActive == true)
 
             socket.heartbeat(clock().instant(), 1)
             runCurrent()
-            assertSame(ticker, model.homeTickerJob())
+            assertSame(ticker, model.homeTickerJob)
             advanceTimeBy(2_000)
             runCurrent()
-            assertSame(ticker, model.homeTickerJob())
+            assertSame(ticker, model.homeTickerJob)
             socket.heartbeat(clock().instant(), 2)
             runCurrent()
-            assertSame(ticker, model.homeTickerJob())
+            assertSame(ticker, model.homeTickerJob)
         } finally {
             models.clear()
             runCurrent()
@@ -234,9 +233,6 @@ class SnapperViewModelHomeTest {
             runCurrent()
         }
     }
-
-    private fun SnapperViewModel.homeTickerJob(): Job? =
-        SnapperViewModel::class.java.getDeclaredField("homeTicker").apply { isAccessible = true }.get(this) as? Job
 
     private fun TestScope.authenticateAndSubscribe(
         socket: Socket,

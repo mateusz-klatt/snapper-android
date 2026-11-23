@@ -1,5 +1,6 @@
 package ch.snapper.android
 
+import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import ch.snapper.android.data.OriginPolicy
@@ -72,6 +73,8 @@ class SnapperViewModel(
     private var foreground = false
     private var homeVisible = false
     private var homeTicker: Job? = null
+    @VisibleForTesting
+    internal val homeTickerJob: Job? get() = homeTicker
     private var pendingAiRevision = 0L
     private var pendingAiRequest: Job? = null
     private val features = FeatureCoordinator(viewModelScope, { session }, { state.value }, { change -> mutableState.update(change) })

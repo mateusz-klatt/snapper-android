@@ -170,12 +170,12 @@ private fun AiReviewsSummaryCard(showPendingCount: Boolean, pendingCount: Int, o
 
 @Composable
 private fun HomePositionsCard(positions: List<PositionDto>) {
-    Card(Modifier.fillMaxWidth().semantics(mergeDescendants = true) {}.testTag("home.positions")) {
+    Card(Modifier.fillMaxWidth().testTag("home.positions")) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Text(stringResource(R.string.venue_accounts_positions), style = MaterialTheme.typography.titleMedium)
             positions.forEachIndexed { index, position ->
                 if (index > 0) HorizontalDivider()
-                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
+                Row(Modifier.fillMaxWidth().semantics(mergeDescendants = true) {}.testTag("home.positions.row"), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
                     Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
                         Text(position.instrument, style = MaterialTheme.typography.titleSmall)
                         Text(
@@ -196,12 +196,12 @@ private fun HomePositionsCard(positions: List<PositionDto>) {
 
 @Composable
 private fun HomeRecentOrdersCard(orders: List<OrderDto>) {
-    Card(Modifier.fillMaxWidth().semantics(mergeDescendants = true) {}.testTag("home.orders")) {
+    Card(Modifier.fillMaxWidth().testTag("home.orders")) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Text(stringResource(R.string.home_section_recent_orders), style = MaterialTheme.typography.titleMedium)
             orders.forEachIndexed { index, order ->
                 if (index > 0) HorizontalDivider()
-                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
+                Row(Modifier.fillMaxWidth().semantics(mergeDescendants = true) {}.testTag("home.orders.row"), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
                     Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
                         Text(order.instrument, style = MaterialTheme.typography.titleSmall)
                         Text("${order.side.uppercase(Locale.ROOT)} ${order.size.display()}", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)

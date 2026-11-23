@@ -33,8 +33,14 @@ class HomeScreenUiTest {
         val snapshot = DashboardSnapshot(
             user = user,
             wallets = listOf(WalletDto("w1", "Primary", isPaper = true)),
-            positions = listOf(PositionDto("p1", "BTC-USD", "kraken", BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal("50000"), BigDecimal("123.456789"), walletPublicId = "w1")),
-            orders = listOf(OrderDto("o1", "c1", "ETH-USD", "kraken", "buy", "open", "limit", BigDecimal("1.5"), BigDecimal.ZERO, "2026-10-16T11:59:00Z", walletPublicId = "w1")),
+            positions = listOf(
+                PositionDto("p1", "BTC-USD", "kraken", BigDecimal("0.25"), BigDecimal.ZERO, BigDecimal("50000"), BigDecimal("123.456789"), walletPublicId = "w1"),
+                PositionDto("p2", "ETH-USD", "kraken", BigDecimal("1.5"), BigDecimal.ZERO, BigDecimal("3000"), BigDecimal("12.5"), walletPublicId = "w1"),
+            ),
+            orders = listOf(
+                OrderDto("o1", "c1", "ETH-USD", "kraken", "buy", "open", "limit", BigDecimal("1.5"), BigDecimal.ZERO, "2026-10-16T11:59:00Z", walletPublicId = "w1"),
+                OrderDto("o2", "c2", "BTC-USD", "kraken", "sell", "filled", "limit", BigDecimal("0.25"), BigDecimal("0.25"), "2026-10-16T11:58:00Z", walletPublicId = "w1"),
+            ),
             alerts = listOf(AlertDto("a1", "2026-10-16T11:58:00Z", "order_fill_full", "high", true, "Order filled", "Bought ETH")),
         )
         val state = mutableStateOf(
@@ -63,8 +69,14 @@ class HomeScreenUiTest {
         compose.onNodeWithTag("home.aiReviews.pendingCount").assertTextEquals("4")
         compose.onNodeWithTag("home.aiReviews").performScrollTo().performClick()
         compose.runOnIdle { assertEquals(1, openedAiReviews) }
-        compose.onNodeWithTag("home.positions").performScrollTo().assertTextContains("123.456789")
-        compose.onNodeWithTag("home.orders").performScrollTo().assertTextContains("ETH-USD")
+        compose.onNodeWithTag("home.positions").assertExists()
+        val positionRows = compose.onAllNodesWithTag("home.positions.row").assertCountEquals(2)
+        positionRows[0].performScrollTo().assertTextContains("BTC-USD").assertTextContains("123.456789")
+        positionRows[1].performScrollTo().assertTextContains("ETH-USD")
+        compose.onNodeWithTag("home.orders").assertExists()
+        val orderRows = compose.onAllNodesWithTag("home.orders.row").assertCountEquals(2)
+        orderRows[0].performScrollTo().assertTextContains("ETH-USD")
+        orderRows[1].performScrollTo().assertTextContains("BTC-USD")
 
         compose.runOnIdle {
             state.value = state.value.copy(home = state.value.home.copy(status = LiveConnectionStatus.STOPPED, lastHeartbeatAt = null, connectedAt = null))
