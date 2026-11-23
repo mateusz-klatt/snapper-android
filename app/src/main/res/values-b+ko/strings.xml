@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">새로고침</string>
     <string name="venue_accounts_failed" formatted="false">거래소 계정 상태를 불러올 수 없습니다. 빈 계정이 아니라 현재 데이터를 사용할 수 없는 상태입니다.</string>
     <string name="venue_accounts_authoritative" formatted="false">권한 기간 내에 확인된 실시간 거래소 데이터입니다.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">실시간으로 표시되지 않은 행은 마지막으로 확인된 데이터, 시뮬레이션 데이터 또는 사용할 수 없는 데이터를 나타냅니다 — 거래소가 제공한 신뢰할 수 있는 실시간 잔고가 아닙니다.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">이 계좌는 마지막으로 확인된 데이터, 시뮬레이션 데이터 또는 사용할 수 없는 데이터를 표시합니다 — 거래소가 제공한 신뢰할 수 있는 실시간 잔고가 아닙니다.</string>
     <string name="venue_accounts_valuation" formatted="false">평가액</string>
     <string name="venue_accounts_balances" formatted="false">잔고</string>
     <string name="venue_accounts_observed" formatted="false">관측 시각</string>
@@ -423,7 +423,7 @@
     <string name="records_status_cancelled" formatted="false">취소됨</string>
     <string name="records_status_rejected" formatted="false">거부됨</string>
     <string name="records_alert_type_order_unknown" formatted="false">주문 상태 알 수 없음</string>
-    <string name="venue_accounts_status_observed" formatted="false">실시간</string>
+    <string name="venue_accounts_status_observed" formatted="false">관측됨</string>
     <string name="venue_accounts_status_simulated" formatted="false">시뮬레이션</string>
     <string name="venue_accounts_status_stale" formatted="false">기한 만료</string>
     <string name="venue_accounts_status_clock_error" formatted="false">시간 오류</string>
@@ -484,4 +484,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">불완전</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">거래소 원시 값</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">기존 부동소수점 값</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">손상됨</string>
+    <string name="system_status_not_running" formatted="false">실행 중이 아님</string>
+    <string name="records_status_closed" formatted="false">종료됨</string>
+    <string name="records_status_pending_new" formatted="false">제출 대기 중</string>
+    <string name="records_status_expired" formatted="false">만료됨</string>
+    <string name="records_alert_priority_critical" formatted="false">심각</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">심각한 시스템 오류</string>
+    <string name="records_alert_type_drift" formatted="false">포트폴리오 편차</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">대리인에게 전송됨</string>
+    <string name="ai_reviews_status_timeout" formatted="false">시간 초과</string>
+    <string name="backtests_status_cancel_requested" formatted="false">취소 요청됨</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">대기 중</string>
 </resources>

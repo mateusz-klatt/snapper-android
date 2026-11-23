@@ -91,4 +91,33 @@ class AlertRecordsUiTest {
         compose.onNodeWithText(empty).assertDoesNotExist()
         reveal("Body arrived")
     }
+
+    @Test fun backendTitleWinsBeforeLocalizedTypeAndUnknownTypeFallback() {
+        val record = mutableStateOf(alert("fallback").copy(
+            title = "Backend-provided title", alertType = "critical_system_error", priority = "critical",
+        ))
+        var critical = ""
+        var criticalError = ""
+        var drift = ""
+        compose.setContent {
+            critical = stringResource(R.string.records_alert_priority_critical)
+            criticalError = stringResource(R.string.records_alert_type_critical_system_error)
+            drift = stringResource(R.string.records_alert_type_drift)
+            MaterialTheme { LazyColumn(Modifier.testTag("alerts")) { alertsScreen(state(listOf(record.value))) } }
+        }
+        reveal("Backend-provided title")
+        reveal("$critical · $criticalError")
+        compose.onNodeWithText(criticalError).assertDoesNotExist()
+
+        compose.runOnIdle { record.value = record.value.copy(title = " \t ") }
+        reveal(criticalError)
+        compose.onNodeWithText("Backend-provided title").assertDoesNotExist()
+
+        compose.runOnIdle { record.value = record.value.copy(alertType = "future_backend_notice") }
+        reveal("future_backend_notice")
+
+        compose.runOnIdle { record.value = record.value.copy(title = "Portfolio drift resolved", alertType = "drift") }
+        reveal("Portfolio drift resolved")
+        reveal("$critical · $drift")
+    }
 }

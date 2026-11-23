@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">Обновить</string>
     <string name="venue_accounts_failed" formatted="false">Не удалось загрузить состояние биржевого счёта. Счёт не пуст; данные просто временно недоступны.</string>
     <string name="venue_accounts_authoritative" formatted="false">Фактические данные биржи, полученные в рамках окна достоверности.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Строки без отметки «В реальном времени» показывают последние известные, смоделированные или недоступные данные — это никогда не достоверные биржевые балансы в реальном времени.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Этот счёт показывает последние известные, смоделированные или недоступные данные — это не достоверные биржевые балансы в реальном времени.</string>
     <string name="venue_accounts_valuation" formatted="false">Оценка стоимости</string>
     <string name="venue_accounts_balances" formatted="false">Балансы</string>
     <string name="venue_accounts_observed" formatted="false">Время наблюдения</string>
@@ -426,7 +426,7 @@
     <string name="records_status_cancelled" formatted="false">Отменена</string>
     <string name="records_status_rejected" formatted="false">Отклонена</string>
     <string name="records_alert_type_order_unknown" formatted="false">Статус ордера неизвестен</string>
-    <string name="venue_accounts_status_observed" formatted="false">В реальном времени</string>
+    <string name="venue_accounts_status_observed" formatted="false">Наблюдалось</string>
     <string name="venue_accounts_status_simulated" formatted="false">Симуляция</string>
     <string name="venue_accounts_status_stale" formatted="false">Устарело</string>
     <string name="venue_accounts_status_clock_error" formatted="false">Ошибка часов</string>
@@ -487,4 +487,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Неполно</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Необработанные значения биржи</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Устаревшие значения с плавающей точкой</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">Повреждено</string>
+    <string name="system_status_not_running" formatted="false">Не выполняется</string>
+    <string name="records_status_closed" formatted="false">Закрыт</string>
+    <string name="records_status_pending_new" formatted="false">Ожидает отправки</string>
+    <string name="records_status_expired" formatted="false">Срок действия истёк</string>
+    <string name="records_alert_priority_critical" formatted="false">Критический</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">Критическая системная ошибка</string>
+    <string name="records_alert_type_drift" formatted="false">Отклонение портфеля</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">Отправлено делегатам</string>
+    <string name="ai_reviews_status_timeout" formatted="false">Время ожидания истекло</string>
+    <string name="backtests_status_cancel_requested" formatted="false">Запрошена отмена</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">Ожидает</string>
 </resources>

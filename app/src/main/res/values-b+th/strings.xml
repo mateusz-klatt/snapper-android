@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">รีเฟรช</string>
     <string name="venue_accounts_failed" formatted="false">ไม่สามารถโหลดสถานะบัญชีศูนย์ซื้อขายได้ บัญชีไม่ได้ว่างเปล่า แต่ขณะนี้ยังไม่มีข้อมูลให้ใช้งาน</string>
     <string name="venue_accounts_authoritative" formatted="false">ข้อมูลจริงจากการแลกเปลี่ยนในหน้าต่างสิทธิ์</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">แถวที่ไม่ได้ทำเครื่องหมายว่าเรียลไทม์จะแสดงข้อมูลล่าสุดที่ทราบ ข้อมูลจำลอง หรือข้อมูลที่ไม่พร้อมใช้งาน — ไม่ใช่ยอดคงเหลือแบบเรียลไทม์ที่เชื่อถือได้จากศูนย์ซื้อขายอย่างเด็ดขาด</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">บัญชีนี้แสดงข้อมูลล่าสุดที่ทราบ ข้อมูลจำลอง หรือข้อมูลที่ไม่พร้อมใช้งาน — ไม่ใช่ยอดคงเหลือแบบเรียลไทม์ที่เชื่อถือได้จากศูนย์ซื้อขาย</string>
     <string name="venue_accounts_valuation" formatted="false">การประเมินมูลค่า</string>
     <string name="venue_accounts_balances" formatted="false">ยอดคงเหลือ</string>
     <string name="venue_accounts_observed" formatted="false">เวลาที่สังเกต</string>
@@ -423,7 +423,7 @@
     <string name="records_status_cancelled" formatted="false">ยกเลิกแล้ว</string>
     <string name="records_status_rejected" formatted="false">ถูกปฏิเสธ</string>
     <string name="records_alert_type_order_unknown" formatted="false">ไม่ทราบสถานะคำสั่ง</string>
-    <string name="venue_accounts_status_observed" formatted="false">เรียลไทม์</string>
+    <string name="venue_accounts_status_observed" formatted="false">สังเกตการณ์แล้ว</string>
     <string name="venue_accounts_status_simulated" formatted="false">จำลอง</string>
     <string name="venue_accounts_status_stale" formatted="false">ล้าสมัย</string>
     <string name="venue_accounts_status_clock_error" formatted="false">ข้อผิดพลาดของเวลา</string>
@@ -484,4 +484,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">ไม่ครบถ้วน</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">ค่าดิบจากเอ็กซ์เชนจ์</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">ค่าทศนิยมลอยตัวแบบเดิม</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">เสียหาย</string>
+    <string name="system_status_not_running" formatted="false">ไม่ได้ทำงาน</string>
+    <string name="records_status_closed" formatted="false">ปิดแล้ว</string>
+    <string name="records_status_pending_new" formatted="false">รอส่ง</string>
+    <string name="records_status_expired" formatted="false">หมดอายุ</string>
+    <string name="records_alert_priority_critical" formatted="false">วิกฤต</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">ข้อผิดพลาดระดับวิกฤตของระบบ</string>
+    <string name="records_alert_type_drift" formatted="false">ความคลาดเคลื่อนของพอร์ตโฟลิโอ</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">ส่งไปยังตัวแทนแล้ว</string>
+    <string name="ai_reviews_status_timeout" formatted="false">หมดเวลารอ</string>
+    <string name="backtests_status_cancel_requested" formatted="false">ส่งคำขอยกเลิกแล้ว</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">รอดำเนินการ</string>
 </resources>

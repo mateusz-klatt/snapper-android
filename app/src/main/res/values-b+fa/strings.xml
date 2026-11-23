@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">تازه‌سازی</string>
     <string name="venue_accounts_failed" formatted="false">وضعیت حساب صرافی بارگیری نشد. حساب خالی نیست؛ داده‌ها فقط در حال حاضر در دسترس نیستند.</string>
     <string name="venue_accounts_authoritative" formatted="false">داده‌های زنده صرافی، ثبت شده در محدوده مجاز.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">ردیف‌های غیر زنده داده‌های قدیمی، شبیه‌سازی شده یا ناموجود را نشان می‌دهند — این داده‌ها هرگز موجودی زنده و معتبر صرافی نیستند.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">این حساب آخرین داده‌های شناخته‌شده، شبیه‌سازی‌شده یا ناموجود را نشان می‌دهد — این داده‌ها موجودی زنده و معتبر صرافی نیستند.</string>
     <string name="venue_accounts_valuation" formatted="false">ارزش‌گذاری</string>
     <string name="venue_accounts_balances" formatted="false">موجودی‌ها</string>
     <string name="venue_accounts_observed" formatted="false">زمان مشاهده</string>
@@ -424,7 +424,7 @@
     <string name="records_status_cancelled" formatted="false">لغو شده</string>
     <string name="records_status_rejected" formatted="false">رد شده</string>
     <string name="records_alert_type_order_unknown" formatted="false">وضعیت سفارش نامشخص</string>
-    <string name="venue_accounts_status_observed" formatted="false">لحظه‌ای</string>
+    <string name="venue_accounts_status_observed" formatted="false">مشاهده‌شده</string>
     <string name="venue_accounts_status_simulated" formatted="false">شبیه‌سازی شده</string>
     <string name="venue_accounts_status_stale" formatted="false">به‌روزرسانی‌نشده</string>
     <string name="venue_accounts_status_clock_error" formatted="false">خطای ساعت</string>
@@ -485,4 +485,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">ناقص</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">مقادیر خام صرافی</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">مقادیر ممیز شناور قدیمی</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">خراب</string>
+    <string name="system_status_not_running" formatted="false">در حال اجرا نیست</string>
+    <string name="records_status_closed" formatted="false">بسته‌شده</string>
+    <string name="records_status_pending_new" formatted="false">در انتظار ارسال</string>
+    <string name="records_status_expired" formatted="false">منقضی‌شده</string>
+    <string name="records_alert_priority_critical" formatted="false">بحرانی</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">خطای بحرانی سیستم</string>
+    <string name="records_alert_type_drift" formatted="false">انحراف پرتفوی</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">ارسال‌شده به نمایندگان</string>
+    <string name="ai_reviews_status_timeout" formatted="false">پایان مهلت انتظار</string>
+    <string name="backtests_status_cancel_requested" formatted="false">درخواست لغو ثبت شد</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">در انتظار</string>
 </resources>

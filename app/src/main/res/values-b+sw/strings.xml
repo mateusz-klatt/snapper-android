@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">Onyesha upya</string>
     <string name="venue_accounts_failed" formatted="false">Hali ya akaunti ya soko la kubadilisha haikuweza kupakiwa. Akaunti si tupu; data hazipatikani kwa sasa.</string>
     <string name="venue_accounts_authoritative" formatted="false">Data halisi na ya kuaminika kutoka soko la kubadilisha ndani ya muda wake wa uhalali.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Mistari isiyotiwa alama Wakati halisi inaonyesha data za mwisho kujulikana, zilizoigwa au zisizopatikana — kamwe si salio rasmi na kuaminika za soko kwa wakati halisi.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Akaunti hii inaonyesha data za mwisho kujulikana, zilizoigwa au zisizopatikana — hizi si salio rasmi na la kuaminika la soko kwa wakati halisi.</string>
     <string name="venue_accounts_valuation" formatted="false">Uthamini</string>
     <string name="venue_accounts_balances" formatted="false">Salio</string>
     <string name="venue_accounts_observed" formatted="false">Wakati wa uchunguzi</string>
@@ -424,7 +424,7 @@
     <string name="records_status_cancelled" formatted="false">Imeghairiwa</string>
     <string name="records_status_rejected" formatted="false">Imekataliwa</string>
     <string name="records_alert_type_order_unknown" formatted="false">Hali ya agizo haijulikani</string>
-    <string name="venue_accounts_status_observed" formatted="false">Wakati halisi</string>
+    <string name="venue_accounts_status_observed" formatted="false">Imechunguzwa</string>
     <string name="venue_accounts_status_simulated" formatted="false">Imeigwa</string>
     <string name="venue_accounts_status_stale" formatted="false">Zimepitwa na wakati</string>
     <string name="venue_accounts_status_clock_error" formatted="false">Hitilafu ya saa</string>
@@ -485,4 +485,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Haijakamilika</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Thamani ghafi kutoka sokoni</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Thamani za zamani za nukta inayoelea</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">Imeharibika</string>
+    <string name="system_status_not_running" formatted="false">Haiendeshwi</string>
+    <string name="records_status_closed" formatted="false">Limefungwa</string>
+    <string name="records_status_pending_new" formatted="false">Linasubiri kuwasilishwa</string>
+    <string name="records_status_expired" formatted="false">Muda wa uhalali umeisha</string>
+    <string name="records_alert_priority_critical" formatted="false">Kali sana</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">Hitilafu kali sana ya mfumo</string>
+    <string name="records_alert_type_drift" formatted="false">Mchepuko wa jalada la uwekezaji</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">Imetumwa kwa wawakilishi</string>
+    <string name="ai_reviews_status_timeout" formatted="false">Muda wa kusubiri umeisha</string>
+    <string name="backtests_status_cancel_requested" formatted="false">Ughairi umeombwa</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">Inasubiri</string>
 </resources>

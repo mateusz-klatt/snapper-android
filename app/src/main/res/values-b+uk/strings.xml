@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">Оновити</string>
     <string name="venue_accounts_failed" formatted="false">Не вдалося завантажити стан біржового рахунку. Рахунок не порожній; дані просто тимчасово недоступні.</string>
     <string name="venue_accounts_authoritative" formatted="false">Фактичні дані біржі, отримані в межах вікна достовірності.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Рядки без позначки «У реальному часі» показують останні відомі, симульовані або недоступні дані — це ніколи не достовірні біржові баланси в реальному часі.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Цей рахунок показує останні відомі, симульовані або недоступні дані — це не достовірні біржові баланси в реальному часі.</string>
     <string name="venue_accounts_valuation" formatted="false">Оцінка вартості</string>
     <string name="venue_accounts_balances" formatted="false">Баланси</string>
     <string name="venue_accounts_observed" formatted="false">Час спостереження</string>
@@ -426,7 +426,7 @@
     <string name="records_status_cancelled" formatted="false">Скасований</string>
     <string name="records_status_rejected" formatted="false">Відхилений</string>
     <string name="records_alert_type_order_unknown" formatted="false">Стан ордера невідомий</string>
-    <string name="venue_accounts_status_observed" formatted="false">У реальному часі</string>
+    <string name="venue_accounts_status_observed" formatted="false">Спостережено</string>
     <string name="venue_accounts_status_simulated" formatted="false">Симуляція</string>
     <string name="venue_accounts_status_stale" formatted="false">Застаріло</string>
     <string name="venue_accounts_status_clock_error" formatted="false">Помилка годинника</string>
@@ -487,4 +487,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Неповно</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Необроблені значення біржі</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Застарілі значення з рухомою комою</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">Пошкоджено</string>
+    <string name="system_status_not_running" formatted="false">Не працює</string>
+    <string name="records_status_closed" formatted="false">Закритий</string>
+    <string name="records_status_pending_new" formatted="false">Очікує надсилання</string>
+    <string name="records_status_expired" formatted="false">Термін дії минув</string>
+    <string name="records_alert_priority_critical" formatted="false">Критичний</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">Критична системна помилка</string>
+    <string name="records_alert_type_drift" formatted="false">Відхилення портфеля</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">Надіслано делегатам</string>
+    <string name="ai_reviews_status_timeout" formatted="false">Час очікування вичерпано</string>
+    <string name="backtests_status_cancel_requested" formatted="false">Надіслано запит на скасування</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">Очікує</string>
 </resources>

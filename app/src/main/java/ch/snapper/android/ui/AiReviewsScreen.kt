@@ -81,7 +81,7 @@ private fun DecisionControls(row: AiPendingReviewDto, state: AiReviewsState, act
 private fun AuditReview(row: AiAuditReviewDto) {
     RecordCard(row.instrumentPublicId) {
         Text(row.reviewPublicId)
-        Metric(R.string.status, stringResource(decisionStatusLabel(aiReviewVerdict(row))))
+        Metric(R.string.status, pendingReviewStatusLabel(row.status))
         row.rationale?.let { Metric(R.string.ai_reviews_rationale, it) }
         row.resolvedAt?.let { Metric(R.string.ai_reviews_decided, it) }
         Metric(R.string.ai_reviews_deadline, row.deadline.displayTimestamp())
@@ -149,11 +149,12 @@ private fun outcomeLabel(outcome: AiDecisionOutcome): Int = when (outcome) {
 }
 
 @Composable
-private fun pendingReviewStatusLabel(raw: String): String = when (raw) {
-    "pending", "fanout_dispatched" -> stringResource(R.string.ai_reviews_pending)
+private fun pendingReviewStatusLabel(raw: String): String = when (raw.lowercase()) {
+    "pending" -> stringResource(R.string.ai_reviews_pending)
+    "fanout_dispatched" -> stringResource(R.string.ai_reviews_status_fanout_dispatched)
     "resolved_approved" -> stringResource(R.string.ai_reviews_status_approved)
     "resolved_rejected" -> stringResource(R.string.ai_reviews_status_rejected)
-    "timeout" -> stringResource(R.string.ai_reviews_expired)
+    "timeout" -> stringResource(R.string.ai_reviews_status_timeout)
     "superseded" -> stringResource(R.string.ai_reviews_superseded)
     else -> raw
 }

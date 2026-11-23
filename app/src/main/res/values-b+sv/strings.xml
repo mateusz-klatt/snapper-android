@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">Uppdatera</string>
     <string name="venue_accounts_failed" formatted="false">Börskontots status kunde inte läsas in. Kontot är inte tomt; uppgifterna är bara otillgängliga just nu.</string>
     <string name="venue_accounts_authoritative" formatted="false">Tillförlitliga börsdata i realtid, registrerade inom giltighetsperioden.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Rader som inte är märkta Realtid visar senast kända, simulerade eller otillgängliga data — de är aldrig auktoritativa börssaldon i realtid.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Det här kontot visar senast kända, simulerade eller otillgängliga data — inte auktoritativa börssaldon i realtid.</string>
     <string name="venue_accounts_valuation" formatted="false">Värdering</string>
     <string name="venue_accounts_balances" formatted="false">Saldon</string>
     <string name="venue_accounts_observed" formatted="false">Observerat vid</string>
@@ -424,7 +424,7 @@
     <string name="records_status_cancelled" formatted="false">Makulerad</string>
     <string name="records_status_rejected" formatted="false">Avvisad</string>
     <string name="records_alert_type_order_unknown" formatted="false">Orderstatus okänd</string>
-    <string name="venue_accounts_status_observed" formatted="false">Realtid</string>
+    <string name="venue_accounts_status_observed" formatted="false">Observerat</string>
     <string name="venue_accounts_status_simulated" formatted="false">Simulerad</string>
     <string name="venue_accounts_status_stale" formatted="false">Föråldrad</string>
     <string name="venue_accounts_status_clock_error" formatted="false">Klockfel</string>
@@ -485,4 +485,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Ofullständigt</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Råvärden från börsen</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Äldre flyttalsvärden</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">Skadad</string>
+    <string name="system_status_not_running" formatted="false">Körs inte</string>
+    <string name="records_status_closed" formatted="false">Stängd</string>
+    <string name="records_status_pending_new" formatted="false">Väntar på att skickas</string>
+    <string name="records_status_expired" formatted="false">Utgången</string>
+    <string name="records_alert_priority_critical" formatted="false">Kritisk</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">Kritiskt systemfel</string>
+    <string name="records_alert_type_drift" formatted="false">Portföljavvikelse</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">Skickad till delegater</string>
+    <string name="ai_reviews_status_timeout" formatted="false">Tidsgränsen överskreds</string>
+    <string name="backtests_status_cancel_requested" formatted="false">Avbrytande begärt</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">Väntande</string>
 </resources>

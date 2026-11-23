@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">تحديث</string>
     <string name="venue_accounts_failed" formatted="false">تعذّر تحميل حالة حساب المنصة. هذا لا يعني أن الحساب فارغ؛ إنما البيانات غير متاحة حاليًا.</string>
     <string name="venue_accounts_authoritative" formatted="false">بيانات آنية موثوقة من المنصة، رُصدت خلال فترة الصلاحية.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">تعرض الصفوف غير الموسومة بآني بيانات سابقة أو محاكاة أو غير متاحة، وليست أرصدة آنية موثوقة من المنصة.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">يعرض هذا الحساب آخر البيانات المعروفة أو بيانات محاكاة أو بيانات غير متاحة — وليست أرصدة آنية موثوقة من المنصة.</string>
     <string name="venue_accounts_valuation" formatted="false">التقييم</string>
     <string name="venue_accounts_balances" formatted="false">الأرصدة</string>
     <string name="venue_accounts_observed" formatted="false">وقت الرصد</string>
@@ -428,7 +428,7 @@
     <string name="records_status_cancelled" formatted="false">ملغى</string>
     <string name="records_status_rejected" formatted="false">مرفوض</string>
     <string name="records_alert_type_order_unknown" formatted="false">حالة الأمر غير معروفة</string>
-    <string name="venue_accounts_status_observed" formatted="false">آني</string>
+    <string name="venue_accounts_status_observed" formatted="false">مرصود</string>
     <string name="venue_accounts_status_simulated" formatted="false">محاكاة</string>
     <string name="venue_accounts_status_stale" formatted="false">غير محدّث</string>
     <string name="venue_accounts_status_clock_error" formatted="false">خطأ زمني</string>
@@ -489,4 +489,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">غير مكتمل</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">القيم الخام من المنصة</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">قيم فاصلة عائمة قديمة</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">تالف</string>
+    <string name="system_status_not_running" formatted="false">غير قيد التشغيل</string>
+    <string name="records_status_closed" formatted="false">مغلق</string>
+    <string name="records_status_pending_new" formatted="false">بانتظار الإرسال</string>
+    <string name="records_status_expired" formatted="false">منتهي الصلاحية</string>
+    <string name="records_alert_priority_critical" formatted="false">حرج</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">خطأ حرج في النظام</string>
+    <string name="records_alert_type_drift" formatted="false">انحراف المحفظة</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">أُرسل إلى المفوّضين</string>
+    <string name="ai_reviews_status_timeout" formatted="false">انتهت مهلة الانتظار</string>
+    <string name="backtests_status_cancel_requested" formatted="false">طُلب الإلغاء</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">قيد الانتظار</string>
 </resources>

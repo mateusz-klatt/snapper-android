@@ -205,7 +205,7 @@
     <string name="venue_accounts_refresh">Refresh</string>
     <string name="venue_accounts_failed">Venue account state could not be loaded. This is not an empty account — the data is simply unavailable right now.</string>
     <string name="venue_accounts_authoritative">Live venue truth, observed within the authority window.</string>
-    <string name="venue_accounts_not_authoritative">Rows not marked Live show last-known, simulated, or unavailable data — never authoritative live venue balances.</string>
+    <string name="venue_accounts_not_authoritative">This account shows last-known, simulated, or unavailable data — not authoritative live venue balances.</string>
     <string name="venue_accounts_valuation">Valuation</string>
     <string name="venue_accounts_balances">Balances</string>
     <string name="venue_accounts_observed">Observed at</string>
@@ -427,7 +427,7 @@
     <string name="records_status_cancelled" formatted="false">Cancelled</string>
     <string name="records_status_rejected" formatted="false">Rejected</string>
     <string name="records_alert_type_order_unknown" formatted="false">Order state unknown</string>
-    <string name="venue_accounts_status_observed" formatted="false">Live</string>
+    <string name="venue_accounts_status_observed" formatted="false">Observed</string>
     <string name="venue_accounts_status_simulated" formatted="false">Simulated</string>
     <string name="venue_accounts_status_stale" formatted="false">Stale</string>
     <string name="venue_accounts_status_clock_error" formatted="false">Clock error</string>
@@ -488,4 +488,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Incomplete</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Raw venue values</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Legacy floating-point values</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">Corrupt</string>
+    <string name="system_status_not_running" formatted="false">Not running</string>
+    <string name="records_status_closed" formatted="false">Closed</string>
+    <string name="records_status_pending_new" formatted="false">Pending submission</string>
+    <string name="records_status_expired" formatted="false">Expired</string>
+    <string name="records_alert_priority_critical" formatted="false">Critical</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">Critical system error</string>
+    <string name="records_alert_type_drift" formatted="false">Portfolio drift</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">Dispatched to delegates</string>
+    <string name="ai_reviews_status_timeout" formatted="false">Timed out</string>
+    <string name="backtests_status_cancel_requested" formatted="false">Cancellation requested</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">Pending</string>
 </resources>

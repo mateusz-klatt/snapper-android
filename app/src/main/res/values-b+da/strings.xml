@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">Opdatér</string>
     <string name="venue_accounts_failed" formatted="false">Børskontoens tilstand kunne ikke indlæses. Kontoen er ikke tom; dataene er blot utilgængelige lige nu.</string>
     <string name="venue_accounts_authoritative" formatted="false">Autoritative børsdata i realtid, registreret inden for gyldighedsperioden.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Rækker, der ikke er mærket Realtid, viser senest kendte, simulerede eller utilgængelige data — de er aldrig autoritative børssaldi i realtid.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Denne konto viser senest kendte, simulerede eller utilgængelige data — ikke autoritative børssaldi i realtid.</string>
     <string name="venue_accounts_valuation" formatted="false">Værdiansættelse</string>
     <string name="venue_accounts_balances" formatted="false">Saldi</string>
     <string name="venue_accounts_observed" formatted="false">Observeret kl.</string>
@@ -424,7 +424,7 @@
     <string name="records_status_cancelled" formatted="false">Annulleret</string>
     <string name="records_status_rejected" formatted="false">Afvist</string>
     <string name="records_alert_type_order_unknown" formatted="false">Ordrestatus ukendt</string>
-    <string name="venue_accounts_status_observed" formatted="false">Realtid</string>
+    <string name="venue_accounts_status_observed" formatted="false">Observeret</string>
     <string name="venue_accounts_status_simulated" formatted="false">Simuleret</string>
     <string name="venue_accounts_status_stale" formatted="false">Forældet</string>
     <string name="venue_accounts_status_clock_error" formatted="false">Ur-fejl</string>
@@ -485,4 +485,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Ufuldstændigt</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Råværdier fra børsen</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Ældre flydende kommatal</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">Beskadiget</string>
+    <string name="system_status_not_running" formatted="false">Kører ikke</string>
+    <string name="records_status_closed" formatted="false">Lukket</string>
+    <string name="records_status_pending_new" formatted="false">Afventer afsendelse</string>
+    <string name="records_status_expired" formatted="false">Udløbet</string>
+    <string name="records_alert_priority_critical" formatted="false">Kritisk</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">Kritisk systemfejl</string>
+    <string name="records_alert_type_drift" formatted="false">Porteføljeafvigelse</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">Sendt til delegerede</string>
+    <string name="ai_reviews_status_timeout" formatted="false">Tidsgrænse overskredet</string>
+    <string name="backtests_status_cancel_requested" formatted="false">Annullering anmodet</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">Afventer</string>
 </resources>

@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">Endurhlaða</string>
     <string name="venue_accounts_failed" formatted="false">Ekki tókst að hlaða stöðu kauphallarreikningsins. Reikningurinn er ekki tómur; gögnin eru einfaldlega ekki tiltæk sem stendur.</string>
     <string name="venue_accounts_authoritative" formatted="false">Áreiðanleg rauntímagögn vettvangsins, skráð innan gildistímans.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Raðir sem eru ekki merktar Í rauntíma sýna gömul, hermd eða ófáanleg gögn — þau eru aldrei áreiðanlegar rauntímastöður á vettvanginum.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Þessi reikningur sýnir síðustu þekktu, hermdu eða ófáanlegu gögnin — ekki áreiðanlegar rauntímastöður á vettvanginum.</string>
     <string name="venue_accounts_valuation" formatted="false">Verðmat</string>
     <string name="venue_accounts_balances" formatted="false">Inneignir</string>
     <string name="venue_accounts_observed" formatted="false">Athugað kl.</string>
@@ -424,7 +424,7 @@
     <string name="records_status_cancelled" formatted="false">Hætt við</string>
     <string name="records_status_rejected" formatted="false">Hafnað</string>
     <string name="records_alert_type_order_unknown" formatted="false">Staða pöntunar óþekkt</string>
-    <string name="venue_accounts_status_observed" formatted="false">Í rauntíma</string>
+    <string name="venue_accounts_status_observed" formatted="false">Athugað</string>
     <string name="venue_accounts_status_simulated" formatted="false">Hermt</string>
     <string name="venue_accounts_status_stale" formatted="false">Úrelt</string>
     <string name="venue_accounts_status_clock_error" formatted="false">Klukkuskekkja</string>
@@ -485,4 +485,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Ófullgert</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Óunnar tölur frá viðskiptavettvangi</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Fleytitölugildi úr eldra kerfi</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">Skemmt</string>
+    <string name="system_status_not_running" formatted="false">Ekki í gangi</string>
+    <string name="records_status_closed" formatted="false">Lokuð</string>
+    <string name="records_status_pending_new" formatted="false">Bíður sendingar</string>
+    <string name="records_status_expired" formatted="false">Útrunnin</string>
+    <string name="records_alert_priority_critical" formatted="false">Alvarlegt</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">Alvarleg kerfisvilla</string>
+    <string name="records_alert_type_drift" formatted="false">Frávik eignasafns</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">Sent til fulltrúa</string>
+    <string name="ai_reviews_status_timeout" formatted="false">Tímamörk liðin</string>
+    <string name="backtests_status_cancel_requested" formatted="false">Óskað eftir afturköllun</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">Í bið</string>
 </resources>

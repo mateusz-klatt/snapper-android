@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">Rifresko</string>
     <string name="venue_accounts_failed" formatted="false">Gjendja e llogarisë së bursës nuk mund të ngarkohej. Llogaria nuk është bosh; të dhënat thjesht nuk disponohen për momentin.</string>
     <string name="venue_accounts_authoritative" formatted="false">Të dhëna të besueshme të bursës në kohë reale, të regjistruara brenda periudhës së vlefshmërisë.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Rreshtat e pashënuar Në kohë reale tregojnë të dhënat e fundit të njohura, të simuluara ose të padisponueshme — ato nuk janë kurrë gjendje autoritative të bursës në kohë reale.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Kjo llogari tregon të dhënat e fundit të njohura, të simuluara ose të padisponueshme — ato nuk janë gjendje autoritative të bursës në kohë reale.</string>
     <string name="venue_accounts_valuation" formatted="false">Vlerësimi</string>
     <string name="venue_accounts_balances" formatted="false">Gjendjet</string>
     <string name="venue_accounts_observed" formatted="false">Koha e vëzhgimit</string>
@@ -424,7 +424,7 @@
     <string name="records_status_cancelled" formatted="false">Anuluar</string>
     <string name="records_status_rejected" formatted="false">Refuzuar</string>
     <string name="records_alert_type_order_unknown" formatted="false">Gjendja e porosisë e panjohur</string>
-    <string name="venue_accounts_status_observed" formatted="false">Në kohë reale</string>
+    <string name="venue_accounts_status_observed" formatted="false">I vëzhguar</string>
     <string name="venue_accounts_status_simulated" formatted="false">Të simuluara</string>
     <string name="venue_accounts_status_stale" formatted="false">Të vjetra</string>
     <string name="venue_accounts_status_clock_error" formatted="false">Gabim ore</string>
@@ -485,4 +485,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">I paplotë</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Vlera të papërpunuara nga bursa</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Vlera të formatit të vjetër me presje lëvizëse</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">I dëmtuar</string>
+    <string name="system_status_not_running" formatted="false">Nuk është në ekzekutim</string>
+    <string name="records_status_closed" formatted="false">Mbyllur</string>
+    <string name="records_status_pending_new" formatted="false">Në pritje të dërgimit</string>
+    <string name="records_status_expired" formatted="false">Skaduar</string>
+    <string name="records_alert_priority_critical" formatted="false">Kritik</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">Gabim kritik i sistemit</string>
+    <string name="records_alert_type_drift" formatted="false">Zhvendosje e portofolit</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">U dërgua te delegatët</string>
+    <string name="ai_reviews_status_timeout" formatted="false">Koha e pritjes mbaroi</string>
+    <string name="backtests_status_cancel_requested" formatted="false">U kërkua anulimi</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">Në pritje</string>
 </resources>

@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">রিফ্রেশ</string>
     <string name="venue_accounts_failed" formatted="false">এক্সচেঞ্জ অ্যাকাউন্টের অবস্থা লোড করা যায়নি। এটি খালি অ্যাকাউন্ট নয়; ডেটা এই মুহূর্তে অনুপলব্ধ।</string>
     <string name="venue_accounts_authoritative" formatted="false">লাইভ ভ্যানু সত্য, অথরিটি উইন্ডোর মধ্যে দেখা গেছে।</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">রিয়েল-টাইম হিসেবে চিহ্নিত নয় এমন সারিতে সর্বশেষ জানা, সিমুলেটেড বা অনুপলব্ধ ডেটা দেখানো হয়; এগুলো এক্সচেঞ্জের প্রামাণ্য বর্তমান ব্যালেন্স নয়।</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">এই অ্যাকাউন্টে সর্বশেষ জানা, সিমুলেটেড বা অনুপলব্ধ ডেটা দেখানো হয় — এগুলো এক্সচেঞ্জের প্রামাণ্য বর্তমান ব্যালেন্স নয়।</string>
     <string name="venue_accounts_valuation" formatted="false">মূল্যায়ন</string>
     <string name="venue_accounts_balances" formatted="false">ব্যালেন্স</string>
     <string name="venue_accounts_observed" formatted="false">পর্যবেক্ষণের সময়</string>
@@ -424,7 +424,7 @@
     <string name="records_status_cancelled" formatted="false">বাতিল</string>
     <string name="records_status_rejected" formatted="false">প্রত্যাখ্যাত</string>
     <string name="records_alert_type_order_unknown" formatted="false">অর্ডারের অবস্থা অজানা</string>
-    <string name="venue_accounts_status_observed" formatted="false">রিয়েল-টাইম</string>
+    <string name="venue_accounts_status_observed" formatted="false">পর্যবেক্ষিত</string>
     <string name="venue_accounts_status_simulated" formatted="false">সিমুলেটেড</string>
     <string name="venue_accounts_status_stale" formatted="false">মেয়াদোত্তীর্ণ</string>
     <string name="venue_accounts_status_clock_error" formatted="false">সময়ের ত্রুটি</string>
@@ -485,4 +485,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">অসম্পূর্ণ</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">এক্সচেঞ্জের অপরিবর্তিত মান</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">পুরোনো ফ্লোটিং-পয়েন্ট মান</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">ক্ষতিগ্রস্ত</string>
+    <string name="system_status_not_running" formatted="false">চালু নেই</string>
+    <string name="records_status_closed" formatted="false">বন্ধ হয়েছে</string>
+    <string name="records_status_pending_new" formatted="false">জমা দেওয়ার অপেক্ষায়</string>
+    <string name="records_status_expired" formatted="false">মেয়াদোত্তীর্ণ</string>
+    <string name="records_alert_priority_critical" formatted="false">অতি গুরুতর</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">সিস্টেমে অতি গুরুতর ত্রুটি</string>
+    <string name="records_alert_type_drift" formatted="false">পোর্টফোলিওর বিচ্যুতি</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">প্রতিনিধিদের কাছে পাঠানো হয়েছে</string>
+    <string name="ai_reviews_status_timeout" formatted="false">অপেক্ষার সময়সীমা শেষ</string>
+    <string name="backtests_status_cancel_requested" formatted="false">বাতিলের অনুরোধ করা হয়েছে</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">অপেক্ষমাণ</string>
 </resources>

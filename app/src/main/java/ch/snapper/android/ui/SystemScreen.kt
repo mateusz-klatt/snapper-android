@@ -68,7 +68,7 @@ private fun LazyListScope.strategiesSection(state: SystemState, actions: SystemA
         SystemSection(R.string.system_strategies, SystemFeed.STRATEGIES, state.strategies, actions) { rows ->
             EmptySystemRows(rows.isEmpty())
             rows.sortedBy { it.name }.forEach { row -> RecordCard(row.name) {
-                Metric(R.string.status, stringResource(if (row.running) R.string.system_running else R.string.system_stopped))
+                Metric(R.string.status, stringResource(if (row.running) R.string.system_running else R.string.system_status_not_running))
                 Metric(R.string.system_mode, processModeLabel(row.mode))
                 if (row.enabled) Text(stringResource(R.string.system_autostart))
                 row.strategyClass?.let { Text(it) }
@@ -145,7 +145,9 @@ private fun EmptySystemRows(empty: Boolean) {
 private fun Long?.counter(): String = this?.toString() ?: "—"
 
 @Composable
-private fun backtestStatusLabel(raw: String): String = stringResource(when (BacktestPresentation.status(raw)) {
+private fun backtestStatusLabel(raw: String): String = if (raw.lowercase(Locale.ROOT) == "cancel_requested") {
+    stringResource(R.string.backtests_status_cancel_requested)
+} else stringResource(when (BacktestPresentation.status(raw)) {
     BacktestStatus.PENDING -> R.string.backtests_status_pending
     BacktestStatus.RUNNING -> R.string.backtests_status_running
     BacktestStatus.COMPLETED -> R.string.backtests_status_completed
@@ -160,7 +162,8 @@ internal fun systemStatusLabel(raw: String): String = when (raw.lowercase(Locale
     "degraded" -> stringResource(R.string.system_status_degraded)
     "healthy" -> stringResource(R.string.system_status_healthy)
     "running" -> stringResource(R.string.system_running)
-    "not_running", "stopped" -> stringResource(R.string.system_stopped)
+    "not_running" -> stringResource(R.string.system_status_not_running)
+    "stopped" -> stringResource(R.string.system_stopped)
     "starting" -> stringResource(R.string.system_status_starting)
     "stopping" -> stringResource(R.string.system_status_stopping)
     "error" -> stringResource(R.string.system_status_error)
@@ -172,7 +175,7 @@ internal fun systemStatusLabel(raw: String): String = when (raw.lowercase(Locale
     "unknown" -> stringResource(R.string.backtests_status_unknown)
     "active" -> stringResource(R.string.system_active)
     "inactive" -> stringResource(R.string.system_inactive)
-    "ok" -> stringResource(R.string.notification_defaults_saved)
+    "ok" -> stringResource(R.string.system_status_ok)
     else -> raw
 }
 

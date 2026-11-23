@@ -170,25 +170,30 @@ internal fun tradeSideLabel(value: String): String = when (value.lowercase()) {
 
 @Composable
 internal fun orderStatusLabel(value: String): String = when (value.lowercase()) {
+    "pending" -> stringResource(R.string.records_status_pending)
+    "pending_new" -> stringResource(R.string.records_status_pending_new)
     "new" -> stringResource(R.string.records_status_new)
     "submitted" -> stringResource(R.string.records_status_submitted)
     "open" -> stringResource(R.string.records_status_open)
+    "closed" -> stringResource(R.string.records_status_closed)
     "partial", "partially_filled" -> stringResource(R.string.records_status_partially_filled)
     "filled" -> stringResource(R.string.records_status_filled)
-    "cancelled" -> stringResource(R.string.records_status_cancelled)
+    "canceled", "cancelled" -> stringResource(R.string.records_status_cancelled)
+    "expired" -> stringResource(R.string.records_status_expired)
     "rejected" -> stringResource(R.string.records_status_rejected)
     else -> value
 }
 
 @Composable
 internal fun alertTitleLabel(alert: AlertDto): String =
-    if (alert.title.isBlank()) alertTypeLabel(alert.alertType) else alert.title
+    alert.title.ifBlank { alertTypeLabel(alert.alertType) }
 
 @Composable
 internal fun alertPriorityLabel(value: String): String = when (value.lowercase()) {
     "low" -> stringResource(R.string.notification_defaults_low)
     "medium" -> stringResource(R.string.notification_defaults_medium)
     "high" -> stringResource(R.string.notification_defaults_high)
+    "critical" -> stringResource(R.string.records_alert_priority_critical)
     else -> value
 }
 
@@ -198,8 +203,8 @@ internal fun alertTypeLabel(value: String): String = when (value) {
     "order_rejected" -> stringResource(R.string.notification_defaults_rejected)
     "position_stop_loss_fired" -> stringResource(R.string.notification_defaults_stop)
     "margin_warning" -> stringResource(R.string.notification_defaults_margin)
-    "critical_system_error" -> stringResource(R.string.notification_defaults_system)
+    "critical_system_error" -> stringResource(R.string.records_alert_type_critical_system_error)
     "order_unknown" -> stringResource(R.string.records_alert_type_order_unknown)
-    "drift" -> stringResource(R.string.venue_accounts_reconciliation_status_drift_detected)
+    "drift" -> stringResource(R.string.records_alert_type_drift)
     else -> value
 }

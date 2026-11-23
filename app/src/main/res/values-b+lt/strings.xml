@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">Atnaujinti</string>
     <string name="venue_accounts_failed" formatted="false">Nepavyko įkelti biržos sąskaitos būsenos. Sąskaita nėra tuščia; duomenys šiuo metu tiesiog nepasiekiami.</string>
     <string name="venue_accounts_authoritative" formatted="false">Patikimi tiesioginiai biržos duomenys, stebėti galiojimo laikotarpiu.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Eilutėse, nepažymėtose „Tiesiogiai“, rodomi pasenę, imituoti arba nepasiekiami duomenys — tai niekada nėra patikimi biržos likučiai realiuoju laiku.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Šioje sąskaitoje rodomi paskutiniai žinomi, imituoti arba nepasiekiami duomenys — tai nėra patikimi biržos likučiai realiuoju laiku.</string>
     <string name="venue_accounts_valuation" formatted="false">Vertinimas</string>
     <string name="venue_accounts_balances" formatted="false">Likučiai</string>
     <string name="venue_accounts_observed" formatted="false">Stebėjimo laikas</string>
@@ -426,7 +426,7 @@
     <string name="records_status_cancelled" formatted="false">Atšauktas</string>
     <string name="records_status_rejected" formatted="false">Atmestas</string>
     <string name="records_alert_type_order_unknown" formatted="false">Pavedimo būsena nežinoma</string>
-    <string name="venue_accounts_status_observed" formatted="false">Tikruoju laiku</string>
+    <string name="venue_accounts_status_observed" formatted="false">Stebėta</string>
     <string name="venue_accounts_status_simulated" formatted="false">Imituota</string>
     <string name="venue_accounts_status_stale" formatted="false">Pasenę</string>
     <string name="venue_accounts_status_clock_error" formatted="false">Laikrodžio klaida</string>
@@ -487,4 +487,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Neužbaigta</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Neapdorotos prekybos vietos reikšmės</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Ankstesnio formato slankiojo kablelio reikšmės</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">Sugadinta</string>
+    <string name="system_status_not_running" formatted="false">Neveikia</string>
+    <string name="records_status_closed" formatted="false">Uždarytas</string>
+    <string name="records_status_pending_new" formatted="false">Laukia pateikimo</string>
+    <string name="records_status_expired" formatted="false">Galiojimas pasibaigęs</string>
+    <string name="records_alert_priority_critical" formatted="false">Kritinis</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">Kritinė sistemos klaida</string>
+    <string name="records_alert_type_drift" formatted="false">Portfelio nuokrypis</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">Išsiųsta delegatams</string>
+    <string name="ai_reviews_status_timeout" formatted="false">Baigėsi laukimo laikas</string>
+    <string name="backtests_status_cancel_requested" formatted="false">Paprašyta atšaukti</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">Laukiama</string>
 </resources>

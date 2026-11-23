@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">Atsvaidzināt</string>
     <string name="venue_accounts_failed" formatted="false">Neizdevās ielādēt biržas konta stāvokli. Konts nav tukšs; dati šobrīd vienkārši nav pieejami.</string>
     <string name="venue_accounts_authoritative" formatted="false">Uzticami biržas reāllaika dati, novēroti pilnvaru logā.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Rindas, kas nav atzīmētas kā Tiešsaistē, rāda pēdējos zināmos, simulētos vai nepieejamos datus — nekad ne autoritatīvus biržas atlikumus reāllaikā.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Šajā kontā tiek rādīti pēdējie zināmie, simulētie vai nepieejamie dati — tie nav autoritatīvi biržas atlikumi reāllaikā.</string>
     <string name="venue_accounts_valuation" formatted="false">Novērtējums</string>
     <string name="venue_accounts_balances" formatted="false">Atlikumi</string>
     <string name="venue_accounts_observed" formatted="false">Novērojuma laiks</string>
@@ -425,7 +425,7 @@
     <string name="records_status_cancelled" formatted="false">Atcelts</string>
     <string name="records_status_rejected" formatted="false">Noraidīts</string>
     <string name="records_alert_type_order_unknown" formatted="false">Rīkojuma statuss nezināms</string>
-    <string name="venue_accounts_status_observed" formatted="false">Reāllaikā</string>
+    <string name="venue_accounts_status_observed" formatted="false">Novērots</string>
     <string name="venue_accounts_status_simulated" formatted="false">Simulēts</string>
     <string name="venue_accounts_status_stale" formatted="false">Novecojis</string>
     <string name="venue_accounts_status_clock_error" formatted="false">Pulksteņa kļūda</string>
@@ -486,4 +486,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Nepilnīgs</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Neapstrādātas tirdzniecības vietas vērtības</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Iepriekšējā formāta peldošā komata vērtības</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">Bojāts</string>
+    <string name="system_status_not_running" formatted="false">Nedarbojas</string>
+    <string name="records_status_closed" formatted="false">Slēgts</string>
+    <string name="records_status_pending_new" formatted="false">Gaida iesniegšanu</string>
+    <string name="records_status_expired" formatted="false">Derīguma termiņš beidzies</string>
+    <string name="records_alert_priority_critical" formatted="false">Kritisks</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">Kritiska sistēmas kļūda</string>
+    <string name="records_alert_type_drift" formatted="false">Portfeļa novirze</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">Nosūtīts delegātiem</string>
+    <string name="ai_reviews_status_timeout" formatted="false">Beidzies gaidīšanas laiks</string>
+    <string name="backtests_status_cancel_requested" formatted="false">Atcelšana pieprasīta</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">Gaida</string>
 </resources>

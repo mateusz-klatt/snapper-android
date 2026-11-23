@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">Päivitä</string>
     <string name="venue_accounts_failed" formatted="false">Pörssitilin tilaa ei voitu ladata. Tili ei ole tyhjä, vaan tiedot eivät juuri nyt ole saatavilla.</string>
     <string name="venue_accounts_authoritative" formatted="false">Reaaliaikainen pörssin tila, havaittu vahvistusikkunan sisällä.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Rivit, joita ei ole merkitty reaaliaikaisiksi, näyttävät viimeksi tunnettuja, simuloituja tai puuttuvia tietoja — ne eivät koskaan ole pörssin luotettavia reaaliaikaisia saldoja.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Tämä tili näyttää viimeksi tunnettuja, simuloituja tai puuttuvia tietoja — ei pörssin luotettavia reaaliaikaisia saldoja.</string>
     <string name="venue_accounts_valuation" formatted="false">Arvostus</string>
     <string name="venue_accounts_balances" formatted="false">Saldot</string>
     <string name="venue_accounts_observed" formatted="false">Havaittu</string>
@@ -424,7 +424,7 @@
     <string name="records_status_cancelled" formatted="false">Peruttu</string>
     <string name="records_status_rejected" formatted="false">Hylätty</string>
     <string name="records_alert_type_order_unknown" formatted="false">Toimeksiannon tila tuntematon</string>
-    <string name="venue_accounts_status_observed" formatted="false">Reaaliaikainen</string>
+    <string name="venue_accounts_status_observed" formatted="false">Havaittu</string>
     <string name="venue_accounts_status_simulated" formatted="false">Simuloitu</string>
     <string name="venue_accounts_status_stale" formatted="false">Vanhentunut</string>
     <string name="venue_accounts_status_clock_error" formatted="false">Kellovirhe</string>
@@ -485,4 +485,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Puutteellinen</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Pörssin raaka-arvot</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Vanhat liukulukuarvot</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">Vioittunut</string>
+    <string name="system_status_not_running" formatted="false">Ei käynnissä</string>
+    <string name="records_status_closed" formatted="false">Suljettu</string>
+    <string name="records_status_pending_new" formatted="false">Odottaa lähettämistä</string>
+    <string name="records_status_expired" formatted="false">Vanhentunut</string>
+    <string name="records_alert_priority_critical" formatted="false">Kriittinen</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">Kriittinen järjestelmävirhe</string>
+    <string name="records_alert_type_drift" formatted="false">Salkun poikkeama</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">Lähetetty valtuutetuille</string>
+    <string name="ai_reviews_status_timeout" formatted="false">Aikakatkaisu</string>
+    <string name="backtests_status_cancel_requested" formatted="false">Peruutusta pyydetty</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">Odottaa</string>
 </resources>

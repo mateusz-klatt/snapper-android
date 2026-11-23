@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">Vernieuwen</string>
     <string name="venue_accounts_failed" formatted="false">De status van het beursaccount kon niet worden geladen. Het account is niet leeg; de gegevens zijn momenteel gewoon niet beschikbaar.</string>
     <string name="venue_accounts_authoritative" formatted="false">Bindende realtime beursgegevens, waargenomen binnen de geldigheidsperiode.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Rijen zonder de markering Realtime tonen laatst bekende, gesimuleerde of niet-beschikbare gegevens — het zijn nooit gezaghebbende realtime beurssaldi.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Dit account toont laatst bekende, gesimuleerde of niet-beschikbare gegevens — geen gezaghebbende realtime beurssaldi.</string>
     <string name="venue_accounts_valuation" formatted="false">Waardering</string>
     <string name="venue_accounts_balances" formatted="false">Saldi</string>
     <string name="venue_accounts_observed" formatted="false">Waargenomen op</string>
@@ -424,7 +424,7 @@
     <string name="records_status_cancelled" formatted="false">Geannuleerd</string>
     <string name="records_status_rejected" formatted="false">Afgewezen</string>
     <string name="records_alert_type_order_unknown" formatted="false">Orderstatus onbekend</string>
-    <string name="venue_accounts_status_observed" formatted="false">Realtime</string>
+    <string name="venue_accounts_status_observed" formatted="false">Waargenomen</string>
     <string name="venue_accounts_status_simulated" formatted="false">Gesimuleerd</string>
     <string name="venue_accounts_status_stale" formatted="false">Verouderd</string>
     <string name="venue_accounts_status_clock_error" formatted="false">Klokfout</string>
@@ -485,4 +485,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Onvolledig</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Ruwe beurswaarden</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Oude waarden met drijvende komma</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">Beschadigd</string>
+    <string name="system_status_not_running" formatted="false">Niet in uitvoering</string>
+    <string name="records_status_closed" formatted="false">Gesloten</string>
+    <string name="records_status_pending_new" formatted="false">In afwachting van verzending</string>
+    <string name="records_status_expired" formatted="false">Verlopen</string>
+    <string name="records_alert_priority_critical" formatted="false">Kritiek</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">Kritieke systeemfout</string>
+    <string name="records_alert_type_drift" formatted="false">Portefeuilleafwijking</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">Verzonden naar gemachtigden</string>
+    <string name="ai_reviews_status_timeout" formatted="false">Time-out</string>
+    <string name="backtests_status_cancel_requested" formatted="false">Annulering aangevraagd</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">In afwachting</string>
 </resources>

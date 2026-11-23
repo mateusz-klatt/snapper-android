@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">Reîmprospătează</string>
     <string name="venue_accounts_failed" formatted="false">Starea contului de bursă nu a putut fi încărcată. Contul nu este gol; datele sunt pur și simplu indisponibile momentan.</string>
     <string name="venue_accounts_authoritative" formatted="false">Date bursiere de încredere în timp real, observate în intervalul de autoritate.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Rândurile nemarcate Timp real afișează ultimele date cunoscute, simulate sau indisponibile — nu sunt niciodată solduri bursiere oficiale în timp real.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Acest cont afișează ultimele date cunoscute, simulate sau indisponibile — nu sunt solduri bursiere oficiale în timp real.</string>
     <string name="venue_accounts_valuation" formatted="false">Evaluare</string>
     <string name="venue_accounts_balances" formatted="false">Solduri</string>
     <string name="venue_accounts_observed" formatted="false">Observat la</string>
@@ -425,7 +425,7 @@
     <string name="records_status_cancelled" formatted="false">Anulat</string>
     <string name="records_status_rejected" formatted="false">Respins</string>
     <string name="records_alert_type_order_unknown" formatted="false">Stare ordin necunoscută</string>
-    <string name="venue_accounts_status_observed" formatted="false">Timp real</string>
+    <string name="venue_accounts_status_observed" formatted="false">Observat</string>
     <string name="venue_accounts_status_simulated" formatted="false">Simulat</string>
     <string name="venue_accounts_status_stale" formatted="false">Învechit</string>
     <string name="venue_accounts_status_clock_error" formatted="false">Eroare de ceas</string>
@@ -486,4 +486,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Incomplet</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Valori brute de la bursă</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Valori vechi în virgulă mobilă</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">Corupt</string>
+    <string name="system_status_not_running" formatted="false">Nu rulează</string>
+    <string name="records_status_closed" formatted="false">Închis</string>
+    <string name="records_status_pending_new" formatted="false">În așteptarea trimiterii</string>
+    <string name="records_status_expired" formatted="false">Expirat</string>
+    <string name="records_alert_priority_critical" formatted="false">Critică</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">Eroare critică de sistem</string>
+    <string name="records_alert_type_drift" formatted="false">Derivă a portofoliului</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">Trimis către delegați</string>
+    <string name="ai_reviews_status_timeout" formatted="false">Timp de așteptare depășit</string>
+    <string name="backtests_status_cancel_requested" formatted="false">Anulare solicitată</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">În așteptare</string>
 </resources>

@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">ပြန်လည်မွမ်းမံပါ</string>
     <string name="venue_accounts_failed" formatted="false">ပလက်ဖောင်းအကောင့်အခြေအနေကို ရယူ၍မရပါ။ အကောင့်တွင် ဒေတာမရှိခြင်း မဟုတ်ဘဲ လက်ရှိအချိန်တွင် ဒေတာကို မရရှိနိုင်ခြင်းသာ ဖြစ်သည်။</string>
     <string name="venue_accounts_authoritative" formatted="false">ယုံကြည်စိတ်ချရသော အချိန်ကာလအတွင်း ရရှိထားသည့် ပလက်ဖောင်း၏ လက်ရှိအတည်ပြုဒေတာ။</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">လက်ရှိအချိန်ဟု အမှတ်အသားမပြုထားသည့် အတန်းများတွင် နောက်ဆုံးသိရှိထားသော၊ သရုပ်တူပြုလုပ်ထားသော သို့မဟုတ် မရရှိနိုင်သော ဒေတာများကို ပြသထားပြီး ပလက်ဖောင်း၏ လက်ရှိအတည်ပြုလက်ကျန်များ မဟုတ်ပါ။</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">ဤအကောင့်တွင် နောက်ဆုံးသိရှိထားသော၊ သရုပ်တူပြုလုပ်ထားသော သို့မဟုတ် မရရှိနိုင်သော ဒေတာများကို ပြသထားပြီး ပလက်ဖောင်း၏ လက်ရှိအတည်ပြုလက်ကျန်များ မဟုတ်ပါ။</string>
     <string name="venue_accounts_valuation" formatted="false">တန်ဖိုးဖြတ်ခြင်း</string>
     <string name="venue_accounts_balances" formatted="false">ငွေလက်ကျန်များ</string>
     <string name="venue_accounts_observed" formatted="false">စောင့်ကြည့်သည့်အချိန်</string>
@@ -423,7 +423,7 @@
     <string name="records_status_cancelled" formatted="false">ပယ်ဖျက်ပြီး</string>
     <string name="records_status_rejected" formatted="false">ပယ်ချပြီး</string>
     <string name="records_alert_type_order_unknown" formatted="false">အော်ဒါ အခြေအနေ မသိရပါ</string>
-    <string name="venue_accounts_status_observed" formatted="false">လက်ရှိအချိန်</string>
+    <string name="venue_accounts_status_observed" formatted="false">စောင့်ကြည့်မှတ်တမ်းတင်ပြီး</string>
     <string name="venue_accounts_status_simulated" formatted="false">သရုပ်တူ</string>
     <string name="venue_accounts_status_stale" formatted="false">သက်တမ်းလွန်</string>
     <string name="venue_accounts_status_clock_error" formatted="false">နာရီချိန် မှားယွင်းမှု</string>
@@ -484,4 +484,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">မပြည့်စုံပါ</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">လဲလှယ်ဈေးကွက်မှ မပြုပြင်ရသေးသော တန်ဖိုးများ</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">ယခင် ရွေ့လျားဒဿမကိန်း တန်ဖိုးများ</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">ပျက်စီးနေသည်</string>
+    <string name="system_status_not_running" formatted="false">လုပ်ဆောင်နေခြင်း မရှိ</string>
+    <string name="records_status_closed" formatted="false">ပိတ်ပြီး</string>
+    <string name="records_status_pending_new" formatted="false">ပေးပို့ရန် စောင့်ဆိုင်းဆဲ</string>
+    <string name="records_status_expired" formatted="false">သက်တမ်းကုန်</string>
+    <string name="records_alert_priority_critical" formatted="false">အလွန်ပြင်းထန်</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">အလွန်ပြင်းထန်သော စနစ်အမှား</string>
+    <string name="records_alert_type_drift" formatted="false">ပိုင်ဆိုင်မှုအစု၏ လွဲချော်မှု</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">ကိုယ်စားလှယ်များထံ ပေးပို့ပြီး</string>
+    <string name="ai_reviews_status_timeout" formatted="false">စောင့်ဆိုင်းချိန် ကုန်ဆုံးသွားသည်</string>
+    <string name="backtests_status_cancel_requested" formatted="false">ပယ်ဖျက်ရန် တောင်းဆိုပြီး</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">စောင့်ဆိုင်းဆဲ</string>
 </resources>

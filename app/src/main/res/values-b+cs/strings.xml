@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">Obnovit</string>
     <string name="venue_accounts_failed" formatted="false">Stav účtu na burze se nepodařilo načíst. Nejde o prázdný účet; data pouze momentálně nejsou dostupná.</string>
     <string name="venue_accounts_authoritative" formatted="false">Spolehlivá aktuální data burzy zaznamenaná během doby platnosti.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Řádky, které nejsou označeny jako Živé, zobrazují stará, simulovaná nebo nedostupná data — nikdy nejde o směrodatné živé zůstatky burzy.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Tento účet zobrazuje poslední známá, simulovaná nebo nedostupná data — nejde o směrodatné aktuální zůstatky burzy.</string>
     <string name="venue_accounts_valuation" formatted="false">Ocenění</string>
     <string name="venue_accounts_balances" formatted="false">Zůstatky</string>
     <string name="venue_accounts_observed" formatted="false">Čas pozorování</string>
@@ -426,7 +426,7 @@
     <string name="records_status_cancelled" formatted="false">Zrušený</string>
     <string name="records_status_rejected" formatted="false">Odmítnutý</string>
     <string name="records_alert_type_order_unknown" formatted="false">Stav pokynu neznámý</string>
-    <string name="venue_accounts_status_observed" formatted="false">Aktuální</string>
+    <string name="venue_accounts_status_observed" formatted="false">Pozorováno</string>
     <string name="venue_accounts_status_simulated" formatted="false">Simulováno</string>
     <string name="venue_accounts_status_stale" formatted="false">Zastaralé</string>
     <string name="venue_accounts_status_clock_error" formatted="false">Chyba času</string>
@@ -487,4 +487,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Neúplné</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Nezpracované hodnoty z burzy</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Starší hodnoty s plovoucí řádovou čárkou</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">Poškozeno</string>
+    <string name="system_status_not_running" formatted="false">Není spuštěno</string>
+    <string name="records_status_closed" formatted="false">Uzavřený</string>
+    <string name="records_status_pending_new" formatted="false">Čeká na odeslání</string>
+    <string name="records_status_expired" formatted="false">Vypršel</string>
+    <string name="records_alert_priority_critical" formatted="false">Kritická</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">Kritická chyba systému</string>
+    <string name="records_alert_type_drift" formatted="false">Odchylka portfolia</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">Odesláno delegátům</string>
+    <string name="ai_reviews_status_timeout" formatted="false">Vypršel časový limit</string>
+    <string name="backtests_status_cancel_requested" formatted="false">Požádáno o zrušení</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">Čeká</string>
 </resources>

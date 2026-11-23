@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">רענון</string>
     <string name="venue_accounts_failed" formatted="false">לא ניתן לטעון את מצב החשבון בבורסה. החשבון אינו ריק; הנתונים פשוט אינם זמינים כרגע.</string>
     <string name="venue_accounts_authoritative" formatted="false">נתוני בורסה מהימנים בזמן אמת, שנצפו בתוך חלון הסמכות.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">שורות שאינן מסומנות כזמן אמת מציגות נתונים אחרונים, מדומים או לא זמינים — לעולם לא מדובר ביתרות בורסה מוסמכות בזמן אמת.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">חשבון זה מציג נתונים אחרונים ידועים, מדומים או לא זמינים — אלה אינם יתרות בורסה מוסמכות בזמן אמת.</string>
     <string name="venue_accounts_valuation" formatted="false">הערכת שווי</string>
     <string name="venue_accounts_balances" formatted="false">יתרות</string>
     <string name="venue_accounts_observed" formatted="false">זמן התצפית</string>
@@ -425,7 +425,7 @@
     <string name="records_status_cancelled" formatted="false">בוטל</string>
     <string name="records_status_rejected" formatted="false">נדחה</string>
     <string name="records_alert_type_order_unknown" formatted="false">מצב הפקודה לא ידוע</string>
-    <string name="venue_accounts_status_observed" formatted="false">זמן אמת</string>
+    <string name="venue_accounts_status_observed" formatted="false">נצפה</string>
     <string name="venue_accounts_status_simulated" formatted="false">מדומה</string>
     <string name="venue_accounts_status_stale" formatted="false">לא מעודכן</string>
     <string name="venue_accounts_status_clock_error" formatted="false">שגיאת שעון</string>
@@ -486,4 +486,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">לא שלם</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">ערכים גולמיים מהבורסה</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">ערכי נקודה צפה מהמערכת הישנה</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">פגום</string>
+    <string name="system_status_not_running" formatted="false">לא פועל</string>
+    <string name="records_status_closed" formatted="false">סגור</string>
+    <string name="records_status_pending_new" formatted="false">ממתין לשליחה</string>
+    <string name="records_status_expired" formatted="false">פג תוקף</string>
+    <string name="records_alert_priority_critical" formatted="false">קריטי</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">שגיאת מערכת קריטית</string>
+    <string name="records_alert_type_drift" formatted="false">סטייה בתיק ההשקעות</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">נשלח לנציגים</string>
+    <string name="ai_reviews_status_timeout" formatted="false">תם זמן ההמתנה</string>
+    <string name="backtests_status_cancel_requested" formatted="false">התבקש ביטול</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">ממתין</string>
 </resources>

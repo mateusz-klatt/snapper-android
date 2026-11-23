@@ -53,4 +53,27 @@ class VenueAccountsUiTest {
         compose.onNodeWithText(copyText(R.string.venue_accounts_status_observed)).assertDoesNotExist()
     }
 
+    @Test fun corruptAndUnsupportedStatesAreNotSoftened() {
+        val state = mutableStateOf(VenueAccountsState(accounts = listOf(row("live").copy(
+            effectiveStatus = "corrupt", isAuthoritative = false, balances = null)), lastSuccessfulFetch = now, now = now))
+        compose.setContent { MaterialTheme { LazyColumn { venueAccountsScreen(state.value, {}) } } }
+        compose.onNodeWithText(copyText(R.string.venue_accounts_status_corrupt)).assertExists()
+        compose.onNodeWithText(copyText(R.string.venue_accounts_status_unverified)).assertDoesNotExist()
+        compose.runOnIdle { state.value = state.value.copy(accounts = listOf(row("live").copy(
+            effectiveStatus = "unsupported", isAuthoritative = false, balances = null))) }
+        compose.onNodeWithText(copyText(R.string.venue_accounts_reconciliation_status_unsupported)).assertExists()
+        compose.onNodeWithText(copyText(R.string.venue_accounts_status_unavailable)).assertDoesNotExist()
+    }
+
+    @Test fun incompleteReconciliationIsNotReportedAsACompletedVerdict() {
+        val state = mutableStateOf(VenueAccountsState(accounts = listOf(row("live")), lastSuccessfulFetch = now, now = now))
+        compose.setContent { MaterialTheme { LazyColumn { venueAccountsScreen(state.value, {}) } } }
+        compose.onNodeWithText(copyText(R.string.venue_accounts_evaluation_incomplete)).performScrollTo().assertIsDisplayed()
+        compose.onNodeWithText(copyText(R.string.venue_accounts_reconciliation_status_reconciled)).assertDoesNotExist()
+        compose.runOnIdle { state.value = state.value.copy(accounts = listOf(row("live").copy(
+            reconciliation = VenueReconciliationDto("mismatched", true)))) }
+        compose.onNodeWithText(copyText(R.string.venue_accounts_evaluation_mismatched)).performScrollTo().assertIsDisplayed()
+        compose.onNodeWithText(copyText(R.string.venue_accounts_evaluation_incomplete)).assertDoesNotExist()
+    }
+
 }

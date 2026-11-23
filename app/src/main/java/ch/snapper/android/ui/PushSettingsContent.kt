@@ -48,7 +48,7 @@ private fun statusResource(status: PushStatus): Int = when (status) {
 internal fun PushAlertContent(state: PushState, actions: PushActions) {
     state.alert?.let { alert ->
         AlertDialog(onDismissRequest = actions.dismissAlert,
-            title = { Text(alert.displayTitle) }, text = { Text(alert.body) },
+            title = { Text(alertTitleLabel(alert)) }, text = { Text(alert.body) },
             confirmButton = { TextButton(onClick = actions.dismissAlert) { Text(stringResource(R.string.push_close)) } })
     }
 }

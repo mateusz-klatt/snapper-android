@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">Athnuaigh</string>
     <string name="venue_accounts_failed" formatted="false">Níorbh fhéidir staid an chuntais malartáin a lódáil. Níl an cuntas folamh; níl na sonraí ar fáil faoi láthair.</string>
     <string name="venue_accounts_authoritative" formatted="false">Sonraí malartáin iontaofa fíor-ama, taifeadta laistigh den tréimhse bailíochta.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Taispeánann línte nach bhfuil beo sonraí atá as dáta, insamhlaithe, nó nach bhfuil ar fáil — ní hiarmhéideanna beo údarásacha ón malartán iad riamh.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Taispeánann an cuntas seo na sonraí deireanacha atá ar eolas, sonraí insamhlaithe nó sonraí nach bhfuil ar fáil — ní hiarmhéideanna beo údarásacha ón malartán iad.</string>
     <string name="venue_accounts_valuation" formatted="false">Luacháil</string>
     <string name="venue_accounts_balances" formatted="false">Iarmhéideanna</string>
     <string name="venue_accounts_observed" formatted="false">Breathnaithe ag</string>
@@ -427,7 +427,7 @@
     <string name="records_status_cancelled" formatted="false">Cealaithe</string>
     <string name="records_status_rejected" formatted="false">Diúltaithe</string>
     <string name="records_alert_type_order_unknown" formatted="false">Stádas an ordaithe anaithnid</string>
-    <string name="venue_accounts_status_observed" formatted="false">Fíor-am</string>
+    <string name="venue_accounts_status_observed" formatted="false">Breathnaithe</string>
     <string name="venue_accounts_status_simulated" formatted="false">Insamhlaithe</string>
     <string name="venue_accounts_status_stale" formatted="false">As dáta</string>
     <string name="venue_accounts_status_clock_error" formatted="false">Earráid cloig</string>
@@ -488,4 +488,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Neamhiomlán</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Luachanna amha ón malartán</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Luachanna oidhreachta snámhphointe</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">Truaillithe</string>
+    <string name="system_status_not_running" formatted="false">Níl ag rith</string>
+    <string name="records_status_closed" formatted="false">Dúnta</string>
+    <string name="records_status_pending_new" formatted="false">Ag fanacht le seoladh</string>
+    <string name="records_status_expired" formatted="false">Imithe in éag</string>
+    <string name="records_alert_priority_critical" formatted="false">Criticiúil</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">Earráid chriticiúil córais</string>
+    <string name="records_alert_type_drift" formatted="false">Diall punainne</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">Seolta chuig toscairí</string>
+    <string name="ai_reviews_status_timeout" formatted="false">Teorainn ama sáraithe</string>
+    <string name="backtests_status_cancel_requested" formatted="false">Cealú iarrtha</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">Ar feitheamh</string>
 </resources>

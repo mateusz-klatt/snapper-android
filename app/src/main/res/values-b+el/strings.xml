@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">Ανανέωση</string>
     <string name="venue_accounts_failed" formatted="false">Δεν ήταν δυνατή η φόρτωση της κατάστασης του λογαριασμού στο ανταλλακτήριο. Ο λογαριασμός δεν είναι κενός· τα δεδομένα απλώς δεν είναι διαθέσιμα αυτή τη στιγμή.</string>
     <string name="venue_accounts_authoritative" formatted="false">Ζωντανή πραγματικότητα ανταλλακτηρίου, εντός του παραθύρου εξουσιοδότησης.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Οι γραμμές που δεν σημειώνονται ως Ζωντανά εμφανίζουν παλιά, προσομοιωμένα ή μη διαθέσιμα δεδομένα — δεν είναι ποτέ έγκυρα υπόλοιπα του ανταλλακτηρίου σε πραγματικό χρόνο.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Αυτός ο λογαριασμός εμφανίζει τα τελευταία γνωστά, προσομοιωμένα ή μη διαθέσιμα δεδομένα — δεν είναι έγκυρα υπόλοιπα του ανταλλακτηρίου σε πραγματικό χρόνο.</string>
     <string name="venue_accounts_valuation" formatted="false">Αποτίμηση</string>
     <string name="venue_accounts_balances" formatted="false">Υπόλοιπα</string>
     <string name="venue_accounts_observed" formatted="false">Χρόνος παρατήρησης</string>
@@ -424,7 +424,7 @@
     <string name="records_status_cancelled" formatted="false">Ακυρωμένη</string>
     <string name="records_status_rejected" formatted="false">Απορριφθείσα</string>
     <string name="records_alert_type_order_unknown" formatted="false">Άγνωστη κατάσταση εντολής</string>
-    <string name="venue_accounts_status_observed" formatted="false">Πραγματικός χρόνος</string>
+    <string name="venue_accounts_status_observed" formatted="false">Παρατηρήθηκε</string>
     <string name="venue_accounts_status_simulated" formatted="false">Προσομοιωμένο</string>
     <string name="venue_accounts_status_stale" formatted="false">Μη ενημερωμένο</string>
     <string name="venue_accounts_status_clock_error" formatted="false">Σφάλμα ρολογιού</string>
@@ -485,4 +485,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Ελλιπές</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Ακατέργαστες τιμές ανταλλακτηρίου</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Παλαιές τιμές κινητής υποδιαστολής</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">Αλλοιωμένο</string>
+    <string name="system_status_not_running" formatted="false">Δεν εκτελείται</string>
+    <string name="records_status_closed" formatted="false">Κλειστή</string>
+    <string name="records_status_pending_new" formatted="false">Αναμονή υποβολής</string>
+    <string name="records_status_expired" formatted="false">Έληξε</string>
+    <string name="records_alert_priority_critical" formatted="false">Κρίσιμη</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">Κρίσιμο σφάλμα συστήματος</string>
+    <string name="records_alert_type_drift" formatted="false">Απόκλιση χαρτοφυλακίου</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">Απεστάλη στους εκπροσώπους</string>
+    <string name="ai_reviews_status_timeout" formatted="false">Υπέρβαση χρονικού ορίου</string>
+    <string name="backtests_status_cancel_requested" formatted="false">Ζητήθηκε ακύρωση</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">Σε εκκρεμότητα</string>
 </resources>

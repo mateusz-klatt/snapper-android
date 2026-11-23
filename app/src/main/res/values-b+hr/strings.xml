@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">Osvježi</string>
     <string name="venue_accounts_failed" formatted="false">Stanje računa na burzi nije moguće učitati. Račun nije prazan; podaci su trenutačno nedostupni.</string>
     <string name="venue_accounts_authoritative" formatted="false">Pouzdani podaci burze u stvarnom vremenu, zabilježeni tijekom razdoblja valjanosti.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Redci koji nisu označeni kao Živo prikazuju stare, simulirane ili nedostupne podatke — nikad nisu mjerodavna stanja burze u stvarnom vremenu.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Ovaj račun prikazuje posljednje poznate, simulirane ili nedostupne podatke — to nisu mjerodavna stanja burze u stvarnom vremenu.</string>
     <string name="venue_accounts_valuation" formatted="false">Vrednovanje</string>
     <string name="venue_accounts_balances" formatted="false">Salda</string>
     <string name="venue_accounts_observed" formatted="false">Vrijeme opažanja</string>
@@ -425,7 +425,7 @@
     <string name="records_status_cancelled" formatted="false">Otkazani</string>
     <string name="records_status_rejected" formatted="false">Odbijeni</string>
     <string name="records_alert_type_order_unknown" formatted="false">Status naloga nepoznat</string>
-    <string name="venue_accounts_status_observed" formatted="false">U stvarnom vremenu</string>
+    <string name="venue_accounts_status_observed" formatted="false">Opaženo</string>
     <string name="venue_accounts_status_simulated" formatted="false">Simulirano</string>
     <string name="venue_accounts_status_stale" formatted="false">Zastarjelo</string>
     <string name="venue_accounts_status_clock_error" formatted="false">Pogreška sata</string>
@@ -486,4 +486,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Nepotpuno</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Izvorne vrijednosti burze</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Naslijeđene vrijednosti s pomičnim zarezom</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">Oštećeno</string>
+    <string name="system_status_not_running" formatted="false">Ne izvršava se</string>
+    <string name="records_status_closed" formatted="false">Zatvoren</string>
+    <string name="records_status_pending_new" formatted="false">Čeka slanje</string>
+    <string name="records_status_expired" formatted="false">Istekao</string>
+    <string name="records_alert_priority_critical" formatted="false">Kritičan</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">Kritična pogreška sustava</string>
+    <string name="records_alert_type_drift" formatted="false">Odstupanje portfelja</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">Poslano delegatima</string>
+    <string name="ai_reviews_status_timeout" formatted="false">Isteklo vrijeme čekanja</string>
+    <string name="backtests_status_cancel_requested" formatted="false">Zatraženo otkazivanje</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">Na čekanju</string>
 </resources>

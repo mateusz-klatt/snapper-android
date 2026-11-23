@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">Frissítés</string>
     <string name="venue_accounts_failed" formatted="false">A tőzsdei számla állapota nem tölthető be. A számla nem üres; az adatok jelenleg egyszerűen nem érhetők el.</string>
     <string name="venue_accounts_authoritative" formatted="false">Valós idejű tőzsdei adat, a hitelességi ablakon belül.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">A nem Élő jelzésű sorok elavult, szimulált vagy nem elérhető adatokat mutatnak — ezek soha nem hiteles, valós idejű tőzsdei egyenlegek.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Ez a számla a legutóbb ismert, szimulált vagy nem elérhető adatokat mutatja — ezek nem hiteles, valós idejű tőzsdei egyenlegek.</string>
     <string name="venue_accounts_valuation" formatted="false">Értékelés</string>
     <string name="venue_accounts_balances" formatted="false">Egyenlegek</string>
     <string name="venue_accounts_observed" formatted="false">Megfigyelés időpontja</string>
@@ -424,7 +424,7 @@
     <string name="records_status_cancelled" formatted="false">Visszavonva</string>
     <string name="records_status_rejected" formatted="false">Elutasítva</string>
     <string name="records_alert_type_order_unknown" formatted="false">A megbízás állapota ismeretlen</string>
-    <string name="venue_accounts_status_observed" formatted="false">Valós idejű</string>
+    <string name="venue_accounts_status_observed" formatted="false">Megfigyelt</string>
     <string name="venue_accounts_status_simulated" formatted="false">Szimulált</string>
     <string name="venue_accounts_status_stale" formatted="false">Elavult</string>
     <string name="venue_accounts_status_clock_error" formatted="false">Óra hiba</string>
@@ -485,4 +485,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Hiányos</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Nyers tőzsdei értékek</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Régi lebegőpontos értékek</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">Sérült</string>
+    <string name="system_status_not_running" formatted="false">Nem fut</string>
+    <string name="records_status_closed" formatted="false">Lezárt</string>
+    <string name="records_status_pending_new" formatted="false">Beküldésre vár</string>
+    <string name="records_status_expired" formatted="false">Lejárt</string>
+    <string name="records_alert_priority_critical" formatted="false">Kritikus</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">Kritikus rendszerhiba</string>
+    <string name="records_alert_type_drift" formatted="false">Portfólióeltérés</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">Elküldve a megbízottaknak</string>
+    <string name="ai_reviews_status_timeout" formatted="false">Időtúllépés</string>
+    <string name="backtests_status_cancel_requested" formatted="false">Megszakítás kérve</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">Függőben</string>
 </resources>

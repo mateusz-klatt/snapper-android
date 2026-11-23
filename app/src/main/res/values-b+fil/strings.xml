@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">I-refresh</string>
     <string name="venue_accounts_failed" formatted="false">Hindi ma-load ang estado ng account sa palitan. Hindi walang laman ang account; hindi lamang magagamit ang data sa ngayon.</string>
     <string name="venue_accounts_authoritative" formatted="false">Mapagkakatiwalaang real-time na data ng palitan, naitala sa loob ng panahon ng bisa.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Ang mga hanay na hindi minarkahang Real-time ay nagpapakita ng huling nalaman, ginaya, o hindi magagamit na data — hindi kailanman opisyal na real-time na balanse ng palitan ang mga ito.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Ipinapakita ng account na ito ang huling nalaman, ginaya, o hindi magagamit na data — hindi ito opisyal na real-time na balanse ng palitan.</string>
     <string name="venue_accounts_valuation" formatted="false">Pagtataya ng halaga</string>
     <string name="venue_accounts_balances" formatted="false">Mga Balanse</string>
     <string name="venue_accounts_observed" formatted="false">Oras ng pagmamasid</string>
@@ -424,7 +424,7 @@
     <string name="records_status_cancelled" formatted="false">Kinansela</string>
     <string name="records_status_rejected" formatted="false">Tinanggihan</string>
     <string name="records_alert_type_order_unknown" formatted="false">Hindi alam ang status ng order</string>
-    <string name="venue_accounts_status_observed" formatted="false">Real-time</string>
+    <string name="venue_accounts_status_observed" formatted="false">Naobserbahan</string>
     <string name="venue_accounts_status_simulated" formatted="false">Ginaya</string>
     <string name="venue_accounts_status_stale" formatted="false">Hindi napapanahon</string>
     <string name="venue_accounts_status_clock_error" formatted="false">Error sa oras</string>
@@ -485,4 +485,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Hindi kumpleto</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Mga hilaw na halaga mula sa palitan</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Mga lumang halagang floating-point</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">Sira</string>
+    <string name="system_status_not_running" formatted="false">Hindi tumatakbo</string>
+    <string name="records_status_closed" formatted="false">Sarado</string>
+    <string name="records_status_pending_new" formatted="false">Naghihintay ng pagsusumite</string>
+    <string name="records_status_expired" formatted="false">Nag-expire</string>
+    <string name="records_alert_priority_critical" formatted="false">Kritikal</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">Kritikal na error sa system</string>
+    <string name="records_alert_type_drift" formatted="false">Paglihis ng portfolio</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">Ipinadala sa mga delegate</string>
+    <string name="ai_reviews_status_timeout" formatted="false">Lumampas sa takdang oras</string>
+    <string name="backtests_status_cancel_requested" formatted="false">Hiniling ang pagkansela</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">Nakabinbin</string>
 </resources>

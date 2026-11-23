@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">Muat semula</string>
     <string name="venue_accounts_failed" formatted="false">Status akaun bursa tidak dapat dimuatkan. Akaun ini bukan kosong; datanya hanya tidak tersedia buat masa ini.</string>
     <string name="venue_accounts_authoritative" formatted="false">Data bursa masa nyata yang boleh dipercayai, direkodkan dalam tempoh sah.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Baris yang tidak ditandakan Masa nyata menunjukkan data terakhir diketahui, simulasi atau tidak tersedia — ia bukan sekali-kali baki bursa masa nyata yang berautoriti.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Akaun ini menunjukkan data terakhir diketahui, simulasi atau tidak tersedia — bukan baki bursa masa nyata yang berautoriti.</string>
     <string name="venue_accounts_valuation" formatted="false">Penilaian</string>
     <string name="venue_accounts_balances" formatted="false">Baki</string>
     <string name="venue_accounts_observed" formatted="false">Diperhatikan pada</string>
@@ -423,7 +423,7 @@
     <string name="records_status_cancelled" formatted="false">Dibatalkan</string>
     <string name="records_status_rejected" formatted="false">Ditolak</string>
     <string name="records_alert_type_order_unknown" formatted="false">Status pesanan tidak diketahui</string>
-    <string name="venue_accounts_status_observed" formatted="false">Masa nyata</string>
+    <string name="venue_accounts_status_observed" formatted="false">Diperhatikan</string>
     <string name="venue_accounts_status_simulated" formatted="false">Simulasi</string>
     <string name="venue_accounts_status_stale" formatted="false">Lapuk</string>
     <string name="venue_accounts_status_clock_error" formatted="false">Ralat jam</string>
@@ -484,4 +484,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Tidak lengkap</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Nilai mentah daripada bursa</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Nilai titik apung lama</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">Rosak</string>
+    <string name="system_status_not_running" formatted="false">Tidak berjalan</string>
+    <string name="records_status_closed" formatted="false">Ditutup</string>
+    <string name="records_status_pending_new" formatted="false">Menunggu penghantaran</string>
+    <string name="records_status_expired" formatted="false">Tamat tempoh</string>
+    <string name="records_alert_priority_critical" formatted="false">Kritikal</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">Ralat sistem kritikal</string>
+    <string name="records_alert_type_drift" formatted="false">Penyimpangan portfolio</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">Dihantar kepada wakil</string>
+    <string name="ai_reviews_status_timeout" formatted="false">Masa menunggu tamat</string>
+    <string name="backtests_status_cancel_requested" formatted="false">Pembatalan diminta</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">Menunggu</string>
 </resources>

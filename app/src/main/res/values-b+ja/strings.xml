@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">更新</string>
     <string name="venue_accounts_failed" formatted="false">取引所アカウントの状態を読み込めませんでした。アカウントが空なのではなく、現在データを取得できない状態です。</string>
     <string name="venue_accounts_authoritative" formatted="false">権限ウィンドウ内で確認された、ライブの取引所データ。</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">リアルタイムと表示されていない行には、最終確認済み、シミュレーション、または利用不可のデータが表示されます — 取引所が提供する信頼できるリアルタイム残高では決してありません。</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">この口座には、最後に確認されたデータ、シミュレーションデータ、または利用できないデータが表示されます — 取引所の信頼できるリアルタイム残高ではありません。</string>
     <string name="venue_accounts_valuation" formatted="false">評価額</string>
     <string name="venue_accounts_balances" formatted="false">残高</string>
     <string name="venue_accounts_observed" formatted="false">観測日時</string>
@@ -423,7 +423,7 @@
     <string name="records_status_cancelled" formatted="false">キャンセル済み</string>
     <string name="records_status_rejected" formatted="false">拒否</string>
     <string name="records_alert_type_order_unknown" formatted="false">注文状態不明</string>
-    <string name="venue_accounts_status_observed" formatted="false">リアルタイム</string>
+    <string name="venue_accounts_status_observed" formatted="false">観測済み</string>
     <string name="venue_accounts_status_simulated" formatted="false">シミュレーション</string>
     <string name="venue_accounts_status_stale" formatted="false">期限切れ</string>
     <string name="venue_accounts_status_clock_error" formatted="false">時刻エラー</string>
@@ -484,4 +484,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">不完全</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">取引所の生の数値</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">従来の浮動小数点値</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">破損</string>
+    <string name="system_status_not_running" formatted="false">稼働していない</string>
+    <string name="records_status_closed" formatted="false">終了済み</string>
+    <string name="records_status_pending_new" formatted="false">送信待ち</string>
+    <string name="records_status_expired" formatted="false">有効期限切れ</string>
+    <string name="records_alert_priority_critical" formatted="false">重大</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">重大なシステムエラー</string>
+    <string name="records_alert_type_drift" formatted="false">ポートフォリオの乖離</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">デリゲートに配信済み</string>
+    <string name="ai_reviews_status_timeout" formatted="false">タイムアウト</string>
+    <string name="backtests_status_cancel_requested" formatted="false">キャンセル要求済み</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">待機中</string>
 </resources>

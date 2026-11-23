@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">रीफ़्रेश करें</string>
     <string name="venue_accounts_failed" formatted="false">एक्सचेंज खाते की स्थिति लोड नहीं की जा सकी। खाता खाली नहीं है; डेटा अभी उपलब्ध नहीं है।</string>
     <string name="venue_accounts_authoritative" formatted="false">लाइव वेन्यू सच्चाई, प्राधिकरण विंडो के भीतर देखी गई।</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">जो पंक्तियाँ लाइव नहीं हैं, वे पुराना, सिम्युलेटेड या अनुपलब्ध डेटा दिखाती हैं — ये कभी भी एक्सचेंज के आधिकारिक लाइव बैलेंस नहीं होते।</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">यह खाता अंतिम ज्ञात, सिम्युलेटेड या अनुपलब्ध डेटा दिखाता है — ये एक्सचेंज के आधिकारिक लाइव बैलेंस नहीं हैं।</string>
     <string name="venue_accounts_valuation" formatted="false">मूल्यांकन</string>
     <string name="venue_accounts_balances" formatted="false">बैलेंस</string>
     <string name="venue_accounts_observed" formatted="false">अवलोकन का समय</string>
@@ -424,7 +424,7 @@
     <string name="records_status_cancelled" formatted="false">रद्द</string>
     <string name="records_status_rejected" formatted="false">अस्वीकृत</string>
     <string name="records_alert_type_order_unknown" formatted="false">ऑर्डर की स्थिति अज्ञात</string>
-    <string name="venue_accounts_status_observed" formatted="false">लाइव</string>
+    <string name="venue_accounts_status_observed" formatted="false">अवलोकित</string>
     <string name="venue_accounts_status_simulated" formatted="false">सिम्युलेटेड</string>
     <string name="venue_accounts_status_stale" formatted="false">पुराना</string>
     <string name="venue_accounts_status_clock_error" formatted="false">घड़ी की त्रुटि</string>
@@ -485,4 +485,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">अधूरा</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">एक्सचेंज के मूल मान</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">पुराने फ़्लोटिंग-पॉइंट मान</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">दूषित</string>
+    <string name="system_status_not_running" formatted="false">चालू नहीं</string>
+    <string name="records_status_closed" formatted="false">बंद</string>
+    <string name="records_status_pending_new" formatted="false">भेजे जाने की प्रतीक्षा में</string>
+    <string name="records_status_expired" formatted="false">वैधता समाप्त</string>
+    <string name="records_alert_priority_critical" formatted="false">अति गंभीर</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">सिस्टम की अति गंभीर त्रुटि</string>
+    <string name="records_alert_type_drift" formatted="false">पोर्टफोलियो विचलन</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">प्रतिनिधियों को भेजा गया</string>
+    <string name="ai_reviews_status_timeout" formatted="false">प्रतीक्षा की समय सीमा समाप्त</string>
+    <string name="backtests_status_cancel_requested" formatted="false">रद्द करने का अनुरोध किया गया</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">लंबित</string>
 </resources>

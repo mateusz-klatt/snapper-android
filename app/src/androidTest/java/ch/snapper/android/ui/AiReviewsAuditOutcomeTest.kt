@@ -62,9 +62,25 @@ class AiReviewsAuditOutcomeTest {
         compose.setContent { Content(state, AiReviewsActions(refresh = { refreshes++ })) }
         compose.onNodeWithText(text(R.string.refresh)).performClick()
         scrollText("selected-delegate")
-        scrollText(text(R.string.ai_reviews_expired))
+        scrollText(text(R.string.ai_reviews_status_timeout))
         compose.onNodeWithTag("ai.confirm").assertDoesNotExist()
         compose.runOnIdle { assertEquals(1, refreshes) }
+    }
+
+    @Test fun auditPreservesDispatchTimeoutAndUnknownStatusWithoutInferringApproval() {
+        val state = mutableStateOf(AiReviewsState(identity = identity("read:ai_reviews"),
+            audit = listOf(audit().copy(status = "pending", decision = null))))
+        compose.setContent { Content(state.value, AiReviewsActions()) }
+        scrollText(text(R.string.ai_reviews_pending))
+        compose.runOnIdle { state.value = state.value.copy(audit = listOf(audit().copy(status = "fanout_dispatched", decision = null))) }
+        scrollText(text(R.string.ai_reviews_status_fanout_dispatched))
+        compose.onNodeWithText(text(R.string.ai_reviews_pending)).assertDoesNotExist()
+        compose.runOnIdle { state.value = state.value.copy(audit = listOf(audit().copy(status = "timeout", decision = null))) }
+        scrollText(text(R.string.ai_reviews_status_timeout))
+        compose.onNodeWithText(text(R.string.ai_reviews_expired)).assertDoesNotExist()
+        compose.runOnIdle { state.value = state.value.copy(audit = listOf(audit().copy(status = "future-review-state", decision = "approve"))) }
+        scrollText("future-review-state")
+        compose.onNodeWithText(text(R.string.ai_reviews_status_approved)).assertDoesNotExist()
     }
 
     @Test fun acceptedDecisionRemainsVisibleWhenRefreshFailsAndCannotBeSubmittedAgain() {

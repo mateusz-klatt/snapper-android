@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">Թարմացնել</string>
     <string name="venue_accounts_failed" formatted="false">Չհաջողվեց բեռնել բորսայի հաշվի վիճակը։ Հաշիվը դատարկ չէ։ Տվյալներն այս պահին պարզապես անհասանելի են։</string>
     <string name="venue_accounts_authoritative" formatted="false">Բորսայի հավաստի իրական ժամանակի տվյալներ՝ դիտարկված վստահելիության պատուհանի ընթացքում։</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Ոչ կենդանի նշված տողերը ցույց են տալիս հին, սիմուլյացված կամ անհասանելի տվյալներ — դրանք երբեք բորսայի հավաստի իրական ժամանակի մնացորդներ չեն։</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Այս հաշիվը ցույց է տալիս վերջին հայտնի, սիմուլյացված կամ անհասանելի տվյալներ — դրանք բորսայի հավաստի իրական ժամանակի մնացորդներ չեն։</string>
     <string name="venue_accounts_valuation" formatted="false">Գնահատում</string>
     <string name="venue_accounts_balances" formatted="false">Մնացորդներ</string>
     <string name="venue_accounts_observed" formatted="false">Դիտարկման ժամանակը</string>
@@ -424,7 +424,7 @@
     <string name="records_status_cancelled" formatted="false">Չեղարկված</string>
     <string name="records_status_rejected" formatted="false">Մերժված</string>
     <string name="records_alert_type_order_unknown" formatted="false">Հանձնարարականի կարգավիճակն անհայտ է</string>
-    <string name="venue_accounts_status_observed" formatted="false">Իրական ժամանակում</string>
+    <string name="venue_accounts_status_observed" formatted="false">Դիտարկված</string>
     <string name="venue_accounts_status_simulated" formatted="false">Սիմուլյացված</string>
     <string name="venue_accounts_status_stale" formatted="false">Հնացած</string>
     <string name="venue_accounts_status_clock_error" formatted="false">Ժամացույցի սխալ</string>
@@ -485,4 +485,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Թերի</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Բորսայի չմշակված արժեքներ</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Հին լողացող ստորակետով արժեքներ</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">Վնասված</string>
+    <string name="system_status_not_running" formatted="false">Չի աշխատում</string>
+    <string name="records_status_closed" formatted="false">Փակված</string>
+    <string name="records_status_pending_new" formatted="false">Ուղարկման սպասման մեջ</string>
+    <string name="records_status_expired" formatted="false">Ժամկետանց</string>
+    <string name="records_alert_priority_critical" formatted="false">Կրիտիկական</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">Համակարգի կրիտիկական սխալ</string>
+    <string name="records_alert_type_drift" formatted="false">Պորտֆելի շեղում</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">Ուղարկվել է պատվիրակներին</string>
+    <string name="ai_reviews_status_timeout" formatted="false">Սպասման ժամանակը սպառվել է</string>
+    <string name="backtests_status_cancel_requested" formatted="false">Չեղարկումը պահանջված է</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">Սպասման մեջ</string>
 </resources>

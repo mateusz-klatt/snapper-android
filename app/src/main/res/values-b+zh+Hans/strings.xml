@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">刷新</string>
     <string name="venue_accounts_failed" formatted="false">无法加载交易所账户状态。账户并非为空，只是当前暂时无法获取数据。</string>
     <string name="venue_accounts_authoritative" formatted="false">在有效期内获取的交易所实时权威数据。</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">未标记为“实时”的行显示最后已知、模拟或不可用的数据——绝不代表交易所权威的实时余额。</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">本账户显示最后已知、模拟或不可用的数据——不代表交易所权威的实时余额。</string>
     <string name="venue_accounts_valuation" formatted="false">估值</string>
     <string name="venue_accounts_balances" formatted="false">余额</string>
     <string name="venue_accounts_observed" formatted="false">观测时间</string>
@@ -423,7 +423,7 @@
     <string name="records_status_cancelled" formatted="false">已取消</string>
     <string name="records_status_rejected" formatted="false">已拒绝</string>
     <string name="records_alert_type_order_unknown" formatted="false">订单状态未知</string>
-    <string name="venue_accounts_status_observed" formatted="false">实时</string>
+    <string name="venue_accounts_status_observed" formatted="false">已观测</string>
     <string name="venue_accounts_status_simulated" formatted="false">模拟</string>
     <string name="venue_accounts_status_stale" formatted="false">已过期</string>
     <string name="venue_accounts_status_clock_error" formatted="false">时钟错误</string>
@@ -484,4 +484,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">不完整</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">交易所原始数值</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">旧式浮点数值</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">已损坏</string>
+    <string name="system_status_not_running" formatted="false">未运行</string>
+    <string name="records_status_closed" formatted="false">已关闭</string>
+    <string name="records_status_pending_new" formatted="false">等待提交</string>
+    <string name="records_status_expired" formatted="false">已过期</string>
+    <string name="records_alert_priority_critical" formatted="false">严重</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">严重系统错误</string>
+    <string name="records_alert_type_drift" formatted="false">投资组合偏差</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">已分发给代理人</string>
+    <string name="ai_reviews_status_timeout" formatted="false">已超时</string>
+    <string name="backtests_status_cancel_requested" formatted="false">已请求取消</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">等待中</string>
 </resources>

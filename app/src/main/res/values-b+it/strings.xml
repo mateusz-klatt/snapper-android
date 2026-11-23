@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">Aggiorna</string>
     <string name="venue_accounts_failed" formatted="false">Impossibile caricare lo stato del conto della piattaforma. Il conto non è vuoto; al momento i dati sono semplicemente indisponibili.</string>
     <string name="venue_accounts_authoritative" formatted="false">Dati autorevoli della piattaforma in tempo reale, rilevati nel periodo di validità.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Le righe non contrassegnate come Tempo reale mostrano gli ultimi dati noti, simulati o non disponibili — non sono mai saldi ufficiali della piattaforma in tempo reale.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Questo conto mostra gli ultimi dati noti, simulati o non disponibili — non sono saldi ufficiali della piattaforma in tempo reale.</string>
     <string name="venue_accounts_valuation" formatted="false">Valutazione</string>
     <string name="venue_accounts_balances" formatted="false">Saldi</string>
     <string name="venue_accounts_observed" formatted="false">Rilevato il</string>
@@ -425,7 +425,7 @@
     <string name="records_status_cancelled" formatted="false">Annullato</string>
     <string name="records_status_rejected" formatted="false">Rifiutato</string>
     <string name="records_alert_type_order_unknown" formatted="false">Stato dell\'ordine sconosciuto</string>
-    <string name="venue_accounts_status_observed" formatted="false">Tempo reale</string>
+    <string name="venue_accounts_status_observed" formatted="false">Rilevato</string>
     <string name="venue_accounts_status_simulated" formatted="false">Simulato</string>
     <string name="venue_accounts_status_stale" formatted="false">Obsoleto</string>
     <string name="venue_accounts_status_clock_error" formatted="false">Errore orologio</string>
@@ -486,4 +486,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Incompleto</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Valori grezzi della piattaforma</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Valori precedenti in virgola mobile</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">Danneggiato</string>
+    <string name="system_status_not_running" formatted="false">Non in esecuzione</string>
+    <string name="records_status_closed" formatted="false">Chiuso</string>
+    <string name="records_status_pending_new" formatted="false">In attesa di invio</string>
+    <string name="records_status_expired" formatted="false">Scaduto</string>
+    <string name="records_alert_priority_critical" formatted="false">Critica</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">Errore critico del sistema</string>
+    <string name="records_alert_type_drift" formatted="false">Deriva del portafoglio</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">Inviata ai delegati</string>
+    <string name="ai_reviews_status_timeout" formatted="false">Tempo di attesa scaduto</string>
+    <string name="backtests_status_cancel_requested" formatted="false">Annullamento richiesto</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">In attesa</string>
 </resources>

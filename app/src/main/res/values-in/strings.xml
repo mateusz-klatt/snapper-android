@@ -202,7 +202,7 @@
     <string name="venue_accounts_refresh" formatted="false">Segarkan</string>
     <string name="venue_accounts_failed" formatted="false">Status akun bursa tidak dapat dimuat. Akun ini bukan kosong; datanya hanya sedang tidak tersedia.</string>
     <string name="venue_accounts_authoritative" formatted="false">Data bursa langsung, diamati dalam jendela otoritas.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Baris yang tidak ditandai Real-time menampilkan data terakhir yang diketahui, simulasi, atau tidak tersedia — data tersebut tidak pernah merupakan saldo bursa real-time yang otoritatif.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Akun ini menampilkan data terakhir yang diketahui, simulasi, atau tidak tersedia — bukan saldo bursa real-time yang otoritatif.</string>
     <string name="venue_accounts_valuation" formatted="false">Valuasi</string>
     <string name="venue_accounts_balances" formatted="false">Saldo</string>
     <string name="venue_accounts_observed" formatted="false">Diamati pada</string>
@@ -423,7 +423,7 @@
     <string name="records_status_cancelled" formatted="false">Dibatalkan</string>
     <string name="records_status_rejected" formatted="false">Ditolak</string>
     <string name="records_alert_type_order_unknown" formatted="false">Status pesanan tidak diketahui</string>
-    <string name="venue_accounts_status_observed" formatted="false">Real-time</string>
+    <string name="venue_accounts_status_observed" formatted="false">Diamati</string>
     <string name="venue_accounts_status_simulated" formatted="false">Simulasi</string>
     <string name="venue_accounts_status_stale" formatted="false">Usang</string>
     <string name="venue_accounts_status_clock_error" formatted="false">Kesalahan waktu</string>
@@ -484,4 +484,17 @@
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Tidak lengkap</string>
     <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Nilai mentah dari bursa</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Nilai titik mengambang lama</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">Rusak</string>
+    <string name="system_status_not_running" formatted="false">Tidak berjalan</string>
+    <string name="records_status_closed" formatted="false">Ditutup</string>
+    <string name="records_status_pending_new" formatted="false">Menunggu pengiriman</string>
+    <string name="records_status_expired" formatted="false">Kedaluwarsa</string>
+    <string name="records_alert_priority_critical" formatted="false">Kritis</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">Kesalahan sistem kritis</string>
+    <string name="records_alert_type_drift" formatted="false">Penyimpangan portofolio</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">Dikirim ke delegat</string>
+    <string name="ai_reviews_status_timeout" formatted="false">Waktu tunggu habis</string>
+    <string name="backtests_status_cancel_requested" formatted="false">Pembatalan diminta</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">Menunggu</string>
 </resources>

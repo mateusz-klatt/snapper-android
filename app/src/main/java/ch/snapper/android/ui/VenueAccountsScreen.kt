@@ -71,8 +71,8 @@ private fun accountStatusLabel(value: String): String = when (value) {
     "simulated" -> stringResource(R.string.venue_accounts_status_simulated)
     "stale" -> stringResource(R.string.venue_accounts_status_stale)
     "clock_error" -> stringResource(R.string.venue_accounts_status_clock_error)
-    "corrupt" -> stringResource(R.string.venue_accounts_status_unverified)
-    "unsupported" -> stringResource(R.string.venue_accounts_status_unavailable)
+    "corrupt" -> stringResource(R.string.venue_accounts_status_corrupt)
+    "unsupported" -> stringResource(R.string.venue_accounts_reconciliation_status_unsupported)
     "not_applicable" -> stringResource(R.string.venue_accounts_status_not_applicable)
     "unknown" -> stringResource(R.string.venue_accounts_status_unknown)
     "error" -> stringResource(R.string.system_status_error)
@@ -104,9 +104,9 @@ private fun numericSourceLabel(value: String): String = when (value) {
 
 @Composable
 private fun reconciliationStatusLabel(value: String): String = when (value) {
-    "matched" -> stringResource(R.string.venue_accounts_reconciliation_status_reconciled)
-    "mismatched" -> stringResource(R.string.venue_accounts_reconciliation_status_drift_detected)
-    "incomplete" -> stringResource(R.string.venue_accounts_reconciliation_status_not_reconciled)
+    "matched" -> stringResource(R.string.venue_accounts_evaluation_matched)
+    "mismatched" -> stringResource(R.string.venue_accounts_evaluation_mismatched)
+    "incomplete" -> stringResource(R.string.venue_accounts_evaluation_incomplete)
     "unsupported" -> stringResource(R.string.venue_accounts_reconciliation_status_unsupported)
     "error" -> stringResource(R.string.venue_accounts_reconciliation_status_error)
     else -> accountStatusLabel(value)

@@ -40,7 +40,7 @@ private fun ProcessesHeader(state: ProcessesState, actions: ProcessesActions) {
 @Composable
 private fun ProcessRow(row: ProcessSummaryRowDto, state: ProcessesState, actions: ProcessesActions) {
     RecordCard(row.name) {
-        Metric(R.string.status, stringResource(if (row.running) R.string.process_running else R.string.process_stopped))
+        Metric(R.string.status, stringResource(if (row.running) R.string.process_running else R.string.system_status_not_running))
         Text(processRoleLabel(row.role))
         Metric(R.string.process_memory, row.rssBytes?.let { "$it B" } ?: "—")
         Metric(R.string.process_cpu, row.cpuPercent?.let { "${it.display()}%" } ?: "—")
