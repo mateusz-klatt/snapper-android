@@ -41,7 +41,7 @@ private fun ProcessesHeader(state: ProcessesState, actions: ProcessesActions) {
 private fun ProcessRow(row: ProcessSummaryRowDto, state: ProcessesState, actions: ProcessesActions) {
     RecordCard(row.name) {
         Metric(R.string.status, stringResource(if (row.running) R.string.process_running else R.string.process_stopped))
-        Text(row.role)
+        Text(processRoleLabel(row.role))
         Metric(R.string.process_memory, row.rssBytes?.let { "$it B" } ?: "—")
         Metric(R.string.process_cpu, row.cpuPercent?.let { "${it.display()}%" } ?: "—")
         (state.configured[row.name]?.coordinatorLabel ?: state.configured[row.name]?.coordinator)?.let { Text(it) }
@@ -52,6 +52,15 @@ private fun ProcessRow(row: ProcessSummaryRowDto, state: ProcessesState, actions
         ProcessControls(row.name, state, actions)
         if (state.confirmation?.target?.name == row.name) ProcessConfirmationDialog(state, actions)
     }
+}
+
+@Composable
+private fun processRoleLabel(value: String): String = when (value) {
+    "core" -> stringResource(R.string.process_role_core)
+    "task" -> stringResource(R.string.process_role_task)
+    "strategy" -> stringResource(R.string.process_role_strategy)
+    "backtest" -> stringResource(R.string.process_role_backtest)
+    else -> value
 }
 
 @Composable

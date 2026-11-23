@@ -5,6 +5,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.v2.createComposeRule
+import androidx.test.platform.app.InstrumentationRegistry
+import ch.snapper.android.R
 import ch.snapper.android.data.*
 import ch.snapper.android.features.accounts.VenueAccountsState
 import java.math.BigDecimal
@@ -14,6 +16,7 @@ import org.junit.Test
 
 class VenueAccountsUiTest {
     @get:Rule val compose = createComposeRule()
+    private fun copyText(id: Int): String = InstrumentationRegistry.getInstrumentation().targetContext.getString(id)
     private val now = Instant.parse("2026-10-16T12:00:00Z")
     private fun row(mode: String) = VenueAccountDto("account", "wallet", "kraken", mode, "observed", "observed", true,
         "balance-ok", "positions-ok", "native_only", balances = listOf(VenueBalanceDto("BTC", BigDecimal.ONE, totalDecimal = "1.1234567890123456789")),
@@ -23,10 +26,10 @@ class VenueAccountsUiTest {
     @Test fun liveObservationAgesToStaleWithoutFabricatingBalances() {
         val state = mutableStateOf(VenueAccountsState(accounts = listOf(row("live")), lastSuccessfulFetch = now, now = now))
         compose.setContent { MaterialTheme { LazyColumn { venueAccountsScreen(state.value, {}) } } }
-        compose.onNodeWithText("observed").assertExists()
+        compose.onNodeWithText(copyText(R.string.venue_accounts_status_observed)).assertExists()
         compose.onNodeWithText("1.1234567890123456789").performScrollTo().assertIsDisplayed()
         compose.runOnIdle { state.value = state.value.copy(now = now.plusSeconds(16)) }
-        compose.onNodeWithText("stale").performScrollTo().assertIsDisplayed()
+        compose.onNodeWithText(copyText(R.string.venue_accounts_status_stale)).performScrollTo().assertIsDisplayed()
         compose.onNodeWithText("1.1234567890123456789").performScrollTo().assertIsDisplayed()
         compose.onNodeWithTag("order.new").assertDoesNotExist()
     }
@@ -34,10 +37,10 @@ class VenueAccountsUiTest {
     @Test fun paperNeverClaimsObservedAuthorityAndUnknownRemainsUnknown() {
         val state = mutableStateOf(VenueAccountsState(accounts = listOf(row("paper").copy(effectiveStatus = "simulated", isAuthoritative = false)), lastSuccessfulFetch = now, now = now))
         compose.setContent { MaterialTheme { LazyColumn { venueAccountsScreen(state.value, {}) } } }
-        compose.onNodeWithText("simulated").assertExists()
-        compose.onNodeWithText("observed").assertDoesNotExist()
+        compose.onNodeWithText(copyText(R.string.venue_accounts_status_simulated)).assertExists()
+        compose.onNodeWithText(copyText(R.string.venue_accounts_status_observed)).assertDoesNotExist()
         compose.runOnIdle { state.value = state.value.copy(accounts = listOf(row("live").copy(effectiveStatus = "unknown", balances = null))) }
-        compose.onNodeWithText("unknown").assertExists()
+        compose.onNodeWithText(copyText(R.string.venue_accounts_status_unknown)).assertExists()
         compose.onNodeWithText("1.1234567890123456789").assertDoesNotExist()
         compose.onNodeWithTag("order.new").assertDoesNotExist()
     }
@@ -47,7 +50,7 @@ class VenueAccountsUiTest {
         compose.setContent { MaterialTheme { LazyColumn { venueAccountsScreen(state, {}) } } }
         compose.onNodeWithText("Venue observation unavailable").assertExists()
         compose.onNodeWithText("1.1234567890123456789").performScrollTo().assertIsDisplayed()
-        compose.onNodeWithText("observed").assertDoesNotExist()
+        compose.onNodeWithText(copyText(R.string.venue_accounts_status_observed)).assertDoesNotExist()
     }
 
 }

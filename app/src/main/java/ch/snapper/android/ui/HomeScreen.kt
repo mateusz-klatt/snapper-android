@@ -98,7 +98,7 @@ private fun LatestAlertCard(alert: AlertDto) {
             if (alert.isSafetyCritical) {
                 Text(stringResource(R.string.safety_critical), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.error)
             }
-            Text(alert.displayTitle, style = MaterialTheme.typography.titleMedium, maxLines = 1, overflow = TextOverflow.Ellipsis)
+            Text(alertTitleLabel(alert), style = MaterialTheme.typography.titleMedium, maxLines = 1, overflow = TextOverflow.Ellipsis)
             if (alert.body.isNotBlank()) {
                 Text(alert.body, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant, maxLines = 2, overflow = TextOverflow.Ellipsis)
             }
@@ -128,7 +128,7 @@ private fun TraderStatusCard(
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
                 Text(stringResource(R.string.system_trader), style = MaterialTheme.typography.titleMedium)
-                StatusPill(status.trader.status, if (running) StatusGreen else StatusRed)
+                StatusPill(systemStatusLabel(status.trader.status), if (running) StatusGreen else StatusRed)
             }
             if (!status.strategies.isNullOrEmpty()) {
                 Metric(R.string.home_active_strategies, status.strategies.size.toString())
@@ -204,9 +204,9 @@ private fun HomeRecentOrdersCard(orders: List<OrderDto>) {
                 Row(Modifier.fillMaxWidth().semantics(mergeDescendants = true) {}.testTag("home.orders.row"), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
                     Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
                         Text(order.instrument, style = MaterialTheme.typography.titleSmall)
-                        Text("${order.side.uppercase(Locale.ROOT)} ${order.size.display()}", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        Text("${tradeSideLabel(order.side)} ${order.size.display()}", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     }
-                    StatusPill(order.status, orderStatusColor(order.status))
+                    StatusPill(orderStatusLabel(order.status), orderStatusColor(order.status))
                 }
             }
         }

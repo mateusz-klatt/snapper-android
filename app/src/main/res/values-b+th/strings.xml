@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="privacy_policy" formatted="false">Privacy policy</string>
+    <string name="privacy_policy" formatted="false">นโยบายความเป็นส่วนตัว</string>
     <string name="username" formatted="false">ชื่อผู้ใช้</string>
     <string name="password" formatted="false">รหัสผ่าน</string>
     <string name="sign_in" formatted="false">เข้าสู่ระบบ</string>
-    <string name="session_retention_notice" formatted="false">Staying signed in requires Android 11+, a secure screen lock, and authentication with your PIN, pattern, password or strong biometrics within the last 5 minutes. Otherwise, sign in again after the app restarts.</string>
+    <string name="session_retention_notice" formatted="false">การคงสถานะเข้าสู่ระบบต้องใช้ Android 11 ขึ้นไป การล็อกหน้าจอที่ปลอดภัย และการยืนยันตัวตนด้วย PIN รูปแบบ รหัสผ่าน หรือชีวมิติระดับสูงภายใน 5 นาทีที่ผ่านมา มิฉะนั้น โปรดเข้าสู่ระบบอีกครั้งหลังจากเริ่มแอปใหม่</string>
     <string name="subtitle" formatted="false">แพลตฟอร์มเทรด</string>
     <string name="backend" formatted="false">URL แบ็กเอนด์กำหนดเอง</string>
     <string name="language" formatted="false">ภาษา</string>
     <string name="logout" formatted="false">ออกจากระบบ</string>
     <string name="positions" formatted="false">โพซิชัน</string>
-    <string name="orders" formatted="false">Orders</string>
+    <string name="orders" formatted="false">คำสั่ง</string>
     <string name="market" formatted="false">ข้อมูลตลาด</string>
     <string name="wallet" formatted="false">กระเป๋าเงิน</string>
     <string name="all_wallets" formatted="false">กระเป๋าเงินทั้งหมด</string>
@@ -24,11 +24,11 @@
     <string name="price" formatted="false">ราคา</string>
     <string name="filled" formatted="false">จับคู่แล้ว</string>
     <string name="status" formatted="false">สถานะ</string>
-    <string name="side" formatted="false">Side</string>
-    <string name="open" formatted="false">Open</string>
-    <string name="high" formatted="false">High</string>
-    <string name="low" formatted="false">Low</string>
-    <string name="close" formatted="false">Close</string>
+    <string name="side" formatted="false">ฝั่ง</string>
+    <string name="open" formatted="false">ราคาเปิด</string>
+    <string name="high" formatted="false">สูงสุด</string>
+    <string name="low" formatted="false">ต่ำสุด</string>
+    <string name="close" formatted="false">ราคาปิด</string>
     <string name="volume" formatted="false">ปริมาณ</string>
     <string name="timeframe" formatted="false">กรอบเวลา</string>
     <string name="no_candles" formatted="false">ยังไม่มีแท่งเทียน</string>
@@ -37,68 +37,68 @@
     <string name="alerts" formatted="false">การแจ้งเตือน</string>
     <string name="settings" formatted="false">การตั้งค่า</string>
     <string name="save" formatted="false">บันทึก</string>
-    <string name="refresh" formatted="false">Refresh</string>
+    <string name="refresh" formatted="false">รีเฟรช</string>
     <string name="exchange" formatted="false">เอ็กซ์เชนจ์</string>
-    <string name="load_market" formatted="false">Load candles</string>
-    <string name="empty" formatted="false">No records available.</string>
-    <string name="snapshot_note" formatted="false">Snapshot data. Refresh to retrieve the latest available records.</string>
-    <string name="chart_description" formatted="false">Historical candle chart. Exact values are listed below.</string>
-    <string name="error_origin" formatted="false">Enter a valid HTTPS backend origin.</string>
-    <string name="error_credentials" formatted="false">The username or password is incorrect.</string>
-    <string name="error_session" formatted="false">Your session expired. Please sign in again.</string>
-    <string name="error_network" formatted="false">Could not reach the backend. Check your connection and try again.</string>
-    <string name="error_service" formatted="false">The backend could not complete this request. Please try again.</string>
-    <string name="error_unknown" formatted="false">Something went wrong. Please try again.</string>
+    <string name="load_market" formatted="false">โหลดแท่งเทียน</string>
+    <string name="empty" formatted="false">ไม่มีรายการ</string>
+    <string name="snapshot_note" formatted="false">ข้อมูลสแนปช็อต รีเฟรชเพื่อรับรายการล่าสุดที่มี</string>
+    <string name="chart_description" formatted="false">กราฟแท่งเทียนย้อนหลัง ค่าที่แน่นอนแสดงไว้ด้านล่าง</string>
+    <string name="error_origin" formatted="false">ป้อนที่อยู่ต้นทางแบ็กเอนด์ HTTPS ที่ถูกต้อง</string>
+    <string name="error_credentials" formatted="false">ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง</string>
+    <string name="error_session" formatted="false">เซสชันหมดอายุแล้ว โปรดเข้าสู่ระบบอีกครั้ง</string>
+    <string name="error_network" formatted="false">เชื่อมต่อแบ็กเอนด์ไม่ได้ ตรวจสอบการเชื่อมต่อแล้วลองอีกครั้ง</string>
+    <string name="error_service" formatted="false">แบ็กเอนด์ดำเนินการตามคำขอนี้ไม่สำเร็จ โปรดลองอีกครั้ง</string>
+    <string name="error_unknown" formatted="false">เกิดข้อผิดพลาด โปรดลองอีกครั้ง</string>
     <string name="dismiss" formatted="false">ปิด</string>
     <string name="paper" formatted="false">ทดลอง</string>
-    <string name="safety_critical" formatted="false">Safety critical</string>
-    <string name="snapshot_limit" formatted="false">This view shows current positions and up to 100 recent orders and alerts; it is not a complete history.</string>
-    <string name="chart_window" formatted="false">The chart shows the last 100 retrieved candles.</string>
-    <string name="local_network_explanation" formatted="false">For a backend on your local network, allow local network access before signing in. Public internet backends do not need this permission.</string>
-    <string name="local_network_allow" formatted="false">Allow local network</string>
-    <string name="local_network_settings" formatted="false">Open app settings</string>
-    <string name="order_new" formatted="false">New Order</string>
-    <string name="order_entry" formatted="false">New Manual Order</string>
-    <string name="order_confirm" formatted="false">Confirm Order</string>
+    <string name="safety_critical" formatted="false">สำคัญต่อความปลอดภัย</string>
+    <string name="snapshot_limit" formatted="false">มุมมองนี้แสดงโพซิชันปัจจุบันและคำสั่งกับการแจ้งเตือนล่าสุดสูงสุด 100 รายการ ไม่ใช่ประวัติทั้งหมด</string>
+    <string name="chart_window" formatted="false">กราฟแสดงแท่งเทียน 100 แท่งล่าสุดที่ดึงมา</string>
+    <string name="local_network_explanation" formatted="false">หากใช้แบ็กเอนด์ในเครือข่ายภายใน โปรดอนุญาตการเข้าถึงเครือข่ายภายในก่อนเข้าสู่ระบบ แบ็กเอนด์บนอินเทอร์เน็ตสาธารณะไม่ต้องใช้สิทธิ์นี้</string>
+    <string name="local_network_allow" formatted="false">อนุญาตเครือข่ายภายใน</string>
+    <string name="local_network_settings" formatted="false">เปิดการตั้งค่าแอป</string>
+    <string name="order_new" formatted="false">คำสั่งใหม่</string>
+    <string name="order_entry" formatted="false">คำสั่งด้วยตนเองใหม่</string>
+    <string name="order_confirm" formatted="false">ยืนยันคำสั่ง</string>
     <string name="order_quantity" formatted="false">จำนวน</string>
-    <string name="order_type" formatted="false">Order Type</string>
-    <string name="order_stop_price" formatted="false">Stop Price</string>
+    <string name="order_type" formatted="false">ประเภทคำสั่ง</string>
+    <string name="order_stop_price" formatted="false">ราคาหยุด</string>
     <string name="order_mode" formatted="false">โหมด</string>
     <string name="order_buy" formatted="false">ซื้อ</string>
     <string name="order_sell" formatted="false">ขาย</string>
     <string name="order_market" formatted="false">มาร์เก็ต</string>
-    <string name="order_limit" formatted="false">Limit</string>
-    <string name="order_stop" formatted="false">Stop</string>
-    <string name="order_stop_limit" formatted="false">Stop Limit</string>
-    <string name="order_live" formatted="false">Live</string>
-    <string name="order_review" formatted="false">Review Order</string>
-    <string name="order_back" formatted="false">Back</string>
-    <string name="order_submit" formatted="false">Confirm Order</string>
-    <string name="order_submitting" formatted="false">Submitting…</string>
+    <string name="order_limit" formatted="false">จำกัดราคา</string>
+    <string name="order_stop" formatted="false">หยุด</string>
+    <string name="order_stop_limit" formatted="false">หยุดแบบจำกัดราคา</string>
+    <string name="order_live" formatted="false">ซื้อขายจริง</string>
+    <string name="order_review" formatted="false">ตรวจสอบคำสั่ง</string>
+    <string name="order_back" formatted="false">ย้อนกลับ</string>
+    <string name="order_submit" formatted="false">ยืนยันคำสั่ง</string>
+    <string name="order_submitting" formatted="false">กำลังส่ง…</string>
     <string name="order_leverage" formatted="false">เลเวอเรจ</string>
-    <string name="order_reduce_only" formatted="false">Reduce Only</string>
-    <string name="order_observation_only" formatted="false">This instrument is observation-only — place orders on an execution-capable instrument.</string>
-    <string name="order_unknown_instrument" formatted="false">This instrument is not recognised. Reload the list and try again.</string>
-    <string name="order_caps_violation" formatted="false">This order would exceed your account safety caps. Review your risk settings and retry.</string>
-    <string name="order_rejected" formatted="false">Order creation failed</string>
+    <string name="order_reduce_only" formatted="false">ลดโพซิชันเท่านั้น</string>
+    <string name="order_observation_only" formatted="false">ตราสารนี้ใช้สังเกตการณ์เท่านั้น โปรดส่งคำสั่งกับตราสารที่รองรับการซื้อขาย</string>
+    <string name="order_unknown_instrument" formatted="false">ไม่รู้จักตราสารนี้ โหลดรายการใหม่แล้วลองอีกครั้ง</string>
+    <string name="order_caps_violation" formatted="false">คำสั่งนี้จะเกินขีดจำกัดความปลอดภัยของบัญชี ตรวจสอบการตั้งค่าความเสี่ยงแล้วลองอีกครั้ง</string>
+    <string name="order_rejected" formatted="false">สร้างคำสั่งไม่สำเร็จ</string>
     <string name="order_cancel_title" formatted="false">ยกเลิกคำสั่งหรือไม่</string>
     <string name="order_cancel_confirm" formatted="false">ยกเลิกคำสั่ง</string>
     <string name="order_keep_open" formatted="false">ให้เปิดไว้</string>
-    <string name="order_select_wallet" formatted="false">Select a wallet on Home before placing an order.</string>
-    <string name="order_created" formatted="false">Order submitted. Refresh to check execution status.</string>
-    <string name="order_cancel_requested" formatted="false">Cancellation requested. Refresh to check the order status.</string>
-    <string name="order_unknown_outcome" formatted="false">The request outcome is unknown. Check status before taking further action.</string>
-    <string name="order_check_status" formatted="false">Check status</string>
-    <string name="order_retry_intent" formatted="false">Retry same order</string>
-    <string name="order_catalog_error" formatted="false">Could not load exchanges or instruments. Try again.</string>
-    <string name="order_no_instruments" formatted="false">No instruments available for this exchange.</string>
-    <string name="order_invalid_form" formatted="false">Enter positive quantities and required prices. Optional leverage must be a positive whole number.</string>
-    <string name="order_refresh_failed" formatted="false">The request was accepted, but the latest records could not be loaded. Refresh to check status.</string>
-    <string name="order_forbidden" formatted="false">You no longer have permission for this action.</string>
-    <string name="order_session_changed" formatted="false">The session or wallet changed. Open a new order from the current account.</string>
+    <string name="order_select_wallet" formatted="false">เลือกกระเป๋าเงินในหน้าหลักก่อนส่งคำสั่ง</string>
+    <string name="order_created" formatted="false">ส่งคำสั่งแล้ว รีเฟรชเพื่อตรวจสอบสถานะการดำเนินการ</string>
+    <string name="order_cancel_requested" formatted="false">ส่งคำขอยกเลิกแล้ว รีเฟรชเพื่อตรวจสอบสถานะคำสั่ง</string>
+    <string name="order_unknown_outcome" formatted="false">ไม่ทราบผลคำขอ ตรวจสอบสถานะก่อนดำเนินการต่อ</string>
+    <string name="order_check_status" formatted="false">ตรวจสอบสถานะ</string>
+    <string name="order_retry_intent" formatted="false">ลองส่งคำสั่งเดิมอีกครั้ง</string>
+    <string name="order_catalog_error" formatted="false">โหลดตลาดซื้อขายหรือตราสารไม่ได้ โปรดลองอีกครั้ง</string>
+    <string name="order_no_instruments" formatted="false">ไม่มีตราสารที่ใช้งานได้สำหรับตลาดซื้อขายนี้</string>
+    <string name="order_invalid_form" formatted="false">ป้อนจำนวนที่เป็นบวกและราคาที่จำเป็น เลเวอเรจที่ระบุเพิ่มเติมต้องเป็นจำนวนเต็มบวก</string>
+    <string name="order_refresh_failed" formatted="false">ยอมรับคำขอแล้ว แต่โหลดรายการล่าสุดไม่ได้ รีเฟรชเพื่อตรวจสอบสถานะ</string>
+    <string name="order_forbidden" formatted="false">คุณไม่มีสิทธิ์ดำเนินการนี้อีกต่อไป</string>
+    <string name="order_session_changed" formatted="false">เซสชันหรือกระเป๋าเงินเปลี่ยนไป เปิดคำสั่งใหม่จากบัญชีปัจจุบัน</string>
     <string name="order_enabled" formatted="false">เปิดใช้งาน</string>
     <string name="order_disabled" formatted="false">ปิดใช้งาน</string>
-    <string name="system_tools" formatted="false">Overview</string>
+    <string name="system_tools" formatted="false">ภาพรวม</string>
     <string name="desk_attach_button" formatted="false">เพิ่มผู้ดู</string>
     <string name="desk_attach_desk_label" formatted="false">เดสก์</string>
     <string name="desk_nav_title" formatted="false">เดสก์ของฉัน</string>
@@ -157,13 +157,13 @@
     <string name="system_active" formatted="false">ใช้งาน</string>
     <string name="system_inactive" formatted="false">ปิดใช้งาน</string>
     <string name="system_revoked" formatted="false">เพิกถอนแล้ว</string>
-    <string name="records_open" formatted="false">Open</string>
+    <string name="records_open" formatted="false">ที่เปิดอยู่</string>
     <string name="records_recent" formatted="false">ล่าสุด</string>
     <string name="records_fills" formatted="false">รายการจับคู่</string>
-    <string name="records_refresh" formatted="false">Refresh</string>
-    <string name="records_fee" formatted="false">Fee</string>
-    <string name="records_details" formatted="false">Details</string>
-    <string name="records_hide_details" formatted="false">\@string/close</string>
+    <string name="records_refresh" formatted="false">รีเฟรช</string>
+    <string name="records_fee" formatted="false">ค่าธรรมเนียม</string>
+    <string name="records_details" formatted="false">รายละเอียด</string>
+    <string name="records_hide_details" formatted="false">ปิด</string>
     <string name="records_thread" formatted="false">เธรด</string>
     <string name="records_source_topic" formatted="false">หัวข้อต้นทาง</string>
     <string name="notification_defaults_title" formatted="false">ค่าเริ่มต้นผู้ใช้</string>
@@ -172,9 +172,9 @@
     <string name="notification_defaults_priority" formatted="false">ลำดับความสำคัญขั้นต่ำ</string>
     <string name="notification_defaults_load_failed" formatted="false">โหลดการตั้งค่าไม่ได้</string>
     <string name="notification_defaults_save_failed" formatted="false">บันทึกการตั้งค่าไม่ได้</string>
-    <string name="notification_defaults_low" formatted="false">Low</string>
-    <string name="notification_defaults_medium" formatted="false">Medium</string>
-    <string name="notification_defaults_high" formatted="false">High</string>
+    <string name="notification_defaults_low" formatted="false">ต่ำ</string>
+    <string name="notification_defaults_medium" formatted="false">ปานกลาง</string>
+    <string name="notification_defaults_high" formatted="false">สูง</string>
     <string name="notification_defaults_fill" formatted="false">คำสั่งถูกจับคู่แล้ว</string>
     <string name="notification_defaults_rejected" formatted="false">คำสั่งถูกปฏิเสธ</string>
     <string name="notification_defaults_stop" formatted="false">คำสั่งหยุดขาดทุนถูกเรียกใช้</string>
@@ -186,10 +186,10 @@
     <string name="signals_price" formatted="false">ราคา</string>
     <string name="signals_reason" formatted="false">เหตุผล:</string>
     <string name="signals_strong" formatted="false">แข็งแกร่ง</string>
-    <string name="signals_medium" formatted="false">Medium</string>
+    <string name="signals_medium" formatted="false">ปานกลาง</string>
     <string name="signals_weak" formatted="false">อ่อนแอ</string>
     <string name="signals_very_weak" formatted="false">อ่อนแอมาก</string>
-    <string name="signals_total" formatted="false">Total</string>
+    <string name="signals_total" formatted="false">รวม</string>
     <string name="signals_buy" formatted="false">ซื้อ</string>
     <string name="signals_sell" formatted="false">ขาย</string>
     <string name="signals_average_strength" formatted="false">ความแรงเฉลี่ย</string>
@@ -199,23 +199,23 @@
     <string name="signals_export" formatted="false">ส่งออก</string>
     <string name="signals_export_failed" formatted="false">ส่งไม่สำเร็จ</string>
     <string name="venue_accounts_title" formatted="false">บัญชีแลกเปลี่ยน</string>
-    <string name="venue_accounts_refresh" formatted="false">Refresh</string>
+    <string name="venue_accounts_refresh" formatted="false">รีเฟรช</string>
     <string name="venue_accounts_failed" formatted="false">ไม่สามารถโหลดสถานะบัญชีศูนย์ซื้อขายได้ บัญชีไม่ได้ว่างเปล่า แต่ขณะนี้ยังไม่มีข้อมูลให้ใช้งาน</string>
     <string name="venue_accounts_authoritative" formatted="false">ข้อมูลจริงจากการแลกเปลี่ยนในหน้าต่างสิทธิ์</string>
     <string name="venue_accounts_not_authoritative" formatted="false">แถวที่ไม่ได้ทำเครื่องหมายว่าเรียลไทม์จะแสดงข้อมูลล่าสุดที่ทราบ ข้อมูลจำลอง หรือข้อมูลที่ไม่พร้อมใช้งาน — ไม่ใช่ยอดคงเหลือแบบเรียลไทม์ที่เชื่อถือได้จากศูนย์ซื้อขายอย่างเด็ดขาด</string>
-    <string name="venue_accounts_valuation" formatted="false">Valuation</string>
+    <string name="venue_accounts_valuation" formatted="false">การประเมินมูลค่า</string>
     <string name="venue_accounts_balances" formatted="false">ยอดคงเหลือ</string>
-    <string name="venue_accounts_observed" formatted="false">Observed at</string>
-    <string name="venue_accounts_source" formatted="false">Source observation</string>
-    <string name="venue_accounts_total" formatted="false">Total</string>
+    <string name="venue_accounts_observed" formatted="false">เวลาที่สังเกต</string>
+    <string name="venue_accounts_source" formatted="false">ข้อมูลการสังเกตต้นทาง</string>
+    <string name="venue_accounts_total" formatted="false">รวม</string>
     <string name="venue_accounts_free" formatted="false">พร้อมใช้</string>
     <string name="venue_accounts_used" formatted="false">ใช้ไป</string>
-    <string name="venue_accounts_numeric_source" formatted="false">Numeric provenance</string>
+    <string name="venue_accounts_numeric_source" formatted="false">ที่มาของตัวเลข</string>
     <string name="venue_accounts_positions" formatted="false">โพซิชันที่เปิดอยู่</string>
     <string name="venue_accounts_funding" formatted="false">ค่าฟันดิง</string>
-    <string name="venue_accounts_reconciliation" formatted="false">Reconciliation status</string>
-    <string name="venue_accounts_evaluation" formatted="false">Evaluation status</string>
-    <string name="venue_accounts_deadline" formatted="false">Authority deadline</string>
+    <string name="venue_accounts_reconciliation" formatted="false">สถานะการกระทบยอด</string>
+    <string name="venue_accounts_evaluation" formatted="false">สถานะการประเมิน</string>
+    <string name="venue_accounts_deadline" formatted="false">เวลาสิ้นสุดความน่าเชื่อถือของข้อมูล</string>
     <string name="positions_timeline_controls_window" formatted="false">ช่วงเวลา</string>
     <string name="positions_timeline_controls_granularity" formatted="false">ความละเอียด</string>
     <string name="positions_timeline_controls_valuationcurrency" formatted="false">สกุลเงินประเมินมูลค่า</string>
@@ -228,7 +228,7 @@
     <string name="positions_timeline_nowallet_message" formatted="false">เลือกกระเป๋าเงินเพื่อดูไทม์ไลน์ P&amp;L</string>
     <string name="positions_timeline_incompleteness_title" formatted="false">สาเหตุที่จุดข้อมูลไม่สมบูรณ์</string>
     <string name="positions_timeline_incompleteness_description" formatted="false">เหตุผลครอบคลุมช่วงเวลาที่โหลดทั้งหมด จุดข้อมูลอาจถูกนับซ้ำเมื่อมีมากกว่าหนึ่งสาเหตุ</string>
-    <string name="positions_timeline_incompleteness_affectedpoints">Affected points: %1$s</string>
+    <string name="positions_timeline_incompleteness_affectedpoints">จุดที่ได้รับผลกระทบ: %1$s</string>
     <string name="positions_timeline_chart_title" formatted="false">P&amp;L ตามช่วงเวลา</string>
     <string name="positions_timeline_chart_net" formatted="false">P&amp;L สุทธิ</string>
     <string name="positions_timeline_chart_realized" formatted="false">P&amp;L ที่รับรู้แล้ว</string>
@@ -260,26 +260,26 @@
     <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">กระทบยอดการระบุที่มาไม่สำเร็จ</string>
     <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">ผลรวม P&amp;L แยกตามตราสารไม่ตรงกับ P&amp;L รวม</string>
     <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">การดำเนินการซื้อขายที่มาถึงล่าช้าโดยมีเวลาประทับก่อนเปิดใช้งาน</string>
-    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Attribution sum is not representable</string>
-    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Instrument sum is not representable</string>
-    <string name="positions_timeline_executionhistory_title" formatted="false">Operator-corrected execution history</string>
-    <string name="positions_timeline_executionhistory_summary" formatted="false">An operator repudiated recorded executions in this scope. Every correction listed here is excluded from the figures on this page.</string>
-    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Repudiated execution</string>
-    <string name="positions_timeline_executionhistory_correctionid" formatted="false">Correction record</string>
-    <string name="positions_timeline_equity_title" formatted="false">Equity overlay</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">ไม่สามารถแสดงค่าผลรวมการระบุที่มาได้</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">ไม่สามารถแสดงค่าผลรวมของตราสารได้</string>
+    <string name="positions_timeline_executionhistory_title" formatted="false">ประวัติการดำเนินการที่ผู้ปฏิบัติงานแก้ไข</string>
+    <string name="positions_timeline_executionhistory_summary" formatted="false">ผู้ปฏิบัติงานปฏิเสธความถูกต้องของการดำเนินการที่บันทึกไว้ในขอบเขตนี้ การแก้ไขทั้งหมดที่แสดงที่นี่ถูกตัดออกจากตัวเลขในหน้านี้</string>
+    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">การดำเนินการที่ถูกปฏิเสธความถูกต้อง</string>
+    <string name="positions_timeline_executionhistory_correctionid" formatted="false">บันทึกการแก้ไข</string>
+    <string name="positions_timeline_equity_title" formatted="false">มูลค่าพอร์ตสุทธิซ้อนทับ</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">มูลค่าพอร์ตสุทธิ</string>
-    <string name="positions_timeline_equity_drawdown_current" formatted="false">Current drawdown</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Spot venue only — balances held on other venues are excluded.</string>
-    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">External deposits and withdrawals are not adjusted out.</string>
-    <string name="positions_timeline_equity_honesty_restatedfrom">These figures are restated from %1$s at each minute\'s close, not sampled natively in this currency.</string>
-    <string name="positions_timeline_equity_honesty_pricedon">Priced on %1$s.</string>
-    <string name="positions_timeline_equity_honesty_conversionwithheld">Minutes dropped for want of a proven close: %1$s.</string>
-    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Drawdown is withheld on a converted basis, because the running peak is tracked in the sampled currency.</string>
-    <string name="positions_timeline_equity_cashposition_position" formatted="false">Position value</string>
-    <string name="positions_timeline_equity_cashposition_cash" formatted="false">Cash</string>
-    <string name="pnl_provenance">Calculation: %1$s · Mark source: %2$s · As of: %3$s</string>
-    <string name="pnl_equity_coverage">Equity sampled: %1$s · Complete minutes: %2$s</string>
-    <string name="pnl_execution_history">Execution history: %1$s</string>
+    <string name="positions_timeline_equity_drawdown_current" formatted="false">การลดลงจากจุดสูงสุดปัจจุบัน</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">เฉพาะตลาดสปอต ไม่รวมยอดคงเหลือในตลาดอื่น</string>
+    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">ยังไม่ได้ปรับตัดผลของการฝากและถอนจากภายนอก</string>
+    <string name="positions_timeline_equity_honesty_restatedfrom">ตัวเลขเหล่านี้แปลงจาก %1$s ณ ราคาปิดของแต่ละนาที ไม่ได้เก็บตัวอย่างโดยตรงในสกุลเงินนี้</string>
+    <string name="positions_timeline_equity_honesty_pricedon">อิงราคาจาก %1$s</string>
+    <string name="positions_timeline_equity_honesty_conversionwithheld">จำนวนนาทีที่ถูกตัดออกเพราะไม่มีราคาปิดที่ยืนยันได้: %1$s</string>
+    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">ไม่แสดงการลดลงจากจุดสูงสุดบนฐานที่แปลงสกุลเงิน เนื่องจากติดตามจุดสูงสุดสะสมในสกุลเงินที่เก็บตัวอย่าง</string>
+    <string name="positions_timeline_equity_cashposition_position" formatted="false">มูลค่าโพซิชัน</string>
+    <string name="positions_timeline_equity_cashposition_cash" formatted="false">เงินสด</string>
+    <string name="pnl_provenance">การคำนวณ: %1$s · แหล่งราคามาร์ก: %2$s · ณ: %3$s</string>
+    <string name="pnl_equity_coverage">ตัวอย่างมูลค่าพอร์ตสุทธิ: %1$s · นาทีที่ครบถ้วน: %2$s</string>
+    <string name="pnl_execution_history">ประวัติการดำเนินการ: %1$s</string>
     <string name="process_title" formatted="false">โปรเซส</string>
     <string name="process_running" formatted="false">กำลังทำงาน</string>
     <string name="process_stopped" formatted="false">หยุดทำงาน</string>
@@ -291,22 +291,22 @@
     <string name="process_cpu" formatted="false">CPU</string>
     <string name="process_empty" formatted="false">ไม่มีโปรเซสที่กำหนดค่าไว้</string>
     <string name="process_start" formatted="false">เริ่ม</string>
-    <string name="process_stop" formatted="false">Stop</string>
+    <string name="process_stop" formatted="false">หยุด</string>
     <string name="process_restart" formatted="false">รีสตาร์ท</string>
     <string name="process_cancel" formatted="false">ยกเลิก</string>
     <string name="process_stale" formatted="false">ไม่สามารถควบคุมกระบวนการนี้จากที่นี่ได้อีกต่อไป. รีเฟรชข้อมูลแล้วลองอีกครั้ง.</string>
     <string name="process_partial" formatted="false">กระบวนการหยุดแล้วแต่ไม่สามารถรีสตาร์ทจากที่นี่ได้อีกต่อไป. รีเฟรชข้อมูลแล้วลองอีกครั้ง.</string>
-    <string name="process_confirm" formatted="false">Confirm process action</string>
-    <string name="process_confirm_message" formatted="false">Apply this action to the selected process?</string>
-    <string name="process_intent_saved" formatted="false">Desired state saved. The owning coordinator will apply it.</string>
-    <string name="process_accepted" formatted="false">Process action accepted.</string>
-    <string name="process_unknown" formatted="false">The command outcome is unknown. Controls remain locked: a status refresh cannot prove whether this command was applied.</string>
-    <string name="process_partial_unknown" formatted="false">The process was stopped, but the restart outcome is unknown. Controls remain locked: a status refresh cannot prove whether the restart was applied.</string>
-    <string name="process_rejected" formatted="false">The process action failed.</string>
-    <string name="process_load_failed" formatted="false">Could not refresh process status.</string>
-    <string name="process_config_failed" formatted="false">Process controls are unavailable because configuration could not be refreshed.</string>
-    <string name="process_enable" formatted="false">Enable</string>
-    <string name="process_disable" formatted="false">Disable</string>
+    <string name="process_confirm" formatted="false">ยืนยันการดำเนินการกับโปรเซส</string>
+    <string name="process_confirm_message" formatted="false">ใช้การดำเนินการนี้กับโปรเซสที่เลือกหรือไม่</string>
+    <string name="process_intent_saved" formatted="false">บันทึกสถานะที่ต้องการแล้ว ตัวประสานงานที่รับผิดชอบจะนำไปใช้</string>
+    <string name="process_accepted" formatted="false">ยอมรับการดำเนินการกับโปรเซสแล้ว</string>
+    <string name="process_unknown" formatted="false">ไม่ทราบผลคำสั่ง ตัวควบคุมยังคงล็อกอยู่ การรีเฟรชสถานะไม่สามารถยืนยันได้ว่าคำสั่งนี้ถูกนำไปใช้แล้วหรือไม่</string>
+    <string name="process_partial_unknown" formatted="false">โปรเซสหยุดแล้ว แต่ไม่ทราบผลการเริ่มใหม่ ตัวควบคุมยังคงล็อกอยู่ การรีเฟรชสถานะไม่สามารถยืนยันได้ว่ามีการเริ่มใหม่แล้วหรือไม่</string>
+    <string name="process_rejected" formatted="false">ดำเนินการกับโปรเซสไม่สำเร็จ</string>
+    <string name="process_load_failed" formatted="false">รีเฟรชสถานะโปรเซสไม่ได้</string>
+    <string name="process_config_failed" formatted="false">ตัวควบคุมโปรเซสไม่พร้อมใช้งานเพราะรีเฟรชการกำหนดค่าไม่ได้</string>
+    <string name="process_enable" formatted="false">เปิดใช้งาน</string>
+    <string name="process_disable" formatted="false">ปิดใช้งาน</string>
     <string name="ai_reviews_pending_title" formatted="false">การตรวจทานที่รอดำเนินการ</string>
     <string name="ai_reviews_decisions_title" formatted="false">การตัดสินใจ AI</string>
     <string name="ai_reviews_deadline" formatted="false">กำหนดเวลา</string>
@@ -324,13 +324,13 @@
     <string name="ai_reviews_expired_message" formatted="false">การตรวจทานนี้พ้นกำหนดเวลาและหมดเวลาแล้ว.</string>
     <string name="ai_reviews_missing" formatted="false">ไม่มีการตรวจทานนี้แล้ว.</string>
     <string name="ai_reviews_denied" formatted="false">สิทธิ์เข้าถึงในฐานะตัวแทนของคุณเปลี่ยนแล้ว. โหลดใหม่ก่อนตัดสินใจ.</string>
-    <string name="ai_reviews_load_failed" formatted="false">Could not refresh reviews. Previously loaded reviews remain visible.</string>
-    <string name="ai_reviews_check_status" formatted="false">Check status</string>
-    <string name="ai_reviews_retry" formatted="false">Retry original decision</string>
-    <string name="ai_reviews_confirm" formatted="false">Confirm review decision</string>
-    <string name="ai_reviews_accepted" formatted="false">Decision accepted</string>
-    <string name="ai_reviews_rejected" formatted="false">Decision rejected by the server</string>
-    <string name="ai_reviews_unknown" formatted="false">Outcome unknown. Check status before retrying.</string>
+    <string name="ai_reviews_load_failed" formatted="false">รีเฟรชการตรวจทานไม่ได้ การตรวจทานที่โหลดไว้ก่อนหน้ายังคงแสดงอยู่</string>
+    <string name="ai_reviews_check_status" formatted="false">ตรวจสอบสถานะ</string>
+    <string name="ai_reviews_retry" formatted="false">ลองส่งการตัดสินใจเดิมอีกครั้ง</string>
+    <string name="ai_reviews_confirm" formatted="false">ยืนยันการตัดสินใจตรวจทาน</string>
+    <string name="ai_reviews_accepted" formatted="false">ยอมรับการตัดสินใจแล้ว</string>
+    <string name="ai_reviews_rejected" formatted="false">เซิร์ฟเวอร์ปฏิเสธการตัดสินใจ</string>
+    <string name="ai_reviews_unknown" formatted="false">ไม่ทราบผล ตรวจสอบสถานะก่อนลองอีกครั้ง</string>
     <string name="positions_accessibility_label_closebutton" formatted="false">ปิดโพซิชัน</string>
     <string name="positions_accessibility_label_reducebutton" formatted="false">ลดโพซิชัน</string>
     <string name="positions_reduce_cancel" formatted="false">ยกเลิก</string>
@@ -339,15 +339,15 @@
     <string name="trading_bracket_attach" formatted="false">แนบ SL / TP</string>
     <string name="trading_bracket_stoplosslabel" formatted="false">หยุดขาดทุน</string>
     <string name="trading_bracket_takeprofitlabel" formatted="false">ทำกำไร</string>
-    <string name="trading_trailingstop_attach" formatted="false">Attach trailing stop</string>
+    <string name="trading_trailingstop_attach" formatted="false">แนบคำสั่งหยุดแบบเลื่อนตามราคา</string>
     <string name="trading_trailingstop_trailamountlabel" formatted="false">ระยะ Trailing</string>
-    <string name="position_action_review" formatted="false">Review position action</string>
-    <string name="position_action_confirm" formatted="false">Confirm action</string>
-    <string name="position_action_accepted" formatted="false">Request accepted. Refresh to check execution status.</string>
-    <string name="position_action_retry" formatted="false">Retry same request</string>
-    <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
-    <string name="position_action_cycle" formatted="false">Position cycle</string>
-    <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+    <string name="position_action_review" formatted="false">ตรวจสอบการดำเนินการกับโพซิชัน</string>
+    <string name="position_action_confirm" formatted="false">ยืนยันการดำเนินการ</string>
+    <string name="position_action_accepted" formatted="false">ยอมรับคำขอแล้ว รีเฟรชเพื่อตรวจสอบสถานะการดำเนินการ</string>
+    <string name="position_action_retry" formatted="false">ลองส่งคำขอเดิมอีกครั้ง</string>
+    <string name="position_action_minimum_lock" formatted="false">กำไรที่ล็อกไว้ขั้นต่ำ (%)</string>
+    <string name="position_action_cycle" formatted="false">รอบของโพซิชัน</string>
+    <string name="position_action_invalid" formatted="false">ตรวจสอบค่าที่ป้อนก่อนดำเนินการต่อ</string>
     <string name="display_financial_title" formatted="false">รูปแบบสีทางการเงิน</string>
     <string name="display_financial_auto" formatted="false">ตรงกับภูมิภาคของฉัน (อัตโนมัติ)</string>
     <string name="display_financial_green" formatted="false">สีเขียว = ขึ้น, สีแดง = ลง (ตะวันตก)</string>
@@ -355,17 +355,17 @@
     <string name="display_financial_current">ปัจจุบัน: %1$s</string>
     <string name="display_financial_green_short" formatted="false">เขียวขึ้น / แดงลง</string>
     <string name="display_financial_red_short" formatted="false">แดงขึ้น / เขียวลง</string>
-    <string name="display_country" formatted="false">Country / region</string>
+    <string name="display_country" formatted="false">ประเทศ / ภูมิภาค</string>
     <string name="market_context_last" formatted="false">ราคาล่าสุด</string>
     <string name="market_context_change" formatted="false">เปลี่ยนแปลง 24 ชม.</string>
     <string name="market_context_high" formatted="false">สูงสุด</string>
     <string name="market_context_low" formatted="false">ต่ำสุด</string>
     <string name="market_context_related_empty">ไม่มี instrument ที่เกี่ยวข้องซึ่งกำหนดค่าไว้สำหรับ %1$s บน %2$s</string>
-    <string name="market_live_connected" formatted="false">Live updates connected.</string>
-    <string name="market_live_connecting" formatted="false">Connecting to live updates…</string>
-    <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
-    <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
-    <string name="market_context_as_of">Cached close as of %1$s</string>
+    <string name="market_live_connected" formatted="false">เชื่อมต่อการอัปเดตสดแล้ว</string>
+    <string name="market_live_connecting" formatted="false">กำลังเชื่อมต่อการอัปเดตสด…</string>
+    <string name="market_live_unavailable" formatted="false">การอัปเดตสดไม่พร้อมใช้งาน กำลังแสดงสแนปช็อต</string>
+    <string name="market_snapshot_mode" formatted="false">โหมดสแนปช็อต</string>
+    <string name="market_context_as_of">ราคาปิดในแคช ณ %1$s</string>
     <string name="market_cachebanner_message">กำลังอุ่น cache: มีแท่งเทียน %1$s / %2$s แท่ง %3$s</string>
     <string name="market_cachebanner_sources_cache" formatted="false"></string>
     <string name="market_cachebanner_sources_db" formatted="false">(จาก DB)</string>
@@ -373,37 +373,37 @@
     <string name="market_pairstats_chiparialabel">สถิติคู่กับ %1$s บน %2$s: Pearson %3$s, ค่า p %4$s</string>
     <string name="market_pairstats_label" formatted="false">โคอินทิเกรชัน:</string>
     <string name="market_pairstats_metric">ρ %1$s · p %2$s</string>
-    <string name="market_pair_status_cold" formatted="false">Warming up</string>
-    <string name="market_pair_status_cointegrated" formatted="false">Cointegrated</string>
-    <string name="market_pair_status_warm" formatted="false">Warm</string>
+    <string name="market_pair_status_cold" formatted="false">กำลังเตรียมข้อมูล</string>
+    <string name="market_pair_status_cointegrated" formatted="false">มีความสัมพันธ์เชิงดุลยภาพระยะยาว</string>
+    <string name="market_pair_status_warm" formatted="false">พร้อม</string>
     <string name="positions_timeline_chart_valuationcurrency">สกุลเงินประเมินมูลค่า: %1$s</string>
-    <string name="account_language_syncing">Saving your language choice to your backend account…</string>
-    <string name="account_language_confirmed">Backend account language confirmed: %1$s</string>
-    <string name="account_language_uncertain">The backend account language could not be confirmed. Your local language choice is unchanged.</string>
-    <string name="account_language_retry">Retry language sync</string>
+    <string name="account_language_syncing">กำลังบันทึกภาษาที่เลือกลงในบัญชีแบ็กเอนด์…</string>
+    <string name="account_language_confirmed">ยืนยันภาษาบัญชีแบ็กเอนด์แล้ว: %1$s</string>
+    <string name="account_language_uncertain">ยืนยันภาษาบัญชีแบ็กเอนด์ไม่ได้ ภาษาที่เลือกในเครื่องยังไม่เปลี่ยนแปลง</string>
+    <string name="account_language_retry">ลองซิงค์ภาษาอีกครั้ง</string>
     <string name="backtests_status_pending">รอดำเนินการ</string>
     <string name="backtests_status_running">กำลังทำงาน</string>
     <string name="backtests_status_completed">เสร็จสิ้น</string>
     <string name="backtests_status_failed">ล้มเหลว</string>
     <string name="backtests_status_cancelled">ยกเลิกแล้ว</string>
     <string name="backtests_status_unknown">ไม่ทราบ</string>
-    <string name="push_title">Snapper updates</string>
-    <string name="push_generic">Open Snapper to view updates</string>
-    <string name="push_privacy">Notifications show only a generic invitation. Open the app and sign in to view authorized details. Enabling push sends an installation identifier to Google and your configured backend.</string>
-    <string name="push_enable">Enable notifications</string>
-    <string name="push_disable">Disable notifications</string>
-    <string name="push_check">Check registration status</string>
-    <string name="push_off">Notifications are off.</string>
-    <string name="push_busy">Updating notification registration…</string>
-    <string name="push_unavailable">Push is unavailable for this backend.</string>
-    <string name="push_permission">Allow Android notifications to enable push.</string>
-    <string name="push_ready">Push is available. Enable it to register this installation.</string>
-    <string name="push_accepted">Notification registration confirmed. Delivery depends on your backend and device.</string>
-    <string name="push_rejected">Registration was not completed. You can try again explicitly.</string>
-    <string name="push_uncertain">Registration could not be confirmed. Check status before another registration.</string>
-    <string name="push_restart">Close and reopen the app before activating a different Firebase configuration.</string>
-    <string name="push_close">Close</string>
-    <string name="push_cleanup">Local notifications are off. Remote cleanup is pending; disable again while signed in to retry.</string>
+    <string name="push_title">อัปเดตจาก Snapper</string>
+    <string name="push_generic">เปิด Snapper เพื่อดูอัปเดต</string>
+    <string name="push_privacy">การแจ้งเตือนจะแสดงเพียงข้อความเชิญทั่วไป เปิดแอปและเข้าสู่ระบบเพื่อดูรายละเอียดที่ได้รับอนุญาต การเปิดใช้พุชจะส่งตัวระบุการติดตั้งไปยัง Google และแบ็กเอนด์ที่กำหนดค่าไว้</string>
+    <string name="push_enable">เปิดใช้การแจ้งเตือน</string>
+    <string name="push_disable">ปิดใช้การแจ้งเตือน</string>
+    <string name="push_check">ตรวจสอบสถานะการลงทะเบียน</string>
+    <string name="push_off">ปิดการแจ้งเตือนอยู่</string>
+    <string name="push_busy">กำลังอัปเดตการลงทะเบียนการแจ้งเตือน…</string>
+    <string name="push_unavailable">แบ็กเอนด์นี้ไม่รองรับพุช</string>
+    <string name="push_permission">อนุญาตการแจ้งเตือน Android เพื่อเปิดใช้พุช</string>
+    <string name="push_ready">พุชพร้อมใช้งาน เปิดใช้เพื่อลงทะเบียนการติดตั้งนี้</string>
+    <string name="push_accepted">ยืนยันการลงทะเบียนการแจ้งเตือนแล้ว การส่งขึ้นอยู่กับแบ็กเอนด์และอุปกรณ์</string>
+    <string name="push_rejected">การลงทะเบียนไม่เสร็จสมบูรณ์ คุณสามารถลองใหม่ด้วยตนเองได้</string>
+    <string name="push_uncertain">ยืนยันการลงทะเบียนไม่ได้ ตรวจสอบสถานะก่อนลงทะเบียนอีกครั้ง</string>
+    <string name="push_restart">ปิดแล้วเปิดแอปใหม่ก่อนเปิดใช้การกำหนดค่า Firebase อื่น</string>
+    <string name="push_close">ปิด</string>
+    <string name="push_cleanup">ปิดการแจ้งเตือนในเครื่องแล้ว กำลังรอการล้างข้อมูลระยะไกล ปิดใช้งานอีกครั้งขณะเข้าสู่ระบบเพื่อลองใหม่</string>
     <string name="home_connection_connected">เชื่อมต่อแล้ว</string>
     <string name="home_connection_connecting">กำลังเชื่อมต่อ…</string>
     <string name="home_connection_authenticating">กำลังยืนยันตัวตน…</string>
@@ -416,4 +416,72 @@
     <plurals name="home_heartbeat_age_seconds">
         <item quantity="other">%1$d วินาทีที่แล้ว</item>
     </plurals>
+    <string name="records_status_new" formatted="false">ใหม่</string>
+    <string name="records_status_open" formatted="false">เปิด</string>
+    <string name="records_status_partially_filled" formatted="false">ดำเนินการบางส่วน</string>
+    <string name="records_status_filled" formatted="false">ดำเนินการแล้ว</string>
+    <string name="records_status_cancelled" formatted="false">ยกเลิกแล้ว</string>
+    <string name="records_status_rejected" formatted="false">ถูกปฏิเสธ</string>
+    <string name="records_alert_type_order_unknown" formatted="false">ไม่ทราบสถานะคำสั่ง</string>
+    <string name="venue_accounts_status_observed" formatted="false">เรียลไทม์</string>
+    <string name="venue_accounts_status_simulated" formatted="false">จำลอง</string>
+    <string name="venue_accounts_status_stale" formatted="false">ล้าสมัย</string>
+    <string name="venue_accounts_status_clock_error" formatted="false">ข้อผิดพลาดของเวลา</string>
+    <string name="venue_accounts_status_unverified" formatted="false">ยังไม่ได้ยืนยัน</string>
+    <string name="venue_accounts_status_unavailable" formatted="false">ไม่พร้อมใช้งาน</string>
+    <string name="venue_accounts_status_not_applicable" formatted="false">ไม่สามารถใช้ได้</string>
+    <string name="venue_accounts_status_unknown" formatted="false">ไม่ทราบ</string>
+    <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">กระทบยอดแล้ว</string>
+    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">ตรวจพบความคลาดเคลื่อน</string>
+    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">ยังไม่ได้กระทบยอด</string>
+    <string name="venue_accounts_reconciliation_status_error" formatted="false">ข้อผิดพลาดในการกระทบยอด</string>
+    <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">ไม่รองรับ</string>
+    <string name="system_status_healthy" formatted="false">สุขภาพดี</string>
+    <string name="system_status_error" formatted="false">ข้อผิดพลาด</string>
+    <string name="system_status_warning" formatted="false">คำเตือน</string>
+    <string name="system_status_starting" formatted="false">กำลังเริ่ม</string>
+    <string name="system_status_stopping" formatted="false">กำลังหยุด</string>
+    <string name="settings_role_viewer" formatted="false">ผู้ดู</string>
+    <string name="settings_role_operator" formatted="false">ผู้ปฏิบัติงาน</string>
+    <string name="settings_role_admin" formatted="false">ผู้ดูแลระบบ</string>
+    <string name="settings_role_ai_delegate" formatted="false">ตัวแทน AI</string>
+    <string name="settings_role_auditor" formatted="false">ผู้ตรวจสอบ</string>
+    <string name="process_mode_thread" formatted="false">โหมด Thread</string>
+    <string name="process_mode_process" formatted="false">โหมด Process</string>
+    <string name="process_role_strategy" formatted="false">กลยุทธ์</string>
+    <string name="process_role_backtest" formatted="false">แบ็คเทสต์</string>
+    <string name="positions_timeline_incompleteness_scope_global" formatted="false">ทั้งพอร์ตโฟลิโอ</string>
+    <string name="positions_timeline_incompleteness_tier_mark_incomplete" formatted="false">ราคาอ้างอิงไม่สมบูรณ์</string>
+    <string name="positions_timeline_incompleteness_tier_untrusted" formatted="false">ไม่น่าเชื่อถือ</string>
+    <string name="positions_timeline_attribution_origins_manual" formatted="false">ด้วยตนเอง · โดยตรง</string>
+    <string name="positions_timeline_attribution_origins_plan" formatted="false">แผน · อัตโนมัติ</string>
+    <string name="positions_timeline_attribution_origins_system" formatted="false">ระบบ · อัตโนมัติ</string>
+    <string name="positions_timeline_attribution_origins_unattributed" formatted="false">ไม่มีการระบุที่มา · ไม่ทราบแหล่งที่มา</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">ไม่มีการกรอกข้อมูลการค้าแลกเปลี่ยนที่ทำหน้าที่เป็นหลักฐานสำหรับการจองนี้</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">บันทึกที่ได้รับมาแบบดั้งเดิมซึ่งไม่มีการกรอกข้อมูลการค้าแลกเปลี่ยนทำหน้าที่เป็นหลักฐาน</string>
+    <string name="common_yes" formatted="false">ใช่</string>
+    <string name="common_no" formatted="false">ไม่ใช่</string>
+    <string name="settings_role_ai_reviewer" formatted="false">ผู้ตรวจสอบ AI</string>
+    <string name="settings_role_ai_researcher" formatted="false">นักวิจัย AI</string>
+    <string name="process_role_core" formatted="false">แกนหลัก</string>
+    <string name="process_role_task" formatted="false">งาน</string>
+    <string name="records_status_submitted" formatted="false">ส่งแล้ว</string>
+    <string name="system_status_ready" formatted="false">พร้อม</string>
+    <string name="system_status_degraded" formatted="false">ประสิทธิภาพลดลง</string>
+    <string name="market_instrument_kind_spot" formatted="false">สปอต</string>
+    <string name="market_instrument_kind_perpetual" formatted="false">สัญญาไม่มีกำหนดหมดอายุ</string>
+    <string name="market_instrument_kind_future" formatted="false">สัญญาฟิวเจอร์ส</string>
+    <string name="market_instrument_kind_etf" formatted="false">ETF</string>
+    <string name="market_instrument_kind_option" formatted="false">ออปชัน</string>
+    <string name="venue_accounts_valuation_native_only" formatted="false">เฉพาะสกุลเงินเดิม</string>
+    <string name="venue_accounts_status_unobserved" formatted="false">ยังไม่ได้สังเกตการณ์</string>
+    <string name="pnl_execution_history_as_recorded" formatted="false">ตามที่บันทึกไว้</string>
+    <string name="pnl_execution_history_operator_corrected" formatted="false">แก้ไขโดยผู้ปฏิบัติงาน</string>
+    <string name="ai_reviews_status_approved" formatted="false">อนุมัติแล้ว</string>
+    <string name="ai_reviews_status_rejected" formatted="false">ถูกปฏิเสธ</string>
+    <string name="venue_accounts_evaluation_matched" formatted="false">ตรงกัน</string>
+    <string name="venue_accounts_evaluation_mismatched" formatted="false">ไม่ตรงกัน</string>
+    <string name="venue_accounts_evaluation_incomplete" formatted="false">ไม่ครบถ้วน</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">ค่าดิบจากเอ็กซ์เชนจ์</string>
+    <string name="venue_accounts_numeric_source_legacy_float" formatted="false">ค่าทศนิยมลอยตัวแบบเดิม</string>
 </resources>

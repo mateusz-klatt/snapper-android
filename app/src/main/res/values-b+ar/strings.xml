@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="privacy_policy" formatted="false">Privacy policy</string>
+    <string name="privacy_policy" formatted="false">سياسة الخصوصية</string>
     <string name="username" formatted="false">اسم المستخدم</string>
     <string name="password" formatted="false">كلمة المرور</string>
     <string name="sign_in" formatted="false">تسجيل الدخول</string>
-    <string name="session_retention_notice" formatted="false">Staying signed in requires Android 11+, a secure screen lock, and authentication with your PIN, pattern, password or strong biometrics within the last 5 minutes. Otherwise, sign in again after the app restarts.</string>
+    <string name="session_retention_notice" formatted="false">يتطلب البقاء مسجّل الدخول Android 11 أو أحدث، وقفل شاشة آمنًا، والمصادقة برمز PIN أو النمط أو كلمة المرور أو بيانات حيوية قوية خلال آخر 5 دقائق. وإلا، فسجّل الدخول مجددًا بعد إعادة تشغيل التطبيق.</string>
     <string name="subtitle" formatted="false">منصة تداول</string>
     <string name="backend" formatted="false">رابط خادم خلفي مخصص</string>
     <string name="language" formatted="false">اللغة</string>
@@ -22,13 +22,13 @@
     <string name="pnl" formatted="false">الربح/الخسارة غير المحقق</string>
     <string name="instrument" formatted="false">الأداة</string>
     <string name="price" formatted="false">السعر</string>
-    <string name="filled" formatted="false">Filled</string>
+    <string name="filled" formatted="false">الكمية المنفذة</string>
     <string name="status" formatted="false">الحالة</string>
     <string name="side" formatted="false">الاتجاه</string>
-    <string name="open" formatted="false">Open</string>
-    <string name="high" formatted="false">High</string>
-    <string name="low" formatted="false">Low</string>
-    <string name="close" formatted="false">Close</string>
+    <string name="open" formatted="false">الافتتاح</string>
+    <string name="high" formatted="false">الأعلى</string>
+    <string name="low" formatted="false">الأدنى</string>
+    <string name="close" formatted="false">الإغلاق</string>
     <string name="volume" formatted="false">حجم التداول</string>
     <string name="timeframe" formatted="false">الإطار الزمني</string>
     <string name="no_candles" formatted="false">لا توجد شموع بعد</string>
@@ -37,68 +37,68 @@
     <string name="alerts" formatted="false">التنبيهات</string>
     <string name="settings" formatted="false">الإعدادات</string>
     <string name="save" formatted="false">حفظ</string>
-    <string name="refresh" formatted="false">Refresh</string>
+    <string name="refresh" formatted="false">تحديث</string>
     <string name="exchange" formatted="false">البورصة</string>
-    <string name="load_market" formatted="false">Load candles</string>
-    <string name="empty" formatted="false">No records available.</string>
-    <string name="snapshot_note" formatted="false">Snapshot data. Refresh to retrieve the latest available records.</string>
-    <string name="chart_description" formatted="false">Historical candle chart. Exact values are listed below.</string>
-    <string name="error_origin" formatted="false">Enter a valid HTTPS backend origin.</string>
-    <string name="error_credentials" formatted="false">The username or password is incorrect.</string>
-    <string name="error_session" formatted="false">Your session expired. Please sign in again.</string>
-    <string name="error_network" formatted="false">Could not reach the backend. Check your connection and try again.</string>
-    <string name="error_service" formatted="false">The backend could not complete this request. Please try again.</string>
-    <string name="error_unknown" formatted="false">Something went wrong. Please try again.</string>
+    <string name="load_market" formatted="false">تحميل الشموع</string>
+    <string name="empty" formatted="false">لا توجد سجلات متاحة.</string>
+    <string name="snapshot_note" formatted="false">بيانات لقطة محفوظة. حدّث لاسترجاع أحدث السجلات المتاحة.</string>
+    <string name="chart_description" formatted="false">مخطط الشموع التاريخية. القيم الدقيقة مدرجة أدناه.</string>
+    <string name="error_origin" formatted="false">أدخل عنوان أصل صالحًا للخادم الخلفي يستخدم HTTPS.</string>
+    <string name="error_credentials" formatted="false">اسم المستخدم أو كلمة المرور غير صحيحة.</string>
+    <string name="error_session" formatted="false">انتهت صلاحية جلستك. يُرجى تسجيل الدخول مجددًا.</string>
+    <string name="error_network" formatted="false">تعذّر الاتصال بالخادم الخلفي. تحقّق من اتصالك وحاول مجددًا.</string>
+    <string name="error_service" formatted="false">تعذّر على الخادم الخلفي إكمال هذا الطلب. يُرجى المحاولة مجددًا.</string>
+    <string name="error_unknown" formatted="false">حدث خطأ. يُرجى المحاولة مجددًا.</string>
     <string name="dismiss" formatted="false">تجاهل</string>
     <string name="paper" formatted="false">تجريبي</string>
-    <string name="safety_critical" formatted="false">Safety critical</string>
-    <string name="snapshot_limit" formatted="false">This view shows current positions and up to 100 recent orders and alerts; it is not a complete history.</string>
-    <string name="chart_window" formatted="false">The chart shows the last 100 retrieved candles.</string>
-    <string name="local_network_explanation" formatted="false">For a backend on your local network, allow local network access before signing in. Public internet backends do not need this permission.</string>
-    <string name="local_network_allow" formatted="false">Allow local network</string>
-    <string name="local_network_settings" formatted="false">Open app settings</string>
-    <string name="order_new" formatted="false">New Order</string>
-    <string name="order_entry" formatted="false">New Manual Order</string>
-    <string name="order_confirm" formatted="false">Confirm Order</string>
+    <string name="safety_critical" formatted="false">حاسم للسلامة</string>
+    <string name="snapshot_limit" formatted="false">يعرض هذا القسم المراكز الحالية وما يصل إلى 100 من أحدث الأوامر والتنبيهات؛ ولا يمثّل سجلًا كاملًا.</string>
+    <string name="chart_window" formatted="false">يعرض المخطط آخر 100 شمعة تم استرجاعها.</string>
+    <string name="local_network_explanation" formatted="false">للخادم الخلفي الموجود على شبكتك المحلية، اسمح بالوصول إلى الشبكة المحلية قبل تسجيل الدخول. لا تحتاج الخوادم الخلفية على الإنترنت العام إلى هذا الإذن.</string>
+    <string name="local_network_allow" formatted="false">السماح بالشبكة المحلية</string>
+    <string name="local_network_settings" formatted="false">فتح إعدادات التطبيق</string>
+    <string name="order_new" formatted="false">أمر جديد</string>
+    <string name="order_entry" formatted="false">أمر يدوي جديد</string>
+    <string name="order_confirm" formatted="false">تأكيد الأمر</string>
     <string name="order_quantity" formatted="false">الكمية</string>
-    <string name="order_type" formatted="false">Order Type</string>
-    <string name="order_stop_price" formatted="false">Stop Price</string>
+    <string name="order_type" formatted="false">نوع الأمر</string>
+    <string name="order_stop_price" formatted="false">سعر الإيقاف</string>
     <string name="order_mode" formatted="false">الوضع</string>
     <string name="order_buy" formatted="false">شراء</string>
     <string name="order_sell" formatted="false">بيع</string>
     <string name="order_market" formatted="false">سوق</string>
     <string name="order_limit" formatted="false">حد</string>
-    <string name="order_stop" formatted="false">Stop</string>
-    <string name="order_stop_limit" formatted="false">Stop Limit</string>
-    <string name="order_live" formatted="false">Live</string>
-    <string name="order_review" formatted="false">Review Order</string>
-    <string name="order_back" formatted="false">Back</string>
-    <string name="order_submit" formatted="false">Confirm Order</string>
-    <string name="order_submitting" formatted="false">Submitting…</string>
+    <string name="order_stop" formatted="false">إيقاف</string>
+    <string name="order_stop_limit" formatted="false">إيقاف محدد</string>
+    <string name="order_live" formatted="false">فعلي</string>
+    <string name="order_review" formatted="false">مراجعة الأمر</string>
+    <string name="order_back" formatted="false">رجوع</string>
+    <string name="order_submit" formatted="false">تأكيد الأمر</string>
+    <string name="order_submitting" formatted="false">جارٍ الإرسال…</string>
     <string name="order_leverage" formatted="false">الرافعة المالية</string>
-    <string name="order_reduce_only" formatted="false">Reduce Only</string>
-    <string name="order_observation_only" formatted="false">This instrument is observation-only — place orders on an execution-capable instrument.</string>
-    <string name="order_unknown_instrument" formatted="false">This instrument is not recognised. Reload the list and try again.</string>
-    <string name="order_caps_violation" formatted="false">This order would exceed your account safety caps. Review your risk settings and retry.</string>
-    <string name="order_rejected" formatted="false">Order creation failed</string>
+    <string name="order_reduce_only" formatted="false">تقليل فقط</string>
+    <string name="order_observation_only" formatted="false">هذه الأداة للمراقبة فقط — ضع الأوامر على أداة تدعم التنفيذ.</string>
+    <string name="order_unknown_instrument" formatted="false">هذه الأداة غير معروفة. أعد تحميل القائمة وحاول مجددًا.</string>
+    <string name="order_caps_violation" formatted="false">سيتجاوز هذا الأمر حدود الأمان لحسابك. راجع إعدادات المخاطر وحاول مجددًا.</string>
+    <string name="order_rejected" formatted="false">فشل إنشاء الأمر</string>
     <string name="order_cancel_title" formatted="false">إلغاء الأمر؟</string>
     <string name="order_cancel_confirm" formatted="false">إلغاء الأمر</string>
     <string name="order_keep_open" formatted="false">إبقاؤه مفتوحًا</string>
-    <string name="order_select_wallet" formatted="false">Select a wallet on Home before placing an order.</string>
-    <string name="order_created" formatted="false">Order submitted. Refresh to check execution status.</string>
-    <string name="order_cancel_requested" formatted="false">Cancellation requested. Refresh to check the order status.</string>
-    <string name="order_unknown_outcome" formatted="false">The request outcome is unknown. Check status before taking further action.</string>
-    <string name="order_check_status" formatted="false">Check status</string>
-    <string name="order_retry_intent" formatted="false">Retry same order</string>
-    <string name="order_catalog_error" formatted="false">Could not load exchanges or instruments. Try again.</string>
-    <string name="order_no_instruments" formatted="false">No instruments available for this exchange.</string>
-    <string name="order_invalid_form" formatted="false">Enter positive quantities and required prices. Optional leverage must be a positive whole number.</string>
-    <string name="order_refresh_failed" formatted="false">The request was accepted, but the latest records could not be loaded. Refresh to check status.</string>
-    <string name="order_forbidden" formatted="false">You no longer have permission for this action.</string>
-    <string name="order_session_changed" formatted="false">The session or wallet changed. Open a new order from the current account.</string>
-    <string name="order_enabled" formatted="false">Enabled</string>
-    <string name="order_disabled" formatted="false">Disabled</string>
-    <string name="system_tools" formatted="false">Overview</string>
+    <string name="order_select_wallet" formatted="false">اختر محفظة في الصفحة الرئيسية قبل وضع أمر.</string>
+    <string name="order_created" formatted="false">تم إرسال الأمر. حدّث للتحقّق من حالة التنفيذ.</string>
+    <string name="order_cancel_requested" formatted="false">تم طلب الإلغاء. حدّث للتحقّق من حالة الأمر.</string>
+    <string name="order_unknown_outcome" formatted="false">نتيجة الطلب غير معروفة. تحقّق من الحالة قبل اتخاذ أي إجراء آخر.</string>
+    <string name="order_check_status" formatted="false">التحقّق من الحالة</string>
+    <string name="order_retry_intent" formatted="false">إعادة محاولة الأمر نفسه</string>
+    <string name="order_catalog_error" formatted="false">تعذّر تحميل البورصات أو الأدوات. حاول مجددًا.</string>
+    <string name="order_no_instruments" formatted="false">لا توجد أدوات متاحة لهذه البورصة.</string>
+    <string name="order_invalid_form" formatted="false">أدخل كميات موجبة والأسعار المطلوبة. يجب أن تكون الرافعة المالية الاختيارية عددًا صحيحًا موجبًا.</string>
+    <string name="order_refresh_failed" formatted="false">تم قبول الطلب، لكن تعذّر تحميل أحدث السجلات. حدّث للتحقّق من الحالة.</string>
+    <string name="order_forbidden" formatted="false">لم يعد لديك إذن بهذا الإجراء.</string>
+    <string name="order_session_changed" formatted="false">تغيّرت الجلسة أو المحفظة. افتح أمرًا جديدًا من الحساب الحالي.</string>
+    <string name="order_enabled" formatted="false">مفعّل</string>
+    <string name="order_disabled" formatted="false">معطّل</string>
+    <string name="system_tools" formatted="false">نظرة عامة</string>
     <string name="desk_attach_button" formatted="false">إضافة عارض</string>
     <string name="desk_attach_desk_label" formatted="false">مكتب</string>
     <string name="desk_nav_title" formatted="false">مكاتبي</string>
@@ -157,24 +157,24 @@
     <string name="system_active" formatted="false">نشط</string>
     <string name="system_inactive" formatted="false">غير نشط</string>
     <string name="system_revoked" formatted="false">ملغى</string>
-    <string name="records_open" formatted="false">Open</string>
+    <string name="records_open" formatted="false">المفتوحة</string>
     <string name="records_recent" formatted="false">حديثة</string>
     <string name="records_fills" formatted="false">تنفيذات</string>
-    <string name="records_refresh" formatted="false">Refresh</string>
-    <string name="records_fee" formatted="false">Fee</string>
-    <string name="records_details" formatted="false">Details</string>
-    <string name="records_hide_details" formatted="false">\@string/close</string>
+    <string name="records_refresh" formatted="false">تحديث</string>
+    <string name="records_fee" formatted="false">الرسوم</string>
+    <string name="records_details" formatted="false">التفاصيل</string>
+    <string name="records_hide_details" formatted="false">إغلاق</string>
     <string name="records_thread" formatted="false">السلسلة</string>
     <string name="records_source_topic" formatted="false">الموضوع المصدر</string>
     <string name="notification_defaults_title" formatted="false">افتراضيات المستخدم</string>
     <string name="notification_defaults_footer" formatted="false">تُطبق الافتراضيات عندما لا يطابق أي تجاوز خاص بالجهاز تنبيهًا واردًا.</string>
-    <string name="notification_defaults_enabled" formatted="false">Enabled</string>
+    <string name="notification_defaults_enabled" formatted="false">مفعّل</string>
     <string name="notification_defaults_priority" formatted="false">الحد الأدنى للأولوية</string>
     <string name="notification_defaults_load_failed" formatted="false">فشل تحميل التفضيلات</string>
     <string name="notification_defaults_save_failed" formatted="false">فشل حفظ التفضيلات</string>
-    <string name="notification_defaults_low" formatted="false">Low</string>
-    <string name="notification_defaults_medium" formatted="false">Medium</string>
-    <string name="notification_defaults_high" formatted="false">High</string>
+    <string name="notification_defaults_low" formatted="false">منخفضة</string>
+    <string name="notification_defaults_medium" formatted="false">متوسطة</string>
+    <string name="notification_defaults_high" formatted="false">مرتفعة</string>
     <string name="notification_defaults_fill" formatted="false">تم تنفيذ الأمر</string>
     <string name="notification_defaults_rejected" formatted="false">تم رفض الأمر</string>
     <string name="notification_defaults_stop" formatted="false">تم تفعيل وقف الخسارة</string>
@@ -186,7 +186,7 @@
     <string name="signals_price" formatted="false">السعر</string>
     <string name="signals_reason" formatted="false">السبب:</string>
     <string name="signals_strong" formatted="false">قوي</string>
-    <string name="signals_medium" formatted="false">Medium</string>
+    <string name="signals_medium" formatted="false">متوسطة</string>
     <string name="signals_weak" formatted="false">ضعيف</string>
     <string name="signals_very_weak" formatted="false">ضعيف جداً</string>
     <string name="signals_total" formatted="false">الإجمالي</string>
@@ -199,23 +199,23 @@
     <string name="signals_export" formatted="false">تصدير</string>
     <string name="signals_export_failed" formatted="false">فشل الإرسال</string>
     <string name="venue_accounts_title" formatted="false">حسابات المنصة</string>
-    <string name="venue_accounts_refresh" formatted="false">Refresh</string>
+    <string name="venue_accounts_refresh" formatted="false">تحديث</string>
     <string name="venue_accounts_failed" formatted="false">تعذّر تحميل حالة حساب المنصة. هذا لا يعني أن الحساب فارغ؛ إنما البيانات غير متاحة حاليًا.</string>
     <string name="venue_accounts_authoritative" formatted="false">بيانات آنية موثوقة من المنصة، رُصدت خلال فترة الصلاحية.</string>
     <string name="venue_accounts_not_authoritative" formatted="false">تعرض الصفوف غير الموسومة بآني بيانات سابقة أو محاكاة أو غير متاحة، وليست أرصدة آنية موثوقة من المنصة.</string>
-    <string name="venue_accounts_valuation" formatted="false">Valuation</string>
+    <string name="venue_accounts_valuation" formatted="false">التقييم</string>
     <string name="venue_accounts_balances" formatted="false">الأرصدة</string>
-    <string name="venue_accounts_observed" formatted="false">Observed at</string>
-    <string name="venue_accounts_source" formatted="false">Source observation</string>
+    <string name="venue_accounts_observed" formatted="false">وقت الرصد</string>
+    <string name="venue_accounts_source" formatted="false">الرصد المصدر</string>
     <string name="venue_accounts_total" formatted="false">الإجمالي</string>
     <string name="venue_accounts_free" formatted="false">متاح</string>
     <string name="venue_accounts_used" formatted="false">مستخدم</string>
-    <string name="venue_accounts_numeric_source" formatted="false">Numeric provenance</string>
+    <string name="venue_accounts_numeric_source" formatted="false">مصدر القيم الرقمية</string>
     <string name="venue_accounts_positions" formatted="false">المراكز المفتوحة</string>
     <string name="venue_accounts_funding" formatted="false">التمويل</string>
-    <string name="venue_accounts_reconciliation" formatted="false">Reconciliation status</string>
-    <string name="venue_accounts_evaluation" formatted="false">Evaluation status</string>
-    <string name="venue_accounts_deadline" formatted="false">Authority deadline</string>
+    <string name="venue_accounts_reconciliation" formatted="false">حالة المطابقة</string>
+    <string name="venue_accounts_evaluation" formatted="false">حالة التقييم</string>
+    <string name="venue_accounts_deadline" formatted="false">نهاية صلاحية البيانات الموثوقة</string>
     <string name="positions_timeline_controls_window" formatted="false">النطاق الزمني</string>
     <string name="positions_timeline_controls_granularity" formatted="false">الدقة الزمنية</string>
     <string name="positions_timeline_controls_valuationcurrency" formatted="false">عملة التقييم</string>
@@ -228,11 +228,11 @@
     <string name="positions_timeline_nowallet_message" formatted="false">اختر محفظة لعرض مخططها الزمني لـ P&amp;L.</string>
     <string name="positions_timeline_incompleteness_title" formatted="false">أسباب عدم اكتمال النقاط</string>
     <string name="positions_timeline_incompleteness_description" formatted="false">تشمل الأسباب كامل النطاق الزمني المحمّل. وقد تتداخل الأعداد عندما يكون للنقطة أكثر من سبب.</string>
-    <string name="positions_timeline_incompleteness_affectedpoints">Affected points: %1$s</string>
+    <string name="positions_timeline_incompleteness_affectedpoints">النقاط المتأثرة: %1$s</string>
     <string name="positions_timeline_chart_title" formatted="false">P&amp;L عبر الزمن</string>
     <string name="positions_timeline_chart_net" formatted="false">صافي P&amp;L</string>
     <string name="positions_timeline_chart_realized" formatted="false">P&amp;L المحقق</string>
-    <string name="positions_timeline_chart_unrealized" formatted="false">Unrealized P&amp;L</string>
+    <string name="positions_timeline_chart_unrealized" formatted="false">P&amp;L غير المحقق</string>
     <string name="positions_timeline_attribution_title" formatted="false">أحدث إسناد لـ P&amp;L</string>
     <string name="positions_timeline_attribution_nostrategy" formatted="false">لا توجد استراتيجية مُثبتة</string>
     <string name="positions_timeline_attribution_withheld" formatted="false">متعذّر الإثبات</string>
@@ -241,7 +241,7 @@
     <string name="positions_timeline_contributions_realized" formatted="false">P&amp;L المحقق</string>
     <string name="positions_timeline_contributions_fees" formatted="false">الرسوم</string>
     <string name="positions_timeline_contributions_accrual" formatted="false">التمويل المستحق</string>
-    <string name="positions_timeline_contributions_unrealized" formatted="false">Unrealized P&amp;L</string>
+    <string name="positions_timeline_contributions_unrealized" formatted="false">P&amp;L غير المحقق</string>
     <string name="positions_timeline_incompleteness_reasons_scope_order_regression" formatted="false">تراجع تسلسل النطاق</string>
     <string name="positions_timeline_incompleteness_reasons_before_activation" formatted="false">النقطة تسبق التفعيل</string>
     <string name="positions_timeline_incompleteness_reasons_activation_baseline_non_finite" formatted="false">قيمة خط أساس التفعيل ليست عددًا محدودًا</string>
@@ -260,26 +260,26 @@
     <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">فشلت تسوية الإسناد</string>
     <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">فشلت مطابقة إجماليات P&amp;L حسب الأداة مع إجمالي P&amp;L الكلي</string>
     <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">تنفيذ صفقة وصل متأخرًا ويحمل طابعًا زمنيًا يسبق التفعيل</string>
-    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Attribution sum is not representable</string>
-    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Instrument sum is not representable</string>
-    <string name="positions_timeline_executionhistory_title" formatted="false">Operator-corrected execution history</string>
-    <string name="positions_timeline_executionhistory_summary" formatted="false">An operator repudiated recorded executions in this scope. Every correction listed here is excluded from the figures on this page.</string>
-    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Repudiated execution</string>
-    <string name="positions_timeline_executionhistory_correctionid" formatted="false">Correction record</string>
-    <string name="positions_timeline_equity_title" formatted="false">Equity overlay</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">لا يمكن تمثيل مجموع الإسناد</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">لا يمكن تمثيل مجموع الأدوات</string>
+    <string name="positions_timeline_executionhistory_title" formatted="false">سجل التنفيذ المصحّح بواسطة المشغّل</string>
+    <string name="positions_timeline_executionhistory_summary" formatted="false">أبطل مشغّل عمليات تنفيذ مسجّلة ضمن هذا النطاق. تُستبعد كل التصحيحات المدرجة هنا من الأرقام المعروضة في هذه الصفحة.</string>
+    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">عملية التنفيذ المُبطلة</string>
+    <string name="positions_timeline_executionhistory_correctionid" formatted="false">سجل التصحيح</string>
+    <string name="positions_timeline_equity_title" formatted="false">تراكب صافي قيمة الحساب</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">صافي قيمة الحساب</string>
-    <string name="positions_timeline_equity_drawdown_current" formatted="false">Current drawdown</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Spot venue only — balances held on other venues are excluded.</string>
-    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">External deposits and withdrawals are not adjusted out.</string>
-    <string name="positions_timeline_equity_honesty_restatedfrom">These figures are restated from %1$s at each minute\'s close, not sampled natively in this currency.</string>
-    <string name="positions_timeline_equity_honesty_pricedon">Priced on %1$s.</string>
-    <string name="positions_timeline_equity_honesty_conversionwithheld">Minutes dropped for want of a proven close: %1$s.</string>
-    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Drawdown is withheld on a converted basis, because the running peak is tracked in the sampled currency.</string>
-    <string name="positions_timeline_equity_cashposition_position" formatted="false">Position value</string>
-    <string name="positions_timeline_equity_cashposition_cash" formatted="false">Cash</string>
-    <string name="pnl_provenance">Calculation: %1$s · Mark source: %2$s · As of: %3$s</string>
-    <string name="pnl_equity_coverage">Equity sampled: %1$s · Complete minutes: %2$s</string>
-    <string name="pnl_execution_history">Execution history: %1$s</string>
+    <string name="positions_timeline_equity_drawdown_current" formatted="false">التراجع الحالي من القمة</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">منصة التداول الفوري فقط — تُستبعد الأرصدة المحتفظ بها على منصات أخرى.</string>
+    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">لم تُعدّل القيم لاستبعاد الإيداعات والسحوبات الخارجية.</string>
+    <string name="positions_timeline_equity_honesty_restatedfrom">تُحوّل هذه الأرقام من %1$s عند إغلاق كل دقيقة، ولا تُرصد أصلًا بهذه العملة.</string>
+    <string name="positions_timeline_equity_honesty_pricedon">التسعير على %1$s.</string>
+    <string name="positions_timeline_equity_honesty_conversionwithheld">الدقائق المستبعدة لغياب سعر إغلاق مُثبت: %1$s.</string>
+    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">لا يُعرض التراجع على أساس القيم المحوّلة، لأن القمة المتحركة تُتابع بعملة الرصد.</string>
+    <string name="positions_timeline_equity_cashposition_position" formatted="false">قيمة المركز</string>
+    <string name="positions_timeline_equity_cashposition_cash" formatted="false">النقد</string>
+    <string name="pnl_provenance">الحساب: %1$s · مصدر سعر التقييم: %2$s · اعتبارًا من: %3$s</string>
+    <string name="pnl_equity_coverage">رصد صافي قيمة الحساب: %1$s · الدقائق المكتملة: %2$s</string>
+    <string name="pnl_execution_history">سجل التنفيذ: %1$s</string>
     <string name="process_title" formatted="false">العمليات</string>
     <string name="process_running" formatted="false">قيد التشغيل</string>
     <string name="process_stopped" formatted="false">متوقف</string>
@@ -291,22 +291,22 @@
     <string name="process_cpu" formatted="false">CPU</string>
     <string name="process_empty" formatted="false">لا توجد عمليات مُهيأة.</string>
     <string name="process_start" formatted="false">بدء</string>
-    <string name="process_stop" formatted="false">Stop</string>
+    <string name="process_stop" formatted="false">إيقاف</string>
     <string name="process_restart" formatted="false">إعادة تشغيل</string>
     <string name="process_cancel" formatted="false">إلغاء</string>
     <string name="process_stale" formatted="false">لم يعد من الممكن التحكم في هذه العملية من هنا. حدّث البيانات وحاول مرة أخرى.</string>
     <string name="process_partial" formatted="false">تم إيقاف العملية، ولكن لم يعد من الممكن إعادة تشغيلها من هنا. حدّث البيانات وحاول مرة أخرى.</string>
-    <string name="process_confirm" formatted="false">Confirm process action</string>
-    <string name="process_confirm_message" formatted="false">Apply this action to the selected process?</string>
-    <string name="process_intent_saved" formatted="false">Desired state saved. The owning coordinator will apply it.</string>
-    <string name="process_accepted" formatted="false">Process action accepted.</string>
-    <string name="process_unknown" formatted="false">The command outcome is unknown. Controls remain locked: a status refresh cannot prove whether this command was applied.</string>
-    <string name="process_partial_unknown" formatted="false">The process was stopped, but the restart outcome is unknown. Controls remain locked: a status refresh cannot prove whether the restart was applied.</string>
-    <string name="process_rejected" formatted="false">The process action failed.</string>
-    <string name="process_load_failed" formatted="false">Could not refresh process status.</string>
-    <string name="process_config_failed" formatted="false">Process controls are unavailable because configuration could not be refreshed.</string>
-    <string name="process_enable" formatted="false">Enable</string>
-    <string name="process_disable" formatted="false">Disable</string>
+    <string name="process_confirm" formatted="false">تأكيد إجراء العملية</string>
+    <string name="process_confirm_message" formatted="false">هل تريد تطبيق هذا الإجراء على العملية المحدّدة؟</string>
+    <string name="process_intent_saved" formatted="false">تم حفظ الحالة المطلوبة. سيطبّقها المنسّق المسؤول.</string>
+    <string name="process_accepted" formatted="false">تم قبول إجراء العملية.</string>
+    <string name="process_unknown" formatted="false">نتيجة الأمر غير معروفة. تبقى أدوات التحكّم مقفلة: لا يمكن لتحديث الحالة إثبات ما إذا كان هذا الأمر قد طُبّق.</string>
+    <string name="process_partial_unknown" formatted="false">تم إيقاف العملية، لكن نتيجة إعادة التشغيل غير معروفة. تبقى أدوات التحكّم مقفلة: لا يمكن لتحديث الحالة إثبات ما إذا كانت إعادة التشغيل قد نُفّذت.</string>
+    <string name="process_rejected" formatted="false">فشل إجراء العملية.</string>
+    <string name="process_load_failed" formatted="false">تعذّر تحديث حالة العملية.</string>
+    <string name="process_config_failed" formatted="false">أدوات التحكّم في العملية غير متاحة لتعذّر تحديث الإعدادات.</string>
+    <string name="process_enable" formatted="false">تفعيل</string>
+    <string name="process_disable" formatted="false">تعطيل</string>
     <string name="ai_reviews_pending_title" formatted="false">المراجعات المعلقة</string>
     <string name="ai_reviews_decisions_title" formatted="false">قرارات AI</string>
     <string name="ai_reviews_deadline" formatted="false">الموعد النهائي</string>
@@ -324,13 +324,13 @@
     <string name="ai_reviews_expired_message" formatted="false">تجاوزت هذه المراجعة موعدها النهائي وانتهت مهلتها.</string>
     <string name="ai_reviews_missing" formatted="false">لم تعد هذه المراجعة موجودة.</string>
     <string name="ai_reviews_denied" formatted="false">تغيّرت صلاحية وصولك كمفوض. أعد التحميل قبل اتخاذ القرار.</string>
-    <string name="ai_reviews_load_failed" formatted="false">Could not refresh reviews. Previously loaded reviews remain visible.</string>
-    <string name="ai_reviews_check_status" formatted="false">Check status</string>
-    <string name="ai_reviews_retry" formatted="false">Retry original decision</string>
-    <string name="ai_reviews_confirm" formatted="false">Confirm review decision</string>
-    <string name="ai_reviews_accepted" formatted="false">Decision accepted</string>
-    <string name="ai_reviews_rejected" formatted="false">Decision rejected by the server</string>
-    <string name="ai_reviews_unknown" formatted="false">Outcome unknown. Check status before retrying.</string>
+    <string name="ai_reviews_load_failed" formatted="false">تعذّر تحديث المراجعات. تظل المراجعات المحمّلة سابقًا ظاهرة.</string>
+    <string name="ai_reviews_check_status" formatted="false">التحقّق من الحالة</string>
+    <string name="ai_reviews_retry" formatted="false">إعادة محاولة القرار الأصلي</string>
+    <string name="ai_reviews_confirm" formatted="false">تأكيد قرار المراجعة</string>
+    <string name="ai_reviews_accepted" formatted="false">تم قبول القرار</string>
+    <string name="ai_reviews_rejected" formatted="false">رفض الخادم القرار</string>
+    <string name="ai_reviews_unknown" formatted="false">النتيجة غير معروفة. تحقّق من الحالة قبل إعادة المحاولة.</string>
     <string name="positions_accessibility_label_closebutton" formatted="false">إغلاق المركز</string>
     <string name="positions_accessibility_label_reducebutton" formatted="false">خفض المركز</string>
     <string name="positions_reduce_cancel" formatted="false">إلغاء</string>
@@ -341,13 +341,13 @@
     <string name="trading_bracket_takeprofitlabel" formatted="false">جني الأرباح</string>
     <string name="trading_trailingstop_attach" formatted="false">إرفاق وقف متحرك</string>
     <string name="trading_trailingstop_trailamountlabel" formatted="false">مسافة الوقف المتحرك</string>
-    <string name="position_action_review" formatted="false">Review position action</string>
-    <string name="position_action_confirm" formatted="false">Confirm action</string>
-    <string name="position_action_accepted" formatted="false">Request accepted. Refresh to check execution status.</string>
-    <string name="position_action_retry" formatted="false">Retry same request</string>
-    <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
-    <string name="position_action_cycle" formatted="false">Position cycle</string>
-    <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+    <string name="position_action_review" formatted="false">مراجعة إجراء المركز</string>
+    <string name="position_action_confirm" formatted="false">تأكيد الإجراء</string>
+    <string name="position_action_accepted" formatted="false">تم قبول الطلب. حدّث للتحقّق من حالة التنفيذ.</string>
+    <string name="position_action_retry" formatted="false">إعادة محاولة الطلب نفسه</string>
+    <string name="position_action_minimum_lock" formatted="false">الحد الأدنى للربح المحمي (%)</string>
+    <string name="position_action_cycle" formatted="false">دورة المركز</string>
+    <string name="position_action_invalid" formatted="false">راجع القيم المُدخلة قبل المتابعة.</string>
     <string name="display_financial_title" formatted="false">اصطلاح ألوان الأسواق المالية</string>
     <string name="display_financial_auto" formatted="false">مطابقة منطقتي (تلقائي)</string>
     <string name="display_financial_green" formatted="false">الأخضر = صعود، الأحمر = هبوط (غربي)</string>
@@ -355,17 +355,17 @@
     <string name="display_financial_current">حاليًا: %1$s</string>
     <string name="display_financial_green_short" formatted="false">أخضر صعود / أحمر هبوط</string>
     <string name="display_financial_red_short" formatted="false">أحمر صعود / أخضر هبوط</string>
-    <string name="display_country" formatted="false">Country / region</string>
+    <string name="display_country" formatted="false">البلد / المنطقة</string>
     <string name="market_context_last" formatted="false">آخر سعر</string>
     <string name="market_context_change" formatted="false">التغير خلال 24 ساعة</string>
     <string name="market_context_high" formatted="false">الأعلى</string>
     <string name="market_context_low" formatted="false">الأدنى</string>
     <string name="market_context_related_empty">لا توجد أدوات مرتبطة مكوّنة لـ %1$s على %2$s.</string>
-    <string name="market_live_connected" formatted="false">Live updates connected.</string>
-    <string name="market_live_connecting" formatted="false">Connecting to live updates…</string>
-    <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
-    <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
-    <string name="market_context_as_of">Cached close as of %1$s</string>
+    <string name="market_live_connected" formatted="false">تم الاتصال بالتحديثات المباشرة.</string>
+    <string name="market_live_connecting" formatted="false">جارٍ الاتصال بالتحديثات المباشرة…</string>
+    <string name="market_live_unavailable" formatted="false">التحديثات المباشرة غير متاحة؛ تُعرض لقطات محفوظة.</string>
+    <string name="market_snapshot_mode" formatted="false">وضع اللقطات المحفوظة</string>
+    <string name="market_context_as_of">سعر الإغلاق المخزّن مؤقتًا اعتبارًا من %1$s</string>
     <string name="market_cachebanner_message">يجري تجهيز التخزين المؤقت: %1$s / %2$s شموع متاحة %3$s</string>
     <string name="market_cachebanner_sources_cache" formatted="false"></string>
     <string name="market_cachebanner_sources_db" formatted="false">(من DB)</string>
@@ -373,37 +373,37 @@
     <string name="market_pairstats_chiparialabel">إحصاءات الزوج مع %1$s على %2$s: بيرسون %3$s، قيمة p %4$s</string>
     <string name="market_pairstats_label" formatted="false">التكامل المشترك:</string>
     <string name="market_pairstats_metric">ρ %1$s · p %2$s</string>
-    <string name="market_pair_status_cold" formatted="false">Warming up</string>
-    <string name="market_pair_status_cointegrated" formatted="false">Cointegrated</string>
-    <string name="market_pair_status_warm" formatted="false">Warm</string>
+    <string name="market_pair_status_cold" formatted="false">جارٍ التجهيز</string>
+    <string name="market_pair_status_cointegrated" formatted="false">متكاملان تكاملًا مشتركًا</string>
+    <string name="market_pair_status_warm" formatted="false">جاهز</string>
     <string name="positions_timeline_chart_valuationcurrency">عملة التقييم: %1$s</string>
-    <string name="account_language_syncing">Saving your language choice to your backend account…</string>
-    <string name="account_language_confirmed">Backend account language confirmed: %1$s</string>
-    <string name="account_language_uncertain">The backend account language could not be confirmed. Your local language choice is unchanged.</string>
-    <string name="account_language_retry">Retry language sync</string>
+    <string name="account_language_syncing">جارٍ حفظ اختيار لغتك في حسابك على الخادم الخلفي…</string>
+    <string name="account_language_confirmed">تم تأكيد لغة الحساب على الخادم الخلفي: %1$s</string>
+    <string name="account_language_uncertain">تعذّر تأكيد لغة الحساب على الخادم الخلفي. لم يتغيّر اختيار لغتك المحلي.</string>
+    <string name="account_language_retry">إعادة محاولة مزامنة اللغة</string>
     <string name="backtests_status_pending">قيد الانتظار</string>
     <string name="backtests_status_running">قيد التشغيل</string>
     <string name="backtests_status_completed">مكتمل</string>
     <string name="backtests_status_failed">فشل</string>
     <string name="backtests_status_cancelled">ملغى</string>
     <string name="backtests_status_unknown">غير معروف</string>
-    <string name="push_title">Snapper updates</string>
-    <string name="push_generic">Open Snapper to view updates</string>
-    <string name="push_privacy">Notifications show only a generic invitation. Open the app and sign in to view authorized details. Enabling push sends an installation identifier to Google and your configured backend.</string>
-    <string name="push_enable">Enable notifications</string>
-    <string name="push_disable">Disable notifications</string>
-    <string name="push_check">Check registration status</string>
-    <string name="push_off">Notifications are off.</string>
-    <string name="push_busy">Updating notification registration…</string>
-    <string name="push_unavailable">Push is unavailable for this backend.</string>
-    <string name="push_permission">Allow Android notifications to enable push.</string>
-    <string name="push_ready">Push is available. Enable it to register this installation.</string>
-    <string name="push_accepted">Notification registration confirmed. Delivery depends on your backend and device.</string>
-    <string name="push_rejected">Registration was not completed. You can try again explicitly.</string>
-    <string name="push_uncertain">Registration could not be confirmed. Check status before another registration.</string>
-    <string name="push_restart">Close and reopen the app before activating a different Firebase configuration.</string>
-    <string name="push_close">Close</string>
-    <string name="push_cleanup">Local notifications are off. Remote cleanup is pending; disable again while signed in to retry.</string>
+    <string name="push_title">تحديثات Snapper</string>
+    <string name="push_generic">افتح Snapper لعرض التحديثات</string>
+    <string name="push_privacy">تعرض الإشعارات دعوة عامة فقط. افتح التطبيق وسجّل الدخول لعرض التفاصيل المسموح بها. يؤدي تفعيل الإشعارات الفورية إلى إرسال معرّف التثبيت إلى Google والخادم الخلفي الذي أعددته.</string>
+    <string name="push_enable">تفعيل الإشعارات</string>
+    <string name="push_disable">تعطيل الإشعارات</string>
+    <string name="push_check">التحقّق من حالة التسجيل</string>
+    <string name="push_off">الإشعارات معطّلة.</string>
+    <string name="push_busy">جارٍ تحديث تسجيل الإشعارات…</string>
+    <string name="push_unavailable">الإشعارات الفورية غير متاحة لهذا الخادم الخلفي.</string>
+    <string name="push_permission">اسمح بإشعارات Android لتفعيل الإشعارات الفورية.</string>
+    <string name="push_ready">الإشعارات الفورية متاحة. فعّلها لتسجيل هذا التثبيت.</string>
+    <string name="push_accepted">تم تأكيد تسجيل الإشعارات. يعتمد التسليم على الخادم الخلفي وجهازك.</string>
+    <string name="push_rejected">لم يكتمل التسجيل. يمكنك إعادة المحاولة يدويًا.</string>
+    <string name="push_uncertain">تعذّر تأكيد التسجيل. تحقّق من الحالة قبل التسجيل مجددًا.</string>
+    <string name="push_restart">أغلق التطبيق وأعد فتحه قبل تفعيل إعدادات Firebase مختلفة.</string>
+    <string name="push_close">إغلاق</string>
+    <string name="push_cleanup">الإشعارات المحلية معطّلة. التنظيف عن بُعد قيد الانتظار؛ عطّلها مجددًا أثناء تسجيل الدخول لإعادة المحاولة.</string>
     <string name="home_connection_connected">متصل</string>
     <string name="home_connection_connecting">جارٍ الاتصال…</string>
     <string name="home_connection_authenticating">جارٍ المصادقة…</string>
@@ -421,4 +421,72 @@
         <item quantity="many">قبل %1$d ثانية</item>
         <item quantity="other">قبل %1$d ثانية</item>
     </plurals>
+    <string name="records_status_new" formatted="false">جديد</string>
+    <string name="records_status_open" formatted="false">مفتوح</string>
+    <string name="records_status_partially_filled" formatted="false">منفذ جزئياً</string>
+    <string name="records_status_filled" formatted="false">منفذ</string>
+    <string name="records_status_cancelled" formatted="false">ملغى</string>
+    <string name="records_status_rejected" formatted="false">مرفوض</string>
+    <string name="records_alert_type_order_unknown" formatted="false">حالة الأمر غير معروفة</string>
+    <string name="venue_accounts_status_observed" formatted="false">آني</string>
+    <string name="venue_accounts_status_simulated" formatted="false">محاكاة</string>
+    <string name="venue_accounts_status_stale" formatted="false">غير محدّث</string>
+    <string name="venue_accounts_status_clock_error" formatted="false">خطأ زمني</string>
+    <string name="venue_accounts_status_unverified" formatted="false">غير مؤكد</string>
+    <string name="venue_accounts_status_unavailable" formatted="false">غير متوفر</string>
+    <string name="venue_accounts_status_not_applicable" formatted="false">غير منطبق</string>
+    <string name="venue_accounts_status_unknown" formatted="false">مجهول</string>
+    <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">تمت التسوية</string>
+    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">تم اكتشاف انحراف</string>
+    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">لم تتم التسوية بعد</string>
+    <string name="venue_accounts_reconciliation_status_error" formatted="false">خطأ في التسوية</string>
+    <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">غير مدعوم</string>
+    <string name="system_status_healthy" formatted="false">سليم</string>
+    <string name="system_status_error" formatted="false">خطأ</string>
+    <string name="system_status_warning" formatted="false">تحذير</string>
+    <string name="system_status_starting" formatted="false">جارٍ البدء</string>
+    <string name="system_status_stopping" formatted="false">جارٍ الإيقاف</string>
+    <string name="settings_role_viewer" formatted="false">مشاهد</string>
+    <string name="settings_role_operator" formatted="false">مشغّل</string>
+    <string name="settings_role_admin" formatted="false">مسؤول</string>
+    <string name="settings_role_ai_delegate" formatted="false">مفوّض الذكاء الاصطناعي</string>
+    <string name="settings_role_auditor" formatted="false">مدقق</string>
+    <string name="process_mode_thread" formatted="false">وضع Thread</string>
+    <string name="process_mode_process" formatted="false">وضع العملية</string>
+    <string name="process_role_strategy" formatted="false">الاستراتيجية</string>
+    <string name="process_role_backtest" formatted="false">اختبار رجعي</string>
+    <string name="positions_timeline_incompleteness_scope_global" formatted="false">المحفظة بأكملها</string>
+    <string name="positions_timeline_incompleteness_tier_mark_incomplete" formatted="false">السعر المرجعي غير مكتمل</string>
+    <string name="positions_timeline_incompleteness_tier_untrusted" formatted="false">غير موثوق</string>
+    <string name="positions_timeline_attribution_origins_manual" formatted="false">يدوي · مباشر</string>
+    <string name="positions_timeline_attribution_origins_plan" formatted="false">خطة · آلي</string>
+    <string name="positions_timeline_attribution_origins_system" formatted="false">النظام · آلي</string>
+    <string name="positions_timeline_attribution_origins_unattributed" formatted="false">غير مُسنَد · المصدر غير معروف</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">لا يوجد تعبئة تجارية للتبادل تكون بمثابة دليل على هذا الحجز.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">السجل المشتق من التراث الذي لا يوجد فيه أي تعبئة تجارية في البورصة بمثابة دليل.</string>
+    <string name="common_yes" formatted="false">نعم</string>
+    <string name="common_no" formatted="false">لا</string>
+    <string name="settings_role_ai_reviewer" formatted="false">مراجع الذكاء الاصطناعي</string>
+    <string name="settings_role_ai_researcher" formatted="false">باحث الذكاء الاصطناعي</string>
+    <string name="process_role_core" formatted="false">أساسي</string>
+    <string name="process_role_task" formatted="false">مهمة</string>
+    <string name="records_status_submitted" formatted="false">تم الإرسال</string>
+    <string name="system_status_ready" formatted="false">جاهز</string>
+    <string name="system_status_degraded" formatted="false">أداء متراجع</string>
+    <string name="market_instrument_kind_spot" formatted="false">فوري</string>
+    <string name="market_instrument_kind_perpetual" formatted="false">عقد دائم</string>
+    <string name="market_instrument_kind_future" formatted="false">عقد مستقبلي</string>
+    <string name="market_instrument_kind_etf" formatted="false">ETF</string>
+    <string name="market_instrument_kind_option" formatted="false">خيار</string>
+    <string name="venue_accounts_valuation_native_only" formatted="false">بالعملات الأصلية فقط</string>
+    <string name="venue_accounts_status_unobserved" formatted="false">لم يُرصد بعد</string>
+    <string name="pnl_execution_history_as_recorded" formatted="false">كما سُجّل</string>
+    <string name="pnl_execution_history_operator_corrected" formatted="false">صحّحه المشغّل</string>
+    <string name="ai_reviews_status_approved" formatted="false">موافق عليه</string>
+    <string name="ai_reviews_status_rejected" formatted="false">مرفوض</string>
+    <string name="venue_accounts_evaluation_matched" formatted="false">متطابق</string>
+    <string name="venue_accounts_evaluation_mismatched" formatted="false">غير متطابق</string>
+    <string name="venue_accounts_evaluation_incomplete" formatted="false">غير مكتمل</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">القيم الخام من المنصة</string>
+    <string name="venue_accounts_numeric_source_legacy_float" formatted="false">قيم فاصلة عائمة قديمة</string>
 </resources>

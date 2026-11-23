@@ -6,10 +6,12 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import ch.snapper.android.AppActions
 import ch.snapper.android.AppUiState
+import ch.snapper.android.R
 import ch.snapper.android.data.*
 import ch.snapper.android.features.home.HomeState
 import ch.snapper.android.features.live.LiveConnectionStatus
@@ -54,7 +56,9 @@ class HomeScreenUiTest {
         )
         var openedAiReviews = 0
         val actions = AppActions({ _, _ -> }, {}, {}, {}, {}, {}, {}, { _, _, _ -> })
+        var runningLabel = ""
         compose.setContent {
+            runningLabel = stringResource(R.string.system_running)
             CompositionLocalProvider(LocalNumberLocale provides Locale.ROOT, LocalDisplayTimeZone provides ZoneOffset.UTC) {
                 SnapperTheme {
                     Column(Modifier.verticalScroll(rememberScrollState())) {
@@ -65,7 +69,7 @@ class HomeScreenUiTest {
         }
         compose.onNodeWithTag("home.connection").assertTextContains("Connected · 3 seconds ago")
         compose.onNodeWithTag("home.latestAlert").assertTextContains("Order filled")
-        compose.onNodeWithTag("home.traderStatus").assertTextContains("running")
+        compose.onNodeWithTag("home.traderStatus").assertTextContains(runningLabel)
         compose.onNodeWithTag("home.aiReviews.pendingCount").assertTextEquals("4")
         compose.onNodeWithTag("home.aiReviews").performScrollTo().performClick()
         compose.runOnIdle { assertEquals(1, openedAiReviews) }

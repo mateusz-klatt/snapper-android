@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="privacy_policy" formatted="false">Privacy policy</string>
+    <string name="privacy_policy" formatted="false">Politique de confidentialité</string>
     <string name="username" formatted="false">Nom d\'utilisateur</string>
     <string name="password" formatted="false">Mot de passe</string>
     <string name="sign_in" formatted="false">Se connecter</string>
-    <string name="session_retention_notice" formatted="false">Staying signed in requires Android 11+, a secure screen lock, and authentication with your PIN, pattern, password or strong biometrics within the last 5 minutes. Otherwise, sign in again after the app restarts.</string>
+    <string name="session_retention_notice" formatted="false">Pour rester connecté, vous devez disposer d’Android 11 ou ultérieur, d’un verrouillage sécurisé de l’écran et vous être authentifié par code PIN, schéma, mot de passe ou biométrie forte au cours des 5 dernières minutes. Sinon, reconnectez-vous après le redémarrage de l’application.</string>
     <string name="subtitle" formatted="false">Plateforme de trading</string>
     <string name="backend" formatted="false">URL de backend personnalisée</string>
     <string name="language" formatted="false">Langue</string>
@@ -25,10 +25,10 @@
     <string name="filled" formatted="false">Exécuté</string>
     <string name="status" formatted="false">Statut</string>
     <string name="side" formatted="false">Sens</string>
-    <string name="open" formatted="false">Open</string>
-    <string name="high" formatted="false">High</string>
-    <string name="low" formatted="false">Low</string>
-    <string name="close" formatted="false">Close</string>
+    <string name="open" formatted="false">Ouverture</string>
+    <string name="high" formatted="false">Plus haut</string>
+    <string name="low" formatted="false">Plus bas</string>
+    <string name="close" formatted="false">Clôture</string>
     <string name="volume" formatted="false">Volume</string>
     <string name="timeframe" formatted="false">Intervalle</string>
     <string name="no_candles" formatted="false">Aucune bougie pour l\'instant</string>
@@ -37,32 +37,32 @@
     <string name="alerts" formatted="false">Alertes</string>
     <string name="settings" formatted="false">Réglages</string>
     <string name="save" formatted="false">Enregistrer</string>
-    <string name="refresh" formatted="false">Refresh</string>
+    <string name="refresh" formatted="false">Actualiser</string>
     <string name="exchange" formatted="false">Bourse</string>
-    <string name="load_market" formatted="false">Load candles</string>
-    <string name="empty" formatted="false">No records available.</string>
-    <string name="snapshot_note" formatted="false">Snapshot data. Refresh to retrieve the latest available records.</string>
-    <string name="chart_description" formatted="false">Historical candle chart. Exact values are listed below.</string>
-    <string name="error_origin" formatted="false">Enter a valid HTTPS backend origin.</string>
-    <string name="error_credentials" formatted="false">The username or password is incorrect.</string>
-    <string name="error_session" formatted="false">Your session expired. Please sign in again.</string>
-    <string name="error_network" formatted="false">Could not reach the backend. Check your connection and try again.</string>
-    <string name="error_service" formatted="false">The backend could not complete this request. Please try again.</string>
-    <string name="error_unknown" formatted="false">Something went wrong. Please try again.</string>
+    <string name="load_market" formatted="false">Charger les bougies</string>
+    <string name="empty" formatted="false">Aucun enregistrement disponible.</string>
+    <string name="snapshot_note" formatted="false">Données instantanées. Actualisez pour récupérer les derniers enregistrements disponibles.</string>
+    <string name="chart_description" formatted="false">Graphique historique en bougies. Les valeurs exactes figurent ci-dessous.</string>
+    <string name="error_origin" formatted="false">Saisissez une adresse de backend HTTPS valide.</string>
+    <string name="error_credentials" formatted="false">Le nom d’utilisateur ou le mot de passe est incorrect.</string>
+    <string name="error_session" formatted="false">Votre session a expiré. Veuillez vous reconnecter.</string>
+    <string name="error_network" formatted="false">Impossible de joindre le backend. Vérifiez votre connexion et réessayez.</string>
+    <string name="error_service" formatted="false">Le backend n’a pas pu traiter cette demande. Veuillez réessayer.</string>
+    <string name="error_unknown" formatted="false">Une erreur est survenue. Veuillez réessayer.</string>
     <string name="dismiss" formatted="false">Ignorer</string>
     <string name="paper" formatted="false">Démo</string>
-    <string name="safety_critical" formatted="false">Safety critical</string>
-    <string name="snapshot_limit" formatted="false">This view shows current positions and up to 100 recent orders and alerts; it is not a complete history.</string>
-    <string name="chart_window" formatted="false">The chart shows the last 100 retrieved candles.</string>
-    <string name="local_network_explanation" formatted="false">For a backend on your local network, allow local network access before signing in. Public internet backends do not need this permission.</string>
-    <string name="local_network_allow" formatted="false">Allow local network</string>
-    <string name="local_network_settings" formatted="false">Open app settings</string>
-    <string name="order_new" formatted="false">New Order</string>
-    <string name="order_entry" formatted="false">New Manual Order</string>
-    <string name="order_confirm" formatted="false">Confirm Order</string>
+    <string name="safety_critical" formatted="false">Critique pour la sécurité</string>
+    <string name="snapshot_limit" formatted="false">Cette vue affiche les positions actuelles et jusqu’à 100 ordres et alertes récents ; ce n’est pas un historique complet.</string>
+    <string name="chart_window" formatted="false">Le graphique affiche les 100 dernières bougies récupérées.</string>
+    <string name="local_network_explanation" formatted="false">Pour un backend sur votre réseau local, autorisez l’accès au réseau local avant de vous connecter. Les backends sur Internet public ne nécessitent pas cette autorisation.</string>
+    <string name="local_network_allow" formatted="false">Autoriser le réseau local</string>
+    <string name="local_network_settings" formatted="false">Ouvrir les paramètres de l’application</string>
+    <string name="order_new" formatted="false">Nouvel ordre</string>
+    <string name="order_entry" formatted="false">Nouvel ordre manuel</string>
+    <string name="order_confirm" formatted="false">Confirmer l’ordre</string>
     <string name="order_quantity" formatted="false">Quantité</string>
-    <string name="order_type" formatted="false">Order Type</string>
-    <string name="order_stop_price" formatted="false">Stop Price</string>
+    <string name="order_type" formatted="false">Type d’ordre</string>
+    <string name="order_stop_price" formatted="false">Prix stop</string>
     <string name="order_mode" formatted="false">Mode</string>
     <string name="order_buy" formatted="false">Achat</string>
     <string name="order_sell" formatted="false">Vente</string>
@@ -70,35 +70,35 @@
     <string name="order_limit" formatted="false">Limite</string>
     <string name="order_stop" formatted="false">Stop</string>
     <string name="order_stop_limit" formatted="false">Stop Limit</string>
-    <string name="order_live" formatted="false">Live</string>
-    <string name="order_review" formatted="false">Review Order</string>
-    <string name="order_back" formatted="false">Back</string>
-    <string name="order_submit" formatted="false">Confirm Order</string>
-    <string name="order_submitting" formatted="false">Submitting…</string>
+    <string name="order_live" formatted="false">Réel</string>
+    <string name="order_review" formatted="false">Vérifier l’ordre</string>
+    <string name="order_back" formatted="false">Retour</string>
+    <string name="order_submit" formatted="false">Confirmer l’ordre</string>
+    <string name="order_submitting" formatted="false">Envoi en cours…</string>
     <string name="order_leverage" formatted="false">Levier</string>
-    <string name="order_reduce_only" formatted="false">Reduce Only</string>
-    <string name="order_observation_only" formatted="false">This instrument is observation-only — place orders on an execution-capable instrument.</string>
-    <string name="order_unknown_instrument" formatted="false">This instrument is not recognised. Reload the list and try again.</string>
-    <string name="order_caps_violation" formatted="false">This order would exceed your account safety caps. Review your risk settings and retry.</string>
-    <string name="order_rejected" formatted="false">Order creation failed</string>
+    <string name="order_reduce_only" formatted="false">Réduction uniquement</string>
+    <string name="order_observation_only" formatted="false">Cet instrument est uniquement consultable — passez vos ordres sur un instrument permettant l’exécution.</string>
+    <string name="order_unknown_instrument" formatted="false">Cet instrument n’est pas reconnu. Rechargez la liste et réessayez.</string>
+    <string name="order_caps_violation" formatted="false">Cet ordre dépasserait les limites de sécurité de votre compte. Vérifiez vos paramètres de risque et réessayez.</string>
+    <string name="order_rejected" formatted="false">Échec de la création de l’ordre</string>
     <string name="order_cancel_title" formatted="false">Annuler l\'ordre ?</string>
     <string name="order_cancel_confirm" formatted="false">Annuler l\'ordre</string>
     <string name="order_keep_open" formatted="false">Conserver l\'ordre</string>
-    <string name="order_select_wallet" formatted="false">Select a wallet on Home before placing an order.</string>
-    <string name="order_created" formatted="false">Order submitted. Refresh to check execution status.</string>
-    <string name="order_cancel_requested" formatted="false">Cancellation requested. Refresh to check the order status.</string>
-    <string name="order_unknown_outcome" formatted="false">The request outcome is unknown. Check status before taking further action.</string>
-    <string name="order_check_status" formatted="false">Check status</string>
-    <string name="order_retry_intent" formatted="false">Retry same order</string>
-    <string name="order_catalog_error" formatted="false">Could not load exchanges or instruments. Try again.</string>
-    <string name="order_no_instruments" formatted="false">No instruments available for this exchange.</string>
-    <string name="order_invalid_form" formatted="false">Enter positive quantities and required prices. Optional leverage must be a positive whole number.</string>
-    <string name="order_refresh_failed" formatted="false">The request was accepted, but the latest records could not be loaded. Refresh to check status.</string>
-    <string name="order_forbidden" formatted="false">You no longer have permission for this action.</string>
-    <string name="order_session_changed" formatted="false">The session or wallet changed. Open a new order from the current account.</string>
-    <string name="order_enabled" formatted="false">Enabled</string>
-    <string name="order_disabled" formatted="false">Disabled</string>
-    <string name="system_tools" formatted="false">Overview</string>
+    <string name="order_select_wallet" formatted="false">Sélectionnez un portefeuille dans l’accueil avant de passer un ordre.</string>
+    <string name="order_created" formatted="false">Ordre envoyé. Actualisez pour vérifier l’état d’exécution.</string>
+    <string name="order_cancel_requested" formatted="false">Annulation demandée. Actualisez pour vérifier l’état de l’ordre.</string>
+    <string name="order_unknown_outcome" formatted="false">Le résultat de la demande est inconnu. Vérifiez son état avant toute autre action.</string>
+    <string name="order_check_status" formatted="false">Vérifier l’état</string>
+    <string name="order_retry_intent" formatted="false">Réessayer le même ordre</string>
+    <string name="order_catalog_error" formatted="false">Impossible de charger les plateformes ou les instruments. Réessayez.</string>
+    <string name="order_no_instruments" formatted="false">Aucun instrument disponible pour cette plateforme.</string>
+    <string name="order_invalid_form" formatted="false">Saisissez des quantités positives et les prix requis. Le levier facultatif doit être un entier positif.</string>
+    <string name="order_refresh_failed" formatted="false">La demande a été acceptée, mais les derniers enregistrements n’ont pas pu être chargés. Actualisez pour vérifier l’état.</string>
+    <string name="order_forbidden" formatted="false">Vous n’avez plus l’autorisation d’effectuer cette action.</string>
+    <string name="order_session_changed" formatted="false">La session ou le portefeuille a changé. Ouvrez un nouvel ordre depuis le compte actuel.</string>
+    <string name="order_enabled" formatted="false">Activé</string>
+    <string name="order_disabled" formatted="false">Désactivé</string>
+    <string name="system_tools" formatted="false">Vue d’ensemble</string>
     <string name="desk_attach_button" formatted="false">Ajouter un observateur</string>
     <string name="desk_attach_desk_label" formatted="false">Desk</string>
     <string name="desk_nav_title" formatted="false">Mes desks</string>
@@ -157,24 +157,24 @@
     <string name="system_active" formatted="false">Actif</string>
     <string name="system_inactive" formatted="false">Inactif</string>
     <string name="system_revoked" formatted="false">Révoqué</string>
-    <string name="records_open" formatted="false">Open</string>
+    <string name="records_open" formatted="false">Ouverts</string>
     <string name="records_recent" formatted="false">Récents</string>
     <string name="records_fills" formatted="false">Exécutions</string>
-    <string name="records_refresh" formatted="false">Refresh</string>
-    <string name="records_fee" formatted="false">Fee</string>
-    <string name="records_details" formatted="false">Details</string>
-    <string name="records_hide_details" formatted="false">\@string/close</string>
+    <string name="records_refresh" formatted="false">Actualiser</string>
+    <string name="records_fee" formatted="false">Frais</string>
+    <string name="records_details" formatted="false">Détails</string>
+    <string name="records_hide_details" formatted="false">Fermer</string>
     <string name="records_thread" formatted="false">Fil</string>
     <string name="records_source_topic" formatted="false">Sujet source</string>
     <string name="notification_defaults_title" formatted="false">Valeurs par défaut de l\'utilisateur</string>
     <string name="notification_defaults_footer" formatted="false">Les valeurs par défaut s\'appliquent lorsqu\'aucune exception par appareil ne correspond à une alerte entrante.</string>
-    <string name="notification_defaults_enabled" formatted="false">Enabled</string>
+    <string name="notification_defaults_enabled" formatted="false">Activé</string>
     <string name="notification_defaults_priority" formatted="false">Priorité minimale</string>
     <string name="notification_defaults_load_failed" formatted="false">Échec du chargement des préférences</string>
     <string name="notification_defaults_save_failed" formatted="false">Échec de l\'enregistrement des préférences</string>
-    <string name="notification_defaults_low" formatted="false">Low</string>
+    <string name="notification_defaults_low" formatted="false">Faible</string>
     <string name="notification_defaults_medium" formatted="false">Moyenne</string>
-    <string name="notification_defaults_high" formatted="false">High</string>
+    <string name="notification_defaults_high" formatted="false">Élevée</string>
     <string name="notification_defaults_fill" formatted="false">Ordre exécuté</string>
     <string name="notification_defaults_rejected" formatted="false">Ordre rejeté</string>
     <string name="notification_defaults_stop" formatted="false">Stop loss déclenché</string>
@@ -199,23 +199,23 @@
     <string name="signals_export" formatted="false">Exporter</string>
     <string name="signals_export_failed" formatted="false">Échec de l\'envoi</string>
     <string name="venue_accounts_title" formatted="false">Comptes de la plateforme</string>
-    <string name="venue_accounts_refresh" formatted="false">Refresh</string>
+    <string name="venue_accounts_refresh" formatted="false">Actualiser</string>
     <string name="venue_accounts_failed" formatted="false">Impossible de charger l\'état du compte de la plateforme. Le compte n\'est pas vide ; les données sont simplement indisponibles pour le moment.</string>
     <string name="venue_accounts_authoritative" formatted="false">Données fiables de la plateforme en temps réel, observées pendant la fenêtre d’autorité.</string>
     <string name="venue_accounts_not_authoritative" formatted="false">Les lignes qui ne sont pas marquées En direct affichent les dernières données connues, simulées ou indisponibles — jamais des soldes officiels de la plateforme en temps réel.</string>
-    <string name="venue_accounts_valuation" formatted="false">Valuation</string>
+    <string name="venue_accounts_valuation" formatted="false">Valorisation</string>
     <string name="venue_accounts_balances" formatted="false">Soldes</string>
-    <string name="venue_accounts_observed" formatted="false">Observed at</string>
-    <string name="venue_accounts_source" formatted="false">Source observation</string>
+    <string name="venue_accounts_observed" formatted="false">Observé le</string>
+    <string name="venue_accounts_source" formatted="false">Observation source</string>
     <string name="venue_accounts_total" formatted="false">Total</string>
     <string name="venue_accounts_free" formatted="false">Disponible</string>
     <string name="venue_accounts_used" formatted="false">Utilisé</string>
-    <string name="venue_accounts_numeric_source" formatted="false">Numeric provenance</string>
+    <string name="venue_accounts_numeric_source" formatted="false">Provenance des valeurs numériques</string>
     <string name="venue_accounts_positions" formatted="false">Positions ouvertes</string>
     <string name="venue_accounts_funding" formatted="false">Financement</string>
-    <string name="venue_accounts_reconciliation" formatted="false">Reconciliation status</string>
-    <string name="venue_accounts_evaluation" formatted="false">Evaluation status</string>
-    <string name="venue_accounts_deadline" formatted="false">Authority deadline</string>
+    <string name="venue_accounts_reconciliation" formatted="false">État du rapprochement</string>
+    <string name="venue_accounts_evaluation" formatted="false">État de l’évaluation</string>
+    <string name="venue_accounts_deadline" formatted="false">Fin de validité</string>
     <string name="positions_timeline_controls_window" formatted="false">Période</string>
     <string name="positions_timeline_controls_granularity" formatted="false">Granularité</string>
     <string name="positions_timeline_controls_valuationcurrency" formatted="false">Devise de valorisation</string>
@@ -228,11 +228,11 @@
     <string name="positions_timeline_nowallet_message" formatted="false">Choisissez un wallet pour afficher la chronologie de son P&amp;L.</string>
     <string name="positions_timeline_incompleteness_title" formatted="false">Pourquoi certains points sont incomplets</string>
     <string name="positions_timeline_incompleteness_description" formatted="false">Les motifs couvrent toute la période chargée. Un même point peut être comptabilisé plusieurs fois s\'il a plusieurs causes.</string>
-    <string name="positions_timeline_incompleteness_affectedpoints">Affected points: %1$s</string>
+    <string name="positions_timeline_incompleteness_affectedpoints">Points concernés : %1$s</string>
     <string name="positions_timeline_chart_title" formatted="false">Évolution du P&amp;L</string>
     <string name="positions_timeline_chart_net" formatted="false">P&amp;L net</string>
     <string name="positions_timeline_chart_realized" formatted="false">P&amp;L réalisé</string>
-    <string name="positions_timeline_chart_unrealized" formatted="false">Unrealized P&amp;L</string>
+    <string name="positions_timeline_chart_unrealized" formatted="false">P&amp;L non réalisé</string>
     <string name="positions_timeline_attribution_title" formatted="false">Dernière attribution du P&amp;L</string>
     <string name="positions_timeline_attribution_nostrategy" formatted="false">Aucune stratégie vérifiable</string>
     <string name="positions_timeline_attribution_withheld" formatted="false">Non vérifiable</string>
@@ -241,7 +241,7 @@
     <string name="positions_timeline_contributions_realized" formatted="false">P&amp;L réalisé</string>
     <string name="positions_timeline_contributions_fees" formatted="false">Frais</string>
     <string name="positions_timeline_contributions_accrual" formatted="false">Funding couru</string>
-    <string name="positions_timeline_contributions_unrealized" formatted="false">Unrealized P&amp;L</string>
+    <string name="positions_timeline_contributions_unrealized" formatted="false">P&amp;L non réalisé</string>
     <string name="positions_timeline_incompleteness_reasons_scope_order_regression" formatted="false">Régression dans l\'ordre du scope</string>
     <string name="positions_timeline_incompleteness_reasons_before_activation" formatted="false">Le point précède l\'activation</string>
     <string name="positions_timeline_incompleteness_reasons_activation_baseline_non_finite" formatted="false">Valeur de référence d\'activation non finie</string>
@@ -260,26 +260,26 @@
     <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">Échec du rapprochement de l\'attribution</string>
     <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">Échec du rapprochement des totaux de P&amp;L par instrument avec le P&amp;L global</string>
     <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">Exécution d’ordre antérieure à l’activation reçue tardivement</string>
-    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Attribution sum is not representable</string>
-    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Instrument sum is not representable</string>
-    <string name="positions_timeline_executionhistory_title" formatted="false">Operator-corrected execution history</string>
-    <string name="positions_timeline_executionhistory_summary" formatted="false">An operator repudiated recorded executions in this scope. Every correction listed here is excluded from the figures on this page.</string>
-    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Repudiated execution</string>
-    <string name="positions_timeline_executionhistory_correctionid" formatted="false">Correction record</string>
-    <string name="positions_timeline_equity_title" formatted="false">Equity overlay</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">La somme des attributions n’est pas représentable</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">La somme des instruments n’est pas représentable</string>
+    <string name="positions_timeline_executionhistory_title" formatted="false">Historique d’exécution corrigé par un opérateur</string>
+    <string name="positions_timeline_executionhistory_summary" formatted="false">Un opérateur a invalidé des exécutions enregistrées dans ce périmètre. Toutes les corrections indiquées ici sont exclues des chiffres de cette page.</string>
+    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Exécution invalidée</string>
+    <string name="positions_timeline_executionhistory_correctionid" formatted="false">Enregistrement de correction</string>
+    <string name="positions_timeline_equity_title" formatted="false">Superposition des capitaux propres</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">Capitaux propres</string>
-    <string name="positions_timeline_equity_drawdown_current" formatted="false">Current drawdown</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Spot venue only — balances held on other venues are excluded.</string>
-    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">External deposits and withdrawals are not adjusted out.</string>
-    <string name="positions_timeline_equity_honesty_restatedfrom">These figures are restated from %1$s at each minute\'s close, not sampled natively in this currency.</string>
-    <string name="positions_timeline_equity_honesty_pricedon">Priced on %1$s.</string>
-    <string name="positions_timeline_equity_honesty_conversionwithheld">Minutes dropped for want of a proven close: %1$s.</string>
-    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Drawdown is withheld on a converted basis, because the running peak is tracked in the sampled currency.</string>
-    <string name="positions_timeline_equity_cashposition_position" formatted="false">Position value</string>
-    <string name="positions_timeline_equity_cashposition_cash" formatted="false">Cash</string>
-    <string name="pnl_provenance">Calculation: %1$s · Mark source: %2$s · As of: %3$s</string>
-    <string name="pnl_equity_coverage">Equity sampled: %1$s · Complete minutes: %2$s</string>
-    <string name="pnl_execution_history">Execution history: %1$s</string>
+    <string name="positions_timeline_equity_drawdown_current" formatted="false">Repli actuel</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Plateforme au comptant uniquement — les soldes détenus sur d’autres plateformes sont exclus.</string>
+    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Les dépôts et retraits externes ne sont pas neutralisés.</string>
+    <string name="positions_timeline_equity_honesty_restatedfrom">Ces chiffres sont recalculés à partir de %1$s à la clôture de chaque minute, et non relevés directement dans cette devise.</string>
+    <string name="positions_timeline_equity_honesty_pricedon">Valorisé sur %1$s.</string>
+    <string name="positions_timeline_equity_honesty_conversionwithheld">Minutes exclues faute de cours de clôture vérifié : %1$s.</string>
+    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Le repli n’est pas affiché après conversion, car le pic cumulé est suivi dans la devise des relevés.</string>
+    <string name="positions_timeline_equity_cashposition_position" formatted="false">Valeur de la position</string>
+    <string name="positions_timeline_equity_cashposition_cash" formatted="false">Liquidités</string>
+    <string name="pnl_provenance">Calcul : %1$s · Source du prix de référence : %2$s · Au : %3$s</string>
+    <string name="pnl_equity_coverage">Capitaux propres relevés : %1$s · Minutes complètes : %2$s</string>
+    <string name="pnl_execution_history">Historique d’exécution : %1$s</string>
     <string name="process_title" formatted="false">Processus</string>
     <string name="process_running" formatted="false">En cours</string>
     <string name="process_stopped" formatted="false">Arrêté</string>
@@ -291,22 +291,22 @@
     <string name="process_cpu" formatted="false">CPU</string>
     <string name="process_empty" formatted="false">Aucun processus configuré.</string>
     <string name="process_start" formatted="false">Démarrer</string>
-    <string name="process_stop" formatted="false">Stop</string>
+    <string name="process_stop" formatted="false">Arrêter</string>
     <string name="process_restart" formatted="false">Redémarrer</string>
     <string name="process_cancel" formatted="false">Annuler</string>
     <string name="process_stale" formatted="false">Ce processus ne peut plus être contrôlé depuis cet écran. Actualisez les données et réessayez.</string>
     <string name="process_partial" formatted="false">Le processus a été arrêté, mais ne peut plus être redémarré depuis cet écran. Actualisez les données et réessayez.</string>
-    <string name="process_confirm" formatted="false">Confirm process action</string>
-    <string name="process_confirm_message" formatted="false">Apply this action to the selected process?</string>
-    <string name="process_intent_saved" formatted="false">Desired state saved. The owning coordinator will apply it.</string>
-    <string name="process_accepted" formatted="false">Process action accepted.</string>
-    <string name="process_unknown" formatted="false">The command outcome is unknown. Controls remain locked: a status refresh cannot prove whether this command was applied.</string>
-    <string name="process_partial_unknown" formatted="false">The process was stopped, but the restart outcome is unknown. Controls remain locked: a status refresh cannot prove whether the restart was applied.</string>
-    <string name="process_rejected" formatted="false">The process action failed.</string>
-    <string name="process_load_failed" formatted="false">Could not refresh process status.</string>
-    <string name="process_config_failed" formatted="false">Process controls are unavailable because configuration could not be refreshed.</string>
-    <string name="process_enable" formatted="false">Enable</string>
-    <string name="process_disable" formatted="false">Disable</string>
+    <string name="process_confirm" formatted="false">Confirmer l’action sur le processus</string>
+    <string name="process_confirm_message" formatted="false">Appliquer cette action au processus sélectionné ?</string>
+    <string name="process_intent_saved" formatted="false">État souhaité enregistré. Le coordinateur responsable l’appliquera.</string>
+    <string name="process_accepted" formatted="false">Action sur le processus acceptée.</string>
+    <string name="process_unknown" formatted="false">Le résultat de la commande est inconnu. Les commandes restent verrouillées : une actualisation de l’état ne permet pas de prouver si cette commande a été appliquée.</string>
+    <string name="process_partial_unknown" formatted="false">Le processus a été arrêté, mais le résultat du redémarrage est inconnu. Les commandes restent verrouillées : une actualisation de l’état ne permet pas de prouver si le redémarrage a été effectué.</string>
+    <string name="process_rejected" formatted="false">L’action sur le processus a échoué.</string>
+    <string name="process_load_failed" formatted="false">Impossible d’actualiser l’état du processus.</string>
+    <string name="process_config_failed" formatted="false">Les commandes du processus sont indisponibles, car la configuration n’a pas pu être actualisée.</string>
+    <string name="process_enable" formatted="false">Activer</string>
+    <string name="process_disable" formatted="false">Désactiver</string>
     <string name="ai_reviews_pending_title" formatted="false">Revues en attente</string>
     <string name="ai_reviews_decisions_title" formatted="false">Décisions AI</string>
     <string name="ai_reviews_deadline" formatted="false">Échéance</string>
@@ -324,13 +324,13 @@
     <string name="ai_reviews_expired_message" formatted="false">Cette revue a dépassé son échéance et a expiré.</string>
     <string name="ai_reviews_missing" formatted="false">Cette revue n\'existe plus.</string>
     <string name="ai_reviews_denied" formatted="false">Votre accès de délégué a changé. Rechargez avant de décider.</string>
-    <string name="ai_reviews_load_failed" formatted="false">Could not refresh reviews. Previously loaded reviews remain visible.</string>
-    <string name="ai_reviews_check_status" formatted="false">Check status</string>
-    <string name="ai_reviews_retry" formatted="false">Retry original decision</string>
-    <string name="ai_reviews_confirm" formatted="false">Confirm review decision</string>
-    <string name="ai_reviews_accepted" formatted="false">Decision accepted</string>
-    <string name="ai_reviews_rejected" formatted="false">Decision rejected by the server</string>
-    <string name="ai_reviews_unknown" formatted="false">Outcome unknown. Check status before retrying.</string>
+    <string name="ai_reviews_load_failed" formatted="false">Impossible d’actualiser les examens. Les examens déjà chargés restent visibles.</string>
+    <string name="ai_reviews_check_status" formatted="false">Vérifier l’état</string>
+    <string name="ai_reviews_retry" formatted="false">Réessayer la décision initiale</string>
+    <string name="ai_reviews_confirm" formatted="false">Confirmer la décision de l’examen</string>
+    <string name="ai_reviews_accepted" formatted="false">Décision acceptée</string>
+    <string name="ai_reviews_rejected" formatted="false">Décision rejetée par le serveur</string>
+    <string name="ai_reviews_unknown" formatted="false">Résultat inconnu. Vérifiez l’état avant de réessayer.</string>
     <string name="positions_accessibility_label_closebutton" formatted="false">Clôturer la position</string>
     <string name="positions_accessibility_label_reducebutton" formatted="false">Réduire la position</string>
     <string name="positions_reduce_cancel" formatted="false">Annuler</string>
@@ -341,13 +341,13 @@
     <string name="trading_bracket_takeprofitlabel" formatted="false">Take profit</string>
     <string name="trading_trailingstop_attach" formatted="false">Ajouter un trailing stop</string>
     <string name="trading_trailingstop_trailamountlabel" formatted="false">Distance de suivi</string>
-    <string name="position_action_review" formatted="false">Review position action</string>
-    <string name="position_action_confirm" formatted="false">Confirm action</string>
-    <string name="position_action_accepted" formatted="false">Request accepted. Refresh to check execution status.</string>
-    <string name="position_action_retry" formatted="false">Retry same request</string>
-    <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
-    <string name="position_action_cycle" formatted="false">Position cycle</string>
-    <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+    <string name="position_action_review" formatted="false">Vérifier l’action sur la position</string>
+    <string name="position_action_confirm" formatted="false">Confirmer l’action</string>
+    <string name="position_action_accepted" formatted="false">Demande acceptée. Actualisez pour vérifier l’état d’exécution.</string>
+    <string name="position_action_retry" formatted="false">Réessayer la même demande</string>
+    <string name="position_action_minimum_lock" formatted="false">Gain minimal verrouillé (%)</string>
+    <string name="position_action_cycle" formatted="false">Cycle de la position</string>
+    <string name="position_action_invalid" formatted="false">Vérifiez les valeurs saisies avant de continuer.</string>
     <string name="display_financial_title" formatted="false">Code couleur financier</string>
     <string name="display_financial_auto" formatted="false">Selon ma région (auto)</string>
     <string name="display_financial_green" formatted="false">Vert = hausse, rouge = baisse (occidental)</string>
@@ -355,17 +355,17 @@
     <string name="display_financial_current">Actuellement : %1$s</string>
     <string name="display_financial_green_short" formatted="false">vert hausse / rouge baisse</string>
     <string name="display_financial_red_short" formatted="false">rouge hausse / vert baisse</string>
-    <string name="display_country" formatted="false">Country / region</string>
+    <string name="display_country" formatted="false">Pays / région</string>
     <string name="market_context_last" formatted="false">Dernier prix</string>
     <string name="market_context_change" formatted="false">Variation sur 24 h</string>
     <string name="market_context_high" formatted="false">Plus haut</string>
     <string name="market_context_low" formatted="false">Plus bas</string>
     <string name="market_context_related_empty">Aucun instrument associé configuré pour %1$s sur %2$s.</string>
-    <string name="market_live_connected" formatted="false">Live updates connected.</string>
-    <string name="market_live_connecting" formatted="false">Connecting to live updates…</string>
-    <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
-    <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
-    <string name="market_context_as_of">Cached close as of %1$s</string>
+    <string name="market_live_connected" formatted="false">Mises à jour en direct connectées.</string>
+    <string name="market_live_connecting" formatted="false">Connexion aux mises à jour en direct…</string>
+    <string name="market_live_unavailable" formatted="false">Mises à jour en direct indisponibles ; affichage des instantanés.</string>
+    <string name="market_snapshot_mode" formatted="false">Mode instantané</string>
+    <string name="market_context_as_of">Clôture en cache au %1$s</string>
     <string name="market_cachebanner_message">Préchauffage du cache : %1$s / %2$s bougies disponibles %3$s</string>
     <string name="market_cachebanner_sources_cache" formatted="false"></string>
     <string name="market_cachebanner_sources_db" formatted="false">(depuis la base de données)</string>
@@ -373,37 +373,37 @@
     <string name="market_pairstats_chiparialabel">Statistiques de paire avec %1$s sur %2$s : Pearson %3$s, valeur p %4$s</string>
     <string name="market_pairstats_label" formatted="false">Cointégration :</string>
     <string name="market_pairstats_metric">ρ %1$s · p %2$s</string>
-    <string name="market_pair_status_cold" formatted="false">Warming up</string>
-    <string name="market_pair_status_cointegrated" formatted="false">Cointegrated</string>
-    <string name="market_pair_status_warm" formatted="false">Warm</string>
+    <string name="market_pair_status_cold" formatted="false">Préchauffage</string>
+    <string name="market_pair_status_cointegrated" formatted="false">Cointégré</string>
+    <string name="market_pair_status_warm" formatted="false">Préchauffé</string>
     <string name="positions_timeline_chart_valuationcurrency">Devise de valorisation : %1$s</string>
-    <string name="account_language_syncing">Saving your language choice to your backend account…</string>
-    <string name="account_language_confirmed">Backend account language confirmed: %1$s</string>
-    <string name="account_language_uncertain">The backend account language could not be confirmed. Your local language choice is unchanged.</string>
-    <string name="account_language_retry">Retry language sync</string>
+    <string name="account_language_syncing">Enregistrement de votre langue dans votre compte backend…</string>
+    <string name="account_language_confirmed">Langue du compte backend confirmée : %1$s</string>
+    <string name="account_language_uncertain">La langue du compte backend n’a pas pu être confirmée. Votre choix de langue local reste inchangé.</string>
+    <string name="account_language_retry">Réessayer la synchronisation de la langue</string>
     <string name="backtests_status_pending">En attente</string>
     <string name="backtests_status_running">En cours</string>
     <string name="backtests_status_completed">Terminé</string>
     <string name="backtests_status_failed">Échoué</string>
     <string name="backtests_status_cancelled">Annulé</string>
     <string name="backtests_status_unknown">Inconnu</string>
-    <string name="push_title">Snapper updates</string>
-    <string name="push_generic">Open Snapper to view updates</string>
-    <string name="push_privacy">Notifications show only a generic invitation. Open the app and sign in to view authorized details. Enabling push sends an installation identifier to Google and your configured backend.</string>
-    <string name="push_enable">Enable notifications</string>
-    <string name="push_disable">Disable notifications</string>
-    <string name="push_check">Check registration status</string>
-    <string name="push_off">Notifications are off.</string>
-    <string name="push_busy">Updating notification registration…</string>
-    <string name="push_unavailable">Push is unavailable for this backend.</string>
-    <string name="push_permission">Allow Android notifications to enable push.</string>
-    <string name="push_ready">Push is available. Enable it to register this installation.</string>
-    <string name="push_accepted">Notification registration confirmed. Delivery depends on your backend and device.</string>
-    <string name="push_rejected">Registration was not completed. You can try again explicitly.</string>
-    <string name="push_uncertain">Registration could not be confirmed. Check status before another registration.</string>
-    <string name="push_restart">Close and reopen the app before activating a different Firebase configuration.</string>
-    <string name="push_close">Close</string>
-    <string name="push_cleanup">Local notifications are off. Remote cleanup is pending; disable again while signed in to retry.</string>
+    <string name="push_title">Actualités Snapper</string>
+    <string name="push_generic">Ouvrez Snapper pour consulter les actualités</string>
+    <string name="push_privacy">Les notifications affichent uniquement une invitation générique. Ouvrez l’application et connectez-vous pour voir les détails autorisés. L’activation des notifications push envoie un identifiant d’installation à Google et à votre backend configuré.</string>
+    <string name="push_enable">Activer les notifications</string>
+    <string name="push_disable">Désactiver les notifications</string>
+    <string name="push_check">Vérifier l’état de l’inscription</string>
+    <string name="push_off">Les notifications sont désactivées.</string>
+    <string name="push_busy">Mise à jour de l’inscription aux notifications…</string>
+    <string name="push_unavailable">Les notifications push sont indisponibles pour ce backend.</string>
+    <string name="push_permission">Autorisez les notifications Android pour activer les notifications push.</string>
+    <string name="push_ready">Les notifications push sont disponibles. Activez-les pour inscrire cette installation.</string>
+    <string name="push_accepted">Inscription aux notifications confirmée. La réception dépend de votre backend et de votre appareil.</string>
+    <string name="push_rejected">L’inscription n’a pas été finalisée. Vous pouvez la relancer manuellement.</string>
+    <string name="push_uncertain">L’inscription n’a pas pu être confirmée. Vérifiez l’état avant une nouvelle inscription.</string>
+    <string name="push_restart">Fermez puis rouvrez l’application avant d’activer une autre configuration Firebase.</string>
+    <string name="push_close">Fermer</string>
+    <string name="push_cleanup">Les notifications locales sont désactivées. Le nettoyage distant est en attente ; désactivez à nouveau les notifications en étant connecté pour réessayer.</string>
     <string name="home_connection_connected">Connecté</string>
     <string name="home_connection_connecting">Connexion…</string>
     <string name="home_connection_authenticating">Authentification…</string>
@@ -418,4 +418,72 @@
         <item quantity="many">il y a %1$d secondes</item>
         <item quantity="other">il y a %1$d secondes</item>
     </plurals>
+    <string name="records_status_new" formatted="false">Nouveaux</string>
+    <string name="records_status_open" formatted="false">Ouverts</string>
+    <string name="records_status_partially_filled" formatted="false">Partiellement exécutés</string>
+    <string name="records_status_filled" formatted="false">Exécutés</string>
+    <string name="records_status_cancelled" formatted="false">Annulés</string>
+    <string name="records_status_rejected" formatted="false">Rejetés</string>
+    <string name="records_alert_type_order_unknown" formatted="false">État de l\'ordre inconnu</string>
+    <string name="venue_accounts_status_observed" formatted="false">Temps réel</string>
+    <string name="venue_accounts_status_simulated" formatted="false">Simulé</string>
+    <string name="venue_accounts_status_stale" formatted="false">Obsolète</string>
+    <string name="venue_accounts_status_clock_error" formatted="false">Erreur d\'horloge</string>
+    <string name="venue_accounts_status_unverified" formatted="false">Non vérifié</string>
+    <string name="venue_accounts_status_unavailable" formatted="false">Indisponible</string>
+    <string name="venue_accounts_status_not_applicable" formatted="false">Non applicable</string>
+    <string name="venue_accounts_status_unknown" formatted="false">Inconnu</string>
+    <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Rapproché</string>
+    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">Dérive détectée</string>
+    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">Pas encore rapproché</string>
+    <string name="venue_accounts_reconciliation_status_error" formatted="false">Erreur de rapprochement</string>
+    <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">Non pris en charge</string>
+    <string name="system_status_healthy" formatted="false">Sain</string>
+    <string name="system_status_error" formatted="false">Erreur</string>
+    <string name="system_status_warning" formatted="false">Avertissement</string>
+    <string name="system_status_starting" formatted="false">démarrage</string>
+    <string name="system_status_stopping" formatted="false">arrêt</string>
+    <string name="settings_role_viewer" formatted="false">Observateur</string>
+    <string name="settings_role_operator" formatted="false">Opérateur</string>
+    <string name="settings_role_admin" formatted="false">Administrateur</string>
+    <string name="settings_role_ai_delegate" formatted="false">Délégué IA</string>
+    <string name="settings_role_auditor" formatted="false">Auditeur</string>
+    <string name="process_mode_thread" formatted="false">Mode thread</string>
+    <string name="process_mode_process" formatted="false">Mode processus</string>
+    <string name="process_role_strategy" formatted="false">Stratégie</string>
+    <string name="process_role_backtest" formatted="false">Backtest</string>
+    <string name="positions_timeline_incompleteness_scope_global" formatted="false">Tout le portefeuille</string>
+    <string name="positions_timeline_incompleteness_tier_mark_incomplete" formatted="false">PRIX DE RÉFÉRENCE INCOMPLET</string>
+    <string name="positions_timeline_incompleteness_tier_untrusted" formatted="false">NON FIABLE</string>
+    <string name="positions_timeline_attribution_origins_manual" formatted="false">Manuel · direct</string>
+    <string name="positions_timeline_attribution_origins_plan" formatted="false">Plan · automatisé</string>
+    <string name="positions_timeline_attribution_origins_system" formatted="false">Système · automatisé</string>
+    <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Non attribué · provenance inconnue</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Il n’existe aucun remplissage d’échange qui sert de preuve de cette réservation.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Enregistrement dérivé d\'un héritage pour lequel aucun remplissage d\'échange ne sert de preuve.</string>
+    <string name="common_yes" formatted="false">Oui</string>
+    <string name="common_no" formatted="false">Non</string>
+    <string name="settings_role_ai_reviewer" formatted="false">Évaluateur IA</string>
+    <string name="settings_role_ai_researcher" formatted="false">Chercheur IA</string>
+    <string name="process_role_core" formatted="false">Service central</string>
+    <string name="process_role_task" formatted="false">Tâche</string>
+    <string name="records_status_submitted" formatted="false">Envoyé</string>
+    <string name="system_status_ready" formatted="false">Prêt</string>
+    <string name="system_status_degraded" formatted="false">Fonctionnement dégradé</string>
+    <string name="market_instrument_kind_spot" formatted="false">Au comptant</string>
+    <string name="market_instrument_kind_perpetual" formatted="false">Contrat perpétuel</string>
+    <string name="market_instrument_kind_future" formatted="false">Contrat à terme</string>
+    <string name="market_instrument_kind_etf" formatted="false">ETF</string>
+    <string name="market_instrument_kind_option" formatted="false">Option</string>
+    <string name="venue_accounts_valuation_native_only" formatted="false">Devises d’origine uniquement</string>
+    <string name="venue_accounts_status_unobserved" formatted="false">Pas encore observé</string>
+    <string name="pnl_execution_history_as_recorded" formatted="false">Tel qu’enregistré</string>
+    <string name="pnl_execution_history_operator_corrected" formatted="false">Corrigé par un opérateur</string>
+    <string name="ai_reviews_status_approved" formatted="false">Approuvée</string>
+    <string name="ai_reviews_status_rejected" formatted="false">Rejetée</string>
+    <string name="venue_accounts_evaluation_matched" formatted="false">Concordant</string>
+    <string name="venue_accounts_evaluation_mismatched" formatted="false">Discordant</string>
+    <string name="venue_accounts_evaluation_incomplete" formatted="false">Incomplet</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Valeurs brutes de la plateforme</string>
+    <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Anciennes valeurs à virgule flottante</string>
 </resources>

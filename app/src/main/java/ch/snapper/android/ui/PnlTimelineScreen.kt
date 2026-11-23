@@ -62,7 +62,7 @@ private fun PnlContent(data: PnlSeriesDto) {
     Text(stringResource(R.string.positions_timeline_incompleteness_description))
     data.points.flatMap { it.incompletenessReasons }.groupingBy { it }.eachCount().forEach { (reason, count) ->
         Text(reasonLabel(reason.reason))
-        Text(listOfNotNull(reason.withholdingScope, reason.withholdingTier, reason.triggerInstrumentPublicId).joinToString(" · "))
+        Text(listOfNotNull(withholdingScopeLabel(reason.withholdingScope), withholdingTierLabel(reason.withholdingTier), reason.triggerInstrumentPublicId).joinToString(" · "))
         Text(stringResource(R.string.positions_timeline_incompleteness_affectedpoints, count))
     }
     PnlCoverage(data.equityCoverage)
@@ -74,7 +74,7 @@ private fun PnlContent(data: PnlSeriesDto) {
 @Composable
 private fun PnlCoverage(coverage: PnlEquityCoverageDto) {
     Text(stringResource(R.string.positions_timeline_equity_title))
-    Text(stringResource(R.string.pnl_equity_coverage, coverage.sampled.toString(), coverage.completeMinutes.toString()))
+    Text(stringResource(R.string.pnl_equity_coverage, stringResource(if (coverage.sampled) R.string.common_yes else R.string.common_no), coverage.completeMinutes.toString()))
     Text(listOfNotNull(coverage.valuationBasis, coverage.sampleCalcVersion, coverage.firstMinute?.displayTimestamp(), coverage.lastMinute?.displayTimestamp()).joinToString(" · "))
     Text(stringResource(R.string.positions_timeline_equity_honesty_conversionwithheld, coverage.conversionWithheldMinutes.toString()))
     coverage.convertedFrom?.let { Text(stringResource(R.string.positions_timeline_equity_honesty_restatedfrom, it)) }
@@ -86,7 +86,7 @@ private fun PnlCoverage(coverage: PnlEquityCoverageDto) {
 
 @Composable
 private fun PnlExecutionHistory(history: PnlExecutionHistoryDto) {
-    Text(stringResource(R.string.pnl_execution_history, history.status))
+    Text(stringResource(R.string.pnl_execution_history, executionHistoryStatusLabel(history.status)))
     if (history.corrections.isNotEmpty()) {
         Text(stringResource(R.string.positions_timeline_executionhistory_title))
         Text(stringResource(R.string.positions_timeline_executionhistory_summary))
@@ -94,9 +94,16 @@ private fun PnlExecutionHistory(history: PnlExecutionHistoryDto) {
             Text(correction.exchange + " #" + correction.scopeSequence + " · " + correction.correctionTime.displayTimestamp())
             Text(stringResource(R.string.positions_timeline_executionhistory_targetexecutionid) + ": " + correction.targetExecutionPublicId)
             Text(stringResource(R.string.positions_timeline_executionhistory_correctionid) + ": " + correction.correctionPublicId)
-            Text(correction.reason)
+            Text(correctionReasonLabel(correction.reason))
         }
     }
+}
+
+@Composable
+private fun executionHistoryStatusLabel(value: String): String = when (value) {
+    "as_recorded" -> stringResource(R.string.pnl_execution_history_as_recorded)
+    "operator_corrected" -> stringResource(R.string.pnl_execution_history_operator_corrected)
+    else -> value
 }
 
 @Composable
@@ -120,9 +127,39 @@ private fun PnlContributions(point: PnlTimelinePointDto) {
     }
     Text(stringResource(R.string.positions_timeline_attribution_title))
     point.attribution.forEach { row ->
-        Text(row.origin + " · " + (row.strategyName ?: stringResource(R.string.positions_timeline_attribution_nostrategy)))
+        Text(attributionOriginLabel(row.origin) + " · " + (row.strategyName ?: stringResource(R.string.positions_timeline_attribution_nostrategy)))
         PnlComponents(row.realizedPnl, row.feePnl, row.accrualPnl, row.unrealizedPnl)
     }
+}
+
+@Composable
+private fun withholdingScopeLabel(value: String): String = when (value) {
+    "global" -> stringResource(R.string.positions_timeline_incompleteness_scope_global)
+    "instrument" -> stringResource(R.string.instrument)
+    else -> value
+}
+
+@Composable
+private fun withholdingTierLabel(value: String): String = when (value) {
+    "mark_incomplete" -> stringResource(R.string.positions_timeline_incompleteness_tier_mark_incomplete)
+    "untrusted" -> stringResource(R.string.positions_timeline_incompleteness_tier_untrusted)
+    else -> value
+}
+
+@Composable
+private fun attributionOriginLabel(value: String): String = when (value) {
+    "manual" -> stringResource(R.string.positions_timeline_attribution_origins_manual)
+    "plan" -> stringResource(R.string.positions_timeline_attribution_origins_plan)
+    "system" -> stringResource(R.string.positions_timeline_attribution_origins_system)
+    "unattributed" -> stringResource(R.string.positions_timeline_attribution_origins_unattributed)
+    else -> value
+}
+
+@Composable
+private fun correctionReasonLabel(value: String): String = when (value) {
+    "unwitnessed_phantom" -> stringResource(R.string.positions_timeline_executionhistory_reasons_unwitnessed_phantom)
+    "unwitnessed_legacy_lineage" -> stringResource(R.string.positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage)
+    else -> value
 }
 
 @Composable

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="privacy_policy" formatted="false">Privacy policy</string>
+    <string name="privacy_policy" formatted="false">개인정보 처리방침</string>
     <string name="username" formatted="false">사용자 이름</string>
     <string name="password" formatted="false">비밀번호</string>
     <string name="sign_in" formatted="false">로그인</string>
-    <string name="session_retention_notice" formatted="false">Staying signed in requires Android 11+, a secure screen lock, and authentication with your PIN, pattern, password or strong biometrics within the last 5 minutes. Otherwise, sign in again after the app restarts.</string>
+    <string name="session_retention_notice" formatted="false">로그인 상태를 유지하려면 Android 11 이상, 보안 화면 잠금, 최근 5분 이내의 PIN, 패턴, 비밀번호 또는 강력한 생체 인식 인증이 필요합니다. 그렇지 않으면 앱을 다시 시작한 후 다시 로그인해야 합니다.</string>
     <string name="subtitle" formatted="false">트레이딩 플랫폼</string>
     <string name="backend" formatted="false">사용자 지정 백엔드 URL</string>
     <string name="language" formatted="false">언어</string>
@@ -22,13 +22,13 @@
     <string name="pnl" formatted="false">미실현 손익</string>
     <string name="instrument" formatted="false">종목</string>
     <string name="price" formatted="false">가격</string>
-    <string name="filled" formatted="false">Filled</string>
+    <string name="filled" formatted="false">체결됨</string>
     <string name="status" formatted="false">상태</string>
     <string name="side" formatted="false">방향</string>
-    <string name="open" formatted="false">Open</string>
-    <string name="high" formatted="false">High</string>
-    <string name="low" formatted="false">Low</string>
-    <string name="close" formatted="false">Close</string>
+    <string name="open" formatted="false">시가</string>
+    <string name="high" formatted="false">고가</string>
+    <string name="low" formatted="false">저가</string>
+    <string name="close" formatted="false">종가</string>
     <string name="volume" formatted="false">거래량</string>
     <string name="timeframe" formatted="false">주기</string>
     <string name="no_candles" formatted="false">아직 캔들이 없습니다</string>
@@ -37,68 +37,68 @@
     <string name="alerts" formatted="false">알림</string>
     <string name="settings" formatted="false">설정</string>
     <string name="save" formatted="false">저장</string>
-    <string name="refresh" formatted="false">Refresh</string>
+    <string name="refresh" formatted="false">새로고침</string>
     <string name="exchange" formatted="false">거래소</string>
-    <string name="load_market" formatted="false">Load candles</string>
-    <string name="empty" formatted="false">No records available.</string>
-    <string name="snapshot_note" formatted="false">Snapshot data. Refresh to retrieve the latest available records.</string>
-    <string name="chart_description" formatted="false">Historical candle chart. Exact values are listed below.</string>
-    <string name="error_origin" formatted="false">Enter a valid HTTPS backend origin.</string>
-    <string name="error_credentials" formatted="false">The username or password is incorrect.</string>
-    <string name="error_session" formatted="false">Your session expired. Please sign in again.</string>
-    <string name="error_network" formatted="false">Could not reach the backend. Check your connection and try again.</string>
-    <string name="error_service" formatted="false">The backend could not complete this request. Please try again.</string>
-    <string name="error_unknown" formatted="false">Something went wrong. Please try again.</string>
+    <string name="load_market" formatted="false">캔들 불러오기</string>
+    <string name="empty" formatted="false">기록이 없습니다.</string>
+    <string name="snapshot_note" formatted="false">스냅샷 데이터입니다. 최신 기록을 가져오려면 새로고침하세요.</string>
+    <string name="chart_description" formatted="false">과거 캔들 차트입니다. 정확한 값은 아래에 표시됩니다.</string>
+    <string name="error_origin" formatted="false">유효한 HTTPS 백엔드 오리진을 입력하세요.</string>
+    <string name="error_credentials" formatted="false">사용자 이름 또는 비밀번호가 올바르지 않습니다.</string>
+    <string name="error_session" formatted="false">세션이 만료되었습니다. 다시 로그인하세요.</string>
+    <string name="error_network" formatted="false">백엔드에 연결할 수 없습니다. 연결을 확인하고 다시 시도하세요.</string>
+    <string name="error_service" formatted="false">백엔드에서 요청을 완료하지 못했습니다. 다시 시도하세요.</string>
+    <string name="error_unknown" formatted="false">문제가 발생했습니다. 다시 시도하세요.</string>
     <string name="dismiss" formatted="false">닫기</string>
     <string name="paper" formatted="false">모의</string>
-    <string name="safety_critical" formatted="false">Safety critical</string>
-    <string name="snapshot_limit" formatted="false">This view shows current positions and up to 100 recent orders and alerts; it is not a complete history.</string>
-    <string name="chart_window" formatted="false">The chart shows the last 100 retrieved candles.</string>
-    <string name="local_network_explanation" formatted="false">For a backend on your local network, allow local network access before signing in. Public internet backends do not need this permission.</string>
-    <string name="local_network_allow" formatted="false">Allow local network</string>
-    <string name="local_network_settings" formatted="false">Open app settings</string>
-    <string name="order_new" formatted="false">New Order</string>
-    <string name="order_entry" formatted="false">New Manual Order</string>
-    <string name="order_confirm" formatted="false">Confirm Order</string>
+    <string name="safety_critical" formatted="false">안전상 중요</string>
+    <string name="snapshot_limit" formatted="false">이 화면에는 현재 포지션과 최근 주문 및 알림이 각각 최대 100개 표시됩니다. 전체 내역은 아닙니다.</string>
+    <string name="chart_window" formatted="false">차트에는 최근에 가져온 캔들 100개가 표시됩니다.</string>
+    <string name="local_network_explanation" formatted="false">로컬 네트워크의 백엔드를 사용하려면 로그인 전에 로컬 네트워크 접근을 허용하세요. 공용 인터넷 백엔드에는 이 권한이 필요하지 않습니다.</string>
+    <string name="local_network_allow" formatted="false">로컬 네트워크 허용</string>
+    <string name="local_network_settings" formatted="false">앱 설정 열기</string>
+    <string name="order_new" formatted="false">새 주문</string>
+    <string name="order_entry" formatted="false">새 수동 주문</string>
+    <string name="order_confirm" formatted="false">주문 확정</string>
     <string name="order_quantity" formatted="false">수량</string>
-    <string name="order_type" formatted="false">Order Type</string>
-    <string name="order_stop_price" formatted="false">Stop Price</string>
+    <string name="order_type" formatted="false">주문 유형</string>
+    <string name="order_stop_price" formatted="false">스톱 가격</string>
     <string name="order_mode" formatted="false">모드</string>
     <string name="order_buy" formatted="false">매수</string>
     <string name="order_sell" formatted="false">매도</string>
     <string name="order_market" formatted="false">시장가</string>
     <string name="order_limit" formatted="false">지정가</string>
-    <string name="order_stop" formatted="false">Stop</string>
-    <string name="order_stop_limit" formatted="false">Stop Limit</string>
-    <string name="order_live" formatted="false">Live</string>
-    <string name="order_review" formatted="false">Review Order</string>
-    <string name="order_back" formatted="false">Back</string>
-    <string name="order_submit" formatted="false">Confirm Order</string>
-    <string name="order_submitting" formatted="false">Submitting…</string>
+    <string name="order_stop" formatted="false">스톱</string>
+    <string name="order_stop_limit" formatted="false">스톱 지정가</string>
+    <string name="order_live" formatted="false">실거래</string>
+    <string name="order_review" formatted="false">주문 검토</string>
+    <string name="order_back" formatted="false">뒤로</string>
+    <string name="order_submit" formatted="false">주문 확정</string>
+    <string name="order_submitting" formatted="false">제출 중…</string>
     <string name="order_leverage" formatted="false">레버리지</string>
-    <string name="order_reduce_only" formatted="false">Reduce Only</string>
-    <string name="order_observation_only" formatted="false">This instrument is observation-only — place orders on an execution-capable instrument.</string>
-    <string name="order_unknown_instrument" formatted="false">This instrument is not recognised. Reload the list and try again.</string>
-    <string name="order_caps_violation" formatted="false">This order would exceed your account safety caps. Review your risk settings and retry.</string>
-    <string name="order_rejected" formatted="false">Order creation failed</string>
+    <string name="order_reduce_only" formatted="false">포지션 축소만</string>
+    <string name="order_observation_only" formatted="false">이 종목은 관찰 전용입니다. 거래 가능한 종목으로 주문하세요.</string>
+    <string name="order_unknown_instrument" formatted="false">인식할 수 없는 종목입니다. 목록을 다시 불러온 후 다시 시도하세요.</string>
+    <string name="order_caps_violation" formatted="false">이 주문은 계정의 안전 한도를 초과합니다. 위험 설정을 검토하고 다시 시도하세요.</string>
+    <string name="order_rejected" formatted="false">주문 생성 실패</string>
     <string name="order_cancel_title" formatted="false">주문을 취소하시겠습니까?</string>
     <string name="order_cancel_confirm" formatted="false">주문 취소</string>
     <string name="order_keep_open" formatted="false">열어 두기</string>
-    <string name="order_select_wallet" formatted="false">Select a wallet on Home before placing an order.</string>
-    <string name="order_created" formatted="false">Order submitted. Refresh to check execution status.</string>
-    <string name="order_cancel_requested" formatted="false">Cancellation requested. Refresh to check the order status.</string>
-    <string name="order_unknown_outcome" formatted="false">The request outcome is unknown. Check status before taking further action.</string>
-    <string name="order_check_status" formatted="false">Check status</string>
-    <string name="order_retry_intent" formatted="false">Retry same order</string>
-    <string name="order_catalog_error" formatted="false">Could not load exchanges or instruments. Try again.</string>
-    <string name="order_no_instruments" formatted="false">No instruments available for this exchange.</string>
-    <string name="order_invalid_form" formatted="false">Enter positive quantities and required prices. Optional leverage must be a positive whole number.</string>
-    <string name="order_refresh_failed" formatted="false">The request was accepted, but the latest records could not be loaded. Refresh to check status.</string>
-    <string name="order_forbidden" formatted="false">You no longer have permission for this action.</string>
-    <string name="order_session_changed" formatted="false">The session or wallet changed. Open a new order from the current account.</string>
+    <string name="order_select_wallet" formatted="false">주문하기 전에 홈에서 지갑을 선택하세요.</string>
+    <string name="order_created" formatted="false">주문이 제출되었습니다. 새로고침하여 체결 상태를 확인하세요.</string>
+    <string name="order_cancel_requested" formatted="false">취소가 요청되었습니다. 새로고침하여 주문 상태를 확인하세요.</string>
+    <string name="order_unknown_outcome" formatted="false">요청 결과를 알 수 없습니다. 추가 작업 전에 상태를 확인하세요.</string>
+    <string name="order_check_status" formatted="false">상태 확인</string>
+    <string name="order_retry_intent" formatted="false">같은 주문 재시도</string>
+    <string name="order_catalog_error" formatted="false">거래소 또는 종목을 불러올 수 없습니다. 다시 시도하세요.</string>
+    <string name="order_no_instruments" formatted="false">이 거래소에 사용 가능한 종목이 없습니다.</string>
+    <string name="order_invalid_form" formatted="false">수량과 필수 가격에 양수를 입력하세요. 선택 사항인 레버리지는 양의 정수여야 합니다.</string>
+    <string name="order_refresh_failed" formatted="false">요청이 접수되었지만 최신 기록을 불러오지 못했습니다. 새로고침하여 상태를 확인하세요.</string>
+    <string name="order_forbidden" formatted="false">이 작업에 대한 권한이 더 이상 없습니다.</string>
+    <string name="order_session_changed" formatted="false">세션 또는 지갑이 변경되었습니다. 현재 계정에서 새 주문을 여세요.</string>
     <string name="order_enabled" formatted="false">사용 중</string>
     <string name="order_disabled" formatted="false">사용 안 함</string>
-    <string name="system_tools" formatted="false">Overview</string>
+    <string name="system_tools" formatted="false">개요</string>
     <string name="desk_attach_button" formatted="false">뷰어 추가</string>
     <string name="desk_attach_desk_label" formatted="false">데스크</string>
     <string name="desk_nav_title" formatted="false">내 데스크</string>
@@ -157,13 +157,13 @@
     <string name="system_active" formatted="false">활성</string>
     <string name="system_inactive" formatted="false">비활성</string>
     <string name="system_revoked" formatted="false">취소됨</string>
-    <string name="records_open" formatted="false">Open</string>
+    <string name="records_open" formatted="false">미체결</string>
     <string name="records_recent" formatted="false">최근</string>
     <string name="records_fills" formatted="false">체결</string>
-    <string name="records_refresh" formatted="false">Refresh</string>
-    <string name="records_fee" formatted="false">Fee</string>
-    <string name="records_details" formatted="false">Details</string>
-    <string name="records_hide_details" formatted="false">\@string/close</string>
+    <string name="records_refresh" formatted="false">새로고침</string>
+    <string name="records_fee" formatted="false">수수료</string>
+    <string name="records_details" formatted="false">상세 정보</string>
+    <string name="records_hide_details" formatted="false">닫기</string>
     <string name="records_thread" formatted="false">스레드</string>
     <string name="records_source_topic" formatted="false">소스 토픽</string>
     <string name="notification_defaults_title" formatted="false">사용자 기본 설정</string>
@@ -172,9 +172,9 @@
     <string name="notification_defaults_priority" formatted="false">최소 우선순위</string>
     <string name="notification_defaults_load_failed" formatted="false">환경설정을 불러오지 못했습니다</string>
     <string name="notification_defaults_save_failed" formatted="false">환경설정을 저장하지 못했습니다</string>
-    <string name="notification_defaults_low" formatted="false">Low</string>
+    <string name="notification_defaults_low" formatted="false">낮음</string>
     <string name="notification_defaults_medium" formatted="false">중간</string>
-    <string name="notification_defaults_high" formatted="false">High</string>
+    <string name="notification_defaults_high" formatted="false">높음</string>
     <string name="notification_defaults_fill" formatted="false">주문 체결됨</string>
     <string name="notification_defaults_rejected" formatted="false">주문 거부됨</string>
     <string name="notification_defaults_stop" formatted="false">스탑로스 발동</string>
@@ -189,7 +189,7 @@
     <string name="signals_medium" formatted="false">중간</string>
     <string name="signals_weak" formatted="false">약함</string>
     <string name="signals_very_weak" formatted="false">매우 약함</string>
-    <string name="signals_total" formatted="false">Total</string>
+    <string name="signals_total" formatted="false">합계</string>
     <string name="signals_buy" formatted="false">매수</string>
     <string name="signals_sell" formatted="false">매도</string>
     <string name="signals_average_strength" formatted="false">평균 강도</string>
@@ -199,23 +199,23 @@
     <string name="signals_export" formatted="false">내보내기</string>
     <string name="signals_export_failed" formatted="false">제출에 실패했습니다</string>
     <string name="venue_accounts_title" formatted="false">거래소 계정</string>
-    <string name="venue_accounts_refresh" formatted="false">Refresh</string>
+    <string name="venue_accounts_refresh" formatted="false">새로고침</string>
     <string name="venue_accounts_failed" formatted="false">거래소 계정 상태를 불러올 수 없습니다. 빈 계정이 아니라 현재 데이터를 사용할 수 없는 상태입니다.</string>
     <string name="venue_accounts_authoritative" formatted="false">권한 기간 내에 확인된 실시간 거래소 데이터입니다.</string>
     <string name="venue_accounts_not_authoritative" formatted="false">실시간으로 표시되지 않은 행은 마지막으로 확인된 데이터, 시뮬레이션 데이터 또는 사용할 수 없는 데이터를 나타냅니다 — 거래소가 제공한 신뢰할 수 있는 실시간 잔고가 아닙니다.</string>
-    <string name="venue_accounts_valuation" formatted="false">Valuation</string>
+    <string name="venue_accounts_valuation" formatted="false">평가액</string>
     <string name="venue_accounts_balances" formatted="false">잔고</string>
-    <string name="venue_accounts_observed" formatted="false">Observed at</string>
-    <string name="venue_accounts_source" formatted="false">Source observation</string>
-    <string name="venue_accounts_total" formatted="false">Total</string>
+    <string name="venue_accounts_observed" formatted="false">관측 시각</string>
+    <string name="venue_accounts_source" formatted="false">원본 관측 데이터</string>
+    <string name="venue_accounts_total" formatted="false">합계</string>
     <string name="venue_accounts_free" formatted="false">사용 가능</string>
     <string name="venue_accounts_used" formatted="false">사용 중</string>
-    <string name="venue_accounts_numeric_source" formatted="false">Numeric provenance</string>
+    <string name="venue_accounts_numeric_source" formatted="false">수치 출처</string>
     <string name="venue_accounts_positions" formatted="false">오픈 포지션</string>
     <string name="venue_accounts_funding" formatted="false">펀딩</string>
-    <string name="venue_accounts_reconciliation" formatted="false">Reconciliation status</string>
-    <string name="venue_accounts_evaluation" formatted="false">Evaluation status</string>
-    <string name="venue_accounts_deadline" formatted="false">Authority deadline</string>
+    <string name="venue_accounts_reconciliation" formatted="false">대사 상태</string>
+    <string name="venue_accounts_evaluation" formatted="false">평가 상태</string>
+    <string name="venue_accounts_deadline" formatted="false">신뢰 유효 기한</string>
     <string name="positions_timeline_controls_window" formatted="false">기간</string>
     <string name="positions_timeline_controls_granularity" formatted="false">간격</string>
     <string name="positions_timeline_controls_valuationcurrency" formatted="false">평가 통화</string>
@@ -228,11 +228,11 @@
     <string name="positions_timeline_nowallet_message" formatted="false">P&amp;L 타임라인을 보려면 지갑을 선택하세요.</string>
     <string name="positions_timeline_incompleteness_title" formatted="false">포인트가 불완전한 이유</string>
     <string name="positions_timeline_incompleteness_description" formatted="false">사유는 불러온 전체 기간을 기준으로 합니다. 한 포인트에 원인이 여러 개이면 집계가 중복될 수 있습니다.</string>
-    <string name="positions_timeline_incompleteness_affectedpoints">Affected points: %1$s</string>
+    <string name="positions_timeline_incompleteness_affectedpoints">영향받은 지점: %1$s</string>
     <string name="positions_timeline_chart_title" formatted="false">P&amp;L 추이</string>
     <string name="positions_timeline_chart_net" formatted="false">순 P&amp;L</string>
     <string name="positions_timeline_chart_realized" formatted="false">실현 P&amp;L</string>
-    <string name="positions_timeline_chart_unrealized" formatted="false">Unrealized P&amp;L</string>
+    <string name="positions_timeline_chart_unrealized" formatted="false">미실현 P&amp;L</string>
     <string name="positions_timeline_attribution_title" formatted="false">최신 P&amp;L 귀속 내역</string>
     <string name="positions_timeline_attribution_nostrategy" formatted="false">입증된 전략 없음</string>
     <string name="positions_timeline_attribution_withheld" formatted="false">입증 불가</string>
@@ -241,7 +241,7 @@
     <string name="positions_timeline_contributions_realized" formatted="false">실현 P&amp;L</string>
     <string name="positions_timeline_contributions_fees" formatted="false">수수료</string>
     <string name="positions_timeline_contributions_accrual" formatted="false">누적 펀딩</string>
-    <string name="positions_timeline_contributions_unrealized" formatted="false">Unrealized P&amp;L</string>
+    <string name="positions_timeline_contributions_unrealized" formatted="false">미실현 P&amp;L</string>
     <string name="positions_timeline_incompleteness_reasons_scope_order_regression" formatted="false">스코프 순서 역행</string>
     <string name="positions_timeline_incompleteness_reasons_before_activation" formatted="false">활성화 전 포인트</string>
     <string name="positions_timeline_incompleteness_reasons_activation_baseline_non_finite" formatted="false">활성화 기준값이 유한하지 않음</string>
@@ -260,26 +260,26 @@
     <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">귀속값 대사 실패</string>
     <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">종목별 P&amp;L 합계 대사 실패</string>
     <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">활성화 전 타임스탬프를 가진 지연 도착 체결</string>
-    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Attribution sum is not representable</string>
-    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Instrument sum is not representable</string>
-    <string name="positions_timeline_executionhistory_title" formatted="false">Operator-corrected execution history</string>
-    <string name="positions_timeline_executionhistory_summary" formatted="false">An operator repudiated recorded executions in this scope. Every correction listed here is excluded from the figures on this page.</string>
-    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Repudiated execution</string>
-    <string name="positions_timeline_executionhistory_correctionid" formatted="false">Correction record</string>
-    <string name="positions_timeline_equity_title" formatted="false">Equity overlay</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">귀속 합계를 표현할 수 없음</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">종목 합계를 표현할 수 없음</string>
+    <string name="positions_timeline_executionhistory_title" formatted="false">운영자가 정정한 체결 내역</string>
+    <string name="positions_timeline_executionhistory_summary" formatted="false">운영자가 이 범위에 기록된 체결을 무효화했습니다. 여기에 나열된 모든 정정 사항은 이 페이지의 수치에서 제외됩니다.</string>
+    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">무효화된 체결</string>
+    <string name="positions_timeline_executionhistory_correctionid" formatted="false">정정 기록</string>
+    <string name="positions_timeline_equity_title" formatted="false">계좌 순자산 겹쳐 보기</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">계좌 순자산</string>
-    <string name="positions_timeline_equity_drawdown_current" formatted="false">Current drawdown</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Spot venue only — balances held on other venues are excluded.</string>
-    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">External deposits and withdrawals are not adjusted out.</string>
-    <string name="positions_timeline_equity_honesty_restatedfrom">These figures are restated from %1$s at each minute\'s close, not sampled natively in this currency.</string>
-    <string name="positions_timeline_equity_honesty_pricedon">Priced on %1$s.</string>
-    <string name="positions_timeline_equity_honesty_conversionwithheld">Minutes dropped for want of a proven close: %1$s.</string>
-    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Drawdown is withheld on a converted basis, because the running peak is tracked in the sampled currency.</string>
-    <string name="positions_timeline_equity_cashposition_position" formatted="false">Position value</string>
-    <string name="positions_timeline_equity_cashposition_cash" formatted="false">Cash</string>
-    <string name="pnl_provenance">Calculation: %1$s · Mark source: %2$s · As of: %3$s</string>
-    <string name="pnl_equity_coverage">Equity sampled: %1$s · Complete minutes: %2$s</string>
-    <string name="pnl_execution_history">Execution history: %1$s</string>
+    <string name="positions_timeline_equity_drawdown_current" formatted="false">현재 낙폭</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">현물 거래소만 포함합니다. 다른 거래소의 잔액은 제외됩니다.</string>
+    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">외부 입출금은 차감 조정되지 않습니다.</string>
+    <string name="positions_timeline_equity_honesty_restatedfrom">이 수치는 매 분 마감 시 %1$s에서 환산한 값이며, 이 통화로 직접 표본을 수집한 값이 아닙니다.</string>
+    <string name="positions_timeline_equity_honesty_pricedon">%1$s 기준 가격입니다.</string>
+    <string name="positions_timeline_equity_honesty_conversionwithheld">확인된 종가가 없어 제외된 분: %1$s.</string>
+    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">최고점이 표본 통화로 추적되므로 환산 기준의 낙폭은 표시하지 않습니다.</string>
+    <string name="positions_timeline_equity_cashposition_position" formatted="false">포지션 가치</string>
+    <string name="positions_timeline_equity_cashposition_cash" formatted="false">현금</string>
+    <string name="pnl_provenance">계산: %1$s · 평가 가격 출처: %2$s · 기준 시각: %3$s</string>
+    <string name="pnl_equity_coverage">계좌 순자산 표본 수집: %1$s · 완전한 분: %2$s</string>
+    <string name="pnl_execution_history">체결 내역: %1$s</string>
     <string name="process_title" formatted="false">프로세스</string>
     <string name="process_running" formatted="false">실행 중</string>
     <string name="process_stopped" formatted="false">중지됨</string>
@@ -291,22 +291,22 @@
     <string name="process_cpu" formatted="false">CPU</string>
     <string name="process_empty" formatted="false">구성된 프로세스가 없습니다.</string>
     <string name="process_start" formatted="false">시작</string>
-    <string name="process_stop" formatted="false">Stop</string>
+    <string name="process_stop" formatted="false">중지</string>
     <string name="process_restart" formatted="false">재시작</string>
     <string name="process_cancel" formatted="false">취소</string>
     <string name="process_stale" formatted="false">이 프로세스는 더 이상 여기에서 제어할 수 없습니다. 새로고침한 후 다시 시도하세요.</string>
     <string name="process_partial" formatted="false">프로세스가 중지되었지만 더 이상 여기에서 재시작할 수 없습니다. 새로고침한 후 다시 시도하세요.</string>
-    <string name="process_confirm" formatted="false">Confirm process action</string>
-    <string name="process_confirm_message" formatted="false">Apply this action to the selected process?</string>
-    <string name="process_intent_saved" formatted="false">Desired state saved. The owning coordinator will apply it.</string>
-    <string name="process_accepted" formatted="false">Process action accepted.</string>
-    <string name="process_unknown" formatted="false">The command outcome is unknown. Controls remain locked: a status refresh cannot prove whether this command was applied.</string>
-    <string name="process_partial_unknown" formatted="false">The process was stopped, but the restart outcome is unknown. Controls remain locked: a status refresh cannot prove whether the restart was applied.</string>
-    <string name="process_rejected" formatted="false">The process action failed.</string>
-    <string name="process_load_failed" formatted="false">Could not refresh process status.</string>
-    <string name="process_config_failed" formatted="false">Process controls are unavailable because configuration could not be refreshed.</string>
-    <string name="process_enable" formatted="false">Enable</string>
-    <string name="process_disable" formatted="false">Disable</string>
+    <string name="process_confirm" formatted="false">프로세스 작업 확인</string>
+    <string name="process_confirm_message" formatted="false">선택한 프로세스에 이 작업을 적용할까요?</string>
+    <string name="process_intent_saved" formatted="false">원하는 상태를 저장했습니다. 담당 조정자가 적용합니다.</string>
+    <string name="process_accepted" formatted="false">프로세스 작업이 접수되었습니다.</string>
+    <string name="process_unknown" formatted="false">명령 결과를 알 수 없습니다. 제어는 잠긴 상태로 유지됩니다. 상태를 새로고침해도 이 명령의 적용 여부를 확인할 수 없습니다.</string>
+    <string name="process_partial_unknown" formatted="false">프로세스는 중지되었지만 재시작 결과를 알 수 없습니다. 제어는 잠긴 상태로 유지됩니다. 상태를 새로고침해도 재시작 적용 여부를 확인할 수 없습니다.</string>
+    <string name="process_rejected" formatted="false">프로세스 작업에 실패했습니다.</string>
+    <string name="process_load_failed" formatted="false">프로세스 상태를 새로고침할 수 없습니다.</string>
+    <string name="process_config_failed" formatted="false">구성을 새로고침하지 못해 프로세스를 제어할 수 없습니다.</string>
+    <string name="process_enable" formatted="false">활성화</string>
+    <string name="process_disable" formatted="false">비활성화</string>
     <string name="ai_reviews_pending_title" formatted="false">대기 중인 리뷰</string>
     <string name="ai_reviews_decisions_title" formatted="false">AI 결정</string>
     <string name="ai_reviews_deadline" formatted="false">마감</string>
@@ -324,13 +324,13 @@
     <string name="ai_reviews_expired_message" formatted="false">이 리뷰는 마감을 지나 시간 초과되었습니다.</string>
     <string name="ai_reviews_missing" formatted="false">이 리뷰는 더 이상 존재하지 않습니다.</string>
     <string name="ai_reviews_denied" formatted="false">델리게이트 접근 권한이 변경되었습니다. 결정하기 전에 새로고침하세요.</string>
-    <string name="ai_reviews_load_failed" formatted="false">Could not refresh reviews. Previously loaded reviews remain visible.</string>
-    <string name="ai_reviews_check_status" formatted="false">Check status</string>
-    <string name="ai_reviews_retry" formatted="false">Retry original decision</string>
-    <string name="ai_reviews_confirm" formatted="false">Confirm review decision</string>
-    <string name="ai_reviews_accepted" formatted="false">Decision accepted</string>
-    <string name="ai_reviews_rejected" formatted="false">Decision rejected by the server</string>
-    <string name="ai_reviews_unknown" formatted="false">Outcome unknown. Check status before retrying.</string>
+    <string name="ai_reviews_load_failed" formatted="false">검토를 새로고침할 수 없습니다. 이전에 불러온 검토는 계속 표시됩니다.</string>
+    <string name="ai_reviews_check_status" formatted="false">상태 확인</string>
+    <string name="ai_reviews_retry" formatted="false">원래 결정 재시도</string>
+    <string name="ai_reviews_confirm" formatted="false">검토 결정 확정</string>
+    <string name="ai_reviews_accepted" formatted="false">결정이 접수됨</string>
+    <string name="ai_reviews_rejected" formatted="false">서버가 결정을 거부함</string>
+    <string name="ai_reviews_unknown" formatted="false">결과를 알 수 없습니다. 다시 시도하기 전에 상태를 확인하세요.</string>
     <string name="positions_accessibility_label_closebutton" formatted="false">포지션 청산</string>
     <string name="positions_accessibility_label_reducebutton" formatted="false">포지션 감축</string>
     <string name="positions_reduce_cancel" formatted="false">취소</string>
@@ -341,13 +341,13 @@
     <string name="trading_bracket_takeprofitlabel" formatted="false">익절</string>
     <string name="trading_trailingstop_attach" formatted="false">트레일링 스탑 추가</string>
     <string name="trading_trailingstop_trailamountlabel" formatted="false">트레일링 폭</string>
-    <string name="position_action_review" formatted="false">Review position action</string>
-    <string name="position_action_confirm" formatted="false">Confirm action</string>
-    <string name="position_action_accepted" formatted="false">Request accepted. Refresh to check execution status.</string>
-    <string name="position_action_retry" formatted="false">Retry same request</string>
-    <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
-    <string name="position_action_cycle" formatted="false">Position cycle</string>
-    <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+    <string name="position_action_review" formatted="false">포지션 작업 검토</string>
+    <string name="position_action_confirm" formatted="false">작업 확정</string>
+    <string name="position_action_accepted" formatted="false">요청이 접수되었습니다. 새로고침하여 체결 상태를 확인하세요.</string>
+    <string name="position_action_retry" formatted="false">같은 요청 재시도</string>
+    <string name="position_action_minimum_lock" formatted="false">최소 확보 수익 (%)</string>
+    <string name="position_action_cycle" formatted="false">포지션 주기</string>
+    <string name="position_action_invalid" formatted="false">계속하기 전에 입력한 값을 검토하세요.</string>
     <string name="display_financial_title" formatted="false">금융 색상 관례</string>
     <string name="display_financial_auto" formatted="false">내 지역 설정에 맞춤(자동)</string>
     <string name="display_financial_green" formatted="false">초록색 = 상승, 빨간색 = 하락(서구식)</string>
@@ -355,17 +355,17 @@
     <string name="display_financial_current">현재: %1$s</string>
     <string name="display_financial_green_short" formatted="false">초록 상승 / 빨강 하락</string>
     <string name="display_financial_red_short" formatted="false">빨강 상승 / 초록 하락</string>
-    <string name="display_country" formatted="false">Country / region</string>
+    <string name="display_country" formatted="false">국가 / 지역</string>
     <string name="market_context_last" formatted="false">최신 가격</string>
     <string name="market_context_change" formatted="false">24시간 변동</string>
     <string name="market_context_high" formatted="false">고가</string>
     <string name="market_context_low" formatted="false">저가</string>
     <string name="market_context_related_empty">%2$s의 %1$s에 설정된 관련 종목이 없습니다.</string>
-    <string name="market_live_connected" formatted="false">Live updates connected.</string>
-    <string name="market_live_connecting" formatted="false">Connecting to live updates…</string>
-    <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
-    <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
-    <string name="market_context_as_of">Cached close as of %1$s</string>
+    <string name="market_live_connected" formatted="false">실시간 업데이트에 연결되었습니다.</string>
+    <string name="market_live_connecting" formatted="false">실시간 업데이트에 연결 중…</string>
+    <string name="market_live_unavailable" formatted="false">실시간 업데이트를 사용할 수 없어 스냅샷을 표시합니다.</string>
+    <string name="market_snapshot_mode" formatted="false">스냅샷 모드</string>
+    <string name="market_context_as_of">%1$s 기준 캐시된 종가</string>
     <string name="market_cachebanner_message">캐시 준비 중: 사용 가능한 캔들 %1$s / %2$s %3$s</string>
     <string name="market_cachebanner_sources_cache" formatted="false"></string>
     <string name="market_cachebanner_sources_db" formatted="false">(DB에서)</string>
@@ -373,37 +373,37 @@
     <string name="market_pairstats_chiparialabel">%2$s의 %1$s와의 페어 통계: Pearson %3$s, p값 %4$s</string>
     <string name="market_pairstats_label" formatted="false">공적분:</string>
     <string name="market_pairstats_metric">ρ %1$s · p %2$s</string>
-    <string name="market_pair_status_cold" formatted="false">Warming up</string>
-    <string name="market_pair_status_cointegrated" formatted="false">Cointegrated</string>
-    <string name="market_pair_status_warm" formatted="false">Warm</string>
+    <string name="market_pair_status_cold" formatted="false">준비 중</string>
+    <string name="market_pair_status_cointegrated" formatted="false">공적분 있음</string>
+    <string name="market_pair_status_warm" formatted="false">준비됨</string>
     <string name="positions_timeline_chart_valuationcurrency">평가 통화: %1$s</string>
-    <string name="account_language_syncing">Saving your language choice to your backend account…</string>
-    <string name="account_language_confirmed">Backend account language confirmed: %1$s</string>
-    <string name="account_language_uncertain">The backend account language could not be confirmed. Your local language choice is unchanged.</string>
-    <string name="account_language_retry">Retry language sync</string>
+    <string name="account_language_syncing">선택한 언어를 백엔드 계정에 저장 중…</string>
+    <string name="account_language_confirmed">백엔드 계정 언어 확인됨: %1$s</string>
+    <string name="account_language_uncertain">백엔드 계정 언어를 확인할 수 없습니다. 로컬 언어 선택은 변경되지 않았습니다.</string>
+    <string name="account_language_retry">언어 동기화 재시도</string>
     <string name="backtests_status_pending">대기 중</string>
     <string name="backtests_status_running">실행 중</string>
     <string name="backtests_status_completed">완료</string>
     <string name="backtests_status_failed">실패</string>
     <string name="backtests_status_cancelled">취소됨</string>
     <string name="backtests_status_unknown">알 수 없음</string>
-    <string name="push_title">Snapper updates</string>
-    <string name="push_generic">Open Snapper to view updates</string>
-    <string name="push_privacy">Notifications show only a generic invitation. Open the app and sign in to view authorized details. Enabling push sends an installation identifier to Google and your configured backend.</string>
-    <string name="push_enable">Enable notifications</string>
-    <string name="push_disable">Disable notifications</string>
-    <string name="push_check">Check registration status</string>
-    <string name="push_off">Notifications are off.</string>
-    <string name="push_busy">Updating notification registration…</string>
-    <string name="push_unavailable">Push is unavailable for this backend.</string>
-    <string name="push_permission">Allow Android notifications to enable push.</string>
-    <string name="push_ready">Push is available. Enable it to register this installation.</string>
-    <string name="push_accepted">Notification registration confirmed. Delivery depends on your backend and device.</string>
-    <string name="push_rejected">Registration was not completed. You can try again explicitly.</string>
-    <string name="push_uncertain">Registration could not be confirmed. Check status before another registration.</string>
-    <string name="push_restart">Close and reopen the app before activating a different Firebase configuration.</string>
-    <string name="push_close">Close</string>
-    <string name="push_cleanup">Local notifications are off. Remote cleanup is pending; disable again while signed in to retry.</string>
+    <string name="push_title">Snapper 업데이트</string>
+    <string name="push_generic">Snapper를 열어 업데이트 확인</string>
+    <string name="push_privacy">알림에는 일반적인 안내만 표시됩니다. 앱을 열고 로그인하여 접근 권한이 있는 세부 정보를 확인하세요. 푸시 알림을 활성화하면 설치 식별자가 Google과 설정된 백엔드로 전송됩니다.</string>
+    <string name="push_enable">알림 활성화</string>
+    <string name="push_disable">알림 비활성화</string>
+    <string name="push_check">등록 상태 확인</string>
+    <string name="push_off">알림이 꺼져 있습니다.</string>
+    <string name="push_busy">알림 등록 업데이트 중…</string>
+    <string name="push_unavailable">이 백엔드에서는 푸시 알림을 사용할 수 없습니다.</string>
+    <string name="push_permission">푸시 알림을 활성화하려면 Android 알림을 허용하세요.</string>
+    <string name="push_ready">푸시 알림을 사용할 수 있습니다. 활성화하여 이 설치를 등록하세요.</string>
+    <string name="push_accepted">알림 등록이 확인되었습니다. 전달 여부는 백엔드와 기기에 따라 달라집니다.</string>
+    <string name="push_rejected">등록이 완료되지 않았습니다. 직접 다시 시도할 수 있습니다.</string>
+    <string name="push_uncertain">등록을 확인할 수 없습니다. 다시 등록하기 전에 상태를 확인하세요.</string>
+    <string name="push_restart">다른 Firebase 구성을 활성화하기 전에 앱을 닫고 다시 여세요.</string>
+    <string name="push_close">닫기</string>
+    <string name="push_cleanup">로컬 알림이 꺼져 있습니다. 원격 정리는 대기 중입니다. 로그인한 상태에서 다시 비활성화하여 재시도하세요.</string>
     <string name="home_connection_connected">연결됨</string>
     <string name="home_connection_connecting">연결 중…</string>
     <string name="home_connection_authenticating">인증 중…</string>
@@ -416,4 +416,72 @@
     <plurals name="home_heartbeat_age_seconds">
         <item quantity="other">%1$d초 전</item>
     </plurals>
+    <string name="records_status_new" formatted="false">신규</string>
+    <string name="records_status_open" formatted="false">오픈</string>
+    <string name="records_status_partially_filled" formatted="false">부분 체결</string>
+    <string name="records_status_filled" formatted="false">체결 완료</string>
+    <string name="records_status_cancelled" formatted="false">취소됨</string>
+    <string name="records_status_rejected" formatted="false">거부됨</string>
+    <string name="records_alert_type_order_unknown" formatted="false">주문 상태 알 수 없음</string>
+    <string name="venue_accounts_status_observed" formatted="false">실시간</string>
+    <string name="venue_accounts_status_simulated" formatted="false">시뮬레이션</string>
+    <string name="venue_accounts_status_stale" formatted="false">기한 만료</string>
+    <string name="venue_accounts_status_clock_error" formatted="false">시간 오류</string>
+    <string name="venue_accounts_status_unverified" formatted="false">미확인</string>
+    <string name="venue_accounts_status_unavailable" formatted="false">사용 불가</string>
+    <string name="venue_accounts_status_not_applicable" formatted="false">해당 없음</string>
+    <string name="venue_accounts_status_unknown" formatted="false">알 수 없음</string>
+    <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">대조 완료</string>
+    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">편차 감지됨</string>
+    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">아직 대조되지 않음</string>
+    <string name="venue_accounts_reconciliation_status_error" formatted="false">대조 오류</string>
+    <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">지원되지 않음</string>
+    <string name="system_status_healthy" formatted="false">정상</string>
+    <string name="system_status_error" formatted="false">오류</string>
+    <string name="system_status_warning" formatted="false">경고</string>
+    <string name="system_status_starting" formatted="false">시작 중</string>
+    <string name="system_status_stopping" formatted="false">중지 중</string>
+    <string name="settings_role_viewer" formatted="false">뷰어</string>
+    <string name="settings_role_operator" formatted="false">운영자</string>
+    <string name="settings_role_admin" formatted="false">관리자</string>
+    <string name="settings_role_ai_delegate" formatted="false">AI 대리인</string>
+    <string name="settings_role_auditor" formatted="false">감사자</string>
+    <string name="process_mode_thread" formatted="false">스레드 모드</string>
+    <string name="process_mode_process" formatted="false">프로세스 모드</string>
+    <string name="process_role_strategy" formatted="false">전략</string>
+    <string name="process_role_backtest" formatted="false">백테스트</string>
+    <string name="positions_timeline_incompleteness_scope_global" formatted="false">포트폴리오 전체</string>
+    <string name="positions_timeline_incompleteness_tier_mark_incomplete" formatted="false">마크 가격 불완전</string>
+    <string name="positions_timeline_incompleteness_tier_untrusted" formatted="false">신뢰할 수 없음</string>
+    <string name="positions_timeline_attribution_origins_manual" formatted="false">수동 · 직접</string>
+    <string name="positions_timeline_attribution_origins_plan" formatted="false">플랜 · 자동</string>
+    <string name="positions_timeline_attribution_origins_system" formatted="false">시스템 · 자동</string>
+    <string name="positions_timeline_attribution_origins_unattributed" formatted="false">귀속 없음 · 출처 불명</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">이 예약에 대한 증거로 사용되는 거래소 거래 채우기가 없습니다.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">거래소 거래 기록이 증거로 제공되지 않는 레거시 파생 기록입니다.</string>
+    <string name="common_yes" formatted="false">예</string>
+    <string name="common_no" formatted="false">아니요</string>
+    <string name="settings_role_ai_reviewer" formatted="false">AI 검토자</string>
+    <string name="settings_role_ai_researcher" formatted="false">AI 연구자</string>
+    <string name="process_role_core" formatted="false">핵심</string>
+    <string name="process_role_task" formatted="false">작업</string>
+    <string name="records_status_submitted" formatted="false">제출됨</string>
+    <string name="system_status_ready" formatted="false">준비됨</string>
+    <string name="system_status_degraded" formatted="false">성능 저하</string>
+    <string name="market_instrument_kind_spot" formatted="false">현물</string>
+    <string name="market_instrument_kind_perpetual" formatted="false">무기한 계약</string>
+    <string name="market_instrument_kind_future" formatted="false">선물 계약</string>
+    <string name="market_instrument_kind_etf" formatted="false">ETF</string>
+    <string name="market_instrument_kind_option" formatted="false">옵션</string>
+    <string name="venue_accounts_valuation_native_only" formatted="false">원래 통화만</string>
+    <string name="venue_accounts_status_unobserved" formatted="false">아직 관측되지 않음</string>
+    <string name="pnl_execution_history_as_recorded" formatted="false">기록된 그대로</string>
+    <string name="pnl_execution_history_operator_corrected" formatted="false">운영자가 정정함</string>
+    <string name="ai_reviews_status_approved" formatted="false">승인됨</string>
+    <string name="ai_reviews_status_rejected" formatted="false">거부됨</string>
+    <string name="venue_accounts_evaluation_matched" formatted="false">일치</string>
+    <string name="venue_accounts_evaluation_mismatched" formatted="false">불일치</string>
+    <string name="venue_accounts_evaluation_incomplete" formatted="false">불완전</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">거래소 원시 값</string>
+    <string name="venue_accounts_numeric_source_legacy_float" formatted="false">기존 부동소수점 값</string>
 </resources>

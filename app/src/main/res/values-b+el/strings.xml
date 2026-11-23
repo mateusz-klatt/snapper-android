@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="privacy_policy" formatted="false">Privacy policy</string>
+    <string name="privacy_policy" formatted="false">Πολιτική απορρήτου</string>
     <string name="username" formatted="false">Όνομα χρήστη</string>
     <string name="password" formatted="false">Κωδικός πρόσβασης</string>
     <string name="sign_in" formatted="false">Σύνδεση</string>
-    <string name="session_retention_notice" formatted="false">Staying signed in requires Android 11+, a secure screen lock, and authentication with your PIN, pattern, password or strong biometrics within the last 5 minutes. Otherwise, sign in again after the app restarts.</string>
+    <string name="session_retention_notice" formatted="false">Για να παραμείνετε συνδεδεμένοι, απαιτούνται Android 11+, ασφαλές κλείδωμα οθόνης και έλεγχος ταυτότητας με PIN, μοτίβο, κωδικό πρόσβασης ή ισχυρά βιομετρικά στοιχεία εντός των τελευταίων 5 λεπτών. Διαφορετικά, συνδεθείτε ξανά μετά την επανεκκίνηση της εφαρμογής.</string>
     <string name="subtitle" formatted="false">Πλατφόρμα συναλλαγών</string>
     <string name="backend" formatted="false">Προσαρμοσμένη διεύθυνση URL διακομιστή</string>
     <string name="language" formatted="false">Γλώσσα</string>
@@ -22,12 +22,12 @@
     <string name="pnl" formatted="false">Μη πραγματοποιημένα κέρδη/ζημίες</string>
     <string name="instrument" formatted="false">Μέσο</string>
     <string name="price" formatted="false">Τιμή</string>
-    <string name="filled" formatted="false">Filled</string>
+    <string name="filled" formatted="false">Εκτελεσμένη ποσότητα</string>
     <string name="status" formatted="false">Κατάσταση</string>
     <string name="side" formatted="false">Κατεύθυνση</string>
-    <string name="open" formatted="false">Open</string>
-    <string name="high" formatted="false">High</string>
-    <string name="low" formatted="false">Low</string>
+    <string name="open" formatted="false">Άνοιγμα</string>
+    <string name="high" formatted="false">Υψηλό</string>
+    <string name="low" formatted="false">Χαμηλό</string>
     <string name="close" formatted="false">Κλείσιμο</string>
     <string name="volume" formatted="false">Όγκος</string>
     <string name="timeframe" formatted="false">Χρονικό πλαίσιο</string>
@@ -37,32 +37,32 @@
     <string name="alerts" formatted="false">Ειδοποιήσεις</string>
     <string name="settings" formatted="false">Ρυθμίσεις</string>
     <string name="save" formatted="false">Αποθήκευση</string>
-    <string name="refresh" formatted="false">Refresh</string>
+    <string name="refresh" formatted="false">Ανανέωση</string>
     <string name="exchange" formatted="false">Ανταλλακτήριο</string>
-    <string name="load_market" formatted="false">Load candles</string>
-    <string name="empty" formatted="false">No records available.</string>
-    <string name="snapshot_note" formatted="false">Snapshot data. Refresh to retrieve the latest available records.</string>
-    <string name="chart_description" formatted="false">Historical candle chart. Exact values are listed below.</string>
-    <string name="error_origin" formatted="false">Enter a valid HTTPS backend origin.</string>
-    <string name="error_credentials" formatted="false">The username or password is incorrect.</string>
-    <string name="error_session" formatted="false">Your session expired. Please sign in again.</string>
-    <string name="error_network" formatted="false">Could not reach the backend. Check your connection and try again.</string>
-    <string name="error_service" formatted="false">The backend could not complete this request. Please try again.</string>
-    <string name="error_unknown" formatted="false">Something went wrong. Please try again.</string>
+    <string name="load_market" formatted="false">Φόρτωση κεριών</string>
+    <string name="empty" formatted="false">Δεν υπάρχουν διαθέσιμες εγγραφές.</string>
+    <string name="snapshot_note" formatted="false">Στιγμιότυπο δεδομένων. Ανανεώστε για να λάβετε τις πιο πρόσφατες διαθέσιμες εγγραφές.</string>
+    <string name="chart_description" formatted="false">Ιστορικό διάγραμμα κεριών. Οι ακριβείς τιμές παρατίθενται παρακάτω.</string>
+    <string name="error_origin" formatted="false">Εισαγάγετε μια έγκυρη διεύθυνση προέλευσης HTTPS για τον διακομιστή.</string>
+    <string name="error_credentials" formatted="false">Το όνομα χρήστη ή ο κωδικός πρόσβασης είναι λανθασμένος.</string>
+    <string name="error_session" formatted="false">Η συνεδρία σας έληξε. Συνδεθείτε ξανά.</string>
+    <string name="error_network" formatted="false">Δεν ήταν δυνατή η σύνδεση με τον διακομιστή. Ελέγξτε τη σύνδεσή σας και δοκιμάστε ξανά.</string>
+    <string name="error_service" formatted="false">Ο διακομιστής δεν μπόρεσε να ολοκληρώσει αυτό το αίτημα. Δοκιμάστε ξανά.</string>
+    <string name="error_unknown" formatted="false">Παρουσιάστηκε σφάλμα. Δοκιμάστε ξανά.</string>
     <string name="dismiss" formatted="false">Κλείσιμο</string>
     <string name="paper" formatted="false">Εικονικό</string>
-    <string name="safety_critical" formatted="false">Safety critical</string>
-    <string name="snapshot_limit" formatted="false">This view shows current positions and up to 100 recent orders and alerts; it is not a complete history.</string>
-    <string name="chart_window" formatted="false">The chart shows the last 100 retrieved candles.</string>
-    <string name="local_network_explanation" formatted="false">For a backend on your local network, allow local network access before signing in. Public internet backends do not need this permission.</string>
-    <string name="local_network_allow" formatted="false">Allow local network</string>
-    <string name="local_network_settings" formatted="false">Open app settings</string>
-    <string name="order_new" formatted="false">New Order</string>
-    <string name="order_entry" formatted="false">New Manual Order</string>
-    <string name="order_confirm" formatted="false">Confirm Order</string>
+    <string name="safety_critical" formatted="false">Κρίσιμο για την ασφάλεια</string>
+    <string name="snapshot_limit" formatted="false">Αυτή η προβολή εμφανίζει τις τρέχουσες θέσεις και έως 100 πρόσφατες εντολές και ειδοποιήσεις· δεν αποτελεί πλήρες ιστορικό.</string>
+    <string name="chart_window" formatted="false">Το διάγραμμα εμφανίζει τα τελευταία 100 κεριά που ανακτήθηκαν.</string>
+    <string name="local_network_explanation" formatted="false">Για διακομιστή στο τοπικό σας δίκτυο, επιτρέψτε την πρόσβαση στο τοπικό δίκτυο πριν συνδεθείτε. Οι διακομιστές στο δημόσιο διαδίκτυο δεν χρειάζονται αυτή την άδεια.</string>
+    <string name="local_network_allow" formatted="false">Να επιτρέπεται το τοπικό δίκτυο</string>
+    <string name="local_network_settings" formatted="false">Άνοιγμα ρυθμίσεων εφαρμογής</string>
+    <string name="order_new" formatted="false">Νέα εντολή</string>
+    <string name="order_entry" formatted="false">Νέα χειροκίνητη εντολή</string>
+    <string name="order_confirm" formatted="false">Επιβεβαίωση εντολής</string>
     <string name="order_quantity" formatted="false">Ποσότητα</string>
-    <string name="order_type" formatted="false">Order Type</string>
-    <string name="order_stop_price" formatted="false">Stop Price</string>
+    <string name="order_type" formatted="false">Τύπος εντολής</string>
+    <string name="order_stop_price" formatted="false">Τιμή stop</string>
     <string name="order_mode" formatted="false">Λειτουργία</string>
     <string name="order_buy" formatted="false">Αγορά</string>
     <string name="order_sell" formatted="false">Πώληση</string>
@@ -70,35 +70,35 @@
     <string name="order_limit" formatted="false">Οριακή</string>
     <string name="order_stop" formatted="false">Stop</string>
     <string name="order_stop_limit" formatted="false">Stop Limit</string>
-    <string name="order_live" formatted="false">Live</string>
-    <string name="order_review" formatted="false">Review Order</string>
-    <string name="order_back" formatted="false">Back</string>
-    <string name="order_submit" formatted="false">Confirm Order</string>
-    <string name="order_submitting" formatted="false">Submitting…</string>
+    <string name="order_live" formatted="false">Πραγματικές συναλλαγές</string>
+    <string name="order_review" formatted="false">Έλεγχος εντολής</string>
+    <string name="order_back" formatted="false">Πίσω</string>
+    <string name="order_submit" formatted="false">Επιβεβαίωση εντολής</string>
+    <string name="order_submitting" formatted="false">Υποβολή…</string>
     <string name="order_leverage" formatted="false">Μόχλευση</string>
-    <string name="order_reduce_only" formatted="false">Reduce Only</string>
-    <string name="order_observation_only" formatted="false">This instrument is observation-only — place orders on an execution-capable instrument.</string>
-    <string name="order_unknown_instrument" formatted="false">This instrument is not recognised. Reload the list and try again.</string>
-    <string name="order_caps_violation" formatted="false">This order would exceed your account safety caps. Review your risk settings and retry.</string>
-    <string name="order_rejected" formatted="false">Order creation failed</string>
+    <string name="order_reduce_only" formatted="false">Μόνο μείωση</string>
+    <string name="order_observation_only" formatted="false">Αυτό το μέσο προορίζεται μόνο για παρακολούθηση — υποβάλετε εντολές για μέσο που υποστηρίζει εκτέλεση.</string>
+    <string name="order_unknown_instrument" formatted="false">Αυτό το μέσο δεν αναγνωρίζεται. Φορτώστε ξανά τη λίστα και δοκιμάστε ξανά.</string>
+    <string name="order_caps_violation" formatted="false">Αυτή η εντολή θα υπερέβαινε τα όρια ασφαλείας του λογαριασμού σας. Ελέγξτε τις ρυθμίσεις κινδύνου και δοκιμάστε ξανά.</string>
+    <string name="order_rejected" formatted="false">Η δημιουργία εντολής απέτυχε</string>
     <string name="order_cancel_title" formatted="false">Ακύρωση εντολής;</string>
     <string name="order_cancel_confirm" formatted="false">Ακύρωση εντολής</string>
     <string name="order_keep_open" formatted="false">Να μείνει ανοιχτή</string>
-    <string name="order_select_wallet" formatted="false">Select a wallet on Home before placing an order.</string>
-    <string name="order_created" formatted="false">Order submitted. Refresh to check execution status.</string>
-    <string name="order_cancel_requested" formatted="false">Cancellation requested. Refresh to check the order status.</string>
-    <string name="order_unknown_outcome" formatted="false">The request outcome is unknown. Check status before taking further action.</string>
-    <string name="order_check_status" formatted="false">Check status</string>
-    <string name="order_retry_intent" formatted="false">Retry same order</string>
-    <string name="order_catalog_error" formatted="false">Could not load exchanges or instruments. Try again.</string>
-    <string name="order_no_instruments" formatted="false">No instruments available for this exchange.</string>
-    <string name="order_invalid_form" formatted="false">Enter positive quantities and required prices. Optional leverage must be a positive whole number.</string>
-    <string name="order_refresh_failed" formatted="false">The request was accepted, but the latest records could not be loaded. Refresh to check status.</string>
-    <string name="order_forbidden" formatted="false">You no longer have permission for this action.</string>
-    <string name="order_session_changed" formatted="false">The session or wallet changed. Open a new order from the current account.</string>
+    <string name="order_select_wallet" formatted="false">Επιλέξτε ένα πορτοφόλι στην Αρχική πριν υποβάλετε εντολή.</string>
+    <string name="order_created" formatted="false">Η εντολή υποβλήθηκε. Ανανεώστε για να ελέγξετε την κατάσταση εκτέλεσης.</string>
+    <string name="order_cancel_requested" formatted="false">Ζητήθηκε ακύρωση. Ανανεώστε για να ελέγξετε την κατάσταση της εντολής.</string>
+    <string name="order_unknown_outcome" formatted="false">Το αποτέλεσμα του αιτήματος είναι άγνωστο. Ελέγξτε την κατάσταση πριν από περαιτέρω ενέργειες.</string>
+    <string name="order_check_status" formatted="false">Έλεγχος κατάστασης</string>
+    <string name="order_retry_intent" formatted="false">Επανάληψη ίδιας εντολής</string>
+    <string name="order_catalog_error" formatted="false">Δεν ήταν δυνατή η φόρτωση ανταλλακτηρίων ή μέσων. Δοκιμάστε ξανά.</string>
+    <string name="order_no_instruments" formatted="false">Δεν υπάρχουν διαθέσιμα μέσα για αυτό το ανταλλακτήριο.</string>
+    <string name="order_invalid_form" formatted="false">Εισαγάγετε θετικές ποσότητες και τις απαιτούμενες τιμές. Η προαιρετική μόχλευση πρέπει να είναι θετικός ακέραιος.</string>
+    <string name="order_refresh_failed" formatted="false">Το αίτημα έγινε δεκτό, αλλά οι πιο πρόσφατες εγγραφές δεν φορτώθηκαν. Ανανεώστε για να ελέγξετε την κατάσταση.</string>
+    <string name="order_forbidden" formatted="false">Δεν έχετε πλέον άδεια για αυτή την ενέργεια.</string>
+    <string name="order_session_changed" formatted="false">Η συνεδρία ή το πορτοφόλι άλλαξε. Ανοίξτε νέα εντολή από τον τρέχοντα λογαριασμό.</string>
     <string name="order_enabled" formatted="false">Ενεργοποιημένο</string>
     <string name="order_disabled" formatted="false">Απενεργοποιημένο</string>
-    <string name="system_tools" formatted="false">Overview</string>
+    <string name="system_tools" formatted="false">Επισκόπηση</string>
     <string name="desk_attach_button" formatted="false">Προσθήκη παρατηρητή</string>
     <string name="desk_attach_desk_label" formatted="false">Γραφείο</string>
     <string name="desk_nav_title" formatted="false">Τα γραφεία μου</string>
@@ -128,7 +128,7 @@
     <string name="market_catalog_error" formatted="false">\@string/error_unknown</string>
     <string name="system_health" formatted="false">Κατάσταση συστήματος</string>
     <string name="system_strategies" formatted="false">Στρατηγικές</string>
-    <string name="system_backtests" formatted="false">Backtests</string>
+    <string name="system_backtests" formatted="false">Ιστορικές δοκιμές</string>
     <string name="system_users" formatted="false">Χρήστες</string>
     <string name="system_delegates" formatted="false">Εκπρόσωποι AI</string>
     <string name="system_version" formatted="false">Έκδοση</string>
@@ -157,13 +157,13 @@
     <string name="system_active" formatted="false">Ενεργός</string>
     <string name="system_inactive" formatted="false">Ανενεργός</string>
     <string name="system_revoked" formatted="false">Ανακλήθηκε</string>
-    <string name="records_open" formatted="false">Open</string>
+    <string name="records_open" formatted="false">Ανοιχτές</string>
     <string name="records_recent" formatted="false">Πρόσφατες</string>
     <string name="records_fills" formatted="false">Εκτελέσεις</string>
-    <string name="records_refresh" formatted="false">Refresh</string>
-    <string name="records_fee" formatted="false">Fee</string>
-    <string name="records_details" formatted="false">Details</string>
-    <string name="records_hide_details" formatted="false">\@string/close</string>
+    <string name="records_refresh" formatted="false">Ανανέωση</string>
+    <string name="records_fee" formatted="false">Προμήθεια</string>
+    <string name="records_details" formatted="false">Λεπτομέρειες</string>
+    <string name="records_hide_details" formatted="false">Κλείσιμο</string>
     <string name="records_thread" formatted="false">Νήμα</string>
     <string name="records_source_topic" formatted="false">Θέμα προέλευσης</string>
     <string name="notification_defaults_title" formatted="false">Προεπιλογές χρήστη</string>
@@ -172,9 +172,9 @@
     <string name="notification_defaults_priority" formatted="false">Ελάχιστη προτεραιότητα</string>
     <string name="notification_defaults_load_failed" formatted="false">Αποτυχία φόρτωσης προτιμήσεων</string>
     <string name="notification_defaults_save_failed" formatted="false">Αποτυχία αποθήκευσης προτιμήσεων</string>
-    <string name="notification_defaults_low" formatted="false">Low</string>
+    <string name="notification_defaults_low" formatted="false">Χαμηλή</string>
     <string name="notification_defaults_medium" formatted="false">Μεσαία</string>
-    <string name="notification_defaults_high" formatted="false">High</string>
+    <string name="notification_defaults_high" formatted="false">Υψηλή</string>
     <string name="notification_defaults_fill" formatted="false">Η εντολή εκτελέστηκε</string>
     <string name="notification_defaults_rejected" formatted="false">Η εντολή απορρίφθηκε</string>
     <string name="notification_defaults_stop" formatted="false">Ενεργοποιήθηκε το όριο ζημίας</string>
@@ -199,23 +199,23 @@
     <string name="signals_export" formatted="false">Εξαγωγή</string>
     <string name="signals_export_failed" formatted="false">Η υποβολή απέτυχε</string>
     <string name="venue_accounts_title" formatted="false">Λογαριασμοί Ανταλλακτηρίου</string>
-    <string name="venue_accounts_refresh" formatted="false">Refresh</string>
+    <string name="venue_accounts_refresh" formatted="false">Ανανέωση</string>
     <string name="venue_accounts_failed" formatted="false">Δεν ήταν δυνατή η φόρτωση της κατάστασης του λογαριασμού στο ανταλλακτήριο. Ο λογαριασμός δεν είναι κενός· τα δεδομένα απλώς δεν είναι διαθέσιμα αυτή τη στιγμή.</string>
     <string name="venue_accounts_authoritative" formatted="false">Ζωντανή πραγματικότητα ανταλλακτηρίου, εντός του παραθύρου εξουσιοδότησης.</string>
     <string name="venue_accounts_not_authoritative" formatted="false">Οι γραμμές που δεν σημειώνονται ως Ζωντανά εμφανίζουν παλιά, προσομοιωμένα ή μη διαθέσιμα δεδομένα — δεν είναι ποτέ έγκυρα υπόλοιπα του ανταλλακτηρίου σε πραγματικό χρόνο.</string>
-    <string name="venue_accounts_valuation" formatted="false">Valuation</string>
+    <string name="venue_accounts_valuation" formatted="false">Αποτίμηση</string>
     <string name="venue_accounts_balances" formatted="false">Υπόλοιπα</string>
-    <string name="venue_accounts_observed" formatted="false">Observed at</string>
-    <string name="venue_accounts_source" formatted="false">Source observation</string>
+    <string name="venue_accounts_observed" formatted="false">Χρόνος παρατήρησης</string>
+    <string name="venue_accounts_source" formatted="false">Αρχική παρατήρηση</string>
     <string name="venue_accounts_total" formatted="false">Σύνολο</string>
     <string name="venue_accounts_free" formatted="false">Διαθέσιμο</string>
     <string name="venue_accounts_used" formatted="false">Χρησιμοποιημένο</string>
-    <string name="venue_accounts_numeric_source" formatted="false">Numeric provenance</string>
+    <string name="venue_accounts_numeric_source" formatted="false">Προέλευση αριθμητικών τιμών</string>
     <string name="venue_accounts_positions" formatted="false">Ανοιχτές θέσεις</string>
     <string name="venue_accounts_funding" formatted="false">Χρηματοδότηση</string>
-    <string name="venue_accounts_reconciliation" formatted="false">Reconciliation status</string>
-    <string name="venue_accounts_evaluation" formatted="false">Evaluation status</string>
-    <string name="venue_accounts_deadline" formatted="false">Authority deadline</string>
+    <string name="venue_accounts_reconciliation" formatted="false">Κατάσταση συμφωνίας</string>
+    <string name="venue_accounts_evaluation" formatted="false">Κατάσταση αξιολόγησης</string>
+    <string name="venue_accounts_deadline" formatted="false">Προθεσμία ισχύος έγκυρων δεδομένων</string>
     <string name="positions_timeline_controls_window" formatted="false">Παράθυρο</string>
     <string name="positions_timeline_controls_granularity" formatted="false">Χρονική ανάλυση</string>
     <string name="positions_timeline_controls_valuationcurrency" formatted="false">Νόμισμα αποτίμησης</string>
@@ -228,11 +228,11 @@
     <string name="positions_timeline_nowallet_message" formatted="false">Επιλέξτε πορτοφόλι για να δείτε τη χρονογραμμή P&amp;L του.</string>
     <string name="positions_timeline_incompleteness_title" formatted="false">Γιατί ορισμένα σημεία είναι ελλιπή</string>
     <string name="positions_timeline_incompleteness_description" formatted="false">Οι αιτίες αφορούν ολόκληρο το φορτωμένο παράθυρο. Οι καταμετρήσεις ενδέχεται να αλληλεπικαλύπτονται όταν ένα σημείο έχει περισσότερες από μία αιτίες.</string>
-    <string name="positions_timeline_incompleteness_affectedpoints">Affected points: %1$s</string>
+    <string name="positions_timeline_incompleteness_affectedpoints">Επηρεαζόμενα σημεία: %1$s</string>
     <string name="positions_timeline_chart_title" formatted="false">Εξέλιξη P&amp;L στον χρόνο</string>
     <string name="positions_timeline_chart_net" formatted="false">Καθαρό P&amp;L</string>
     <string name="positions_timeline_chart_realized" formatted="false">Πραγματοποιημένο P&amp;L</string>
-    <string name="positions_timeline_chart_unrealized" formatted="false">Unrealized P&amp;L</string>
+    <string name="positions_timeline_chart_unrealized" formatted="false">Μη πραγματοποιημένο P&amp;L</string>
     <string name="positions_timeline_attribution_title" formatted="false">Τελευταίος επιμερισμός P&amp;L</string>
     <string name="positions_timeline_attribution_nostrategy" formatted="false">Καμία επαληθευμένη στρατηγική</string>
     <string name="positions_timeline_attribution_withheld" formatted="false">Μη επαληθεύσιμο</string>
@@ -241,7 +241,7 @@
     <string name="positions_timeline_contributions_realized" formatted="false">Πραγματοποιημένο P&amp;L</string>
     <string name="positions_timeline_contributions_fees" formatted="false">Προμήθειες</string>
     <string name="positions_timeline_contributions_accrual" formatted="false">Δεδουλευμένη χρηματοδότηση</string>
-    <string name="positions_timeline_contributions_unrealized" formatted="false">Unrealized P&amp;L</string>
+    <string name="positions_timeline_contributions_unrealized" formatted="false">Μη πραγματοποιημένο P&amp;L</string>
     <string name="positions_timeline_incompleteness_reasons_scope_order_regression" formatted="false">Χρονική οπισθοδρόμηση στη σειρά εμβέλειας</string>
     <string name="positions_timeline_incompleteness_reasons_before_activation" formatted="false">Το σημείο προηγείται της ενεργοποίησης</string>
     <string name="positions_timeline_incompleteness_reasons_activation_baseline_non_finite" formatted="false">Η γραμμή βάσης ενεργοποίησης δεν είναι πεπερασμένη</string>
@@ -260,26 +260,26 @@
     <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">Η συμφωνία του επιμερισμού απέτυχε</string>
     <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">Τα σύνολα P&amp;L ανά μέσο δεν συμφωνούν με το συνολικό P&amp;L</string>
     <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">Εκτέλεση συναλλαγής που έφτασε καθυστερημένα με χρονική σήμανση πριν από την ενεργοποίηση</string>
-    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Attribution sum is not representable</string>
-    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Instrument sum is not representable</string>
-    <string name="positions_timeline_executionhistory_title" formatted="false">Operator-corrected execution history</string>
-    <string name="positions_timeline_executionhistory_summary" formatted="false">An operator repudiated recorded executions in this scope. Every correction listed here is excluded from the figures on this page.</string>
-    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Repudiated execution</string>
-    <string name="positions_timeline_executionhistory_correctionid" formatted="false">Correction record</string>
-    <string name="positions_timeline_equity_title" formatted="false">Equity overlay</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Το άθροισμα των αποδιδόμενων τιμών δεν μπορεί να αναπαρασταθεί</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Το άθροισμα ανά μέσο δεν μπορεί να αναπαρασταθεί</string>
+    <string name="positions_timeline_executionhistory_title" formatted="false">Ιστορικό εκτελέσεων διορθωμένο από χειριστή</string>
+    <string name="positions_timeline_executionhistory_summary" formatted="false">Ένας χειριστής ακύρωσε την εγκυρότητα καταγεγραμμένων εκτελέσεων σε αυτό το πεδίο. Κάθε διόρθωση που αναφέρεται εδώ εξαιρείται από τα στοιχεία αυτής της σελίδας.</string>
+    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Εκτέλεση που κρίθηκε άκυρη</string>
+    <string name="positions_timeline_executionhistory_correctionid" formatted="false">Εγγραφή διόρθωσης</string>
+    <string name="positions_timeline_equity_title" formatted="false">Επικάλυψη ιδίων κεφαλαίων</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">Ίδια κεφάλαια</string>
-    <string name="positions_timeline_equity_drawdown_current" formatted="false">Current drawdown</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Spot venue only — balances held on other venues are excluded.</string>
-    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">External deposits and withdrawals are not adjusted out.</string>
-    <string name="positions_timeline_equity_honesty_restatedfrom">These figures are restated from %1$s at each minute\'s close, not sampled natively in this currency.</string>
-    <string name="positions_timeline_equity_honesty_pricedon">Priced on %1$s.</string>
-    <string name="positions_timeline_equity_honesty_conversionwithheld">Minutes dropped for want of a proven close: %1$s.</string>
-    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Drawdown is withheld on a converted basis, because the running peak is tracked in the sampled currency.</string>
-    <string name="positions_timeline_equity_cashposition_position" formatted="false">Position value</string>
-    <string name="positions_timeline_equity_cashposition_cash" formatted="false">Cash</string>
-    <string name="pnl_provenance">Calculation: %1$s · Mark source: %2$s · As of: %3$s</string>
-    <string name="pnl_equity_coverage">Equity sampled: %1$s · Complete minutes: %2$s</string>
-    <string name="pnl_execution_history">Execution history: %1$s</string>
+    <string name="positions_timeline_equity_drawdown_current" formatted="false">Τρέχουσα υποχώρηση από το μέγιστο</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Μόνο ανταλλακτήριο spot — τα υπόλοιπα σε άλλα ανταλλακτήρια εξαιρούνται.</string>
+    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Οι εξωτερικές καταθέσεις και αναλήψεις δεν έχουν αφαιρεθεί από τον υπολογισμό.</string>
+    <string name="positions_timeline_equity_honesty_restatedfrom">Αυτά τα στοιχεία μετατρέπονται από %1$s στο κλείσιμο κάθε λεπτού και δεν δειγματοληπτούνται απευθείας σε αυτό το νόμισμα.</string>
+    <string name="positions_timeline_equity_honesty_pricedon">Αποτίμηση στο %1$s.</string>
+    <string name="positions_timeline_equity_honesty_conversionwithheld">Λεπτά που παραλείφθηκαν λόγω έλλειψης τεκμηριωμένης τιμής κλεισίματος: %1$s.</string>
+    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Η υποχώρηση από το μέγιστο δεν εμφανίζεται μετά τη μετατροπή, επειδή το διαρκές μέγιστο παρακολουθείται στο νόμισμα δειγματοληψίας.</string>
+    <string name="positions_timeline_equity_cashposition_position" formatted="false">Αξία θέσης</string>
+    <string name="positions_timeline_equity_cashposition_cash" formatted="false">Μετρητά</string>
+    <string name="pnl_provenance">Υπολογισμός: %1$s · Πηγή τιμής αναφοράς: %2$s · Στις: %3$s</string>
+    <string name="pnl_equity_coverage">Δειγματοληψία ιδίων κεφαλαίων: %1$s · Πλήρη λεπτά: %2$s</string>
+    <string name="pnl_execution_history">Ιστορικό εκτελέσεων: %1$s</string>
     <string name="process_title" formatted="false">Διεργασίες</string>
     <string name="process_running" formatted="false">Σε εξέλιξη</string>
     <string name="process_stopped" formatted="false">Διακόπηκε</string>
@@ -291,22 +291,22 @@
     <string name="process_cpu" formatted="false">CPU</string>
     <string name="process_empty" formatted="false">Δεν υπάρχουν διαμορφωμένες διεργασίες.</string>
     <string name="process_start" formatted="false">Έναρξη</string>
-    <string name="process_stop" formatted="false">Stop</string>
+    <string name="process_stop" formatted="false">Διακοπή</string>
     <string name="process_restart" formatted="false">Επανεκκίνηση</string>
     <string name="process_cancel" formatted="false">Ακύρωση</string>
     <string name="process_stale" formatted="false">Δεν είναι πλέον δυνατός ο έλεγχος αυτής της διεργασίας από εδώ. Ανανεώστε τα δεδομένα και δοκιμάστε ξανά.</string>
     <string name="process_partial" formatted="false">Η διεργασία διακόπηκε, αλλά δεν είναι πλέον δυνατή η επανεκκίνησή της από εδώ. Ανανεώστε τα δεδομένα και δοκιμάστε ξανά.</string>
-    <string name="process_confirm" formatted="false">Confirm process action</string>
-    <string name="process_confirm_message" formatted="false">Apply this action to the selected process?</string>
-    <string name="process_intent_saved" formatted="false">Desired state saved. The owning coordinator will apply it.</string>
-    <string name="process_accepted" formatted="false">Process action accepted.</string>
-    <string name="process_unknown" formatted="false">The command outcome is unknown. Controls remain locked: a status refresh cannot prove whether this command was applied.</string>
-    <string name="process_partial_unknown" formatted="false">The process was stopped, but the restart outcome is unknown. Controls remain locked: a status refresh cannot prove whether the restart was applied.</string>
-    <string name="process_rejected" formatted="false">The process action failed.</string>
-    <string name="process_load_failed" formatted="false">Could not refresh process status.</string>
-    <string name="process_config_failed" formatted="false">Process controls are unavailable because configuration could not be refreshed.</string>
-    <string name="process_enable" formatted="false">Enable</string>
-    <string name="process_disable" formatted="false">Disable</string>
+    <string name="process_confirm" formatted="false">Επιβεβαίωση ενέργειας διεργασίας</string>
+    <string name="process_confirm_message" formatted="false">Να εφαρμοστεί αυτή η ενέργεια στην επιλεγμένη διεργασία;</string>
+    <string name="process_intent_saved" formatted="false">Η επιθυμητή κατάσταση αποθηκεύτηκε. Ο αρμόδιος συντονιστής θα την εφαρμόσει.</string>
+    <string name="process_accepted" formatted="false">Η ενέργεια διεργασίας έγινε δεκτή.</string>
+    <string name="process_unknown" formatted="false">Το αποτέλεσμα της εντολής είναι άγνωστο. Τα χειριστήρια παραμένουν κλειδωμένα: η ανανέωση κατάστασης δεν μπορεί να αποδείξει αν εφαρμόστηκε αυτή η εντολή.</string>
+    <string name="process_partial_unknown" formatted="false">Η διεργασία διακόπηκε, αλλά το αποτέλεσμα της επανεκκίνησης είναι άγνωστο. Τα χειριστήρια παραμένουν κλειδωμένα: η ανανέωση κατάστασης δεν μπορεί να αποδείξει αν πραγματοποιήθηκε η επανεκκίνηση.</string>
+    <string name="process_rejected" formatted="false">Η ενέργεια διεργασίας απέτυχε.</string>
+    <string name="process_load_failed" formatted="false">Δεν ήταν δυνατή η ανανέωση της κατάστασης της διεργασίας.</string>
+    <string name="process_config_failed" formatted="false">Τα χειριστήρια διεργασίας δεν είναι διαθέσιμα επειδή δεν ήταν δυνατή η ανανέωση της διαμόρφωσης.</string>
+    <string name="process_enable" formatted="false">Ενεργοποίηση</string>
+    <string name="process_disable" formatted="false">Απενεργοποίηση</string>
     <string name="ai_reviews_pending_title" formatted="false">Εκκρεμείς αξιολογήσεις</string>
     <string name="ai_reviews_decisions_title" formatted="false">Αποφάσεις AI</string>
     <string name="ai_reviews_deadline" formatted="false">Προθεσμία</string>
@@ -324,13 +324,13 @@
     <string name="ai_reviews_expired_message" formatted="false">Αυτή η αξιολόγηση ξεπέρασε την προθεσμία της και έληξε.</string>
     <string name="ai_reviews_missing" formatted="false">Αυτή η αξιολόγηση δεν υπάρχει πλέον.</string>
     <string name="ai_reviews_denied" formatted="false">Η πρόσβασή σας ως delegate άλλαξε. Κάντε επαναφόρτωση πριν αποφασίσετε.</string>
-    <string name="ai_reviews_load_failed" formatted="false">Could not refresh reviews. Previously loaded reviews remain visible.</string>
-    <string name="ai_reviews_check_status" formatted="false">Check status</string>
-    <string name="ai_reviews_retry" formatted="false">Retry original decision</string>
-    <string name="ai_reviews_confirm" formatted="false">Confirm review decision</string>
-    <string name="ai_reviews_accepted" formatted="false">Decision accepted</string>
-    <string name="ai_reviews_rejected" formatted="false">Decision rejected by the server</string>
-    <string name="ai_reviews_unknown" formatted="false">Outcome unknown. Check status before retrying.</string>
+    <string name="ai_reviews_load_failed" formatted="false">Δεν ήταν δυνατή η ανανέωση των αξιολογήσεων. Οι αξιολογήσεις που είχαν φορτωθεί παραμένουν ορατές.</string>
+    <string name="ai_reviews_check_status" formatted="false">Έλεγχος κατάστασης</string>
+    <string name="ai_reviews_retry" formatted="false">Επανάληψη αρχικής απόφασης</string>
+    <string name="ai_reviews_confirm" formatted="false">Επιβεβαίωση απόφασης αξιολόγησης</string>
+    <string name="ai_reviews_accepted" formatted="false">Η απόφαση έγινε δεκτή</string>
+    <string name="ai_reviews_rejected" formatted="false">Η απόφαση απορρίφθηκε από τον διακομιστή</string>
+    <string name="ai_reviews_unknown" formatted="false">Άγνωστο αποτέλεσμα. Ελέγξτε την κατάσταση πριν δοκιμάσετε ξανά.</string>
     <string name="positions_accessibility_label_closebutton" formatted="false">Κλείσιμο θέσης</string>
     <string name="positions_accessibility_label_reducebutton" formatted="false">Μείωση θέσης</string>
     <string name="positions_reduce_cancel" formatted="false">Ακύρωση</string>
@@ -341,13 +341,13 @@
     <string name="trading_bracket_takeprofitlabel" formatted="false">Όριο κέρδους</string>
     <string name="trading_trailingstop_attach" formatted="false">Προσθήκη κυλιόμενης διακοπής ζημίας</string>
     <string name="trading_trailingstop_trailamountlabel" formatted="false">Απόσταση παρακολούθησης</string>
-    <string name="position_action_review" formatted="false">Review position action</string>
-    <string name="position_action_confirm" formatted="false">Confirm action</string>
-    <string name="position_action_accepted" formatted="false">Request accepted. Refresh to check execution status.</string>
-    <string name="position_action_retry" formatted="false">Retry same request</string>
-    <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
-    <string name="position_action_cycle" formatted="false">Position cycle</string>
-    <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+    <string name="position_action_review" formatted="false">Έλεγχος ενέργειας θέσης</string>
+    <string name="position_action_confirm" formatted="false">Επιβεβαίωση ενέργειας</string>
+    <string name="position_action_accepted" formatted="false">Το αίτημα έγινε δεκτό. Ανανεώστε για να ελέγξετε την κατάσταση εκτέλεσης.</string>
+    <string name="position_action_retry" formatted="false">Επανάληψη ίδιου αιτήματος</string>
+    <string name="position_action_minimum_lock" formatted="false">Ελάχιστο κατοχυρωμένο κέρδος (%)</string>
+    <string name="position_action_cycle" formatted="false">Κύκλος θέσης</string>
+    <string name="position_action_invalid" formatted="false">Ελέγξτε τις τιμές που εισαγάγατε πριν συνεχίσετε.</string>
     <string name="display_financial_title" formatted="false">Σύμβαση χρωμάτων χρηματοοικονομικών</string>
     <string name="display_financial_auto" formatted="false">Ταίριασμα με την περιοχή μου (αυτόματο)</string>
     <string name="display_financial_green" formatted="false">Πράσινο = άνοδος, κόκκινο = πτώση (δυτική)</string>
@@ -355,17 +355,17 @@
     <string name="display_financial_current">Τρέχον: %1$s</string>
     <string name="display_financial_green_short" formatted="false">πράσινο άνοδος / κόκκινο πτώση</string>
     <string name="display_financial_red_short" formatted="false">κόκκινο άνοδος / πράσινο πτώση</string>
-    <string name="display_country" formatted="false">Country / region</string>
+    <string name="display_country" formatted="false">Χώρα / περιοχή</string>
     <string name="market_context_last" formatted="false">Τελευταία τιμή</string>
     <string name="market_context_change" formatted="false">Μεταβολή 24ώρου</string>
     <string name="market_context_high" formatted="false">Υψηλό</string>
     <string name="market_context_low" formatted="false">Χαμηλό</string>
     <string name="market_context_related_empty">Δεν έχουν διαμορφωθεί σχετικά μέσα για %1$s στην αγορά %2$s.</string>
-    <string name="market_live_connected" formatted="false">Live updates connected.</string>
-    <string name="market_live_connecting" formatted="false">Connecting to live updates…</string>
-    <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
-    <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
-    <string name="market_context_as_of">Cached close as of %1$s</string>
+    <string name="market_live_connected" formatted="false">Σύνδεση με ενημερώσεις σε πραγματικό χρόνο.</string>
+    <string name="market_live_connecting" formatted="false">Σύνδεση με ενημερώσεις σε πραγματικό χρόνο…</string>
+    <string name="market_live_unavailable" formatted="false">Οι ενημερώσεις σε πραγματικό χρόνο δεν είναι διαθέσιμες· εμφανίζονται στιγμιότυπα.</string>
+    <string name="market_snapshot_mode" formatted="false">Λειτουργία στιγμιότυπων</string>
+    <string name="market_context_as_of">Αποθηκευμένη τιμή κλεισίματος στις %1$s</string>
     <string name="market_cachebanner_message">Προθέρμανση cache: %1$s / %2$s κεριά διαθέσιμα %3$s</string>
     <string name="market_cachebanner_sources_cache" formatted="false"></string>
     <string name="market_cachebanner_sources_db" formatted="false">(από DB)</string>
@@ -373,37 +373,37 @@
     <string name="market_pairstats_chiparialabel">Στατιστικά ζεύγους με %1$s στην αγορά %2$s: Pearson %3$s, τιμή p %4$s</string>
     <string name="market_pairstats_label" formatted="false">Συνολοκλήρωση:</string>
     <string name="market_pairstats_metric">ρ %1$s · p %2$s</string>
-    <string name="market_pair_status_cold" formatted="false">Warming up</string>
-    <string name="market_pair_status_cointegrated" formatted="false">Cointegrated</string>
-    <string name="market_pair_status_warm" formatted="false">Warm</string>
+    <string name="market_pair_status_cold" formatted="false">Προετοιμασία</string>
+    <string name="market_pair_status_cointegrated" formatted="false">Συνολοκληρωμένα</string>
+    <string name="market_pair_status_warm" formatted="false">Έτοιμα</string>
     <string name="positions_timeline_chart_valuationcurrency">Νόμισμα αποτίμησης: %1$s</string>
-    <string name="account_language_syncing">Saving your language choice to your backend account…</string>
-    <string name="account_language_confirmed">Backend account language confirmed: %1$s</string>
-    <string name="account_language_uncertain">The backend account language could not be confirmed. Your local language choice is unchanged.</string>
-    <string name="account_language_retry">Retry language sync</string>
+    <string name="account_language_syncing">Αποθήκευση της επιλεγμένης γλώσσας στον λογαριασμό σας στον διακομιστή…</string>
+    <string name="account_language_confirmed">Η γλώσσα του λογαριασμού στον διακομιστή επιβεβαιώθηκε: %1$s</string>
+    <string name="account_language_uncertain">Δεν ήταν δυνατή η επιβεβαίωση της γλώσσας του λογαριασμού στον διακομιστή. Η τοπική επιλογή γλώσσας παραμένει αμετάβλητη.</string>
+    <string name="account_language_retry">Επανάληψη συγχρονισμού γλώσσας</string>
     <string name="backtests_status_pending">Σε εκκρεμότητα</string>
     <string name="backtests_status_running">Σε εξέλιξη</string>
     <string name="backtests_status_completed">Ολοκληρώθηκε</string>
     <string name="backtests_status_failed">Απέτυχε</string>
     <string name="backtests_status_cancelled">Ακυρώθηκε</string>
     <string name="backtests_status_unknown">Άγνωστο</string>
-    <string name="push_title">Snapper updates</string>
-    <string name="push_generic">Open Snapper to view updates</string>
-    <string name="push_privacy">Notifications show only a generic invitation. Open the app and sign in to view authorized details. Enabling push sends an installation identifier to Google and your configured backend.</string>
-    <string name="push_enable">Enable notifications</string>
-    <string name="push_disable">Disable notifications</string>
-    <string name="push_check">Check registration status</string>
-    <string name="push_off">Notifications are off.</string>
-    <string name="push_busy">Updating notification registration…</string>
-    <string name="push_unavailable">Push is unavailable for this backend.</string>
-    <string name="push_permission">Allow Android notifications to enable push.</string>
-    <string name="push_ready">Push is available. Enable it to register this installation.</string>
-    <string name="push_accepted">Notification registration confirmed. Delivery depends on your backend and device.</string>
-    <string name="push_rejected">Registration was not completed. You can try again explicitly.</string>
-    <string name="push_uncertain">Registration could not be confirmed. Check status before another registration.</string>
-    <string name="push_restart">Close and reopen the app before activating a different Firebase configuration.</string>
-    <string name="push_close">Close</string>
-    <string name="push_cleanup">Local notifications are off. Remote cleanup is pending; disable again while signed in to retry.</string>
+    <string name="push_title">Ενημερώσεις Snapper</string>
+    <string name="push_generic">Ανοίξτε το Snapper για να δείτε τις ενημερώσεις</string>
+    <string name="push_privacy">Οι ειδοποιήσεις εμφανίζουν μόνο μια γενική πρόσκληση. Ανοίξτε την εφαρμογή και συνδεθείτε για να δείτε τις λεπτομέρειες στις οποίες έχετε πρόσβαση. Η ενεργοποίηση των ειδοποιήσεων push στέλνει ένα αναγνωριστικό εγκατάστασης στην Google και στον διακομιστή που έχετε ρυθμίσει.</string>
+    <string name="push_enable">Ενεργοποίηση ειδοποιήσεων</string>
+    <string name="push_disable">Απενεργοποίηση ειδοποιήσεων</string>
+    <string name="push_check">Έλεγχος κατάστασης εγγραφής</string>
+    <string name="push_off">Οι ειδοποιήσεις είναι απενεργοποιημένες.</string>
+    <string name="push_busy">Ενημέρωση εγγραφής ειδοποιήσεων…</string>
+    <string name="push_unavailable">Οι ειδοποιήσεις push δεν είναι διαθέσιμες για αυτόν τον διακομιστή.</string>
+    <string name="push_permission">Επιτρέψτε τις ειδοποιήσεις Android για να ενεργοποιήσετε τις ειδοποιήσεις push.</string>
+    <string name="push_ready">Οι ειδοποιήσεις push είναι διαθέσιμες. Ενεργοποιήστε τες για να καταχωρίσετε αυτή την εγκατάσταση.</string>
+    <string name="push_accepted">Η εγγραφή ειδοποιήσεων επιβεβαιώθηκε. Η παράδοση εξαρτάται από τον διακομιστή και τη συσκευή σας.</string>
+    <string name="push_rejected">Η εγγραφή δεν ολοκληρώθηκε. Μπορείτε να δοκιμάσετε ξανά χειροκίνητα.</string>
+    <string name="push_uncertain">Δεν ήταν δυνατή η επιβεβαίωση της εγγραφής. Ελέγξτε την κατάσταση πριν από νέα εγγραφή.</string>
+    <string name="push_restart">Κλείστε και ανοίξτε ξανά την εφαρμογή πριν ενεργοποιήσετε διαφορετική διαμόρφωση Firebase.</string>
+    <string name="push_close">Κλείσιμο</string>
+    <string name="push_cleanup">Οι τοπικές ειδοποιήσεις είναι απενεργοποιημένες. Η απομακρυσμένη εκκαθάριση εκκρεμεί· απενεργοποιήστε ξανά ενώ είστε συνδεδεμένοι για νέα προσπάθεια.</string>
     <string name="home_connection_connected">Συνδεδεμένη</string>
     <string name="home_connection_connecting">Γίνεται σύνδεση…</string>
     <string name="home_connection_authenticating">Έλεγχος ταυτότητας…</string>
@@ -417,4 +417,72 @@
         <item quantity="one">%1$d δευτερόλεπτο πριν</item>
         <item quantity="other">%1$d δευτερόλεπτα πριν</item>
     </plurals>
+    <string name="records_status_new" formatted="false">Νέα</string>
+    <string name="records_status_open" formatted="false">Ανοικτή</string>
+    <string name="records_status_partially_filled" formatted="false">Μερικώς εκτελεσμένη</string>
+    <string name="records_status_filled" formatted="false">Εκτελεσμένη</string>
+    <string name="records_status_cancelled" formatted="false">Ακυρωμένη</string>
+    <string name="records_status_rejected" formatted="false">Απορριφθείσα</string>
+    <string name="records_alert_type_order_unknown" formatted="false">Άγνωστη κατάσταση εντολής</string>
+    <string name="venue_accounts_status_observed" formatted="false">Πραγματικός χρόνος</string>
+    <string name="venue_accounts_status_simulated" formatted="false">Προσομοιωμένο</string>
+    <string name="venue_accounts_status_stale" formatted="false">Μη ενημερωμένο</string>
+    <string name="venue_accounts_status_clock_error" formatted="false">Σφάλμα ρολογιού</string>
+    <string name="venue_accounts_status_unverified" formatted="false">Μη επαληθευμένο</string>
+    <string name="venue_accounts_status_unavailable" formatted="false">Μη διαθέσιμο</string>
+    <string name="venue_accounts_status_not_applicable" formatted="false">Μη εφαρμόσιμο</string>
+    <string name="venue_accounts_status_unknown" formatted="false">Άγνωστο</string>
+    <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Συμφωνημένο</string>
+    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">Εντοπίστηκε απόκλιση</string>
+    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">Δεν έχει συμφωνηθεί ακόμα</string>
+    <string name="venue_accounts_reconciliation_status_error" formatted="false">Σφάλμα συμφωνίας</string>
+    <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">Δεν υποστηρίζεται</string>
+    <string name="system_status_healthy" formatted="false">Υγιές</string>
+    <string name="system_status_error" formatted="false">Σφάλμα</string>
+    <string name="system_status_warning" formatted="false">Προειδοποίηση</string>
+    <string name="system_status_starting" formatted="false">εκκινεί</string>
+    <string name="system_status_stopping" formatted="false">σταματά</string>
+    <string name="settings_role_viewer" formatted="false">Παρατηρητής</string>
+    <string name="settings_role_operator" formatted="false">Χειριστής</string>
+    <string name="settings_role_admin" formatted="false">Διαχειριστής</string>
+    <string name="settings_role_ai_delegate" formatted="false">Εκπρόσωπος AI</string>
+    <string name="settings_role_auditor" formatted="false">Ελεγκτής</string>
+    <string name="process_mode_thread" formatted="false">Λειτουργία νήματος</string>
+    <string name="process_mode_process" formatted="false">Λειτουργία διεργασίας</string>
+    <string name="process_role_strategy" formatted="false">Στρατηγική</string>
+    <string name="process_role_backtest" formatted="false">Ιστορικός έλεγχος</string>
+    <string name="positions_timeline_incompleteness_scope_global" formatted="false">Ολόκληρο το χαρτοφυλάκιο</string>
+    <string name="positions_timeline_incompleteness_tier_mark_incomplete" formatted="false">ΕΛΛΙΠΗΣ ΤΙΜΗ ΑΝΑΦΟΡΑΣ</string>
+    <string name="positions_timeline_incompleteness_tier_untrusted" formatted="false">ΜΗ ΑΞΙΟΠΙΣΤΟ</string>
+    <string name="positions_timeline_attribution_origins_manual" formatted="false">Χειροκίνητη · άμεση</string>
+    <string name="positions_timeline_attribution_origins_plan" formatted="false">Πλάνο · αυτοματοποιημένο</string>
+    <string name="positions_timeline_attribution_origins_system" formatted="false">Σύστημα · αυτοματοποιημένο</string>
+    <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Χωρίς επιμερισμό · άγνωστη προέλευση</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Δεν υπάρχει πλήρωση συναλλαγών που να χρησιμεύει ως απόδειξη για αυτήν την κράτηση.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Εγγραφή που προέρχεται από κληρονομιά για την οποία δεν υπάρχει πλήρωση συναλλαγών σε χρηματιστήριο χρησιμεύει ως απόδειξη.</string>
+    <string name="common_yes" formatted="false">Ναι</string>
+    <string name="common_no" formatted="false">Όχι</string>
+    <string name="settings_role_ai_reviewer" formatted="false">Αξιολογητής τεχνητής νοημοσύνης</string>
+    <string name="settings_role_ai_researcher" formatted="false">Ερευνητής τεχνητής νοημοσύνης</string>
+    <string name="process_role_core" formatted="false">Βασική υπηρεσία</string>
+    <string name="process_role_task" formatted="false">Εργασία</string>
+    <string name="records_status_submitted" formatted="false">Υποβλήθηκε</string>
+    <string name="system_status_ready" formatted="false">Έτοιμο</string>
+    <string name="system_status_degraded" formatted="false">Υποβαθμισμένη λειτουργία</string>
+    <string name="market_instrument_kind_spot" formatted="false">Spot</string>
+    <string name="market_instrument_kind_perpetual" formatted="false">Αέναο συμβόλαιο</string>
+    <string name="market_instrument_kind_future" formatted="false">Συμβόλαιο μελλοντικής εκπλήρωσης</string>
+    <string name="market_instrument_kind_etf" formatted="false">ETF</string>
+    <string name="market_instrument_kind_option" formatted="false">Δικαίωμα προαίρεσης</string>
+    <string name="venue_accounts_valuation_native_only" formatted="false">Μόνο αρχικά νομίσματα</string>
+    <string name="venue_accounts_status_unobserved" formatted="false">Δεν έχει παρατηρηθεί ακόμη</string>
+    <string name="pnl_execution_history_as_recorded" formatted="false">Όπως καταγράφηκε</string>
+    <string name="pnl_execution_history_operator_corrected" formatted="false">Διορθώθηκε από χειριστή</string>
+    <string name="ai_reviews_status_approved" formatted="false">Εγκρίθηκε</string>
+    <string name="ai_reviews_status_rejected" formatted="false">Απορρίφθηκε</string>
+    <string name="venue_accounts_evaluation_matched" formatted="false">Συμφωνία</string>
+    <string name="venue_accounts_evaluation_mismatched" formatted="false">Ασυμφωνία</string>
+    <string name="venue_accounts_evaluation_incomplete" formatted="false">Ελλιπές</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Ακατέργαστες τιμές ανταλλακτηρίου</string>
+    <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Παλαιές τιμές κινητής υποδιαστολής</string>
 </resources>

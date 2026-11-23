@@ -27,7 +27,7 @@ internal fun LazyListScope.signalsScreen(state: SignalsState, actions: SignalsAc
     item { SignalControls(state, actions) }
     items(state.visibleRows, key = { it.publicId }) { signal ->
         RecordCard(signal.instrument) {
-            Text(signal.side)
+            Text(tradeSideLabel(signal.side))
             Metric(R.string.signals_strength, signal.strength.display())
             Text(stringResource(when (signalStrengthTier(signal.strength)) {
                 SignalStrengthTier.STRONG -> R.string.signals_strong

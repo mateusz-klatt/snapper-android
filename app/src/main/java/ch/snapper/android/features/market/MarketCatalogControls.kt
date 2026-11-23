@@ -55,7 +55,7 @@ fun MarketCatalogControls(state: MarketCatalogState, actions: MarketCatalogActio
                             TextButton(onClick = { actions.selectInstrument(instrument.symbol); instrumentPicker = false }) {
                                 Column(Modifier.fillMaxWidth()) {
                                     Text(instrument.symbol)
-                                    instrument.instrumentKind?.let { Text(it, style = MaterialTheme.typography.labelSmall) }
+                                    instrument.instrumentKind?.let { Text(instrumentKindLabel(it), style = MaterialTheme.typography.labelSmall) }
                                     if (!instrument.canTrade) Text(stringResource(R.string.market_view_only), style = MaterialTheme.typography.labelSmall)
                                 }
                             }
@@ -64,4 +64,14 @@ fun MarketCatalogControls(state: MarketCatalogState, actions: MarketCatalogActio
                 }
             }, confirmButton = { TextButton(onClick = { instrumentPicker = false }) { Text(stringResource(R.string.market_picker_close)) } })
     }
+}
+
+@Composable
+private fun instrumentKindLabel(value: String): String = when (value) {
+    "spot" -> stringResource(R.string.market_instrument_kind_spot)
+    "perpetual" -> stringResource(R.string.market_instrument_kind_perpetual)
+    "future" -> stringResource(R.string.market_instrument_kind_future)
+    "etf" -> stringResource(R.string.market_instrument_kind_etf)
+    "option" -> stringResource(R.string.market_instrument_kind_option)
+    else -> value
 }

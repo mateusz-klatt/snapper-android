@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="privacy_policy" formatted="false">Privacy policy</string>
+    <string name="privacy_policy" formatted="false">গোপনীয়তা নীতি</string>
     <string name="username" formatted="false">ব্যবহারকারীর নাম</string>
     <string name="password" formatted="false">পাসওয়ার্ড</string>
     <string name="sign_in" formatted="false">সাইন ইন</string>
-    <string name="session_retention_notice" formatted="false">Staying signed in requires Android 11+, a secure screen lock, and authentication with your PIN, pattern, password or strong biometrics within the last 5 minutes. Otherwise, sign in again after the app restarts.</string>
+    <string name="session_retention_notice" formatted="false">সাইন ইন অবস্থায় থাকতে Android 11 বা তার পরের সংস্করণ, নিরাপদ স্ক্রিন লক এবং গত 5 মিনিটের মধ্যে PIN, প্যাটার্ন, পাসওয়ার্ড বা শক্তিশালী বায়োমেট্রিক দিয়ে পরিচয় যাচাই করা প্রয়োজন। অন্যথায় অ্যাপ পুনরায় চালু হলে আবার সাইন ইন করুন।</string>
     <string name="subtitle" formatted="false">ট্রেডিং প্ল্যাটফর্ম</string>
     <string name="backend" formatted="false">কাস্টম ব্যাকএন্ড URL</string>
     <string name="language" formatted="false">ভাষা</string>
@@ -26,8 +26,8 @@
     <string name="status" formatted="false">স্ট্যাটাস</string>
     <string name="side" formatted="false">সাইড</string>
     <string name="open" formatted="false">ওপেন</string>
-    <string name="high" formatted="false">High</string>
-    <string name="low" formatted="false">Low</string>
+    <string name="high" formatted="false">সর্বোচ্চ</string>
+    <string name="low" formatted="false">সর্বনিম্ন</string>
     <string name="close" formatted="false">ক্লোজ</string>
     <string name="volume" formatted="false">ভলিউম</string>
     <string name="timeframe" formatted="false">টাইমফ্রেম</string>
@@ -37,68 +37,68 @@
     <string name="alerts" formatted="false">অ্যালার্ট</string>
     <string name="settings" formatted="false">সেটিংস</string>
     <string name="save" formatted="false">সংরক্ষণ করুন</string>
-    <string name="refresh" formatted="false">Refresh</string>
+    <string name="refresh" formatted="false">রিফ্রেশ</string>
     <string name="exchange" formatted="false">এক্সচেঞ্জ</string>
-    <string name="load_market" formatted="false">Load candles</string>
-    <string name="empty" formatted="false">No records available.</string>
-    <string name="snapshot_note" formatted="false">Snapshot data. Refresh to retrieve the latest available records.</string>
-    <string name="chart_description" formatted="false">Historical candle chart. Exact values are listed below.</string>
-    <string name="error_origin" formatted="false">Enter a valid HTTPS backend origin.</string>
-    <string name="error_credentials" formatted="false">The username or password is incorrect.</string>
-    <string name="error_session" formatted="false">Your session expired. Please sign in again.</string>
-    <string name="error_network" formatted="false">Could not reach the backend. Check your connection and try again.</string>
-    <string name="error_service" formatted="false">The backend could not complete this request. Please try again.</string>
-    <string name="error_unknown" formatted="false">Something went wrong. Please try again.</string>
+    <string name="load_market" formatted="false">ক্যান্ডল লোড করুন</string>
+    <string name="empty" formatted="false">কোনো রেকর্ড উপলভ্য নেই।</string>
+    <string name="snapshot_note" formatted="false">স্ন্যাপশট ডেটা। সর্বশেষ উপলভ্য রেকর্ড পেতে রিফ্রেশ করুন।</string>
+    <string name="chart_description" formatted="false">ঐতিহাসিক ক্যান্ডল চার্ট। সঠিক মানগুলো নিচে দেওয়া আছে।</string>
+    <string name="error_origin" formatted="false">ব্যাকএন্ডের একটি বৈধ HTTPS মূল ঠিকানা লিখুন।</string>
+    <string name="error_credentials" formatted="false">ব্যবহারকারীর নাম বা পাসওয়ার্ড ভুল।</string>
+    <string name="error_session" formatted="false">আপনার সেশনের মেয়াদ শেষ হয়েছে। আবার সাইন ইন করুন।</string>
+    <string name="error_network" formatted="false">ব্যাকএন্ডের সঙ্গে সংযোগ করা যায়নি। সংযোগ পরীক্ষা করে আবার চেষ্টা করুন।</string>
+    <string name="error_service" formatted="false">ব্যাকএন্ড এই অনুরোধটি সম্পূর্ণ করতে পারেনি। আবার চেষ্টা করুন।</string>
+    <string name="error_unknown" formatted="false">একটি সমস্যা হয়েছে। আবার চেষ্টা করুন।</string>
     <string name="dismiss" formatted="false">সরান</string>
     <string name="paper" formatted="false">ডেমো</string>
-    <string name="safety_critical" formatted="false">Safety critical</string>
-    <string name="snapshot_limit" formatted="false">This view shows current positions and up to 100 recent orders and alerts; it is not a complete history.</string>
-    <string name="chart_window" formatted="false">The chart shows the last 100 retrieved candles.</string>
-    <string name="local_network_explanation" formatted="false">For a backend on your local network, allow local network access before signing in. Public internet backends do not need this permission.</string>
-    <string name="local_network_allow" formatted="false">Allow local network</string>
-    <string name="local_network_settings" formatted="false">Open app settings</string>
-    <string name="order_new" formatted="false">New Order</string>
-    <string name="order_entry" formatted="false">New Manual Order</string>
-    <string name="order_confirm" formatted="false">Confirm Order</string>
+    <string name="safety_critical" formatted="false">নিরাপত্তার জন্য গুরুত্বপূর্ণ</string>
+    <string name="snapshot_limit" formatted="false">এই ভিউতে বর্তমান পজিশন এবং সর্বোচ্চ 100টি সাম্প্রতিক অর্ডার ও সতর্কতা দেখানো হয়; এটি সম্পূর্ণ ইতিহাস নয়।</string>
+    <string name="chart_window" formatted="false">চার্টে সর্বশেষ পাওয়া 100টি ক্যান্ডল দেখানো হয়।</string>
+    <string name="local_network_explanation" formatted="false">স্থানীয় নেটওয়ার্কের ব্যাকএন্ডের জন্য সাইন ইন করার আগে স্থানীয় নেটওয়ার্কে প্রবেশের অনুমতি দিন। পাবলিক ইন্টারনেটের ব্যাকএন্ডের এই অনুমতি প্রয়োজন নেই।</string>
+    <string name="local_network_allow" formatted="false">স্থানীয় নেটওয়ার্কের অনুমতি দিন</string>
+    <string name="local_network_settings" formatted="false">অ্যাপের সেটিংস খুলুন</string>
+    <string name="order_new" formatted="false">নতুন অর্ডার</string>
+    <string name="order_entry" formatted="false">নতুন ম্যানুয়াল অর্ডার</string>
+    <string name="order_confirm" formatted="false">অর্ডার নিশ্চিত করুন</string>
     <string name="order_quantity" formatted="false">পরিমাণ</string>
-    <string name="order_type" formatted="false">Order Type</string>
-    <string name="order_stop_price" formatted="false">Stop Price</string>
+    <string name="order_type" formatted="false">অর্ডারের ধরন</string>
+    <string name="order_stop_price" formatted="false">স্টপ মূল্য</string>
     <string name="order_mode" formatted="false">মোড</string>
-    <string name="order_buy" formatted="false">Buy</string>
-    <string name="order_sell" formatted="false">Sell</string>
+    <string name="order_buy" formatted="false">কিনুন</string>
+    <string name="order_sell" formatted="false">বিক্রি করুন</string>
     <string name="order_market" formatted="false">মার্কেট</string>
     <string name="order_limit" formatted="false">লিমিট</string>
-    <string name="order_stop" formatted="false">Stop</string>
-    <string name="order_stop_limit" formatted="false">Stop Limit</string>
-    <string name="order_live" formatted="false">Live</string>
-    <string name="order_review" formatted="false">Review Order</string>
-    <string name="order_back" formatted="false">Back</string>
-    <string name="order_submit" formatted="false">Confirm Order</string>
-    <string name="order_submitting" formatted="false">Submitting…</string>
+    <string name="order_stop" formatted="false">স্টপ</string>
+    <string name="order_stop_limit" formatted="false">স্টপ লিমিট</string>
+    <string name="order_live" formatted="false">লাইভ</string>
+    <string name="order_review" formatted="false">অর্ডার পর্যালোচনা করুন</string>
+    <string name="order_back" formatted="false">ফিরে যান</string>
+    <string name="order_submit" formatted="false">অর্ডার নিশ্চিত করুন</string>
+    <string name="order_submitting" formatted="false">জমা দেওয়া হচ্ছে…</string>
     <string name="order_leverage" formatted="false">লিভারেজ</string>
-    <string name="order_reduce_only" formatted="false">Reduce Only</string>
-    <string name="order_observation_only" formatted="false">This instrument is observation-only — place orders on an execution-capable instrument.</string>
-    <string name="order_unknown_instrument" formatted="false">This instrument is not recognised. Reload the list and try again.</string>
-    <string name="order_caps_violation" formatted="false">This order would exceed your account safety caps. Review your risk settings and retry.</string>
-    <string name="order_rejected" formatted="false">Order creation failed</string>
+    <string name="order_reduce_only" formatted="false">শুধু কমান</string>
+    <string name="order_observation_only" formatted="false">এই ইনস্ট্রুমেন্ট শুধু পর্যবেক্ষণের জন্য — অর্ডার কার্যকর করা যায় এমন ইনস্ট্রুমেন্টে অর্ডার দিন।</string>
+    <string name="order_unknown_instrument" formatted="false">এই ইনস্ট্রুমেন্টটি চেনা যায়নি। তালিকা আবার লোড করে চেষ্টা করুন।</string>
+    <string name="order_caps_violation" formatted="false">এই অর্ডার আপনার অ্যাকাউন্টের নিরাপত্তা সীমা ছাড়িয়ে যাবে। ঝুঁকির সেটিংস পর্যালোচনা করে আবার চেষ্টা করুন।</string>
+    <string name="order_rejected" formatted="false">অর্ডার তৈরি করা যায়নি</string>
     <string name="order_cancel_title" formatted="false">অর্ডার বাতিল করবেন?</string>
-    <string name="order_cancel_confirm" formatted="false">Cancel order</string>
+    <string name="order_cancel_confirm" formatted="false">অর্ডার বাতিল করুন</string>
     <string name="order_keep_open" formatted="false">ওপেন রাখুন</string>
-    <string name="order_select_wallet" formatted="false">Select a wallet on Home before placing an order.</string>
-    <string name="order_created" formatted="false">Order submitted. Refresh to check execution status.</string>
-    <string name="order_cancel_requested" formatted="false">Cancellation requested. Refresh to check the order status.</string>
-    <string name="order_unknown_outcome" formatted="false">The request outcome is unknown. Check status before taking further action.</string>
-    <string name="order_check_status" formatted="false">Check status</string>
-    <string name="order_retry_intent" formatted="false">Retry same order</string>
-    <string name="order_catalog_error" formatted="false">Could not load exchanges or instruments. Try again.</string>
-    <string name="order_no_instruments" formatted="false">No instruments available for this exchange.</string>
-    <string name="order_invalid_form" formatted="false">Enter positive quantities and required prices. Optional leverage must be a positive whole number.</string>
-    <string name="order_refresh_failed" formatted="false">The request was accepted, but the latest records could not be loaded. Refresh to check status.</string>
-    <string name="order_forbidden" formatted="false">You no longer have permission for this action.</string>
-    <string name="order_session_changed" formatted="false">The session or wallet changed. Open a new order from the current account.</string>
+    <string name="order_select_wallet" formatted="false">অর্ডার দেওয়ার আগে হোমে একটি ওয়ালেট নির্বাচন করুন।</string>
+    <string name="order_created" formatted="false">অর্ডার জমা দেওয়া হয়েছে। কার্যকরের অবস্থা দেখতে রিফ্রেশ করুন।</string>
+    <string name="order_cancel_requested" formatted="false">বাতিলের অনুরোধ করা হয়েছে। অর্ডারের অবস্থা দেখতে রিফ্রেশ করুন।</string>
+    <string name="order_unknown_outcome" formatted="false">অনুরোধের ফলাফল অজানা। পরবর্তী পদক্ষেপের আগে অবস্থা দেখুন।</string>
+    <string name="order_check_status" formatted="false">অবস্থা দেখুন</string>
+    <string name="order_retry_intent" formatted="false">একই অর্ডার আবার চেষ্টা করুন</string>
+    <string name="order_catalog_error" formatted="false">এক্সচেঞ্জ বা ইনস্ট্রুমেন্ট লোড করা যায়নি। আবার চেষ্টা করুন।</string>
+    <string name="order_no_instruments" formatted="false">এই এক্সচেঞ্জের জন্য কোনো ইনস্ট্রুমেন্ট উপলভ্য নেই।</string>
+    <string name="order_invalid_form" formatted="false">ধনাত্মক পরিমাণ এবং প্রয়োজনীয় মূল্য লিখুন। ঐচ্ছিক লিভারেজ অবশ্যই ধনাত্মক পূর্ণসংখ্যা হতে হবে।</string>
+    <string name="order_refresh_failed" formatted="false">অনুরোধ গ্রহণ করা হয়েছে, কিন্তু সর্বশেষ রেকর্ড লোড করা যায়নি। অবস্থা দেখতে রিফ্রেশ করুন।</string>
+    <string name="order_forbidden" formatted="false">এই কাজ করার অনুমতি আপনার আর নেই।</string>
+    <string name="order_session_changed" formatted="false">সেশন বা ওয়ালেট বদলেছে। বর্তমান অ্যাকাউন্ট থেকে নতুন অর্ডার খুলুন।</string>
     <string name="order_enabled" formatted="false">সক্রিয়</string>
     <string name="order_disabled" formatted="false">নিষ্ক্রিয়</string>
-    <string name="system_tools" formatted="false">Overview</string>
+    <string name="system_tools" formatted="false">সারসংক্ষেপ</string>
     <string name="desk_attach_button" formatted="false">ভিউয়ার যোগ করুন</string>
     <string name="desk_attach_desk_label" formatted="false">ডেস্ক</string>
     <string name="desk_nav_title" formatted="false">আমার ডেস্কসমূহ</string>
@@ -160,10 +160,10 @@
     <string name="records_open" formatted="false">ওপেন</string>
     <string name="records_recent" formatted="false">সাম্প্রতিক</string>
     <string name="records_fills" formatted="false">ফিল</string>
-    <string name="records_refresh" formatted="false">Refresh</string>
-    <string name="records_fee" formatted="false">Fee</string>
-    <string name="records_details" formatted="false">Details</string>
-    <string name="records_hide_details" formatted="false">\@string/close</string>
+    <string name="records_refresh" formatted="false">রিফ্রেশ</string>
+    <string name="records_fee" formatted="false">ফি</string>
+    <string name="records_details" formatted="false">বিস্তারিত</string>
+    <string name="records_hide_details" formatted="false">বন্ধ করুন</string>
     <string name="records_thread" formatted="false">থ্রেড</string>
     <string name="records_source_topic" formatted="false">উৎস টপিক</string>
     <string name="notification_defaults_title" formatted="false">ব্যবহারকারীর ডিফল্ট</string>
@@ -172,9 +172,9 @@
     <string name="notification_defaults_priority" formatted="false">ন্যূনতম অগ্রাধিকার</string>
     <string name="notification_defaults_load_failed" formatted="false">পছন্দ লোড করা যায়নি</string>
     <string name="notification_defaults_save_failed" formatted="false">পছন্দ সংরক্ষণ করা যায়নি</string>
-    <string name="notification_defaults_low" formatted="false">Low</string>
+    <string name="notification_defaults_low" formatted="false">কম</string>
     <string name="notification_defaults_medium" formatted="false">মাঝারি</string>
-    <string name="notification_defaults_high" formatted="false">High</string>
+    <string name="notification_defaults_high" formatted="false">বেশি</string>
     <string name="notification_defaults_fill" formatted="false">অর্ডার পূরণ হয়েছে</string>
     <string name="notification_defaults_rejected" formatted="false">অর্ডার প্রত্যাখ্যাত</string>
     <string name="notification_defaults_stop" formatted="false">স্টপ-লস ট্রিগার হয়েছে</string>
@@ -190,8 +190,8 @@
     <string name="signals_weak" formatted="false">দুর্বল</string>
     <string name="signals_very_weak" formatted="false">খুব দুর্বল</string>
     <string name="signals_total" formatted="false">মোট</string>
-    <string name="signals_buy" formatted="false">Buy</string>
-    <string name="signals_sell" formatted="false">Sell</string>
+    <string name="signals_buy" formatted="false">কিনুন</string>
+    <string name="signals_sell" formatted="false">বিক্রি করুন</string>
     <string name="signals_average_strength" formatted="false">গড় শক্তি</string>
     <string name="signals_filter" formatted="false">কৌশল অনুযায়ী ফিল্টার করুন</string>
     <string name="signals_all_strategies" formatted="false">সব কৌশল</string>
@@ -199,23 +199,23 @@
     <string name="signals_export" formatted="false">এক্সপোর্ট</string>
     <string name="signals_export_failed" formatted="false">জমা ব্যর্থ</string>
     <string name="venue_accounts_title" formatted="false">ভ্যানু অ্যাকাউন্ট</string>
-    <string name="venue_accounts_refresh" formatted="false">Refresh</string>
+    <string name="venue_accounts_refresh" formatted="false">রিফ্রেশ</string>
     <string name="venue_accounts_failed" formatted="false">এক্সচেঞ্জ অ্যাকাউন্টের অবস্থা লোড করা যায়নি। এটি খালি অ্যাকাউন্ট নয়; ডেটা এই মুহূর্তে অনুপলব্ধ।</string>
     <string name="venue_accounts_authoritative" formatted="false">লাইভ ভ্যানু সত্য, অথরিটি উইন্ডোর মধ্যে দেখা গেছে।</string>
     <string name="venue_accounts_not_authoritative" formatted="false">রিয়েল-টাইম হিসেবে চিহ্নিত নয় এমন সারিতে সর্বশেষ জানা, সিমুলেটেড বা অনুপলব্ধ ডেটা দেখানো হয়; এগুলো এক্সচেঞ্জের প্রামাণ্য বর্তমান ব্যালেন্স নয়।</string>
-    <string name="venue_accounts_valuation" formatted="false">Valuation</string>
+    <string name="venue_accounts_valuation" formatted="false">মূল্যায়ন</string>
     <string name="venue_accounts_balances" formatted="false">ব্যালেন্স</string>
-    <string name="venue_accounts_observed" formatted="false">Observed at</string>
-    <string name="venue_accounts_source" formatted="false">Source observation</string>
+    <string name="venue_accounts_observed" formatted="false">পর্যবেক্ষণের সময়</string>
+    <string name="venue_accounts_source" formatted="false">উৎস পর্যবেক্ষণ</string>
     <string name="venue_accounts_total" formatted="false">মোট</string>
     <string name="venue_accounts_free" formatted="false">উপলভ্য</string>
     <string name="venue_accounts_used" formatted="false">ব্যবহৃত</string>
-    <string name="venue_accounts_numeric_source" formatted="false">Numeric provenance</string>
+    <string name="venue_accounts_numeric_source" formatted="false">সংখ্যাগত মানের উৎস</string>
     <string name="venue_accounts_positions" formatted="false">ওপেন পজিশন</string>
     <string name="venue_accounts_funding" formatted="false">ফান্ডিং</string>
-    <string name="venue_accounts_reconciliation" formatted="false">Reconciliation status</string>
-    <string name="venue_accounts_evaluation" formatted="false">Evaluation status</string>
-    <string name="venue_accounts_deadline" formatted="false">Authority deadline</string>
+    <string name="venue_accounts_reconciliation" formatted="false">মিল যাচাইয়ের অবস্থা</string>
+    <string name="venue_accounts_evaluation" formatted="false">মূল্যায়নের অবস্থা</string>
+    <string name="venue_accounts_deadline" formatted="false">নির্ভরযোগ্য ডেটার বৈধতার সময়সীমা</string>
     <string name="positions_timeline_controls_window" formatted="false">সময়সীমা</string>
     <string name="positions_timeline_controls_granularity" formatted="false">সময়ের ব্যবধান</string>
     <string name="positions_timeline_controls_valuationcurrency" formatted="false">মূল্যায়ন মুদ্রা</string>
@@ -228,7 +228,7 @@
     <string name="positions_timeline_nowallet_message" formatted="false">ওয়ালেটটির P&amp;L টাইমলাইন দেখতে সেটি বেছে নিন।</string>
     <string name="positions_timeline_incompleteness_title" formatted="false">পয়েন্টগুলো কেন অসম্পূর্ণ</string>
     <string name="positions_timeline_incompleteness_description" formatted="false">কারণগুলো লোড করা পুরো সময়সীমার জন্য প্রযোজ্য। একটি পয়েন্টের একাধিক কারণ থাকলে গণনায় একই পয়েন্ট একাধিকবার থাকতে পারে।</string>
-    <string name="positions_timeline_incompleteness_affectedpoints">Affected points: %1$s</string>
+    <string name="positions_timeline_incompleteness_affectedpoints">প্রভাবিত পয়েন্ট: %1$s</string>
     <string name="positions_timeline_chart_title" formatted="false">সময়ভিত্তিক P&amp;L</string>
     <string name="positions_timeline_chart_net" formatted="false">নিট P&amp;L</string>
     <string name="positions_timeline_chart_realized" formatted="false">বাস্তবায়িত P&amp;L</string>
@@ -260,26 +260,26 @@
     <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">অ্যাট্রিবিউশন সমন্বয় ব্যর্থ হয়েছে</string>
     <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">ইনস্ট্রুমেন্টভিত্তিক P&amp;L-এর মোট মান সামগ্রিক P&amp;L-এর মোট মানের সঙ্গে মেলেনি</string>
     <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">সক্রিয়করণের আগের টাইমস্ট্যাম্পসহ বিলম্বে আসা ট্রেড এক্সিকিউশন</string>
-    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Attribution sum is not representable</string>
-    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Instrument sum is not representable</string>
-    <string name="positions_timeline_executionhistory_title" formatted="false">Operator-corrected execution history</string>
-    <string name="positions_timeline_executionhistory_summary" formatted="false">An operator repudiated recorded executions in this scope. Every correction listed here is excluded from the figures on this page.</string>
-    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Repudiated execution</string>
-    <string name="positions_timeline_executionhistory_correctionid" formatted="false">Correction record</string>
-    <string name="positions_timeline_equity_title" formatted="false">Equity overlay</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">অ্যাট্রিবিউশনের যোগফল উপস্থাপনযোগ্য নয়</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">ইনস্ট্রুমেন্টের যোগফল উপস্থাপনযোগ্য নয়</string>
+    <string name="positions_timeline_executionhistory_title" formatted="false">অপারেটর দ্বারা সংশোধিত কার্যকরের ইতিহাস</string>
+    <string name="positions_timeline_executionhistory_summary" formatted="false">একজন অপারেটর এই পরিসরে রেকর্ড করা কার্যকর লেনদেন অকার্যকর ঘোষণা করেছেন। এখানে তালিকাভুক্ত প্রতিটি সংশোধন এই পৃষ্ঠার হিসাব থেকে বাদ দেওয়া হয়েছে।</string>
+    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">অকার্যকর ঘোষিত লেনদেন</string>
+    <string name="positions_timeline_executionhistory_correctionid" formatted="false">সংশোধনের রেকর্ড</string>
+    <string name="positions_timeline_equity_title" formatted="false">ইক্যুইটি ওভারলে</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">ইক্যুইটি</string>
-    <string name="positions_timeline_equity_drawdown_current" formatted="false">Current drawdown</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Spot venue only — balances held on other venues are excluded.</string>
-    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">External deposits and withdrawals are not adjusted out.</string>
-    <string name="positions_timeline_equity_honesty_restatedfrom">These figures are restated from %1$s at each minute\'s close, not sampled natively in this currency.</string>
-    <string name="positions_timeline_equity_honesty_pricedon">Priced on %1$s.</string>
-    <string name="positions_timeline_equity_honesty_conversionwithheld">Minutes dropped for want of a proven close: %1$s.</string>
-    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Drawdown is withheld on a converted basis, because the running peak is tracked in the sampled currency.</string>
-    <string name="positions_timeline_equity_cashposition_position" formatted="false">Position value</string>
-    <string name="positions_timeline_equity_cashposition_cash" formatted="false">Cash</string>
-    <string name="pnl_provenance">Calculation: %1$s · Mark source: %2$s · As of: %3$s</string>
-    <string name="pnl_equity_coverage">Equity sampled: %1$s · Complete minutes: %2$s</string>
-    <string name="pnl_execution_history">Execution history: %1$s</string>
+    <string name="positions_timeline_equity_drawdown_current" formatted="false">বর্তমান সর্বোচ্চ মান থেকে পতন</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">শুধু স্পট ট্রেডিং ভেন্যু — অন্য ভেন্যুতে থাকা ব্যালান্স বাদ দেওয়া হয়েছে।</string>
+    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">বাইরের জমা ও উত্তোলনের প্রভাব বাদ দেওয়া হয়নি।</string>
+    <string name="positions_timeline_equity_honesty_restatedfrom">এই মানগুলো প্রতি মিনিটের শেষে %1$s থেকে রূপান্তর করা হয়, সরাসরি এই মুদ্রায় নমুনা নেওয়া হয় না।</string>
+    <string name="positions_timeline_equity_honesty_pricedon">মূল্যের উৎস: %1$s।</string>
+    <string name="positions_timeline_equity_honesty_conversionwithheld">প্রমাণিত সমাপনী মূল্য না থাকায় বাদ দেওয়া মিনিট: %1$s।</string>
+    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">রূপান্তরিত মানের ভিত্তিতে পতন দেখানো হয় না, কারণ চলমান সর্বোচ্চ মান নমুনার মুদ্রায় হিসাব করা হয়।</string>
+    <string name="positions_timeline_equity_cashposition_position" formatted="false">পজিশনের মূল্য</string>
+    <string name="positions_timeline_equity_cashposition_cash" formatted="false">নগদ</string>
+    <string name="pnl_provenance">হিসাব: %1$s · মূল্যায়ন মূল্যের উৎস: %2$s · সময়: %3$s</string>
+    <string name="pnl_equity_coverage">ইক্যুইটির নমুনা: %1$s · সম্পূর্ণ মিনিট: %2$s</string>
+    <string name="pnl_execution_history">কার্যকরের ইতিহাস: %1$s</string>
     <string name="process_title" formatted="false">প্রসেস</string>
     <string name="process_running" formatted="false">চলছে</string>
     <string name="process_stopped" formatted="false">বন্ধ</string>
@@ -291,22 +291,22 @@
     <string name="process_cpu" formatted="false">CPU</string>
     <string name="process_empty" formatted="false">কোনও কনফিগার করা প্রসেস নেই।</string>
     <string name="process_start" formatted="false">শুরু করুন</string>
-    <string name="process_stop" formatted="false">Stop</string>
+    <string name="process_stop" formatted="false">থামান</string>
     <string name="process_restart" formatted="false">রিস্টার্ট</string>
     <string name="process_cancel" formatted="false">বাতিল</string>
     <string name="process_stale" formatted="false">এই প্রসেসটি এখন আর এখান থেকে নিয়ন্ত্রণ করা যাবে না। ডেটা রিফ্রেশ করে আবার চেষ্টা করুন।</string>
     <string name="process_partial" formatted="false">প্রসেসটি বন্ধ করা হয়েছে, কিন্তু এখন আর এখান থেকে রিস্টার্ট করা যাবে না। ডেটা রিফ্রেশ করে আবার চেষ্টা করুন।</string>
-    <string name="process_confirm" formatted="false">Confirm process action</string>
-    <string name="process_confirm_message" formatted="false">Apply this action to the selected process?</string>
-    <string name="process_intent_saved" formatted="false">Desired state saved. The owning coordinator will apply it.</string>
-    <string name="process_accepted" formatted="false">Process action accepted.</string>
-    <string name="process_unknown" formatted="false">The command outcome is unknown. Controls remain locked: a status refresh cannot prove whether this command was applied.</string>
-    <string name="process_partial_unknown" formatted="false">The process was stopped, but the restart outcome is unknown. Controls remain locked: a status refresh cannot prove whether the restart was applied.</string>
-    <string name="process_rejected" formatted="false">The process action failed.</string>
-    <string name="process_load_failed" formatted="false">Could not refresh process status.</string>
-    <string name="process_config_failed" formatted="false">Process controls are unavailable because configuration could not be refreshed.</string>
-    <string name="process_enable" formatted="false">Enable</string>
-    <string name="process_disable" formatted="false">Disable</string>
+    <string name="process_confirm" formatted="false">প্রসেসের কাজ নিশ্চিত করুন</string>
+    <string name="process_confirm_message" formatted="false">নির্বাচিত প্রসেসে এই কাজটি প্রয়োগ করবেন?</string>
+    <string name="process_intent_saved" formatted="false">কাঙ্ক্ষিত অবস্থা সংরক্ষিত হয়েছে। দায়িত্বপ্রাপ্ত সমন্বয়কারী তা প্রয়োগ করবেন।</string>
+    <string name="process_accepted" formatted="false">প্রসেসের কাজ গ্রহণ করা হয়েছে।</string>
+    <string name="process_unknown" formatted="false">কমান্ডের ফলাফল অজানা। নিয়ন্ত্রণগুলো লক থাকবে: অবস্থা রিফ্রেশ করে এই কমান্ড প্রয়োগ হয়েছে কি না প্রমাণ করা যায় না।</string>
+    <string name="process_partial_unknown" formatted="false">প্রসেসটি থামানো হয়েছে, কিন্তু পুনরায় চালুর ফলাফল অজানা। নিয়ন্ত্রণগুলো লক থাকবে: অবস্থা রিফ্রেশ করে পুনরায় চালু হয়েছে কি না প্রমাণ করা যায় না।</string>
+    <string name="process_rejected" formatted="false">প্রসেসের কাজ ব্যর্থ হয়েছে।</string>
+    <string name="process_load_failed" formatted="false">প্রসেসের অবস্থা রিফ্রেশ করা যায়নি।</string>
+    <string name="process_config_failed" formatted="false">কনফিগারেশন রিফ্রেশ করা যায়নি বলে প্রসেসের নিয়ন্ত্রণগুলো উপলভ্য নেই।</string>
+    <string name="process_enable" formatted="false">সক্রিয় করুন</string>
+    <string name="process_disable" formatted="false">নিষ্ক্রিয় করুন</string>
     <string name="ai_reviews_pending_title" formatted="false">অপেক্ষমাণ রিভিউ</string>
     <string name="ai_reviews_decisions_title" formatted="false">AI সিদ্ধান্ত</string>
     <string name="ai_reviews_deadline" formatted="false">ডেডলাইন</string>
@@ -324,13 +324,13 @@
     <string name="ai_reviews_expired_message" formatted="false">এই রিভিউটি ডেডলাইন পার করে টাইম আউট হয়েছে।</string>
     <string name="ai_reviews_missing" formatted="false">এই রিভিউটি আর নেই।</string>
     <string name="ai_reviews_denied" formatted="false">আপনার ডেলিগেট অ্যাক্সেস পরিবর্তিত হয়েছে। সিদ্ধান্ত নেওয়ার আগে রিলোড করুন।</string>
-    <string name="ai_reviews_load_failed" formatted="false">Could not refresh reviews. Previously loaded reviews remain visible.</string>
-    <string name="ai_reviews_check_status" formatted="false">Check status</string>
-    <string name="ai_reviews_retry" formatted="false">Retry original decision</string>
-    <string name="ai_reviews_confirm" formatted="false">Confirm review decision</string>
-    <string name="ai_reviews_accepted" formatted="false">Decision accepted</string>
-    <string name="ai_reviews_rejected" formatted="false">Decision rejected by the server</string>
-    <string name="ai_reviews_unknown" formatted="false">Outcome unknown. Check status before retrying.</string>
+    <string name="ai_reviews_load_failed" formatted="false">পর্যালোচনাগুলো রিফ্রেশ করা যায়নি। আগে লোড করা পর্যালোচনাগুলো দেখা যাবে।</string>
+    <string name="ai_reviews_check_status" formatted="false">অবস্থা দেখুন</string>
+    <string name="ai_reviews_retry" formatted="false">মূল সিদ্ধান্ত আবার চেষ্টা করুন</string>
+    <string name="ai_reviews_confirm" formatted="false">পর্যালোচনার সিদ্ধান্ত নিশ্চিত করুন</string>
+    <string name="ai_reviews_accepted" formatted="false">সিদ্ধান্ত গ্রহণ করা হয়েছে</string>
+    <string name="ai_reviews_rejected" formatted="false">সার্ভার সিদ্ধান্ত প্রত্যাখ্যান করেছে</string>
+    <string name="ai_reviews_unknown" formatted="false">ফলাফল অজানা। আবার চেষ্টা করার আগে অবস্থা দেখুন।</string>
     <string name="positions_accessibility_label_closebutton" formatted="false">পজিশন বন্ধ করুন</string>
     <string name="positions_accessibility_label_reducebutton" formatted="false">পজিশন কমান</string>
     <string name="positions_reduce_cancel" formatted="false">বাতিল</string>
@@ -341,13 +341,13 @@
     <string name="trading_bracket_takeprofitlabel" formatted="false">টেক প্রফিট</string>
     <string name="trading_trailingstop_attach" formatted="false">ট্রেইলিং স্টপ সংযুক্ত করুন</string>
     <string name="trading_trailingstop_trailamountlabel" formatted="false">ট্রেইল পরিমাণ</string>
-    <string name="position_action_review" formatted="false">Review position action</string>
-    <string name="position_action_confirm" formatted="false">Confirm action</string>
-    <string name="position_action_accepted" formatted="false">Request accepted. Refresh to check execution status.</string>
-    <string name="position_action_retry" formatted="false">Retry same request</string>
-    <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
-    <string name="position_action_cycle" formatted="false">Position cycle</string>
-    <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+    <string name="position_action_review" formatted="false">পজিশনের কাজ পর্যালোচনা করুন</string>
+    <string name="position_action_confirm" formatted="false">কাজ নিশ্চিত করুন</string>
+    <string name="position_action_accepted" formatted="false">অনুরোধ গ্রহণ করা হয়েছে। কার্যকরের অবস্থা দেখতে রিফ্রেশ করুন।</string>
+    <string name="position_action_retry" formatted="false">একই অনুরোধ আবার চেষ্টা করুন</string>
+    <string name="position_action_minimum_lock" formatted="false">ন্যূনতম সুরক্ষিত মুনাফা (%)</string>
+    <string name="position_action_cycle" formatted="false">পজিশন চক্র</string>
+    <string name="position_action_invalid" formatted="false">এগোনোর আগে লেখা মানগুলো পর্যালোচনা করুন।</string>
     <string name="display_financial_title" formatted="false">আর্থিক রঙের রীতি</string>
     <string name="display_financial_auto" formatted="false">আমার অঞ্চলের সঙ্গে মিলান (স্বয়ংক্রিয়)</string>
     <string name="display_financial_green" formatted="false">সবুজ = ঊর্ধ্বগতি, লাল = নিম্নগতি (পশ্চিমা)</string>
@@ -355,17 +355,17 @@
     <string name="display_financial_current">বর্তমানে: %1$s</string>
     <string name="display_financial_green_short" formatted="false">সবুজ ঊর্ধ্বগতি / লাল নিম্নগতি</string>
     <string name="display_financial_red_short" formatted="false">লাল ঊর্ধ্বগতি / সবুজ নিম্নগতি</string>
-    <string name="display_country" formatted="false">Country / region</string>
+    <string name="display_country" formatted="false">দেশ / অঞ্চল</string>
     <string name="market_context_last" formatted="false">সর্বশেষ দাম</string>
     <string name="market_context_change" formatted="false">২৪ ঘণ্টার পরিবর্তন</string>
     <string name="market_context_high" formatted="false">সর্বোচ্চ</string>
     <string name="market_context_low" formatted="false">সর্বনিম্ন</string>
     <string name="market_context_related_empty">%2$s-এ %1$s-এর জন্য কোনো সম্পর্কিত ইনস্ট্রুমেন্ট কনফিগার করা নেই।</string>
-    <string name="market_live_connected" formatted="false">Live updates connected.</string>
-    <string name="market_live_connecting" formatted="false">Connecting to live updates…</string>
-    <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
-    <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
-    <string name="market_context_as_of">Cached close as of %1$s</string>
+    <string name="market_live_connected" formatted="false">লাইভ আপডেটের সঙ্গে সংযুক্ত।</string>
+    <string name="market_live_connecting" formatted="false">লাইভ আপডেটের সঙ্গে সংযোগ হচ্ছে…</string>
+    <string name="market_live_unavailable" formatted="false">লাইভ আপডেট উপলভ্য নেই; স্ন্যাপশট দেখানো হচ্ছে।</string>
+    <string name="market_snapshot_mode" formatted="false">স্ন্যাপশট মোড</string>
+    <string name="market_context_as_of">%1$s পর্যন্ত ক্যাশে রাখা সমাপনী মূল্য</string>
     <string name="market_cachebanner_message">Cache warm হচ্ছে: %1$s / %2$s ক্যান্ডল উপলভ্য %3$s</string>
     <string name="market_cachebanner_sources_cache" formatted="false"></string>
     <string name="market_cachebanner_sources_db" formatted="false">(DB থেকে)</string>
@@ -373,37 +373,37 @@
     <string name="market_pairstats_chiparialabel">%2$s-এ %1$s-এর সঙ্গে জোড়ার পরিসংখ্যান: Pearson %3$s, p-মান %4$s</string>
     <string name="market_pairstats_label" formatted="false">সহ-সমাকলন:</string>
     <string name="market_pairstats_metric">ρ %1$s · p %2$s</string>
-    <string name="market_pair_status_cold" formatted="false">Warming up</string>
-    <string name="market_pair_status_cointegrated" formatted="false">Cointegrated</string>
-    <string name="market_pair_status_warm" formatted="false">Warm</string>
+    <string name="market_pair_status_cold" formatted="false">প্রস্তুত হচ্ছে</string>
+    <string name="market_pair_status_cointegrated" formatted="false">সহ-সমাকলিত</string>
+    <string name="market_pair_status_warm" formatted="false">প্রস্তুত</string>
     <string name="positions_timeline_chart_valuationcurrency">মূল্যায়ন মুদ্রা: %1$s</string>
-    <string name="account_language_syncing">Saving your language choice to your backend account…</string>
-    <string name="account_language_confirmed">Backend account language confirmed: %1$s</string>
-    <string name="account_language_uncertain">The backend account language could not be confirmed. Your local language choice is unchanged.</string>
-    <string name="account_language_retry">Retry language sync</string>
+    <string name="account_language_syncing">আপনার ভাষার পছন্দ ব্যাকএন্ড অ্যাকাউন্টে সংরক্ষণ করা হচ্ছে…</string>
+    <string name="account_language_confirmed">ব্যাকএন্ড অ্যাকাউন্টের ভাষা নিশ্চিত করা হয়েছে: %1$s</string>
+    <string name="account_language_uncertain">ব্যাকএন্ড অ্যাকাউন্টের ভাষা নিশ্চিত করা যায়নি। আপনার স্থানীয় ভাষার পছন্দ অপরিবর্তিত আছে।</string>
+    <string name="account_language_retry">ভাষা সিঙ্ক আবার চেষ্টা করুন</string>
     <string name="backtests_status_pending">অপেক্ষমাণ</string>
     <string name="backtests_status_running">চলছে</string>
     <string name="backtests_status_completed">সম্পন্ন</string>
     <string name="backtests_status_failed">ব্যর্থ</string>
     <string name="backtests_status_cancelled">বাতিল</string>
     <string name="backtests_status_unknown">অজানা</string>
-    <string name="push_title">Snapper updates</string>
-    <string name="push_generic">Open Snapper to view updates</string>
-    <string name="push_privacy">Notifications show only a generic invitation. Open the app and sign in to view authorized details. Enabling push sends an installation identifier to Google and your configured backend.</string>
-    <string name="push_enable">Enable notifications</string>
-    <string name="push_disable">Disable notifications</string>
-    <string name="push_check">Check registration status</string>
-    <string name="push_off">Notifications are off.</string>
-    <string name="push_busy">Updating notification registration…</string>
-    <string name="push_unavailable">Push is unavailable for this backend.</string>
-    <string name="push_permission">Allow Android notifications to enable push.</string>
-    <string name="push_ready">Push is available. Enable it to register this installation.</string>
-    <string name="push_accepted">Notification registration confirmed. Delivery depends on your backend and device.</string>
-    <string name="push_rejected">Registration was not completed. You can try again explicitly.</string>
-    <string name="push_uncertain">Registration could not be confirmed. Check status before another registration.</string>
-    <string name="push_restart">Close and reopen the app before activating a different Firebase configuration.</string>
-    <string name="push_close">Close</string>
-    <string name="push_cleanup">Local notifications are off. Remote cleanup is pending; disable again while signed in to retry.</string>
+    <string name="push_title">Snapper আপডেট</string>
+    <string name="push_generic">আপডেট দেখতে Snapper খুলুন</string>
+    <string name="push_privacy">বিজ্ঞপ্তিতে শুধু একটি সাধারণ আমন্ত্রণ দেখানো হয়। অনুমোদিত বিস্তারিত দেখতে অ্যাপ খুলে সাইন ইন করুন। পুশ বিজ্ঞপ্তি চালু করলে একটি ইনস্টলেশন শনাক্তকারী Google এবং আপনার কনফিগার করা ব্যাকএন্ডে পাঠানো হয়।</string>
+    <string name="push_enable">বিজ্ঞপ্তি চালু করুন</string>
+    <string name="push_disable">বিজ্ঞপ্তি বন্ধ করুন</string>
+    <string name="push_check">নিবন্ধনের অবস্থা দেখুন</string>
+    <string name="push_off">বিজ্ঞপ্তি বন্ধ আছে।</string>
+    <string name="push_busy">বিজ্ঞপ্তির নিবন্ধন আপডেট হচ্ছে…</string>
+    <string name="push_unavailable">এই ব্যাকএন্ডে পুশ বিজ্ঞপ্তি উপলভ্য নেই।</string>
+    <string name="push_permission">পুশ চালু করতে Android বিজ্ঞপ্তির অনুমতি দিন।</string>
+    <string name="push_ready">পুশ উপলভ্য আছে। এই ইনস্টলেশন নিবন্ধন করতে এটি চালু করুন।</string>
+    <string name="push_accepted">বিজ্ঞপ্তির নিবন্ধন নিশ্চিত করা হয়েছে। পৌঁছানো আপনার ব্যাকএন্ড ও ডিভাইসের ওপর নির্ভর করে।</string>
+    <string name="push_rejected">নিবন্ধন সম্পূর্ণ হয়নি। আপনি নিজে আবার চেষ্টা করতে পারেন।</string>
+    <string name="push_uncertain">নিবন্ধন নিশ্চিত করা যায়নি। আবার নিবন্ধনের আগে অবস্থা দেখুন।</string>
+    <string name="push_restart">ভিন্ন Firebase কনফিগারেশন চালু করার আগে অ্যাপ বন্ধ করে আবার খুলুন।</string>
+    <string name="push_close">বন্ধ করুন</string>
+    <string name="push_cleanup">স্থানীয় বিজ্ঞপ্তি বন্ধ আছে। দূরবর্তী পরিষ্কারকরণ বাকি; আবার চেষ্টা করতে সাইন ইন থাকা অবস্থায় পুনরায় বন্ধ করুন।</string>
     <string name="home_connection_connected">সংযুক্ত</string>
     <string name="home_connection_connecting">সংযোগ হচ্ছে…</string>
     <string name="home_connection_authenticating">প্রমাণীকরণ হচ্ছে…</string>
@@ -417,4 +417,72 @@
         <item quantity="one">%1$d সেকেন্ড আগে</item>
         <item quantity="other">%1$d সেকেন্ড আগে</item>
     </plurals>
+    <string name="records_status_new" formatted="false">নতুন</string>
+    <string name="records_status_open" formatted="false">খোলা</string>
+    <string name="records_status_partially_filled" formatted="false">আংশিক নির্বাহিত</string>
+    <string name="records_status_filled" formatted="false">নির্বাহিত</string>
+    <string name="records_status_cancelled" formatted="false">বাতিল</string>
+    <string name="records_status_rejected" formatted="false">প্রত্যাখ্যাত</string>
+    <string name="records_alert_type_order_unknown" formatted="false">অর্ডারের অবস্থা অজানা</string>
+    <string name="venue_accounts_status_observed" formatted="false">রিয়েল-টাইম</string>
+    <string name="venue_accounts_status_simulated" formatted="false">সিমুলেটেড</string>
+    <string name="venue_accounts_status_stale" formatted="false">মেয়াদোত্তীর্ণ</string>
+    <string name="venue_accounts_status_clock_error" formatted="false">সময়ের ত্রুটি</string>
+    <string name="venue_accounts_status_unverified" formatted="false">যাচাইহীন</string>
+    <string name="venue_accounts_status_unavailable" formatted="false">অনুপলব্ধ</string>
+    <string name="venue_accounts_status_not_applicable" formatted="false">প্রযোজ্য নয়</string>
+    <string name="venue_accounts_status_unknown" formatted="false">অজানা</string>
+    <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">সমন্বয় করা হয়েছে</string>
+    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">বিচ্যুতি শনাক্ত করা হয়েছে</string>
+    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">এখনও সমন্বয় করা হয়নি</string>
+    <string name="venue_accounts_reconciliation_status_error" formatted="false">সমন্বয়ে ত্রুটি</string>
+    <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">সমর্থিত নয়</string>
+    <string name="system_status_healthy" formatted="false">স্বাস্থ্যকর</string>
+    <string name="system_status_error" formatted="false">ত্রুটি</string>
+    <string name="system_status_warning" formatted="false">সতর্কতা</string>
+    <string name="system_status_starting" formatted="false">শুরু হচ্ছে</string>
+    <string name="system_status_stopping" formatted="false">বন্ধ হচ্ছে</string>
+    <string name="settings_role_viewer" formatted="false">দর্শক</string>
+    <string name="settings_role_operator" formatted="false">অপারেটর</string>
+    <string name="settings_role_admin" formatted="false">অ্যাডমিনিস্ট্রেটর</string>
+    <string name="settings_role_ai_delegate" formatted="false">AI প্রতিনিধি</string>
+    <string name="settings_role_auditor" formatted="false">অডিটর</string>
+    <string name="process_mode_thread" formatted="false">থ্রেড মোড</string>
+    <string name="process_mode_process" formatted="false">প্রসেস মোড</string>
+    <string name="process_role_strategy" formatted="false">কৌশল</string>
+    <string name="process_role_backtest" formatted="false">ব্যাকটেস্ট</string>
+    <string name="positions_timeline_incompleteness_scope_global" formatted="false">সম্পূর্ণ পোর্টফোলিও</string>
+    <string name="positions_timeline_incompleteness_tier_mark_incomplete" formatted="false">মার্ক মূল্য অসম্পূর্ণ</string>
+    <string name="positions_timeline_incompleteness_tier_untrusted" formatted="false">অবিশ্বস্ত</string>
+    <string name="positions_timeline_attribution_origins_manual" formatted="false">ম্যানুয়াল · সরাসরি</string>
+    <string name="positions_timeline_attribution_origins_plan" formatted="false">পরিকল্পনা · স্বয়ংক্রিয়</string>
+    <string name="positions_timeline_attribution_origins_system" formatted="false">সিস্টেম · স্বয়ংক্রিয়</string>
+    <string name="positions_timeline_attribution_origins_unattributed" formatted="false">অনির্ধারিত · উৎস অজানা</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">এই বুকিং এর প্রমাণ হিসাবে কাজ করে এমন কোন বিনিময় ট্রেড ফিল নেই।</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">উত্তরাধিকার থেকে প্রাপ্ত রেকর্ড যার জন্য কোন বিনিময় বাণিজ্য পূরণ প্রমাণ হিসাবে কাজ করে না।</string>
+    <string name="common_yes" formatted="false">হ্যাঁ</string>
+    <string name="common_no" formatted="false">না</string>
+    <string name="settings_role_ai_reviewer" formatted="false">AI পর্যালোচক</string>
+    <string name="settings_role_ai_researcher" formatted="false">AI গবেষক</string>
+    <string name="process_role_core" formatted="false">মূল</string>
+    <string name="process_role_task" formatted="false">টাস্ক</string>
+    <string name="records_status_submitted" formatted="false">জমা দেওয়া হয়েছে</string>
+    <string name="system_status_ready" formatted="false">প্রস্তুত</string>
+    <string name="system_status_degraded" formatted="false">সীমিত কার্যক্ষমতা</string>
+    <string name="market_instrument_kind_spot" formatted="false">স্পট</string>
+    <string name="market_instrument_kind_perpetual" formatted="false">মেয়াদহীন চুক্তি</string>
+    <string name="market_instrument_kind_future" formatted="false">ফিউচার্স চুক্তি</string>
+    <string name="market_instrument_kind_etf" formatted="false">ETF</string>
+    <string name="market_instrument_kind_option" formatted="false">অপশন</string>
+    <string name="venue_accounts_valuation_native_only" formatted="false">শুধু মূল মুদ্রায়</string>
+    <string name="venue_accounts_status_unobserved" formatted="false">এখনও পর্যবেক্ষণ করা হয়নি</string>
+    <string name="pnl_execution_history_as_recorded" formatted="false">যেভাবে নথিভুক্ত হয়েছে</string>
+    <string name="pnl_execution_history_operator_corrected" formatted="false">অপারেটর দ্বারা সংশোধিত</string>
+    <string name="ai_reviews_status_approved" formatted="false">অনুমোদিত</string>
+    <string name="ai_reviews_status_rejected" formatted="false">প্রত্যাখ্যাত</string>
+    <string name="venue_accounts_evaluation_matched" formatted="false">মিলেছে</string>
+    <string name="venue_accounts_evaluation_mismatched" formatted="false">মেলেনি</string>
+    <string name="venue_accounts_evaluation_incomplete" formatted="false">অসম্পূর্ণ</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">এক্সচেঞ্জের অপরিবর্তিত মান</string>
+    <string name="venue_accounts_numeric_source_legacy_float" formatted="false">পুরোনো ফ্লোটিং-পয়েন্ট মান</string>
 </resources>

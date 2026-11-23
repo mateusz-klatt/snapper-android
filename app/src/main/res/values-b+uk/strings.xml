@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="privacy_policy" formatted="false">Privacy policy</string>
-    <string name="username" formatted="false">Username</string>
+    <string name="privacy_policy" formatted="false">Політика конфіденційності</string>
+    <string name="username" formatted="false">Ім’я користувача</string>
     <string name="password" formatted="false">Пароль</string>
     <string name="sign_in" formatted="false">Увійти</string>
-    <string name="session_retention_notice" formatted="false">Staying signed in requires Android 11+, a secure screen lock, and authentication with your PIN, pattern, password or strong biometrics within the last 5 minutes. Otherwise, sign in again after the app restarts.</string>
+    <string name="session_retention_notice" formatted="false">Для збереження входу потрібні Android 11+, захищене блокування екрана та підтвердження особи за допомогою PIN-коду, графічного ключа, пароля або надійної біометрії протягом останніх 5 хвилин. Інакше після перезапуску застосунку потрібно увійти знову.</string>
     <string name="subtitle" formatted="false">Торгова платформа</string>
     <string name="backend" formatted="false">Власний URL бекенду</string>
     <string name="language" formatted="false">Мова</string>
@@ -25,10 +25,10 @@
     <string name="filled" formatted="false">Виконано</string>
     <string name="status" formatted="false">Статус</string>
     <string name="side" formatted="false">Сторона</string>
-    <string name="open" formatted="false">Open</string>
-    <string name="high" formatted="false">High</string>
-    <string name="low" formatted="false">Low</string>
-    <string name="close" formatted="false">Close</string>
+    <string name="open" formatted="false">Відкриття</string>
+    <string name="high" formatted="false">Максимум</string>
+    <string name="low" formatted="false">Мінімум</string>
+    <string name="close" formatted="false">Закриття</string>
     <string name="volume" formatted="false">Обсяг</string>
     <string name="timeframe" formatted="false">Інтервал</string>
     <string name="no_candles" formatted="false">Ще немає свічок</string>
@@ -37,68 +37,68 @@
     <string name="alerts" formatted="false">Сповіщення</string>
     <string name="settings" formatted="false">Налаштування</string>
     <string name="save" formatted="false">Зберегти</string>
-    <string name="refresh" formatted="false">Refresh</string>
+    <string name="refresh" formatted="false">Оновити</string>
     <string name="exchange" formatted="false">Біржа</string>
-    <string name="load_market" formatted="false">Load candles</string>
-    <string name="empty" formatted="false">No records available.</string>
-    <string name="snapshot_note" formatted="false">Snapshot data. Refresh to retrieve the latest available records.</string>
-    <string name="chart_description" formatted="false">Historical candle chart. Exact values are listed below.</string>
-    <string name="error_origin" formatted="false">Enter a valid HTTPS backend origin.</string>
-    <string name="error_credentials" formatted="false">The username or password is incorrect.</string>
-    <string name="error_session" formatted="false">Your session expired. Please sign in again.</string>
-    <string name="error_network" formatted="false">Could not reach the backend. Check your connection and try again.</string>
-    <string name="error_service" formatted="false">The backend could not complete this request. Please try again.</string>
-    <string name="error_unknown" formatted="false">Something went wrong. Please try again.</string>
+    <string name="load_market" formatted="false">Завантажити свічки</string>
+    <string name="empty" formatted="false">Немає доступних записів.</string>
+    <string name="snapshot_note" formatted="false">Знімок даних. Оновіть, щоб отримати останні доступні записи.</string>
+    <string name="chart_description" formatted="false">Графік історичних свічок. Точні значення наведено нижче.</string>
+    <string name="error_origin" formatted="false">Введіть допустиму HTTPS-адресу джерела бекенду.</string>
+    <string name="error_credentials" formatted="false">Неправильне ім’я користувача або пароль.</string>
+    <string name="error_session" formatted="false">Термін дії сеансу минув. Увійдіть знову.</string>
+    <string name="error_network" formatted="false">Не вдалося зв’язатися з бекендом. Перевірте з’єднання та спробуйте знову.</string>
+    <string name="error_service" formatted="false">Бекенд не зміг виконати цей запит. Спробуйте знову.</string>
+    <string name="error_unknown" formatted="false">Сталася помилка. Спробуйте знову.</string>
     <string name="dismiss" formatted="false">Відхилити</string>
     <string name="paper" formatted="false">Демо</string>
-    <string name="safety_critical" formatted="false">Safety critical</string>
-    <string name="snapshot_limit" formatted="false">This view shows current positions and up to 100 recent orders and alerts; it is not a complete history.</string>
-    <string name="chart_window" formatted="false">The chart shows the last 100 retrieved candles.</string>
-    <string name="local_network_explanation" formatted="false">For a backend on your local network, allow local network access before signing in. Public internet backends do not need this permission.</string>
-    <string name="local_network_allow" formatted="false">Allow local network</string>
-    <string name="local_network_settings" formatted="false">Open app settings</string>
-    <string name="order_new" formatted="false">New Order</string>
-    <string name="order_entry" formatted="false">New Manual Order</string>
-    <string name="order_confirm" formatted="false">Confirm Order</string>
+    <string name="safety_critical" formatted="false">Критично для безпеки</string>
+    <string name="snapshot_limit" formatted="false">Тут показано поточні позиції та до 100 останніх ордерів і сповіщень; це не повна історія.</string>
+    <string name="chart_window" formatted="false">На графіку показано останні 100 завантажених свічок.</string>
+    <string name="local_network_explanation" formatted="false">Для бекенду в локальній мережі дозвольте доступ до локальної мережі перед входом. Бекендам у загальнодоступному інтернеті цей дозвіл не потрібен.</string>
+    <string name="local_network_allow" formatted="false">Дозволити локальну мережу</string>
+    <string name="local_network_settings" formatted="false">Відкрити налаштування застосунку</string>
+    <string name="order_new" formatted="false">Новий ордер</string>
+    <string name="order_entry" formatted="false">Новий ручний ордер</string>
+    <string name="order_confirm" formatted="false">Підтвердити ордер</string>
     <string name="order_quantity" formatted="false">Кількість</string>
-    <string name="order_type" formatted="false">Order Type</string>
-    <string name="order_stop_price" formatted="false">Stop Price</string>
+    <string name="order_type" formatted="false">Тип ордера</string>
+    <string name="order_stop_price" formatted="false">Стоп-ціна</string>
     <string name="order_mode" formatted="false">Режим</string>
     <string name="order_buy" formatted="false">Купити</string>
     <string name="order_sell" formatted="false">Продати</string>
     <string name="order_market" formatted="false">Ринковий</string>
     <string name="order_limit" formatted="false">Лімітний</string>
-    <string name="order_stop" formatted="false">Stop</string>
-    <string name="order_stop_limit" formatted="false">Stop Limit</string>
-    <string name="order_live" formatted="false">Live</string>
-    <string name="order_review" formatted="false">Review Order</string>
-    <string name="order_back" formatted="false">Back</string>
-    <string name="order_submit" formatted="false">Confirm Order</string>
-    <string name="order_submitting" formatted="false">Submitting…</string>
+    <string name="order_stop" formatted="false">Стоп</string>
+    <string name="order_stop_limit" formatted="false">Стоп-ліміт</string>
+    <string name="order_live" formatted="false">Реальна торгівля</string>
+    <string name="order_review" formatted="false">Перевірити ордер</string>
+    <string name="order_back" formatted="false">Назад</string>
+    <string name="order_submit" formatted="false">Підтвердити ордер</string>
+    <string name="order_submitting" formatted="false">Надсилання…</string>
     <string name="order_leverage" formatted="false">Плече</string>
-    <string name="order_reduce_only" formatted="false">Reduce Only</string>
-    <string name="order_observation_only" formatted="false">This instrument is observation-only — place orders on an execution-capable instrument.</string>
-    <string name="order_unknown_instrument" formatted="false">This instrument is not recognised. Reload the list and try again.</string>
-    <string name="order_caps_violation" formatted="false">This order would exceed your account safety caps. Review your risk settings and retry.</string>
-    <string name="order_rejected" formatted="false">Order creation failed</string>
+    <string name="order_reduce_only" formatted="false">Лише скорочення</string>
+    <string name="order_observation_only" formatted="false">Цей інструмент доступний лише для спостереження — розміщуйте ордери на інструмент, що підтримує виконання.</string>
+    <string name="order_unknown_instrument" formatted="false">Цей інструмент не розпізнано. Оновіть список і спробуйте знову.</string>
+    <string name="order_caps_violation" formatted="false">Цей ордер перевищить захисні ліміти рахунку. Перевірте налаштування ризику та спробуйте знову.</string>
+    <string name="order_rejected" formatted="false">Не вдалося створити ордер</string>
     <string name="order_cancel_title" formatted="false">Скасувати ордер?</string>
     <string name="order_cancel_confirm" formatted="false">Скасувати ордер</string>
     <string name="order_keep_open" formatted="false">Залишити відкритим</string>
-    <string name="order_select_wallet" formatted="false">Select a wallet on Home before placing an order.</string>
-    <string name="order_created" formatted="false">Order submitted. Refresh to check execution status.</string>
-    <string name="order_cancel_requested" formatted="false">Cancellation requested. Refresh to check the order status.</string>
-    <string name="order_unknown_outcome" formatted="false">The request outcome is unknown. Check status before taking further action.</string>
-    <string name="order_check_status" formatted="false">Check status</string>
-    <string name="order_retry_intent" formatted="false">Retry same order</string>
-    <string name="order_catalog_error" formatted="false">Could not load exchanges or instruments. Try again.</string>
-    <string name="order_no_instruments" formatted="false">No instruments available for this exchange.</string>
-    <string name="order_invalid_form" formatted="false">Enter positive quantities and required prices. Optional leverage must be a positive whole number.</string>
-    <string name="order_refresh_failed" formatted="false">The request was accepted, but the latest records could not be loaded. Refresh to check status.</string>
-    <string name="order_forbidden" formatted="false">You no longer have permission for this action.</string>
-    <string name="order_session_changed" formatted="false">The session or wallet changed. Open a new order from the current account.</string>
+    <string name="order_select_wallet" formatted="false">Перед розміщенням ордера виберіть гаманець на головній сторінці.</string>
+    <string name="order_created" formatted="false">Ордер надіслано. Оновіть, щоб перевірити статус виконання.</string>
+    <string name="order_cancel_requested" formatted="false">Надіслано запит на скасування. Оновіть, щоб перевірити статус ордера.</string>
+    <string name="order_unknown_outcome" formatted="false">Результат запиту невідомий. Перевірте статус перед подальшими діями.</string>
+    <string name="order_check_status" formatted="false">Перевірити статус</string>
+    <string name="order_retry_intent" formatted="false">Повторити той самий ордер</string>
+    <string name="order_catalog_error" formatted="false">Не вдалося завантажити біржі або інструменти. Спробуйте знову.</string>
+    <string name="order_no_instruments" formatted="false">Для цієї біржі немає доступних інструментів.</string>
+    <string name="order_invalid_form" formatted="false">Введіть додатні кількості та обов’язкові ціни. Необов’язкове кредитне плече має бути додатним цілим числом.</string>
+    <string name="order_refresh_failed" formatted="false">Запит прийнято, але останні записи не вдалося завантажити. Оновіть, щоб перевірити статус.</string>
+    <string name="order_forbidden" formatted="false">Ви більше не маєте дозволу на цю дію.</string>
+    <string name="order_session_changed" formatted="false">Сеанс або гаманець змінився. Відкрийте новий ордер із поточного облікового запису.</string>
     <string name="order_enabled" formatted="false">Увімкнено</string>
     <string name="order_disabled" formatted="false">Вимкнено</string>
-    <string name="system_tools" formatted="false">Overview</string>
+    <string name="system_tools" formatted="false">Огляд</string>
     <string name="desk_attach_button" formatted="false">Додати спостерігача</string>
     <string name="desk_attach_desk_label" formatted="false">Деск</string>
     <string name="desk_nav_title" formatted="false">Мої дески</string>
@@ -157,13 +157,13 @@
     <string name="system_active" formatted="false">Активний</string>
     <string name="system_inactive" formatted="false">Неактивний</string>
     <string name="system_revoked" formatted="false">Відкликано</string>
-    <string name="records_open" formatted="false">Open</string>
+    <string name="records_open" formatted="false">Відкриті</string>
     <string name="records_recent" formatted="false">Останні</string>
     <string name="records_fills" formatted="false">Виконання</string>
-    <string name="records_refresh" formatted="false">Refresh</string>
-    <string name="records_fee" formatted="false">Fee</string>
-    <string name="records_details" formatted="false">Details</string>
-    <string name="records_hide_details" formatted="false">\@string/close</string>
+    <string name="records_refresh" formatted="false">Оновити</string>
+    <string name="records_fee" formatted="false">Комісія</string>
+    <string name="records_details" formatted="false">Подробиці</string>
+    <string name="records_hide_details" formatted="false">Закрити</string>
     <string name="records_thread" formatted="false">Потік</string>
     <string name="records_source_topic" formatted="false">Тема джерела</string>
     <string name="notification_defaults_title" formatted="false">Стандартні для користувача</string>
@@ -172,9 +172,9 @@
     <string name="notification_defaults_priority" formatted="false">Мінімальний пріоритет</string>
     <string name="notification_defaults_load_failed" formatted="false">Не вдалося завантажити налаштування</string>
     <string name="notification_defaults_save_failed" formatted="false">Не вдалося зберегти налаштування</string>
-    <string name="notification_defaults_low" formatted="false">Low</string>
+    <string name="notification_defaults_low" formatted="false">Низький</string>
     <string name="notification_defaults_medium" formatted="false">Середній</string>
-    <string name="notification_defaults_high" formatted="false">High</string>
+    <string name="notification_defaults_high" formatted="false">Високий</string>
     <string name="notification_defaults_fill" formatted="false">Ордер виконано</string>
     <string name="notification_defaults_rejected" formatted="false">Ордер відхилено</string>
     <string name="notification_defaults_stop" formatted="false">Стоп-лос спрацював</string>
@@ -189,7 +189,7 @@
     <string name="signals_medium" formatted="false">Середній</string>
     <string name="signals_weak" formatted="false">Слабкий</string>
     <string name="signals_very_weak" formatted="false">Дуже слабкий</string>
-    <string name="signals_total" formatted="false">Total</string>
+    <string name="signals_total" formatted="false">Усього</string>
     <string name="signals_buy" formatted="false">Купити</string>
     <string name="signals_sell" formatted="false">Продати</string>
     <string name="signals_average_strength" formatted="false">Сер. сила</string>
@@ -199,23 +199,23 @@
     <string name="signals_export" formatted="false">Експортувати</string>
     <string name="signals_export_failed" formatted="false">Не вдалося надіслати</string>
     <string name="venue_accounts_title" formatted="false">Біржові рахунки</string>
-    <string name="venue_accounts_refresh" formatted="false">Refresh</string>
+    <string name="venue_accounts_refresh" formatted="false">Оновити</string>
     <string name="venue_accounts_failed" formatted="false">Не вдалося завантажити стан біржового рахунку. Рахунок не порожній; дані просто тимчасово недоступні.</string>
     <string name="venue_accounts_authoritative" formatted="false">Фактичні дані біржі, отримані в межах вікна достовірності.</string>
     <string name="venue_accounts_not_authoritative" formatted="false">Рядки без позначки «У реальному часі» показують останні відомі, симульовані або недоступні дані — це ніколи не достовірні біржові баланси в реальному часі.</string>
-    <string name="venue_accounts_valuation" formatted="false">Valuation</string>
+    <string name="venue_accounts_valuation" formatted="false">Оцінка вартості</string>
     <string name="venue_accounts_balances" formatted="false">Баланси</string>
-    <string name="venue_accounts_observed" formatted="false">Observed at</string>
-    <string name="venue_accounts_source" formatted="false">Source observation</string>
-    <string name="venue_accounts_total" formatted="false">Total</string>
+    <string name="venue_accounts_observed" formatted="false">Час спостереження</string>
+    <string name="venue_accounts_source" formatted="false">Вихідне спостереження</string>
+    <string name="venue_accounts_total" formatted="false">Усього</string>
     <string name="venue_accounts_free" formatted="false">Доступно</string>
     <string name="venue_accounts_used" formatted="false">Використовується</string>
-    <string name="venue_accounts_numeric_source" formatted="false">Numeric provenance</string>
+    <string name="venue_accounts_numeric_source" formatted="false">Походження числових даних</string>
     <string name="venue_accounts_positions" formatted="false">Відкриті позиції</string>
     <string name="venue_accounts_funding" formatted="false">Фандинг</string>
-    <string name="venue_accounts_reconciliation" formatted="false">Reconciliation status</string>
-    <string name="venue_accounts_evaluation" formatted="false">Evaluation status</string>
-    <string name="venue_accounts_deadline" formatted="false">Authority deadline</string>
+    <string name="venue_accounts_reconciliation" formatted="false">Статус звірки</string>
+    <string name="venue_accounts_evaluation" formatted="false">Статус оцінювання</string>
+    <string name="venue_accounts_deadline" formatted="false">Термін достовірності даних</string>
     <string name="positions_timeline_controls_window" formatted="false">Період</string>
     <string name="positions_timeline_controls_granularity" formatted="false">Деталізація</string>
     <string name="positions_timeline_controls_valuationcurrency" formatted="false">Валюта оцінки</string>
@@ -228,7 +228,7 @@
     <string name="positions_timeline_nowallet_message" formatted="false">Виберіть гаманець, щоб переглянути динаміку його P&amp;L.</string>
     <string name="positions_timeline_incompleteness_title" formatted="false">Чому деякі точки неповні</string>
     <string name="positions_timeline_incompleteness_description" formatted="false">Причини стосуються всього завантаженого періоду. Якщо точка має кілька причин, її може бути враховано в кількох підрахунках.</string>
-    <string name="positions_timeline_incompleteness_affectedpoints">Affected points: %1$s</string>
+    <string name="positions_timeline_incompleteness_affectedpoints">Зачеплені точки: %1$s</string>
     <string name="positions_timeline_chart_title" formatted="false">Динаміка P&amp;L</string>
     <string name="positions_timeline_chart_net" formatted="false">Чистий P&amp;L</string>
     <string name="positions_timeline_chart_realized" formatted="false">Реалізований P&amp;L</string>
@@ -260,26 +260,26 @@
     <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">Не вдалося узгодити атрибуцію</string>
     <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">Сума значень P&amp;L за інструментами не збігається із загальним P&amp;L</string>
     <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">Виконання угоди, що надійшло із запізненням і має позначку часу до активації</string>
-    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Attribution sum is not representable</string>
-    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Instrument sum is not representable</string>
-    <string name="positions_timeline_executionhistory_title" formatted="false">Operator-corrected execution history</string>
-    <string name="positions_timeline_executionhistory_summary" formatted="false">An operator repudiated recorded executions in this scope. Every correction listed here is excluded from the figures on this page.</string>
-    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Repudiated execution</string>
-    <string name="positions_timeline_executionhistory_correctionid" formatted="false">Correction record</string>
-    <string name="positions_timeline_equity_title" formatted="false">Equity overlay</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Суму розподілених значень неможливо подати</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Суму за інструментами неможливо подати</string>
+    <string name="positions_timeline_executionhistory_title" formatted="false">Історія виконань, виправлена оператором</string>
+    <string name="positions_timeline_executionhistory_summary" formatted="false">Оператор визнав недійсними записані виконання в цій області. Усі наведені тут виправлення виключено з показників на цій сторінці.</string>
+    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Недійсне виконання</string>
+    <string name="positions_timeline_executionhistory_correctionid" formatted="false">Запис виправлення</string>
+    <string name="positions_timeline_equity_title" formatted="false">Накладання капіталу</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">Капітал</string>
-    <string name="positions_timeline_equity_drawdown_current" formatted="false">Current drawdown</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Spot venue only — balances held on other venues are excluded.</string>
-    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">External deposits and withdrawals are not adjusted out.</string>
-    <string name="positions_timeline_equity_honesty_restatedfrom">These figures are restated from %1$s at each minute\'s close, not sampled natively in this currency.</string>
-    <string name="positions_timeline_equity_honesty_pricedon">Priced on %1$s.</string>
-    <string name="positions_timeline_equity_honesty_conversionwithheld">Minutes dropped for want of a proven close: %1$s.</string>
-    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Drawdown is withheld on a converted basis, because the running peak is tracked in the sampled currency.</string>
-    <string name="positions_timeline_equity_cashposition_position" formatted="false">Position value</string>
-    <string name="positions_timeline_equity_cashposition_cash" formatted="false">Cash</string>
-    <string name="pnl_provenance">Calculation: %1$s · Mark source: %2$s · As of: %3$s</string>
-    <string name="pnl_equity_coverage">Equity sampled: %1$s · Complete minutes: %2$s</string>
-    <string name="pnl_execution_history">Execution history: %1$s</string>
+    <string name="positions_timeline_equity_drawdown_current" formatted="false">Поточна просадка</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Лише спотова біржа — залишки на інших біржах виключено.</string>
+    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Зовнішні поповнення та виведення не виключено з розрахунку.</string>
+    <string name="positions_timeline_equity_honesty_restatedfrom">Ці показники перераховано з %1$s на закритті кожної хвилини, а не отримано безпосередньо в цій валюті.</string>
+    <string name="positions_timeline_equity_honesty_pricedon">Оцінка за цінами %1$s.</string>
+    <string name="positions_timeline_equity_honesty_conversionwithheld">Хвилини, пропущені через відсутність підтвердженої ціни закриття: %1$s.</string>
+    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Просадка після конвертації не відображається, оскільки поточний максимум відстежується у валюті вихідних спостережень.</string>
+    <string name="positions_timeline_equity_cashposition_position" formatted="false">Вартість позиції</string>
+    <string name="positions_timeline_equity_cashposition_cash" formatted="false">Грошові кошти</string>
+    <string name="pnl_provenance">Розрахунок: %1$s · Джерело ціни маркування: %2$s · Станом на: %3$s</string>
+    <string name="pnl_equity_coverage">Вибірка капіталу: %1$s · Повні хвилини: %2$s</string>
+    <string name="pnl_execution_history">Історія виконань: %1$s</string>
     <string name="process_title" formatted="false">Процеси</string>
     <string name="process_running" formatted="false">Виконується</string>
     <string name="process_stopped" formatted="false">Зупинено</string>
@@ -291,22 +291,22 @@
     <string name="process_cpu" formatted="false">CPU</string>
     <string name="process_empty" formatted="false">Немає налаштованих процесів.</string>
     <string name="process_start" formatted="false">Запустити</string>
-    <string name="process_stop" formatted="false">Stop</string>
+    <string name="process_stop" formatted="false">Зупинити</string>
     <string name="process_restart" formatted="false">Перезапустити</string>
     <string name="process_cancel" formatted="false">Скасувати</string>
     <string name="process_stale" formatted="false">Цим процесом більше не можна керувати звідси. Оновіть дані та повторіть спробу.</string>
     <string name="process_partial" formatted="false">Процес було зупинено, але перезапустити його звідси більше не можна. Оновіть дані та повторіть спробу.</string>
-    <string name="process_confirm" formatted="false">Confirm process action</string>
-    <string name="process_confirm_message" formatted="false">Apply this action to the selected process?</string>
-    <string name="process_intent_saved" formatted="false">Desired state saved. The owning coordinator will apply it.</string>
-    <string name="process_accepted" formatted="false">Process action accepted.</string>
-    <string name="process_unknown" formatted="false">The command outcome is unknown. Controls remain locked: a status refresh cannot prove whether this command was applied.</string>
-    <string name="process_partial_unknown" formatted="false">The process was stopped, but the restart outcome is unknown. Controls remain locked: a status refresh cannot prove whether the restart was applied.</string>
-    <string name="process_rejected" formatted="false">The process action failed.</string>
-    <string name="process_load_failed" formatted="false">Could not refresh process status.</string>
-    <string name="process_config_failed" formatted="false">Process controls are unavailable because configuration could not be refreshed.</string>
-    <string name="process_enable" formatted="false">Enable</string>
-    <string name="process_disable" formatted="false">Disable</string>
+    <string name="process_confirm" formatted="false">Підтвердити дію з процесом</string>
+    <string name="process_confirm_message" formatted="false">Застосувати цю дію до вибраного процесу?</string>
+    <string name="process_intent_saved" formatted="false">Бажаний стан збережено. Відповідальний координатор застосує його.</string>
+    <string name="process_accepted" formatted="false">Дію з процесом прийнято.</string>
+    <string name="process_unknown" formatted="false">Результат команди невідомий. Керування залишається заблокованим: оновлення статусу не доводить, чи було виконано команду.</string>
+    <string name="process_partial_unknown" formatted="false">Процес зупинено, але результат перезапуску невідомий. Керування залишається заблокованим: оновлення статусу не доводить, чи було виконано перезапуск.</string>
+    <string name="process_rejected" formatted="false">Не вдалося виконати дію з процесом.</string>
+    <string name="process_load_failed" formatted="false">Не вдалося оновити статус процесу.</string>
+    <string name="process_config_failed" formatted="false">Керування процесом недоступне, оскільки не вдалося оновити конфігурацію.</string>
+    <string name="process_enable" formatted="false">Увімкнути</string>
+    <string name="process_disable" formatted="false">Вимкнути</string>
     <string name="ai_reviews_pending_title" formatted="false">Очікувані перевірки</string>
     <string name="ai_reviews_decisions_title" formatted="false">Рішення AI</string>
     <string name="ai_reviews_deadline" formatted="false">Дедлайн</string>
@@ -324,13 +324,13 @@
     <string name="ai_reviews_expired_message" formatted="false">Дедлайн цієї перевірки минув, і час очікування сплив.</string>
     <string name="ai_reviews_missing" formatted="false">Ця перевірка більше не існує.</string>
     <string name="ai_reviews_denied" formatted="false">Ваш доступ делегата змінився. Перезавантажте дані перед ухваленням рішення.</string>
-    <string name="ai_reviews_load_failed" formatted="false">Could not refresh reviews. Previously loaded reviews remain visible.</string>
-    <string name="ai_reviews_check_status" formatted="false">Check status</string>
-    <string name="ai_reviews_retry" formatted="false">Retry original decision</string>
-    <string name="ai_reviews_confirm" formatted="false">Confirm review decision</string>
-    <string name="ai_reviews_accepted" formatted="false">Decision accepted</string>
-    <string name="ai_reviews_rejected" formatted="false">Decision rejected by the server</string>
-    <string name="ai_reviews_unknown" formatted="false">Outcome unknown. Check status before retrying.</string>
+    <string name="ai_reviews_load_failed" formatted="false">Не вдалося оновити перевірки. Раніше завантажені перевірки залишаються видимими.</string>
+    <string name="ai_reviews_check_status" formatted="false">Перевірити статус</string>
+    <string name="ai_reviews_retry" formatted="false">Повторити початкове рішення</string>
+    <string name="ai_reviews_confirm" formatted="false">Підтвердити рішення щодо перевірки</string>
+    <string name="ai_reviews_accepted" formatted="false">Рішення прийнято</string>
+    <string name="ai_reviews_rejected" formatted="false">Сервер відхилив рішення</string>
+    <string name="ai_reviews_unknown" formatted="false">Результат невідомий. Перевірте статус перед повторною спробою.</string>
     <string name="positions_accessibility_label_closebutton" formatted="false">Закрити позицію</string>
     <string name="positions_accessibility_label_reducebutton" formatted="false">Зменшити позицію</string>
     <string name="positions_reduce_cancel" formatted="false">Скасувати</string>
@@ -339,15 +339,15 @@
     <string name="trading_bracket_attach" formatted="false">Додати SL / TP</string>
     <string name="trading_bracket_stoplosslabel" formatted="false">Стоп-лос</string>
     <string name="trading_bracket_takeprofitlabel" formatted="false">Тейк-профіт</string>
-    <string name="trading_trailingstop_attach" formatted="false">Attach trailing stop</string>
+    <string name="trading_trailingstop_attach" formatted="false">Додати трейлінг-стоп</string>
     <string name="trading_trailingstop_trailamountlabel" formatted="false">Величина кроку</string>
-    <string name="position_action_review" formatted="false">Review position action</string>
-    <string name="position_action_confirm" formatted="false">Confirm action</string>
-    <string name="position_action_accepted" formatted="false">Request accepted. Refresh to check execution status.</string>
-    <string name="position_action_retry" formatted="false">Retry same request</string>
-    <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
-    <string name="position_action_cycle" formatted="false">Position cycle</string>
-    <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+    <string name="position_action_review" formatted="false">Перевірити дію з позицією</string>
+    <string name="position_action_confirm" formatted="false">Підтвердити дію</string>
+    <string name="position_action_accepted" formatted="false">Запит прийнято. Оновіть, щоб перевірити статус виконання.</string>
+    <string name="position_action_retry" formatted="false">Повторити той самий запит</string>
+    <string name="position_action_minimum_lock" formatted="false">Мінімальний захищений прибуток (%)</string>
+    <string name="position_action_cycle" formatted="false">Цикл позиції</string>
+    <string name="position_action_invalid" formatted="false">Перевірте введені значення, перш ніж продовжити.</string>
     <string name="display_financial_title" formatted="false">Фінансова колірна схема</string>
     <string name="display_financial_auto" formatted="false">За моїм регіоном (авто)</string>
     <string name="display_financial_green" formatted="false">Зелений = зростання, червоний = падіння (західна)</string>
@@ -355,17 +355,17 @@
     <string name="display_financial_current">Зараз: %1$s</string>
     <string name="display_financial_green_short" formatted="false">зелений зростання / червоний падіння</string>
     <string name="display_financial_red_short" formatted="false">червоний зростання / зелений падіння</string>
-    <string name="display_country" formatted="false">Country / region</string>
+    <string name="display_country" formatted="false">Країна / регіон</string>
     <string name="market_context_last" formatted="false">Остання ціна</string>
     <string name="market_context_change" formatted="false">Зміна за 24 год</string>
     <string name="market_context_high" formatted="false">Максимум</string>
     <string name="market_context_low" formatted="false">Мінімум</string>
     <string name="market_context_related_empty">Для %1$s на %2$s не налаштовано пов\'язаних інструментів.</string>
-    <string name="market_live_connected" formatted="false">Live updates connected.</string>
-    <string name="market_live_connecting" formatted="false">Connecting to live updates…</string>
-    <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
-    <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
-    <string name="market_context_as_of">Cached close as of %1$s</string>
+    <string name="market_live_connected" formatted="false">Оновлення в реальному часі підключено.</string>
+    <string name="market_live_connecting" formatted="false">Підключення до оновлень у реальному часі…</string>
+    <string name="market_live_unavailable" formatted="false">Оновлення в реальному часі недоступні; показано знімки.</string>
+    <string name="market_snapshot_mode" formatted="false">Режим знімків</string>
+    <string name="market_context_as_of">Кешована ціна закриття станом на %1$s</string>
     <string name="market_cachebanner_message">Прогрів кешу: доступно %1$s / %2$s свічок %3$s</string>
     <string name="market_cachebanner_sources_cache" formatted="false"></string>
     <string name="market_cachebanner_sources_db" formatted="false">(з БД)</string>
@@ -373,37 +373,37 @@
     <string name="market_pairstats_chiparialabel">Статистика пари з %1$s на %2$s: Pearson %3$s, p-значення %4$s</string>
     <string name="market_pairstats_label" formatted="false">Коінтеграція:</string>
     <string name="market_pairstats_metric">ρ %1$s · p %2$s</string>
-    <string name="market_pair_status_cold" formatted="false">Warming up</string>
-    <string name="market_pair_status_cointegrated" formatted="false">Cointegrated</string>
-    <string name="market_pair_status_warm" formatted="false">Warm</string>
+    <string name="market_pair_status_cold" formatted="false">Підготовка</string>
+    <string name="market_pair_status_cointegrated" formatted="false">Коінтегровані</string>
+    <string name="market_pair_status_warm" formatted="false">Готово</string>
     <string name="positions_timeline_chart_valuationcurrency">Валюта оцінки: %1$s</string>
-    <string name="account_language_syncing">Saving your language choice to your backend account…</string>
-    <string name="account_language_confirmed">Backend account language confirmed: %1$s</string>
-    <string name="account_language_uncertain">The backend account language could not be confirmed. Your local language choice is unchanged.</string>
-    <string name="account_language_retry">Retry language sync</string>
+    <string name="account_language_syncing">Збереження вибраної мови в обліковому записі на бекенді…</string>
+    <string name="account_language_confirmed">Мову облікового запису на бекенді підтверджено: %1$s</string>
+    <string name="account_language_uncertain">Не вдалося підтвердити мову облікового запису на бекенді. Локально вибрану мову не змінено.</string>
+    <string name="account_language_retry">Повторити синхронізацію мови</string>
     <string name="backtests_status_pending">Очікує</string>
     <string name="backtests_status_running">Виконується</string>
     <string name="backtests_status_completed">Завершено</string>
     <string name="backtests_status_failed">Помилка</string>
     <string name="backtests_status_cancelled">Скасовано</string>
     <string name="backtests_status_unknown">Невідомо</string>
-    <string name="push_title">Snapper updates</string>
-    <string name="push_generic">Open Snapper to view updates</string>
-    <string name="push_privacy">Notifications show only a generic invitation. Open the app and sign in to view authorized details. Enabling push sends an installation identifier to Google and your configured backend.</string>
-    <string name="push_enable">Enable notifications</string>
-    <string name="push_disable">Disable notifications</string>
-    <string name="push_check">Check registration status</string>
-    <string name="push_off">Notifications are off.</string>
-    <string name="push_busy">Updating notification registration…</string>
-    <string name="push_unavailable">Push is unavailable for this backend.</string>
-    <string name="push_permission">Allow Android notifications to enable push.</string>
-    <string name="push_ready">Push is available. Enable it to register this installation.</string>
-    <string name="push_accepted">Notification registration confirmed. Delivery depends on your backend and device.</string>
-    <string name="push_rejected">Registration was not completed. You can try again explicitly.</string>
-    <string name="push_uncertain">Registration could not be confirmed. Check status before another registration.</string>
-    <string name="push_restart">Close and reopen the app before activating a different Firebase configuration.</string>
-    <string name="push_close">Close</string>
-    <string name="push_cleanup">Local notifications are off. Remote cleanup is pending; disable again while signed in to retry.</string>
+    <string name="push_title">Оновлення Snapper</string>
+    <string name="push_generic">Відкрийте Snapper, щоб переглянути оновлення</string>
+    <string name="push_privacy">Сповіщення містять лише загальне запрошення. Відкрийте застосунок і увійдіть, щоб переглянути доступні вам відомості. Увімкнення push-сповіщень надсилає ідентифікатор установлення до Google та налаштованого бекенду.</string>
+    <string name="push_enable">Увімкнути сповіщення</string>
+    <string name="push_disable">Вимкнути сповіщення</string>
+    <string name="push_check">Перевірити статус реєстрації</string>
+    <string name="push_off">Сповіщення вимкнено.</string>
+    <string name="push_busy">Оновлення реєстрації сповіщень…</string>
+    <string name="push_unavailable">Push-сповіщення недоступні для цього бекенду.</string>
+    <string name="push_permission">Дозвольте сповіщення Android, щоб увімкнути push-сповіщення.</string>
+    <string name="push_ready">Push-сповіщення доступні. Увімкніть їх, щоб зареєструвати це встановлення.</string>
+    <string name="push_accepted">Реєстрацію сповіщень підтверджено. Доставка залежить від бекенду та пристрою.</string>
+    <string name="push_rejected">Реєстрацію не завершено. Ви можете повторити її вручну.</string>
+    <string name="push_uncertain">Не вдалося підтвердити реєстрацію. Перевірте статус перед наступною реєстрацією.</string>
+    <string name="push_restart">Закрийте й знову відкрийте застосунок перед активацією іншої конфігурації Firebase.</string>
+    <string name="push_close">Закрити</string>
+    <string name="push_cleanup">Локальні сповіщення вимкнено. Видалення на сервері очікує виконання; увійдіть в обліковий запис і вимкніть їх ще раз, щоб повторити спробу.</string>
     <string name="home_connection_connected">Зʼєднано</string>
     <string name="home_connection_connecting">Підключення…</string>
     <string name="home_connection_authenticating">Автентифікація…</string>
@@ -419,4 +419,72 @@
         <item quantity="many">%1$d секунд тому</item>
         <item quantity="other">%1$d секунди тому</item>
     </plurals>
+    <string name="records_status_new" formatted="false">Новий</string>
+    <string name="records_status_open" formatted="false">Відкритий</string>
+    <string name="records_status_partially_filled" formatted="false">Частково виконаний</string>
+    <string name="records_status_filled" formatted="false">Виконаний</string>
+    <string name="records_status_cancelled" formatted="false">Скасований</string>
+    <string name="records_status_rejected" formatted="false">Відхилений</string>
+    <string name="records_alert_type_order_unknown" formatted="false">Стан ордера невідомий</string>
+    <string name="venue_accounts_status_observed" formatted="false">У реальному часі</string>
+    <string name="venue_accounts_status_simulated" formatted="false">Симуляція</string>
+    <string name="venue_accounts_status_stale" formatted="false">Застаріло</string>
+    <string name="venue_accounts_status_clock_error" formatted="false">Помилка годинника</string>
+    <string name="venue_accounts_status_unverified" formatted="false">Не перевірено</string>
+    <string name="venue_accounts_status_unavailable" formatted="false">Недоступно</string>
+    <string name="venue_accounts_status_not_applicable" formatted="false">Не застосовується</string>
+    <string name="venue_accounts_status_unknown" formatted="false">Невідомо</string>
+    <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Звірено</string>
+    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">Виявлено відхилення</string>
+    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">Ще не звірено</string>
+    <string name="venue_accounts_reconciliation_status_error" formatted="false">Помилка звірки</string>
+    <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">Не підтримується</string>
+    <string name="system_status_healthy" formatted="false">Справний</string>
+    <string name="system_status_error" formatted="false">Помилка</string>
+    <string name="system_status_warning" formatted="false">Попередження</string>
+    <string name="system_status_starting" formatted="false">запуск</string>
+    <string name="system_status_stopping" formatted="false">зупинка</string>
+    <string name="settings_role_viewer" formatted="false">Спостерігач</string>
+    <string name="settings_role_operator" formatted="false">Оператор</string>
+    <string name="settings_role_admin" formatted="false">Адміністратор</string>
+    <string name="settings_role_ai_delegate" formatted="false">Делегат ШІ</string>
+    <string name="settings_role_auditor" formatted="false">Аудитор</string>
+    <string name="process_mode_thread" formatted="false">Режим потоку</string>
+    <string name="process_mode_process" formatted="false">Режим процесу</string>
+    <string name="process_role_strategy" formatted="false">Стратегія</string>
+    <string name="process_role_backtest" formatted="false">Бектест</string>
+    <string name="positions_timeline_incompleteness_scope_global" formatted="false">Увесь портфель</string>
+    <string name="positions_timeline_incompleteness_tier_mark_incomplete" formatted="false">НЕПОВНА МАРКУВАЛЬНА ЦІНА</string>
+    <string name="positions_timeline_incompleteness_tier_untrusted" formatted="false">НЕДОСТОВІРНО</string>
+    <string name="positions_timeline_attribution_origins_manual" formatted="false">Вручну · безпосередньо</string>
+    <string name="positions_timeline_attribution_origins_plan" formatted="false">План · автоматично</string>
+    <string name="positions_timeline_attribution_origins_system" formatted="false">Система · автоматично</string>
+    <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Без атрибуції · походження невідоме</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Немає заповнення біржової торгівлі, яка б служила доказом цього бронювання.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Успадкований запис, доказом якого не є заповнення біржової торгівлі.</string>
+    <string name="common_yes" formatted="false">Так</string>
+    <string name="common_no" formatted="false">Ні</string>
+    <string name="settings_role_ai_reviewer" formatted="false">Рецензент ШІ</string>
+    <string name="settings_role_ai_researcher" formatted="false">Дослідник AI</string>
+    <string name="process_role_core" formatted="false">Основна служба</string>
+    <string name="process_role_task" formatted="false">Завдання</string>
+    <string name="records_status_submitted" formatted="false">Надіслано</string>
+    <string name="system_status_ready" formatted="false">Готово</string>
+    <string name="system_status_degraded" formatted="false">Обмежена працездатність</string>
+    <string name="market_instrument_kind_spot" formatted="false">Спот</string>
+    <string name="market_instrument_kind_perpetual" formatted="false">Безстроковий контракт</string>
+    <string name="market_instrument_kind_future" formatted="false">Ф\'ючерсний контракт</string>
+    <string name="market_instrument_kind_etf" formatted="false">ETF</string>
+    <string name="market_instrument_kind_option" formatted="false">Опціон</string>
+    <string name="venue_accounts_valuation_native_only" formatted="false">Лише вихідні валюти</string>
+    <string name="venue_accounts_status_unobserved" formatted="false">Ще не спостерігалося</string>
+    <string name="pnl_execution_history_as_recorded" formatted="false">Як записано</string>
+    <string name="pnl_execution_history_operator_corrected" formatted="false">Виправлено оператором</string>
+    <string name="ai_reviews_status_approved" formatted="false">Схвалено</string>
+    <string name="ai_reviews_status_rejected" formatted="false">Відхилено</string>
+    <string name="venue_accounts_evaluation_matched" formatted="false">Збігається</string>
+    <string name="venue_accounts_evaluation_mismatched" formatted="false">Не збігається</string>
+    <string name="venue_accounts_evaluation_incomplete" formatted="false">Неповно</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Необроблені значення біржі</string>
+    <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Застарілі значення з рухомою комою</string>
 </resources>
