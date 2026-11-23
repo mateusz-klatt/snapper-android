@@ -166,7 +166,7 @@
     <string name="records_refresh">Refresh</string>
     <string name="records_fee">Fee</string>
     <string name="records_details">Details</string>
-    <string name="records_hide_details">@string/close</string>
+    <string name="records_hide_details">Close</string>
     <string name="records_thread">Thread</string>
     <string name="records_source_topic">Source topic</string>
     <string name="notification_defaults_title">User defaults</string>
@@ -205,7 +205,7 @@
     <string name="venue_accounts_refresh">Refresh</string>
     <string name="venue_accounts_failed">Venue account state could not be loaded. This is not an empty account — the data is simply unavailable right now.</string>
     <string name="venue_accounts_authoritative">Live venue truth, observed within the authority window.</string>
-    <string name="venue_accounts_not_authoritative">Rows not marked Live show last-known, simulated, or unavailable data — never authoritative live venue balances.</string>
+    <string name="venue_accounts_not_authoritative">This account shows last-known, simulated, or unavailable data — not authoritative live venue balances.</string>
     <string name="venue_accounts_valuation">Valuation</string>
     <string name="venue_accounts_balances">Balances</string>
     <string name="venue_accounts_observed">Observed at</string>
@@ -420,4 +420,83 @@
         <item quantity="one">%1$d second ago</item>
         <item quantity="other">%1$d seconds ago</item>
     </plurals>
+    <string name="records_status_new" formatted="false">New</string>
+    <string name="records_status_open" formatted="false">Open</string>
+    <string name="records_status_partially_filled" formatted="false">Partially Filled</string>
+    <string name="records_status_filled" formatted="false">Filled</string>
+    <string name="records_status_cancelled" formatted="false">Cancelled</string>
+    <string name="records_status_rejected" formatted="false">Rejected</string>
+    <string name="records_alert_type_order_unknown" formatted="false">Order state unknown</string>
+    <string name="venue_accounts_status_observed" formatted="false">Observed</string>
+    <string name="venue_accounts_status_simulated" formatted="false">Simulated</string>
+    <string name="venue_accounts_status_stale" formatted="false">Stale</string>
+    <string name="venue_accounts_status_clock_error" formatted="false">Clock error</string>
+    <string name="venue_accounts_status_unverified" formatted="false">Unverified</string>
+    <string name="venue_accounts_status_unavailable" formatted="false">Unavailable</string>
+    <string name="venue_accounts_status_not_applicable" formatted="false">Not applicable</string>
+    <string name="venue_accounts_status_unknown" formatted="false">Unknown</string>
+    <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Reconciled</string>
+    <string name="venue_accounts_reconciliation_status_error" formatted="false">Reconciliation error</string>
+    <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">Not supported</string>
+    <string name="system_status_healthy" formatted="false">Healthy</string>
+    <string name="system_status_error" formatted="false">Error</string>
+    <string name="system_status_warning" formatted="false">Warning</string>
+    <string name="system_status_starting" formatted="false">starting</string>
+    <string name="system_status_stopping" formatted="false">stopping</string>
+    <string name="settings_role_viewer" formatted="false">Viewer</string>
+    <string name="settings_role_operator" formatted="false">Operator</string>
+    <string name="settings_role_admin" formatted="false">Administrator</string>
+    <string name="settings_role_ai_delegate" formatted="false">AI Delegate</string>
+    <string name="settings_role_auditor" formatted="false">Auditor</string>
+    <string name="process_mode_thread" formatted="false">Thread Mode</string>
+    <string name="process_mode_process" formatted="false">Process Mode</string>
+    <string name="process_role_strategy" formatted="false">Strategy</string>
+    <string name="process_role_backtest" formatted="false">Backtest</string>
+    <string name="positions_timeline_incompleteness_scope_global" formatted="false">Portfolio-wide</string>
+    <string name="positions_timeline_incompleteness_tier_mark_incomplete" formatted="false">MARK-incomplete</string>
+    <string name="positions_timeline_incompleteness_tier_untrusted" formatted="false">UNTRUSTED</string>
+    <string name="positions_timeline_attribution_origins_manual" formatted="false">Manual · direct</string>
+    <string name="positions_timeline_attribution_origins_plan" formatted="false">Plan · automated</string>
+    <string name="positions_timeline_attribution_origins_system" formatted="false">System · automated</string>
+    <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Unattributed · provenance unknown</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">No exchange fill witnessed this booking</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Legacy lineage with no witnessing fill</string>
+    <string name="common_yes" formatted="false">Yes</string>
+    <string name="common_no" formatted="false">No</string>
+    <string name="settings_role_ai_reviewer" formatted="false">AI reviewer</string>
+    <string name="settings_role_ai_researcher" formatted="false">AI researcher</string>
+    <string name="process_role_core" formatted="false">Core</string>
+    <string name="process_role_task" formatted="false">Task</string>
+    <string name="records_status_submitted" formatted="false">Submitted</string>
+    <string name="system_status_ready" formatted="false">Ready</string>
+    <string name="system_status_degraded" formatted="false">Degraded</string>
+    <string name="market_instrument_kind_spot" formatted="false">Spot</string>
+    <string name="market_instrument_kind_perpetual" formatted="false">Perpetual contract</string>
+    <string name="market_instrument_kind_future" formatted="false">Futures contract</string>
+    <string name="market_instrument_kind_etf" formatted="false">ETF</string>
+    <string name="market_instrument_kind_option" formatted="false">Option</string>
+    <string name="venue_accounts_valuation_native_only" formatted="false">Native currencies only</string>
+    <string name="venue_accounts_status_unobserved" formatted="false">Not yet observed</string>
+    <string name="pnl_execution_history_as_recorded" formatted="false">As recorded</string>
+    <string name="pnl_execution_history_operator_corrected" formatted="false">Corrected by operator</string>
+    <string name="ai_reviews_status_approved" formatted="false">Approved</string>
+    <string name="ai_reviews_status_rejected" formatted="false">Rejected</string>
+    <string name="venue_accounts_evaluation_matched" formatted="false">Matched</string>
+    <string name="venue_accounts_evaluation_mismatched" formatted="false">Mismatched</string>
+    <string name="venue_accounts_evaluation_incomplete" formatted="false">Incomplete</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Raw venue values</string>
+    <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Legacy floating-point values</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">Corrupt</string>
+    <string name="system_status_not_running" formatted="false">Not running</string>
+    <string name="records_status_closed" formatted="false">Closed</string>
+    <string name="records_status_pending_new" formatted="false">Pending submission</string>
+    <string name="records_status_expired" formatted="false">Expired</string>
+    <string name="records_alert_priority_critical" formatted="false">Critical</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">Critical system error</string>
+    <string name="records_alert_type_drift" formatted="false">Portfolio drift</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">Dispatched to delegates</string>
+    <string name="ai_reviews_status_timeout" formatted="false">Timed out</string>
+    <string name="backtests_status_cancel_requested" formatted="false">Cancellation requested</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">Pending</string>
 </resources>

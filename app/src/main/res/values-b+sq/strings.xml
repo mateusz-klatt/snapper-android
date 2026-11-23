@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="privacy_policy" formatted="false">Privacy policy</string>
+    <string name="privacy_policy" formatted="false">Politika e privatësisë</string>
     <string name="username" formatted="false">Emër përdoruesi</string>
     <string name="password" formatted="false">Fjalëkalim</string>
     <string name="sign_in" formatted="false">Hyr</string>
-    <string name="session_retention_notice" formatted="false">Staying signed in requires Android 11+, a secure screen lock, and authentication with your PIN, pattern, password or strong biometrics within the last 5 minutes. Otherwise, sign in again after the app restarts.</string>
+    <string name="session_retention_notice" formatted="false">Për të qëndruar i identifikuar nevojitet Android 11+, kyçje e sigurt e ekranit dhe vërtetim me PIN, model, fjalëkalim ose biometrikë të fortë gjatë 5 minutave të fundit. Përndryshe, identifikohu përsëri pas rinisjes së aplikacionit.</string>
     <string name="subtitle" formatted="false">Platformë tregtimi</string>
     <string name="backend" formatted="false">URL backend-i i personalizuar</string>
     <string name="language" formatted="false">Gjuha</string>
@@ -25,10 +25,10 @@
     <string name="filled" formatted="false">E ekzekutuar</string>
     <string name="status" formatted="false">Status</string>
     <string name="side" formatted="false">Anë</string>
-    <string name="open" formatted="false">Open</string>
+    <string name="open" formatted="false">Hapja</string>
     <string name="high" formatted="false">I lartë</string>
     <string name="low" formatted="false">I ulët</string>
-    <string name="close" formatted="false">Close</string>
+    <string name="close" formatted="false">Mbyllja</string>
     <string name="volume" formatted="false">Volum</string>
     <string name="timeframe" formatted="false">Interval kohor</string>
     <string name="no_candles" formatted="false">Ende nuk ka qirinj</string>
@@ -37,68 +37,68 @@
     <string name="alerts" formatted="false">Sinjalizime</string>
     <string name="settings" formatted="false">Cilësime</string>
     <string name="save" formatted="false">Ruaj</string>
-    <string name="refresh" formatted="false">Refresh</string>
+    <string name="refresh" formatted="false">Rifresko</string>
     <string name="exchange" formatted="false">Bursë</string>
-    <string name="load_market" formatted="false">Load candles</string>
-    <string name="empty" formatted="false">No records available.</string>
-    <string name="snapshot_note" formatted="false">Snapshot data. Refresh to retrieve the latest available records.</string>
-    <string name="chart_description" formatted="false">Historical candle chart. Exact values are listed below.</string>
-    <string name="error_origin" formatted="false">Enter a valid HTTPS backend origin.</string>
-    <string name="error_credentials" formatted="false">The username or password is incorrect.</string>
-    <string name="error_session" formatted="false">Your session expired. Please sign in again.</string>
-    <string name="error_network" formatted="false">Could not reach the backend. Check your connection and try again.</string>
-    <string name="error_service" formatted="false">The backend could not complete this request. Please try again.</string>
-    <string name="error_unknown" formatted="false">Something went wrong. Please try again.</string>
+    <string name="load_market" formatted="false">Ngarko qirinjtë</string>
+    <string name="empty" formatted="false">Nuk ka regjistrime të disponueshme.</string>
+    <string name="snapshot_note" formatted="false">Pamje e çastit e të dhënave. Rifresko për të marrë regjistrimet më të fundit të disponueshme.</string>
+    <string name="chart_description" formatted="false">Grafiku i qirinjve historikë. Vlerat e sakta renditen më poshtë.</string>
+    <string name="error_origin" formatted="false">Vendos një origjinë të vlefshme HTTPS për backend-in.</string>
+    <string name="error_credentials" formatted="false">Emri i përdoruesit ose fjalëkalimi është i pasaktë.</string>
+    <string name="error_session" formatted="false">Sesioni yt ka skaduar. Identifikohu përsëri.</string>
+    <string name="error_network" formatted="false">Nuk u arrit lidhja me backend-in. Kontrollo lidhjen dhe provo përsëri.</string>
+    <string name="error_service" formatted="false">Backend-i nuk mundi ta përfundonte këtë kërkesë. Provo përsëri.</string>
+    <string name="error_unknown" formatted="false">Diçka shkoi keq. Provo përsëri.</string>
     <string name="dismiss" formatted="false">Hiq</string>
     <string name="paper" formatted="false">Demo</string>
-    <string name="safety_critical" formatted="false">Safety critical</string>
-    <string name="snapshot_limit" formatted="false">This view shows current positions and up to 100 recent orders and alerts; it is not a complete history.</string>
-    <string name="chart_window" formatted="false">The chart shows the last 100 retrieved candles.</string>
-    <string name="local_network_explanation" formatted="false">For a backend on your local network, allow local network access before signing in. Public internet backends do not need this permission.</string>
-    <string name="local_network_allow" formatted="false">Allow local network</string>
-    <string name="local_network_settings" formatted="false">Open app settings</string>
-    <string name="order_new" formatted="false">New Order</string>
-    <string name="order_entry" formatted="false">New Manual Order</string>
-    <string name="order_confirm" formatted="false">Confirm Order</string>
+    <string name="safety_critical" formatted="false">Kritike për sigurinë</string>
+    <string name="snapshot_limit" formatted="false">Kjo pamje tregon pozicionet aktuale dhe deri në 100 porosi e sinjalizime të fundit; nuk është historiku i plotë.</string>
+    <string name="chart_window" formatted="false">Grafiku tregon 100 qirinjtë e fundit të marrë.</string>
+    <string name="local_network_explanation" formatted="false">Për një backend në rrjetin lokal, lejo qasjen në rrjetin lokal para identifikimit. Backend-et në internetin publik nuk kanë nevojë për këtë leje.</string>
+    <string name="local_network_allow" formatted="false">Lejo rrjetin lokal</string>
+    <string name="local_network_settings" formatted="false">Hap cilësimet e aplikacionit</string>
+    <string name="order_new" formatted="false">Porosi e re</string>
+    <string name="order_entry" formatted="false">Porosi e re manuale</string>
+    <string name="order_confirm" formatted="false">Konfirmo porosinë</string>
     <string name="order_quantity" formatted="false">Sasi</string>
-    <string name="order_type" formatted="false">Order Type</string>
-    <string name="order_stop_price" formatted="false">Stop Price</string>
+    <string name="order_type" formatted="false">Lloji i porosisë</string>
+    <string name="order_stop_price" formatted="false">Çmimi stop</string>
     <string name="order_mode" formatted="false">Modalitet</string>
-    <string name="order_buy" formatted="false">Buy</string>
-    <string name="order_sell" formatted="false">Sell</string>
+    <string name="order_buy" formatted="false">Bli</string>
+    <string name="order_sell" formatted="false">Shit</string>
     <string name="order_market" formatted="false">Treg</string>
     <string name="order_limit" formatted="false">Limit</string>
     <string name="order_stop" formatted="false">Stop</string>
     <string name="order_stop_limit" formatted="false">Stop Limit</string>
-    <string name="order_live" formatted="false">Live</string>
-    <string name="order_review" formatted="false">Review Order</string>
-    <string name="order_back" formatted="false">Back</string>
-    <string name="order_submit" formatted="false">Confirm Order</string>
-    <string name="order_submitting" formatted="false">Submitting…</string>
+    <string name="order_live" formatted="false">Tregtim real</string>
+    <string name="order_review" formatted="false">Rishiko porosinë</string>
+    <string name="order_back" formatted="false">Prapa</string>
+    <string name="order_submit" formatted="false">Konfirmo porosinë</string>
+    <string name="order_submitting" formatted="false">Po dërgohet…</string>
     <string name="order_leverage" formatted="false">Leva financiare</string>
-    <string name="order_reduce_only" formatted="false">Reduce Only</string>
-    <string name="order_observation_only" formatted="false">This instrument is observation-only — place orders on an execution-capable instrument.</string>
-    <string name="order_unknown_instrument" formatted="false">This instrument is not recognised. Reload the list and try again.</string>
-    <string name="order_caps_violation" formatted="false">This order would exceed your account safety caps. Review your risk settings and retry.</string>
-    <string name="order_rejected" formatted="false">Order creation failed</string>
+    <string name="order_reduce_only" formatted="false">Vetëm zvogëlim</string>
+    <string name="order_observation_only" formatted="false">Ky instrument është vetëm për vëzhgim — vendos porosi për një instrument që mbështet ekzekutimin.</string>
+    <string name="order_unknown_instrument" formatted="false">Ky instrument nuk njihet. Ringarko listën dhe provo përsëri.</string>
+    <string name="order_caps_violation" formatted="false">Kjo porosi do të tejkalonte kufijtë e sigurisë së llogarisë. Rishiko cilësimet e rrezikut dhe provo përsëri.</string>
+    <string name="order_rejected" formatted="false">Krijimi i porosisë dështoi</string>
     <string name="order_cancel_title" formatted="false">Të anulohet porosia?</string>
     <string name="order_cancel_confirm" formatted="false">Anulo porosinë</string>
     <string name="order_keep_open" formatted="false">Mbaje të hapur</string>
-    <string name="order_select_wallet" formatted="false">Select a wallet on Home before placing an order.</string>
-    <string name="order_created" formatted="false">Order submitted. Refresh to check execution status.</string>
-    <string name="order_cancel_requested" formatted="false">Cancellation requested. Refresh to check the order status.</string>
-    <string name="order_unknown_outcome" formatted="false">The request outcome is unknown. Check status before taking further action.</string>
-    <string name="order_check_status" formatted="false">Check status</string>
-    <string name="order_retry_intent" formatted="false">Retry same order</string>
-    <string name="order_catalog_error" formatted="false">Could not load exchanges or instruments. Try again.</string>
-    <string name="order_no_instruments" formatted="false">No instruments available for this exchange.</string>
-    <string name="order_invalid_form" formatted="false">Enter positive quantities and required prices. Optional leverage must be a positive whole number.</string>
-    <string name="order_refresh_failed" formatted="false">The request was accepted, but the latest records could not be loaded. Refresh to check status.</string>
-    <string name="order_forbidden" formatted="false">You no longer have permission for this action.</string>
-    <string name="order_session_changed" formatted="false">The session or wallet changed. Open a new order from the current account.</string>
+    <string name="order_select_wallet" formatted="false">Zgjidh një portofol te Kreu përpara se të vendosësh një porosi.</string>
+    <string name="order_created" formatted="false">Porosia u dërgua. Rifresko për të kontrolluar gjendjen e ekzekutimit.</string>
+    <string name="order_cancel_requested" formatted="false">U kërkua anulimi. Rifresko për të kontrolluar gjendjen e porosisë.</string>
+    <string name="order_unknown_outcome" formatted="false">Rezultati i kërkesës nuk dihet. Kontrollo gjendjen para veprimeve të tjera.</string>
+    <string name="order_check_status" formatted="false">Kontrollo gjendjen</string>
+    <string name="order_retry_intent" formatted="false">Riprovo të njëjtën porosi</string>
+    <string name="order_catalog_error" formatted="false">Nuk u ngarkuan bursat ose instrumentet. Provo përsëri.</string>
+    <string name="order_no_instruments" formatted="false">Nuk ka instrumente të disponueshme për këtë bursë.</string>
+    <string name="order_invalid_form" formatted="false">Vendos sasi pozitive dhe çmimet e kërkuara. Leva opsionale duhet të jetë një numër i plotë pozitiv.</string>
+    <string name="order_refresh_failed" formatted="false">Kërkesa u pranua, por regjistrimet më të fundit nuk u ngarkuan. Rifresko për të kontrolluar gjendjen.</string>
+    <string name="order_forbidden" formatted="false">Nuk ke më leje për këtë veprim.</string>
+    <string name="order_session_changed" formatted="false">Sesioni ose portofoli ndryshoi. Hap një porosi të re nga llogaria aktuale.</string>
     <string name="order_enabled" formatted="false">Aktivizuar</string>
     <string name="order_disabled" formatted="false">Çaktivizuar</string>
-    <string name="system_tools" formatted="false">Overview</string>
+    <string name="system_tools" formatted="false">Përmbledhje</string>
     <string name="desk_attach_button" formatted="false">Shto vëzhgues</string>
     <string name="desk_attach_desk_label" formatted="false">Desk</string>
     <string name="desk_nav_title" formatted="false">Desqet e mia</string>
@@ -113,7 +113,7 @@
     <string name="settings_account_email" formatted="false">Email</string>
     <string name="settings_account_role">Roli: %1$s</string>
     <string name="settings_app_info_version" formatted="false">Versioni</string>
-    <string name="settings_app_info_build" formatted="false">Build</string>
+    <string name="settings_app_info_build" formatted="false">Versioni i kompilimit</string>
     <string name="settings_logout_confirm_title" formatted="false">Të dalësh?</string>
     <string name="settings_logout_confirm_message" formatted="false">A je i sigurt që dëshiron të dalësh?</string>
     <string name="settings_connection_change_backend_title" formatted="false">Të ndërrohet backend?</string>
@@ -157,13 +157,13 @@
     <string name="system_active" formatted="false">Aktiv</string>
     <string name="system_inactive" formatted="false">Joaktiv</string>
     <string name="system_revoked" formatted="false">Revokuar</string>
-    <string name="records_open" formatted="false">Open</string>
+    <string name="records_open" formatted="false">Të hapura</string>
     <string name="records_recent" formatted="false">Të fundit</string>
     <string name="records_fills" formatted="false">Ekzekutime</string>
-    <string name="records_refresh" formatted="false">Refresh</string>
-    <string name="records_fee" formatted="false">Fee</string>
-    <string name="records_details" formatted="false">Details</string>
-    <string name="records_hide_details" formatted="false">\@string/close</string>
+    <string name="records_refresh" formatted="false">Rifresko</string>
+    <string name="records_fee" formatted="false">Tarifa</string>
+    <string name="records_details" formatted="false">Detajet</string>
+    <string name="records_hide_details" formatted="false">Mbyll</string>
     <string name="records_thread" formatted="false">Fill</string>
     <string name="records_source_topic" formatted="false">Tema burimore</string>
     <string name="notification_defaults_title" formatted="false">Parazgjedhjet e përdoruesit</string>
@@ -190,8 +190,8 @@
     <string name="signals_weak" formatted="false">I dobët</string>
     <string name="signals_very_weak" formatted="false">Shumë i dobët</string>
     <string name="signals_total" formatted="false">Gjithsej</string>
-    <string name="signals_buy" formatted="false">Buy</string>
-    <string name="signals_sell" formatted="false">Sell</string>
+    <string name="signals_buy" formatted="false">Bli</string>
+    <string name="signals_sell" formatted="false">Shit</string>
     <string name="signals_average_strength" formatted="false">Forca mes.</string>
     <string name="signals_filter" formatted="false">Filtro sipas strategjisë</string>
     <string name="signals_all_strategies" formatted="false">Të gjitha strategjitë</string>
@@ -199,23 +199,23 @@
     <string name="signals_export" formatted="false">Eksporto</string>
     <string name="signals_export_failed" formatted="false">Dorëzimi dështoi</string>
     <string name="venue_accounts_title" formatted="false">Llogaritë e Bursës</string>
-    <string name="venue_accounts_refresh" formatted="false">Refresh</string>
+    <string name="venue_accounts_refresh" formatted="false">Rifresko</string>
     <string name="venue_accounts_failed" formatted="false">Gjendja e llogarisë së bursës nuk mund të ngarkohej. Llogaria nuk është bosh; të dhënat thjesht nuk disponohen për momentin.</string>
     <string name="venue_accounts_authoritative" formatted="false">Të dhëna të besueshme të bursës në kohë reale, të regjistruara brenda periudhës së vlefshmërisë.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Rreshtat e pashënuar Në kohë reale tregojnë të dhënat e fundit të njohura, të simuluara ose të padisponueshme — ato nuk janë kurrë gjendje autoritative të bursës në kohë reale.</string>
-    <string name="venue_accounts_valuation" formatted="false">Valuation</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Kjo llogari tregon të dhënat e fundit të njohura, të simuluara ose të padisponueshme — ato nuk janë gjendje autoritative të bursës në kohë reale.</string>
+    <string name="venue_accounts_valuation" formatted="false">Vlerësimi</string>
     <string name="venue_accounts_balances" formatted="false">Gjendjet</string>
-    <string name="venue_accounts_observed" formatted="false">Observed at</string>
-    <string name="venue_accounts_source" formatted="false">Source observation</string>
+    <string name="venue_accounts_observed" formatted="false">Koha e vëzhgimit</string>
+    <string name="venue_accounts_source" formatted="false">Vëzhgimi burimor</string>
     <string name="venue_accounts_total" formatted="false">Gjithsej</string>
     <string name="venue_accounts_free" formatted="false">E disponueshme</string>
     <string name="venue_accounts_used" formatted="false">E përdorur</string>
-    <string name="venue_accounts_numeric_source" formatted="false">Numeric provenance</string>
+    <string name="venue_accounts_numeric_source" formatted="false">Prejardhja e vlerave numerike</string>
     <string name="venue_accounts_positions" formatted="false">Pozicionet e hapura</string>
     <string name="venue_accounts_funding" formatted="false">Financimi</string>
-    <string name="venue_accounts_reconciliation" formatted="false">Reconciliation status</string>
-    <string name="venue_accounts_evaluation" formatted="false">Evaluation status</string>
-    <string name="venue_accounts_deadline" formatted="false">Authority deadline</string>
+    <string name="venue_accounts_reconciliation" formatted="false">Gjendja e rakordimit</string>
+    <string name="venue_accounts_evaluation" formatted="false">Gjendja e vlerësimit</string>
+    <string name="venue_accounts_deadline" formatted="false">Afati i vlefshmërisë së të dhënave të verifikuara</string>
     <string name="positions_timeline_controls_window" formatted="false">Intervali</string>
     <string name="positions_timeline_controls_granularity" formatted="false">Granulariteti</string>
     <string name="positions_timeline_controls_valuationcurrency" formatted="false">Monedha e vlerësimit</string>
@@ -228,7 +228,7 @@
     <string name="positions_timeline_nowallet_message" formatted="false">Zgjidhni një portofol për të parë kronologjinë e tij të P&amp;L.</string>
     <string name="positions_timeline_incompleteness_title" formatted="false">Pse pikat janë të paplota</string>
     <string name="positions_timeline_incompleteness_description" formatted="false">Arsyet mbulojnë të gjithë intervalin e ngarkuar. Numërimet mund të mbivendosen kur një pikë ka më shumë se një shkak.</string>
-    <string name="positions_timeline_incompleteness_affectedpoints">Affected points: %1$s</string>
+    <string name="positions_timeline_incompleteness_affectedpoints">Pikat e prekura: %1$s</string>
     <string name="positions_timeline_chart_title" formatted="false">P&amp;L me kalimin e kohës</string>
     <string name="positions_timeline_chart_net" formatted="false">P&amp;L neto</string>
     <string name="positions_timeline_chart_realized" formatted="false">P&amp;L i realizuar</string>
@@ -260,26 +260,26 @@
     <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">Rakordimi i atribuimit dështoi</string>
     <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">Rakordimi i P&amp;L sipas instrumenteve dështoi</string>
     <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">Ekzekutim urdhri i mbërritur me vonesë, me vulë kohore para aktivizimit</string>
-    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Attribution sum is not representable</string>
-    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Instrument sum is not representable</string>
-    <string name="positions_timeline_executionhistory_title" formatted="false">Operator-corrected execution history</string>
-    <string name="positions_timeline_executionhistory_summary" formatted="false">An operator repudiated recorded executions in this scope. Every correction listed here is excluded from the figures on this page.</string>
-    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Repudiated execution</string>
-    <string name="positions_timeline_executionhistory_correctionid" formatted="false">Correction record</string>
-    <string name="positions_timeline_equity_title" formatted="false">Equity overlay</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Shuma e vlerave të atribuuara nuk mund të paraqitet</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Shuma sipas instrumenteve nuk mund të paraqitet</string>
+    <string name="positions_timeline_executionhistory_title" formatted="false">Historiku i ekzekutimeve i korrigjuar nga operatori</string>
+    <string name="positions_timeline_executionhistory_summary" formatted="false">Një operator i shpalli të pavlefshme ekzekutimet e regjistruara brenda këtij objekti. Çdo korrigjim i renditur këtu përjashtohet nga shifrat në këtë faqe.</string>
+    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Ekzekutim i shpallur i pavlefshëm</string>
+    <string name="positions_timeline_executionhistory_correctionid" formatted="false">Regjistrimi i korrigjimit</string>
+    <string name="positions_timeline_equity_title" formatted="false">Mbivendosja e kapitalit</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">Kapital</string>
-    <string name="positions_timeline_equity_drawdown_current" formatted="false">Current drawdown</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Spot venue only — balances held on other venues are excluded.</string>
-    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">External deposits and withdrawals are not adjusted out.</string>
-    <string name="positions_timeline_equity_honesty_restatedfrom">These figures are restated from %1$s at each minute\'s close, not sampled natively in this currency.</string>
-    <string name="positions_timeline_equity_honesty_pricedon">Priced on %1$s.</string>
-    <string name="positions_timeline_equity_honesty_conversionwithheld">Minutes dropped for want of a proven close: %1$s.</string>
-    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Drawdown is withheld on a converted basis, because the running peak is tracked in the sampled currency.</string>
-    <string name="positions_timeline_equity_cashposition_position" formatted="false">Position value</string>
-    <string name="positions_timeline_equity_cashposition_cash" formatted="false">Cash</string>
-    <string name="pnl_provenance">Calculation: %1$s · Mark source: %2$s · As of: %3$s</string>
-    <string name="pnl_equity_coverage">Equity sampled: %1$s · Complete minutes: %2$s</string>
-    <string name="pnl_execution_history">Execution history: %1$s</string>
+    <string name="positions_timeline_equity_drawdown_current" formatted="false">Rënia aktuale nga kulmi</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Vetëm bursa spot — balancat në bursat e tjera përjashtohen.</string>
+    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Depozitat dhe tërheqjet e jashtme nuk janë përjashtuar nga llogaritja.</string>
+    <string name="positions_timeline_equity_honesty_restatedfrom">Këto shifra rillogariten nga %1$s në mbylljen e çdo minute, nuk maten drejtpërdrejt në këtë monedhë.</string>
+    <string name="positions_timeline_equity_honesty_pricedon">Çmimi sipas %1$s.</string>
+    <string name="positions_timeline_equity_honesty_conversionwithheld">Minuta të përjashtuara për mungesë të një çmimi mbylljeje të verifikuar: %1$s.</string>
+    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Rënia nga kulmi nuk shfaqet pas konvertimit, sepse kulmi i deritanishëm ndiqet në monedhën e matjes.</string>
+    <string name="positions_timeline_equity_cashposition_position" formatted="false">Vlera e pozicionit</string>
+    <string name="positions_timeline_equity_cashposition_cash" formatted="false">Para të gatshme</string>
+    <string name="pnl_provenance">Llogaritja: %1$s · Burimi i çmimit referencë: %2$s · Gjendja më: %3$s</string>
+    <string name="pnl_equity_coverage">Matja e kapitalit: %1$s · Minuta të plota: %2$s</string>
+    <string name="pnl_execution_history">Historiku i ekzekutimeve: %1$s</string>
     <string name="process_title" formatted="false">Proceset</string>
     <string name="process_running" formatted="false">Në ekzekutim</string>
     <string name="process_stopped" formatted="false">Ndaluar</string>
@@ -291,22 +291,22 @@
     <string name="process_cpu" formatted="false">CPU</string>
     <string name="process_empty" formatted="false">Nuk ka procese të konfiguruara.</string>
     <string name="process_start" formatted="false">Nis</string>
-    <string name="process_stop" formatted="false">Stop</string>
+    <string name="process_stop" formatted="false">Ndalo</string>
     <string name="process_restart" formatted="false">Rinis</string>
     <string name="process_cancel" formatted="false">Anulo</string>
     <string name="process_stale" formatted="false">Ky proces nuk mund të kontrollohet më nga këtu. Freskoni të dhënat dhe provoni përsëri.</string>
     <string name="process_partial" formatted="false">Procesi u ndal, por nuk mund të riniset më nga këtu. Freskoni të dhënat dhe provoni përsëri.</string>
-    <string name="process_confirm" formatted="false">Confirm process action</string>
-    <string name="process_confirm_message" formatted="false">Apply this action to the selected process?</string>
-    <string name="process_intent_saved" formatted="false">Desired state saved. The owning coordinator will apply it.</string>
-    <string name="process_accepted" formatted="false">Process action accepted.</string>
-    <string name="process_unknown" formatted="false">The command outcome is unknown. Controls remain locked: a status refresh cannot prove whether this command was applied.</string>
-    <string name="process_partial_unknown" formatted="false">The process was stopped, but the restart outcome is unknown. Controls remain locked: a status refresh cannot prove whether the restart was applied.</string>
-    <string name="process_rejected" formatted="false">The process action failed.</string>
-    <string name="process_load_failed" formatted="false">Could not refresh process status.</string>
-    <string name="process_config_failed" formatted="false">Process controls are unavailable because configuration could not be refreshed.</string>
-    <string name="process_enable" formatted="false">Enable</string>
-    <string name="process_disable" formatted="false">Disable</string>
+    <string name="process_confirm" formatted="false">Konfirmo veprimin e procesit</string>
+    <string name="process_confirm_message" formatted="false">Të zbatohet ky veprim te procesi i zgjedhur?</string>
+    <string name="process_intent_saved" formatted="false">Gjendja e dëshiruar u ruajt. Koordinatori përgjegjës do ta zbatojë.</string>
+    <string name="process_accepted" formatted="false">Veprimi i procesit u pranua.</string>
+    <string name="process_unknown" formatted="false">Rezultati i komandës nuk dihet. Kontrollet mbeten të kyçura: rifreskimi i gjendjes nuk mund të vërtetojë nëse komanda u zbatua.</string>
+    <string name="process_partial_unknown" formatted="false">Procesi u ndal, por rezultati i rinisjes nuk dihet. Kontrollet mbeten të kyçura: rifreskimi i gjendjes nuk mund të vërtetojë nëse rinisja u krye.</string>
+    <string name="process_rejected" formatted="false">Veprimi i procesit dështoi.</string>
+    <string name="process_load_failed" formatted="false">Nuk u rifreskua gjendja e procesit.</string>
+    <string name="process_config_failed" formatted="false">Kontrollet e procesit nuk janë të disponueshme sepse konfigurimi nuk u rifreskua.</string>
+    <string name="process_enable" formatted="false">Aktivizo</string>
+    <string name="process_disable" formatted="false">Çaktivizo</string>
     <string name="ai_reviews_pending_title" formatted="false">Rishikime në pritje</string>
     <string name="ai_reviews_decisions_title" formatted="false">Vendimet e AI</string>
     <string name="ai_reviews_deadline" formatted="false">Afat</string>
@@ -324,13 +324,13 @@
     <string name="ai_reviews_expired_message" formatted="false">Ky rishikim e kaloi afatin dhe skadoi.</string>
     <string name="ai_reviews_missing" formatted="false">Ky rishikim nuk ekziston më.</string>
     <string name="ai_reviews_denied" formatted="false">Qasja juaj si delegat ndryshoi. Ringarkoni para se të vendosni.</string>
-    <string name="ai_reviews_load_failed" formatted="false">Could not refresh reviews. Previously loaded reviews remain visible.</string>
-    <string name="ai_reviews_check_status" formatted="false">Check status</string>
-    <string name="ai_reviews_retry" formatted="false">Retry original decision</string>
-    <string name="ai_reviews_confirm" formatted="false">Confirm review decision</string>
-    <string name="ai_reviews_accepted" formatted="false">Decision accepted</string>
-    <string name="ai_reviews_rejected" formatted="false">Decision rejected by the server</string>
-    <string name="ai_reviews_unknown" formatted="false">Outcome unknown. Check status before retrying.</string>
+    <string name="ai_reviews_load_failed" formatted="false">Nuk u rifreskuan rishikimet. Rishikimet e ngarkuara më parë mbeten të dukshme.</string>
+    <string name="ai_reviews_check_status" formatted="false">Kontrollo gjendjen</string>
+    <string name="ai_reviews_retry" formatted="false">Riprovo vendimin fillestar</string>
+    <string name="ai_reviews_confirm" formatted="false">Konfirmo vendimin e rishikimit</string>
+    <string name="ai_reviews_accepted" formatted="false">Vendimi u pranua</string>
+    <string name="ai_reviews_rejected" formatted="false">Vendimi u refuzua nga serveri</string>
+    <string name="ai_reviews_unknown" formatted="false">Rezultati nuk dihet. Kontrollo gjendjen para se të riprovosh.</string>
     <string name="positions_accessibility_label_closebutton" formatted="false">Mbyll pozicionin</string>
     <string name="positions_accessibility_label_reducebutton" formatted="false">Redukto pozicionin</string>
     <string name="positions_reduce_cancel" formatted="false">Anulo</string>
@@ -341,13 +341,13 @@
     <string name="trading_bracket_takeprofitlabel" formatted="false">Take profit</string>
     <string name="trading_trailingstop_attach" formatted="false">Bashkëngjit trailing stop</string>
     <string name="trading_trailingstop_trailamountlabel" formatted="false">Sasi trail</string>
-    <string name="position_action_review" formatted="false">Review position action</string>
-    <string name="position_action_confirm" formatted="false">Confirm action</string>
-    <string name="position_action_accepted" formatted="false">Request accepted. Refresh to check execution status.</string>
-    <string name="position_action_retry" formatted="false">Retry same request</string>
-    <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
-    <string name="position_action_cycle" formatted="false">Position cycle</string>
-    <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+    <string name="position_action_review" formatted="false">Rishiko veprimin mbi pozicionin</string>
+    <string name="position_action_confirm" formatted="false">Konfirmo veprimin</string>
+    <string name="position_action_accepted" formatted="false">Kërkesa u pranua. Rifresko për të kontrolluar gjendjen e ekzekutimit.</string>
+    <string name="position_action_retry" formatted="false">Riprovo të njëjtën kërkesë</string>
+    <string name="position_action_minimum_lock" formatted="false">Fitimi minimal i siguruar (%)</string>
+    <string name="position_action_cycle" formatted="false">Cikli i pozicionit</string>
+    <string name="position_action_invalid" formatted="false">Rishiko vlerat e vendosura përpara se të vazhdosh.</string>
     <string name="display_financial_title" formatted="false">Skema e ngjyrave financiare</string>
     <string name="display_financial_auto" formatted="false">Përshtat me rajonin tim (auto)</string>
     <string name="display_financial_green" formatted="false">E gjelbër = rritje, e kuqe = rënie (perëndimore)</string>
@@ -355,17 +355,17 @@
     <string name="display_financial_current">Aktualisht: %1$s</string>
     <string name="display_financial_green_short" formatted="false">e gjelbër rritje / e kuqe rënie</string>
     <string name="display_financial_red_short" formatted="false">e kuqe rritje / e gjelbër rënie</string>
-    <string name="display_country" formatted="false">Country / region</string>
+    <string name="display_country" formatted="false">Shteti / rajoni</string>
     <string name="market_context_last" formatted="false">Çmimi i fundit</string>
     <string name="market_context_change" formatted="false">Ndryshim 24h</string>
     <string name="market_context_high" formatted="false">I lartë</string>
     <string name="market_context_low" formatted="false">I ulët</string>
     <string name="market_context_related_empty">Nuk ka instrumente të lidhura të konfiguruara për %1$s në %2$s.</string>
-    <string name="market_live_connected" formatted="false">Live updates connected.</string>
-    <string name="market_live_connecting" formatted="false">Connecting to live updates…</string>
-    <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
-    <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
-    <string name="market_context_as_of">Cached close as of %1$s</string>
+    <string name="market_live_connected" formatted="false">Lidhja me përditësimet në kohë reale u vendos.</string>
+    <string name="market_live_connecting" formatted="false">Po lidhet me përditësimet në kohë reale…</string>
+    <string name="market_live_unavailable" formatted="false">Përditësimet në kohë reale nuk janë të disponueshme; po shfaqen pamje të çastit.</string>
+    <string name="market_snapshot_mode" formatted="false">Mënyra e pamjeve të çastit</string>
+    <string name="market_context_as_of">Çmimi i mbylljes në cache më %1$s</string>
     <string name="market_cachebanner_message">Cache po ngrohet: %1$s / %2$s qirinj të disponueshëm %3$s</string>
     <string name="market_cachebanner_sources_cache" formatted="false"></string>
     <string name="market_cachebanner_sources_db" formatted="false">(nga DB)</string>
@@ -373,37 +373,37 @@
     <string name="market_pairstats_chiparialabel">Statistikat e çiftit me %1$s në %2$s: Pearson %3$s, vlera p %4$s</string>
     <string name="market_pairstats_label" formatted="false">Kointegrimi:</string>
     <string name="market_pairstats_metric">ρ %1$s · p %2$s</string>
-    <string name="market_pair_status_cold" formatted="false">Warming up</string>
-    <string name="market_pair_status_cointegrated" formatted="false">Cointegrated</string>
-    <string name="market_pair_status_warm" formatted="false">Warm</string>
+    <string name="market_pair_status_cold" formatted="false">Në përgatitje</string>
+    <string name="market_pair_status_cointegrated" formatted="false">Të kointegruara</string>
+    <string name="market_pair_status_warm" formatted="false">Gati</string>
     <string name="positions_timeline_chart_valuationcurrency">Monedha e vlerësimit: %1$s</string>
-    <string name="account_language_syncing">Saving your language choice to your backend account…</string>
-    <string name="account_language_confirmed">Backend account language confirmed: %1$s</string>
-    <string name="account_language_uncertain">The backend account language could not be confirmed. Your local language choice is unchanged.</string>
-    <string name="account_language_retry">Retry language sync</string>
+    <string name="account_language_syncing">Po ruhet gjuha e zgjedhur në llogarinë tënde në backend…</string>
+    <string name="account_language_confirmed">Gjuha e llogarisë në backend u konfirmua: %1$s</string>
+    <string name="account_language_uncertain">Gjuha e llogarisë në backend nuk u konfirmua. Gjuha e zgjedhur lokalisht mbetet e pandryshuar.</string>
+    <string name="account_language_retry">Riprovo sinkronizimin e gjuhës</string>
     <string name="backtests_status_pending">Në pritje</string>
     <string name="backtests_status_running">Në ekzekutim</string>
     <string name="backtests_status_completed">Përfunduar</string>
     <string name="backtests_status_failed">Dështoi</string>
     <string name="backtests_status_cancelled">Anuluar</string>
     <string name="backtests_status_unknown">E panjohur</string>
-    <string name="push_title">Snapper updates</string>
-    <string name="push_generic">Open Snapper to view updates</string>
-    <string name="push_privacy">Notifications show only a generic invitation. Open the app and sign in to view authorized details. Enabling push sends an installation identifier to Google and your configured backend.</string>
-    <string name="push_enable">Enable notifications</string>
-    <string name="push_disable">Disable notifications</string>
-    <string name="push_check">Check registration status</string>
-    <string name="push_off">Notifications are off.</string>
-    <string name="push_busy">Updating notification registration…</string>
-    <string name="push_unavailable">Push is unavailable for this backend.</string>
-    <string name="push_permission">Allow Android notifications to enable push.</string>
-    <string name="push_ready">Push is available. Enable it to register this installation.</string>
-    <string name="push_accepted">Notification registration confirmed. Delivery depends on your backend and device.</string>
-    <string name="push_rejected">Registration was not completed. You can try again explicitly.</string>
-    <string name="push_uncertain">Registration could not be confirmed. Check status before another registration.</string>
-    <string name="push_restart">Close and reopen the app before activating a different Firebase configuration.</string>
-    <string name="push_close">Close</string>
-    <string name="push_cleanup">Local notifications are off. Remote cleanup is pending; disable again while signed in to retry.</string>
+    <string name="push_title">Përditësime nga Snapper</string>
+    <string name="push_generic">Hap Snapper për të parë përditësimet</string>
+    <string name="push_privacy">Njoftimet shfaqin vetëm një ftesë të përgjithshme. Hap aplikacionin dhe identifikohu për të parë detajet e autorizuara. Aktivizimi i njoftimeve push dërgon një identifikues të instalimit te Google dhe te backend-i i konfiguruar.</string>
+    <string name="push_enable">Aktivizo njoftimet</string>
+    <string name="push_disable">Çaktivizo njoftimet</string>
+    <string name="push_check">Kontrollo gjendjen e regjistrimit</string>
+    <string name="push_off">Njoftimet janë çaktivizuar.</string>
+    <string name="push_busy">Po përditësohet regjistrimi i njoftimeve…</string>
+    <string name="push_unavailable">Njoftimet push nuk janë të disponueshme për këtë backend.</string>
+    <string name="push_permission">Lejo njoftimet e Android për të aktivizuar njoftimet push.</string>
+    <string name="push_ready">Njoftimet push janë të disponueshme. Aktivizoji për të regjistruar këtë instalim.</string>
+    <string name="push_accepted">Regjistrimi i njoftimeve u konfirmua. Dorëzimi varet nga backend-i dhe pajisja.</string>
+    <string name="push_rejected">Regjistrimi nuk u përfundua. Mund të riprovosh manualisht.</string>
+    <string name="push_uncertain">Regjistrimi nuk u konfirmua. Kontrollo gjendjen përpara një regjistrimi tjetër.</string>
+    <string name="push_restart">Mbyll dhe rihap aplikacionin përpara se të aktivizosh një konfigurim tjetër Firebase.</string>
+    <string name="push_close">Mbyll</string>
+    <string name="push_cleanup">Njoftimet lokale janë çaktivizuar. Pastrimi në distancë është në pritje; çaktivizoji përsëri kur je i identifikuar për të riprovuar.</string>
     <string name="home_connection_connected">I lidhur</string>
     <string name="home_connection_connecting">Po lidhet…</string>
     <string name="home_connection_authenticating">Po autentikohet…</string>
@@ -417,4 +417,83 @@
         <item quantity="one">%1$d sekondë më parë</item>
         <item quantity="other">%1$d sekonda më parë</item>
     </plurals>
+    <string name="records_status_new" formatted="false">I ri</string>
+    <string name="records_status_open" formatted="false">I hapur</string>
+    <string name="records_status_partially_filled" formatted="false">Ekzekutuar pjesërisht</string>
+    <string name="records_status_filled" formatted="false">Ekzekutuar</string>
+    <string name="records_status_cancelled" formatted="false">Anuluar</string>
+    <string name="records_status_rejected" formatted="false">Refuzuar</string>
+    <string name="records_alert_type_order_unknown" formatted="false">Gjendja e porosisë e panjohur</string>
+    <string name="venue_accounts_status_observed" formatted="false">I vëzhguar</string>
+    <string name="venue_accounts_status_simulated" formatted="false">Të simuluara</string>
+    <string name="venue_accounts_status_stale" formatted="false">Të vjetra</string>
+    <string name="venue_accounts_status_clock_error" formatted="false">Gabim ore</string>
+    <string name="venue_accounts_status_unverified" formatted="false">Të pa verifikuara</string>
+    <string name="venue_accounts_status_unavailable" formatted="false">Të padisponueshme</string>
+    <string name="venue_accounts_status_not_applicable" formatted="false">Nuk zbatohet</string>
+    <string name="venue_accounts_status_unknown" formatted="false">E panjohur</string>
+    <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">U rakordua</string>
+    <string name="venue_accounts_reconciliation_status_error" formatted="false">Gabim në rakordim</string>
+    <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">Nuk mbështetet</string>
+    <string name="system_status_healthy" formatted="false">I shëndetshëm</string>
+    <string name="system_status_error" formatted="false">Gabim</string>
+    <string name="system_status_warning" formatted="false">Paralajmërim</string>
+    <string name="system_status_starting" formatted="false">duke nisur</string>
+    <string name="system_status_stopping" formatted="false">duke ndaluar</string>
+    <string name="settings_role_viewer" formatted="false">Shikues</string>
+    <string name="settings_role_operator" formatted="false">Operator</string>
+    <string name="settings_role_admin" formatted="false">Administrator</string>
+    <string name="settings_role_ai_delegate" formatted="false">Delegat AI</string>
+    <string name="settings_role_auditor" formatted="false">Auditues</string>
+    <string name="process_mode_thread" formatted="false">Modalitet Thread</string>
+    <string name="process_mode_process" formatted="false">Modalitet Proces</string>
+    <string name="process_role_strategy" formatted="false">Strategji</string>
+    <string name="process_role_backtest" formatted="false">Test historik</string>
+    <string name="positions_timeline_incompleteness_scope_global" formatted="false">I gjithë portofoli</string>
+    <string name="positions_timeline_incompleteness_tier_mark_incomplete" formatted="false">REFERENCË E PAPLOTË</string>
+    <string name="positions_timeline_incompleteness_tier_untrusted" formatted="false">E PABESUESHME</string>
+    <string name="positions_timeline_attribution_origins_manual" formatted="false">Manual · drejtpërdrejt</string>
+    <string name="positions_timeline_attribution_origins_plan" formatted="false">Plan · i automatizuar</string>
+    <string name="positions_timeline_attribution_origins_system" formatted="false">Sistem · i automatizuar</string>
+    <string name="positions_timeline_attribution_origins_unattributed" formatted="false">I paatribuuar · prejardhje e panjohur</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Nuk ka asnjë mbushje tregtare në shkëmbim që shërben si dëshmi për këtë rezervim.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Të dhënat e përftuara nga trashëgimia për të cilat asnjë këmbim tregtar nuk shërben si dëshmi.</string>
+    <string name="common_yes" formatted="false">Po</string>
+    <string name="common_no" formatted="false">Jo</string>
+    <string name="settings_role_ai_reviewer" formatted="false">Shqyrtues i AI</string>
+    <string name="settings_role_ai_researcher" formatted="false">Studiues AI</string>
+    <string name="process_role_core" formatted="false">Shërbim bazë</string>
+    <string name="process_role_task" formatted="false">Detyrë</string>
+    <string name="records_status_submitted" formatted="false">Dërguar</string>
+    <string name="system_status_ready" formatted="false">Gati</string>
+    <string name="system_status_degraded" formatted="false">Funksionim i kufizuar</string>
+    <string name="market_instrument_kind_spot" formatted="false">Spot</string>
+    <string name="market_instrument_kind_perpetual" formatted="false">Kontratë pa afat</string>
+    <string name="market_instrument_kind_future" formatted="false">Kontratë e së ardhmes</string>
+    <string name="market_instrument_kind_etf" formatted="false">ETF</string>
+    <string name="market_instrument_kind_option" formatted="false">Opsion</string>
+    <string name="venue_accounts_valuation_native_only" formatted="false">Vetëm monedhat origjinale</string>
+    <string name="venue_accounts_status_unobserved" formatted="false">Ende i pavëzhguar</string>
+    <string name="pnl_execution_history_as_recorded" formatted="false">Siç është regjistruar</string>
+    <string name="pnl_execution_history_operator_corrected" formatted="false">Korrigjuar nga operatori</string>
+    <string name="ai_reviews_status_approved" formatted="false">Aprovuar</string>
+    <string name="ai_reviews_status_rejected" formatted="false">Refuzuar</string>
+    <string name="venue_accounts_evaluation_matched" formatted="false">Përputhet</string>
+    <string name="venue_accounts_evaluation_mismatched" formatted="false">Nuk përputhet</string>
+    <string name="venue_accounts_evaluation_incomplete" formatted="false">I paplotë</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Vlera të papërpunuara nga bursa</string>
+    <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Vlera të formatit të vjetër me presje lëvizëse</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">I dëmtuar</string>
+    <string name="system_status_not_running" formatted="false">Nuk është në ekzekutim</string>
+    <string name="records_status_closed" formatted="false">Mbyllur</string>
+    <string name="records_status_pending_new" formatted="false">Në pritje të dërgimit</string>
+    <string name="records_status_expired" formatted="false">Skaduar</string>
+    <string name="records_alert_priority_critical" formatted="false">Kritik</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">Gabim kritik i sistemit</string>
+    <string name="records_alert_type_drift" formatted="false">Zhvendosje e portofolit</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">U dërgua te delegatët</string>
+    <string name="ai_reviews_status_timeout" formatted="false">Koha e pritjes mbaroi</string>
+    <string name="backtests_status_cancel_requested" formatted="false">U kërkua anulimi</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">Në pritje</string>
 </resources>

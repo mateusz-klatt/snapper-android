@@ -20,6 +20,7 @@ import ch.snapper.android.features.system.SystemActions
 import ch.snapper.android.features.system.SystemFeed
 import ch.snapper.android.features.system.SystemFeedState
 import ch.snapper.android.features.system.SystemState
+import java.util.Locale
 
 /** Stateless, permission-gated feeds. Session scope and request generations belong to the caller. */
 internal fun LazyListScope.systemScreen(state: SystemState, actions: SystemActions) {
@@ -34,10 +35,10 @@ internal fun LazyListScope.systemScreen(state: SystemState, actions: SystemActio
 private fun LazyListScope.statusSection(state: SystemState, actions: SystemActions) {
     if (SystemFeed.STATUS.isAllowed(state.permissions)) item {
         SystemSection(R.string.system_trader, SystemFeed.STATUS, state.status, actions) { data ->
-            Metric(R.string.status, data.trader.status)
+            Metric(R.string.status, systemStatusLabel(data.trader.status))
             data.trader.error?.let { Text(it) }
-            data.backtests.toSortedMap().forEach { (name, process) -> RecordCard(name) { Text(process.status) } }
-            data.strategies.orEmpty().forEach { strategy -> RecordCard(strategy.strategyName) { Text(strategy.status) } }
+            data.backtests.toSortedMap().forEach { (name, process) -> RecordCard(name) { Text(systemStatusLabel(process.status)) } }
+            data.strategies.orEmpty().forEach { strategy -> RecordCard(strategy.strategyName) { Text(systemStatusLabel(strategy.status)) } }
         }
     }
 }
@@ -45,7 +46,7 @@ private fun LazyListScope.statusSection(state: SystemState, actions: SystemActio
 private fun LazyListScope.healthSection(state: SystemState, actions: SystemActions) {
     if (SystemFeed.HEALTH.isAllowed(state.permissions)) item {
         SystemSection(R.string.system_health, SystemFeed.HEALTH, state.health, actions) { data ->
-            Metric(R.string.status, data.status)
+            Metric(R.string.status, systemStatusLabel(data.status))
             Metric(R.string.system_version, data.version)
             Metric(R.string.system_connections, data.connections.activeConnections.counter())
             Metric(R.string.system_subscribers, data.connections.zmqSubscribers.counter())
@@ -67,8 +68,8 @@ private fun LazyListScope.strategiesSection(state: SystemState, actions: SystemA
         SystemSection(R.string.system_strategies, SystemFeed.STRATEGIES, state.strategies, actions) { rows ->
             EmptySystemRows(rows.isEmpty())
             rows.sortedBy { it.name }.forEach { row -> RecordCard(row.name) {
-                Metric(R.string.status, stringResource(if (row.running) R.string.system_running else R.string.system_stopped))
-                Metric(R.string.system_mode, row.mode)
+                Metric(R.string.status, stringResource(if (row.running) R.string.system_running else R.string.system_status_not_running))
+                Metric(R.string.system_mode, processModeLabel(row.mode))
                 if (row.enabled) Text(stringResource(R.string.system_autostart))
                 row.strategyClass?.let { Text(it) }
                 (row.coordinatorLabel ?: row.coordinator)?.let { Text(it) }
@@ -101,7 +102,7 @@ private fun LazyListScope.usersSection(state: SystemState, actions: SystemAction
         SystemSection(R.string.system_users, SystemFeed.USERS, state.users, actions) { rows ->
             EmptySystemRows(rows.isEmpty())
             rows.sortedBy { it.username }.forEach { row -> RecordCard(row.username) {
-                Text(row.role)
+                Text(userRoleLabel(row.role))
                 row.email?.let { Text(it) }
                 Metric(R.string.status, row.isActive?.let { stringResource(if (it) R.string.system_active else R.string.system_inactive) } ?: "—")
                 Metric(R.string.system_created, row.createdAt.displayTimestamp())
@@ -144,11 +145,72 @@ private fun EmptySystemRows(empty: Boolean) {
 private fun Long?.counter(): String = this?.toString() ?: "—"
 
 @Composable
-private fun backtestStatusLabel(raw: String): String = stringResource(when (BacktestPresentation.status(raw)) {
+private fun backtestStatusLabel(raw: String): String = stringResource(backtestStatusLabelRes(raw))
+
+internal fun backtestStatusLabelRes(raw: String): Int = if (raw.lowercase(Locale.ROOT) == "cancel_requested") {
+    R.string.backtests_status_cancel_requested
+} else when (BacktestPresentation.status(raw)) {
     BacktestStatus.PENDING -> R.string.backtests_status_pending
     BacktestStatus.RUNNING -> R.string.backtests_status_running
     BacktestStatus.COMPLETED -> R.string.backtests_status_completed
     BacktestStatus.FAILED -> R.string.backtests_status_failed
     BacktestStatus.CANCELLED -> R.string.backtests_status_cancelled
     BacktestStatus.UNKNOWN -> R.string.backtests_status_unknown
-})
+}
+
+@Composable
+internal fun systemStatusLabel(raw: String): String = systemStatusLabelRes(raw)?.let { stringResource(it) } ?: raw
+
+internal fun systemStatusLabelRes(raw: String): Int? = when (raw.lowercase(Locale.ROOT)) {
+    "ready" -> R.string.system_status_ready
+    "degraded" -> R.string.system_status_degraded
+    "healthy" -> R.string.system_status_healthy
+    "running" -> R.string.system_running
+    "not_running" -> R.string.system_status_not_running
+    "stopped" -> R.string.system_stopped
+    "starting" -> R.string.system_status_starting
+    "stopping" -> R.string.system_status_stopping
+    "error" -> R.string.system_status_error
+    "warning" -> R.string.system_status_warning
+    "pending" -> R.string.backtests_status_pending
+    "completed" -> R.string.backtests_status_completed
+    "failed" -> R.string.backtests_status_failed
+    "cancelled" -> R.string.backtests_status_cancelled
+    "unknown" -> R.string.backtests_status_unknown
+    "active" -> R.string.system_active
+    "inactive" -> R.string.system_inactive
+    "ok" -> R.string.system_status_ok
+    else -> null
+}
+
+@Composable
+internal fun tradingModeLabel(raw: String): String = tradingModeLabelRes(raw)?.let { stringResource(it) } ?: raw
+
+internal fun tradingModeLabelRes(raw: String): Int? = when (raw.lowercase(Locale.ROOT)) {
+    "live" -> R.string.order_live
+    "paper" -> R.string.paper
+    else -> null
+}
+
+@Composable
+private fun processModeLabel(raw: String): String = processModeLabelRes(raw)?.let { stringResource(it) } ?: raw
+
+internal fun processModeLabelRes(raw: String): Int? = when (raw.lowercase(Locale.ROOT)) {
+    "thread" -> R.string.process_mode_thread
+    "process" -> R.string.process_mode_process
+    else -> tradingModeLabelRes(raw)
+}
+
+@Composable
+internal fun userRoleLabel(raw: String): String = userRoleLabelRes(raw)?.let { stringResource(it) } ?: raw
+
+internal fun userRoleLabelRes(raw: String): Int? = when (raw.lowercase(Locale.ROOT)) {
+    "viewer" -> R.string.settings_role_viewer
+    "operator" -> R.string.settings_role_operator
+    "admin" -> R.string.settings_role_admin
+    "ai_delegate" -> R.string.settings_role_ai_delegate
+    "ai_reviewer" -> R.string.settings_role_ai_reviewer
+    "ai_researcher" -> R.string.settings_role_ai_researcher
+    "auditor" -> R.string.settings_role_auditor
+    else -> null
+}

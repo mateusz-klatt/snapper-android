@@ -57,8 +57,8 @@ class PnlTimelineScreenTest {
         compose.onNodeWithText("USD → EUR · EUR/USD@fx-venue").performScrollTo().assertExists()
         compose.onNodeWithText("BTC-USD · venue · instrument-latest").performScrollTo().assertExists()
         compose.onNodeWithText(copyText(R.string.positions_timeline_contributions_fees) + ": -0.25").performScrollTo().assertExists()
-        compose.onNodeWithText("manual · " + copyText(R.string.positions_timeline_attribution_nostrategy)).performScrollTo().assertExists()
-        compose.onNodeWithText("plan · demo-strategy").performScrollTo().assertExists()
+        compose.onNodeWithText(copyText(R.string.positions_timeline_attribution_origins_manual) + " · " + copyText(R.string.positions_timeline_attribution_nostrategy)).performScrollTo().assertExists()
+        compose.onNodeWithText(copyText(R.string.positions_timeline_attribution_origins_plan) + " · demo-strategy").performScrollTo().assertExists()
     }
 
     @Test fun deniedLoadingErrorAndEmptyStatesRemainDistinct() {

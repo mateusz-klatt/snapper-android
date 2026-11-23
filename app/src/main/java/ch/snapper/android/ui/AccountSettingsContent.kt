@@ -14,7 +14,7 @@ import ch.snapper.android.data.UserDto
 fun AccountSettingsContent(user: UserDto, version: String, build: String) {
     Text(user.username)
     user.email?.let { Text(stringResource(R.string.settings_account_email) + ": " + it) }
-    Text(stringResource(R.string.settings_account_role, user.role))
+    Text(stringResource(R.string.settings_account_role, userRoleLabel(user.role)))
     Text(stringResource(R.string.settings_app_info_version) + ": " + version)
     Text(stringResource(R.string.settings_app_info_build) + ": " + build)
 }

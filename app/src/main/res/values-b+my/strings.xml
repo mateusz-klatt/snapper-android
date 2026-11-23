@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="privacy_policy" formatted="false">Privacy policy</string>
+    <string name="privacy_policy" formatted="false">ကိုယ်ရေးအချက်အလက် မူဝါဒ</string>
     <string name="username" formatted="false">အသုံးပြုသူအမည်</string>
     <string name="password" formatted="false">စကားဝှက်</string>
     <string name="sign_in" formatted="false">ဝင်ရောက်ပါ</string>
-    <string name="session_retention_notice" formatted="false">Staying signed in requires Android 11+, a secure screen lock, and authentication with your PIN, pattern, password or strong biometrics within the last 5 minutes. Otherwise, sign in again after the app restarts.</string>
+    <string name="session_retention_notice" formatted="false">ဝင်ရောက်ထားသည့် အခြေအနေကို ဆက်ထိန်းရန် Android 11 နှင့်အထက်၊ လုံခြုံသော စခရင်လော့ခ်နှင့် လွန်ခဲ့သော 5 မိနစ်အတွင်း PIN၊ ပုံစံ၊ စကားဝှက် သို့မဟုတ် အားကောင်းသော ဇီဝအချက်အလက်ဖြင့် အတည်ပြုထားမှု လိုအပ်သည်။ မဟုတ်ပါက အက်ပ်ပြန်စပြီးနောက် ပြန်လည်ဝင်ရောက်ပါ။</string>
     <string name="subtitle" formatted="false">ကုန်သွယ်ရေး ပလက်ဖောင်း</string>
     <string name="backend" formatted="false">စိတ်ကြိုက် ဆာဗာ URL</string>
     <string name="language" formatted="false">ဘာသာစကား</string>
@@ -20,15 +20,15 @@
     <string name="average_price" formatted="false">ပျမ်းမျှဈေး</string>
     <string name="mark_price" formatted="false">မှတ်သားဈေး</string>
     <string name="pnl" formatted="false">မရောင်းရသေးသော PnL</string>
-    <string name="instrument" formatted="false">Instrument</string>
+    <string name="instrument" formatted="false">ကုန်သွယ်ပစ္စည်း</string>
     <string name="price" formatted="false">ဈေးနှုန်း</string>
     <string name="filled" formatted="false">ဖြည့်ပြီး</string>
     <string name="status" formatted="false">အခြေအနေ</string>
     <string name="side" formatted="false">ဘက်</string>
-    <string name="open" formatted="false">Open</string>
-    <string name="high" formatted="false">High</string>
-    <string name="low" formatted="false">Low</string>
-    <string name="close" formatted="false">Close</string>
+    <string name="open" formatted="false">အဖွင့်ဈေး</string>
+    <string name="high" formatted="false">အမြင့်ဆုံး</string>
+    <string name="low" formatted="false">အနိမ့်ဆုံး</string>
+    <string name="close" formatted="false">အပိတ်ဈေး</string>
     <string name="volume" formatted="false">အရောင်းအဝယ်ပမာဏ</string>
     <string name="timeframe" formatted="false">အချိန်ကာလ</string>
     <string name="no_candles" formatted="false">မီးတိုင်များ မရှိသေးပါ</string>
@@ -37,68 +37,68 @@
     <string name="alerts" formatted="false">အချက်ပေးချက်များ</string>
     <string name="settings" formatted="false">ဆက်တင်များ</string>
     <string name="save" formatted="false">သိမ်းဆည်းပါ</string>
-    <string name="refresh" formatted="false">Refresh</string>
+    <string name="refresh" formatted="false">ပြန်လည်မွမ်းမံပါ</string>
     <string name="exchange" formatted="false">လဲလှယ်ဈေးကွက်</string>
-    <string name="load_market" formatted="false">Load candles</string>
-    <string name="empty" formatted="false">No records available.</string>
-    <string name="snapshot_note" formatted="false">Snapshot data. Refresh to retrieve the latest available records.</string>
-    <string name="chart_description" formatted="false">Historical candle chart. Exact values are listed below.</string>
-    <string name="error_origin" formatted="false">Enter a valid HTTPS backend origin.</string>
-    <string name="error_credentials" formatted="false">The username or password is incorrect.</string>
-    <string name="error_session" formatted="false">Your session expired. Please sign in again.</string>
-    <string name="error_network" formatted="false">Could not reach the backend. Check your connection and try again.</string>
-    <string name="error_service" formatted="false">The backend could not complete this request. Please try again.</string>
-    <string name="error_unknown" formatted="false">Something went wrong. Please try again.</string>
+    <string name="load_market" formatted="false">မီးတိုင်များ ဖွင့်ပါ</string>
+    <string name="empty" formatted="false">မှတ်တမ်း မရှိပါ။</string>
+    <string name="snapshot_note" formatted="false">အချိန်တစ်ခု၏ ဒေတာဖြစ်သည်။ ရရှိနိုင်သည့် နောက်ဆုံးမှတ်တမ်းများကို ရယူရန် ပြန်လည်မွမ်းမံပါ။</string>
+    <string name="chart_description" formatted="false">ယခင် မီးတိုင်ဇယားဖြစ်သည်။ တိကျသောတန်ဖိုးများကို အောက်တွင် ဖော်ပြထားသည်။</string>
+    <string name="error_origin" formatted="false">မှန်ကန်သော HTTPS ဆာဗာ မူလလိပ်စာကို ထည့်ပါ။</string>
+    <string name="error_credentials" formatted="false">အသုံးပြုသူအမည် သို့မဟုတ် စကားဝှက် မမှန်ပါ။</string>
+    <string name="error_session" formatted="false">သင့်ဆက်ရှင် သက်တမ်းကုန်သွားပြီ။ ပြန်လည်ဝင်ရောက်ပါ။</string>
+    <string name="error_network" formatted="false">ဆာဗာကို ဆက်သွယ်၍ မရပါ။ ချိတ်ဆက်မှုကို စစ်ဆေးပြီး ပြန်လည်ကြိုးစားပါ။</string>
+    <string name="error_service" formatted="false">ဆာဗာသည် ဤတောင်းဆိုမှုကို မပြီးစီးနိုင်ပါ။ ပြန်လည်ကြိုးစားပါ။</string>
+    <string name="error_unknown" formatted="false">အမှားတစ်ခု ဖြစ်ပွားခဲ့သည်။ ပြန်လည်ကြိုးစားပါ။</string>
     <string name="dismiss" formatted="false">ဖယ်ရှားပါ</string>
     <string name="paper" formatted="false">စမ်းသပ်</string>
-    <string name="safety_critical" formatted="false">Safety critical</string>
-    <string name="snapshot_limit" formatted="false">This view shows current positions and up to 100 recent orders and alerts; it is not a complete history.</string>
-    <string name="chart_window" formatted="false">The chart shows the last 100 retrieved candles.</string>
-    <string name="local_network_explanation" formatted="false">For a backend on your local network, allow local network access before signing in. Public internet backends do not need this permission.</string>
-    <string name="local_network_allow" formatted="false">Allow local network</string>
-    <string name="local_network_settings" formatted="false">Open app settings</string>
-    <string name="order_new" formatted="false">New Order</string>
-    <string name="order_entry" formatted="false">New Manual Order</string>
-    <string name="order_confirm" formatted="false">Confirm Order</string>
+    <string name="safety_critical" formatted="false">လုံခြုံရေးအတွက် အရေးကြီး</string>
+    <string name="snapshot_limit" formatted="false">ဤမြင်ကွင်းတွင် လက်ရှိအနေအထားများနှင့် လတ်တလော အော်ဒါနှင့် အချက်ပေးချက် 100 အထိ ပြထားသည်။ မှတ်တမ်းအပြည့်အစုံ မဟုတ်ပါ။</string>
+    <string name="chart_window" formatted="false">ဇယားတွင် နောက်ဆုံးရယူထားသော မီးတိုင် 100 ကို ပြထားသည်။</string>
+    <string name="local_network_explanation" formatted="false">သင့်ဒေသတွင်းကွန်ရက်ရှိ ဆာဗာအတွက် ဝင်ရောက်ခြင်းမပြုမီ ဒေသတွင်းကွန်ရက် အသုံးပြုခွင့်ပေးပါ။ အများသုံးအင်တာနက်ရှိ ဆာဗာများအတွက် ဤခွင့်ပြုချက် မလိုအပ်ပါ။</string>
+    <string name="local_network_allow" formatted="false">ဒေသတွင်းကွန်ရက် ခွင့်ပြုပါ</string>
+    <string name="local_network_settings" formatted="false">အက်ပ်ဆက်တင်များ ဖွင့်ပါ</string>
+    <string name="order_new" formatted="false">အော်ဒါအသစ်</string>
+    <string name="order_entry" formatted="false">ကိုယ်တိုင်တင်သည့် အော်ဒါအသစ်</string>
+    <string name="order_confirm" formatted="false">အော်ဒါ အတည်ပြုပါ</string>
     <string name="order_quantity" formatted="false">အရေအတွက်</string>
-    <string name="order_type" formatted="false">Order Type</string>
-    <string name="order_stop_price" formatted="false">Stop Price</string>
+    <string name="order_type" formatted="false">အော်ဒါအမျိုးအစား</string>
+    <string name="order_stop_price" formatted="false">ရပ်တန့်ဈေး</string>
     <string name="order_mode" formatted="false">နည်းလမ်း</string>
     <string name="order_buy" formatted="false">ဝယ်</string>
     <string name="order_sell" formatted="false">ရောင်း</string>
     <string name="order_market" formatted="false">ဈေးကွက်</string>
     <string name="order_limit" formatted="false">ကန့်သတ်</string>
     <string name="order_stop" formatted="false">ရပ်</string>
-    <string name="order_stop_limit" formatted="false">Stop Limit</string>
-    <string name="order_live" formatted="false">Live</string>
-    <string name="order_review" formatted="false">Review Order</string>
-    <string name="order_back" formatted="false">Back</string>
-    <string name="order_submit" formatted="false">Confirm Order</string>
-    <string name="order_submitting" formatted="false">Submitting…</string>
+    <string name="order_stop_limit" formatted="false">ရပ်တန့် ကန့်သတ်</string>
+    <string name="order_live" formatted="false">အမှန်တကယ်</string>
+    <string name="order_review" formatted="false">အော်ဒါ ပြန်စစ်ပါ</string>
+    <string name="order_back" formatted="false">နောက်သို့</string>
+    <string name="order_submit" formatted="false">အော်ဒါ အတည်ပြုပါ</string>
+    <string name="order_submitting" formatted="false">ပေးပို့နေသည်…</string>
     <string name="order_leverage" formatted="false">အချိုးမြှင့်ငွေချေးမှု</string>
-    <string name="order_reduce_only" formatted="false">Reduce Only</string>
-    <string name="order_observation_only" formatted="false">This instrument is observation-only — place orders on an execution-capable instrument.</string>
-    <string name="order_unknown_instrument" formatted="false">This instrument is not recognised. Reload the list and try again.</string>
-    <string name="order_caps_violation" formatted="false">This order would exceed your account safety caps. Review your risk settings and retry.</string>
-    <string name="order_rejected" formatted="false">Order creation failed</string>
+    <string name="order_reduce_only" formatted="false">လျှော့ချရန်သာ</string>
+    <string name="order_observation_only" formatted="false">ဤကုန်သွယ်ပစ္စည်းသည် စောင့်ကြည့်ရန်သာ ဖြစ်သည်။ အရောင်းအဝယ်လုပ်နိုင်သော ကုန်သွယ်ပစ္စည်းတွင် အော်ဒါတင်ပါ။</string>
+    <string name="order_unknown_instrument" formatted="false">ဤကုန်သွယ်ပစ္စည်းကို မသိရှိပါ။ စာရင်းကို ပြန်ဖွင့်ပြီး ပြန်လည်ကြိုးစားပါ။</string>
+    <string name="order_caps_violation" formatted="false">ဤအော်ဒါသည် သင့်အကောင့်၏ လုံခြုံရေးကန့်သတ်ချက်များကို ကျော်လွန်မည်။ စွန့်စားမှုဆက်တင်များကို ပြန်စစ်ပြီး ပြန်လည်ကြိုးစားပါ။</string>
+    <string name="order_rejected" formatted="false">အော်ဒါ ဖန်တီးမှု မအောင်မြင်ပါ</string>
     <string name="order_cancel_title" formatted="false">အော်ဒါ ပယ်ဖျက်မည်လား?</string>
     <string name="order_cancel_confirm" formatted="false">အော်ဒါ ပယ်ဖျက်ပါ</string>
     <string name="order_keep_open" formatted="false">ဖွင့်ထားပါ</string>
-    <string name="order_select_wallet" formatted="false">Select a wallet on Home before placing an order.</string>
-    <string name="order_created" formatted="false">Order submitted. Refresh to check execution status.</string>
-    <string name="order_cancel_requested" formatted="false">Cancellation requested. Refresh to check the order status.</string>
-    <string name="order_unknown_outcome" formatted="false">The request outcome is unknown. Check status before taking further action.</string>
-    <string name="order_check_status" formatted="false">Check status</string>
-    <string name="order_retry_intent" formatted="false">Retry same order</string>
-    <string name="order_catalog_error" formatted="false">Could not load exchanges or instruments. Try again.</string>
-    <string name="order_no_instruments" formatted="false">No instruments available for this exchange.</string>
-    <string name="order_invalid_form" formatted="false">Enter positive quantities and required prices. Optional leverage must be a positive whole number.</string>
-    <string name="order_refresh_failed" formatted="false">The request was accepted, but the latest records could not be loaded. Refresh to check status.</string>
-    <string name="order_forbidden" formatted="false">You no longer have permission for this action.</string>
-    <string name="order_session_changed" formatted="false">The session or wallet changed. Open a new order from the current account.</string>
+    <string name="order_select_wallet" formatted="false">အော်ဒါမတင်မီ ပင်မတွင် ပိုက်ဆံအိတ် ရွေးပါ။</string>
+    <string name="order_created" formatted="false">အော်ဒါ ပေးပို့ပြီးပါပြီ။ အကောင်အထည်ဖော်မှု အခြေအနေကို စစ်ဆေးရန် ပြန်လည်မွမ်းမံပါ။</string>
+    <string name="order_cancel_requested" formatted="false">ပယ်ဖျက်ရန် တောင်းဆိုပြီးပါပြီ။ အော်ဒါအခြေအနေကို စစ်ဆေးရန် ပြန်လည်မွမ်းမံပါ။</string>
+    <string name="order_unknown_outcome" formatted="false">တောင်းဆိုမှုရလဒ်ကို မသိရပါ။ နောက်ထပ်လုပ်ဆောင်မှု မပြုမီ အခြေအနေကို စစ်ဆေးပါ။</string>
+    <string name="order_check_status" formatted="false">အခြေအနေ စစ်ဆေးပါ</string>
+    <string name="order_retry_intent" formatted="false">တူညီသောအော်ဒါကို ပြန်ကြိုးစားပါ</string>
+    <string name="order_catalog_error" formatted="false">လဲလှယ်ဈေးကွက်များ သို့မဟုတ် ကုန်သွယ်ပစ္စည်းများကို ဖွင့်၍ မရပါ။ ပြန်လည်ကြိုးစားပါ။</string>
+    <string name="order_no_instruments" formatted="false">ဤလဲလှယ်ဈေးကွက်အတွက် ကုန်သွယ်ပစ္စည်း မရှိပါ။</string>
+    <string name="order_invalid_form" formatted="false">အပေါင်းတန်ဖိုးရှိ အရေအတွက်နှင့် လိုအပ်သောဈေးနှုန်းများကို ထည့်ပါ။ ရွေးချယ်နိုင်သော အချိုးမြှင့်ငွေချေးမှုသည် အပေါင်းကိန်းပြည့် ဖြစ်ရမည်။</string>
+    <string name="order_refresh_failed" formatted="false">တောင်းဆိုမှုကို လက်ခံပြီးသော်လည်း နောက်ဆုံးမှတ်တမ်းများကို ဖွင့်၍ မရပါ။ အခြေအနေစစ်ဆေးရန် ပြန်လည်မွမ်းမံပါ။</string>
+    <string name="order_forbidden" formatted="false">ဤလုပ်ဆောင်မှုအတွက် သင့်တွင် ခွင့်ပြုချက် မရှိတော့ပါ။</string>
+    <string name="order_session_changed" formatted="false">ဆက်ရှင် သို့မဟုတ် ပိုက်ဆံအိတ် ပြောင်းသွားသည်။ လက်ရှိအကောင့်မှ အော်ဒါအသစ် ဖွင့်ပါ။</string>
     <string name="order_enabled" formatted="false">ဖွင့်ထားသည်</string>
     <string name="order_disabled" formatted="false">ပိတ်ထားသည်</string>
-    <string name="system_tools" formatted="false">Overview</string>
+    <string name="system_tools" formatted="false">ခြုံငုံသုံးသပ်ချက်</string>
     <string name="desk_attach_button" formatted="false">ကြည့်ရှုသူ ထည့်ရန်</string>
     <string name="desk_attach_desk_label" formatted="false">ဒက်စ်</string>
     <string name="desk_nav_title" formatted="false">ကျွန်ုပ်၏ ဒက်စ်များ</string>
@@ -119,11 +119,11 @@
     <string name="settings_connection_change_backend_title" formatted="false">ဆာဗာ ပြောင်းမည်လား?</string>
     <string name="settings_connection_change_backend_message" formatted="false">ဆာဗာ ပြောင်းပါက သင့်ကို ထွက်စေပြီး စက်တွင်း အက်ပ်အခြေအနေကို ရှင်းလင်းပါမည်။ URL အသစ်တွင် ပြန်လည် ဝင်ရောက်ရန် လိုအပ်ပါမည်။</string>
     <string name="common_continue" formatted="false">ဆက်လုပ်ပါ</string>
-    <string name="backend_url_cancel" formatted="false">Cancel</string>
+    <string name="backend_url_cancel" formatted="false">ပယ်ဖျက်ပါ</string>
     <string name="market_search" formatted="false">ကုန်သွယ်ပစ္စည်းများ ရှာပါ</string>
     <string name="market_view_only" formatted="false">ကြည့်ရန်သာ</string>
     <string name="market_catalog_retry" formatted="false">ပြန်လည်ကြိုးစားပါ</string>
-    <string name="market_picker_close" formatted="false">Cancel</string>
+    <string name="market_picker_close" formatted="false">ပယ်ဖျက်ပါ</string>
     <string name="market_no_matches" formatted="false">\@string/empty</string>
     <string name="market_catalog_error" formatted="false">\@string/error_unknown</string>
     <string name="system_health" formatted="false">စနစ်အခြေအနေ</string>
@@ -157,13 +157,13 @@
     <string name="system_active" formatted="false">ဖွင့်ထားသည်</string>
     <string name="system_inactive" formatted="false">ပိတ်ထားသည်</string>
     <string name="system_revoked" formatted="false">ရုပ်သိမ်းပြီး</string>
-    <string name="records_open" formatted="false">Open</string>
+    <string name="records_open" formatted="false">ဖွင့်ထားသော</string>
     <string name="records_recent" formatted="false">မကြာသေးမီ</string>
     <string name="records_fills" formatted="false">ဖြည့်ပြီးမှုများ</string>
-    <string name="records_refresh" formatted="false">Refresh</string>
-    <string name="records_fee" formatted="false">Fee</string>
-    <string name="records_details" formatted="false">Details</string>
-    <string name="records_hide_details" formatted="false">\@string/close</string>
+    <string name="records_refresh" formatted="false">ပြန်လည်မွမ်းမံပါ</string>
+    <string name="records_fee" formatted="false">အခကြေးငွေ</string>
+    <string name="records_details" formatted="false">အသေးစိတ်</string>
+    <string name="records_hide_details" formatted="false">ပိတ်ပါ</string>
     <string name="records_thread" formatted="false">ဆွေးနွေးကြောင်း</string>
     <string name="records_source_topic" formatted="false">မူလအကြောင်းအရာ</string>
     <string name="notification_defaults_title" formatted="false">အသုံးပြုသူ မူရင်းသတ်မှတ်ချက်များ</string>
@@ -172,9 +172,9 @@
     <string name="notification_defaults_priority" formatted="false">အနည်းဆုံး ဦးစားပေးအဆင့်</string>
     <string name="notification_defaults_load_failed" formatted="false">နှစ်သက်ရာ သတ်မှတ်ချက်များ ဖွင့်၍မရပါ</string>
     <string name="notification_defaults_save_failed" formatted="false">နှစ်သက်ရာ သတ်မှတ်ချက်များ သိမ်းဆည်း၍မရပါ</string>
-    <string name="notification_defaults_low" formatted="false">Low</string>
+    <string name="notification_defaults_low" formatted="false">နိမ့်</string>
     <string name="notification_defaults_medium" formatted="false">အလယ်အလတ်</string>
-    <string name="notification_defaults_high" formatted="false">High</string>
+    <string name="notification_defaults_high" formatted="false">မြင့်</string>
     <string name="notification_defaults_fill" formatted="false">အော်ဒါ ပြည့်ပြီး</string>
     <string name="notification_defaults_rejected" formatted="false">အော်ဒါ ပယ်ချခံရသည်</string>
     <string name="notification_defaults_stop" formatted="false">အရှုံးရပ်ချက် အသက်ဝင်ပြီး</string>
@@ -199,23 +199,23 @@
     <string name="signals_export" formatted="false">Export လုပ်ပါ</string>
     <string name="signals_export_failed" formatted="false">တင်သွင်းမှု မအောင်မြင်ပါ</string>
     <string name="venue_accounts_title" formatted="false">ငွေလဲလှယ်ရေးပလက်ဖောင်း အကောင့်များ</string>
-    <string name="venue_accounts_refresh" formatted="false">Refresh</string>
+    <string name="venue_accounts_refresh" formatted="false">ပြန်လည်မွမ်းမံပါ</string>
     <string name="venue_accounts_failed" formatted="false">ပလက်ဖောင်းအကောင့်အခြေအနေကို ရယူ၍မရပါ။ အကောင့်တွင် ဒေတာမရှိခြင်း မဟုတ်ဘဲ လက်ရှိအချိန်တွင် ဒေတာကို မရရှိနိုင်ခြင်းသာ ဖြစ်သည်။</string>
     <string name="venue_accounts_authoritative" formatted="false">ယုံကြည်စိတ်ချရသော အချိန်ကာလအတွင်း ရရှိထားသည့် ပလက်ဖောင်း၏ လက်ရှိအတည်ပြုဒေတာ။</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">လက်ရှိအချိန်ဟု အမှတ်အသားမပြုထားသည့် အတန်းများတွင် နောက်ဆုံးသိရှိထားသော၊ သရုပ်တူပြုလုပ်ထားသော သို့မဟုတ် မရရှိနိုင်သော ဒေတာများကို ပြသထားပြီး ပလက်ဖောင်း၏ လက်ရှိအတည်ပြုလက်ကျန်များ မဟုတ်ပါ။</string>
-    <string name="venue_accounts_valuation" formatted="false">Valuation</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">ဤအကောင့်တွင် နောက်ဆုံးသိရှိထားသော၊ သရုပ်တူပြုလုပ်ထားသော သို့မဟုတ် မရရှိနိုင်သော ဒေတာများကို ပြသထားပြီး ပလက်ဖောင်း၏ လက်ရှိအတည်ပြုလက်ကျန်များ မဟုတ်ပါ။</string>
+    <string name="venue_accounts_valuation" formatted="false">တန်ဖိုးဖြတ်ခြင်း</string>
     <string name="venue_accounts_balances" formatted="false">ငွေလက်ကျန်များ</string>
-    <string name="venue_accounts_observed" formatted="false">Observed at</string>
-    <string name="venue_accounts_source" formatted="false">Source observation</string>
+    <string name="venue_accounts_observed" formatted="false">စောင့်ကြည့်သည့်အချိန်</string>
+    <string name="venue_accounts_source" formatted="false">မူလစောင့်ကြည့်ဒေတာ</string>
     <string name="venue_accounts_total" formatted="false">စုစုပေါင်း</string>
     <string name="venue_accounts_free" formatted="false">အသုံးပြုနိုင်</string>
     <string name="venue_accounts_used" formatted="false">အသုံးပြုထား</string>
-    <string name="venue_accounts_numeric_source" formatted="false">Numeric provenance</string>
+    <string name="venue_accounts_numeric_source" formatted="false">ကိန်းဂဏန်းရင်းမြစ်</string>
     <string name="venue_accounts_positions" formatted="false">ဖွင့်ထားသော အနေအထားများ</string>
     <string name="venue_accounts_funding" formatted="false">ရန်ပုံငွေကြေး</string>
-    <string name="venue_accounts_reconciliation" formatted="false">Reconciliation status</string>
-    <string name="venue_accounts_evaluation" formatted="false">Evaluation status</string>
-    <string name="venue_accounts_deadline" formatted="false">Authority deadline</string>
+    <string name="venue_accounts_reconciliation" formatted="false">စာရင်းတိုက်ဆိုင်မှု အခြေအနေ</string>
+    <string name="venue_accounts_evaluation" formatted="false">အကဲဖြတ်မှု အခြေအနေ</string>
+    <string name="venue_accounts_deadline" formatted="false">အတည်ပြုဒေတာ၏ သက်တမ်းကုန်ချိန်</string>
     <string name="positions_timeline_controls_window" formatted="false">အချိန်ကာလ</string>
     <string name="positions_timeline_controls_granularity" formatted="false">အသေးစိတ်အဆင့်</string>
     <string name="positions_timeline_controls_valuationcurrency" formatted="false">တန်ဖိုးဖြတ် ငွေကြေး</string>
@@ -228,11 +228,11 @@
     <string name="positions_timeline_nowallet_message" formatted="false">၎င်း၏ P&amp;L အချိန်လိုင်းကို ကြည့်ရန် ဝေါလက်တစ်ခု ရွေးပါ။</string>
     <string name="positions_timeline_incompleteness_title" formatted="false">ဒေတာအမှတ်များ မပြည့်စုံရသည့်အကြောင်း</string>
     <string name="positions_timeline_incompleteness_description" formatted="false">အကြောင်းရင်းများသည် တင်ထားသော အချိန်ကာလတစ်ခုလုံးအတွက် ဖြစ်သည်။ ဒေတာအမှတ်တစ်ခုတွင် အကြောင်းရင်းတစ်ခုထက်ပိုပါက အရေအတွက်များ ထပ်နေနိုင်သည်။</string>
-    <string name="positions_timeline_incompleteness_affectedpoints">Affected points: %1$s</string>
+    <string name="positions_timeline_incompleteness_affectedpoints">သက်ရောက်သည့် အမှတ်များ: %1$s</string>
     <string name="positions_timeline_chart_title" formatted="false">အချိန်နှင့်အမျှ P&amp;L</string>
     <string name="positions_timeline_chart_net" formatted="false">အသားတင် P&amp;L</string>
     <string name="positions_timeline_chart_realized" formatted="false">အကောင်အထည်ပေါ်ပြီးသော P&amp;L</string>
-    <string name="positions_timeline_chart_unrealized" formatted="false">Unrealized P&amp;L</string>
+    <string name="positions_timeline_chart_unrealized" formatted="false">အကောင်အထည်မပေါ်သေးသော P&amp;L</string>
     <string name="positions_timeline_attribution_title" formatted="false">နောက်ဆုံး P&amp;L ခွဲဝေတွက်ချက်မှု</string>
     <string name="positions_timeline_attribution_nostrategy" formatted="false">အထောက်အထားပြနိုင်သော ဗျူဟာ မရှိပါ</string>
     <string name="positions_timeline_attribution_withheld" formatted="false">အတည်မပြုနိုင်</string>
@@ -241,7 +241,7 @@
     <string name="positions_timeline_contributions_realized" formatted="false">အကောင်အထည်ပေါ်ပြီးသော P&amp;L</string>
     <string name="positions_timeline_contributions_fees" formatted="false">အခကြေးငွေများ</string>
     <string name="positions_timeline_contributions_accrual" formatted="false">စုဆောင်းတွက်ချက်ထားသော Funding</string>
-    <string name="positions_timeline_contributions_unrealized" formatted="false">Unrealized P&amp;L</string>
+    <string name="positions_timeline_contributions_unrealized" formatted="false">အကောင်အထည်မပေါ်သေးသော P&amp;L</string>
     <string name="positions_timeline_incompleteness_reasons_scope_order_regression" formatted="false">လုပ်ပိုင်ခွင့်နယ်ပယ် အစီအစဉ် နောက်ပြန်ဆုတ်မှု</string>
     <string name="positions_timeline_incompleteness_reasons_before_activation" formatted="false">ဒေတာအမှတ်သည် စတင်အသက်ဝင်ချိန် မတိုင်မီ ဖြစ်သည်</string>
     <string name="positions_timeline_incompleteness_reasons_activation_baseline_non_finite" formatted="false">စတင်အသက်ဝင်မှု အခြေခံတန်ဖိုးသည် finite ကိန်းဂဏန်း မဟုတ်ပါ</string>
@@ -260,26 +260,26 @@
     <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">ခွဲဝေတွက်ချက်မှု ကိုက်ညှိစစ်ဆေးခြင်း မအောင်မြင်ပါ</string>
     <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">ငွေကြေးတူရိယာအလိုက် P&amp;L တန်ဖိုးများ၏ ပေါင်းလဒ်သည် စုစုပေါင်း P&amp;L နှင့် မကိုက်ညီပါ</string>
     <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">စတင်အသက်ဝင်ချိန် မတိုင်မီ အချိန်မှတ်တမ်းပါပြီး နောက်ကျမှ ရောက်လာသော အော်ဒါအကောင်အထည်ဖော်မှု</string>
-    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Attribution sum is not representable</string>
-    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Instrument sum is not representable</string>
-    <string name="positions_timeline_executionhistory_title" formatted="false">Operator-corrected execution history</string>
-    <string name="positions_timeline_executionhistory_summary" formatted="false">An operator repudiated recorded executions in this scope. Every correction listed here is excluded from the figures on this page.</string>
-    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Repudiated execution</string>
-    <string name="positions_timeline_executionhistory_correctionid" formatted="false">Correction record</string>
-    <string name="positions_timeline_equity_title" formatted="false">Equity overlay</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">ခွဲဝေတွက်ချက်မှု စုစုပေါင်းကို ဖော်ပြ၍ မရပါ</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">ကုန်သွယ်ပစ္စည်း စုစုပေါင်းကို ဖော်ပြ၍ မရပါ</string>
+    <string name="positions_timeline_executionhistory_title" formatted="false">အော်ပရေတာ ပြင်ဆင်ထားသော အကောင်အထည်ဖော်မှု မှတ်တမ်း</string>
+    <string name="positions_timeline_executionhistory_summary" formatted="false">အော်ပရေတာသည် ဤနယ်ပယ်အတွင်း မှတ်တမ်းတင်ထားသော အကောင်အထည်ဖော်မှုများကို မမှန်ကန်ဟု ပယ်ဖျက်ထားသည်။ ဤနေရာရှိ ပြင်ဆင်မှုအားလုံးကို ဤစာမျက်နှာ၏ ကိန်းဂဏန်းများမှ ဖယ်ထားသည်။</string>
+    <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">မမှန်ကန်ဟု ပယ်ဖျက်ထားသော အကောင်အထည်ဖော်မှု</string>
+    <string name="positions_timeline_executionhistory_correctionid" formatted="false">ပြင်ဆင်မှု မှတ်တမ်း</string>
+    <string name="positions_timeline_equity_title" formatted="false">ပိုင်ဆိုင်မှုတန်ဖိုး ထပ်ဆင့်ပြသမှု</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">ပိုင်ဆိုင်မှုတန်ဖိုး</string>
-    <string name="positions_timeline_equity_drawdown_current" formatted="false">Current drawdown</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Spot venue only — balances held on other venues are excluded.</string>
-    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">External deposits and withdrawals are not adjusted out.</string>
-    <string name="positions_timeline_equity_honesty_restatedfrom">These figures are restated from %1$s at each minute\'s close, not sampled natively in this currency.</string>
-    <string name="positions_timeline_equity_honesty_pricedon">Priced on %1$s.</string>
-    <string name="positions_timeline_equity_honesty_conversionwithheld">Minutes dropped for want of a proven close: %1$s.</string>
-    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Drawdown is withheld on a converted basis, because the running peak is tracked in the sampled currency.</string>
-    <string name="positions_timeline_equity_cashposition_position" formatted="false">Position value</string>
-    <string name="positions_timeline_equity_cashposition_cash" formatted="false">Cash</string>
-    <string name="pnl_provenance">Calculation: %1$s · Mark source: %2$s · As of: %3$s</string>
-    <string name="pnl_equity_coverage">Equity sampled: %1$s · Complete minutes: %2$s</string>
-    <string name="pnl_execution_history">Execution history: %1$s</string>
+    <string name="positions_timeline_equity_drawdown_current" formatted="false">လက်ရှိ အမြင့်ဆုံးမှ ကျဆင်းမှု</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">လက်ငင်းဈေးကွက်သာ ပါဝင်သည်။ အခြားဈေးကွက်များရှိ လက်ကျန်ငွေများ မပါဝင်ပါ။</string>
+    <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">ပြင်ပငွေသွင်းခြင်းနှင့် ငွေထုတ်ခြင်း၏ သက်ရောက်မှုကို မဖယ်ရှားရသေးပါ။</string>
+    <string name="positions_timeline_equity_honesty_restatedfrom">ဤကိန်းဂဏန်းများကို မိနစ်တစ်ခုစီ၏ ပိတ်ဈေးဖြင့် %1$s မှ ပြောင်းတွက်ထားသည်။ ဤငွေကြေးဖြင့် တိုက်ရိုက်နမူနာယူထားခြင်း မဟုတ်ပါ။</string>
+    <string name="positions_timeline_equity_honesty_pricedon">%1$s ကို အခြေခံ၍ ဈေးသတ်မှတ်ထားသည်။</string>
+    <string name="positions_timeline_equity_honesty_conversionwithheld">အတည်ပြုထားသော ပိတ်ဈေးမရှိ၍ ဖယ်ထားသည့် မိနစ်များ: %1$s။</string>
+    <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">ဆက်တိုက်အမြင့်ဆုံးတန်ဖိုးကို နမူနာယူသည့် ငွေကြေးဖြင့် ခြေရာခံထားသောကြောင့် ပြောင်းတွက်ထားသည့် အခြေခံပေါ်တွင် အမြင့်ဆုံးမှ ကျဆင်းမှုကို မပြပါ။</string>
+    <string name="positions_timeline_equity_cashposition_position" formatted="false">အနေအထားတန်ဖိုး</string>
+    <string name="positions_timeline_equity_cashposition_cash" formatted="false">ငွေသား</string>
+    <string name="pnl_provenance">တွက်ချက်မှု: %1$s · မှတ်သားဈေးရင်းမြစ်: %2$s · အချိန်: %3$s</string>
+    <string name="pnl_equity_coverage">နမူနာယူထားသော ပိုင်ဆိုင်မှုတန်ဖိုး: %1$s · ပြည့်စုံသော မိနစ်များ: %2$s</string>
+    <string name="pnl_execution_history">အကောင်အထည်ဖော်မှု မှတ်တမ်း: %1$s</string>
     <string name="process_title" formatted="false">လုပ်ငန်းစဉ်များ</string>
     <string name="process_running" formatted="false">လုပ်ဆောင်နေဆဲ</string>
     <string name="process_stopped" formatted="false">ရပ်တန့်ထားသည်</string>
@@ -293,20 +293,20 @@
     <string name="process_start" formatted="false">စတင်</string>
     <string name="process_stop" formatted="false">ရပ်</string>
     <string name="process_restart" formatted="false">ပြန်စတင်</string>
-    <string name="process_cancel" formatted="false">Cancel</string>
+    <string name="process_cancel" formatted="false">ပယ်ဖျက်ပါ</string>
     <string name="process_stale" formatted="false">ဤလုပ်ငန်းစဉ်ကို ဤနေရာမှ ထိန်းချုပ်၍ မရတော့ပါ။ ဒေတာကို ပြန်လည်ဆန်းသစ်ပြီး ထပ်စမ်းပါ။</string>
     <string name="process_partial" formatted="false">လုပ်ငန်းစဉ်ကို ရပ်ပြီးဖြစ်သော်လည်း ဤနေရာမှ ပြန်စတင်၍ မရတော့ပါ။ ဒေတာကို ပြန်လည်ဆန်းသစ်ပြီး ထပ်စမ်းပါ။</string>
-    <string name="process_confirm" formatted="false">Confirm process action</string>
-    <string name="process_confirm_message" formatted="false">Apply this action to the selected process?</string>
-    <string name="process_intent_saved" formatted="false">Desired state saved. The owning coordinator will apply it.</string>
-    <string name="process_accepted" formatted="false">Process action accepted.</string>
-    <string name="process_unknown" formatted="false">The command outcome is unknown. Controls remain locked: a status refresh cannot prove whether this command was applied.</string>
-    <string name="process_partial_unknown" formatted="false">The process was stopped, but the restart outcome is unknown. Controls remain locked: a status refresh cannot prove whether the restart was applied.</string>
-    <string name="process_rejected" formatted="false">The process action failed.</string>
-    <string name="process_load_failed" formatted="false">Could not refresh process status.</string>
-    <string name="process_config_failed" formatted="false">Process controls are unavailable because configuration could not be refreshed.</string>
-    <string name="process_enable" formatted="false">Enable</string>
-    <string name="process_disable" formatted="false">Disable</string>
+    <string name="process_confirm" formatted="false">လုပ်ငန်းစဉ် လုပ်ဆောင်မှုကို အတည်ပြုပါ</string>
+    <string name="process_confirm_message" formatted="false">ရွေးထားသော လုပ်ငန်းစဉ်တွင် ဤလုပ်ဆောင်မှုကို အသုံးချမည်လား?</string>
+    <string name="process_intent_saved" formatted="false">လိုချင်သော အခြေအနေကို သိမ်းဆည်းပြီးပါပြီ။ တာဝန်ရှိ ညှိနှိုင်းသူက အသုံးချပါမည်။</string>
+    <string name="process_accepted" formatted="false">လုပ်ငန်းစဉ် လုပ်ဆောင်မှုကို လက်ခံပြီးပါပြီ။</string>
+    <string name="process_unknown" formatted="false">ညွှန်ကြားချက်ရလဒ်ကို မသိရပါ။ ထိန်းချုပ်မှုများ ဆက်လက်ပိတ်ထားမည်။ အခြေအနေ ပြန်မွမ်းမံခြင်းဖြင့် ဤညွှန်ကြားချက်ကို အသုံးချခဲ့ခြင်း ရှိမရှိ အတည်မပြုနိုင်ပါ။</string>
+    <string name="process_partial_unknown" formatted="false">လုပ်ငန်းစဉ်ကို ရပ်ပြီးသော်လည်း ပြန်စခြင်း၏ ရလဒ်ကို မသိရပါ။ ထိန်းချုပ်မှုများ ဆက်လက်ပိတ်ထားမည်။ အခြေအနေ ပြန်မွမ်းမံခြင်းဖြင့် ပြန်စခြင်းကို အသုံးချခဲ့ခြင်း ရှိမရှိ အတည်မပြုနိုင်ပါ။</string>
+    <string name="process_rejected" formatted="false">လုပ်ငန်းစဉ် လုပ်ဆောင်မှု မအောင်မြင်ပါ။</string>
+    <string name="process_load_failed" formatted="false">လုပ်ငန်းစဉ် အခြေအနေကို ပြန်မွမ်းမံ၍ မရပါ။</string>
+    <string name="process_config_failed" formatted="false">ဖွဲ့စည်းမှုကို ပြန်မွမ်းမံ၍ မရသောကြောင့် လုပ်ငန်းစဉ် ထိန်းချုပ်မှုများ မရနိုင်ပါ။</string>
+    <string name="process_enable" formatted="false">ဖွင့်ပါ</string>
+    <string name="process_disable" formatted="false">ပိတ်ပါ</string>
     <string name="ai_reviews_pending_title" formatted="false">စောင့်ဆိုင်းနေသည့် ပြန်လည်သုံးသပ်မှုများ</string>
     <string name="ai_reviews_decisions_title" formatted="false">AI ဆုံးဖြတ်ချက်များ</string>
     <string name="ai_reviews_deadline" formatted="false">နောက်ဆုံးအချိန်</string>
@@ -319,21 +319,21 @@
     <string name="ai_reviews_superseded" formatted="false">ပြန်လည်ရုပ်သိမ်းထားသည်</string>
     <string name="ai_reviews_decided" formatted="false">ဆုံးဖြတ်သည့်အချိန်</string>
     <string name="ai_reviews_reject_message" formatted="false">ပယ်ချလိုက်ပါက ဤပြန်လည်သုံးသပ်မှုအတွက် ဖွင့်ထားသည့် ကုန်သွယ်မှုကို တားဆီးမည်။ ပြန်ပြင်၍မရပါ။</string>
-    <string name="ai_reviews_cancel" formatted="false">Cancel</string>
+    <string name="ai_reviews_cancel" formatted="false">ပယ်ဖျက်ပါ</string>
     <string name="ai_reviews_peer_resolved" formatted="false">အခြား delegate တစ်ဦးက ဤပြန်လည်သုံးသပ်မှုကို ဖြေရှင်းပြီးပါပြီ။</string>
     <string name="ai_reviews_expired_message" formatted="false">ဤပြန်လည်သုံးသပ်မှုသည် နောက်ဆုံးအချိန်ကျော်လွန်ပြီး အချိန်ကုန်သွားသည်။</string>
     <string name="ai_reviews_missing" formatted="false">ဤပြန်လည်သုံးသပ်မှု မရှိတော့ပါ။</string>
     <string name="ai_reviews_denied" formatted="false">သင်၏ delegate ဝင်ရောက်ခွင့် ပြောင်းလဲသွားသည်။ ဆုံးဖြတ်ခြင်းမပြုမီ ပြန်လည်ဖွင့်ပါ။</string>
-    <string name="ai_reviews_load_failed" formatted="false">Could not refresh reviews. Previously loaded reviews remain visible.</string>
-    <string name="ai_reviews_check_status" formatted="false">Check status</string>
-    <string name="ai_reviews_retry" formatted="false">Retry original decision</string>
-    <string name="ai_reviews_confirm" formatted="false">Confirm review decision</string>
-    <string name="ai_reviews_accepted" formatted="false">Decision accepted</string>
-    <string name="ai_reviews_rejected" formatted="false">Decision rejected by the server</string>
-    <string name="ai_reviews_unknown" formatted="false">Outcome unknown. Check status before retrying.</string>
+    <string name="ai_reviews_load_failed" formatted="false">ပြန်လည်သုံးသပ်မှုများကို ပြန်မွမ်းမံ၍ မရပါ။ ယခင်ဖွင့်ထားသော ပြန်လည်သုံးသပ်မှုများကို ဆက်မြင်ရမည်။</string>
+    <string name="ai_reviews_check_status" formatted="false">အခြေအနေ စစ်ဆေးပါ</string>
+    <string name="ai_reviews_retry" formatted="false">မူလဆုံးဖြတ်ချက်ကို ပြန်ကြိုးစားပါ</string>
+    <string name="ai_reviews_confirm" formatted="false">ပြန်လည်သုံးသပ်မှု ဆုံးဖြတ်ချက်ကို အတည်ပြုပါ</string>
+    <string name="ai_reviews_accepted" formatted="false">ဆုံးဖြတ်ချက်ကို လက်ခံပြီး</string>
+    <string name="ai_reviews_rejected" formatted="false">ဆာဗာက ဆုံးဖြတ်ချက်ကို ငြင်းပယ်ထားသည်</string>
+    <string name="ai_reviews_unknown" formatted="false">ရလဒ်ကို မသိရပါ။ ပြန်မကြိုးစားမီ အခြေအနေကို စစ်ဆေးပါ။</string>
     <string name="positions_accessibility_label_closebutton" formatted="false">အနေအထား ပိတ်ပါ</string>
     <string name="positions_accessibility_label_reducebutton" formatted="false">အနေအထား လျှော့ပါ</string>
-    <string name="positions_reduce_cancel" formatted="false">Cancel</string>
+    <string name="positions_reduce_cancel" formatted="false">ပယ်ဖျက်ပါ</string>
     <string name="positions_reduce_footer" formatted="false">100% သည် အနေအထားကို ပိတ်ပါမည်။ ဆန့်ကျင်ဘက်ဘက်အပေါ် လျှော့ချရန်သာ ဈေးကွက်အော်ဒါ တင်သွင်းပါသည်။</string>
     <string name="positions_reduce_sizelabel" formatted="false">လျှော့မည့် ပမာဏ</string>
     <string name="trading_bracket_attach" formatted="false">အရှုံးရပ် / အမြတ်ယူ တွဲပါ</string>
@@ -341,13 +341,13 @@
     <string name="trading_bracket_takeprofitlabel" formatted="false">အမြတ်ယူ</string>
     <string name="trading_trailingstop_attach" formatted="false">နောက်လိုက်ရပ် တွဲပါ</string>
     <string name="trading_trailingstop_trailamountlabel" formatted="false">နောက်လိုက်ပမာဏ</string>
-    <string name="position_action_review" formatted="false">Review position action</string>
-    <string name="position_action_confirm" formatted="false">Confirm action</string>
-    <string name="position_action_accepted" formatted="false">Request accepted. Refresh to check execution status.</string>
-    <string name="position_action_retry" formatted="false">Retry same request</string>
-    <string name="position_action_minimum_lock" formatted="false">Minimum locked profit (%)</string>
-    <string name="position_action_cycle" formatted="false">Position cycle</string>
-    <string name="position_action_invalid" formatted="false">Review the entered values before continuing.</string>
+    <string name="position_action_review" formatted="false">အနေအထား လုပ်ဆောင်မှုကို ပြန်စစ်ပါ</string>
+    <string name="position_action_confirm" formatted="false">လုပ်ဆောင်မှု အတည်ပြုပါ</string>
+    <string name="position_action_accepted" formatted="false">တောင်းဆိုမှုကို လက်ခံပြီးပါပြီ။ အကောင်အထည်ဖော်မှု အခြေအနေကို စစ်ဆေးရန် ပြန်လည်မွမ်းမံပါ။</string>
+    <string name="position_action_retry" formatted="false">တူညီသော တောင်းဆိုမှုကို ပြန်ကြိုးစားပါ</string>
+    <string name="position_action_minimum_lock" formatted="false">အနည်းဆုံး ထိန်းသိမ်းထားသော အမြတ် (%)</string>
+    <string name="position_action_cycle" formatted="false">အနေအထား စက်ဝန်း</string>
+    <string name="position_action_invalid" formatted="false">မဆက်လုပ်မီ ထည့်ထားသောတန်ဖိုးများကို ပြန်စစ်ပါ။</string>
     <string name="display_financial_title" formatted="false">ဘဏ္ဍာရေးအရောင် စနစ်</string>
     <string name="display_financial_auto" formatted="false">ကျွန်ုပ်၏ ဒေသနှင့် ကိုက်ညီစေ (အလိုအလျောက်)</string>
     <string name="display_financial_green" formatted="false">အစိမ်း = တက်, အနီ = ကျ (အနောက်တိုင်း)</string>
@@ -355,17 +355,17 @@
     <string name="display_financial_current">လက်ရှိ: %1$s</string>
     <string name="display_financial_green_short" formatted="false">အစိမ်း တက် / အနီ ကျ</string>
     <string name="display_financial_red_short" formatted="false">အနီ တက် / အစိမ်း ကျ</string>
-    <string name="display_country" formatted="false">Country / region</string>
+    <string name="display_country" formatted="false">နိုင်ငံ / ဒေသ</string>
     <string name="market_context_last" formatted="false">နောက်ဆုံးဈေးနှုန်း</string>
     <string name="market_context_change" formatted="false">၂၄ နာရီ ပြောင်းလဲမှု</string>
     <string name="market_context_high" formatted="false">အမြင့်ဆုံး</string>
     <string name="market_context_low" formatted="false">အနိမ့်ဆုံး</string>
     <string name="market_context_related_empty">%2$s ပေါ်ရှိ %1$s အတွက် related instrument များ configure မလုပ်ထားပါ။</string>
-    <string name="market_live_connected" formatted="false">Live updates connected.</string>
-    <string name="market_live_connecting" formatted="false">Connecting to live updates…</string>
-    <string name="market_live_unavailable" formatted="false">Live updates unavailable; showing snapshots.</string>
-    <string name="market_snapshot_mode" formatted="false">Snapshot mode</string>
-    <string name="market_context_as_of">Cached close as of %1$s</string>
+    <string name="market_live_connected" formatted="false">တိုက်ရိုက် အပ်ဒိတ်များသို့ ချိတ်ဆက်ပြီး။</string>
+    <string name="market_live_connecting" formatted="false">တိုက်ရိုက် အပ်ဒိတ်များသို့ ချိတ်ဆက်နေသည်…</string>
+    <string name="market_live_unavailable" formatted="false">တိုက်ရိုက် အပ်ဒိတ်များ မရနိုင်ပါ။ အချိန်တစ်ခု၏ ဒေတာကို ပြနေသည်။</string>
+    <string name="market_snapshot_mode" formatted="false">အချိန်တစ်ခု၏ ဒေတာမုဒ်</string>
+    <string name="market_context_as_of">%1$s အချိန်ရှိ ယာယီသိမ်းထားသော ပိတ်ဈေး</string>
     <string name="market_cachebanner_message">Cache warm up လုပ်နေသည်: candle %1$s / %2$s ရနိုင်သည် %3$s</string>
     <string name="market_cachebanner_sources_cache" formatted="false"></string>
     <string name="market_cachebanner_sources_db" formatted="false">(DB မှ)</string>
@@ -373,37 +373,37 @@
     <string name="market_pairstats_chiparialabel">%2$s ပေါ်ရှိ %1$s နှင့် တွဲဖက်စာရင်းအင်း: Pearson %3$s, p-value %4$s</string>
     <string name="market_pairstats_label" formatted="false">ပူးတွဲပေါင်းစည်းမှု:</string>
     <string name="market_pairstats_metric">ρ %1$s · p %2$s</string>
-    <string name="market_pair_status_cold" formatted="false">Warming up</string>
-    <string name="market_pair_status_cointegrated" formatted="false">Cointegrated</string>
-    <string name="market_pair_status_warm" formatted="false">Warm</string>
+    <string name="market_pair_status_cold" formatted="false">ပြင်ဆင်နေသည်</string>
+    <string name="market_pair_status_cointegrated" formatted="false">ရေရှည် မျှခြေဆက်နွှယ်မှုရှိ</string>
+    <string name="market_pair_status_warm" formatted="false">အဆင်သင့်</string>
     <string name="positions_timeline_chart_valuationcurrency">တန်ဖိုးဖြတ် ငွေကြေး: %1$s</string>
-    <string name="account_language_syncing">Saving your language choice to your backend account…</string>
-    <string name="account_language_confirmed">Backend account language confirmed: %1$s</string>
-    <string name="account_language_uncertain">The backend account language could not be confirmed. Your local language choice is unchanged.</string>
-    <string name="account_language_retry">Retry language sync</string>
+    <string name="account_language_syncing">သင့်ဘာသာစကား ရွေးချယ်မှုကို ဆာဗာအကောင့်တွင် သိမ်းနေသည်…</string>
+    <string name="account_language_confirmed">ဆာဗာအကောင့် ဘာသာစကားကို အတည်ပြုပြီး: %1$s</string>
+    <string name="account_language_uncertain">ဆာဗာအကောင့် ဘာသာစကားကို အတည်မပြုနိုင်ပါ။ စက်တွင်း ဘာသာစကား ရွေးချယ်မှု မပြောင်းလဲပါ။</string>
+    <string name="account_language_retry">ဘာသာစကား ချိန်ကိုက်မှုကို ပြန်ကြိုးစားပါ</string>
     <string name="backtests_status_pending">စောင့်ဆိုင်းဆဲ</string>
     <string name="backtests_status_running">လုပ်ဆောင်နေဆဲ</string>
     <string name="backtests_status_completed">ပြီးစီးပြီ</string>
     <string name="backtests_status_failed">မအောင်မြင်ပါ</string>
     <string name="backtests_status_cancelled">ဖျက်သိမ်းပြီး</string>
     <string name="backtests_status_unknown">မသိရပါ</string>
-    <string name="push_title">Snapper updates</string>
-    <string name="push_generic">Open Snapper to view updates</string>
-    <string name="push_privacy">Notifications show only a generic invitation. Open the app and sign in to view authorized details. Enabling push sends an installation identifier to Google and your configured backend.</string>
-    <string name="push_enable">Enable notifications</string>
-    <string name="push_disable">Disable notifications</string>
-    <string name="push_check">Check registration status</string>
-    <string name="push_off">Notifications are off.</string>
-    <string name="push_busy">Updating notification registration…</string>
-    <string name="push_unavailable">Push is unavailable for this backend.</string>
-    <string name="push_permission">Allow Android notifications to enable push.</string>
-    <string name="push_ready">Push is available. Enable it to register this installation.</string>
-    <string name="push_accepted">Notification registration confirmed. Delivery depends on your backend and device.</string>
-    <string name="push_rejected">Registration was not completed. You can try again explicitly.</string>
-    <string name="push_uncertain">Registration could not be confirmed. Check status before another registration.</string>
-    <string name="push_restart">Close and reopen the app before activating a different Firebase configuration.</string>
-    <string name="push_close">Close</string>
-    <string name="push_cleanup">Local notifications are off. Remote cleanup is pending; disable again while signed in to retry.</string>
+    <string name="push_title">Snapper အပ်ဒိတ်များ</string>
+    <string name="push_generic">အပ်ဒိတ်များကြည့်ရန် Snapper ကို ဖွင့်ပါ</string>
+    <string name="push_privacy">အသိပေးချက်များတွင် ယေဘုယျ ဖိတ်ခေါ်ချက်သာ ပြသည်။ ခွင့်ပြုထားသော အသေးစိတ်များကို ကြည့်ရန် အက်ပ်ကိုဖွင့်ပြီး ဝင်ရောက်ပါ။ တွန်းပို့အသိပေးချက် ဖွင့်ခြင်းဖြင့် တပ်ဆင်မှုအမှတ်အသားကို Google နှင့် သတ်မှတ်ထားသော ဆာဗာသို့ ပေးပို့သည်။</string>
+    <string name="push_enable">အသိပေးချက်များ ဖွင့်ပါ</string>
+    <string name="push_disable">အသိပေးချက်များ ပိတ်ပါ</string>
+    <string name="push_check">စာရင်းသွင်းမှု အခြေအနေ စစ်ဆေးပါ</string>
+    <string name="push_off">အသိပေးချက်များ ပိတ်ထားသည်။</string>
+    <string name="push_busy">အသိပေးချက် စာရင်းသွင်းမှုကို မွမ်းမံနေသည်…</string>
+    <string name="push_unavailable">ဤဆာဗာအတွက် တွန်းပို့အသိပေးချက် မရနိုင်ပါ။</string>
+    <string name="push_permission">တွန်းပို့အသိပေးချက် ဖွင့်ရန် Android အသိပေးချက်များကို ခွင့်ပြုပါ။</string>
+    <string name="push_ready">တွန်းပို့အသိပေးချက် ရနိုင်ပါသည်။ ဤတပ်ဆင်မှုကို စာရင်းသွင်းရန် ဖွင့်ပါ။</string>
+    <string name="push_accepted">အသိပေးချက် စာရင်းသွင်းမှုကို အတည်ပြုပြီးပါပြီ။ ပေးပို့မှုသည် သင့်ဆာဗာနှင့် စက်ပေါ် မူတည်သည်။</string>
+    <string name="push_rejected">စာရင်းသွင်းမှု မပြီးစီးပါ။ သင်ကိုယ်တိုင် ပြန်လည်ကြိုးစားနိုင်သည်။</string>
+    <string name="push_uncertain">စာရင်းသွင်းမှုကို အတည်မပြုနိုင်ပါ။ ထပ်မံစာရင်းမသွင်းမီ အခြေအနေကို စစ်ဆေးပါ။</string>
+    <string name="push_restart">အခြား Firebase ဖွဲ့စည်းမှုကို မဖွင့်မီ အက်ပ်ကို ပိတ်ပြီး ပြန်ဖွင့်ပါ။</string>
+    <string name="push_close">ပိတ်ပါ</string>
+    <string name="push_cleanup">စက်တွင်း အသိပေးချက်များ ပိတ်ထားသည်။ အဝေးရှိ ဒေတာရှင်းလင်းမှု စောင့်ဆိုင်းနေသည်။ ပြန်ကြိုးစားရန် ဝင်ရောက်ထားစဉ် ထပ်မံပိတ်ပါ။</string>
     <string name="home_connection_connected">ချိတ်ဆက်ပြီး</string>
     <string name="home_connection_connecting">ချိတ်ဆက်နေသည်…</string>
     <string name="home_connection_authenticating">အတည်ပြုနေသည်…</string>
@@ -416,4 +416,83 @@
     <plurals name="home_heartbeat_age_seconds">
         <item quantity="other">လွန်ခဲ့သော %1$d စက္ကန့်</item>
     </plurals>
+    <string name="records_status_new" formatted="false">အသစ်</string>
+    <string name="records_status_open" formatted="false">ဖွင့်ထားသည်</string>
+    <string name="records_status_partially_filled" formatted="false">တစ်စိတ်တစ်ပိုင်း ဖြည့်ပြီး</string>
+    <string name="records_status_filled" formatted="false">ဖြည့်ပြီး</string>
+    <string name="records_status_cancelled" formatted="false">ပယ်ဖျက်ပြီး</string>
+    <string name="records_status_rejected" formatted="false">ပယ်ချပြီး</string>
+    <string name="records_alert_type_order_unknown" formatted="false">အော်ဒါ အခြေအနေ မသိရပါ</string>
+    <string name="venue_accounts_status_observed" formatted="false">စောင့်ကြည့်မှတ်တမ်းတင်ပြီး</string>
+    <string name="venue_accounts_status_simulated" formatted="false">သရုပ်တူ</string>
+    <string name="venue_accounts_status_stale" formatted="false">သက်တမ်းလွန်</string>
+    <string name="venue_accounts_status_clock_error" formatted="false">နာရီချိန် မှားယွင်းမှု</string>
+    <string name="venue_accounts_status_unverified" formatted="false">အတည်မပြုရသေး</string>
+    <string name="venue_accounts_status_unavailable" formatted="false">မရရှိနိုင်</string>
+    <string name="venue_accounts_status_not_applicable" formatted="false">မသက်ဆိုင်ပါ</string>
+    <string name="venue_accounts_status_unknown" formatted="false">မသိရသေး</string>
+    <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">စာရင်းရှင်းလင်းပြီး</string>
+    <string name="venue_accounts_reconciliation_status_error" formatted="false">စာရင်းရှင်းလင်းမှုအမှား</string>
+    <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">ပံ့ပိုးမထားပါ</string>
+    <string name="system_status_healthy" formatted="false">ကျန်းမာသည်</string>
+    <string name="system_status_error" formatted="false">အမှား</string>
+    <string name="system_status_warning" formatted="false">သတိပေးချက်</string>
+    <string name="system_status_starting" formatted="false">စတင်နေသည်</string>
+    <string name="system_status_stopping" formatted="false">ရပ်နေသည်</string>
+    <string name="settings_role_viewer" formatted="false">ကြည့်ရှုသူ</string>
+    <string name="settings_role_operator" formatted="false">လုပ်ဆောင်သူ</string>
+    <string name="settings_role_admin" formatted="false">စီမံခန့်ခွဲသူ</string>
+    <string name="settings_role_ai_delegate" formatted="false">AI ကိုယ်စားလှယ်</string>
+    <string name="settings_role_auditor" formatted="false">စာရင်းစစ်</string>
+    <string name="process_mode_thread" formatted="false">Thread မုဒ်</string>
+    <string name="process_mode_process" formatted="false">လုပ်ငန်းစဉ် မုဒ်</string>
+    <string name="process_role_strategy" formatted="false">ဗျူဟာ</string>
+    <string name="process_role_backtest" formatted="false">နောက်ကြောင်းပြန် စမ်းသပ်မှု</string>
+    <string name="positions_timeline_incompleteness_scope_global" formatted="false">ရင်းနှီးမြှုပ်နှံမှုအစု တစ်ခုလုံး</string>
+    <string name="positions_timeline_incompleteness_tier_mark_incomplete" formatted="false">ရည်ညွှန်းဈေးဒေတာ မပြည့်စုံ</string>
+    <string name="positions_timeline_incompleteness_tier_untrusted" formatted="false">မယုံကြည်ရ</string>
+    <string name="positions_timeline_attribution_origins_manual" formatted="false">လက်ဖြင့် · တိုက်ရိုက်</string>
+    <string name="positions_timeline_attribution_origins_plan" formatted="false">အစီအစဉ် · အလိုအလျောက်</string>
+    <string name="positions_timeline_attribution_origins_system" formatted="false">စနစ် · အလိုအလျောက်</string>
+    <string name="positions_timeline_attribution_origins_unattributed" formatted="false">ခွဲဝေသတ်မှတ်၍မရ · မူလရင်းမြစ် မသိ</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">ဤကြိုတင်စာရင်းသွင်းမှုအတွက် အထောက်အထားအဖြစ် လဲလှယ်ရောင်းဝယ်ရေးဖြည့်စွက်မှု မရှိပါ။</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">လဲလှယ်ရောင်းဝယ်မှု ဖြည့်စွက်ခြင်းမရှိသည့် အမွေအနှစ်မှရရှိသည့် မှတ်တမ်းသည် အထောက်အထားအဖြစ် ဆောင်ရွက်သည်။</string>
+    <string name="common_yes" formatted="false">ဟုတ်</string>
+    <string name="common_no" formatted="false">မဟုတ်</string>
+    <string name="settings_role_ai_reviewer" formatted="false">AI ပြန်လည်သုံးသပ်သူ</string>
+    <string name="settings_role_ai_researcher" formatted="false">AI သုတေသီ</string>
+    <string name="process_role_core" formatted="false">အဓိက</string>
+    <string name="process_role_task" formatted="false">လုပ်ငန်း</string>
+    <string name="records_status_submitted" formatted="false">ပေးပို့ပြီး</string>
+    <string name="system_status_ready" formatted="false">အဆင်သင့်</string>
+    <string name="system_status_degraded" formatted="false">လုပ်ဆောင်နိုင်စွမ်း ကျဆင်းနေသည်</string>
+    <string name="market_instrument_kind_spot" formatted="false">လက်ငင်း</string>
+    <string name="market_instrument_kind_perpetual" formatted="false">သက်တမ်းမကုန်သော စာချုပ်</string>
+    <string name="market_instrument_kind_future" formatted="false">ဖျူးချား စာချုပ်</string>
+    <string name="market_instrument_kind_etf" formatted="false">ETF</string>
+    <string name="market_instrument_kind_option" formatted="false">အော့ပ်ရှင်</string>
+    <string name="venue_accounts_valuation_native_only" formatted="false">မူရင်းငွေကြေးများသာ</string>
+    <string name="venue_accounts_status_unobserved" formatted="false">စောင့်ကြည့်မှတ်တမ်း မရှိသေး</string>
+    <string name="pnl_execution_history_as_recorded" formatted="false">မှတ်တမ်းတင်ထားသည့်အတိုင်း</string>
+    <string name="pnl_execution_history_operator_corrected" formatted="false">အော်ပရေတာ ပြင်ဆင်ထားသည်</string>
+    <string name="ai_reviews_status_approved" formatted="false">အတည်ပြုပြီး</string>
+    <string name="ai_reviews_status_rejected" formatted="false">ပယ်ချပြီး</string>
+    <string name="venue_accounts_evaluation_matched" formatted="false">ကိုက်ညီသည်</string>
+    <string name="venue_accounts_evaluation_mismatched" formatted="false">မကိုက်ညီပါ</string>
+    <string name="venue_accounts_evaluation_incomplete" formatted="false">မပြည့်စုံပါ</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">လဲလှယ်ဈေးကွက်မှ မပြုပြင်ရသေးသော တန်ဖိုးများ</string>
+    <string name="venue_accounts_numeric_source_legacy_float" formatted="false">ယခင် ရွေ့လျားဒဿမကိန်း တန်ဖိုးများ</string>
+    <string name="venue_accounts_status_corrupt" formatted="false">ပျက်စီးနေသည်</string>
+    <string name="system_status_not_running" formatted="false">လုပ်ဆောင်နေခြင်း မရှိ</string>
+    <string name="records_status_closed" formatted="false">ပိတ်ပြီး</string>
+    <string name="records_status_pending_new" formatted="false">ပေးပို့ရန် စောင့်ဆိုင်းဆဲ</string>
+    <string name="records_status_expired" formatted="false">သက်တမ်းကုန်</string>
+    <string name="records_alert_priority_critical" formatted="false">အလွန်ပြင်းထန်</string>
+    <string name="records_alert_type_critical_system_error" formatted="false">အလွန်ပြင်းထန်သော စနစ်အမှား</string>
+    <string name="records_alert_type_drift" formatted="false">ပိုင်ဆိုင်မှုအစု၏ လွဲချော်မှု</string>
+    <string name="ai_reviews_status_fanout_dispatched" formatted="false">ကိုယ်စားလှယ်များထံ ပေးပို့ပြီး</string>
+    <string name="ai_reviews_status_timeout" formatted="false">စောင့်ဆိုင်းချိန် ကုန်ဆုံးသွားသည်</string>
+    <string name="backtests_status_cancel_requested" formatted="false">ပယ်ဖျက်ရန် တောင်းဆိုပြီး</string>
+    <string name="system_status_ok" formatted="false">OK</string>
+    <string name="records_status_pending" formatted="false">စောင့်ဆိုင်းဆဲ</string>
 </resources>

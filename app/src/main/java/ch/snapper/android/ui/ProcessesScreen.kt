@@ -40,8 +40,8 @@ private fun ProcessesHeader(state: ProcessesState, actions: ProcessesActions) {
 @Composable
 private fun ProcessRow(row: ProcessSummaryRowDto, state: ProcessesState, actions: ProcessesActions) {
     RecordCard(row.name) {
-        Metric(R.string.status, stringResource(if (row.running) R.string.process_running else R.string.process_stopped))
-        Text(row.role)
+        Metric(R.string.status, stringResource(if (row.running) R.string.process_running else R.string.system_status_not_running))
+        Text(processRoleLabel(row.role))
         Metric(R.string.process_memory, row.rssBytes?.let { "$it B" } ?: "—")
         Metric(R.string.process_cpu, row.cpuPercent?.let { "${it.display()}%" } ?: "—")
         (state.configured[row.name]?.coordinatorLabel ?: state.configured[row.name]?.coordinator)?.let { Text(it) }
@@ -52,6 +52,17 @@ private fun ProcessRow(row: ProcessSummaryRowDto, state: ProcessesState, actions
         ProcessControls(row.name, state, actions)
         if (state.confirmation?.target?.name == row.name) ProcessConfirmationDialog(state, actions)
     }
+}
+
+@Composable
+private fun processRoleLabel(value: String): String = processRoleLabelRes(value)?.let { stringResource(it) } ?: value
+
+internal fun processRoleLabelRes(value: String): Int? = when (value) {
+    "core" -> R.string.process_role_core
+    "task" -> R.string.process_role_task
+    "strategy" -> R.string.process_role_strategy
+    "backtest" -> R.string.process_role_backtest
+    else -> null
 }
 
 @Composable

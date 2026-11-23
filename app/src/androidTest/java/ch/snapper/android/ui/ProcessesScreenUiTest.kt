@@ -6,6 +6,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.v2.createComposeRule
+import androidx.test.platform.app.InstrumentationRegistry
+import ch.snapper.android.R
 import ch.snapper.android.data.*
 import ch.snapper.android.features.operations.*
 import org.junit.Assert.assertEquals
@@ -19,6 +21,17 @@ class ProcessesScreenUiTest {
         val target = ConfiguredProcessDto("feed", true, true, "feed", "instance", false)
         return ProcessesState(permissions = setOf("manage:processes"),
             summary = ProcessSummaryDto(count, count, count, count, listOf(ProcessSummaryRowDto("feed", true, true, "feed", "long_running"))), configured = mapOf("feed" to target))
+    }
+
+    @Test fun falseRunningFlagDoesNotClaimAStoppedLifecycleState() {
+        val original = fixture()
+        val summary = original.summary!!
+        val state = original.copy(summary = summary.copy(processes = summary.processes.map { it.copy(running = false) }))
+        compose.setContent { LazyColumn(Modifier.testTag("process-list")) { processesScreen(state, ProcessesActions({}, { _, _ -> }, {}, {})) } }
+        compose.onNodeWithTag("process-list").performScrollToIndex(1)
+        val context = InstrumentationRegistry.getInstrumentation().targetContext
+        compose.onNodeWithText(context.getString(R.string.system_status_not_running)).assertExists()
+        compose.onNodeWithText(context.getString(R.string.process_stopped)).assertDoesNotExist()
     }
 
     @Test fun confirmationIsRequiredAndUnknownOutcomeDisablesControls() {

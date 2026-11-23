@@ -52,7 +52,7 @@ private fun FeedStatus(loading: Boolean, failed: Boolean, empty: Boolean) {
 private fun PendingReview(row: AiPendingReviewDto, state: AiReviewsState, actions: AiReviewsActions) {
     RecordCard(row.instrument ?: row.reviewPublicId) {
         Text(row.reviewPublicId)
-        Metric(R.string.status, row.status)
+        Metric(R.string.status, pendingReviewStatusLabel(row.status))
         Metric(R.string.ai_reviews_deadline, row.deadline.displayTimestamp())
         if (aiReviewExpired(row.deadline, state.now)) Text(stringResource(R.string.ai_reviews_expired))
         if (state.identity?.canDecide == true) DecisionControls(row, state, actions)
@@ -81,7 +81,7 @@ private fun DecisionControls(row: AiPendingReviewDto, state: AiReviewsState, act
 private fun AuditReview(row: AiAuditReviewDto) {
     RecordCard(row.instrumentPublicId) {
         Text(row.reviewPublicId)
-        Metric(R.string.status, stringResource(decisionLabel(aiReviewVerdict(row))))
+        Metric(R.string.status, pendingReviewStatusLabel(row.status))
         row.rationale?.let { Metric(R.string.ai_reviews_rationale, it) }
         row.resolvedAt?.let { Metric(R.string.ai_reviews_decided, it) }
         Metric(R.string.ai_reviews_deadline, row.deadline.displayTimestamp())
@@ -94,7 +94,7 @@ private fun AuditReview(row: AiAuditReviewDto) {
 private fun DecisionResult(id: String, result: AiDecisionResult, state: AiReviewsState, actions: AiReviewsActions) {
     RecordCard(id) {
         Text(stringResource(outcomeLabel(result.outcome)), modifier = Modifier.testTag("ai.result.$id"))
-        if (result.outcome == AiDecisionOutcome.ACCEPTED) result.decision?.let { Text(stringResource(decisionLabel(it))) }
+        if (result.outcome == AiDecisionOutcome.ACCEPTED) result.decision?.let { Text(stringResource(decisionStatusLabel(it))) }
         result.message?.takeIf { it.isNotBlank() }?.let { Text(it) }
         if (result.outcome == AiDecisionOutcome.UNKNOWN) {
             TextButton(onClick = actions.refresh) { Text(stringResource(R.string.ai_reviews_check_status)) }
@@ -131,6 +131,12 @@ private fun decisionLabel(decision: String): Int = when (decision) {
     else -> R.string.ai_reviews_unknown
 }
 
+internal fun decisionStatusLabel(decision: String): Int = when (decision) {
+    "approve" -> R.string.ai_reviews_status_approved
+    "reject" -> R.string.ai_reviews_status_rejected
+    else -> decisionLabel(decision)
+}
+
 private fun outcomeLabel(outcome: AiDecisionOutcome): Int = when (outcome) {
     AiDecisionOutcome.ACCEPTED -> R.string.ai_reviews_accepted
     AiDecisionOutcome.PEER_RESOLVED -> R.string.ai_reviews_peer_resolved
@@ -140,4 +146,17 @@ private fun outcomeLabel(outcome: AiDecisionOutcome): Int = when (outcome) {
     AiDecisionOutcome.REJECTED -> R.string.ai_reviews_rejected
     AiDecisionOutcome.PREPARATION -> R.string.error_service
     AiDecisionOutcome.UNKNOWN -> R.string.ai_reviews_unknown
+}
+
+@Composable
+private fun pendingReviewStatusLabel(raw: String): String = pendingReviewStatusLabelRes(raw)?.let { stringResource(it) } ?: raw
+
+internal fun pendingReviewStatusLabelRes(raw: String): Int? = when (raw.lowercase()) {
+    "pending" -> R.string.ai_reviews_pending
+    "fanout_dispatched" -> R.string.ai_reviews_status_fanout_dispatched
+    "resolved_approved" -> R.string.ai_reviews_status_approved
+    "resolved_rejected" -> R.string.ai_reviews_status_rejected
+    "timeout" -> R.string.ai_reviews_status_timeout
+    "superseded" -> R.string.ai_reviews_superseded
+    else -> null
 }

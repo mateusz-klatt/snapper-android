@@ -1,6 +1,8 @@
 package ch.snapper.android.ui
 
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.test.assertIsEnabled
 import androidx.compose.ui.test.assertIsNotEnabled
 import androidx.compose.ui.test.junit4.v2.createComposeRule
@@ -17,6 +19,7 @@ import ch.snapper.android.OrderFlowState
 import ch.snapper.android.OrderForm
 import ch.snapper.android.OrderOutcome
 import ch.snapper.android.OrderReview
+import ch.snapper.android.R
 import ch.snapper.android.data.CreateOrderPayload
 import ch.snapper.android.data.DashboardSnapshot
 import ch.snapper.android.data.InstrumentDto
@@ -24,6 +27,8 @@ import ch.snapper.android.data.OrderDto
 import ch.snapper.android.data.OrderScope
 import ch.snapper.android.data.UserDto
 import ch.snapper.android.data.WalletDto
+import ch.snapper.android.features.records.OrderSegment
+import ch.snapper.android.features.records.RecordsState
 import java.math.BigDecimal
 import org.junit.Assert.assertEquals
 import org.junit.Rule
@@ -210,5 +215,44 @@ class OrderFlowUiTest {
         compose.onNodeWithTag("order.cancel.order-one").performScrollTo().assertIsNotEnabled()
         compose.runOnIdle { current.value = state() }
         compose.onNodeWithTag("order.cancel.order-one").performScrollTo().assertIsEnabled()
+    }
+
+    @Test
+    fun recentOrdersKeepExchangeStatesDistinctAndRecognizeBothCancellationSpellings() {
+        val current = mutableStateOf(state(records = listOf(order.copy(status = "pending_new"))))
+        var pendingSubmission = ""
+        var pending = ""
+        var closed = ""
+        var cancelled = ""
+        var expired = ""
+        compose.setContent {
+            pendingSubmission = stringResource(R.string.records_status_pending_new)
+            pending = stringResource(R.string.records_status_pending)
+            closed = stringResource(R.string.records_status_closed)
+            cancelled = stringResource(R.string.records_status_cancelled)
+            expired = stringResource(R.string.records_status_expired)
+            SnapperTheme { LazyColumn { ordersScreen(current.value, OrderActions(), RecordsState(segment = OrderSegment.RECENT)) } }
+        }
+        compose.onNodeWithText(pendingSubmission).performScrollTo().assertExists()
+        compose.onNodeWithText(pending).assertDoesNotExist()
+
+        compose.runOnIdle { current.value = state(records = listOf(order.copy(status = "pending"))) }
+        compose.onNodeWithText(pending).performScrollTo().assertExists()
+        compose.onNodeWithText(pendingSubmission).assertDoesNotExist()
+
+        compose.runOnIdle { current.value = state(records = listOf(order.copy(status = "closed"))) }
+        compose.onNodeWithText(closed).performScrollTo().assertExists()
+
+        compose.runOnIdle { current.value = state(records = listOf(order.copy(status = "canceled"))) }
+        compose.onNodeWithText(cancelled).performScrollTo().assertExists()
+        compose.runOnIdle { current.value = state(records = listOf(order.copy(status = "cancelled"))) }
+        compose.onNodeWithText(cancelled).performScrollTo().assertExists()
+
+        compose.runOnIdle { current.value = state(records = listOf(order.copy(status = "expired"))) }
+        compose.onNodeWithText(expired).performScrollTo().assertExists()
+        compose.onNodeWithText(cancelled).assertDoesNotExist()
+
+        compose.runOnIdle { current.value = state(records = listOf(order.copy(status = "future_order_state"))) }
+        compose.onNodeWithText("future_order_state").performScrollTo().assertExists()
     }
 }

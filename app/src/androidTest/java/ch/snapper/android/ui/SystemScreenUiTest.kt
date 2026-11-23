@@ -9,6 +9,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.v2.createComposeRule
+import androidx.test.platform.app.InstrumentationRegistry
+import ch.snapper.android.R
 import ch.snapper.android.UiError
 import ch.snapper.android.data.*
 import ch.snapper.android.features.system.*
@@ -19,6 +21,7 @@ import org.junit.Test
 
 class SystemScreenUiTest {
     @get:Rule val compose = createComposeRule()
+    private fun text(id: Int): String = InstrumentationRegistry.getInstrumentation().targetContext.getString(id)
 
     private fun populated() = SystemState(
         permissions = SystemFeed.entries.map { it.permission }.toSet(),
@@ -43,6 +46,39 @@ class SystemScreenUiTest {
             SystemDelegateReadDto("d2", "revoked-agent", "Revoked fixture", "u1", "2026-10-02", false, SystemDelegateCapsBodyDto()),
         )),
     )
+
+    @Test fun systemNotRunningStoppedAndOkRemainDistinct() {
+        val state = mutableStateOf(SystemState(permissions = setOf(SystemFeed.STATUS.permission),
+            status = SystemFeedState(SystemSystemStatusDataDto("status", SystemProcessStatusDto("not_running"), emptyMap(), emptyList()))))
+        compose.setContent { LazyColumn { systemScreen(state.value, SystemActions {}) } }
+        compose.onNodeWithText(text(R.string.system_status_not_running)).assertExists()
+        compose.onNodeWithText(text(R.string.system_stopped)).assertDoesNotExist()
+        compose.runOnIdle { state.value = state.value.copy(status = SystemFeedState(
+            SystemSystemStatusDataDto("status", SystemProcessStatusDto("stopped"), emptyMap(), emptyList()))) }
+        compose.onNodeWithText(text(R.string.system_stopped)).assertExists()
+        compose.onNodeWithText(text(R.string.system_status_not_running)).assertDoesNotExist()
+        compose.runOnIdle { state.value = state.value.copy(status = SystemFeedState(
+            SystemSystemStatusDataDto("status", SystemProcessStatusDto("ok"), emptyMap(), emptyList()))) }
+        compose.onNodeWithText(text(R.string.system_status_ok)).assertExists()
+        compose.onNodeWithText(text(R.string.system_stopped)).assertDoesNotExist()
+    }
+
+    @Test fun pendingBacktestCancellationIsNeitherCancelledNorUnknown() {
+        val row = populated().backtests.value!!.single().copy(status = "cancel_requested", error = null)
+        val state = SystemState(permissions = setOf(SystemFeed.BACKTESTS.permission), backtests = SystemFeedState(listOf(row)))
+        compose.setContent { LazyColumn { systemScreen(state, SystemActions {}) } }
+        compose.onNodeWithText(text(R.string.backtests_status_cancel_requested)).assertExists()
+        compose.onNodeWithText(text(R.string.backtests_status_cancelled)).assertDoesNotExist()
+        compose.onNodeWithText(text(R.string.backtests_status_unknown)).assertDoesNotExist()
+    }
+
+    @Test fun strategyRunningFlagDoesNotAssertAStoppedLifecycleState() {
+        val row = populated().strategies.value!!.last()
+        val state = SystemState(permissions = setOf(SystemFeed.STRATEGIES.permission), strategies = SystemFeedState(listOf(row)))
+        compose.setContent { LazyColumn { systemScreen(state, SystemActions {}) } }
+        compose.onNodeWithText(text(R.string.system_status_not_running)).assertExists()
+        compose.onNodeWithText(text(R.string.system_stopped)).assertDoesNotExist()
+    }
 
     @Test fun populatedSixFeedsRenderTypedValuesAndNullableFallbacks() {
         compose.setContent { LazyColumn(Modifier.testTag("system-list")) { systemScreen(populated(), SystemActions {}) } }

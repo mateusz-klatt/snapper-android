@@ -19,6 +19,7 @@ import ch.snapper.android.OrderActions
 import ch.snapper.android.OrderForm
 import ch.snapper.android.OrderOutcome
 import ch.snapper.android.AppActions
+import ch.snapper.android.data.AlertDto
 import ch.snapper.android.data.OrderScope
 import ch.snapper.android.data.PositionDto
 import ch.snapper.android.features.positionactions.PositionActionForm
@@ -103,11 +104,11 @@ private fun LazyListScope.orderFills(state: AppUiState, records: RecordsState, r
     items(fills) { fill ->
         RecordCard(fill.instrument) {
             Text(fill.exchange, style = MaterialTheme.typography.labelMedium)
-            Metric(R.string.side, fill.side)
+            Metric(R.string.side, tradeSideLabel(fill.side))
             Metric(R.string.size, fill.size.display())
             Metric(R.string.price, fill.price.display())
             Metric(R.string.records_fee, "${fill.fee.display()} ${fill.feeAsset}")
-            Metric(R.string.status, fill.status)
+            Metric(R.string.status, orderStatusLabel(fill.status))
             Text(fill.executedAt.displayTimestamp(), style = MaterialTheme.typography.bodySmall)
         }
     }
@@ -120,8 +121,8 @@ private fun LazyListScope.orderRows(state: AppUiState, actions: OrderActions, re
     items(orders) { order ->
         RecordCard(order.instrument) {
             Text(order.exchange, style = MaterialTheme.typography.labelMedium)
-            Metric(R.string.side, order.side)
-            Metric(R.string.status, order.status)
+            Metric(R.string.side, tradeSideLabel(order.side))
+            Metric(R.string.status, orderStatusLabel(order.status))
             Metric(R.string.size, order.size.display())
             Metric(R.string.filled, order.filledSize.display())
             Metric(R.string.price, order.price.display())
@@ -144,10 +145,10 @@ internal fun LazyListScope.alertsScreen(state: AppUiState) {
     if (records.isEmpty() && !state.isLoading) item { Text(stringResource(R.string.empty)) }
     items(records, key = { it.publicId }) { alert ->
         var expanded by remember(alert.publicId) { mutableStateOf(false) }
-        RecordCard(alert.displayTitle) {
+        RecordCard(alertTitleLabel(alert)) {
             if (alert.isSafetyCritical) Text(stringResource(R.string.safety_critical), color = MaterialTheme.colorScheme.error)
             Text(alert.body)
-            Text("${alert.priority} · ${alert.alertType}", style = MaterialTheme.typography.labelMedium)
+            Text("${alertPriorityLabel(alert.priority)} · ${alertTypeLabel(alert.alertType)}", style = MaterialTheme.typography.labelMedium)
             Text(alert.timestamp.displayTimestamp(), style = MaterialTheme.typography.bodySmall)
             OutlinedButton(onClick = { expanded = !expanded }, modifier = Modifier.testTag("alert.details.${alert.publicId}")) {
                 Text(stringResource(if (expanded) R.string.records_hide_details else R.string.records_details))
@@ -158,4 +159,60 @@ internal fun LazyListScope.alertsScreen(state: AppUiState) {
             }
         }
     }
+}
+
+@Composable
+internal fun tradeSideLabel(value: String): String = tradeSideLabelRes(value)?.let { stringResource(it) } ?: value
+
+internal fun tradeSideLabelRes(value: String): Int? = when (value.lowercase()) {
+    "buy" -> R.string.order_buy
+    "sell" -> R.string.order_sell
+    else -> null
+}
+
+@Composable
+internal fun orderStatusLabel(value: String): String = orderStatusLabelRes(value)?.let { stringResource(it) } ?: value
+
+internal fun orderStatusLabelRes(value: String): Int? = when (value.lowercase()) {
+    "pending" -> R.string.records_status_pending
+    "pending_new" -> R.string.records_status_pending_new
+    "new" -> R.string.records_status_new
+    "submitted" -> R.string.records_status_submitted
+    "open" -> R.string.records_status_open
+    "closed" -> R.string.records_status_closed
+    "partial", "partially_filled" -> R.string.records_status_partially_filled
+    "filled" -> R.string.records_status_filled
+    "canceled", "cancelled" -> R.string.records_status_cancelled
+    "expired" -> R.string.records_status_expired
+    "rejected" -> R.string.records_status_rejected
+    else -> null
+}
+
+@Composable
+internal fun alertTitleLabel(alert: AlertDto): String =
+    alert.title.ifBlank { alertTypeLabel(alert.alertType) }
+
+@Composable
+internal fun alertPriorityLabel(value: String): String = alertPriorityLabelRes(value)?.let { stringResource(it) } ?: value
+
+internal fun alertPriorityLabelRes(value: String): Int? = when (value.lowercase()) {
+    "low" -> R.string.notification_defaults_low
+    "medium" -> R.string.notification_defaults_medium
+    "high" -> R.string.notification_defaults_high
+    "critical" -> R.string.records_alert_priority_critical
+    else -> null
+}
+
+@Composable
+internal fun alertTypeLabel(value: String): String = alertTypeLabelRes(value)?.let { stringResource(it) } ?: value
+
+internal fun alertTypeLabelRes(value: String): Int? = when (value) {
+    "order_fill_full" -> R.string.notification_defaults_fill
+    "order_rejected" -> R.string.notification_defaults_rejected
+    "position_stop_loss_fired" -> R.string.notification_defaults_stop
+    "margin_warning" -> R.string.notification_defaults_margin
+    "critical_system_error" -> R.string.records_alert_type_critical_system_error
+    "order_unknown" -> R.string.records_alert_type_order_unknown
+    "drift" -> R.string.records_alert_type_drift
+    else -> null
 }
