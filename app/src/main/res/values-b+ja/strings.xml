@@ -198,11 +198,11 @@
     <string name="signals_empty" formatted="false">現在のフィルターに一致する取引シグナルはありません。</string>
     <string name="signals_export" formatted="false">エクスポート</string>
     <string name="signals_export_failed" formatted="false">送信に失敗しました</string>
-    <string name="venue_accounts_title" formatted="false">取引所アカウント</string>
+    <string name="venue_accounts_title" formatted="false">プラットフォームのアカウント</string>
     <string name="venue_accounts_refresh" formatted="false">更新</string>
-    <string name="venue_accounts_failed" formatted="false">取引所アカウントの状態を読み込めませんでした。アカウントが空なのではなく、現在データを取得できない状態です。</string>
-    <string name="venue_accounts_authoritative" formatted="false">権限ウィンドウ内で確認された、ライブの取引所データ。</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">この口座には、最後に確認されたデータ、シミュレーションデータ、または利用できないデータが表示されます — 取引所の信頼できるリアルタイム残高ではありません。</string>
+    <string name="venue_accounts_failed" formatted="false">取引プラットフォームのアカウントの状態を読み込めませんでした。アカウントが空なのではなく、現在データを取得できない状態です。</string>
+    <string name="venue_accounts_authoritative" formatted="false">権限ウィンドウ内で確認された、ライブの取引プラットフォームデータ。</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">この口座には、最後に確認されたデータ、シミュレーションデータ、または利用できないデータが表示されます — 取引プラットフォームの信頼できるリアルタイム残高ではありません。</string>
     <string name="venue_accounts_valuation" formatted="false">評価額</string>
     <string name="venue_accounts_balances" formatted="false">残高</string>
     <string name="venue_accounts_observed" formatted="false">観測日時</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">純資産の重ね表示</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">純資産</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">現在のドローダウン</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">現物取引所のみです。他の取引所の残高は含まれません。</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">現物取引プラットフォームのみです。他の取引プラットフォームの残高は含まれません。</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">外部からの入金と外部への出金は調整されていません。</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">これらの数値は各分の終値で %1$s から換算したもので、この通貨で直接サンプリングしたものではありません。</string>
     <string name="positions_timeline_equity_honesty_pricedon">%1$s に基づく価格。</string>
@@ -480,7 +480,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">一致</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">不一致</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">不完全</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">取引所の生の数値</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">取引プラットフォームの生の数値</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">従来の浮動小数点値</string>
     <string name="venue_accounts_status_corrupt" formatted="false">破損</string>
     <string name="system_status_not_running" formatted="false">稼働していない</string>

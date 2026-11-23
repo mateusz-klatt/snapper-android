@@ -198,11 +198,11 @@
     <string name="signals_empty" formatted="false">ไม่มีสัญญาณการเทรดที่ตรงกับตัวกรองปัจจุบันของคุณ</string>
     <string name="signals_export" formatted="false">ส่งออก</string>
     <string name="signals_export_failed" formatted="false">ส่งไม่สำเร็จ</string>
-    <string name="venue_accounts_title" formatted="false">บัญชีตลาดซื้อขาย</string>
+    <string name="venue_accounts_title" formatted="false">บัญชีแพลตฟอร์มซื้อขาย</string>
     <string name="venue_accounts_refresh" formatted="false">รีเฟรช</string>
-    <string name="venue_accounts_failed" formatted="false">ไม่สามารถโหลดสถานะบัญชีตลาดซื้อขายได้ บัญชีไม่ได้ว่างเปล่า แต่ขณะนี้ยังไม่มีข้อมูลให้ใช้งาน</string>
-    <string name="venue_accounts_authoritative" formatted="false">ข้อมูลจริงจากตลาดซื้อขายในหน้าต่างสิทธิ์</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">บัญชีนี้แสดงข้อมูลล่าสุดที่ทราบ ข้อมูลจำลอง หรือข้อมูลที่ไม่พร้อมใช้งาน — ไม่ใช่ยอดคงเหลือแบบเรียลไทม์ที่เชื่อถือได้จากตลาดซื้อขาย</string>
+    <string name="venue_accounts_failed" formatted="false">ไม่สามารถโหลดสถานะบัญชีแพลตฟอร์มซื้อขายได้ บัญชีไม่ได้ว่างเปล่า แต่ขณะนี้ยังไม่มีข้อมูลให้ใช้งาน</string>
+    <string name="venue_accounts_authoritative" formatted="false">ข้อมูลจริงจากแพลตฟอร์มซื้อขายในหน้าต่างสิทธิ์</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">บัญชีนี้แสดงข้อมูลล่าสุดที่ทราบ ข้อมูลจำลอง หรือข้อมูลที่ไม่พร้อมใช้งาน — ไม่ใช่ยอดคงเหลือแบบเรียลไทม์ที่เชื่อถือได้จากแพลตฟอร์มซื้อขาย</string>
     <string name="venue_accounts_valuation" formatted="false">การประเมินมูลค่า</string>
     <string name="venue_accounts_balances" formatted="false">ยอดคงเหลือ</string>
     <string name="venue_accounts_observed" formatted="false">เวลาที่สังเกต</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">มูลค่าพอร์ตสุทธิซ้อนทับ</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">มูลค่าพอร์ตสุทธิ</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">การลดลงจากจุดสูงสุดปัจจุบัน</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">เฉพาะตลาดสปอต ไม่รวมยอดคงเหลือในตลาดอื่น</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">เฉพาะแพลตฟอร์มสปอต ไม่รวมยอดคงเหลือในแพลตฟอร์มอื่น</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">ยังไม่ได้ปรับตัดผลของการฝากและถอนจากภายนอก</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">ตัวเลขเหล่านี้แปลงจาก %1$s ณ ราคาปิดของแต่ละนาที ไม่ได้เก็บตัวอย่างโดยตรงในสกุลเงินนี้</string>
     <string name="positions_timeline_equity_honesty_pricedon">อิงราคาจาก %1$s</string>
@@ -480,7 +480,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">ตรงกัน</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">ไม่ตรงกัน</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">ไม่ครบถ้วน</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">ค่าดิบจากตลาดซื้อขาย</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">ค่าดิบจากแพลตฟอร์มซื้อขาย</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">ค่าทศนิยมลอยตัวแบบเดิม</string>
     <string name="venue_accounts_status_corrupt" formatted="false">เสียหาย</string>
     <string name="system_status_not_running" formatted="false">ไม่ได้ทำงาน</string>

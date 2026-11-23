@@ -198,11 +198,11 @@
     <string name="signals_empty" formatted="false">Mikään kaupankäyntisignaali ei vastaa nykyisiä suodattimiasi.</string>
     <string name="signals_export" formatted="false">Vie</string>
     <string name="signals_export_failed" formatted="false">Lähettäminen epäonnistui</string>
-    <string name="venue_accounts_title" formatted="false">Pörssitilit</string>
+    <string name="venue_accounts_title" formatted="false">Alustan tilit</string>
     <string name="venue_accounts_refresh" formatted="false">Päivitä</string>
-    <string name="venue_accounts_failed" formatted="false">Pörssitilin tilaa ei voitu ladata. Tili ei ole tyhjä, vaan tiedot eivät juuri nyt ole saatavilla.</string>
-    <string name="venue_accounts_authoritative" formatted="false">Reaaliaikainen pörssin tila, havaittu vahvistusikkunan sisällä.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Tämä tili näyttää viimeksi tunnettuja, simuloituja tai puuttuvia tietoja — ei pörssin luotettavia reaaliaikaisia saldoja.</string>
+    <string name="venue_accounts_failed" formatted="false">Alustan tilin tilaa ei voitu ladata. Tili ei ole tyhjä, vaan tiedot eivät juuri nyt ole saatavilla.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Reaaliaikainen kaupankäyntialustan tila, havaittu vahvistusikkunan sisällä.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Tämä tili näyttää viimeksi tunnettuja, simuloituja tai puuttuvia tietoja — ei kaupankäyntialustan luotettavia reaaliaikaisia saldoja.</string>
     <string name="venue_accounts_valuation" formatted="false">Arvostus</string>
     <string name="venue_accounts_balances" formatted="false">Saldot</string>
     <string name="venue_accounts_observed" formatted="false">Havaittu</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">Oman pääoman lisäkäyrä</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">Oma pääoma</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">Nykyinen lasku huipusta</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Vain spot-pörssi — muiden pörssien saldot eivät sisälly lukuihin.</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Vain spot-kaupankäyntialusta — muiden kaupankäyntialustojen saldot eivät sisälly lukuihin.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Ulkoisten talletusten ja nostojen vaikutusta ei ole poistettu.</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">Nämä luvut muunnetaan valuutasta %1$s kunkin minuutin lopussa, eikä niitä mitata suoraan tässä valuutassa.</string>
     <string name="positions_timeline_equity_honesty_pricedon">Hinnoiteltu markkinalla %1$s.</string>
@@ -481,7 +481,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">Täsmäävä</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">Poikkeava</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Puutteellinen</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Pörssin raaka-arvot</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Kaupankäyntialustan raaka-arvot</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Vanhat liukulukuarvot</string>
     <string name="venue_accounts_status_corrupt" formatted="false">Vioittunut</string>
     <string name="system_status_not_running" formatted="false">Ei käynnissä</string>

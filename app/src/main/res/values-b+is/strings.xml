@@ -200,7 +200,7 @@
     <string name="signals_export_failed" formatted="false">Sending mistókst</string>
     <string name="venue_accounts_title" formatted="false">Vettvangsreikningar</string>
     <string name="venue_accounts_refresh" formatted="false">Endurhlaða</string>
-    <string name="venue_accounts_failed" formatted="false">Ekki tókst að hlaða stöðu kauphallarreikningsins. Reikningurinn er ekki tómur; gögnin eru einfaldlega ekki tiltæk sem stendur.</string>
+    <string name="venue_accounts_failed" formatted="false">Ekki tókst að hlaða stöðu vettvangsreikningsins. Reikningurinn er ekki tómur; gögnin eru einfaldlega ekki tiltæk sem stendur.</string>
     <string name="venue_accounts_authoritative" formatted="false">Áreiðanleg rauntímagögn vettvangsins, skráð innan gildistímans.</string>
     <string name="venue_accounts_not_authoritative" formatted="false">Þessi reikningur sýnir síðustu þekktu, hermdu eða ófáanlegu gögnin — ekki áreiðanlegar rauntímastöður á vettvanginum.</string>
     <string name="venue_accounts_valuation" formatted="false">Verðmat</string>

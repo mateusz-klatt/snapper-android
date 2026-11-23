@@ -198,11 +198,11 @@
     <string name="signals_empty" formatted="false">Inga handelssignaler matchar dina nuvarande filter.</string>
     <string name="signals_export" formatted="false">Exportera</string>
     <string name="signals_export_failed" formatted="false">Det gick inte att skicka</string>
-    <string name="venue_accounts_title" formatted="false">Börskonton</string>
+    <string name="venue_accounts_title" formatted="false">Plattformskonton</string>
     <string name="venue_accounts_refresh" formatted="false">Uppdatera</string>
-    <string name="venue_accounts_failed" formatted="false">Börskontots status kunde inte läsas in. Kontot är inte tomt; uppgifterna är bara otillgängliga just nu.</string>
-    <string name="venue_accounts_authoritative" formatted="false">Tillförlitliga börsdata i realtid, registrerade inom giltighetsperioden.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Det här kontot visar senast kända, simulerade eller otillgängliga data — inte auktoritativa börssaldon i realtid.</string>
+    <string name="venue_accounts_failed" formatted="false">Plattformskontots status kunde inte läsas in. Kontot är inte tomt; uppgifterna är bara otillgängliga just nu.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Tillförlitliga data från handelsplattformen i realtid, registrerade inom giltighetsperioden.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Det här kontot visar senast kända, simulerade eller otillgängliga data — inte auktoritativa saldon på handelsplattformen i realtid.</string>
     <string name="venue_accounts_valuation" formatted="false">Värdering</string>
     <string name="venue_accounts_balances" formatted="false">Saldon</string>
     <string name="venue_accounts_observed" formatted="false">Observerat vid</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">Visa eget kapital över grafen</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">Eget kapital</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">Aktuell nedgång från toppen</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Endast spotbörsen — saldon på andra börser är undantagna.</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Endast spotplattformen — saldon på andra handelsplattformar är undantagna.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Externa insättningar och uttag har inte räknats bort.</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">Dessa siffror räknas om från %1$s vid varje minuts slut och mäts inte direkt i denna valuta.</string>
     <string name="positions_timeline_equity_honesty_pricedon">Prissatt på %1$s.</string>
@@ -481,7 +481,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">Överensstämmande</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">Avvikande</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Ofullständigt</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Råvärden från börsen</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Råvärden från handelsplattformen</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Äldre flyttalsvärden</string>
     <string name="venue_accounts_status_corrupt" formatted="false">Skadad</string>
     <string name="system_status_not_running" formatted="false">Körs inte</string>

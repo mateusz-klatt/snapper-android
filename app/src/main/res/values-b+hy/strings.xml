@@ -198,11 +198,11 @@
     <string name="signals_empty" formatted="false">Ոչ մի առևտրային ազդանշան չի համապատասխանում ձեր ընթացիկ զտիչներին։</string>
     <string name="signals_export" formatted="false">Արտահանել</string>
     <string name="signals_export_failed" formatted="false">Ներկայացումը չհաջողվեց</string>
-    <string name="venue_accounts_title" formatted="false">Բորսայի հաշիվներ</string>
+    <string name="venue_accounts_title" formatted="false">Հարթակի հաշիվներ</string>
     <string name="venue_accounts_refresh" formatted="false">Թարմացնել</string>
-    <string name="venue_accounts_failed" formatted="false">Չհաջողվեց բեռնել բորսայի հաշվի վիճակը։ Հաշիվը դատարկ չէ։ Տվյալներն այս պահին պարզապես անհասանելի են։</string>
-    <string name="venue_accounts_authoritative" formatted="false">Բորսայի հավաստի իրական ժամանակի տվյալներ՝ դիտարկված վստահելիության պատուհանի ընթացքում։</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Այս հաշիվը ցույց է տալիս վերջին հայտնի, սիմուլյացված կամ անհասանելի տվյալներ — դրանք բորսայի հավաստի իրական ժամանակի մնացորդներ չեն։</string>
+    <string name="venue_accounts_failed" formatted="false">Չհաջողվեց բեռնել հարթակի հաշվի վիճակը։ Հաշիվը դատարկ չէ։ Տվյալներն այս պահին պարզապես անհասանելի են։</string>
+    <string name="venue_accounts_authoritative" formatted="false">Հարթակի հավաստի իրական ժամանակի տվյալներ՝ դիտարկված վստահելիության պատուհանի ընթացքում։</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Այս հաշիվը ցույց է տալիս վերջին հայտնի, սիմուլյացված կամ անհասանելի տվյալներ — դրանք հարթակի հավաստի իրական ժամանակի մնացորդներ չեն։</string>
     <string name="venue_accounts_valuation" formatted="false">Գնահատում</string>
     <string name="venue_accounts_balances" formatted="false">Մնացորդներ</string>
     <string name="venue_accounts_observed" formatted="false">Դիտարկման ժամանակը</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">Կապիտալի կորի վերադրում</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">Կապիտալ</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">Ընթացիկ անկում առավելագույնից</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Միայն սփոթ բորսա․ այլ բորսաներում պահվող մնացորդները բացառված են։</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Միայն սփոթ հարթակ․ այլ հարթակներում պահվող մնացորդները բացառված են։</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Արտաքին մուտքերի և ելքերի ազդեցությունը չի հանվել։</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">Այս թվերը վերահաշվարկվում են %1$s-ից յուրաքանչյուր րոպեի փակման պահին, այլ ոչ թե սկզբնապես չափվում այս արժույթով։</string>
     <string name="positions_timeline_equity_honesty_pricedon">Գների աղբյուրը՝ %1$s։</string>
@@ -481,7 +481,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">Համընկնում է</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">Չի համընկնում</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Թերի</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Բորսայի չմշակված արժեքներ</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Հարթակի չմշակված արժեքներ</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Հին լողացող ստորակետով արժեքներ</string>
     <string name="venue_accounts_status_corrupt" formatted="false">Վնասված</string>
     <string name="system_status_not_running" formatted="false">Չի աշխատում</string>

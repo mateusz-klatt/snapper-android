@@ -198,11 +198,11 @@
     <string name="signals_empty" formatted="false">Hakuna ishara za biashara zinazolingana na vichujio vyako vya sasa.</string>
     <string name="signals_export" formatted="false">Hamisha</string>
     <string name="signals_export_failed" formatted="false">Kuwasilisha kumeshindwa</string>
-    <string name="venue_accounts_title" formatted="false">Akaunti za Soko la Kubadilisha</string>
+    <string name="venue_accounts_title" formatted="false">Akaunti za Jukwaa la Biashara</string>
     <string name="venue_accounts_refresh" formatted="false">Onyesha upya</string>
-    <string name="venue_accounts_failed" formatted="false">Hali ya akaunti ya soko la kubadilisha haikuweza kupakiwa. Akaunti si tupu; data hazipatikani kwa sasa.</string>
-    <string name="venue_accounts_authoritative" formatted="false">Data halisi na ya kuaminika kutoka soko la kubadilisha ndani ya muda wake wa uhalali.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Akaunti hii inaonyesha data za mwisho kujulikana, zilizoigwa au zisizopatikana — hizi si salio rasmi na la kuaminika la soko kwa wakati halisi.</string>
+    <string name="venue_accounts_failed" formatted="false">Hali ya akaunti ya jukwaa la biashara haikuweza kupakiwa. Akaunti si tupu; data hazipatikani kwa sasa.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Data halisi na ya kuaminika kutoka jukwaa la biashara ndani ya muda wake wa uhalali.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Akaunti hii inaonyesha data za mwisho kujulikana, zilizoigwa au zisizopatikana — hizi si salio rasmi na la kuaminika la jukwaa kwa wakati halisi.</string>
     <string name="venue_accounts_valuation" formatted="false">Uthamini</string>
     <string name="venue_accounts_balances" formatted="false">Salio</string>
     <string name="venue_accounts_observed" formatted="false">Wakati wa uchunguzi</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">Tabaka la mtaji</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">Mtaji</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">Kushuka kwa sasa kutoka kileleni</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Soko la papo hapo pekee — salio lililo kwenye masoko mengine halijajumuishwa.</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Jukwaa la biashara ya papo hapo pekee — salio lililo kwenye majukwaa mengine halijajumuishwa.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Athari za amana na uondoaji wa nje hazijaondolewa.</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">Takwimu hizi hubadilishwa kutoka %1$s kila dakika inapofungwa, badala ya kupimwa moja kwa moja katika sarafu hii.</string>
     <string name="positions_timeline_equity_honesty_pricedon">Chanzo cha bei: %1$s.</string>
@@ -481,7 +481,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">Zinalingana</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">Hazilingani</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Haijakamilika</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Thamani ghafi kutoka sokoni</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Thamani ghafi kutoka kwenye jukwaa</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Thamani za zamani za nukta inayoelea</string>
     <string name="venue_accounts_status_corrupt" formatted="false">Imeharibika</string>
     <string name="system_status_not_running" formatted="false">Haiendeshwi</string>

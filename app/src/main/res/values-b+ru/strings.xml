@@ -198,11 +198,11 @@
     <string name="signals_empty" formatted="false">Ни один торговый сигнал не соответствует текущим фильтрам.</string>
     <string name="signals_export" formatted="false">Экспорт</string>
     <string name="signals_export_failed" formatted="false">Не удалось отправить</string>
-    <string name="venue_accounts_title" formatted="false">Биржевые счета</string>
+    <string name="venue_accounts_title" formatted="false">Счета на платформе</string>
     <string name="venue_accounts_refresh" formatted="false">Обновить</string>
-    <string name="venue_accounts_failed" formatted="false">Не удалось загрузить состояние биржевого счёта. Счёт не пуст; данные просто временно недоступны.</string>
-    <string name="venue_accounts_authoritative" formatted="false">Фактические данные биржи, полученные в рамках окна достоверности.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Этот счёт показывает последние известные, смоделированные или недоступные данные — это не достоверные биржевые балансы в реальном времени.</string>
+    <string name="venue_accounts_failed" formatted="false">Не удалось загрузить состояние счёта на платформе. Счёт не пуст; данные просто временно недоступны.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Фактические данные платформы, полученные в рамках окна достоверности.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Этот счёт показывает последние известные, смоделированные или недоступные данные — это не достоверные балансы на платформе в реальном времени.</string>
     <string name="venue_accounts_valuation" formatted="false">Оценка стоимости</string>
     <string name="venue_accounts_balances" formatted="false">Балансы</string>
     <string name="venue_accounts_observed" formatted="false">Время наблюдения</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">Наложение капитала</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">Капитал</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">Текущая просадка</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Только спотовая биржа — остатки на других биржах исключены.</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Только спотовая платформа — остатки на других платформах исключены.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Внешние пополнения и выводы не исключены из расчёта.</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">Эти показатели пересчитаны из %1$s на закрытии каждой минуты, а не получены непосредственно в этой валюте.</string>
     <string name="positions_timeline_equity_honesty_pricedon">Оценка по ценам %1$s.</string>
@@ -483,7 +483,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">Совпадает</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">Не совпадает</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Неполно</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Необработанные значения биржи</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Необработанные значения платформы</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Устаревшие значения с плавающей точкой</string>
     <string name="venue_accounts_status_corrupt" formatted="false">Повреждено</string>
     <string name="system_status_not_running" formatted="false">Не выполняется</string>

@@ -198,11 +198,11 @@
     <string name="signals_empty" formatted="false">Κανένα σήμα συναλλαγών δεν ταιριάζει με τα τρέχοντα φίλτρα σας.</string>
     <string name="signals_export" formatted="false">Εξαγωγή</string>
     <string name="signals_export_failed" formatted="false">Η υποβολή απέτυχε</string>
-    <string name="venue_accounts_title" formatted="false">Λογαριασμοί Ανταλλακτηρίου</string>
+    <string name="venue_accounts_title" formatted="false">Λογαριασμοί Πλατφόρμας</string>
     <string name="venue_accounts_refresh" formatted="false">Ανανέωση</string>
-    <string name="venue_accounts_failed" formatted="false">Δεν ήταν δυνατή η φόρτωση της κατάστασης του λογαριασμού στο ανταλλακτήριο. Ο λογαριασμός δεν είναι κενός· τα δεδομένα απλώς δεν είναι διαθέσιμα αυτή τη στιγμή.</string>
-    <string name="venue_accounts_authoritative" formatted="false">Ζωντανή πραγματικότητα ανταλλακτηρίου, εντός του παραθύρου εξουσιοδότησης.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Αυτός ο λογαριασμός εμφανίζει τα τελευταία γνωστά, προσομοιωμένα ή μη διαθέσιμα δεδομένα — δεν είναι έγκυρα υπόλοιπα του ανταλλακτηρίου σε πραγματικό χρόνο.</string>
+    <string name="venue_accounts_failed" formatted="false">Δεν ήταν δυνατή η φόρτωση της κατάστασης του λογαριασμού στην πλατφόρμα. Ο λογαριασμός δεν είναι κενός· τα δεδομένα απλώς δεν είναι διαθέσιμα αυτή τη στιγμή.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Ζωντανή πραγματικότητα πλατφόρμας, εντός του παραθύρου εξουσιοδότησης.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Αυτός ο λογαριασμός εμφανίζει τα τελευταία γνωστά, προσομοιωμένα ή μη διαθέσιμα δεδομένα — δεν είναι έγκυρα υπόλοιπα της πλατφόρμας σε πραγματικό χρόνο.</string>
     <string name="venue_accounts_valuation" formatted="false">Αποτίμηση</string>
     <string name="venue_accounts_balances" formatted="false">Υπόλοιπα</string>
     <string name="venue_accounts_observed" formatted="false">Χρόνος παρατήρησης</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">Επικάλυψη καθαρής θέσης</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">Καθαρή θέση</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">Τρέχουσα υποχώρηση από το μέγιστο</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Μόνο ανταλλακτήριο spot — τα υπόλοιπα σε άλλα ανταλλακτήρια εξαιρούνται.</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Μόνο πλατφόρμα spot — τα υπόλοιπα σε άλλες πλατφόρμες εξαιρούνται.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Οι εξωτερικές καταθέσεις και αναλήψεις δεν έχουν αφαιρεθεί από τον υπολογισμό.</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">Αυτά τα στοιχεία μετατρέπονται από %1$s στο κλείσιμο κάθε λεπτού και δεν δειγματοληπτούνται απευθείας σε αυτό το νόμισμα.</string>
     <string name="positions_timeline_equity_honesty_pricedon">Αποτίμηση στο %1$s.</string>
@@ -481,7 +481,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">Συμφωνία</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">Ασυμφωνία</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Ελλιπές</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Ακατέργαστες τιμές ανταλλακτηρίου</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Ακατέργαστες τιμές πλατφόρμας</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Παλαιές τιμές κινητής υποδιαστολής</string>
     <string name="venue_accounts_status_corrupt" formatted="false">Αλλοιωμένο</string>
     <string name="system_status_not_running" formatted="false">Δεν εκτελείται</string>

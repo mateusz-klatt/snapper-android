@@ -198,11 +198,11 @@
     <string name="signals_empty" formatted="false">没有交易信号符合当前的筛选条件。</string>
     <string name="signals_export" formatted="false">导出</string>
     <string name="signals_export_failed" formatted="false">提交失败</string>
-    <string name="venue_accounts_title" formatted="false">交易所账户</string>
+    <string name="venue_accounts_title" formatted="false">交易平台账户</string>
     <string name="venue_accounts_refresh" formatted="false">刷新</string>
-    <string name="venue_accounts_failed" formatted="false">无法加载交易所账户状态。账户并非为空，只是当前暂时无法获取数据。</string>
-    <string name="venue_accounts_authoritative" formatted="false">在有效期内获取的交易所实时权威数据。</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">本账户显示最后已知、模拟或不可用的数据——不代表交易所权威的实时余额。</string>
+    <string name="venue_accounts_failed" formatted="false">无法加载交易平台账户状态。账户并非为空，只是当前暂时无法获取数据。</string>
+    <string name="venue_accounts_authoritative" formatted="false">在有效期内获取的交易平台实时权威数据。</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">本账户显示最后已知、模拟或不可用的数据——不代表交易平台权威的实时余额。</string>
     <string name="venue_accounts_valuation" formatted="false">估值</string>
     <string name="venue_accounts_balances" formatted="false">余额</string>
     <string name="venue_accounts_observed" formatted="false">观测时间</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">权益叠加图</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">权益</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">当前回撤</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">仅限现货交易所，不含其他交易所持有的余额。</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">仅限现货交易平台，不含其他交易平台持有的余额。</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">未扣除外部存款和提款的影响。</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">这些数值在每分钟收盘时由 %1$s 换算而来，并非直接以此货币采样。</string>
     <string name="positions_timeline_equity_honesty_pricedon">按 %1$s 定价。</string>
@@ -480,7 +480,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">匹配</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">不匹配</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">不完整</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">交易所原始数值</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">交易平台原始数值</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">旧式浮点数值</string>
     <string name="venue_accounts_status_corrupt" formatted="false">已损坏</string>
     <string name="system_status_not_running" formatted="false">未运行</string>

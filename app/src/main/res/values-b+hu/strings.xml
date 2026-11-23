@@ -198,11 +198,11 @@
     <string name="signals_empty" formatted="false">Egyetlen kereskedési jelzés sem felel meg a jelenlegi szűrőknek.</string>
     <string name="signals_export" formatted="false">Exportálás</string>
     <string name="signals_export_failed" formatted="false">A beküldés sikertelen</string>
-    <string name="venue_accounts_title" formatted="false">Tőzsdei fiókok</string>
+    <string name="venue_accounts_title" formatted="false">Platformfiókok</string>
     <string name="venue_accounts_refresh" formatted="false">Frissítés</string>
-    <string name="venue_accounts_failed" formatted="false">A tőzsdei számla állapota nem tölthető be. A számla nem üres; az adatok jelenleg egyszerűen nem érhetők el.</string>
-    <string name="venue_accounts_authoritative" formatted="false">Valós idejű tőzsdei adat, a hitelességi ablakon belül.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Ez a számla a legutóbb ismert, szimulált vagy nem elérhető adatokat mutatja — ezek nem hiteles, valós idejű tőzsdei egyenlegek.</string>
+    <string name="venue_accounts_failed" formatted="false">A kereskedési platformon lévő számla állapota nem tölthető be. A számla nem üres; az adatok jelenleg egyszerűen nem érhetők el.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Valós idejű adat a kereskedési platformtól, a hitelességi ablakon belül.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Ez a számla a legutóbb ismert, szimulált vagy nem elérhető adatokat mutatja — ezek nem hiteles, valós idejű kereskedési platformon lévő egyenlegek.</string>
     <string name="venue_accounts_valuation" formatted="false">Értékelés</string>
     <string name="venue_accounts_balances" formatted="false">Egyenlegek</string>
     <string name="venue_accounts_observed" formatted="false">Megfigyelés időpontja</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">Saját tőke rávetítése</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">Saját tőke</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">Aktuális visszaesés a csúcstól</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Csak az azonnali tőzsde — a más tőzsdéken tartott egyenlegek nem szerepelnek.</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Csak az azonnali kereskedési platform — a más platformokon tartott egyenlegek nem szerepelnek.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">A külső befizetések és kifizetések hatása nincs kiszűrve.</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">Ezek az értékek %1$s pénznemből vannak átszámítva minden perc zárásakor; a mintavétel nem közvetlenül ebben a pénznemben történt.</string>
     <string name="positions_timeline_equity_honesty_pricedon">Árazás helye: %1$s.</string>
@@ -481,7 +481,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">Egyező</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">Eltérő</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Hiányos</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Nyers tőzsdei értékek</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">A kereskedési platform nyers értékei</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Régi lebegőpontos értékek</string>
     <string name="venue_accounts_status_corrupt" formatted="false">Sérült</string>
     <string name="system_status_not_running" formatted="false">Nem fut</string>

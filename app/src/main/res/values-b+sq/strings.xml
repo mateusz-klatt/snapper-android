@@ -198,11 +198,11 @@
     <string name="signals_empty" formatted="false">Asnjë sinjal tregtimi nuk përputhet me filtrat tuaj aktualë.</string>
     <string name="signals_export" formatted="false">Eksporto</string>
     <string name="signals_export_failed" formatted="false">Dorëzimi dështoi</string>
-    <string name="venue_accounts_title" formatted="false">Llogaritë e Bursës</string>
+    <string name="venue_accounts_title" formatted="false">Llogaritë e Platformës</string>
     <string name="venue_accounts_refresh" formatted="false">Rifresko</string>
-    <string name="venue_accounts_failed" formatted="false">Gjendja e llogarisë së bursës nuk mund të ngarkohej. Llogaria nuk është bosh; të dhënat thjesht nuk disponohen për momentin.</string>
-    <string name="venue_accounts_authoritative" formatted="false">Të dhëna të besueshme të bursës në kohë reale, të regjistruara brenda periudhës së vlefshmërisë.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Kjo llogari tregon të dhënat e fundit të njohura, të simuluara ose të padisponueshme — ato nuk janë gjendje autoritative të bursës në kohë reale.</string>
+    <string name="venue_accounts_failed" formatted="false">Gjendja e llogarisë së platformës nuk mund të ngarkohej. Llogaria nuk është bosh; të dhënat thjesht nuk disponohen për momentin.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Të dhëna të besueshme të platformës në kohë reale, të regjistruara brenda periudhës së vlefshmërisë.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Kjo llogari tregon të dhënat e fundit të njohura, të simuluara ose të padisponueshme — ato nuk janë gjendje autoritative të platformës në kohë reale.</string>
     <string name="venue_accounts_valuation" formatted="false">Vlerësimi</string>
     <string name="venue_accounts_balances" formatted="false">Gjendjet</string>
     <string name="venue_accounts_observed" formatted="false">Koha e vëzhgimit</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">Mbivendosja e kapitalit</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">Kapital</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">Rënia aktuale nga kulmi</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Vetëm bursa spot — gjendjet në bursat e tjera përjashtohen.</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Vetëm platforma spot — gjendjet në platformat e tjera përjashtohen.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Depozitat dhe tërheqjet e jashtme nuk janë përjashtuar nga llogaritja.</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">Këto shifra rillogariten nga %1$s në mbylljen e çdo minute, nuk maten drejtpërdrejt në këtë monedhë.</string>
     <string name="positions_timeline_equity_honesty_pricedon">Çmimi sipas %1$s.</string>
@@ -481,7 +481,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">Përputhet</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">Nuk përputhet</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">I paplotë</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Vlera të papërpunuara nga bursa</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Vlera të papërpunuara nga platforma</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Vlera të formatit të vjetër me presje lëvizëse</string>
     <string name="venue_accounts_status_corrupt" formatted="false">I dëmtuar</string>
     <string name="system_status_not_running" formatted="false">Nuk është në ekzekutim</string>

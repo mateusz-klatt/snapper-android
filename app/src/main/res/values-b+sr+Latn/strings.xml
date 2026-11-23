@@ -198,11 +198,11 @@
     <string name="signals_empty" formatted="false">Nijedan trgovinski signal ne odgovara vašim trenutnim filterima.</string>
     <string name="signals_export" formatted="false">Izvezi</string>
     <string name="signals_export_failed" formatted="false">Slanje nije uspelo</string>
-    <string name="venue_accounts_title" formatted="false">Računi na berzi</string>
+    <string name="venue_accounts_title" formatted="false">Računi na platformi</string>
     <string name="venue_accounts_refresh" formatted="false">Osveži</string>
-    <string name="venue_accounts_failed" formatted="false">Stanje računa na berzi nije moguće učitati. Račun nije prazan; podaci su trenutno nedostupni.</string>
-    <string name="venue_accounts_authoritative" formatted="false">Pouzdani podaci berze u realnom vremenu, zabeleženi tokom perioda važenja.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Ovaj račun prikazuje poslednje poznate, simulirane ili nedostupne podatke — to nisu merodavna salda berze u realnom vremenu.</string>
+    <string name="venue_accounts_failed" formatted="false">Stanje računa na platformi nije moguće učitati. Račun nije prazan; podaci su trenutno nedostupni.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Pouzdani podaci platforme u realnom vremenu, zabeleženi tokom perioda važenja.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Ovaj račun prikazuje poslednje poznate, simulirane ili nedostupne podatke — to nisu merodavna salda platforme u realnom vremenu.</string>
     <string name="venue_accounts_valuation" formatted="false">Vrednovanje</string>
     <string name="venue_accounts_balances" formatted="false">Salda</string>
     <string name="venue_accounts_observed" formatted="false">Vreme opažanja</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">Preklop kapitala</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">Kapital</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">Trenutni pad od vrhunca</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Samo spot berza — salda na drugim berzama su isključena.</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Samo spot platforma — salda na drugim platformama su isključena.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Spoljne uplate i isplate nisu izuzete.</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">Ove brojke prenalogate su iz %1$s po završetku svake minute, a nisu izvorno uzorkovane u ovoj valuti.</string>
     <string name="positions_timeline_equity_honesty_pricedon">Vrednovano na %1$s.</string>
@@ -482,7 +482,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">Podudara se</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">Ne podudara se</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Nepotpuno</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Izvorne vrednosti berze</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Izvorne vrednosti platforme</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Nasleđene vrednosti s pokretnim zarezom</string>
     <string name="venue_accounts_status_corrupt" formatted="false">Oštećeno</string>
     <string name="system_status_not_running" formatted="false">Ne radi</string>

@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">ပိုင်ဆိုင်မှုတန်ဖိုး ထပ်ဆင့်ပြသမှု</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">ပိုင်ဆိုင်မှုတန်ဖိုး</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">လက်ရှိ အမြင့်ဆုံးမှ ကျဆင်းမှု</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">လက်ငင်းဈေးကွက်သာ ပါဝင်သည်။ အခြားဈေးကွက်များရှိ လက်ကျန်ငွေများ မပါဝင်ပါ။</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">လက်ငင်းပလက်ဖောင်းသာ ပါဝင်သည်။ အခြားပလက်ဖောင်းများရှိ လက်ကျန်ငွေများ မပါဝင်ပါ။</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">ပြင်ပငွေသွင်းခြင်းနှင့် ငွေထုတ်ခြင်း၏ သက်ရောက်မှုကို မဖယ်ရှားရသေးပါ။</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">ဤကိန်းဂဏန်းများကို မိနစ်တစ်ခုစီ၏ ပိတ်ဈေးဖြင့် %1$s မှ ပြောင်းတွက်ထားသည်။ ဤငွေကြေးဖြင့် တိုက်ရိုက်နမူနာယူထားခြင်း မဟုတ်ပါ။</string>
     <string name="positions_timeline_equity_honesty_pricedon">%1$s ကို အခြေခံ၍ ဈေးသတ်မှတ်ထားသည်။</string>
@@ -480,7 +480,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">ကိုက်ညီသည်</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">မကိုက်ညီပါ</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">မပြည့်စုံပါ</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">လဲလှယ်ဈေးကွက်မှ မပြုပြင်ရသေးသော တန်ဖိုးများ</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">ပလက်ဖောင်းမှ မပြုပြင်ရသေးသော တန်ဖိုးများ</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">ယခင် ရွေ့လျားဒဿမကိန်း တန်ဖိုးများ</string>
     <string name="venue_accounts_status_corrupt" formatted="false">ပျက်စီးနေသည်</string>
     <string name="system_status_not_running" formatted="false">လုပ်ဆောင်နေခြင်း မရှိ</string>

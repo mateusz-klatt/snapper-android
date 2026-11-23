@@ -198,11 +198,11 @@
     <string name="signals_empty" formatted="false">Nė vienas prekybos signalas neatitinka jūsų dabartinių filtrų.</string>
     <string name="signals_export" formatted="false">Eksportuoti</string>
     <string name="signals_export_failed" formatted="false">Pateikti nepavyko</string>
-    <string name="venue_accounts_title" formatted="false">Biržos sąskaitos</string>
+    <string name="venue_accounts_title" formatted="false">Platformos sąskaitos</string>
     <string name="venue_accounts_refresh" formatted="false">Atnaujinti</string>
-    <string name="venue_accounts_failed" formatted="false">Nepavyko įkelti biržos sąskaitos būsenos. Sąskaita nėra tuščia; duomenys šiuo metu tiesiog nepasiekiami.</string>
-    <string name="venue_accounts_authoritative" formatted="false">Patikimi tiesioginiai biržos duomenys, stebėti galiojimo laikotarpiu.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Šioje sąskaitoje rodomi paskutiniai žinomi, imituoti arba nepasiekiami duomenys — tai nėra patikimi biržos likučiai realiuoju laiku.</string>
+    <string name="venue_accounts_failed" formatted="false">Nepavyko įkelti platformos sąskaitos būsenos. Sąskaita nėra tuščia; duomenys šiuo metu tiesiog nepasiekiami.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Patikimi tiesioginiai platformos duomenys, stebėti galiojimo laikotarpiu.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Šioje sąskaitoje rodomi paskutiniai žinomi, imituoti arba nepasiekiami duomenys — tai nėra patikimi platformos likučiai realiuoju laiku.</string>
     <string name="venue_accounts_valuation" formatted="false">Vertinimas</string>
     <string name="venue_accounts_balances" formatted="false">Likučiai</string>
     <string name="venue_accounts_observed" formatted="false">Stebėjimo laikas</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">Kapitalo kreivės sluoksnis</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">Kapitalas</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">Dabartinis nuosmukis nuo piko</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Tik neatidėliotinų sandorių birža — kitose biržose laikomi likučiai neįtraukti.</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Tik neatidėliotinų sandorių platforma — kitose platformose laikomi likučiai neįtraukti.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Išorinių įnašų ir išėmimų poveikis nepašalintas.</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">Šie skaičiai perskaičiuojami iš %1$s kiekvienos minutės pabaigoje, o ne tiesiogiai registruojami šia valiuta.</string>
     <string name="positions_timeline_equity_honesty_pricedon">Kainų šaltinis: %1$s.</string>
@@ -483,7 +483,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">Sutampa</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">Nesutampa</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Neužbaigta</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Neapdorotos biržos reikšmės</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Neapdorotos platformos reikšmės</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Ankstesnio formato slankiojo kablelio reikšmės</string>
     <string name="venue_accounts_status_corrupt" formatted="false">Sugadinta</string>
     <string name="system_status_not_running" formatted="false">Neveikia</string>

@@ -198,11 +198,11 @@
     <string name="signals_empty" formatted="false">هیچ سیگنال معاملاتی با فیلترهای فعلی شما مطابقت ندارد.</string>
     <string name="signals_export" formatted="false">صدور</string>
     <string name="signals_export_failed" formatted="false">ارسال ناموفق بود</string>
-    <string name="venue_accounts_title" formatted="false">حساب‌های صرافی</string>
+    <string name="venue_accounts_title" formatted="false">حساب‌های پلتفرم معاملاتی</string>
     <string name="venue_accounts_refresh" formatted="false">تازه‌سازی</string>
-    <string name="venue_accounts_failed" formatted="false">وضعیت حساب صرافی بارگیری نشد. حساب خالی نیست؛ داده‌ها فقط در حال حاضر در دسترس نیستند.</string>
-    <string name="venue_accounts_authoritative" formatted="false">داده‌های زنده صرافی، ثبت شده در محدوده مجاز.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">این حساب آخرین داده‌های شناخته‌شده، شبیه‌سازی‌شده یا ناموجود را نشان می‌دهد — این داده‌ها موجودی زنده و معتبر صرافی نیستند.</string>
+    <string name="venue_accounts_failed" formatted="false">وضعیت حساب پلتفرم معاملاتی بارگیری نشد. حساب خالی نیست؛ داده‌ها فقط در حال حاضر در دسترس نیستند.</string>
+    <string name="venue_accounts_authoritative" formatted="false">داده‌های زنده پلتفرم معاملاتی، ثبت شده در محدوده مجاز.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">این حساب آخرین داده‌های شناخته‌شده، شبیه‌سازی‌شده یا ناموجود را نشان می‌دهد — این داده‌ها موجودی زنده و معتبر پلتفرم معاملاتی نیستند.</string>
     <string name="venue_accounts_valuation" formatted="false">ارزش‌گذاری</string>
     <string name="venue_accounts_balances" formatted="false">موجودی‌ها</string>
     <string name="venue_accounts_observed" formatted="false">زمان مشاهده</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">لایهٔ ارزش خالص حساب</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">ارزش خالص حساب</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">افت فعلی از اوج</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">فقط صرافی نقدی — موجودی صرافی‌های دیگر لحاظ نمی‌شود.</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">فقط پلتفرم معاملاتی نقدی — موجودی پلتفرم‌های معاملاتی دیگر لحاظ نمی‌شود.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">واریزها و برداشت‌های خارجی از ارقام حذف نشده‌اند.</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">این ارقام در پایان هر دقیقه از %1$s تبدیل می‌شوند و در اصل با این ارز نمونه‌برداری نشده‌اند.</string>
     <string name="positions_timeline_equity_honesty_pricedon">قیمت‌گذاری در %1$s.</string>
@@ -481,7 +481,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">مطابق</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">نامطابق</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">ناقص</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">مقادیر خام صرافی</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">مقادیر خام پلتفرم معاملاتی</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">مقادیر ممیز شناور قدیمی</string>
     <string name="venue_accounts_status_corrupt" formatted="false">خراب</string>
     <string name="system_status_not_running" formatted="false">در حال اجرا نیست</string>
