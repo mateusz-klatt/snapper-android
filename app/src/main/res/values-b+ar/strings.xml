@@ -67,7 +67,7 @@
     <string name="order_buy" formatted="false">شراء</string>
     <string name="order_sell" formatted="false">بيع</string>
     <string name="order_market" formatted="false">سوق</string>
-    <string name="order_limit" formatted="false">حد</string>
+    <string name="order_limit" formatted="false">محدد</string>
     <string name="order_stop" formatted="false">إيقاف</string>
     <string name="order_stop_limit" formatted="false">إيقاف محدد</string>
     <string name="order_live" formatted="false">فعلي</string>
@@ -257,7 +257,7 @@
     <string name="positions_timeline_incompleteness_reasons_unrealized_non_finite" formatted="false">قيمة P&amp;L غير المحقق ليست عددًا محدودًا</string>
     <string name="positions_timeline_incompleteness_reasons_net_non_finite" formatted="false">قيمة صافي P&amp;L ليست عددًا محدودًا</string>
     <string name="positions_timeline_incompleteness_reasons_attribution_value_non_finite" formatted="false">قيمة الإسناد ليست عددًا محدودًا</string>
-    <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">فشلت تسوية الإسناد</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">فشلت مطابقة الإسناد</string>
     <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">فشلت مطابقة إجماليات P&amp;L حسب الأداة مع إجمالي P&amp;L الكلي</string>
     <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">تنفيذ صفقة وصل متأخرًا ويحمل طابعًا زمنيًا يسبق التفعيل</string>
     <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">لا يمكن تمثيل مجموع الإسناد</string>
@@ -266,8 +266,8 @@
     <string name="positions_timeline_executionhistory_summary" formatted="false">أبطل مشغّل عمليات تنفيذ مسجّلة ضمن هذا النطاق. تُستبعد كل التصحيحات المدرجة هنا من الأرقام المعروضة في هذه الصفحة.</string>
     <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">عملية التنفيذ المُبطلة</string>
     <string name="positions_timeline_executionhistory_correctionid" formatted="false">سجل التصحيح</string>
-    <string name="positions_timeline_equity_title" formatted="false">تراكب صافي قيمة الحساب</string>
-    <string name="positions_timeline_equity_serieslabel" formatted="false">صافي قيمة الحساب</string>
+    <string name="positions_timeline_equity_title" formatted="false">تراكب حقوق الملكية</string>
+    <string name="positions_timeline_equity_serieslabel" formatted="false">حقوق الملكية</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">التراجع الحالي من القمة</string>
     <string name="positions_timeline_equity_honesty_spotonly" formatted="false">منصة التداول الفوري فقط — تُستبعد الأرصدة المحتفظ بها على منصات أخرى.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">لم تُعدّل القيم لاستبعاد الإيداعات والسحوبات الخارجية.</string>
@@ -277,8 +277,8 @@
     <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">لا يُعرض التراجع على أساس القيم المحوّلة، لأن القمة المتحركة تُتابع بعملة الرصد.</string>
     <string name="positions_timeline_equity_cashposition_position" formatted="false">قيمة المركز</string>
     <string name="positions_timeline_equity_cashposition_cash" formatted="false">النقد</string>
-    <string name="pnl_provenance">الحساب: %1$s · مصدر سعر التقييم: %2$s · اعتبارًا من: %3$s</string>
-    <string name="pnl_equity_coverage">رصد صافي قيمة الحساب: %1$s · الدقائق المكتملة: %2$s</string>
+    <string name="pnl_provenance">الحساب: %1$s · مصدر السعر المرجعي: %2$s · اعتبارًا من: %3$s</string>
+    <string name="pnl_equity_coverage">رصد حقوق الملكية: %1$s · الدقائق المكتملة: %2$s</string>
     <string name="pnl_execution_history">سجل التنفيذ: %1$s</string>
     <string name="process_title" formatted="false">العمليات</string>
     <string name="process_running" formatted="false">قيد التشغيل</string>
@@ -436,8 +436,8 @@
     <string name="venue_accounts_status_unavailable" formatted="false">غير متوفر</string>
     <string name="venue_accounts_status_not_applicable" formatted="false">غير منطبق</string>
     <string name="venue_accounts_status_unknown" formatted="false">مجهول</string>
-    <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">تمت التسوية</string>
-    <string name="venue_accounts_reconciliation_status_error" formatted="false">خطأ في التسوية</string>
+    <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">تمت المطابقة</string>
+    <string name="venue_accounts_reconciliation_status_error" formatted="false">خطأ في المطابقة</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">غير مدعوم</string>
     <string name="system_status_healthy" formatted="false">سليم</string>
     <string name="system_status_error" formatted="false">خطأ</string>
@@ -460,8 +460,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">خطة · آلي</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">النظام · آلي</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">غير مُسنَد · المصدر غير معروف</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">لا يوجد تعبئة تجارية للتبادل تكون بمثابة دليل على هذا الحجز.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">السجل المشتق من التراث الذي لا يوجد فيه أي تعبئة تجارية في البورصة بمثابة دليل.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">لا يوجد تنفيذ أمر في البورصة يثبت هذا القيد.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">سجل مشتق من بيانات قديمة دون تنفيذ أمر في البورصة يثبته.</string>
     <string name="common_yes" formatted="false">نعم</string>
     <string name="common_no" formatted="false">لا</string>
     <string name="settings_role_ai_reviewer" formatted="false">مراجع الذكاء الاصطناعي</string>
@@ -473,7 +473,7 @@
     <string name="system_status_degraded" formatted="false">أداء متراجع</string>
     <string name="market_instrument_kind_spot" formatted="false">فوري</string>
     <string name="market_instrument_kind_perpetual" formatted="false">عقد دائم</string>
-    <string name="market_instrument_kind_future" formatted="false">عقد مستقبلي</string>
+    <string name="market_instrument_kind_future" formatted="false">عقد آجل</string>
     <string name="market_instrument_kind_etf" formatted="false">ETF</string>
     <string name="market_instrument_kind_option" formatted="false">خيار</string>
     <string name="venue_accounts_valuation_native_only" formatted="false">بالعملات الأصلية فقط</string>

@@ -128,7 +128,7 @@
     <string name="market_catalog_error" formatted="false">\@string/error_unknown</string>
     <string name="system_health" formatted="false">Stanje sistema</string>
     <string name="system_strategies" formatted="false">Strategije</string>
-    <string name="system_backtests" formatted="false">Bektestovi</string>
+    <string name="system_backtests" formatted="false">Backtestovi</string>
     <string name="system_users" formatted="false">Korisnici</string>
     <string name="system_delegates" formatted="false">AI delegati</string>
     <string name="system_version" formatted="false">Verzija</string>
@@ -178,7 +178,7 @@
     <string name="notification_defaults_fill" formatted="false">Nalog izvršen</string>
     <string name="notification_defaults_rejected" formatted="false">Nalog odbijen</string>
     <string name="notification_defaults_stop" formatted="false">Stop-loss aktiviran</string>
-    <string name="notification_defaults_margin" formatted="false">Upozorenje o marginu</string>
+    <string name="notification_defaults_margin" formatted="false">Upozorenje o margini</string>
     <string name="notification_defaults_system" formatted="false">Greška sistema</string>
     <string name="notification_defaults_saved" formatted="false">OK</string>
     <string name="signals_title" formatted="false">Signali</string>
@@ -202,9 +202,9 @@
     <string name="venue_accounts_refresh" formatted="false">Osveži</string>
     <string name="venue_accounts_failed" formatted="false">Stanje računa na berzi nije moguće učitati. Račun nije prazan; podaci su trenutno nedostupni.</string>
     <string name="venue_accounts_authoritative" formatted="false">Pouzdani podaci berze u realnom vremenu, zabeleženi tokom perioda važenja.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Ovaj račun prikazuje poslednje poznate, simulirane ili nedostupne podatke — to nisu merodavna stanja berze u realnom vremenu.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Ovaj račun prikazuje poslednje poznate, simulirane ili nedostupne podatke — to nisu merodavna salda berze u realnom vremenu.</string>
     <string name="venue_accounts_valuation" formatted="false">Vrednovanje</string>
-    <string name="venue_accounts_balances" formatted="false">Bilansi</string>
+    <string name="venue_accounts_balances" formatted="false">Salda</string>
     <string name="venue_accounts_observed" formatted="false">Vreme opažanja</string>
     <string name="venue_accounts_source" formatted="false">Izvorno opažanje</string>
     <string name="venue_accounts_total" formatted="false">Ukupno</string>
@@ -470,7 +470,7 @@
     <string name="system_status_degraded" formatted="false">Ograničen rad</string>
     <string name="market_instrument_kind_spot" formatted="false">Spot</string>
     <string name="market_instrument_kind_perpetual" formatted="false">Trajni ugovor</string>
-    <string name="market_instrument_kind_future" formatted="false">Terminski ugovor</string>
+    <string name="market_instrument_kind_future" formatted="false">Fjučers ugovor</string>
     <string name="market_instrument_kind_etf" formatted="false">ETF</string>
     <string name="market_instrument_kind_option" formatted="false">Opcija</string>
     <string name="venue_accounts_valuation_native_only" formatted="false">Samo izvorne valute</string>

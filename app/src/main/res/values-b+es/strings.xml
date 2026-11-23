@@ -38,7 +38,7 @@
     <string name="settings" formatted="false">Ajustes</string>
     <string name="save" formatted="false">Guardar</string>
     <string name="refresh" formatted="false">Actualizar</string>
-    <string name="exchange" formatted="false">Mercado</string>
+    <string name="exchange" formatted="false">Plataforma de intercambio</string>
     <string name="load_market" formatted="false">Cargar velas</string>
     <string name="empty" formatted="false">No hay registros disponibles.</string>
     <string name="snapshot_note" formatted="false">Datos de una instantánea. Actualiza para obtener los últimos registros disponibles.</string>
@@ -90,8 +90,8 @@
     <string name="order_unknown_outcome" formatted="false">Se desconoce el resultado de la solicitud. Comprueba el estado antes de realizar más acciones.</string>
     <string name="order_check_status" formatted="false">Comprobar estado</string>
     <string name="order_retry_intent" formatted="false">Reintentar la misma orden</string>
-    <string name="order_catalog_error" formatted="false">No se pudieron cargar las plataformas o los instrumentos. Inténtalo de nuevo.</string>
-    <string name="order_no_instruments" formatted="false">No hay instrumentos disponibles para esta plataforma.</string>
+    <string name="order_catalog_error" formatted="false">No se pudieron cargar las plataformas de intercambio o los instrumentos. Inténtalo de nuevo.</string>
+    <string name="order_no_instruments" formatted="false">No hay instrumentos disponibles para esta plataforma de intercambio.</string>
     <string name="order_invalid_form" formatted="false">Introduce cantidades positivas y los precios necesarios. El apalancamiento opcional debe ser un número entero positivo.</string>
     <string name="order_refresh_failed" formatted="false">Se aceptó la solicitud, pero no se pudieron cargar los últimos registros. Actualiza para comprobar el estado.</string>
     <string name="order_forbidden" formatted="false">Ya no tienes permiso para realizar esta acción.</string>
@@ -252,7 +252,7 @@
     <string name="positions_timeline_incompleteness_reasons_execution_size_invalid" formatted="false">Tamaño de ejecución no válido</string>
     <string name="positions_timeline_incompleteness_reasons_execution_price_invalid" formatted="false">Precio de ejecución no válido</string>
     <string name="positions_timeline_incompleteness_reasons_fx_conversion_unproven" formatted="false">Conversión FX no verificable</string>
-    <string name="positions_timeline_incompleteness_reasons_mark_unavailable" formatted="false">Precio de referencia (mark) no disponible</string>
+    <string name="positions_timeline_incompleteness_reasons_mark_unavailable" formatted="false">Precio de marca no disponible</string>
     <string name="positions_timeline_incompleteness_reasons_cumulative_non_finite" formatted="false">El valor acumulado no es finito</string>
     <string name="positions_timeline_incompleteness_reasons_unrealized_non_finite" formatted="false">El P&amp;L no realizado no es finito</string>
     <string name="positions_timeline_incompleteness_reasons_net_non_finite" formatted="false">El P&amp;L neto no es finito</string>
@@ -277,7 +277,7 @@
     <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">No se muestra la caída tras la conversión, porque el máximo acumulado se sigue en la moneda de muestreo.</string>
     <string name="positions_timeline_equity_cashposition_position" formatted="false">Valor de la posición</string>
     <string name="positions_timeline_equity_cashposition_cash" formatted="false">Efectivo</string>
-    <string name="pnl_provenance">Cálculo: %1$s · Fuente del precio de referencia: %2$s · A fecha de: %3$s</string>
+    <string name="pnl_provenance">Cálculo: %1$s · Fuente del precio de marca: %2$s · A fecha de: %3$s</string>
     <string name="pnl_equity_coverage">Patrimonio muestreado: %1$s · Minutos completos: %2$s</string>
     <string name="pnl_execution_history">Historial de ejecución: %1$s</string>
     <string name="process_title" formatted="false">Procesos</string>
@@ -451,14 +451,14 @@
     <string name="process_role_strategy" formatted="false">Estrategia</string>
     <string name="process_role_backtest" formatted="false">Backtest</string>
     <string name="positions_timeline_incompleteness_scope_global" formatted="false">Toda la cartera</string>
-    <string name="positions_timeline_incompleteness_tier_mark_incomplete" formatted="false">Precio de referencia (mark) incompleto</string>
+    <string name="positions_timeline_incompleteness_tier_mark_incomplete" formatted="false">Precio de marca incompleto</string>
     <string name="positions_timeline_incompleteness_tier_untrusted" formatted="false">NO FIABLE</string>
     <string name="positions_timeline_attribution_origins_manual" formatted="false">Manual · directo</string>
     <string name="positions_timeline_attribution_origins_plan" formatted="false">Plan · automatizado</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">Sistema · automatizado</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Sin atribuir · procedencia desconocida</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">No existe ningún intercambio comercial que sirva como prueba de esta reserva.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Registro derivado de legado para el cual ningún intercambio comercial sirve como evidencia.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Ninguna ejecución en la plataforma de intercambio respalda este asiento.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Registro procedente de datos antiguos sin una ejecución que lo respalde.</string>
     <string name="common_yes" formatted="false">Sí</string>
     <string name="common_no" formatted="false">No</string>
     <string name="settings_role_ai_reviewer" formatted="false">Revisor de IA</string>

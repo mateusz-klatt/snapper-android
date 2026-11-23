@@ -10,7 +10,7 @@
     <string name="language" formatted="false">Tungumál</string>
     <string name="logout" formatted="false">Skrá út</string>
     <string name="positions" formatted="false">Stöður</string>
-    <string name="orders" formatted="false">Pantanir</string>
+    <string name="orders" formatted="false">Fyrirmæli</string>
     <string name="market" formatted="false">Markaðsgögn</string>
     <string name="wallet" formatted="false">Veski</string>
     <string name="all_wallets" formatted="false">Öll veski</string>
@@ -52,64 +52,64 @@
     <string name="dismiss" formatted="false">Hunsa</string>
     <string name="paper" formatted="false">Sýndarviðskipti</string>
     <string name="safety_critical" formatted="false">Öryggisviðkvæmt</string>
-    <string name="snapshot_limit" formatted="false">Þessi sýn sýnir núverandi stöður og allt að 100 nýlegar pantanir og viðvaranir; hún er ekki tæmandi saga.</string>
+    <string name="snapshot_limit" formatted="false">Þessi sýn sýnir núverandi stöður og allt að 100 nýleg fyrirmæli og viðvaranir; hún er ekki tæmandi saga.</string>
     <string name="chart_window" formatted="false">Ritið sýnir síðustu 100 kertin sem voru sótt.</string>
     <string name="local_network_explanation" formatted="false">Fyrir bakenda á staðarnetinu þínu skaltu leyfa aðgang að staðarnetinu áður en þú skráir þig inn. Bakendar á almennu interneti þurfa ekki þessa heimild.</string>
     <string name="local_network_allow" formatted="false">Leyfa staðarnet</string>
     <string name="local_network_settings" formatted="false">Opna stillingar apps</string>
-    <string name="order_new" formatted="false">Ný pöntun</string>
-    <string name="order_entry" formatted="false">Ný handvirk pöntun</string>
-    <string name="order_confirm" formatted="false">Staðfesta pöntun</string>
+    <string name="order_new" formatted="false">Ný fyrirmæli</string>
+    <string name="order_entry" formatted="false">Ný handvirk fyrirmæli</string>
+    <string name="order_confirm" formatted="false">Staðfesta fyrirmæli</string>
     <string name="order_quantity" formatted="false">Magn</string>
-    <string name="order_type" formatted="false">Tegund pöntunar</string>
+    <string name="order_type" formatted="false">Tegund fyrirmæla</string>
     <string name="order_stop_price" formatted="false">Stöðvunarverð</string>
     <string name="order_mode" formatted="false">Hamur</string>
     <string name="order_buy" formatted="false">Kaupa</string>
     <string name="order_sell" formatted="false">Selja</string>
     <string name="order_market" formatted="false">Markaðsfyrirmæli</string>
-    <string name="order_limit" formatted="false">Takmörkuð</string>
+    <string name="order_limit" formatted="false">Fyrirmæli með verðmörkum</string>
     <string name="order_stop" formatted="false">Stöðvun</string>
     <string name="order_stop_limit" formatted="false">Stöðvun með verðmörkum</string>
     <string name="order_live" formatted="false">Raunveruleg</string>
-    <string name="order_review" formatted="false">Yfirfara pöntun</string>
+    <string name="order_review" formatted="false">Yfirfara fyrirmæli</string>
     <string name="order_back" formatted="false">Til baka</string>
-    <string name="order_submit" formatted="false">Staðfesta pöntun</string>
+    <string name="order_submit" formatted="false">Staðfesta fyrirmæli</string>
     <string name="order_submitting" formatted="false">Sendi…</string>
     <string name="order_leverage" formatted="false">Vogun</string>
     <string name="order_reduce_only" formatted="false">Aðeins minnkun</string>
-    <string name="order_observation_only" formatted="false">Þessi gerningur er aðeins til athugunar — leggðu inn pantanir á gerningi sem styður framkvæmd.</string>
+    <string name="order_observation_only" formatted="false">Þessi gerningur er aðeins til athugunar — leggðu inn fyrirmæli á gerningi sem styður framkvæmd.</string>
     <string name="order_unknown_instrument" formatted="false">Þessi gerningur þekkist ekki. Endurhladdu listanum og reyndu aftur.</string>
-    <string name="order_caps_violation" formatted="false">Þessi pöntun myndi fara yfir öryggismörk reikningsins þíns. Yfirfarðu áhættustillingar og reyndu aftur.</string>
-    <string name="order_rejected" formatted="false">Ekki tókst að stofna pöntun</string>
-    <string name="order_cancel_title" formatted="false">Afturkalla pöntun?</string>
-    <string name="order_cancel_confirm" formatted="false">Afturkalla pöntun</string>
+    <string name="order_caps_violation" formatted="false">Þessi fyrirmæli myndu fara yfir öryggismörk reikningsins þíns. Yfirfarðu áhættustillingar og reyndu aftur.</string>
+    <string name="order_rejected" formatted="false">Ekki tókst að stofna fyrirmæli</string>
+    <string name="order_cancel_title" formatted="false">Afturkalla fyrirmæli?</string>
+    <string name="order_cancel_confirm" formatted="false">Afturkalla fyrirmæli</string>
     <string name="order_keep_open" formatted="false">Halda opinni</string>
-    <string name="order_select_wallet" formatted="false">Veldu veski á heimasíðunni áður en þú leggur inn pöntun.</string>
-    <string name="order_created" formatted="false">Pöntun send. Endurhladdu til að athuga framkvæmdarstöðu.</string>
-    <string name="order_cancel_requested" formatted="false">Óskað eftir afturköllun. Endurhladdu til að athuga stöðu pöntunar.</string>
+    <string name="order_select_wallet" formatted="false">Veldu veski á heimasíðunni áður en þú leggur inn fyrirmæli.</string>
+    <string name="order_created" formatted="false">Fyrirmæli send. Endurhladdu til að athuga framkvæmdarstöðu.</string>
+    <string name="order_cancel_requested" formatted="false">Óskað eftir afturköllun. Endurhladdu til að athuga stöðu fyrirmæla.</string>
     <string name="order_unknown_outcome" formatted="false">Niðurstaða beiðninnar er óþekkt. Athugaðu stöðuna áður en þú grípur til frekari aðgerða.</string>
     <string name="order_check_status" formatted="false">Athuga stöðu</string>
-    <string name="order_retry_intent" formatted="false">Reyna sömu pöntun aftur</string>
+    <string name="order_retry_intent" formatted="false">Reyna sömu fyrirmæli aftur</string>
     <string name="order_catalog_error" formatted="false">Ekki tókst að hlaða kauphöllum eða gerningum. Reyndu aftur.</string>
     <string name="order_no_instruments" formatted="false">Engir gerningar tiltækir fyrir þessa kauphöll.</string>
     <string name="order_invalid_form" formatted="false">Sláðu inn jákvætt magn og tilskilin verð. Valfrjáls vogun verður að vera jákvæð heiltala.</string>
     <string name="order_refresh_failed" formatted="false">Beiðnin var samþykkt en ekki tókst að hlaða nýjustu færslunum. Endurhladdu til að athuga stöðu.</string>
     <string name="order_forbidden" formatted="false">Þú hefur ekki lengur heimild fyrir þessari aðgerð.</string>
-    <string name="order_session_changed" formatted="false">Setan eða veskið hefur breyst. Opnaðu nýja pöntun af núverandi reikningi.</string>
+    <string name="order_session_changed" formatted="false">Setan eða veskið hefur breyst. Opnaðu ný fyrirmæli af núverandi reikningi.</string>
     <string name="order_enabled" formatted="false">Virkt</string>
     <string name="order_disabled" formatted="false">Óvirkt</string>
     <string name="system_tools" formatted="false">Yfirlit</string>
     <string name="desk_attach_button" formatted="false">Bæta við skoðanda</string>
-    <string name="desk_attach_desk_label" formatted="false">Borð</string>
-    <string name="desk_nav_title" formatted="false">Borðin mín</string>
+    <string name="desk_attach_desk_label" formatted="false">Viðskiptaborð</string>
+    <string name="desk_nav_title" formatted="false">Viðskiptaborðin mín</string>
     <string name="desk_primary_badge" formatted="false">Aðal</string>
     <string name="desk_attach_username_placeholder" formatted="false">Nákvæmt notandanafn skoðanda</string>
     <string name="desk_attach_validation_username" formatted="false">Sláðu inn notandanafn skoðanda.</string>
     <string name="desk_description_unavailable" formatted="false">Engin lýsing gefin.</string>
-    <string name="desk_attach_help" formatted="false">Sláðu inn nákvæmt notandanafn skoðandans. Nýja borðið verður aðeins tiltækt eftir að skoðandinn skráir sig út og aftur inn.</string>
-    <string name="desk_attach_success_message" formatted="false">Skoðandinn verður að skrá sig út og aftur inn áður en nýja borðið verður tiltækt.</string>
-    <string name="desk_empty_message" formatted="false">Reikningurinn þinn er ekki tengdur neinu borði.</string>
-    <string name="desk_load_error" formatted="false">Ekki tókst að hlaða borðum. Reyndu aftur.</string>
+    <string name="desk_attach_help" formatted="false">Sláðu inn nákvæmt notandanafn skoðandans. Nýja viðskiptaborðið verður aðeins tiltækt eftir að skoðandinn skráir sig út og aftur inn.</string>
+    <string name="desk_attach_success_message" formatted="false">Skoðandinn verður að skrá sig út og aftur inn áður en nýja viðskiptaborðið verður tiltækt.</string>
+    <string name="desk_empty_message" formatted="false">Reikningurinn þinn er ekki tengdur neinu viðskiptaborði.</string>
+    <string name="desk_load_error" formatted="false">Ekki tókst að hlaða viðskiptaborðum. Reyndu aftur.</string>
     <string name="settings_account_email" formatted="false">Netfang</string>
     <string name="settings_account_role">Hlutverk: %1$s</string>
     <string name="settings_app_info_version" formatted="false">Útgáfa</string>
@@ -127,7 +127,7 @@
     <string name="market_no_matches" formatted="false">\@string/empty</string>
     <string name="market_catalog_error" formatted="false">\@string/error_unknown</string>
     <string name="system_health" formatted="false">Staða kerfis</string>
-    <string name="system_strategies" formatted="false">Aðferðir</string>
+    <string name="system_strategies" formatted="false">Stefnur</string>
     <string name="system_backtests" formatted="false">Bakprófanir</string>
     <string name="system_users" formatted="false">Notendur</string>
     <string name="system_delegates" formatted="false">AI-fulltrúar</string>
@@ -146,7 +146,7 @@
     <string name="system_initial_cash" formatted="false">Upphafsfjármagn</string>
     <string name="system_period" formatted="false">Tímabil</string>
     <string name="system_created" formatted="false">Stofnað</string>
-    <string name="system_max_orders" formatted="false">Hám. opnar pantanir</string>
+    <string name="system_max_orders" formatted="false">Hám. fjöldi opinna fyrirmæla</string>
     <string name="system_max_daily" formatted="false">Hám. USD/dag</string>
     <string name="system_default" formatted="false">Sjálfgefið</string>
     <string name="system_trader" formatted="false">Staða viðskiptakerfis</string>
@@ -175,8 +175,8 @@
     <string name="notification_defaults_low" formatted="false">Lágur</string>
     <string name="notification_defaults_medium" formatted="false">Miðlungs</string>
     <string name="notification_defaults_high" formatted="false">Hár</string>
-    <string name="notification_defaults_fill" formatted="false">Pöntun framkvæmd</string>
-    <string name="notification_defaults_rejected" formatted="false">Pöntun hafnað</string>
+    <string name="notification_defaults_fill" formatted="false">Fyrirmæli framkvæmd</string>
+    <string name="notification_defaults_rejected" formatted="false">Fyrirmælum hafnað</string>
     <string name="notification_defaults_stop" formatted="false">Stop-loss virkjað</string>
     <string name="notification_defaults_margin" formatted="false">Viðvörun um tryggingarfé</string>
     <string name="notification_defaults_system" formatted="false">Kerfisvilla</string>
@@ -245,7 +245,7 @@
     <string name="positions_timeline_incompleteness_reasons_scope_order_regression" formatted="false">Afturför í röðun umfangs</string>
     <string name="positions_timeline_incompleteness_reasons_before_activation" formatted="false">Punkturinn er á undan virkjun</string>
     <string name="positions_timeline_incompleteness_reasons_activation_baseline_non_finite" formatted="false">Grunngildi við virkjun er ekki endanleg tala</string>
-    <string name="positions_timeline_incompleteness_reasons_fill_evidence_gap" formatted="false">Varanleg gögn sem staðfesta pöntunarframkvæmd vantar</string>
+    <string name="positions_timeline_incompleteness_reasons_fill_evidence_gap" formatted="false">Varanleg gögn sem staðfesta framkvæmd fyrirmæla vantar</string>
     <string name="positions_timeline_incompleteness_reasons_seed_quantity_non_finite" formatted="false">Upphafsmagn er ekki endanleg tala</string>
     <string name="positions_timeline_incompleteness_reasons_cost_basis_unavailable" formatted="false">Kostnaðargrunnur er ekki tiltækur</string>
     <string name="positions_timeline_incompleteness_reasons_execution_price_provenance_unproven" formatted="false">Ekki tókst að staðfesta uppruna framkvæmdarverðs</string>
@@ -284,7 +284,7 @@
     <string name="process_running" formatted="false">Í gangi</string>
     <string name="process_stopped" formatted="false">Stöðvað</string>
     <string name="process_feeds" formatted="false">Streymi</string>
-    <string name="process_strategies" formatted="false">Aðferðir</string>
+    <string name="process_strategies" formatted="false">Stefnur</string>
     <string name="process_executors" formatted="false">Framkvæmendur</string>
     <string name="process_brokers" formatted="false">Miðlarar</string>
     <string name="process_memory" formatted="false">Minni</string>
@@ -409,9 +409,9 @@
     <string name="home_connection_authenticating">Auðkennir…</string>
     <string name="home_connection_disconnected">Aftengt</string>
     <string name="home_active_strategies">Virkar strategíur</string>
-    <string name="home_active_orders">Virkar pantanir</string>
+    <string name="home_active_orders">Virk fyrirmæli</string>
     <string name="home_section_latest_alert">Nýjasta viðvörun</string>
-    <string name="home_section_recent_orders">Nýlegar pantanir</string>
+    <string name="home_section_recent_orders">Nýleg fyrirmæli</string>
     <string name="home_position_qty_at_price">Magn: %1$s @ %2$s</string>
     <plurals name="home_heartbeat_age_seconds">
         <item quantity="one">fyrir %1$d sekúndu</item>
@@ -423,7 +423,7 @@
     <string name="records_status_filled" formatted="false">Framkvæmd</string>
     <string name="records_status_cancelled" formatted="false">Hætt við</string>
     <string name="records_status_rejected" formatted="false">Hafnað</string>
-    <string name="records_alert_type_order_unknown" formatted="false">Staða pöntunar óþekkt</string>
+    <string name="records_alert_type_order_unknown" formatted="false">Staða fyrirmæla óþekkt</string>
     <string name="venue_accounts_status_observed" formatted="false">Athugað</string>
     <string name="venue_accounts_status_simulated" formatted="false">Hermt</string>
     <string name="venue_accounts_status_stale" formatted="false">Úrelt</string>
@@ -448,7 +448,7 @@
     <string name="process_mode_thread" formatted="false">Þráðarhamur</string>
     <string name="process_mode_process" formatted="false">Ferlishamur</string>
     <string name="process_role_strategy" formatted="false">Stefna</string>
-    <string name="process_role_backtest" formatted="false">Bakprófa</string>
+    <string name="process_role_backtest" formatted="false">Bakprófun</string>
     <string name="positions_timeline_incompleteness_scope_global" formatted="false">Allt eignasafnið</string>
     <string name="positions_timeline_incompleteness_tier_mark_incomplete" formatted="false">ÓFULLNÆGJANDI VIÐMIÐUNARVERÐ</string>
     <string name="positions_timeline_incompleteness_tier_untrusted" formatted="false">ÓTRAUST</string>
@@ -456,8 +456,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">Áætlun · sjálfvirkt</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">Kerfi · sjálfvirkt</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Órakið · uppruni óþekktur</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Það er engin skiptiviðskiptafylling sem þjónar sem sönnun fyrir þessari bókun.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Arfleifð skrá sem engin skiptiviðskipti fylla þjónar sem sönnunargögn.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Engin framkvæmd fyrirmæla í kauphöll staðfestir þessa bókun.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Færsla úr eldri gögnum án framkvæmdar fyrirmæla sem staðfestir hana.</string>
     <string name="common_yes" formatted="false">Já</string>
     <string name="common_no" formatted="false">Nei</string>
     <string name="settings_role_ai_reviewer" formatted="false">AI-yfirlesari</string>

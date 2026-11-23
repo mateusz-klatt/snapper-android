@@ -38,7 +38,7 @@
     <string name="settings" formatted="false">Réglages</string>
     <string name="save" formatted="false">Enregistrer</string>
     <string name="refresh" formatted="false">Actualiser</string>
-    <string name="exchange" formatted="false">Bourse</string>
+    <string name="exchange" formatted="false">Plateforme d’échange</string>
     <string name="load_market" formatted="false">Charger les bougies</string>
     <string name="empty" formatted="false">Aucun enregistrement disponible.</string>
     <string name="snapshot_note" formatted="false">Données instantanées. Actualisez pour récupérer les derniers enregistrements disponibles.</string>
@@ -225,14 +225,14 @@
     <string name="positions_timeline_controls_last90days" formatted="false">90 derniers jours</string>
     <string name="positions_timeline_error_title" formatted="false">Impossible de charger la chronologie du P&amp;L</string>
     <string name="positions_timeline_empty_message" formatted="false">Aucun point de P&amp;L n\'est disponible pour cette période.</string>
-    <string name="positions_timeline_nowallet_message" formatted="false">Choisissez un wallet pour afficher la chronologie de son P&amp;L.</string>
+    <string name="positions_timeline_nowallet_message" formatted="false">Choisissez un portefeuille pour afficher la chronologie de son P&amp;L.</string>
     <string name="positions_timeline_incompleteness_title" formatted="false">Pourquoi certains points sont incomplets</string>
     <string name="positions_timeline_incompleteness_description" formatted="false">Les motifs couvrent toute la période chargée. Un même point peut être comptabilisé plusieurs fois s\'il a plusieurs causes.</string>
     <string name="positions_timeline_incompleteness_affectedpoints">Points concernés : %1$s</string>
     <string name="positions_timeline_chart_title" formatted="false">Évolution du P&amp;L</string>
     <string name="positions_timeline_chart_net" formatted="false">P&amp;L net</string>
     <string name="positions_timeline_chart_realized" formatted="false">P&amp;L réalisé</string>
-    <string name="positions_timeline_chart_unrealized" formatted="false">P&amp;L non réalisé</string>
+    <string name="positions_timeline_chart_unrealized" formatted="false">P&amp;L latent</string>
     <string name="positions_timeline_attribution_title" formatted="false">Dernière attribution du P&amp;L</string>
     <string name="positions_timeline_attribution_nostrategy" formatted="false">Aucune stratégie vérifiable</string>
     <string name="positions_timeline_attribution_withheld" formatted="false">Non vérifiable</string>
@@ -241,7 +241,7 @@
     <string name="positions_timeline_contributions_realized" formatted="false">P&amp;L réalisé</string>
     <string name="positions_timeline_contributions_fees" formatted="false">Frais</string>
     <string name="positions_timeline_contributions_accrual" formatted="false">Funding couru</string>
-    <string name="positions_timeline_contributions_unrealized" formatted="false">P&amp;L non réalisé</string>
+    <string name="positions_timeline_contributions_unrealized" formatted="false">P&amp;L latent</string>
     <string name="positions_timeline_incompleteness_reasons_scope_order_regression" formatted="false">Régression dans l\'ordre du scope</string>
     <string name="positions_timeline_incompleteness_reasons_before_activation" formatted="false">Le point précède l\'activation</string>
     <string name="positions_timeline_incompleteness_reasons_activation_baseline_non_finite" formatted="false">Valeur de référence d\'activation non finie</string>
@@ -266,8 +266,8 @@
     <string name="positions_timeline_executionhistory_summary" formatted="false">Un opérateur a invalidé des exécutions enregistrées dans ce périmètre. Toutes les corrections indiquées ici sont exclues des chiffres de cette page.</string>
     <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Exécution invalidée</string>
     <string name="positions_timeline_executionhistory_correctionid" formatted="false">Enregistrement de correction</string>
-    <string name="positions_timeline_equity_title" formatted="false">Superposition des capitaux propres</string>
-    <string name="positions_timeline_equity_serieslabel" formatted="false">Capitaux propres</string>
+    <string name="positions_timeline_equity_title" formatted="false">Superposition des fonds propres</string>
+    <string name="positions_timeline_equity_serieslabel" formatted="false">Fonds propres</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">Repli actuel</string>
     <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Plateforme au comptant uniquement — les soldes détenus sur d’autres plateformes sont exclus.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Les dépôts et retraits externes ne sont pas neutralisés.</string>
@@ -278,7 +278,7 @@
     <string name="positions_timeline_equity_cashposition_position" formatted="false">Valeur de la position</string>
     <string name="positions_timeline_equity_cashposition_cash" formatted="false">Liquidités</string>
     <string name="pnl_provenance">Calcul : %1$s · Source du prix de référence : %2$s · Au : %3$s</string>
-    <string name="pnl_equity_coverage">Capitaux propres relevés : %1$s · Minutes complètes : %2$s</string>
+    <string name="pnl_equity_coverage">Fonds propres relevés : %1$s · Minutes complètes : %2$s</string>
     <string name="pnl_execution_history">Historique d’exécution : %1$s</string>
     <string name="process_title" formatted="false">Processus</string>
     <string name="process_running" formatted="false">En cours</string>
@@ -339,7 +339,7 @@
     <string name="trading_bracket_attach" formatted="false">Ajouter SL / TP</string>
     <string name="trading_bracket_stoplosslabel" formatted="false">Stop loss</string>
     <string name="trading_bracket_takeprofitlabel" formatted="false">Take profit</string>
-    <string name="trading_trailingstop_attach" formatted="false">Ajouter un trailing stop</string>
+    <string name="trading_trailingstop_attach" formatted="false">Ajouter un stop suiveur</string>
     <string name="trading_trailingstop_trailamountlabel" formatted="false">Distance de suivi</string>
     <string name="position_action_review" formatted="false">Vérifier l’action sur la position</string>
     <string name="position_action_confirm" formatted="false">Confirmer l’action</string>
@@ -457,8 +457,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">Plan · automatisé</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">Système · automatisé</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Non attribué · provenance inconnue</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Il n’existe aucun remplissage d’échange qui sert de preuve de cette réservation.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Enregistrement dérivé d\'un héritage pour lequel aucun remplissage d\'échange ne sert de preuve.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Aucune exécution sur la plateforme d’échange ne justifie cette écriture.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Enregistrement issu de données anciennes sans exécution justificative.</string>
     <string name="common_yes" formatted="false">Oui</string>
     <string name="common_no" formatted="false">Non</string>
     <string name="settings_role_ai_reviewer" formatted="false">Évaluateur IA</string>

@@ -22,7 +22,7 @@
     <string name="pnl" formatted="false">PnL neamhréadaithe</string>
     <string name="instrument" formatted="false">Ionstraim</string>
     <string name="price" formatted="false">Praghas</string>
-    <string name="filled" formatted="false">Comhlíonta</string>
+    <string name="filled" formatted="false">Forghníomhaithe</string>
     <string name="status" formatted="false">Stádas</string>
     <string name="side" formatted="false">Taobh</string>
     <string name="open" formatted="false">Praghas oscailte</string>
@@ -50,7 +50,7 @@
     <string name="error_service" formatted="false">Níorbh fhéidir leis an backend an t-iarratas seo a chríochnú. Bain triail eile as.</string>
     <string name="error_unknown" formatted="false">Tharla earráid. Bain triail eile as.</string>
     <string name="dismiss" formatted="false">Dún</string>
-    <string name="paper" formatted="false">Taispeána</string>
+    <string name="paper" formatted="false">Ionsamhlaithe</string>
     <string name="safety_critical" formatted="false">Ríthábhachtach don tsábháilteacht</string>
     <string name="snapshot_limit" formatted="false">Taispeánann an t-amharc seo na suíomhanna reatha agus suas le 100 ordú agus foláireamh le déanaí; ní stair iomlán é.</string>
     <string name="chart_window" formatted="false">Taispeánann an chairt na 100 coinneal dheireanacha a fuarthas.</string>
@@ -66,8 +66,8 @@
     <string name="order_mode" formatted="false">Mód</string>
     <string name="order_buy" formatted="false">Ceannaigh</string>
     <string name="order_sell" formatted="false">Díol</string>
-    <string name="order_market" formatted="false">Margadh</string>
-    <string name="order_limit" formatted="false">Teorainn</string>
+    <string name="order_market" formatted="false">Ordú margaidh</string>
+    <string name="order_limit" formatted="false">Ordú teorann</string>
     <string name="order_stop" formatted="false">Stop</string>
     <string name="order_stop_limit" formatted="false">Stop le teorainn</string>
     <string name="order_live" formatted="false">Fíor</string>
@@ -128,7 +128,7 @@
     <string name="market_catalog_error" formatted="false">\@string/error_unknown</string>
     <string name="system_health" formatted="false">Sláinte an Chórais</string>
     <string name="system_strategies" formatted="false">Straitéisí</string>
-    <string name="system_backtests" formatted="false">Cúltástálacha</string>
+    <string name="system_backtests" formatted="false">Tástálacha stairiúla</string>
     <string name="system_users" formatted="false">Úsáideoirí</string>
     <string name="system_delegates" formatted="false">Ionadaithe AI</string>
     <string name="system_version" formatted="false">Leagan</string>
@@ -159,7 +159,7 @@
     <string name="system_revoked" formatted="false">Cúlghairthe</string>
     <string name="records_open" formatted="false">Oscailte</string>
     <string name="records_recent" formatted="false">Le déanaí</string>
-    <string name="records_fills" formatted="false">Comhlíontaí</string>
+    <string name="records_fills" formatted="false">Forghníomhuithe orduithe</string>
     <string name="records_refresh" formatted="false">Athnuaigh</string>
     <string name="records_fee" formatted="false">Táille</string>
     <string name="records_details" formatted="false">Sonraí</string>
@@ -175,9 +175,9 @@
     <string name="notification_defaults_low" formatted="false">Íseal</string>
     <string name="notification_defaults_medium" formatted="false">Meánach</string>
     <string name="notification_defaults_high" formatted="false">Ard</string>
-    <string name="notification_defaults_fill" formatted="false">Ordú comhlíonta</string>
+    <string name="notification_defaults_fill" formatted="false">Ordú forghníomhaithe</string>
     <string name="notification_defaults_rejected" formatted="false">Ordú diúltaithe</string>
-    <string name="notification_defaults_stop" formatted="false">Spreagadh stopchaillteanas</string>
+    <string name="notification_defaults_stop" formatted="false">Spreagadh stad caillteanais</string>
     <string name="notification_defaults_margin" formatted="false">Rabhadh corrlaigh</string>
     <string name="notification_defaults_system" formatted="false">Earráid chórais</string>
     <string name="notification_defaults_saved" formatted="false">OK</string>
@@ -213,7 +213,7 @@
     <string name="venue_accounts_numeric_source" formatted="false">Bunús na luachanna uimhriúla</string>
     <string name="venue_accounts_positions" formatted="false">Suíomhanna oscailte</string>
     <string name="venue_accounts_funding" formatted="false">Maoiniú</string>
-    <string name="venue_accounts_reconciliation" formatted="false">Stádas athmhuintearais</string>
+    <string name="venue_accounts_reconciliation" formatted="false">Stádas réitigh</string>
     <string name="venue_accounts_evaluation" formatted="false">Stádas meastóireachta</string>
     <string name="venue_accounts_deadline" formatted="false">Deireadh na bailíochta</string>
     <string name="positions_timeline_controls_window" formatted="false">Fuinneog</string>
@@ -245,7 +245,7 @@
     <string name="positions_timeline_incompleteness_reasons_scope_order_regression" formatted="false">Cúlchéim in ord na scóipe</string>
     <string name="positions_timeline_incompleteness_reasons_before_activation" formatted="false">Tá an pointe roimh an ngníomhachtú</string>
     <string name="positions_timeline_incompleteness_reasons_activation_baseline_non_finite" formatted="false">Ní luach críochta í bunlíne an ghníomhachtaithe</string>
-    <string name="positions_timeline_incompleteness_reasons_fill_evidence_gap" formatted="false">Bearna san fhianaise bhuan ar líonadh</string>
+    <string name="positions_timeline_incompleteness_reasons_fill_evidence_gap" formatted="false">Bearna san fhianaise bhuan ar fhorghníomhú ordaithe</string>
     <string name="positions_timeline_incompleteness_reasons_seed_quantity_non_finite" formatted="false">Ní luach críochta í an chainníocht thosaigh</string>
     <string name="positions_timeline_incompleteness_reasons_cost_basis_unavailable" formatted="false">Níl bonn costais ar fáil</string>
     <string name="positions_timeline_incompleteness_reasons_execution_price_provenance_unproven" formatted="false">Níor fíoraíodh bunús an phraghais forghníomhaithe</string>
@@ -257,7 +257,7 @@
     <string name="positions_timeline_incompleteness_reasons_unrealized_non_finite" formatted="false">Níl P&amp;L neamhréadaithe críochta</string>
     <string name="positions_timeline_incompleteness_reasons_net_non_finite" formatted="false">Níl P&amp;L glan críochta</string>
     <string name="positions_timeline_incompleteness_reasons_attribution_value_non_finite" formatted="false">Níl luach an tsannta críochta</string>
-    <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">Theip ar athmhuintearas an tsannta</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">Theip ar réiteach an tsannta</string>
     <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">Theip ar shuimeanna P&amp;L de réir ionstraime a réiteach leis an P&amp;L iomlán</string>
     <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">Forghníomhú ordaithe a tháinig go déanach agus a bhfuil stampa ama roimh an ngníomhachtú air</string>
     <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Ní féidir suim an tsannta a léiriú</string>
@@ -337,9 +337,9 @@
     <string name="positions_reduce_footer" formatted="false">Dúnann 100% an suíomh. Cuireann sé ordú margaidh laghdaithe-amháin isteach i gcoinne an taoibh eile.</string>
     <string name="positions_reduce_sizelabel" formatted="false">Laghdaigh méid</string>
     <string name="trading_bracket_attach" formatted="false">Ceangail SL / TP</string>
-    <string name="trading_bracket_stoplosslabel" formatted="false">Stopchaillteanas</string>
-    <string name="trading_bracket_takeprofitlabel" formatted="false">Tóg brabús</string>
-    <string name="trading_trailingstop_attach" formatted="false">Ceangail stop leantach</string>
+    <string name="trading_bracket_stoplosslabel" formatted="false">Stad caillteanais</string>
+    <string name="trading_bracket_takeprofitlabel" formatted="false">Glacadh brabúis</string>
+    <string name="trading_trailingstop_attach" formatted="false">Ceangail stad leantach</string>
     <string name="trading_trailingstop_trailamountlabel" formatted="false">Méid leanta</string>
     <string name="position_action_review" formatted="false">Athbhreithnigh gníomh suímh</string>
     <string name="position_action_confirm" formatted="false">Deimhnigh gníomh</string>
@@ -422,8 +422,8 @@
     </plurals>
     <string name="records_status_new" formatted="false">Nua</string>
     <string name="records_status_open" formatted="false">Oscailte</string>
-    <string name="records_status_partially_filled" formatted="false">Líonta go Páirteach</string>
-    <string name="records_status_filled" formatted="false">Líonta</string>
+    <string name="records_status_partially_filled" formatted="false">Forghníomhaithe go Páirteach</string>
+    <string name="records_status_filled" formatted="false">Forghníomhaithe</string>
     <string name="records_status_cancelled" formatted="false">Cealaithe</string>
     <string name="records_status_rejected" formatted="false">Diúltaithe</string>
     <string name="records_alert_type_order_unknown" formatted="false">Stádas an ordaithe anaithnid</string>
@@ -435,8 +435,8 @@
     <string name="venue_accounts_status_unavailable" formatted="false">Níl ar fáil</string>
     <string name="venue_accounts_status_not_applicable" formatted="false">Ní bhaineann</string>
     <string name="venue_accounts_status_unknown" formatted="false">Anaithnid</string>
-    <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Athnóite</string>
-    <string name="venue_accounts_reconciliation_status_error" formatted="false">Earráid athmhuintearais</string>
+    <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Réitithe</string>
+    <string name="venue_accounts_reconciliation_status_error" formatted="false">Earráid réitigh</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">Gan tacaíocht</string>
     <string name="system_status_healthy" formatted="false">Sláintiúil</string>
     <string name="system_status_error" formatted="false">Earráid</string>
@@ -451,7 +451,7 @@
     <string name="process_mode_thread" formatted="false">Mód Snáithe</string>
     <string name="process_mode_process" formatted="false">Mód Próisis</string>
     <string name="process_role_strategy" formatted="false">Straitéis</string>
-    <string name="process_role_backtest" formatted="false">Backtest</string>
+    <string name="process_role_backtest" formatted="false">Tástáil stairiúil</string>
     <string name="positions_timeline_incompleteness_scope_global" formatted="false">An phunann iomlán</string>
     <string name="positions_timeline_incompleteness_tier_mark_incomplete" formatted="false">PRAGHAS MARCÁLA NEAMHIOMLÁN</string>
     <string name="positions_timeline_incompleteness_tier_untrusted" formatted="false">NEAMHIONTAOFA</string>
@@ -459,8 +459,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">Plean · uathoibrithe</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">Córas · uathoibrithe</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Gan sannadh · bunús anaithnid</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Níl aon líonadh trádála malairte ann a fheidhmíonn mar fhianaise don áirithint seo.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Taifead oidhreacht-díorthaithe nach bhfuil aon líonadh trádála malairte mar fhianaise ina leith.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Níl aon fhorghníomhú ordaithe ar an malartán mar fhianaise ar an iontráil seo.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Taifead ó shonraí oidhreachta gan fhorghníomhú ordaithe mar fhianaise air.</string>
     <string name="common_yes" formatted="false">Tá</string>
     <string name="common_no" formatted="false">Níl</string>
     <string name="settings_role_ai_reviewer" formatted="false">Athbhreithneoir IS</string>

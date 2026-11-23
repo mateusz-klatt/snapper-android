@@ -146,7 +146,7 @@
     <string name="system_initial_cash" formatted="false">Počáteční kapitál</string>
     <string name="system_period" formatted="false">Období</string>
     <string name="system_created" formatted="false">Vytvořeno</string>
-    <string name="system_max_orders" formatted="false">Max. otevřené příkazy</string>
+    <string name="system_max_orders" formatted="false">Max. otevřených pokynů</string>
     <string name="system_max_daily" formatted="false">Max. USD/den</string>
     <string name="system_default" formatted="false">Výchozí</string>
     <string name="system_trader" formatted="false">Stav obchodníka</string>
@@ -178,7 +178,7 @@
     <string name="notification_defaults_fill" formatted="false">Pokyn proveden</string>
     <string name="notification_defaults_rejected" formatted="false">Pokyn zamítnut</string>
     <string name="notification_defaults_stop" formatted="false">Stop-loss aktivován</string>
-    <string name="notification_defaults_margin" formatted="false">Upozornění na margin</string>
+    <string name="notification_defaults_margin" formatted="false">Upozornění na marži</string>
     <string name="notification_defaults_system" formatted="false">Chyba systému</string>
     <string name="notification_defaults_saved" formatted="false">OK</string>
     <string name="signals_title" formatted="false">Signály</string>
@@ -213,7 +213,7 @@
     <string name="venue_accounts_numeric_source" formatted="false">Původ číselných hodnot</string>
     <string name="venue_accounts_positions" formatted="false">Otevřené pozice</string>
     <string name="venue_accounts_funding" formatted="false">Financování</string>
-    <string name="venue_accounts_reconciliation" formatted="false">Stav sesouhlasení</string>
+    <string name="venue_accounts_reconciliation" formatted="false">Stav odsouhlasení</string>
     <string name="venue_accounts_evaluation" formatted="false">Stav vyhodnocení</string>
     <string name="venue_accounts_deadline" formatted="false">Konec platnosti ověřených dat</string>
     <string name="positions_timeline_controls_window" formatted="false">Období</string>
@@ -458,8 +458,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">Plán · automaticky</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">Systém · automaticky</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Nepřiřazeno · původ neznámý</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Jako důkaz pro tuto rezervaci neexistuje žádná burzovní výplň.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Záznam odvozený ze staršího data, pro který jako důkaz neslouží žádná výměna.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Tento záznam není potvrzen žádným provedením pokynu na burze.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Záznam převzatý ze starších dat bez potvrzujícího provedení pokynu.</string>
     <string name="common_yes" formatted="false">Ano</string>
     <string name="common_no" formatted="false">Ne</string>
     <string name="settings_role_ai_reviewer" formatted="false">Recenzent AI</string>

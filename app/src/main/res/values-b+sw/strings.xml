@@ -10,17 +10,17 @@
     <string name="language" formatted="false">Lugha</string>
     <string name="logout" formatted="false">Toka</string>
     <string name="positions" formatted="false">Nafasi</string>
-    <string name="orders" formatted="false">Maagizo</string>
+    <string name="orders" formatted="false">Oda</string>
     <string name="market" formatted="false">Data ya soko</string>
-    <string name="wallet" formatted="false">Mkoba</string>
-    <string name="all_wallets" formatted="false">Mikoba yote</string>
+    <string name="wallet" formatted="false">Pochi</string>
+    <string name="all_wallets" formatted="false">Pochi zote</string>
     <string name="retry" formatted="false">Jaribu tena</string>
     <string name="loading" formatted="false">Inapakia…</string>
     <string name="size" formatted="false">Ukubwa</string>
     <string name="average_price" formatted="false">Bei ya wastani</string>
-    <string name="mark_price" formatted="false">Bei ya alama</string>
-    <string name="pnl" formatted="false">Faida/hasara ambayo haijafikiwa</string>
-    <string name="instrument" formatted="false">Nyenzo ya kifedha</string>
+    <string name="mark_price" formatted="false">Bei elekezi</string>
+    <string name="pnl" formatted="false">Faida/hasara ambayo bado haijapatikana</string>
+    <string name="instrument" formatted="false">Chombo cha kifedha</string>
     <string name="price" formatted="false">Bei</string>
     <string name="filled" formatted="false">Imetekelezwa</string>
     <string name="status" formatted="false">Hali</string>
@@ -52,16 +52,16 @@
     <string name="dismiss" formatted="false">Ondoa</string>
     <string name="paper" formatted="false">Majaribio</string>
     <string name="safety_critical" formatted="false">Muhimu kwa usalama</string>
-    <string name="snapshot_limit" formatted="false">Mwonekano huu unaonyesha nafasi za sasa na hadi maagizo na arifa 100 za karibuni; si historia kamili.</string>
+    <string name="snapshot_limit" formatted="false">Mwonekano huu unaonyesha nafasi za sasa na hadi oda na arifa 100 za karibuni; si historia kamili.</string>
     <string name="chart_window" formatted="false">Chati inaonyesha mishumaa 100 ya mwisho iliyopokelewa.</string>
     <string name="local_network_explanation" formatted="false">Kwa seva iliyo kwenye mtandao wako wa ndani, ruhusu ufikiaji wa mtandao wa ndani kabla ya kuingia. Seva za intaneti ya umma hazihitaji ruhusa hii.</string>
     <string name="local_network_allow" formatted="false">Ruhusu mtandao wa ndani</string>
     <string name="local_network_settings" formatted="false">Fungua mipangilio ya programu</string>
-    <string name="order_new" formatted="false">Agizo jipya</string>
-    <string name="order_entry" formatted="false">Agizo jipya la mkono</string>
-    <string name="order_confirm" formatted="false">Thibitisha agizo</string>
+    <string name="order_new" formatted="false">Oda mpya</string>
+    <string name="order_entry" formatted="false">Oda mpya ya mkono</string>
+    <string name="order_confirm" formatted="false">Thibitisha oda</string>
     <string name="order_quantity" formatted="false">Kiasi</string>
-    <string name="order_type" formatted="false">Aina ya agizo</string>
+    <string name="order_type" formatted="false">Aina ya oda</string>
     <string name="order_stop_price" formatted="false">Bei ya kusimamisha</string>
     <string name="order_mode" formatted="false">Hali</string>
     <string name="order_buy" formatted="false">Nunua</string>
@@ -71,31 +71,31 @@
     <string name="order_stop" formatted="false">Kusimamisha</string>
     <string name="order_stop_limit" formatted="false">Kusimamisha kwa kikomo</string>
     <string name="order_live" formatted="false">Biashara halisi</string>
-    <string name="order_review" formatted="false">Kagua agizo</string>
+    <string name="order_review" formatted="false">Kagua oda</string>
     <string name="order_back" formatted="false">Rudi</string>
-    <string name="order_submit" formatted="false">Thibitisha agizo</string>
+    <string name="order_submit" formatted="false">Thibitisha oda</string>
     <string name="order_submitting" formatted="false">Inawasilisha…</string>
-    <string name="order_leverage" formatted="false">Kiinuzi</string>
+    <string name="order_leverage" formatted="false">Kiinua mtaji</string>
     <string name="order_reduce_only" formatted="false">Punguza tu</string>
-    <string name="order_observation_only" formatted="false">Nyenzo hii ya kifedha ni ya kuangalia tu — weka maagizo kwenye nyenzo inayoruhusu utekelezaji.</string>
-    <string name="order_unknown_instrument" formatted="false">Nyenzo hii ya kifedha haitambuliki. Pakia orodha upya na ujaribu tena.</string>
-    <string name="order_caps_violation" formatted="false">Agizo hili litazidi vikomo vya usalama vya akaunti yako. Kagua mipangilio ya hatari na ujaribu tena.</string>
-    <string name="order_rejected" formatted="false">Uundaji wa agizo umeshindwa</string>
-    <string name="order_cancel_title" formatted="false">Ghairi agizo?</string>
-    <string name="order_cancel_confirm" formatted="false">Ghairi agizo</string>
+    <string name="order_observation_only" formatted="false">Chombo hiki cha kifedha ni cha kuangalia tu — weka oda kwenye chombo kinachoruhusu utekelezaji.</string>
+    <string name="order_unknown_instrument" formatted="false">Chombo hiki cha kifedha hakitambuliki. Pakia orodha upya na ujaribu tena.</string>
+    <string name="order_caps_violation" formatted="false">Oda hii itazidi vikomo vya usalama vya akaunti yako. Kagua mipangilio ya hatari na ujaribu tena.</string>
+    <string name="order_rejected" formatted="false">Uundaji wa oda umeshindwa</string>
+    <string name="order_cancel_title" formatted="false">Ghairi oda?</string>
+    <string name="order_cancel_confirm" formatted="false">Ghairi oda</string>
     <string name="order_keep_open" formatted="false">Liache wazi</string>
-    <string name="order_select_wallet" formatted="false">Chagua pochi kwenye ukurasa wa mwanzo kabla ya kuweka agizo.</string>
-    <string name="order_created" formatted="false">Agizo limewasilishwa. Onyesha upya ili kukagua hali ya utekelezaji.</string>
-    <string name="order_cancel_requested" formatted="false">Ughairi umeombwa. Onyesha upya ili kukagua hali ya agizo.</string>
+    <string name="order_select_wallet" formatted="false">Chagua pochi kwenye ukurasa wa mwanzo kabla ya kuweka oda.</string>
+    <string name="order_created" formatted="false">Oda imewasilishwa. Onyesha upya ili kukagua hali ya utekelezaji.</string>
+    <string name="order_cancel_requested" formatted="false">Ughairi umeombwa. Onyesha upya ili kukagua hali ya oda.</string>
     <string name="order_unknown_outcome" formatted="false">Matokeo ya ombi hayajulikani. Kagua hali kabla ya kuchukua hatua nyingine.</string>
     <string name="order_check_status" formatted="false">Kagua hali</string>
-    <string name="order_retry_intent" formatted="false">Jaribu tena agizo lilelile</string>
-    <string name="order_catalog_error" formatted="false">Haikuwezekana kupakia masoko ya biashara au nyenzo za kifedha. Jaribu tena.</string>
-    <string name="order_no_instruments" formatted="false">Hakuna nyenzo za kifedha zinazopatikana kwa soko hili.</string>
-    <string name="order_invalid_form" formatted="false">Weka kiasi chanya na bei zinazohitajika. Kiwango cha hiari cha nyongeza ya mtaji lazima kiwe namba nzima chanya.</string>
+    <string name="order_retry_intent" formatted="false">Jaribu tena oda ileile</string>
+    <string name="order_catalog_error" formatted="false">Haikuwezekana kupakia masoko ya biashara au vyombo vya kifedha. Jaribu tena.</string>
+    <string name="order_no_instruments" formatted="false">Hakuna vyombo vya kifedha vinavyopatikana kwa soko hili.</string>
+    <string name="order_invalid_form" formatted="false">Weka kiasi chanya na bei zinazohitajika. Kiinua mtaji cha hiari lazima kiwe namba nzima chanya.</string>
     <string name="order_refresh_failed" formatted="false">Ombi limekubaliwa, lakini rekodi za karibuni hazikuweza kupakiwa. Onyesha upya ili kukagua hali.</string>
     <string name="order_forbidden" formatted="false">Huna tena ruhusa ya kufanya kitendo hiki.</string>
-    <string name="order_session_changed" formatted="false">Kipindi au pochi imebadilika. Fungua agizo jipya kutoka kwenye akaunti ya sasa.</string>
+    <string name="order_session_changed" formatted="false">Kipindi au pochi imebadilika. Fungua oda mpya kutoka kwenye akaunti ya sasa.</string>
     <string name="order_enabled" formatted="false">Imewashwa</string>
     <string name="order_disabled" formatted="false">Imezimwa</string>
     <string name="system_tools" formatted="false">Muhtasari</string>
@@ -120,7 +120,7 @@
     <string name="settings_connection_change_backend_message" formatted="false">Kubadilisha seva kutakuondoa kwenye akaunti na kufuta hali ya ndani ya programu. Utahitaji kuingia tena kwenye URL mpya.</string>
     <string name="common_continue" formatted="false">Endelea</string>
     <string name="backend_url_cancel" formatted="false">Ghairi</string>
-    <string name="market_search" formatted="false">Tafuta vyombo</string>
+    <string name="market_search" formatted="false">Tafuta vyombo vya kifedha</string>
     <string name="market_view_only" formatted="false">Tazama tu</string>
     <string name="market_catalog_retry" formatted="false">Jaribu tena</string>
     <string name="market_picker_close" formatted="false">Ghairi</string>
@@ -128,7 +128,7 @@
     <string name="market_catalog_error" formatted="false">\@string/error_unknown</string>
     <string name="system_health" formatted="false">Afya ya mfumo</string>
     <string name="system_strategies" formatted="false">Mikakati</string>
-    <string name="system_backtests" formatted="false">Backtest</string>
+    <string name="system_backtests" formatted="false">Majaribio ya nyuma</string>
     <string name="system_users" formatted="false">Watumiaji</string>
     <string name="system_delegates" formatted="false">Wawakilishi wa AI</string>
     <string name="system_version" formatted="false">Toleo</string>
@@ -175,8 +175,8 @@
     <string name="notification_defaults_low" formatted="false">Chini</string>
     <string name="notification_defaults_medium" formatted="false">Wastani</string>
     <string name="notification_defaults_high" formatted="false">Juu</string>
-    <string name="notification_defaults_fill" formatted="false">Agizo limetekelezwa</string>
-    <string name="notification_defaults_rejected" formatted="false">Agizo limekataliwa</string>
+    <string name="notification_defaults_fill" formatted="false">Oda imetekelezwa</string>
+    <string name="notification_defaults_rejected" formatted="false">Oda imekataliwa</string>
     <string name="notification_defaults_stop" formatted="false">Kusitisha hasara kumetekelezwa</string>
     <string name="notification_defaults_margin" formatted="false">Onyo la dhamana</string>
     <string name="notification_defaults_system" formatted="false">Hitilafu ya mfumo</string>
@@ -213,7 +213,7 @@
     <string name="venue_accounts_numeric_source" formatted="false">Asili ya thamani za namba</string>
     <string name="venue_accounts_positions" formatted="false">Nafasi zilizo wazi</string>
     <string name="venue_accounts_funding" formatted="false">Ada ya ufadhili</string>
-    <string name="venue_accounts_reconciliation" formatted="false">Hali ya ulinganishaji</string>
+    <string name="venue_accounts_reconciliation" formatted="false">Hali ya upatanisho</string>
     <string name="venue_accounts_evaluation" formatted="false">Hali ya tathmini</string>
     <string name="venue_accounts_deadline" formatted="false">Mwisho wa uhalali wa data ya kuaminika</string>
     <string name="positions_timeline_controls_window" formatted="false">Kipindi</string>
@@ -232,16 +232,16 @@
     <string name="positions_timeline_chart_title" formatted="false">P&amp;L kwa muda</string>
     <string name="positions_timeline_chart_net" formatted="false">P&amp;L halisi</string>
     <string name="positions_timeline_chart_realized" formatted="false">P&amp;L iliyopatikana</string>
-    <string name="positions_timeline_chart_unrealized" formatted="false">P&amp;L ambayo haijatekelezwa</string>
+    <string name="positions_timeline_chart_unrealized" formatted="false">P&amp;L ambayo bado haijapatikana</string>
     <string name="positions_timeline_attribution_title" formatted="false">Uhusishaji wa karibuni wa P&amp;L</string>
     <string name="positions_timeline_attribution_nostrategy" formatted="false">Hakuna mkakati uliothibitishwa</string>
     <string name="positions_timeline_attribution_withheld" formatted="false">Haikuweza kuthibitishwa</string>
     <string name="positions_timeline_attribution_valuesemantics" formatted="false">Sifuri iliyoonyeshwa imethibitishwa. “Haikuweza kuthibitishwa” inamaanisha kuwa thamani haikuweza kuthibitishwa.</string>
-    <string name="positions_timeline_contributions_title" formatted="false">Michango ya karibuni kwa kila instrumenti</string>
+    <string name="positions_timeline_contributions_title" formatted="false">Michango ya karibuni kwa kila chombo cha kifedha</string>
     <string name="positions_timeline_contributions_realized" formatted="false">P&amp;L iliyopatikana</string>
     <string name="positions_timeline_contributions_fees" formatted="false">Ada</string>
     <string name="positions_timeline_contributions_accrual" formatted="false">Ufadhili uliolimbikizwa</string>
-    <string name="positions_timeline_contributions_unrealized" formatted="false">P&amp;L ambayo haijatekelezwa</string>
+    <string name="positions_timeline_contributions_unrealized" formatted="false">P&amp;L ambayo bado haijapatikana</string>
     <string name="positions_timeline_incompleteness_reasons_scope_order_regression" formatted="false">Kurudi nyuma kwa mpangilio wa upeo</string>
     <string name="positions_timeline_incompleteness_reasons_before_activation" formatted="false">Nukta inatangulia uwezeshaji</string>
     <string name="positions_timeline_incompleteness_reasons_activation_baseline_non_finite" formatted="false">Msingi wa uwezeshaji si thamani yenye kikomo</string>
@@ -258,16 +258,16 @@
     <string name="positions_timeline_incompleteness_reasons_net_non_finite" formatted="false">P&amp;L halisi si thamani yenye kikomo</string>
     <string name="positions_timeline_incompleteness_reasons_attribution_value_non_finite" formatted="false">Thamani ya uhusishaji si yenye kikomo</string>
     <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">Upatanisho wa uhusishaji umeshindikana</string>
-    <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">Jumla ya P&amp;L za instrumenti zote hailingani na P&amp;L ya jumla</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">Jumla ya P&amp;L za vyombo vyote vya kifedha hailingani na P&amp;L ya jumla</string>
     <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">Utekelezaji wa agizo uliowasili kwa kuchelewa wenye muhuri wa muda wa kabla ya uanzishaji</string>
     <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Jumla ya uhusishaji haiwezi kuwakilishwa</string>
-    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Jumla ya nyenzo za kifedha haiwezi kuwakilishwa</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Jumla ya vyombo vya kifedha haiwezi kuwakilishwa</string>
     <string name="positions_timeline_executionhistory_title" formatted="false">Historia ya utekelezaji iliyosahihishwa na mwendeshaji</string>
     <string name="positions_timeline_executionhistory_summary" formatted="false">Mwendeshaji amebatilisha utekelezaji uliorekodiwa katika upeo huu. Marekebisho yote yaliyoorodheshwa hapa yameondolewa kwenye takwimu za ukurasa huu.</string>
     <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Utekelezaji uliobatilishwa</string>
     <string name="positions_timeline_executionhistory_correctionid" formatted="false">Rekodi ya marekebisho</string>
-    <string name="positions_timeline_equity_title" formatted="false">Tabaka la usawa</string>
-    <string name="positions_timeline_equity_serieslabel" formatted="false">Usawa</string>
+    <string name="positions_timeline_equity_title" formatted="false">Tabaka la mtaji</string>
+    <string name="positions_timeline_equity_serieslabel" formatted="false">Mtaji</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">Kushuka kwa sasa kutoka kileleni</string>
     <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Soko la papo hapo pekee — salio lililo kwenye masoko mengine halijajumuishwa.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Athari za amana na uondoaji wa nje hazijaondolewa.</string>
@@ -277,8 +277,8 @@
     <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Kushuka kutoka kileleni hakuonyeshwi kwa thamani zilizobadilishwa, kwa sababu kilele kinachoendelea hufuatiliwa katika sarafu iliyotumika kupima.</string>
     <string name="positions_timeline_equity_cashposition_position" formatted="false">Thamani ya nafasi</string>
     <string name="positions_timeline_equity_cashposition_cash" formatted="false">Fedha taslimu</string>
-    <string name="pnl_provenance">Hesabu: %1$s · Chanzo cha bei ya uthamini: %2$s · Kufikia: %3$s</string>
-    <string name="pnl_equity_coverage">Usawa uliopimwa: %1$s · Dakika kamili: %2$s</string>
+    <string name="pnl_provenance">Hesabu: %1$s · Chanzo cha bei elekezi: %2$s · Kufikia: %3$s</string>
+    <string name="pnl_equity_coverage">Mtaji uliopimwa: %1$s · Dakika kamili: %2$s</string>
     <string name="pnl_execution_history">Historia ya utekelezaji: %1$s</string>
     <string name="process_title" formatted="false">Michakato</string>
     <string name="process_running" formatted="false">Inaendeshwa</string>
@@ -334,7 +334,7 @@
     <string name="positions_accessibility_label_closebutton" formatted="false">Funga nafasi</string>
     <string name="positions_accessibility_label_reducebutton" formatted="false">Punguza nafasi</string>
     <string name="positions_reduce_cancel" formatted="false">Ghairi</string>
-    <string name="positions_reduce_footer" formatted="false">100% hufunga nafasi. Huwasilisha agizo la soko la kupunguza pekee dhidi ya upande ulio kinyume.</string>
+    <string name="positions_reduce_footer" formatted="false">100% hufunga nafasi. Huwasilisha oda ya soko ya kupunguza pekee dhidi ya upande ulio kinyume.</string>
     <string name="positions_reduce_sizelabel" formatted="false">Kiasi cha kupunguza</string>
     <string name="trading_bracket_attach" formatted="false">Ambatisha kusitisha hasara / kuchukua faida</string>
     <string name="trading_bracket_stoplosslabel" formatted="false">Kusitisha hasara</string>
@@ -360,7 +360,7 @@
     <string name="market_context_change" formatted="false">Mabadiliko ya saa 24</string>
     <string name="market_context_high" formatted="false">Juu</string>
     <string name="market_context_low" formatted="false">Chini</string>
-    <string name="market_context_related_empty">Hakuna instrumenti zinazohusiana zilizosanidiwa kwa %1$s kwenye %2$s.</string>
+    <string name="market_context_related_empty">Hakuna vyombo vya kifedha vinavyohusiana vilivyosanidiwa kwa %1$s kwenye %2$s.</string>
     <string name="market_live_connected" formatted="false">Imeunganishwa na masasisho ya moja kwa moja.</string>
     <string name="market_live_connecting" formatted="false">Inaunganisha na masasisho ya moja kwa moja…</string>
     <string name="market_live_unavailable" formatted="false">Masasisho ya moja kwa moja hayapatikani; picha za data za muda fulani zinaonyeshwa.</string>
@@ -409,9 +409,9 @@
     <string name="home_connection_authenticating">Inathibitisha…</string>
     <string name="home_connection_disconnected">Imekatika</string>
     <string name="home_active_strategies">Mikakati inayoendelea</string>
-    <string name="home_active_orders">Maagizo yanayoendelea</string>
+    <string name="home_active_orders">Oda zinazoendelea</string>
     <string name="home_section_latest_alert">Arifa ya mwisho</string>
-    <string name="home_section_recent_orders">Maagizo ya hivi karibuni</string>
+    <string name="home_section_recent_orders">Oda za hivi karibuni</string>
     <string name="home_position_qty_at_price">Kiasi: %1$s kwa %2$s</string>
     <plurals name="home_heartbeat_age_seconds">
         <item quantity="one">sekunde %1$d iliyopita</item>
@@ -423,7 +423,7 @@
     <string name="records_status_filled" formatted="false">Imetekelezwa</string>
     <string name="records_status_cancelled" formatted="false">Imeghairiwa</string>
     <string name="records_status_rejected" formatted="false">Imekataliwa</string>
-    <string name="records_alert_type_order_unknown" formatted="false">Hali ya agizo haijulikani</string>
+    <string name="records_alert_type_order_unknown" formatted="false">Hali ya oda haijulikani</string>
     <string name="venue_accounts_status_observed" formatted="false">Imechunguzwa</string>
     <string name="venue_accounts_status_simulated" formatted="false">Imeigwa</string>
     <string name="venue_accounts_status_stale" formatted="false">Zimepitwa na wakati</string>
@@ -456,8 +456,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">Mpango · otomatiki</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">Mfumo · otomatiki</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Haijahusishwa · asili haijulikani</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Hakuna ujazo wa biashara ya kubadilishana ambao hutumika kama ushahidi wa uhifadhi huu.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Rekodi inayotokana na urithi ambayo hakuna ujazo wa biashara ya kubadilishana hutumika kama ushahidi.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Hakuna utekelezaji wa oda kwenye soko la ubadilishaji unaothibitisha rekodi hii.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Rekodi inayotokana na data za zamani bila utekelezaji wa oda unaoithibitisha.</string>
     <string name="common_yes" formatted="false">Ndiyo</string>
     <string name="common_no" formatted="false">Hapana</string>
     <string name="settings_role_ai_reviewer" formatted="false">Mkaguzi wa AI</string>

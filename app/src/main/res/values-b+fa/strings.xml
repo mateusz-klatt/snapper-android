@@ -18,7 +18,7 @@
     <string name="loading" formatted="false">در حال بارگذاری…</string>
     <string name="size" formatted="false">اندازه</string>
     <string name="average_price" formatted="false">میانگین قیمت</string>
-    <string name="mark_price" formatted="false">قیمت مرجع</string>
+    <string name="mark_price" formatted="false">قیمت مبنا</string>
     <string name="pnl" formatted="false">سود و زیان تحقق‌نیافته</string>
     <string name="instrument" formatted="false">ابزار مالی</string>
     <string name="price" formatted="false">قیمت</string>
@@ -66,8 +66,8 @@
     <string name="order_mode" formatted="false">حالت</string>
     <string name="order_buy" formatted="false">خرید</string>
     <string name="order_sell" formatted="false">فروش</string>
-    <string name="order_market" formatted="false">بازار</string>
-    <string name="order_limit" formatted="false">محدود</string>
+    <string name="order_market" formatted="false">مارکت</string>
+    <string name="order_limit" formatted="false">لیمیت</string>
     <string name="order_stop" formatted="false">توقف</string>
     <string name="order_stop_limit" formatted="false">توقف با قیمت محدود</string>
     <string name="order_live" formatted="false">واقعی</string>
@@ -213,7 +213,7 @@
     <string name="venue_accounts_numeric_source" formatted="false">منشأ مقادیر عددی</string>
     <string name="venue_accounts_positions" formatted="false">موقعیت‌های باز</string>
     <string name="venue_accounts_funding" formatted="false">تامین مالی</string>
-    <string name="venue_accounts_reconciliation" formatted="false">وضعیت تطبیق</string>
+    <string name="venue_accounts_reconciliation" formatted="false">وضعیت مغایرت‌گیری</string>
     <string name="venue_accounts_evaluation" formatted="false">وضعیت ارزیابی</string>
     <string name="venue_accounts_deadline" formatted="false">مهلت اعتبار داده‌های مرجع</string>
     <string name="positions_timeline_controls_window" formatted="false">بازه</string>
@@ -257,8 +257,8 @@
     <string name="positions_timeline_incompleteness_reasons_unrealized_non_finite" formatted="false">P&amp;L تحقق‌نیافته متناهی نیست</string>
     <string name="positions_timeline_incompleteness_reasons_net_non_finite" formatted="false">P&amp;L خالص متناهی نیست</string>
     <string name="positions_timeline_incompleteness_reasons_attribution_value_non_finite" formatted="false">مقدار انتساب متناهی نیست</string>
-    <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">تطبیق انتساب ناموفق بود</string>
-    <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">تطبیق مجموع P&amp;L ابزارها با P&amp;L کل ناموفق بود</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">مغایرت‌گیری انتساب ناموفق بود</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">مغایرت‌گیری مجموع P&amp;L ابزارها با P&amp;L کل ناموفق بود</string>
     <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">اجرای معاملاتی دیررس با مُهر زمانی پیش از فعال‌سازی</string>
     <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">مجموع انتساب قابل نمایش نیست</string>
     <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">مجموع ابزارهای مالی قابل نمایش نیست</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">لایهٔ ارزش خالص حساب</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">ارزش خالص حساب</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">افت فعلی از اوج</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">فقط محل معاملات نقدی — موجودی محل‌های معاملاتی دیگر لحاظ نمی‌شود.</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">فقط صرافی نقدی — موجودی صرافی‌های دیگر لحاظ نمی‌شود.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">واریزها و برداشت‌های خارجی از ارقام حذف نشده‌اند.</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">این ارقام در پایان هر دقیقه از %1$s تبدیل می‌شوند و در اصل با این ارز نمونه‌برداری نشده‌اند.</string>
     <string name="positions_timeline_equity_honesty_pricedon">قیمت‌گذاری در %1$s.</string>
@@ -456,8 +456,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">برنامه · خودکار</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">سیستم · خودکار</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">بدون انتساب · منشأ نامشخص</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">هیچ مبادله ای مبادله ای وجود ندارد که به عنوان مدرکی برای این رزرو عمل کند.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">سوابق برگرفته از میراث که هیچ گونه مبادله ای مبادله ای برای آن به عنوان مدرک استفاده نمی شود.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">هیچ اجرای سفارشی در صرافی این ثبت را تأیید نمی‌کند.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">رکورد برگرفته از داده‌های قدیمی، بدون اجرای سفارشی که آن را تأیید کند.</string>
     <string name="common_yes" formatted="false">بله</string>
     <string name="common_no" formatted="false">خیر</string>
     <string name="settings_role_ai_reviewer" formatted="false">بازبین هوش مصنوعی</string>

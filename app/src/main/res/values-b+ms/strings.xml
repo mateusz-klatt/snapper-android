@@ -19,10 +19,10 @@
     <string name="size" formatted="false">Saiz</string>
     <string name="average_price" formatted="false">Harga purata</string>
     <string name="mark_price" formatted="false">Harga rujukan</string>
-    <string name="pnl" formatted="false">PnL belum terealisasi</string>
+    <string name="pnl" formatted="false">P&amp;L belum direalisasikan</string>
     <string name="instrument" formatted="false">Instrumen</string>
     <string name="price" formatted="false">Harga</string>
-    <string name="filled" formatted="false">Dipenuhi</string>
+    <string name="filled" formatted="false">Dilaksanakan sepenuhnya</string>
     <string name="status" formatted="false">Status</string>
     <string name="side" formatted="false">Sisi</string>
     <string name="open" formatted="false">Buka</string>
@@ -41,7 +41,7 @@
     <string name="exchange" formatted="false">Bursa</string>
     <string name="load_market" formatted="false">Muatkan lilin</string>
     <string name="empty" formatted="false">Tiada rekod tersedia.</string>
-    <string name="snapshot_note" formatted="false">Data petikan. Muat semula untuk mendapatkan rekod terkini yang tersedia.</string>
+    <string name="snapshot_note" formatted="false">Data snapshot. Muat semula untuk mendapatkan rekod terkini yang tersedia.</string>
     <string name="chart_description" formatted="false">Carta lilin sejarah. Nilai tepat disenaraikan di bawah.</string>
     <string name="error_origin" formatted="false">Masukkan asal backend HTTPS yang sah.</string>
     <string name="error_credentials" formatted="false">Nama pengguna atau kata laluan tidak betul.</string>
@@ -50,7 +50,7 @@
     <string name="error_service" formatted="false">Backend tidak dapat melengkapkan permintaan ini. Sila cuba lagi.</string>
     <string name="error_unknown" formatted="false">Sesuatu tidak kena. Sila cuba lagi.</string>
     <string name="dismiss" formatted="false">Ketepikan</string>
-    <string name="paper" formatted="false">Demo</string>
+    <string name="paper" formatted="false">Simulasi</string>
     <string name="safety_critical" formatted="false">Penting untuk keselamatan</string>
     <string name="snapshot_limit" formatted="false">Paparan ini menunjukkan posisi semasa dan sehingga 100 pesanan serta amaran terkini; ini bukan sejarah lengkap.</string>
     <string name="chart_window" formatted="false">Carta menunjukkan 100 lilin terakhir yang diperoleh.</string>
@@ -67,7 +67,7 @@
     <string name="order_buy" formatted="false">Beli</string>
     <string name="order_sell" formatted="false">Jual</string>
     <string name="order_market" formatted="false">Pasaran</string>
-    <string name="order_limit" formatted="false">Had</string>
+    <string name="order_limit" formatted="false">Pesanan limit</string>
     <string name="order_stop" formatted="false">Henti</string>
     <string name="order_stop_limit" formatted="false">Had henti</string>
     <string name="order_live" formatted="false">Sebenar</string>
@@ -175,7 +175,7 @@
     <string name="notification_defaults_low" formatted="false">Rendah</string>
     <string name="notification_defaults_medium" formatted="false">Sederhana</string>
     <string name="notification_defaults_high" formatted="false">Tinggi</string>
-    <string name="notification_defaults_fill" formatted="false">Pesanan dipenuhi</string>
+    <string name="notification_defaults_fill" formatted="false">Pesanan dilaksanakan sepenuhnya</string>
     <string name="notification_defaults_rejected" formatted="false">Pesanan ditolak</string>
     <string name="notification_defaults_stop" formatted="false">Stop-loss dicetuskan</string>
     <string name="notification_defaults_margin" formatted="false">Amaran margin</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">Tindihan ekuiti</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">Ekuiti</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">Susut nilai dari puncak semasa</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Bursa spot sahaja — baki pada bursa lain dikecualikan.</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Bursa lani sahaja — baki pada bursa lain dikecualikan.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Deposit dan pengeluaran luaran tidak dilaraskan keluar.</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">Angka ini ditukar daripada %1$s pada penutupan setiap minit, bukan disampel terus dalam mata wang ini.</string>
     <string name="positions_timeline_equity_honesty_pricedon">Dihargakan berdasarkan %1$s.</string>
@@ -363,8 +363,8 @@
     <string name="market_context_related_empty">Tiada instrumen berkaitan dikonfigurasikan untuk %1$s pada %2$s.</string>
     <string name="market_live_connected" formatted="false">Kemas kini langsung disambungkan.</string>
     <string name="market_live_connecting" formatted="false">Menyambung kepada kemas kini langsung…</string>
-    <string name="market_live_unavailable" formatted="false">Kemas kini langsung tidak tersedia; memaparkan petikan.</string>
-    <string name="market_snapshot_mode" formatted="false">Mod petikan</string>
+    <string name="market_live_unavailable" formatted="false">Kemas kini langsung tidak tersedia; memaparkan snapshot.</string>
+    <string name="market_snapshot_mode" formatted="false">Mod snapshot</string>
     <string name="market_context_as_of">Harga penutup dalam cache setakat %1$s</string>
     <string name="market_cachebanner_message">Cache sedang dipanaskan: %1$s / %2$s lilin tersedia %3$s</string>
     <string name="market_cachebanner_sources_cache" formatted="false"></string>
@@ -455,8 +455,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">Pelan · automatik</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">Sistem · automatik</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Tanpa atribusi · asal usul tidak diketahui</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Tiada isian perdagangan pertukaran yang berfungsi sebagai bukti untuk tempahan ini.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Rekod terbitan warisan yang tiada isian perdagangan pertukaran berfungsi sebagai bukti.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Tiada pelaksanaan pesanan di bursa yang menjadi bukti bagi catatan transaksi ini.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Rekod yang berasal daripada sistem lama tanpa pelaksanaan pesanan di bursa sebagai bukti.</string>
     <string name="common_yes" formatted="false">Ya</string>
     <string name="common_no" formatted="false">Tidak</string>
     <string name="settings_role_ai_reviewer" formatted="false">Penyemak AI</string>
@@ -466,7 +466,7 @@
     <string name="records_status_submitted" formatted="false">Dihantar</string>
     <string name="system_status_ready" formatted="false">Sedia</string>
     <string name="system_status_degraded" formatted="false">Prestasi merosot</string>
-    <string name="market_instrument_kind_spot" formatted="false">Spot</string>
+    <string name="market_instrument_kind_spot" formatted="false">Lani</string>
     <string name="market_instrument_kind_perpetual" formatted="false">Kontrak kekal</string>
     <string name="market_instrument_kind_future" formatted="false">Kontrak niaga hadapan</string>
     <string name="market_instrument_kind_etf" formatted="false">ETF</string>

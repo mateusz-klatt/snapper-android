@@ -50,7 +50,7 @@
     <string name="error_service" formatted="false">De backend kon dit verzoek niet voltooien. Probeer het opnieuw.</string>
     <string name="error_unknown" formatted="false">Er is iets misgegaan. Probeer het opnieuw.</string>
     <string name="dismiss" formatted="false">Sluiten</string>
-    <string name="paper" formatted="false">Demo</string>
+    <string name="paper" formatted="false">Simulatie</string>
     <string name="safety_critical" formatted="false">Veiligheidskritiek</string>
     <string name="snapshot_limit" formatted="false">Deze weergave toont de huidige posities en maximaal 100 recente orders en meldingen; dit is geen volledige geschiedenis.</string>
     <string name="chart_window" formatted="false">De grafiek toont de laatste 100 opgehaalde candles.</string>
@@ -225,7 +225,7 @@
     <string name="positions_timeline_controls_last90days" formatted="false">Afgelopen 90 dagen</string>
     <string name="positions_timeline_error_title" formatted="false">P&amp;L-tijdlijn kon niet worden geladen</string>
     <string name="positions_timeline_empty_message" formatted="false">Voor dit venster zijn geen P&amp;L-punten beschikbaar.</string>
-    <string name="positions_timeline_nowallet_message" formatted="false">Kies een portefeuille om de P&amp;L-tijdlijn te bekijken.</string>
+    <string name="positions_timeline_nowallet_message" formatted="false">Kies een wallet om de P&amp;L-tijdlijn te bekijken.</string>
     <string name="positions_timeline_incompleteness_title" formatted="false">Waarom punten onvolledig zijn</string>
     <string name="positions_timeline_incompleteness_description" formatted="false">De redenen hebben betrekking op het volledige geladen venster. Aantallen kunnen overlappen wanneer een punt meer dan één oorzaak heeft.</string>
     <string name="positions_timeline_incompleteness_affectedpoints">Betrokken punten: %1$s</string>
@@ -254,7 +254,7 @@
     <string name="positions_timeline_incompleteness_reasons_fx_conversion_unproven" formatted="false">FX-conversie niet bewezen</string>
     <string name="positions_timeline_incompleteness_reasons_mark_unavailable" formatted="false">Markprijs niet beschikbaar</string>
     <string name="positions_timeline_incompleteness_reasons_cumulative_non_finite" formatted="false">Cumulatieve waarde is niet-eindig</string>
-    <string name="positions_timeline_incompleteness_reasons_unrealized_non_finite" formatted="false">Niet-gerealiseerde P&amp;L is niet-eindig</string>
+    <string name="positions_timeline_incompleteness_reasons_unrealized_non_finite" formatted="false">Ongerealiseerde P&amp;L is niet-eindig</string>
     <string name="positions_timeline_incompleteness_reasons_net_non_finite" formatted="false">Netto P&amp;L is niet-eindig</string>
     <string name="positions_timeline_incompleteness_reasons_attribution_value_non_finite" formatted="false">Attributiewaarde is niet-eindig</string>
     <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">Afstemming van attributie mislukt</string>
@@ -432,8 +432,8 @@
     <string name="venue_accounts_status_unavailable" formatted="false">Niet beschikbaar</string>
     <string name="venue_accounts_status_not_applicable" formatted="false">Niet van toepassing</string>
     <string name="venue_accounts_status_unknown" formatted="false">Onbekend</string>
-    <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Gereconcilieerd</string>
-    <string name="venue_accounts_reconciliation_status_error" formatted="false">Reconciliatiefout</string>
+    <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Afgestemd</string>
+    <string name="venue_accounts_reconciliation_status_error" formatted="false">Afstemmingsfout</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">Niet ondersteund</string>
     <string name="system_status_healthy" formatted="false">Gezond</string>
     <string name="system_status_error" formatted="false">Fout</string>
@@ -456,8 +456,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">Plan · geautomatiseerd</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">Systeem · geautomatiseerd</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Niet toegewezen · herkomst onbekend</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Er is geen ruiltransactieformulier dat als bewijs voor deze boeking dient.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Uit het verleden afkomstige record waarvoor geen enkele ruiltransactie als bewijs dient.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Geen handelsuitvoering op de beurs onderbouwt deze boeking.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Record afkomstig uit oude gegevens zonder onderbouwende handelsuitvoering.</string>
     <string name="common_yes" formatted="false">Ja</string>
     <string name="common_no" formatted="false">Nee</string>
     <string name="settings_role_ai_reviewer" formatted="false">AI-beoordelaar</string>

@@ -18,8 +18,8 @@
     <string name="loading" formatted="false">Kinukuha…</string>
     <string name="size" formatted="false">Sukat</string>
     <string name="average_price" formatted="false">Karaniwang presyo</string>
-    <string name="mark_price" formatted="false">Markang presyo</string>
-    <string name="pnl" formatted="false">Hindi pa naisasaakatuparang P&amp;L</string>
+    <string name="mark_price" formatted="false">Presyong batayan</string>
+    <string name="pnl" formatted="false">Hindi pa na-realize na P&amp;L</string>
     <string name="instrument" formatted="false">Instrumento</string>
     <string name="price" formatted="false">Presyo</string>
     <string name="filled" formatted="false">Naisagawa</string>
@@ -66,8 +66,8 @@
     <string name="order_mode" formatted="false">Paraan</string>
     <string name="order_buy" formatted="false">Bumili</string>
     <string name="order_sell" formatted="false">Magbenta</string>
-    <string name="order_market" formatted="false">Merkado</string>
-    <string name="order_limit" formatted="false">Limitasyon</string>
+    <string name="order_market" formatted="false">Market order</string>
+    <string name="order_limit" formatted="false">Limit order</string>
     <string name="order_stop" formatted="false">Stop</string>
     <string name="order_stop_limit" formatted="false">Stop Limit</string>
     <string name="order_live" formatted="false">Aktuwal</string>
@@ -84,7 +84,7 @@
     <string name="order_cancel_title" formatted="false">Kanselahin ang order?</string>
     <string name="order_cancel_confirm" formatted="false">Kanselahin ang order</string>
     <string name="order_keep_open" formatted="false">Panatilihing bukas</string>
-    <string name="order_select_wallet" formatted="false">Pumili ng wallet sa Pangunahin bago maglagay ng order.</string>
+    <string name="order_select_wallet" formatted="false">Pumili ng pitaka sa Pangunahin bago maglagay ng order.</string>
     <string name="order_created" formatted="false">Naisumite ang order. I-refresh para tingnan ang katayuan ng execution.</string>
     <string name="order_cancel_requested" formatted="false">Hiniling ang pagkansela. I-refresh para tingnan ang katayuan ng order.</string>
     <string name="order_unknown_outcome" formatted="false">Hindi alam ang resulta ng kahilingan. Tingnan ang katayuan bago gumawa ng karagdagang aksyon.</string>
@@ -95,7 +95,7 @@
     <string name="order_invalid_form" formatted="false">Maglagay ng positibong dami at mga kinakailangang presyo. Ang opsyonal na leverage ay dapat positibong buong bilang.</string>
     <string name="order_refresh_failed" formatted="false">Tinanggap ang kahilingan pero hindi ma-load ang pinakabagong mga tala. I-refresh para tingnan ang katayuan.</string>
     <string name="order_forbidden" formatted="false">Wala ka nang pahintulot para sa aksyong ito.</string>
-    <string name="order_session_changed" formatted="false">Nagbago ang session o wallet. Magbukas ng bagong order mula sa kasalukuyang account.</string>
+    <string name="order_session_changed" formatted="false">Nagbago ang session o pitaka. Magbukas ng bagong order mula sa kasalukuyang account.</string>
     <string name="order_enabled" formatted="false">Naka-enable</string>
     <string name="order_disabled" formatted="false">Naka-disable</string>
     <string name="system_tools" formatted="false">Pangkalahatang-ideya</string>
@@ -127,7 +127,7 @@
     <string name="market_no_matches" formatted="false">\@string/empty</string>
     <string name="market_catalog_error" formatted="false">\@string/error_unknown</string>
     <string name="system_health" formatted="false">Kalusugan ng System</string>
-    <string name="system_strategies" formatted="false">Mga Estratehiya</string>
+    <string name="system_strategies" formatted="false">Mga Strategy</string>
     <string name="system_backtests" formatted="false">Mga Backtest</string>
     <string name="system_users" formatted="false">Mga User</string>
     <string name="system_delegates" formatted="false">Mga AI Delegate</string>
@@ -159,7 +159,7 @@
     <string name="system_revoked" formatted="false">Binawi</string>
     <string name="records_open" formatted="false">Bukas</string>
     <string name="records_recent" formatted="false">Kamakailan</string>
-    <string name="records_fills" formatted="false">Mga naisagawa</string>
+    <string name="records_fills" formatted="false">Mga execution</string>
     <string name="records_refresh" formatted="false">I-refresh</string>
     <string name="records_fee" formatted="false">Bayarin</string>
     <string name="records_details" formatted="false">Mga detalye</string>
@@ -177,7 +177,7 @@
     <string name="notification_defaults_high" formatted="false">Mataas</string>
     <string name="notification_defaults_fill" formatted="false">Naisagawa ang order</string>
     <string name="notification_defaults_rejected" formatted="false">Tinanggihan ang order</string>
-    <string name="notification_defaults_stop" formatted="false">Na-activate ang tigil-pagkalugi</string>
+    <string name="notification_defaults_stop" formatted="false">Na-activate ang stop-loss</string>
     <string name="notification_defaults_margin" formatted="false">Babala sa margin</string>
     <string name="notification_defaults_system" formatted="false">Error sa sistema</string>
     <string name="notification_defaults_saved" formatted="false">OK</string>
@@ -225,7 +225,7 @@
     <string name="positions_timeline_controls_last90days" formatted="false">Huling 90 araw</string>
     <string name="positions_timeline_error_title" formatted="false">Hindi ma-load ang timeline ng P&amp;L</string>
     <string name="positions_timeline_empty_message" formatted="false">Walang available na punto ng P&amp;L para sa saklaw na ito.</string>
-    <string name="positions_timeline_nowallet_message" formatted="false">Pumili ng wallet para makita ang timeline ng P&amp;L nito.</string>
+    <string name="positions_timeline_nowallet_message" formatted="false">Pumili ng pitaka para makita ang timeline ng P&amp;L nito.</string>
     <string name="positions_timeline_incompleteness_title" formatted="false">Bakit hindi kumpleto ang mga punto</string>
     <string name="positions_timeline_incompleteness_description" formatted="false">Nalalapat ang mga dahilan sa buong na-load na saklaw. Maaaring mag-overlap ang mga bilang kapag mahigit sa isa ang sanhi ng isang punto.</string>
     <string name="positions_timeline_incompleteness_affectedpoints">Mga apektadong punto: %1$s</string>
@@ -284,7 +284,7 @@
     <string name="process_running" formatted="false">Tumatakbo</string>
     <string name="process_stopped" formatted="false">Nakahinto</string>
     <string name="process_feeds" formatted="false">Mga Feed</string>
-    <string name="process_strategies" formatted="false">Mga Estratehiya</string>
+    <string name="process_strategies" formatted="false">Mga Strategy</string>
     <string name="process_executors" formatted="false">Mga Tagapagpatupad</string>
     <string name="process_brokers" formatted="false">Mga Broker</string>
     <string name="process_memory" formatted="false">Memory</string>
@@ -337,9 +337,9 @@
     <string name="positions_reduce_footer" formatted="false">Isinasara ng 100% ang posisyon. Nagsusumite ito ng order sa merkado na pangbawas lang sa kabilang panig.</string>
     <string name="positions_reduce_sizelabel" formatted="false">Bawasan ang sukat</string>
     <string name="trading_bracket_attach" formatted="false">Magdagdag ng tigil-pagkalugi / kuha-tubo</string>
-    <string name="trading_bracket_stoplosslabel" formatted="false">Tigil-pagkalugi</string>
-    <string name="trading_bracket_takeprofitlabel" formatted="false">Kuha-tubo</string>
-    <string name="trading_trailingstop_attach" formatted="false">Magdagdag ng sumusunod na tigil</string>
+    <string name="trading_bracket_stoplosslabel" formatted="false">Stop-loss</string>
+    <string name="trading_bracket_takeprofitlabel" formatted="false">Take-profit</string>
+    <string name="trading_trailingstop_attach" formatted="false">Magdagdag ng trailing stop</string>
     <string name="trading_trailingstop_trailamountlabel" formatted="false">Halaga ng pagsunod</string>
     <string name="position_action_review" formatted="false">Suriin ang aksyon sa posisyon</string>
     <string name="position_action_confirm" formatted="false">Kumpirmahin ang aksyon</string>
@@ -408,7 +408,7 @@
     <string name="home_connection_connecting">Kumokonekta…</string>
     <string name="home_connection_authenticating">Pinapatunayan…</string>
     <string name="home_connection_disconnected">Hindi nakakonekta</string>
-    <string name="home_active_strategies">Mga aktibong estratehiya</string>
+    <string name="home_active_strategies">Mga aktibong strategy</string>
     <string name="home_active_orders">Mga aktibong order</string>
     <string name="home_section_latest_alert">Pinakabagong alerto</string>
     <string name="home_section_recent_orders">Mga kamakailang order</string>
@@ -419,8 +419,8 @@
     </plurals>
     <string name="records_status_new" formatted="false">Bago</string>
     <string name="records_status_open" formatted="false">Bukas</string>
-    <string name="records_status_partially_filled" formatted="false">Bahagyang napunan</string>
-    <string name="records_status_filled" formatted="false">Napunan</string>
+    <string name="records_status_partially_filled" formatted="false">Bahagyang naisagawa</string>
+    <string name="records_status_filled" formatted="false">Naisagawa</string>
     <string name="records_status_cancelled" formatted="false">Kinansela</string>
     <string name="records_status_rejected" formatted="false">Tinanggihan</string>
     <string name="records_alert_type_order_unknown" formatted="false">Hindi alam ang status ng order</string>
@@ -456,8 +456,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">Plano · awtomatiko</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">Sistema · awtomatiko</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Hindi maiugnay · hindi alam ang pinagmulan</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Walang exchange trade fill na nagsisilbing ebidensya para sa booking na ito.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Legacy-derived record kung saan walang exchange trade fill ang nagsisilbing ebidensya.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Walang naitalang execution sa palitan na nagpapatunay sa talang ito ng transaksyon.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Tala mula sa lumang sistema na walang naitalang execution sa palitan bilang patunay.</string>
     <string name="common_yes" formatted="false">Oo</string>
     <string name="common_no" formatted="false">Hindi</string>
     <string name="settings_role_ai_reviewer" formatted="false">Tagasuri ng AI</string>

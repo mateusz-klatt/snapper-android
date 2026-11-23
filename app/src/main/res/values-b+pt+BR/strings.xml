@@ -38,7 +38,7 @@
     <string name="settings" formatted="false">Ajustes</string>
     <string name="save" formatted="false">Salvar</string>
     <string name="refresh" formatted="false">Atualizar</string>
-    <string name="exchange" formatted="false">Bolsa</string>
+    <string name="exchange" formatted="false">Exchange</string>
     <string name="load_market" formatted="false">Carregar candles</string>
     <string name="empty" formatted="false">Nenhum registro disponível.</string>
     <string name="snapshot_note" formatted="false">Dados de uma captura. Atualize para obter os registros mais recentes disponíveis.</string>
@@ -50,7 +50,7 @@
     <string name="error_service" formatted="false">O backend não conseguiu concluir esta solicitação. Tente novamente.</string>
     <string name="error_unknown" formatted="false">Ocorreu um erro. Tente novamente.</string>
     <string name="dismiss" formatted="false">Descartar</string>
-    <string name="paper" formatted="false">Simulado</string>
+    <string name="paper" formatted="false">Simulação</string>
     <string name="safety_critical" formatted="false">Crítico para a segurança</string>
     <string name="snapshot_limit" formatted="false">Esta visualização mostra as posições atuais e até 100 ordens e alertas recentes; não é um histórico completo.</string>
     <string name="chart_window" formatted="false">O gráfico mostra os últimos 100 candles obtidos.</string>
@@ -90,8 +90,8 @@
     <string name="order_unknown_outcome" formatted="false">O resultado da solicitação é desconhecido. Verifique o status antes de realizar outras ações.</string>
     <string name="order_check_status" formatted="false">Verificar status</string>
     <string name="order_retry_intent" formatted="false">Tentar a mesma ordem novamente</string>
-    <string name="order_catalog_error" formatted="false">Não foi possível carregar corretoras ou instrumentos. Tente novamente.</string>
-    <string name="order_no_instruments" formatted="false">Nenhum instrumento disponível para esta corretora.</string>
+    <string name="order_catalog_error" formatted="false">Não foi possível carregar exchanges ou instrumentos. Tente novamente.</string>
+    <string name="order_no_instruments" formatted="false">Nenhum instrumento disponível para esta exchange.</string>
     <string name="order_invalid_form" formatted="false">Insira quantidades positivas e os preços necessários. A alavancagem opcional deve ser um número inteiro positivo.</string>
     <string name="order_refresh_failed" formatted="false">A solicitação foi aceita, mas não foi possível carregar os registros mais recentes. Atualize para verificar o status.</string>
     <string name="order_forbidden" formatted="false">Você não tem mais permissão para esta ação.</string>
@@ -257,7 +257,7 @@
     <string name="positions_timeline_incompleteness_reasons_unrealized_non_finite" formatted="false">O P&amp;L não realizado não é finito</string>
     <string name="positions_timeline_incompleteness_reasons_net_non_finite" formatted="false">O P&amp;L líquido não é finito</string>
     <string name="positions_timeline_incompleteness_reasons_attribution_value_non_finite" formatted="false">O valor da atribuição não é finito</string>
-    <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">Falha na reconciliação da atribuição</string>
+    <string name="positions_timeline_incompleteness_reasons_attribution_reconciliation_failed" formatted="false">Falha na conciliação da atribuição</string>
     <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">Falha na conciliação do P&amp;L por instrumento</string>
     <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">Execução de ordem recebida com atraso, com carimbo de data/hora anterior à ativação</string>
     <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">A soma das atribuições não é representável</string>
@@ -277,7 +277,7 @@
     <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">O drawdown convertido não é exibido, pois o pico acumulado é acompanhado na moeda da coleta.</string>
     <string name="positions_timeline_equity_cashposition_position" formatted="false">Valor da posição</string>
     <string name="positions_timeline_equity_cashposition_cash" formatted="false">Caixa</string>
-    <string name="pnl_provenance">Cálculo: %1$s · Fonte do preço de marcação: %2$s · Em: %3$s</string>
+    <string name="pnl_provenance">Cálculo: %1$s · Fonte do preço de referência: %2$s · Em: %3$s</string>
     <string name="pnl_equity_coverage">Patrimônio líquido coletado: %1$s · Minutos completos: %2$s</string>
     <string name="pnl_execution_history">Histórico de execuções: %1$s</string>
     <string name="process_title" formatted="false">Processos</string>
@@ -433,8 +433,8 @@
     <string name="venue_accounts_status_unavailable" formatted="false">Indisponível</string>
     <string name="venue_accounts_status_not_applicable" formatted="false">Não aplicável</string>
     <string name="venue_accounts_status_unknown" formatted="false">Desconhecido</string>
-    <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Reconciliado</string>
-    <string name="venue_accounts_reconciliation_status_error" formatted="false">Erro de reconciliação</string>
+    <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Conciliado</string>
+    <string name="venue_accounts_reconciliation_status_error" formatted="false">Erro de conciliação</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">Não suportado</string>
     <string name="system_status_healthy" formatted="false">Saudável</string>
     <string name="system_status_error" formatted="false">Erro</string>
@@ -449,7 +449,7 @@
     <string name="process_mode_thread" formatted="false">Modo thread</string>
     <string name="process_mode_process" formatted="false">Modo processo</string>
     <string name="process_role_strategy" formatted="false">Estratégia</string>
-    <string name="process_role_backtest" formatted="false">Teste retrospectivo</string>
+    <string name="process_role_backtest" formatted="false">Backtest</string>
     <string name="positions_timeline_incompleteness_scope_global" formatted="false">Toda a carteira</string>
     <string name="positions_timeline_incompleteness_tier_mark_incomplete" formatted="false">Preço de referência incompleto</string>
     <string name="positions_timeline_incompleteness_tier_untrusted" formatted="false">NÃO CONFIÁVEL</string>
@@ -457,8 +457,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">Plano · automatizado</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">Sistema · automatizado</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Sem atribuição · proveniência desconhecida</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Não há preenchimento de negociação cambial que sirva de prova para esta reserva.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Registro derivado de legado para o qual nenhum preenchimento de negociação em bolsa serve como evidência.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Nenhuma execução na exchange comprova este lançamento.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Registro derivado de dados antigos sem uma execução que o comprove.</string>
     <string name="common_yes" formatted="false">Sim</string>
     <string name="common_no" formatted="false">Não</string>
     <string name="settings_role_ai_reviewer" formatted="false">Revisor de IA</string>

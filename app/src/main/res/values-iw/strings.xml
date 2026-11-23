@@ -18,7 +18,7 @@
     <string name="loading" formatted="false">טוען…</string>
     <string name="size" formatted="false">גודל</string>
     <string name="average_price" formatted="false">מחיר ממוצע</string>
-    <string name="mark_price" formatted="false">מחיר סימון</string>
+    <string name="mark_price" formatted="false">מחיר ייחוס</string>
     <string name="pnl" formatted="false">PnL לא ממומש</string>
     <string name="instrument" formatted="false">מכשיר פיננסי</string>
     <string name="price" formatted="false">מחיר</string>
@@ -128,7 +128,7 @@
     <string name="market_catalog_error" formatted="false">\@string/error_unknown</string>
     <string name="system_health" formatted="false">תקינות המערכת</string>
     <string name="system_strategies" formatted="false">אסטרטגיות</string>
-    <string name="system_backtests" formatted="false">בדיקות לאחור</string>
+    <string name="system_backtests" formatted="false">בקטסטים</string>
     <string name="system_users" formatted="false">משתמשים</string>
     <string name="system_delegates" formatted="false">נציגי AI</string>
     <string name="system_version" formatted="false">גרסה</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">שכבת הון</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">הון</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">ירידה נוכחית מהשיא</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">זירת ספוט בלבד — יתרות בזירות אחרות אינן נכללות.</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">בורסת ספוט בלבד — יתרות בבורסות אחרות אינן נכללות.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">השפעת הפקדות ומשיכות חיצוניות לא נוכתה.</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">נתונים אלה מומרים מ-%1$s בסוף כל דקה, ואינם נדגמים במקור במטבע זה.</string>
     <string name="positions_timeline_equity_honesty_pricedon">התמחור מבוסס על %1$s.</string>
@@ -338,8 +338,8 @@
     <string name="positions_reduce_sizelabel" formatted="false">גודל ההקטנה</string>
     <string name="trading_bracket_attach" formatted="false">צרף SL / TP</string>
     <string name="trading_bracket_stoplosslabel" formatted="false">סטופ-לוס</string>
-    <string name="trading_bracket_takeprofitlabel" formatted="false">מימוש רווח</string>
-    <string name="trading_trailingstop_attach" formatted="false">הוספת עצירה נגררת</string>
+    <string name="trading_bracket_takeprofitlabel" formatted="false">טייק-פרופיט</string>
+    <string name="trading_trailingstop_attach" formatted="false">הוספת סטופ נגרר</string>
     <string name="trading_trailingstop_trailamountlabel" formatted="false">מרחק סטופ</string>
     <string name="position_action_review" formatted="false">בדיקת פעולה בפוזיציה</string>
     <string name="position_action_confirm" formatted="false">אישור פעולה</string>
@@ -457,8 +457,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">תוכנית · אוטומטית</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">מערכת · אוטומטית</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">ללא שיוך · המקור אינו ידוע</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">אין מילוי סחר חליפין המשמש כהוכחה להזמנה זו.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">רשומה מדור קודם ששום מילוי סחר חליפין עבורו אינו משמש כראיה.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">אין ביצוע פקודה בבורסה המאמת את הרישום הזה.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">רשומה שמקורה בנתונים ישנים, ללא ביצוע פקודה המאמת אותה.</string>
     <string name="common_yes" formatted="false">כן</string>
     <string name="common_no" formatted="false">לא</string>
     <string name="settings_role_ai_reviewer" formatted="false">סוקר בינה מלאכותית</string>

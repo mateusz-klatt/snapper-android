@@ -19,7 +19,7 @@
     <string name="size" formatted="false">Positionsgröße</string>
     <string name="average_price" formatted="false">Durchschnittspreis</string>
     <string name="mark_price" formatted="false">Markpreis</string>
-    <string name="pnl" formatted="false">Nicht realisierter PnL</string>
+    <string name="pnl" formatted="false">Unrealisierter PnL</string>
     <string name="instrument" formatted="false">Instrument</string>
     <string name="price" formatted="false">Preis</string>
     <string name="filled" formatted="false">Ausgeführt</string>
@@ -50,7 +50,7 @@
     <string name="error_service" formatted="false">Das Backend konnte diese Anfrage nicht abschließen. Bitte versuche es erneut.</string>
     <string name="error_unknown" formatted="false">Ein Fehler ist aufgetreten. Bitte versuche es erneut.</string>
     <string name="dismiss" formatted="false">Verwerfen</string>
-    <string name="paper" formatted="false">Demo</string>
+    <string name="paper" formatted="false">Simulation</string>
     <string name="safety_critical" formatted="false">Sicherheitskritisch</string>
     <string name="snapshot_limit" formatted="false">Diese Ansicht zeigt aktuelle Positionen und bis zu 100 der neuesten Orders und Meldungen; sie enthält keinen vollständigen Verlauf.</string>
     <string name="chart_window" formatted="false">Der Chart zeigt die letzten 100 abgerufenen Kerzen.</string>
@@ -232,7 +232,7 @@
     <string name="positions_timeline_chart_title" formatted="false">P&amp;L im Zeitverlauf</string>
     <string name="positions_timeline_chart_net" formatted="false">Netto-P&amp;L</string>
     <string name="positions_timeline_chart_realized" formatted="false">Realisierter P&amp;L</string>
-    <string name="positions_timeline_chart_unrealized" formatted="false">Nicht realisierter P&amp;L</string>
+    <string name="positions_timeline_chart_unrealized" formatted="false">Unrealisierter P&amp;L</string>
     <string name="positions_timeline_attribution_title" formatted="false">Neueste P&amp;L-Attribution</string>
     <string name="positions_timeline_attribution_nostrategy" formatted="false">Keine nachgewiesene Strategie</string>
     <string name="positions_timeline_attribution_withheld" formatted="false">Nicht nachweisbar</string>
@@ -241,7 +241,7 @@
     <string name="positions_timeline_contributions_realized" formatted="false">Realisierter P&amp;L</string>
     <string name="positions_timeline_contributions_fees" formatted="false">Gebühren</string>
     <string name="positions_timeline_contributions_accrual" formatted="false">Aufgelaufene Finanzierung</string>
-    <string name="positions_timeline_contributions_unrealized" formatted="false">Nicht realisierter P&amp;L</string>
+    <string name="positions_timeline_contributions_unrealized" formatted="false">Unrealisierter P&amp;L</string>
     <string name="positions_timeline_incompleteness_reasons_scope_order_regression" formatted="false">Rückschritt bei der Scope-Reihenfolge</string>
     <string name="positions_timeline_incompleteness_reasons_before_activation" formatted="false">Datenpunkt liegt vor der Aktivierung</string>
     <string name="positions_timeline_incompleteness_reasons_activation_baseline_non_finite" formatted="false">Aktivierungsbasis ist nicht endlich</string>
@@ -456,8 +456,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">Plan · automatisiert</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">System · automatisiert</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Nicht zugeordnet · Herkunft unbekannt</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Es gibt keine Börsenausfüllung, die als Beleg für diese Buchung dient.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Aus dem Altbestand abgeleiteter Datensatz, für den keine Börsenhandelsausfüllung als Beweis dient.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Keine Handelsausführung an der Börse belegt diese Buchung.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Aus Altdaten abgeleiteter Datensatz ohne belegende Handelsausführung.</string>
     <string name="common_yes" formatted="false">Ja</string>
     <string name="common_no" formatted="false">Nein</string>
     <string name="settings_role_ai_reviewer" formatted="false">KI-Prüfer</string>

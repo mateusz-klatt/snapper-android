@@ -10,7 +10,7 @@
     <string name="language" formatted="false">Язык</string>
     <string name="logout" formatted="false">Выйти</string>
     <string name="positions" formatted="false">Позиции</string>
-    <string name="orders" formatted="false">Ордера</string>
+    <string name="orders" formatted="false">Заявки</string>
     <string name="market" formatted="false">Рыночные данные</string>
     <string name="wallet" formatted="false">Кошелёк</string>
     <string name="all_wallets" formatted="false">Все кошельки</string>
@@ -52,64 +52,64 @@
     <string name="dismiss" formatted="false">Закрыть</string>
     <string name="paper" formatted="false">Демо</string>
     <string name="safety_critical" formatted="false">Критично для безопасности</string>
-    <string name="snapshot_limit" formatted="false">Здесь показаны текущие позиции и до 100 последних ордеров и оповещений; это не полная история.</string>
+    <string name="snapshot_limit" formatted="false">Здесь показаны текущие позиции и до 100 последних заявок и оповещений; это не полная история.</string>
     <string name="chart_window" formatted="false">На графике показаны последние 100 загруженных свечей.</string>
     <string name="local_network_explanation" formatted="false">Для бэкенда в локальной сети разрешите доступ к локальной сети перед входом. Бэкендам в общедоступном интернете это разрешение не нужно.</string>
     <string name="local_network_allow" formatted="false">Разрешить локальную сеть</string>
     <string name="local_network_settings" formatted="false">Открыть настройки приложения</string>
-    <string name="order_new" formatted="false">Новый ордер</string>
-    <string name="order_entry" formatted="false">Новый ручной ордер</string>
-    <string name="order_confirm" formatted="false">Подтвердить ордер</string>
+    <string name="order_new" formatted="false">Новая заявка</string>
+    <string name="order_entry" formatted="false">Новая ручная заявка</string>
+    <string name="order_confirm" formatted="false">Подтвердить заявку</string>
     <string name="order_quantity" formatted="false">Количество</string>
-    <string name="order_type" formatted="false">Тип ордера</string>
+    <string name="order_type" formatted="false">Тип заявки</string>
     <string name="order_stop_price" formatted="false">Стоп-цена</string>
     <string name="order_mode" formatted="false">Режим</string>
     <string name="order_buy" formatted="false">Купить</string>
     <string name="order_sell" formatted="false">Продать</string>
-    <string name="order_market" formatted="false">Рыночный</string>
+    <string name="order_market" formatted="false">Рыночная</string>
     <string name="order_limit" formatted="false">Лимит</string>
     <string name="order_stop" formatted="false">Стоп</string>
     <string name="order_stop_limit" formatted="false">Стоп-лимит</string>
     <string name="order_live" formatted="false">Реальная торговля</string>
-    <string name="order_review" formatted="false">Проверить ордер</string>
+    <string name="order_review" formatted="false">Проверить заявку</string>
     <string name="order_back" formatted="false">Назад</string>
-    <string name="order_submit" formatted="false">Подтвердить ордер</string>
+    <string name="order_submit" formatted="false">Подтвердить заявку</string>
     <string name="order_submitting" formatted="false">Отправка…</string>
     <string name="order_leverage" formatted="false">Плечо</string>
     <string name="order_reduce_only" formatted="false">Только сокращение</string>
-    <string name="order_observation_only" formatted="false">Этот инструмент доступен только для наблюдения — размещайте ордера по инструменту, поддерживающему исполнение.</string>
+    <string name="order_observation_only" formatted="false">Этот инструмент доступен только для наблюдения — размещайте заявки по инструменту, поддерживающему исполнение.</string>
     <string name="order_unknown_instrument" formatted="false">Этот инструмент не распознан. Обновите список и попробуйте снова.</string>
-    <string name="order_caps_violation" formatted="false">Этот ордер превысит защитные лимиты счёта. Проверьте настройки риска и попробуйте снова.</string>
-    <string name="order_rejected" formatted="false">Не удалось создать ордер</string>
-    <string name="order_cancel_title" formatted="false">Отменить ордер?</string>
-    <string name="order_cancel_confirm" formatted="false">Отменить ордер</string>
+    <string name="order_caps_violation" formatted="false">Эта заявка превысит защитные лимиты счёта. Проверьте настройки риска и попробуйте снова.</string>
+    <string name="order_rejected" formatted="false">Не удалось создать заявку</string>
+    <string name="order_cancel_title" formatted="false">Отменить заявку?</string>
+    <string name="order_cancel_confirm" formatted="false">Отменить заявку</string>
     <string name="order_keep_open" formatted="false">Оставить открытым</string>
-    <string name="order_select_wallet" formatted="false">Перед размещением ордера выберите кошелёк на главной странице.</string>
-    <string name="order_created" formatted="false">Ордер отправлен. Обновите, чтобы проверить статус исполнения.</string>
-    <string name="order_cancel_requested" formatted="false">Запрошена отмена. Обновите, чтобы проверить статус ордера.</string>
+    <string name="order_select_wallet" formatted="false">Перед размещением заявки выберите кошелёк на главной странице.</string>
+    <string name="order_created" formatted="false">Заявка отправлена. Обновите, чтобы проверить статус исполнения.</string>
+    <string name="order_cancel_requested" formatted="false">Запрошена отмена. Обновите, чтобы проверить статус заявки.</string>
     <string name="order_unknown_outcome" formatted="false">Результат запроса неизвестен. Проверьте статус перед дальнейшими действиями.</string>
     <string name="order_check_status" formatted="false">Проверить статус</string>
-    <string name="order_retry_intent" formatted="false">Повторить тот же ордер</string>
+    <string name="order_retry_intent" formatted="false">Повторить ту же заявку</string>
     <string name="order_catalog_error" formatted="false">Не удалось загрузить биржи или инструменты. Попробуйте снова.</string>
     <string name="order_no_instruments" formatted="false">Для этой биржи нет доступных инструментов.</string>
     <string name="order_invalid_form" formatted="false">Введите положительные количества и обязательные цены. Необязательное кредитное плечо должно быть положительным целым числом.</string>
     <string name="order_refresh_failed" formatted="false">Запрос принят, но последние записи не удалось загрузить. Обновите, чтобы проверить статус.</string>
     <string name="order_forbidden" formatted="false">У вас больше нет разрешения на это действие.</string>
-    <string name="order_session_changed" formatted="false">Сеанс или кошелёк изменился. Откройте новый ордер из текущего аккаунта.</string>
+    <string name="order_session_changed" formatted="false">Сеанс или кошелёк изменился. Откройте новую заявку из текущего аккаунта.</string>
     <string name="order_enabled" formatted="false">Включено</string>
     <string name="order_disabled" formatted="false">Отключено</string>
     <string name="system_tools" formatted="false">Обзор</string>
     <string name="desk_attach_button" formatted="false">Добавить наблюдателя</string>
-    <string name="desk_attach_desk_label" formatted="false">Деск</string>
-    <string name="desk_nav_title" formatted="false">Мои дески</string>
+    <string name="desk_attach_desk_label" formatted="false">Торговая группа</string>
+    <string name="desk_nav_title" formatted="false">Мои торговые группы</string>
     <string name="desk_primary_badge" formatted="false">Основной</string>
     <string name="desk_attach_username_placeholder" formatted="false">Точное имя пользователя наблюдателя</string>
     <string name="desk_attach_validation_username" formatted="false">Введите имя пользователя наблюдателя.</string>
     <string name="desk_description_unavailable" formatted="false">Описание отсутствует.</string>
-    <string name="desk_attach_help" formatted="false">Введите точное имя пользователя наблюдателя. Новый деск станет доступен только после выхода и повторного входа.</string>
-    <string name="desk_attach_success_message" formatted="false">Наблюдатель должен выйти и войти снова, чтобы получить доступ к новому деску.</string>
-    <string name="desk_empty_message" formatted="false">Ваш аккаунт не привязан ни к одному деску.</string>
-    <string name="desk_load_error" formatted="false">Не удалось загрузить дески. Попробуйте снова.</string>
+    <string name="desk_attach_help" formatted="false">Введите точное имя пользователя наблюдателя. Новая торговая группа станет доступна только после выхода и повторного входа.</string>
+    <string name="desk_attach_success_message" formatted="false">Наблюдатель должен выйти и войти снова, чтобы получить доступ к новой торговой группе.</string>
+    <string name="desk_empty_message" formatted="false">Ваш аккаунт не привязан ни к одной торговой группе.</string>
+    <string name="desk_load_error" formatted="false">Не удалось загрузить торговые группы. Попробуйте снова.</string>
     <string name="settings_account_email" formatted="false">Эл. почта</string>
     <string name="settings_account_role">Роль: %1$s</string>
     <string name="settings_app_info_version" formatted="false">Версия</string>
@@ -146,7 +146,7 @@
     <string name="system_initial_cash" formatted="false">Начальный капитал</string>
     <string name="system_period" formatted="false">Период</string>
     <string name="system_created" formatted="false">Создан</string>
-    <string name="system_max_orders" formatted="false">Макс. открытые ордера</string>
+    <string name="system_max_orders" formatted="false">Макс. открытые заявки</string>
     <string name="system_max_daily" formatted="false">Макс. USD/день</string>
     <string name="system_default" formatted="false">По умолчанию</string>
     <string name="system_trader" formatted="false">Статус трейдера</string>
@@ -175,8 +175,8 @@
     <string name="notification_defaults_low" formatted="false">Низкий</string>
     <string name="notification_defaults_medium" formatted="false">Средний</string>
     <string name="notification_defaults_high" formatted="false">Высокий</string>
-    <string name="notification_defaults_fill" formatted="false">Ордер исполнен</string>
-    <string name="notification_defaults_rejected" formatted="false">Ордер отклонён</string>
+    <string name="notification_defaults_fill" formatted="false">Заявка исполнена</string>
+    <string name="notification_defaults_rejected" formatted="false">Заявка отклонена</string>
     <string name="notification_defaults_stop" formatted="false">Стоп-лосс сработал</string>
     <string name="notification_defaults_margin" formatted="false">Предупреждение о марже</string>
     <string name="notification_defaults_system" formatted="false">Системная ошибка</string>
@@ -334,7 +334,7 @@
     <string name="positions_accessibility_label_closebutton" formatted="false">Закрыть позицию</string>
     <string name="positions_accessibility_label_reducebutton" formatted="false">Уменьшить позицию</string>
     <string name="positions_reduce_cancel" formatted="false">Отмена</string>
-    <string name="positions_reduce_footer" formatted="false">100% закрывает позицию. Отправляется рыночный ордер только на сокращение в противоположном направлении.</string>
+    <string name="positions_reduce_footer" formatted="false">100% закрывает позицию. Отправляется рыночная заявка только на сокращение в противоположном направлении.</string>
     <string name="positions_reduce_sizelabel" formatted="false">Размер уменьшения</string>
     <string name="trading_bracket_attach" formatted="false">Добавить SL/TP</string>
     <string name="trading_bracket_stoplosslabel" formatted="false">Стоп-лосс</string>
@@ -409,9 +409,9 @@
     <string name="home_connection_authenticating">Аутентификация…</string>
     <string name="home_connection_disconnected">Отключено</string>
     <string name="home_active_strategies">Активные стратегии</string>
-    <string name="home_active_orders">Активные ордера</string>
+    <string name="home_active_orders">Активные заявки</string>
     <string name="home_section_latest_alert">Последнее оповещение</string>
-    <string name="home_section_recent_orders">Последние ордера</string>
+    <string name="home_section_recent_orders">Последние заявки</string>
     <string name="home_position_qty_at_price">Кол-во: %1$s @ %2$s</string>
     <plurals name="home_heartbeat_age_seconds">
         <item quantity="one">%1$d секунду назад</item>
@@ -425,7 +425,7 @@
     <string name="records_status_filled" formatted="false">Исполнена</string>
     <string name="records_status_cancelled" formatted="false">Отменена</string>
     <string name="records_status_rejected" formatted="false">Отклонена</string>
-    <string name="records_alert_type_order_unknown" formatted="false">Статус ордера неизвестен</string>
+    <string name="records_alert_type_order_unknown" formatted="false">Статус заявки неизвестен</string>
     <string name="venue_accounts_status_observed" formatted="false">Наблюдалось</string>
     <string name="venue_accounts_status_simulated" formatted="false">Симуляция</string>
     <string name="venue_accounts_status_stale" formatted="false">Устарело</string>
@@ -458,15 +458,15 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">План · автоматически</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">Система · автоматически</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Без атрибуции · источник неизвестен</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Нет никакой биржевой сделки, которая служила бы подтверждением этого резервирования.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Унаследованная запись, подтверждением которой не является заполнение биржевых сделок.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Ни одно исполнение заявки на бирже не подтверждает эту запись об операции.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Запись из устаревших данных без подтверждающего исполнения заявки.</string>
     <string name="common_yes" formatted="false">Да</string>
     <string name="common_no" formatted="false">Нет</string>
     <string name="settings_role_ai_reviewer" formatted="false">Рецензент ИИ</string>
     <string name="settings_role_ai_researcher" formatted="false">Исследователь ИИ</string>
     <string name="process_role_core" formatted="false">Основная служба</string>
     <string name="process_role_task" formatted="false">Задача</string>
-    <string name="records_status_submitted" formatted="false">Отправлен</string>
+    <string name="records_status_submitted" formatted="false">Отправлена</string>
     <string name="system_status_ready" formatted="false">Готово</string>
     <string name="system_status_degraded" formatted="false">Ограниченная работоспособность</string>
     <string name="market_instrument_kind_spot" formatted="false">Спот</string>
@@ -487,7 +487,7 @@
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Устаревшие значения с плавающей точкой</string>
     <string name="venue_accounts_status_corrupt" formatted="false">Повреждено</string>
     <string name="system_status_not_running" formatted="false">Не выполняется</string>
-    <string name="records_status_closed" formatted="false">Закрыт</string>
+    <string name="records_status_closed" formatted="false">Закрыта</string>
     <string name="records_status_pending_new" formatted="false">Ожидает отправки</string>
     <string name="records_status_expired" formatted="false">Срок действия истёк</string>
     <string name="records_alert_priority_critical" formatted="false">Критический</string>

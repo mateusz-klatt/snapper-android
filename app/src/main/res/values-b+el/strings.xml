@@ -66,8 +66,8 @@
     <string name="order_mode" formatted="false">Λειτουργία</string>
     <string name="order_buy" formatted="false">Αγορά</string>
     <string name="order_sell" formatted="false">Πώληση</string>
-    <string name="order_market" formatted="false">Άμεσης εκτέλεσης</string>
-    <string name="order_limit" formatted="false">Οριακή</string>
+    <string name="order_market" formatted="false">Αγοράς</string>
+    <string name="order_limit" formatted="false">Ορίου</string>
     <string name="order_stop" formatted="false">Stop</string>
     <string name="order_stop_limit" formatted="false">Stop Limit</string>
     <string name="order_live" formatted="false">Πραγματικές συναλλαγές</string>
@@ -128,7 +128,7 @@
     <string name="market_catalog_error" formatted="false">\@string/error_unknown</string>
     <string name="system_health" formatted="false">Κατάσταση συστήματος</string>
     <string name="system_strategies" formatted="false">Στρατηγικές</string>
-    <string name="system_backtests" formatted="false">Ιστορικές δοκιμές</string>
+    <string name="system_backtests" formatted="false">Ιστορικοί έλεγχοι</string>
     <string name="system_users" formatted="false">Χρήστες</string>
     <string name="system_delegates" formatted="false">Εκπρόσωποι AI</string>
     <string name="system_version" formatted="false">Έκδοση</string>
@@ -266,8 +266,8 @@
     <string name="positions_timeline_executionhistory_summary" formatted="false">Ένας χειριστής ακύρωσε την εγκυρότητα καταγεγραμμένων εκτελέσεων σε αυτό το πεδίο. Κάθε διόρθωση που αναφέρεται εδώ εξαιρείται από τα στοιχεία αυτής της σελίδας.</string>
     <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Εκτέλεση που κρίθηκε άκυρη</string>
     <string name="positions_timeline_executionhistory_correctionid" formatted="false">Εγγραφή διόρθωσης</string>
-    <string name="positions_timeline_equity_title" formatted="false">Επικάλυψη ιδίων κεφαλαίων</string>
-    <string name="positions_timeline_equity_serieslabel" formatted="false">Ίδια κεφάλαια</string>
+    <string name="positions_timeline_equity_title" formatted="false">Επικάλυψη καθαρής θέσης</string>
+    <string name="positions_timeline_equity_serieslabel" formatted="false">Καθαρή θέση</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">Τρέχουσα υποχώρηση από το μέγιστο</string>
     <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Μόνο ανταλλακτήριο spot — τα υπόλοιπα σε άλλα ανταλλακτήρια εξαιρούνται.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Οι εξωτερικές καταθέσεις και αναλήψεις δεν έχουν αφαιρεθεί από τον υπολογισμό.</string>
@@ -278,7 +278,7 @@
     <string name="positions_timeline_equity_cashposition_position" formatted="false">Αξία θέσης</string>
     <string name="positions_timeline_equity_cashposition_cash" formatted="false">Μετρητά</string>
     <string name="pnl_provenance">Υπολογισμός: %1$s · Πηγή τιμής αναφοράς: %2$s · Στις: %3$s</string>
-    <string name="pnl_equity_coverage">Δειγματοληψία ιδίων κεφαλαίων: %1$s · Πλήρη λεπτά: %2$s</string>
+    <string name="pnl_equity_coverage">Δειγματοληψία καθαρής θέσης: %1$s · Πλήρη λεπτά: %2$s</string>
     <string name="pnl_execution_history">Ιστορικό εκτελέσεων: %1$s</string>
     <string name="process_title" formatted="false">Διεργασίες</string>
     <string name="process_running" formatted="false">Σε εξέλιξη</string>
@@ -339,7 +339,7 @@
     <string name="trading_bracket_attach" formatted="false">Προσθήκη ορίου ζημίας / ορίου κέρδους</string>
     <string name="trading_bracket_stoplosslabel" formatted="false">Όριο ζημίας</string>
     <string name="trading_bracket_takeprofitlabel" formatted="false">Όριο κέρδους</string>
-    <string name="trading_trailingstop_attach" formatted="false">Προσθήκη κυλιόμενης διακοπής ζημίας</string>
+    <string name="trading_trailingstop_attach" formatted="false">Προσθήκη κυλιόμενου ορίου ζημίας</string>
     <string name="trading_trailingstop_trailamountlabel" formatted="false">Απόσταση παρακολούθησης</string>
     <string name="position_action_review" formatted="false">Έλεγχος ενέργειας θέσης</string>
     <string name="position_action_confirm" formatted="false">Επιβεβαίωση ενέργειας</string>
@@ -456,8 +456,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">Πλάνο · αυτοματοποιημένο</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">Σύστημα · αυτοματοποιημένο</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Χωρίς επιμερισμό · άγνωστη προέλευση</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Δεν υπάρχει πλήρωση συναλλαγών που να χρησιμεύει ως απόδειξη για αυτήν την κράτηση.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Εγγραφή που προέρχεται από κληρονομιά για την οποία δεν υπάρχει πλήρωση συναλλαγών σε χρηματιστήριο χρησιμεύει ως απόδειξη.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Δεν υπάρχει εκτέλεση εντολής στο ανταλλακτήριο που να τεκμηριώνει αυτή την καταχώριση.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Εγγραφή προερχόμενη από παλαιά δεδομένα, χωρίς εκτέλεση εντολής που να την τεκμηριώνει.</string>
     <string name="common_yes" formatted="false">Ναι</string>
     <string name="common_no" formatted="false">Όχι</string>
     <string name="settings_role_ai_reviewer" formatted="false">Αξιολογητής τεχνητής νοημοσύνης</string>

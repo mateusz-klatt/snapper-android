@@ -19,7 +19,7 @@
     <string name="size" formatted="false">साइज</string>
     <string name="average_price" formatted="false">औसत प्राइस</string>
     <string name="mark_price" formatted="false">मार्क प्राइस</string>
-    <string name="pnl" formatted="false">अनरियलाइज़्ड पीएनएल</string>
+    <string name="pnl" formatted="false">अप्राप्त P&amp;L</string>
     <string name="instrument" formatted="false">इंस्ट्रूमेंट</string>
     <string name="price" formatted="false">प्राइस</string>
     <string name="filled" formatted="false">निष्पादित</string>
@@ -50,7 +50,7 @@
     <string name="error_service" formatted="false">बैकएंड यह अनुरोध पूरा नहीं कर सका। कृपया फिर कोशिश करें।</string>
     <string name="error_unknown" formatted="false">कुछ गलत हो गया। कृपया फिर कोशिश करें।</string>
     <string name="dismiss" formatted="false">हटाएं</string>
-    <string name="paper" formatted="false">डेमो</string>
+    <string name="paper" formatted="false">पेपर</string>
     <string name="safety_critical" formatted="false">सुरक्षा के लिए महत्वपूर्ण</string>
     <string name="snapshot_limit" formatted="false">यह दृश्य मौजूदा पोज़ीशन और हाल के अधिकतम 100 ऑर्डर तथा अलर्ट दिखाता है; यह पूरा इतिहास नहीं है।</string>
     <string name="chart_window" formatted="false">चार्ट में प्राप्त की गई अंतिम 100 कैंडल दिखाई जाती हैं।</string>
@@ -175,13 +175,13 @@
     <string name="notification_defaults_low" formatted="false">कम</string>
     <string name="notification_defaults_medium" formatted="false">मध्यम</string>
     <string name="notification_defaults_high" formatted="false">उच्च</string>
-    <string name="notification_defaults_fill" formatted="false">ऑर्डर पूरा हुआ</string>
+    <string name="notification_defaults_fill" formatted="false">ऑर्डर निष्पादित हुआ</string>
     <string name="notification_defaults_rejected" formatted="false">ऑर्डर अस्वीकृत</string>
     <string name="notification_defaults_stop" formatted="false">स्टॉप-लॉस ट्रिगर हुआ</string>
     <string name="notification_defaults_margin" formatted="false">मार्जिन चेतावनी</string>
     <string name="notification_defaults_system" formatted="false">सिस्टम त्रुटि</string>
     <string name="notification_defaults_saved" formatted="false">ठीक है</string>
-    <string name="signals_title" formatted="false">संकेत</string>
+    <string name="signals_title" formatted="false">सिग्नल</string>
     <string name="signals_strength" formatted="false">शक्ति</string>
     <string name="signals_price" formatted="false">प्राइस</string>
     <string name="signals_reason" formatted="false">कारण:</string>
@@ -195,13 +195,13 @@
     <string name="signals_average_strength" formatted="false">औसत शक्ति</string>
     <string name="signals_filter" formatted="false">रणनीति के अनुसार फ़िल्टर करें</string>
     <string name="signals_all_strategies" formatted="false">सभी रणनीतियाँ</string>
-    <string name="signals_empty" formatted="false">आपके वर्तमान फ़िल्टर से कोई ट्रेडिंग संकेत मेल नहीं खाता।</string>
+    <string name="signals_empty" formatted="false">आपके वर्तमान फ़िल्टर से कोई ट्रेडिंग सिग्नल मेल नहीं खाता।</string>
     <string name="signals_export" formatted="false">निर्यात</string>
     <string name="signals_export_failed" formatted="false">सबमिशन विफल</string>
     <string name="venue_accounts_title" formatted="false">एक्सचेंज खाते</string>
     <string name="venue_accounts_refresh" formatted="false">रीफ़्रेश करें</string>
     <string name="venue_accounts_failed" formatted="false">एक्सचेंज खाते की स्थिति लोड नहीं की जा सकी। खाता खाली नहीं है; डेटा अभी उपलब्ध नहीं है।</string>
-    <string name="venue_accounts_authoritative" formatted="false">लाइव वेन्यू सच्चाई, प्राधिकरण विंडो के भीतर देखी गई।</string>
+    <string name="venue_accounts_authoritative" formatted="false">लाइव एक्सचेंज सच्चाई, प्राधिकरण विंडो के भीतर देखी गई।</string>
     <string name="venue_accounts_not_authoritative" formatted="false">यह खाता अंतिम ज्ञात, सिम्युलेटेड या अनुपलब्ध डेटा दिखाता है — ये एक्सचेंज के आधिकारिक लाइव बैलेंस नहीं हैं।</string>
     <string name="venue_accounts_valuation" formatted="false">मूल्यांकन</string>
     <string name="venue_accounts_balances" formatted="false">बैलेंस</string>
@@ -252,7 +252,7 @@
     <string name="positions_timeline_incompleteness_reasons_execution_size_invalid" formatted="false">निष्पादन आकार अमान्य है</string>
     <string name="positions_timeline_incompleteness_reasons_execution_price_invalid" formatted="false">निष्पादन मूल्य अमान्य है</string>
     <string name="positions_timeline_incompleteness_reasons_fx_conversion_unproven" formatted="false">FX रूपांतरण प्रमाणित नहीं है</string>
-    <string name="positions_timeline_incompleteness_reasons_mark_unavailable" formatted="false">संदर्भ मूल्य उपलब्ध नहीं है</string>
+    <string name="positions_timeline_incompleteness_reasons_mark_unavailable" formatted="false">मार्क प्राइस उपलब्ध नहीं है</string>
     <string name="positions_timeline_incompleteness_reasons_cumulative_non_finite" formatted="false">संचयी मान परिमित संख्या नहीं है</string>
     <string name="positions_timeline_incompleteness_reasons_unrealized_non_finite" formatted="false">अप्राप्त P&amp;L परिमित संख्या नहीं है</string>
     <string name="positions_timeline_incompleteness_reasons_net_non_finite" formatted="false">नेट P&amp;L परिमित संख्या नहीं है</string>
@@ -277,7 +277,7 @@
     <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">परिवर्तित आधार पर गिरावट नहीं दिखाई जाती, क्योंकि अब तक के शिखर को नमूने वाली मुद्रा में ट्रैक किया जाता है।</string>
     <string name="positions_timeline_equity_cashposition_position" formatted="false">पोज़ीशन का मूल्य</string>
     <string name="positions_timeline_equity_cashposition_cash" formatted="false">नकद</string>
-    <string name="pnl_provenance">गणना: %1$s · मार्क कीमत का स्रोत: %2$s · समय: %3$s</string>
+    <string name="pnl_provenance">गणना: %1$s · मार्क प्राइस का स्रोत: %2$s · समय: %3$s</string>
     <string name="pnl_equity_coverage">इक्विटी के नमूने: %1$s · पूर्ण मिनट: %2$s</string>
     <string name="pnl_execution_history">निष्पादन इतिहास: %1$s</string>
     <string name="process_title" formatted="false">प्रोसेस</string>
@@ -419,8 +419,8 @@
     </plurals>
     <string name="records_status_new" formatted="false">नया</string>
     <string name="records_status_open" formatted="false">खुला</string>
-    <string name="records_status_partially_filled" formatted="false">आंशिक रूप से भरा</string>
-    <string name="records_status_filled" formatted="false">भरा</string>
+    <string name="records_status_partially_filled" formatted="false">आंशिक रूप से निष्पादित</string>
+    <string name="records_status_filled" formatted="false">निष्पादित</string>
     <string name="records_status_cancelled" formatted="false">रद्द</string>
     <string name="records_status_rejected" formatted="false">अस्वीकृत</string>
     <string name="records_alert_type_order_unknown" formatted="false">ऑर्डर की स्थिति अज्ञात</string>
@@ -450,14 +450,14 @@
     <string name="process_role_strategy" formatted="false">रणनीति</string>
     <string name="process_role_backtest" formatted="false">बैकटेस्ट</string>
     <string name="positions_timeline_incompleteness_scope_global" formatted="false">पूरा पोर्टफोलियो</string>
-    <string name="positions_timeline_incompleteness_tier_mark_incomplete" formatted="false">संदर्भ-मूल्य अपूर्ण</string>
+    <string name="positions_timeline_incompleteness_tier_mark_incomplete" formatted="false">मार्क प्राइस अपूर्ण</string>
     <string name="positions_timeline_incompleteness_tier_untrusted" formatted="false">अविश्वसनीय</string>
     <string name="positions_timeline_attribution_origins_manual" formatted="false">मैनुअल · प्रत्यक्ष</string>
     <string name="positions_timeline_attribution_origins_plan" formatted="false">योजना · स्वचालित</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">सिस्टम · स्वचालित</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">बिना एट्रिब्यूशन · स्रोत अज्ञात</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">ऐसा कोई विनिमय व्यापार भरण नहीं है जो इस बुकिंग के लिए साक्ष्य के रूप में कार्य करता हो।</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">विरासत-व्युत्पन्न रिकॉर्ड जिसके लिए कोई विनिमय व्यापार भरण साक्ष्य के रूप में कार्य नहीं करता है।</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">इस दर्ज लेनदेन की पुष्टि के लिए एक्सचेंज पर ऑर्डर निष्पादन का कोई प्रमाण नहीं है।</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">पुराने डेटा से बने इस रिकॉर्ड की पुष्टि के लिए एक्सचेंज पर ऑर्डर निष्पादन का कोई प्रमाण नहीं है।</string>
     <string name="common_yes" formatted="false">हाँ</string>
     <string name="common_no" formatted="false">नहीं</string>
     <string name="settings_role_ai_reviewer" formatted="false">एआई समीक्षक</string>

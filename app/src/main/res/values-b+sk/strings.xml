@@ -20,9 +20,9 @@
     <string name="average_price" formatted="false">Priemerná cena</string>
     <string name="mark_price" formatted="false">Referenčná cena</string>
     <string name="pnl" formatted="false">Nerealizovaný PnL</string>
-    <string name="instrument" formatted="false">Instrument</string>
+    <string name="instrument" formatted="false">Inštrument</string>
     <string name="price" formatted="false">Cena</string>
-    <string name="filled" formatted="false">Vykonané</string>
+    <string name="filled" formatted="false">Splnené</string>
     <string name="status" formatted="false">Stav</string>
     <string name="side" formatted="false">Smer</string>
     <string name="open" formatted="false">Otváracia cena</string>
@@ -77,8 +77,8 @@
     <string name="order_submitting" formatted="false">Odosielanie…</string>
     <string name="order_leverage" formatted="false">Páka</string>
     <string name="order_reduce_only" formatted="false">Iba zníženie</string>
-    <string name="order_observation_only" formatted="false">Tento instrument je určený iba na sledovanie — pokyny zadávajte pre instrument, ktorý podporuje vykonávanie obchodov.</string>
-    <string name="order_unknown_instrument" formatted="false">Tento instrument nebol rozpoznaný. Načítajte zoznam znova a zopakujte pokus.</string>
+    <string name="order_observation_only" formatted="false">Tento inštrument je určený iba na sledovanie — pokyny zadávajte pre inštrument, ktorý podporuje vykonávanie obchodov.</string>
+    <string name="order_unknown_instrument" formatted="false">Tento inštrument nebol rozpoznaný. Načítajte zoznam znova a zopakujte pokus.</string>
     <string name="order_caps_violation" formatted="false">Tento pokyn by prekročil bezpečnostné limity účtu. Skontrolujte nastavenia rizika a skúste to znova.</string>
     <string name="order_rejected" formatted="false">Vytvorenie pokynu zlyhalo</string>
     <string name="order_cancel_title" formatted="false">Zrušiť pokyn?</string>
@@ -90,8 +90,8 @@
     <string name="order_unknown_outcome" formatted="false">Výsledok požiadavky nie je známy. Pred ďalšou akciou skontrolujte stav.</string>
     <string name="order_check_status" formatted="false">Skontrolovať stav</string>
     <string name="order_retry_intent" formatted="false">Zopakovať rovnaký pokyn</string>
-    <string name="order_catalog_error" formatted="false">Burzy alebo instrumenty sa nepodarilo načítať. Skúste to znova.</string>
-    <string name="order_no_instruments" formatted="false">Pre túto burzu nie sú dostupné žiadne instrumenty.</string>
+    <string name="order_catalog_error" formatted="false">Burzy alebo inštrumenty sa nepodarilo načítať. Skúste to znova.</string>
+    <string name="order_no_instruments" formatted="false">Pre túto burzu nie sú dostupné žiadne inštrumenty.</string>
     <string name="order_invalid_form" formatted="false">Zadajte kladné množstvá a požadované ceny. Voliteľná páka musí byť kladné celé číslo.</string>
     <string name="order_refresh_failed" formatted="false">Požiadavka bola prijatá, ale najnovšie záznamy sa nepodarilo načítať. Obnovením skontrolujete stav.</string>
     <string name="order_forbidden" formatted="false">Na túto akciu už nemáte oprávnenie.</string>
@@ -120,7 +120,7 @@
     <string name="settings_connection_change_backend_message" formatted="false">Zmena backendu vás odhlási a vymaže lokálny stav aplikácie. Budete sa musieť znova prihlásiť na novej URL.</string>
     <string name="common_continue" formatted="false">Pokračovať</string>
     <string name="backend_url_cancel" formatted="false">Zrušiť</string>
-    <string name="market_search" formatted="false">Hľadať nástroje</string>
+    <string name="market_search" formatted="false">Hľadať inštrumenty</string>
     <string name="market_view_only" formatted="false">Iba na zobrazenie</string>
     <string name="market_catalog_retry" formatted="false">Skúsiť znova</string>
     <string name="market_picker_close" formatted="false">Zrušiť</string>
@@ -146,7 +146,7 @@
     <string name="system_initial_cash" formatted="false">Počiatočný kapitál</string>
     <string name="system_period" formatted="false">Obdobie</string>
     <string name="system_created" formatted="false">Vytvorené</string>
-    <string name="system_max_orders" formatted="false">Max. otvorené príkazy</string>
+    <string name="system_max_orders" formatted="false">Max. otvorených pokynov</string>
     <string name="system_max_daily" formatted="false">Max. USD/deň</string>
     <string name="system_default" formatted="false">Predvolené</string>
     <string name="system_trader" formatted="false">Stav tradera</string>
@@ -159,7 +159,7 @@
     <string name="system_revoked" formatted="false">Odvolané</string>
     <string name="records_open" formatted="false">Otvorené</string>
     <string name="records_recent" formatted="false">Nedávne</string>
-    <string name="records_fills" formatted="false">Realizácie</string>
+    <string name="records_fills" formatted="false">Plnenia</string>
     <string name="records_refresh" formatted="false">Obnoviť</string>
     <string name="records_fee" formatted="false">Poplatok</string>
     <string name="records_details" formatted="false">Podrobnosti</string>
@@ -213,7 +213,7 @@
     <string name="venue_accounts_numeric_source" formatted="false">Pôvod číselných hodnôt</string>
     <string name="venue_accounts_positions" formatted="false">Otvorené pozície</string>
     <string name="venue_accounts_funding" formatted="false">Financovanie</string>
-    <string name="venue_accounts_reconciliation" formatted="false">Stav zosúladenia</string>
+    <string name="venue_accounts_reconciliation" formatted="false">Stav odsúhlasenia</string>
     <string name="venue_accounts_evaluation" formatted="false">Stav vyhodnotenia</string>
     <string name="venue_accounts_deadline" formatted="false">Koniec platnosti overených údajov</string>
     <string name="positions_timeline_controls_window" formatted="false">Obdobie</string>
@@ -261,13 +261,13 @@
     <string name="positions_timeline_incompleteness_reasons_instrument_reconciliation_failed" formatted="false">Odsúhlasenie P&amp;L podľa inštrumentov zlyhalo</string>
     <string name="positions_timeline_incompleteness_reasons_late_pre_activation_execution" formatted="false">Oneskorene prijaté plnenie príkazu s časovou pečiatkou spred aktivácie</string>
     <string name="positions_timeline_incompleteness_reasons_attribution_sum_unrepresentable" formatted="false">Súčet priradených hodnôt sa nedá vyjadriť</string>
-    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Súčet za instrumenty sa nedá vyjadriť</string>
+    <string name="positions_timeline_incompleteness_reasons_instrument_sum_unrepresentable" formatted="false">Súčet za inštrumenty sa nedá vyjadriť</string>
     <string name="positions_timeline_executionhistory_title" formatted="false">História vykonaní opravená operátorom</string>
     <string name="positions_timeline_executionhistory_summary" formatted="false">Operátor zneplatnil zaznamenané vykonania v tomto rozsahu. Všetky tu uvedené opravy sú vylúčené z údajov na tejto stránke.</string>
     <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">Zneplatnené vykonanie</string>
     <string name="positions_timeline_executionhistory_correctionid" formatted="false">Záznam opravy</string>
     <string name="positions_timeline_equity_title" formatted="false">Prekrytie kapitálu</string>
-    <string name="positions_timeline_equity_serieslabel" formatted="false">Kapitál</string>
+    <string name="positions_timeline_equity_serieslabel" formatted="false">Vlastné imanie</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">Aktuálny pokles od maxima</string>
     <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Iba spotová burza — zostatky na iných burzách sú vylúčené.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Externé vklady a výbery nie sú odpočítané.</string>
@@ -458,8 +458,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">Plán · automatizovane</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">Systém · automatizovane</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Nepriradené · pôvod neznámy</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Neexistuje žiadny výmenný obchod, ktorý by slúžil ako dôkaz pre túto rezerváciu.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Záznam odvodený z odkazu, pre ktorý ako dôkaz neslúži žiadna výmena.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Tento záznam nepotvrdzuje žiadne plnenie pokynu na burze.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Záznam prevzatý zo starších dát bez potvrdzujúceho plnenia pokynu.</string>
     <string name="common_yes" formatted="false">Áno</string>
     <string name="common_no" formatted="false">Nie</string>
     <string name="settings_role_ai_reviewer" formatted="false">Recenzent AI</string>

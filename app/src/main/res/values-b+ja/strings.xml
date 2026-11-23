@@ -50,7 +50,7 @@
     <string name="error_service" formatted="false">バックエンドでリクエストを完了できませんでした。再試行してください。</string>
     <string name="error_unknown" formatted="false">問題が発生しました。再試行してください。</string>
     <string name="dismiss" formatted="false">閉じる</string>
-    <string name="paper" formatted="false">デモ</string>
+    <string name="paper" formatted="false">ペーパー</string>
     <string name="safety_critical" formatted="false">安全上重要</string>
     <string name="snapshot_limit" formatted="false">この画面には現在のポジションと直近 100 件までの注文およびアラートが表示されます。完全な履歴ではありません。</string>
     <string name="chart_window" formatted="false">チャートには取得した最新のローソク足 100 本が表示されます。</string>
@@ -277,7 +277,7 @@
     <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">最高値はサンプリング通貨で追跡されるため、換算後のドローダウンは表示されません。</string>
     <string name="positions_timeline_equity_cashposition_position" formatted="false">ポジション評価額</string>
     <string name="positions_timeline_equity_cashposition_cash" formatted="false">現金</string>
-    <string name="pnl_provenance">計算: %1$s · 評価価格の出所: %2$s · 時点: %3$s</string>
+    <string name="pnl_provenance">計算: %1$s · マーク価格の出所: %2$s · 時点: %3$s</string>
     <string name="pnl_equity_coverage">純資産のサンプリング: %1$s · 完全な分数: %2$s</string>
     <string name="pnl_execution_history">約定履歴: %1$s</string>
     <string name="process_title" formatted="false">プロセス</string>
@@ -455,8 +455,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">プラン · 自動</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">システム · 自動</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">帰属なし · 出所不明</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">この予約の証拠となる為替取引約定はありません。</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">取引所取引約定が証拠として機能しない、レガシー由来の記録。</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">この取引記録の裏付けとなる取引所での約定がありません。</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">旧システム由来の記録で、裏付けとなる取引所での約定がありません。</string>
     <string name="common_yes" formatted="false">はい</string>
     <string name="common_no" formatted="false">いいえ</string>
     <string name="settings_role_ai_reviewer" formatted="false">AIレビュアー</string>
