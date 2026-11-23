@@ -18,7 +18,7 @@
     <string name="loading" formatted="false">Завантаження…</string>
     <string name="size" formatted="false">Розмір</string>
     <string name="average_price" formatted="false">Середня ціна</string>
-    <string name="mark_price" formatted="false">Ціна маркування</string>
+    <string name="mark_price" formatted="false">Маркувальна ціна</string>
     <string name="pnl" formatted="false">Нереалізований PnL</string>
     <string name="instrument" formatted="false">Інструмент</string>
     <string name="price" formatted="false">Ціна</string>
@@ -100,16 +100,16 @@
     <string name="order_disabled" formatted="false">Вимкнено</string>
     <string name="system_tools" formatted="false">Огляд</string>
     <string name="desk_attach_button" formatted="false">Додати спостерігача</string>
-    <string name="desk_attach_desk_label" formatted="false">Деск</string>
-    <string name="desk_nav_title" formatted="false">Мої дески</string>
+    <string name="desk_attach_desk_label" formatted="false">Торговий підрозділ</string>
+    <string name="desk_nav_title" formatted="false">Мої торгові підрозділи</string>
     <string name="desk_primary_badge" formatted="false">Основний</string>
     <string name="desk_attach_username_placeholder" formatted="false">Точне ім’я користувача спостерігача</string>
     <string name="desk_attach_validation_username" formatted="false">Введіть ім’я користувача спостерігача.</string>
     <string name="desk_description_unavailable" formatted="false">Опис відсутній.</string>
-    <string name="desk_attach_help" formatted="false">Введіть точне ім’я користувача спостерігача. Новий деск стане доступним лише після виходу та повторного входу.</string>
-    <string name="desk_attach_success_message" formatted="false">Спостерігач має вийти й увійти знову, щоб отримати доступ до нового деску.</string>
-    <string name="desk_empty_message" formatted="false">Ваш обліковий запис не приєднано до жодного деску.</string>
-    <string name="desk_load_error" formatted="false">Не вдалося завантажити дески. Спробуйте ще раз.</string>
+    <string name="desk_attach_help" formatted="false">Введіть точне ім’я користувача спостерігача. Новий торговий підрозділ стане доступним лише після виходу та повторного входу.</string>
+    <string name="desk_attach_success_message" formatted="false">Спостерігач має вийти й увійти знову, щоб отримати доступ до нового торгового підрозділу.</string>
+    <string name="desk_empty_message" formatted="false">Ваш обліковий запис не приєднано до жодного торгового підрозділу.</string>
+    <string name="desk_load_error" formatted="false">Не вдалося завантажити торгові підрозділи. Спробуйте ще раз.</string>
     <string name="settings_account_email" formatted="false">Електронна пошта</string>
     <string name="settings_account_role">Роль: %1$s</string>
     <string name="settings_app_info_version" formatted="false">Версія</string>
@@ -277,7 +277,7 @@
     <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Просадка після конвертації не відображається, оскільки поточний максимум відстежується у валюті вихідних спостережень.</string>
     <string name="positions_timeline_equity_cashposition_position" formatted="false">Вартість позиції</string>
     <string name="positions_timeline_equity_cashposition_cash" formatted="false">Грошові кошти</string>
-    <string name="pnl_provenance">Розрахунок: %1$s · Джерело ціни маркування: %2$s · Станом на: %3$s</string>
+    <string name="pnl_provenance">Розрахунок: %1$s · Джерело маркувальної ціни: %2$s · Станом на: %3$s</string>
     <string name="pnl_equity_coverage">Вибірка капіталу: %1$s · Повні хвилини: %2$s</string>
     <string name="pnl_execution_history">Історія виконань: %1$s</string>
     <string name="process_title" formatted="false">Процеси</string>
@@ -458,8 +458,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">План · автоматично</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">Система · автоматично</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Без атрибуції · походження невідоме</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Немає заповнення біржової торгівлі, яка б служила доказом цього бронювання.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Успадкований запис, доказом якого не є заповнення біржової торгівлі.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Жодне виконання ордера на біржі не підтверджує цей запис про операцію.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Запис зі старих даних без виконання ордера, яке б його підтверджувало.</string>
     <string name="common_yes" formatted="false">Так</string>
     <string name="common_no" formatted="false">Ні</string>
     <string name="settings_role_ai_reviewer" formatted="false">Рецензент ШІ</string>

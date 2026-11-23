@@ -18,7 +18,7 @@
     <string name="loading" formatted="false">Įkeliama…</string>
     <string name="size" formatted="false">Dydis</string>
     <string name="average_price" formatted="false">Vidutinė kaina</string>
-    <string name="mark_price" formatted="false">Žymos kaina</string>
+    <string name="mark_price" formatted="false">Orientacinė kaina</string>
     <string name="pnl" formatted="false">Nerealizuotas PnL</string>
     <string name="instrument" formatted="false">Instrumentas</string>
     <string name="price" formatted="false">Kaina</string>
@@ -67,7 +67,7 @@
     <string name="order_buy" formatted="false">Pirkti</string>
     <string name="order_sell" formatted="false">Parduoti</string>
     <string name="order_market" formatted="false">Rinkos</string>
-    <string name="order_limit" formatted="false">Limitinis</string>
+    <string name="order_limit" formatted="false">Ribinis</string>
     <string name="order_stop" formatted="false">Stabdymo</string>
     <string name="order_stop_limit" formatted="false">Stabdymo su limitu</string>
     <string name="order_live" formatted="false">Reali prekyba</string>
@@ -100,16 +100,16 @@
     <string name="order_disabled" formatted="false">Išjungta</string>
     <string name="system_tools" formatted="false">Apžvalga</string>
     <string name="desk_attach_button" formatted="false">Pridėti stebėtoją</string>
-    <string name="desk_attach_desk_label" formatted="false">Padalinys</string>
-    <string name="desk_nav_title" formatted="false">Mano padaliniai</string>
+    <string name="desk_attach_desk_label" formatted="false">Prekybos skyrius</string>
+    <string name="desk_nav_title" formatted="false">Mano prekybos skyriai</string>
     <string name="desk_primary_badge" formatted="false">Pagrindinis</string>
     <string name="desk_attach_username_placeholder" formatted="false">Tikslus stebėtojo naudotojo vardas</string>
     <string name="desk_attach_validation_username" formatted="false">Įveskite stebėtojo naudotojo vardą.</string>
     <string name="desk_description_unavailable" formatted="false">Aprašymas nepateiktas.</string>
-    <string name="desk_attach_help" formatted="false">Įveskite tikslų stebėtojo naudotojo vardą. Naujas padalinys bus pasiekiamas tik jam atsijungus ir vėl prisijungus.</string>
-    <string name="desk_attach_success_message" formatted="false">Stebėtojas turi atsijungti ir vėl prisijungti, kad galėtų pasiekti naują padalinį.</string>
-    <string name="desk_empty_message" formatted="false">Jūsų paskyra nepriskirta jokiam padaliniui.</string>
-    <string name="desk_load_error" formatted="false">Nepavyko įkelti padalinių. Bandykite dar kartą.</string>
+    <string name="desk_attach_help" formatted="false">Įveskite tikslų stebėtojo naudotojo vardą. Naujas prekybos skyrius bus pasiekiamas tik jam atsijungus ir vėl prisijungus.</string>
+    <string name="desk_attach_success_message" formatted="false">Stebėtojas turi atsijungti ir vėl prisijungti, kad galėtų pasiekti naują prekybos skyrių.</string>
+    <string name="desk_empty_message" formatted="false">Jūsų paskyra nepriskirta jokiam prekybos skyriui.</string>
+    <string name="desk_load_error" formatted="false">Nepavyko įkelti prekybos skyrių. Bandykite dar kartą.</string>
     <string name="settings_account_email" formatted="false">El. paštas</string>
     <string name="settings_account_role">Vaidmuo: %1$s</string>
     <string name="settings_app_info_version" formatted="false">Versija</string>
@@ -146,7 +146,7 @@
     <string name="system_initial_cash" formatted="false">Pradinis kapitalas</string>
     <string name="system_period" formatted="false">Laikotarpis</string>
     <string name="system_created" formatted="false">Sukurta</string>
-    <string name="system_max_orders" formatted="false">Maks. atviri orderiai</string>
+    <string name="system_max_orders" formatted="false">Maks. atvirų pavedimų</string>
     <string name="system_max_daily" formatted="false">Maks. USD per dieną</string>
     <string name="system_default" formatted="false">Numatytasis</string>
     <string name="system_trader" formatted="false">Prekiautojo būsena</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">Kapitalo kreivės sluoksnis</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">Kapitalas</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">Dabartinis nuosmukis nuo piko</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Tik neatidėliotinų sandorių prekybos vieta — kitose prekybos vietose laikomi likučiai neįtraukti.</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Tik neatidėliotinų sandorių birža — kitose biržose laikomi likučiai neįtraukti.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Išorinių įnašų ir išėmimų poveikis nepašalintas.</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">Šie skaičiai perskaičiuojami iš %1$s kiekvienos minutės pabaigoje, o ne tiesiogiai registruojami šia valiuta.</string>
     <string name="positions_timeline_equity_honesty_pricedon">Kainų šaltinis: %1$s.</string>
@@ -277,7 +277,7 @@
     <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Nuosmukis perskaičiuota valiuta nerodomas, nes kintantis pikas sekamas valiuta, kuria registruoti duomenys.</string>
     <string name="positions_timeline_equity_cashposition_position" formatted="false">Pozicijos vertė</string>
     <string name="positions_timeline_equity_cashposition_cash" formatted="false">Pinigai</string>
-    <string name="pnl_provenance">Skaičiavimas: %1$s · Vertinimo kainos šaltinis: %2$s · Duomenų laikas: %3$s</string>
+    <string name="pnl_provenance">Skaičiavimas: %1$s · Orientacinės kainos šaltinis: %2$s · Duomenų laikas: %3$s</string>
     <string name="pnl_equity_coverage">Registruotas kapitalas: %1$s · Pilnos minutės: %2$s</string>
     <string name="pnl_execution_history">Vykdymo istorija: %1$s</string>
     <string name="process_title" formatted="false">Procesai</string>
@@ -458,8 +458,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">Planas · automatiškai</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">Sistema · automatiškai</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Nepriskirta · kilmė nežinoma</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Nėra biržos prekybos užpildymo, kuris būtų šio užsakymo įrodymas.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Pasenęs įrašas, kurio įrodymas nėra biržos prekybos užpildymas.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Nėra pavedimo įvykdymo biržoje, kuris patvirtintų šį įrašą.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Iš ankstesnių duomenų kilęs įrašas, kurio nepatvirtina joks pavedimo įvykdymas.</string>
     <string name="common_yes" formatted="false">Taip</string>
     <string name="common_no" formatted="false">Ne</string>
     <string name="settings_role_ai_reviewer" formatted="false">DI vertintojas</string>
@@ -483,7 +483,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">Sutampa</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">Nesutampa</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Neužbaigta</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Neapdorotos prekybos vietos reikšmės</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Neapdorotos biržos reikšmės</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Ankstesnio formato slankiojo kablelio reikšmės</string>
     <string name="venue_accounts_status_corrupt" formatted="false">Sugadinta</string>
     <string name="system_status_not_running" formatted="false">Neveikia</string>

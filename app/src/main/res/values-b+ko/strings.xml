@@ -18,7 +18,7 @@
     <string name="loading" formatted="false">불러오는 중…</string>
     <string name="size" formatted="false">수량</string>
     <string name="average_price" formatted="false">평균 가격</string>
-    <string name="mark_price" formatted="false">표시 가격</string>
+    <string name="mark_price" formatted="false">마크 가격</string>
     <string name="pnl" formatted="false">미실현 손익</string>
     <string name="instrument" formatted="false">종목</string>
     <string name="price" formatted="false">가격</string>
@@ -277,7 +277,7 @@
     <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">최고점이 표본 통화로 추적되므로 환산 기준의 낙폭은 표시하지 않습니다.</string>
     <string name="positions_timeline_equity_cashposition_position" formatted="false">포지션 가치</string>
     <string name="positions_timeline_equity_cashposition_cash" formatted="false">현금</string>
-    <string name="pnl_provenance">계산: %1$s · 평가 가격 출처: %2$s · 기준 시각: %3$s</string>
+    <string name="pnl_provenance">계산: %1$s · 마크 가격 출처: %2$s · 기준 시각: %3$s</string>
     <string name="pnl_equity_coverage">계좌 순자산 표본 수집: %1$s · 완전한 분: %2$s</string>
     <string name="pnl_execution_history">체결 내역: %1$s</string>
     <string name="process_title" formatted="false">프로세스</string>
@@ -455,8 +455,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">플랜 · 자동</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">시스템 · 자동</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">귀속 없음 · 출처 불명</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">이 예약에 대한 증거로 사용되는 거래소 거래 채우기가 없습니다.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">거래소 거래 기록이 증거로 제공되지 않는 레거시 파생 기록입니다.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">이 거래 기록을 뒷받침하는 거래소 체결 내역이 없습니다.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">이전 시스템에서 유래한 기록으로, 이를 뒷받침하는 거래소 체결 내역이 없습니다.</string>
     <string name="common_yes" formatted="false">예</string>
     <string name="common_no" formatted="false">아니요</string>
     <string name="settings_role_ai_reviewer" formatted="false">AI 검토자</string>

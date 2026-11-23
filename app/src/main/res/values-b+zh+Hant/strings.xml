@@ -211,7 +211,7 @@
     <string name="venue_accounts_free" formatted="false">可用</string>
     <string name="venue_accounts_used" formatted="false">已用</string>
     <string name="venue_accounts_numeric_source" formatted="false">數值來源</string>
-    <string name="venue_accounts_positions" formatted="false">持倉</string>
+    <string name="venue_accounts_positions" formatted="false">倉位</string>
     <string name="venue_accounts_funding" formatted="false">資金費用</string>
     <string name="venue_accounts_reconciliation" formatted="false">對帳狀態</string>
     <string name="venue_accounts_evaluation" formatted="false">評估狀態</string>
@@ -338,7 +338,7 @@
     <string name="positions_reduce_sizelabel" formatted="false">減倉數量</string>
     <string name="trading_bracket_attach" formatted="false">附加止損/止盈</string>
     <string name="trading_bracket_stoplosslabel" formatted="false">止損</string>
-    <string name="trading_bracket_takeprofitlabel" formatted="false">止盈</string>
+    <string name="trading_bracket_takeprofitlabel" formatted="false">止賺</string>
     <string name="trading_trailingstop_attach" formatted="false">附加追蹤止損</string>
     <string name="trading_trailingstop_trailamountlabel" formatted="false">追蹤距離</string>
     <string name="position_action_review" formatted="false">檢查倉位操作</string>
@@ -455,8 +455,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">計劃·自動</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">系統·自動</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">未歸因·來源不明</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">沒有任何交易所交易記錄可以作為此預訂的證據。</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">沒有交易所交易填充作為證據的遺留記錄。</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">沒有交易所成交記錄可作為此入帳記錄的憑證。</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">源自舊系統的記錄，缺少交易所成交記錄作為憑證。</string>
     <string name="common_yes" formatted="false">是</string>
     <string name="common_no" formatted="false">否</string>
     <string name="settings_role_ai_reviewer" formatted="false">AI 審核員</string>

@@ -10,7 +10,7 @@
     <string name="language" formatted="false">Gjuha</string>
     <string name="logout" formatted="false">Dil</string>
     <string name="positions" formatted="false">Pozicionet</string>
-    <string name="orders" formatted="false">Porositë</string>
+    <string name="orders" formatted="false">Urdhrat</string>
     <string name="market" formatted="false">Të dhëna tregu</string>
     <string name="wallet" formatted="false">Portofol</string>
     <string name="all_wallets" formatted="false">Të gjitha portofolet</string>
@@ -52,16 +52,16 @@
     <string name="dismiss" formatted="false">Hiq</string>
     <string name="paper" formatted="false">Demo</string>
     <string name="safety_critical" formatted="false">Kritike për sigurinë</string>
-    <string name="snapshot_limit" formatted="false">Kjo pamje tregon pozicionet aktuale dhe deri në 100 porosi e sinjalizime të fundit; nuk është historiku i plotë.</string>
+    <string name="snapshot_limit" formatted="false">Kjo pamje tregon pozicionet aktuale dhe deri në 100 urdhra e sinjalizime të fundit; nuk është historiku i plotë.</string>
     <string name="chart_window" formatted="false">Grafiku tregon 100 qirinjtë e fundit të marrë.</string>
     <string name="local_network_explanation" formatted="false">Për një backend në rrjetin lokal, lejo qasjen në rrjetin lokal para identifikimit. Backend-et në internetin publik nuk kanë nevojë për këtë leje.</string>
     <string name="local_network_allow" formatted="false">Lejo rrjetin lokal</string>
     <string name="local_network_settings" formatted="false">Hap cilësimet e aplikacionit</string>
-    <string name="order_new" formatted="false">Porosi e re</string>
-    <string name="order_entry" formatted="false">Porosi e re manuale</string>
-    <string name="order_confirm" formatted="false">Konfirmo porosinë</string>
+    <string name="order_new" formatted="false">Urdhër i ri</string>
+    <string name="order_entry" formatted="false">Urdhër i ri manual</string>
+    <string name="order_confirm" formatted="false">Konfirmo urdhrin</string>
     <string name="order_quantity" formatted="false">Sasi</string>
-    <string name="order_type" formatted="false">Lloji i porosisë</string>
+    <string name="order_type" formatted="false">Lloji i urdhrit</string>
     <string name="order_stop_price" formatted="false">Çmimi stop</string>
     <string name="order_mode" formatted="false">Modalitet</string>
     <string name="order_buy" formatted="false">Bli</string>
@@ -71,45 +71,45 @@
     <string name="order_stop" formatted="false">Stop</string>
     <string name="order_stop_limit" formatted="false">Stop Limit</string>
     <string name="order_live" formatted="false">Tregtim real</string>
-    <string name="order_review" formatted="false">Rishiko porosinë</string>
+    <string name="order_review" formatted="false">Rishiko urdhrin</string>
     <string name="order_back" formatted="false">Prapa</string>
-    <string name="order_submit" formatted="false">Konfirmo porosinë</string>
+    <string name="order_submit" formatted="false">Konfirmo urdhrin</string>
     <string name="order_submitting" formatted="false">Po dërgohet…</string>
     <string name="order_leverage" formatted="false">Leva financiare</string>
     <string name="order_reduce_only" formatted="false">Vetëm zvogëlim</string>
-    <string name="order_observation_only" formatted="false">Ky instrument është vetëm për vëzhgim — vendos porosi për një instrument që mbështet ekzekutimin.</string>
+    <string name="order_observation_only" formatted="false">Ky instrument është vetëm për vëzhgim — vendos urdhra për një instrument që mbështet ekzekutimin.</string>
     <string name="order_unknown_instrument" formatted="false">Ky instrument nuk njihet. Ringarko listën dhe provo përsëri.</string>
-    <string name="order_caps_violation" formatted="false">Kjo porosi do të tejkalonte kufijtë e sigurisë së llogarisë. Rishiko cilësimet e rrezikut dhe provo përsëri.</string>
-    <string name="order_rejected" formatted="false">Krijimi i porosisë dështoi</string>
-    <string name="order_cancel_title" formatted="false">Të anulohet porosia?</string>
-    <string name="order_cancel_confirm" formatted="false">Anulo porosinë</string>
+    <string name="order_caps_violation" formatted="false">Ky urdhër do të tejkalonte kufijtë e sigurisë së llogarisë. Rishiko cilësimet e rrezikut dhe provo përsëri.</string>
+    <string name="order_rejected" formatted="false">Krijimi i urdhrit dështoi</string>
+    <string name="order_cancel_title" formatted="false">Të anulohet urdhri?</string>
+    <string name="order_cancel_confirm" formatted="false">Anulo urdhrin</string>
     <string name="order_keep_open" formatted="false">Mbaje të hapur</string>
-    <string name="order_select_wallet" formatted="false">Zgjidh një portofol te Kreu përpara se të vendosësh një porosi.</string>
-    <string name="order_created" formatted="false">Porosia u dërgua. Rifresko për të kontrolluar gjendjen e ekzekutimit.</string>
-    <string name="order_cancel_requested" formatted="false">U kërkua anulimi. Rifresko për të kontrolluar gjendjen e porosisë.</string>
+    <string name="order_select_wallet" formatted="false">Zgjidh një portofol te Kreu përpara se të vendosësh një urdhër.</string>
+    <string name="order_created" formatted="false">Urdhri u dërgua. Rifresko për të kontrolluar gjendjen e ekzekutimit.</string>
+    <string name="order_cancel_requested" formatted="false">U kërkua anulimi. Rifresko për të kontrolluar gjendjen e urdhrit.</string>
     <string name="order_unknown_outcome" formatted="false">Rezultati i kërkesës nuk dihet. Kontrollo gjendjen para veprimeve të tjera.</string>
     <string name="order_check_status" formatted="false">Kontrollo gjendjen</string>
-    <string name="order_retry_intent" formatted="false">Riprovo të njëjtën porosi</string>
+    <string name="order_retry_intent" formatted="false">Riprovo të njëjtin urdhër</string>
     <string name="order_catalog_error" formatted="false">Nuk u ngarkuan bursat ose instrumentet. Provo përsëri.</string>
     <string name="order_no_instruments" formatted="false">Nuk ka instrumente të disponueshme për këtë bursë.</string>
     <string name="order_invalid_form" formatted="false">Vendos sasi pozitive dhe çmimet e kërkuara. Leva opsionale duhet të jetë një numër i plotë pozitiv.</string>
     <string name="order_refresh_failed" formatted="false">Kërkesa u pranua, por regjistrimet më të fundit nuk u ngarkuan. Rifresko për të kontrolluar gjendjen.</string>
     <string name="order_forbidden" formatted="false">Nuk ke më leje për këtë veprim.</string>
-    <string name="order_session_changed" formatted="false">Sesioni ose portofoli ndryshoi. Hap një porosi të re nga llogaria aktuale.</string>
+    <string name="order_session_changed" formatted="false">Sesioni ose portofoli ndryshoi. Hap një urdhër të ri nga llogaria aktuale.</string>
     <string name="order_enabled" formatted="false">Aktivizuar</string>
     <string name="order_disabled" formatted="false">Çaktivizuar</string>
     <string name="system_tools" formatted="false">Përmbledhje</string>
     <string name="desk_attach_button" formatted="false">Shto vëzhgues</string>
-    <string name="desk_attach_desk_label" formatted="false">Desk</string>
-    <string name="desk_nav_title" formatted="false">Desqet e mia</string>
+    <string name="desk_attach_desk_label" formatted="false">Tryezë tregtimi</string>
+    <string name="desk_nav_title" formatted="false">Tryezat e mia të tregtimit</string>
     <string name="desk_primary_badge" formatted="false">Kryesor</string>
     <string name="desk_attach_username_placeholder" formatted="false">Emri i saktë i përdoruesit të vëzhguesit</string>
     <string name="desk_attach_validation_username" formatted="false">Vendosni emrin e përdoruesit të vëzhguesit.</string>
     <string name="desk_description_unavailable" formatted="false">Nuk është dhënë përshkrim.</string>
-    <string name="desk_attach_help" formatted="false">Vendosni emrin e saktë të përdoruesit të vëzhguesit. Desku i ri do të jetë i disponueshëm vetëm pasi të dalë dhe të hyjë përsëri.</string>
-    <string name="desk_attach_success_message" formatted="false">Vëzhguesi duhet të dalë dhe të hyjë përsëri për të përdorur deskun e ri.</string>
-    <string name="desk_empty_message" formatted="false">Llogaria juaj nuk është e lidhur me asnjë desk.</string>
-    <string name="desk_load_error" formatted="false">Desqet nuk mund të ngarkoheshin. Provoni përsëri.</string>
+    <string name="desk_attach_help" formatted="false">Vendosni emrin e saktë të përdoruesit të vëzhguesit. Tryeza e re e tregtimit do të jetë e disponueshme vetëm pasi të dalë dhe të hyjë përsëri.</string>
+    <string name="desk_attach_success_message" formatted="false">Vëzhguesi duhet të dalë dhe të hyjë përsëri për të përdorur tryezën e re të tregtimit.</string>
+    <string name="desk_empty_message" formatted="false">Llogaria juaj nuk është e lidhur me asnjë tryezë tregtimi.</string>
+    <string name="desk_load_error" formatted="false">Tryezat e tregtimit nuk mund të ngarkoheshin. Provo përsëri.</string>
     <string name="settings_account_email" formatted="false">Email</string>
     <string name="settings_account_role">Roli: %1$s</string>
     <string name="settings_app_info_version" formatted="false">Versioni</string>
@@ -128,7 +128,7 @@
     <string name="market_catalog_error" formatted="false">\@string/error_unknown</string>
     <string name="system_health" formatted="false">Gjendja e sistemit</string>
     <string name="system_strategies" formatted="false">Strategjitë</string>
-    <string name="system_backtests" formatted="false">Backtestet</string>
+    <string name="system_backtests" formatted="false">Testet historike</string>
     <string name="system_users" formatted="false">Përdoruesit</string>
     <string name="system_delegates" formatted="false">Delegatët AI</string>
     <string name="system_version" formatted="false">Versioni</string>
@@ -175,8 +175,8 @@
     <string name="notification_defaults_low" formatted="false">I ulët</string>
     <string name="notification_defaults_medium" formatted="false">Mesatar</string>
     <string name="notification_defaults_high" formatted="false">I lartë</string>
-    <string name="notification_defaults_fill" formatted="false">Porosia u plotësua</string>
-    <string name="notification_defaults_rejected" formatted="false">Porosia u refuzua</string>
+    <string name="notification_defaults_fill" formatted="false">Urdhri u ekzekutua</string>
+    <string name="notification_defaults_rejected" formatted="false">Urdhri u refuzua</string>
     <string name="notification_defaults_stop" formatted="false">Stop-loss u aktivizua</string>
     <string name="notification_defaults_margin" formatted="false">Paralajmërim për marzhën</string>
     <string name="notification_defaults_system" formatted="false">Gabim sistemi</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">Mbivendosja e kapitalit</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">Kapital</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">Rënia aktuale nga kulmi</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Vetëm bursa spot — balancat në bursat e tjera përjashtohen.</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Vetëm bursa spot — gjendjet në bursat e tjera përjashtohen.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Depozitat dhe tërheqjet e jashtme nuk janë përjashtuar nga llogaritja.</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">Këto shifra rillogariten nga %1$s në mbylljen e çdo minute, nuk maten drejtpërdrejt në këtë monedhë.</string>
     <string name="positions_timeline_equity_honesty_pricedon">Çmimi sipas %1$s.</string>
@@ -334,12 +334,12 @@
     <string name="positions_accessibility_label_closebutton" formatted="false">Mbyll pozicionin</string>
     <string name="positions_accessibility_label_reducebutton" formatted="false">Redukto pozicionin</string>
     <string name="positions_reduce_cancel" formatted="false">Anulo</string>
-    <string name="positions_reduce_footer" formatted="false">100% e mbyll pozicionin. Dorëzon një porosi tregu vetëm reduktim kundër anës së kundërt.</string>
+    <string name="positions_reduce_footer" formatted="false">100% e mbyll pozicionin. Dorëzon një urdhër tregu vetëm reduktim kundër anës së kundërt.</string>
     <string name="positions_reduce_sizelabel" formatted="false">Madhësi reduktimi</string>
     <string name="trading_bracket_attach" formatted="false">Bashkëngjit SL / TP</string>
-    <string name="trading_bracket_stoplosslabel" formatted="false">Stop loss</string>
-    <string name="trading_bracket_takeprofitlabel" formatted="false">Take profit</string>
-    <string name="trading_trailingstop_attach" formatted="false">Bashkëngjit trailing stop</string>
+    <string name="trading_bracket_stoplosslabel" formatted="false">Ndalimi i humbjes</string>
+    <string name="trading_bracket_takeprofitlabel" formatted="false">Realizimi i fitimit</string>
+    <string name="trading_trailingstop_attach" formatted="false">Bashkëngjit stop ndjekës</string>
     <string name="trading_trailingstop_trailamountlabel" formatted="false">Sasi trail</string>
     <string name="position_action_review" formatted="false">Rishiko veprimin mbi pozicionin</string>
     <string name="position_action_confirm" formatted="false">Konfirmo veprimin</string>
@@ -409,9 +409,9 @@
     <string name="home_connection_authenticating">Po autentikohet…</string>
     <string name="home_connection_disconnected">I shkëputur</string>
     <string name="home_active_strategies">Strategji aktive</string>
-    <string name="home_active_orders">Porosi aktive</string>
+    <string name="home_active_orders">Urdhra aktivë</string>
     <string name="home_section_latest_alert">Sinjalizimi i fundit</string>
-    <string name="home_section_recent_orders">Porositë e fundit</string>
+    <string name="home_section_recent_orders">Urdhrat e fundit</string>
     <string name="home_position_qty_at_price">Sasi: %1$s @ %2$s</string>
     <plurals name="home_heartbeat_age_seconds">
         <item quantity="one">%1$d sekondë më parë</item>
@@ -423,7 +423,7 @@
     <string name="records_status_filled" formatted="false">Ekzekutuar</string>
     <string name="records_status_cancelled" formatted="false">Anuluar</string>
     <string name="records_status_rejected" formatted="false">Refuzuar</string>
-    <string name="records_alert_type_order_unknown" formatted="false">Gjendja e porosisë e panjohur</string>
+    <string name="records_alert_type_order_unknown" formatted="false">Gjendja e urdhrit e panjohur</string>
     <string name="venue_accounts_status_observed" formatted="false">I vëzhguar</string>
     <string name="venue_accounts_status_simulated" formatted="false">Të simuluara</string>
     <string name="venue_accounts_status_stale" formatted="false">Të vjetra</string>
@@ -456,8 +456,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">Plan · i automatizuar</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">Sistem · i automatizuar</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">I paatribuuar · prejardhje e panjohur</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Nuk ka asnjë mbushje tregtare në shkëmbim që shërben si dëshmi për këtë rezervim.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Të dhënat e përftuara nga trashëgimia për të cilat asnjë këmbim tregtar nuk shërben si dëshmi.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Asnjë ekzekutim urdhri në bursë nuk e vërteton këtë regjistrim.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Regjistrim i prejardhur nga të dhëna të vjetra, pa ekzekutim urdhri që e vërteton.</string>
     <string name="common_yes" formatted="false">Po</string>
     <string name="common_no" formatted="false">Jo</string>
     <string name="settings_role_ai_reviewer" formatted="false">Shqyrtues i AI</string>

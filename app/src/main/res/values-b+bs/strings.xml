@@ -202,9 +202,9 @@
     <string name="venue_accounts_refresh" formatted="false">Osvježi</string>
     <string name="venue_accounts_failed" formatted="false">Stanje računa na berzi nije moguće učitati. Račun nije prazan; podaci su trenutno nedostupni.</string>
     <string name="venue_accounts_authoritative" formatted="false">Mjerodavni podaci berze u stvarnom vremenu, zabilježeni tokom perioda važenja.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Ovaj račun prikazuje posljednje poznate, simulirane ili nedostupne podatke — to nisu mjerodavna stanja berze u stvarnom vremenu.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Ovaj račun prikazuje posljednje poznate, simulirane ili nedostupne podatke — to nisu mjerodavna salda berze u stvarnom vremenu.</string>
     <string name="venue_accounts_valuation" formatted="false">Vrednovanje</string>
-    <string name="venue_accounts_balances" formatted="false">Bilansi</string>
+    <string name="venue_accounts_balances" formatted="false">Salda</string>
     <string name="venue_accounts_observed" formatted="false">Vrijeme opažanja</string>
     <string name="venue_accounts_source" formatted="false">Izvorno opažanje</string>
     <string name="venue_accounts_total" formatted="false">Ukupno</string>
@@ -457,8 +457,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">Plan · automatizovano</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">Sistem · automatizovano</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Bez atribucije · porijeklo nepoznato</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Ne postoji ispuna berzanske trgovine koja služi kao dokaz za ovu rezervaciju.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Naslijeđeni zapisi za koje nema popunjavanja trgovine na berzi ne služi kao dokaz.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Nijedno izvršenje naloga na berzi ne potvrđuje ovaj evidentirani zapis.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Zapis naslijeđen iz starijih podataka bez potvrđujućeg izvršenja naloga.</string>
     <string name="common_yes" formatted="false">Da</string>
     <string name="common_no" formatted="false">Ne</string>
     <string name="settings_role_ai_reviewer" formatted="false">AI recenzent</string>
@@ -470,7 +470,7 @@
     <string name="system_status_degraded" formatted="false">Ograničen rad</string>
     <string name="market_instrument_kind_spot" formatted="false">Spot</string>
     <string name="market_instrument_kind_perpetual" formatted="false">Trajni ugovor</string>
-    <string name="market_instrument_kind_future" formatted="false">Terminski ugovor</string>
+    <string name="market_instrument_kind_future" formatted="false">Fjučers ugovor</string>
     <string name="market_instrument_kind_etf" formatted="false">ETF</string>
     <string name="market_instrument_kind_option" formatted="false">Opcija</string>
     <string name="venue_accounts_valuation_native_only" formatted="false">Samo izvorne valute</string>

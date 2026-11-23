@@ -50,7 +50,7 @@
     <string name="error_service" formatted="false">Backend kunde inte slutföra begäran. Försök igen.</string>
     <string name="error_unknown" formatted="false">Något gick fel. Försök igen.</string>
     <string name="dismiss" formatted="false">Avfärda</string>
-    <string name="paper" formatted="false">Demo</string>
+    <string name="paper" formatted="false">Simulerat</string>
     <string name="safety_critical" formatted="false">Säkerhetskritisk</string>
     <string name="snapshot_limit" formatted="false">Den här vyn visar aktuella positioner och upp till 100 senaste ordrar och larm; det är inte en fullständig historik.</string>
     <string name="chart_window" formatted="false">Diagrammet visar de 100 senast hämtade candles.</string>
@@ -252,7 +252,7 @@
     <string name="positions_timeline_incompleteness_reasons_execution_size_invalid" formatted="false">Ogiltig utförandestorlek</string>
     <string name="positions_timeline_incompleteness_reasons_execution_price_invalid" formatted="false">Ogiltigt utförandepris</string>
     <string name="positions_timeline_incompleteness_reasons_fx_conversion_unproven" formatted="false">FX-konverteringen kan inte styrkas</string>
-    <string name="positions_timeline_incompleteness_reasons_mark_unavailable" formatted="false">Referenspriset är inte tillgängligt</string>
+    <string name="positions_timeline_incompleteness_reasons_mark_unavailable" formatted="false">Markpriset är inte tillgängligt</string>
     <string name="positions_timeline_incompleteness_reasons_cumulative_non_finite" formatted="false">Det ackumulerade värdet är inte ändligt</string>
     <string name="positions_timeline_incompleteness_reasons_unrealized_non_finite" formatted="false">Orealiserad P&amp;L är inte ändlig</string>
     <string name="positions_timeline_incompleteness_reasons_net_non_finite" formatted="false">P&amp;L netto är inte ändlig</string>
@@ -419,8 +419,8 @@
     </plurals>
     <string name="records_status_new" formatted="false">Ny</string>
     <string name="records_status_open" formatted="false">Öppen</string>
-    <string name="records_status_partially_filled" formatted="false">Delvis fylld</string>
-    <string name="records_status_filled" formatted="false">Fylld</string>
+    <string name="records_status_partially_filled" formatted="false">Delvis utförd</string>
+    <string name="records_status_filled" formatted="false">Utförd</string>
     <string name="records_status_cancelled" formatted="false">Makulerad</string>
     <string name="records_status_rejected" formatted="false">Avvisad</string>
     <string name="records_alert_type_order_unknown" formatted="false">Orderstatus okänd</string>
@@ -450,14 +450,14 @@
     <string name="process_role_strategy" formatted="false">Strategi</string>
     <string name="process_role_backtest" formatted="false">Backtest</string>
     <string name="positions_timeline_incompleteness_scope_global" formatted="false">Hela portföljen</string>
-    <string name="positions_timeline_incompleteness_tier_mark_incomplete" formatted="false">OFULLSTÄNDIGT REFERENSPRIS</string>
+    <string name="positions_timeline_incompleteness_tier_mark_incomplete" formatted="false">OFULLSTÄNDIGT MARKPRIS</string>
     <string name="positions_timeline_incompleteness_tier_untrusted" formatted="false">OTILLFÖRLITLIG</string>
     <string name="positions_timeline_attribution_origins_manual" formatted="false">Manuell · direkt</string>
     <string name="positions_timeline_attribution_origins_plan" formatted="false">Plan · automatiserad</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">System · automatiserad</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Ej attribuerad · okänt ursprung</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Det finns ingen byteshandel som fungerar som bevis för denna bokning.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Legacy-härledd post för vilken ingen börshandel fyller fungerar som bevis.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Inget handelsutförande på börsen styrker denna bokföringspost.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Post med ursprung i äldre data utan styrkande handelsutförande.</string>
     <string name="common_yes" formatted="false">Ja</string>
     <string name="common_no" formatted="false">Nej</string>
     <string name="settings_role_ai_reviewer" formatted="false">AI-granskare</string>

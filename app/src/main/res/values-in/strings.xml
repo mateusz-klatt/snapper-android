@@ -19,7 +19,7 @@
     <string name="size" formatted="false">Ukuran</string>
     <string name="average_price" formatted="false">Harga rata-rata</string>
     <string name="mark_price" formatted="false">Harga mark</string>
-    <string name="pnl" formatted="false">PnL belum direalisasi</string>
+    <string name="pnl" formatted="false">P&amp;L Belum Terealisasi</string>
     <string name="instrument" formatted="false">Instrumen</string>
     <string name="price" formatted="false">Harga</string>
     <string name="filled" formatted="false">Terisi</string>
@@ -50,7 +50,7 @@
     <string name="error_service" formatted="false">Backend tidak dapat menyelesaikan permintaan ini. Silakan coba lagi.</string>
     <string name="error_unknown" formatted="false">Terjadi kesalahan. Silakan coba lagi.</string>
     <string name="dismiss" formatted="false">Tutup</string>
-    <string name="paper" formatted="false">Demo</string>
+    <string name="paper" formatted="false">Simulasi</string>
     <string name="safety_critical" formatted="false">Penting untuk keselamatan</string>
     <string name="snapshot_limit" formatted="false">Tampilan ini menunjukkan posisi saat ini dan hingga 100 order serta peringatan terbaru; ini bukan riwayat lengkap.</string>
     <string name="chart_window" formatted="false">Grafik menampilkan 100 candle terakhir yang diambil.</string>
@@ -100,7 +100,7 @@
     <string name="order_disabled" formatted="false">Nonaktif</string>
     <string name="system_tools" formatted="false">Ringkasan</string>
     <string name="desk_attach_button" formatted="false">Tambahkan pengamat</string>
-    <string name="desk_attach_desk_label" formatted="false">Meja</string>
+    <string name="desk_attach_desk_label" formatted="false">Desk perdagangan</string>
     <string name="desk_nav_title" formatted="false">Desk saya</string>
     <string name="desk_primary_badge" formatted="false">Utama</string>
     <string name="desk_attach_username_placeholder" formatted="false">Nama pengguna pengamat yang tepat</string>
@@ -455,8 +455,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">Rencana · otomatis</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">Sistem · otomatis</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Tanpa atribusi · asal-usul tidak diketahui</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Tidak ada isi perdagangan pertukaran yang menjadi bukti pemesanan ini.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Catatan turunan lama yang tidak ada bukti perdagangan bursa yang berfungsi sebagai bukti.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Tidak ada eksekusi pesanan di bursa yang menjadi bukti untuk pencatatan transaksi ini.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Catatan yang berasal dari sistem lama tanpa eksekusi pesanan di bursa sebagai bukti.</string>
     <string name="common_yes" formatted="false">Ya</string>
     <string name="common_no" formatted="false">Tidak</string>
     <string name="settings_role_ai_reviewer" formatted="false">Peninjau AI</string>

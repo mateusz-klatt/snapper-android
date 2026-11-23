@@ -66,8 +66,8 @@
     <string name="order_mode" formatted="false">Tapa</string>
     <string name="order_buy" formatted="false">Osta</string>
     <string name="order_sell" formatted="false">Myy</string>
-    <string name="order_market" formatted="false">Markkina</string>
-    <string name="order_limit" formatted="false">Limit</string>
+    <string name="order_market" formatted="false">Markkinahintainen</string>
+    <string name="order_limit" formatted="false">Rajahintainen</string>
     <string name="order_stop" formatted="false">Stop</string>
     <string name="order_stop_limit" formatted="false">Stop Limit</string>
     <string name="order_live" formatted="false">Todellinen</string>
@@ -100,16 +100,16 @@
     <string name="order_disabled" formatted="false">Pois käytöstä</string>
     <string name="system_tools" formatted="false">Yleiskatsaus</string>
     <string name="desk_attach_button" formatted="false">Lisää katselija</string>
-    <string name="desk_attach_desk_label" formatted="false">Desk</string>
-    <string name="desk_nav_title" formatted="false">Omat deskit</string>
+    <string name="desk_attach_desk_label" formatted="false">Kaupankäyntiyksikkö</string>
+    <string name="desk_nav_title" formatted="false">Omat kaupankäyntiyksiköt</string>
     <string name="desk_primary_badge" formatted="false">Ensisijainen</string>
     <string name="desk_attach_username_placeholder" formatted="false">Katselijan tarkka käyttäjänimi</string>
     <string name="desk_attach_validation_username" formatted="false">Anna katselijan käyttäjänimi.</string>
     <string name="desk_description_unavailable" formatted="false">Kuvausta ei ole annettu.</string>
-    <string name="desk_attach_help" formatted="false">Anna katselijan tarkka käyttäjänimi. Uusi desk tulee käyttöön vasta, kun katselija on kirjautunut ulos ja takaisin sisään.</string>
-    <string name="desk_attach_success_message" formatted="false">Katselijan on kirjauduttava ulos ja takaisin sisään ennen kuin uusi desk tulee käyttöön.</string>
-    <string name="desk_empty_message" formatted="false">Tiliäsi ei ole liitetty yhteenkään deskiin.</string>
-    <string name="desk_load_error" formatted="false">Deskejä ei voitu ladata. Yritä uudelleen.</string>
+    <string name="desk_attach_help" formatted="false">Anna katselijan tarkka käyttäjänimi. Uusi kaupankäyntiyksikkö tulee käyttöön vasta, kun katselija on kirjautunut ulos ja takaisin sisään.</string>
+    <string name="desk_attach_success_message" formatted="false">Katselijan on kirjauduttava ulos ja takaisin sisään ennen kuin uusi kaupankäyntiyksikkö tulee käyttöön.</string>
+    <string name="desk_empty_message" formatted="false">Tiliäsi ei ole liitetty yhteenkään kaupankäyntiyksikköön.</string>
+    <string name="desk_load_error" formatted="false">Kaupankäyntiyksiköitä ei voitu ladata. Yritä uudelleen.</string>
     <string name="settings_account_email" formatted="false">Sähköposti</string>
     <string name="settings_account_role">Rooli: %1$s</string>
     <string name="settings_app_info_version" formatted="false">Versio</string>
@@ -239,7 +239,7 @@
     <string name="positions_timeline_attribution_valuesemantics" formatted="false">Näytetty nolla on todennettu. Merkintä ”Ei todennettavissa” tarkoittaa, ettei arvoa voitu todentaa.</string>
     <string name="positions_timeline_contributions_title" formatted="false">Viimeisimmät instrumenttikohtaiset vaikutukset</string>
     <string name="positions_timeline_contributions_realized" formatted="false">Realisoitunut P&amp;L</string>
-    <string name="positions_timeline_contributions_fees" formatted="false">Kulut</string>
+    <string name="positions_timeline_contributions_fees" formatted="false">Palkkiot</string>
     <string name="positions_timeline_contributions_accrual" formatted="false">Kertynyt rahoitus</string>
     <string name="positions_timeline_contributions_unrealized" formatted="false">Realisoitumaton P&amp;L</string>
     <string name="positions_timeline_incompleteness_reasons_scope_order_regression" formatted="false">Aikaleima taantui alueen järjestyksessä</string>
@@ -456,8 +456,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">Suunnitelma · automaattinen</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">Järjestelmä · automaattinen</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Kohdistamaton · alkuperä tuntematon</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Ei pörssikaupan täyttöä, joka toimii todisteena tälle varaukselle.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Perinnöstä johdettu tietue, jolle mikään pörssikauppatäyttö ei ole todisteena.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Mikään pörssin toimeksiantototeutus ei vahvista tätä kirjausta.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Vanhoista tiedoista periytyvä kirjaus, jota mikään toimeksiantototeutus ei vahvista.</string>
     <string name="common_yes" formatted="false">Kyllä</string>
     <string name="common_no" formatted="false">Ei</string>
     <string name="settings_role_ai_reviewer" formatted="false">Tekoälyarvioija</string>

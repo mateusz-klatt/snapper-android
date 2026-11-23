@@ -9,7 +9,7 @@
     <string name="backend" formatted="false">自定义后端 URL</string>
     <string name="language" formatted="false">语言</string>
     <string name="logout" formatted="false">退出登录</string>
-    <string name="positions" formatted="false">仓位</string>
+    <string name="positions" formatted="false">持仓</string>
     <string name="orders" formatted="false">订单</string>
     <string name="market" formatted="false">市场数据</string>
     <string name="wallet" formatted="false">钱包</string>
@@ -52,7 +52,7 @@
     <string name="dismiss" formatted="false">忽略</string>
     <string name="paper" formatted="false">模拟</string>
     <string name="safety_critical" formatted="false">安全关键</string>
-    <string name="snapshot_limit" formatted="false">此视图显示当前仓位以及最多 100 条近期订单和提醒，并非完整历史记录。</string>
+    <string name="snapshot_limit" formatted="false">此视图显示当前持仓以及最多 100 条近期订单和提醒，并非完整历史记录。</string>
     <string name="chart_window" formatted="false">图表显示最近获取的 100 根蜡烛。</string>
     <string name="local_network_explanation" formatted="false">使用局域网中的后端时，请在登录前允许访问本地网络。公共互联网后端不需要此权限。</string>
     <string name="local_network_allow" formatted="false">允许本地网络访问</string>
@@ -211,7 +211,7 @@
     <string name="venue_accounts_free" formatted="false">可用</string>
     <string name="venue_accounts_used" formatted="false">已用</string>
     <string name="venue_accounts_numeric_source" formatted="false">数值来源</string>
-    <string name="venue_accounts_positions" formatted="false">当前仓位</string>
+    <string name="venue_accounts_positions" formatted="false">当前持仓</string>
     <string name="venue_accounts_funding" formatted="false">资金费用</string>
     <string name="venue_accounts_reconciliation" formatted="false">对账状态</string>
     <string name="venue_accounts_evaluation" formatted="false">评估状态</string>
@@ -275,7 +275,7 @@
     <string name="positions_timeline_equity_honesty_pricedon">按 %1$s 定价。</string>
     <string name="positions_timeline_equity_honesty_conversionwithheld">因缺少经证实的收盘价而剔除的分钟数：%1$s。</string>
     <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">累计峰值以采样货币追踪，因此不显示换算后的回撤。</string>
-    <string name="positions_timeline_equity_cashposition_position" formatted="false">仓位价值</string>
+    <string name="positions_timeline_equity_cashposition_position" formatted="false">持仓价值</string>
     <string name="positions_timeline_equity_cashposition_cash" formatted="false">现金</string>
     <string name="pnl_provenance">计算：%1$s · 标记价格来源：%2$s · 截至：%3$s</string>
     <string name="pnl_equity_coverage">权益采样：%1$s · 完整分钟数：%2$s</string>
@@ -334,19 +334,19 @@
     <string name="positions_accessibility_label_closebutton" formatted="false">平仓</string>
     <string name="positions_accessibility_label_reducebutton" formatted="false">减仓</string>
     <string name="positions_reduce_cancel" formatted="false">取消</string>
-    <string name="positions_reduce_footer" formatted="false">100% 将平掉该仓位。提交一笔相反方向的只减仓市价订单。</string>
+    <string name="positions_reduce_footer" formatted="false">100% 将平掉该持仓。提交一笔相反方向的只减仓市价订单。</string>
     <string name="positions_reduce_sizelabel" formatted="false">减仓数量</string>
     <string name="trading_bracket_attach" formatted="false">附加止损 / 止盈</string>
     <string name="trading_bracket_stoplosslabel" formatted="false">止损</string>
     <string name="trading_bracket_takeprofitlabel" formatted="false">止盈</string>
     <string name="trading_trailingstop_attach" formatted="false">附加追踪止损</string>
     <string name="trading_trailingstop_trailamountlabel" formatted="false">追踪距离</string>
-    <string name="position_action_review" formatted="false">核对仓位操作</string>
+    <string name="position_action_review" formatted="false">核对持仓操作</string>
     <string name="position_action_confirm" formatted="false">确认操作</string>
     <string name="position_action_accepted" formatted="false">请求已接受。请刷新以查看执行状态。</string>
     <string name="position_action_retry" formatted="false">重试同一请求</string>
     <string name="position_action_minimum_lock" formatted="false">最低锁定利润 (%)</string>
-    <string name="position_action_cycle" formatted="false">仓位周期</string>
+    <string name="position_action_cycle" formatted="false">持仓周期</string>
     <string name="position_action_invalid" formatted="false">请检查输入值后再继续。</string>
     <string name="display_financial_title" formatted="false">金融颜色惯例</string>
     <string name="display_financial_auto" formatted="false">匹配我的地区（自动）</string>
@@ -455,8 +455,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">计划·自动</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">系统·自动</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">未归因·来源未知</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">没有任何交易所交易记录可以作为此预订的证据。</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">没有交易所交易填充作为证据的遗留记录。</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">没有交易所成交记录可作为此入账记录的凭证。</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">源自旧系统的记录，缺少交易所成交记录作为凭证。</string>
     <string name="common_yes" formatted="false">是</string>
     <string name="common_no" formatted="false">否</string>
     <string name="settings_role_ai_reviewer" formatted="false">AI 审核员</string>

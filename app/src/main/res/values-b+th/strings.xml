@@ -9,7 +9,7 @@
     <string name="backend" formatted="false">URL แบ็กเอนด์กำหนดเอง</string>
     <string name="language" formatted="false">ภาษา</string>
     <string name="logout" formatted="false">ออกจากระบบ</string>
-    <string name="positions" formatted="false">โพซิชัน</string>
+    <string name="positions" formatted="false">สถานะ</string>
     <string name="orders" formatted="false">คำสั่ง</string>
     <string name="market" formatted="false">ข้อมูลตลาด</string>
     <string name="wallet" formatted="false">กระเป๋าเงิน</string>
@@ -18,8 +18,8 @@
     <string name="loading" formatted="false">กำลังโหลด…</string>
     <string name="size" formatted="false">ขนาด</string>
     <string name="average_price" formatted="false">ราคาเฉลี่ย</string>
-    <string name="mark_price" formatted="false">Mark Price</string>
-    <string name="pnl" formatted="false">PnL ที่ยังไม่เกิดขึ้นจริง</string>
+    <string name="mark_price" formatted="false">ราคาอ้างอิง</string>
+    <string name="pnl" formatted="false">P&amp;L ที่ยังไม่รับรู้</string>
     <string name="instrument" formatted="false">ตราสาร</string>
     <string name="price" formatted="false">ราคา</string>
     <string name="filled" formatted="false">จับคู่แล้ว</string>
@@ -38,7 +38,7 @@
     <string name="settings" formatted="false">การตั้งค่า</string>
     <string name="save" formatted="false">บันทึก</string>
     <string name="refresh" formatted="false">รีเฟรช</string>
-    <string name="exchange" formatted="false">เอ็กซ์เชนจ์</string>
+    <string name="exchange" formatted="false">ตลาดซื้อขาย</string>
     <string name="load_market" formatted="false">โหลดแท่งเทียน</string>
     <string name="empty" formatted="false">ไม่มีรายการ</string>
     <string name="snapshot_note" formatted="false">ข้อมูลสแนปช็อต รีเฟรชเพื่อรับรายการล่าสุดที่มี</string>
@@ -50,9 +50,9 @@
     <string name="error_service" formatted="false">แบ็กเอนด์ดำเนินการตามคำขอนี้ไม่สำเร็จ โปรดลองอีกครั้ง</string>
     <string name="error_unknown" formatted="false">เกิดข้อผิดพลาด โปรดลองอีกครั้ง</string>
     <string name="dismiss" formatted="false">ปิด</string>
-    <string name="paper" formatted="false">ทดลอง</string>
+    <string name="paper" formatted="false">จำลอง</string>
     <string name="safety_critical" formatted="false">สำคัญต่อความปลอดภัย</string>
-    <string name="snapshot_limit" formatted="false">มุมมองนี้แสดงโพซิชันปัจจุบันและคำสั่งกับการแจ้งเตือนล่าสุดสูงสุด 100 รายการ ไม่ใช่ประวัติทั้งหมด</string>
+    <string name="snapshot_limit" formatted="false">มุมมองนี้แสดงสถานะปัจจุบันและคำสั่งกับการแจ้งเตือนล่าสุดสูงสุด 100 รายการ ไม่ใช่ประวัติทั้งหมด</string>
     <string name="chart_window" formatted="false">กราฟแสดงแท่งเทียน 100 แท่งล่าสุดที่ดึงมา</string>
     <string name="local_network_explanation" formatted="false">หากใช้แบ็กเอนด์ในเครือข่ายภายใน โปรดอนุญาตการเข้าถึงเครือข่ายภายในก่อนเข้าสู่ระบบ แบ็กเอนด์บนอินเทอร์เน็ตสาธารณะไม่ต้องใช้สิทธิ์นี้</string>
     <string name="local_network_allow" formatted="false">อนุญาตเครือข่ายภายใน</string>
@@ -66,8 +66,8 @@
     <string name="order_mode" formatted="false">โหมด</string>
     <string name="order_buy" formatted="false">ซื้อ</string>
     <string name="order_sell" formatted="false">ขาย</string>
-    <string name="order_market" formatted="false">มาร์เก็ต</string>
-    <string name="order_limit" formatted="false">จำกัดราคา</string>
+    <string name="order_market" formatted="false">คำสั่งตลาด</string>
+    <string name="order_limit" formatted="false">คำสั่งจำกัดราคา</string>
     <string name="order_stop" formatted="false">หยุด</string>
     <string name="order_stop_limit" formatted="false">หยุดแบบจำกัดราคา</string>
     <string name="order_live" formatted="false">ซื้อขายจริง</string>
@@ -100,16 +100,16 @@
     <string name="order_disabled" formatted="false">ปิดใช้งาน</string>
     <string name="system_tools" formatted="false">ภาพรวม</string>
     <string name="desk_attach_button" formatted="false">เพิ่มผู้ดู</string>
-    <string name="desk_attach_desk_label" formatted="false">เดสก์</string>
-    <string name="desk_nav_title" formatted="false">เดสก์ของฉัน</string>
+    <string name="desk_attach_desk_label" formatted="false">โต๊ะซื้อขาย</string>
+    <string name="desk_nav_title" formatted="false">โต๊ะซื้อขายของฉัน</string>
     <string name="desk_primary_badge" formatted="false">หลัก</string>
     <string name="desk_attach_username_placeholder" formatted="false">ชื่อผู้ใช้ที่ถูกต้องของผู้ดู</string>
     <string name="desk_attach_validation_username" formatted="false">ป้อนชื่อผู้ใช้ของผู้ดู</string>
     <string name="desk_description_unavailable" formatted="false">ไม่มีคำอธิบาย</string>
-    <string name="desk_attach_help" formatted="false">ป้อนชื่อผู้ใช้ที่ถูกต้องของผู้ดู เดสก์ใหม่จะพร้อมใช้งานหลังจากผู้ดูออกจากระบบและลงชื่อเข้าใช้อีกครั้งเท่านั้น</string>
-    <string name="desk_attach_success_message" formatted="false">ผู้ดูต้องออกจากระบบและลงชื่อเข้าใช้อีกครั้งก่อนจึงจะใช้เดสก์ใหม่ได้</string>
-    <string name="desk_empty_message" formatted="false">บัญชีของคุณไม่ได้เชื่อมกับเดสก์ใด</string>
-    <string name="desk_load_error" formatted="false">ไม่สามารถโหลดเดสก์ได้ โปรดลองอีกครั้ง</string>
+    <string name="desk_attach_help" formatted="false">ป้อนชื่อผู้ใช้ที่ถูกต้องของผู้ดู โต๊ะซื้อขายใหม่จะพร้อมใช้งานหลังจากผู้ดูออกจากระบบและลงชื่อเข้าใช้อีกครั้งเท่านั้น</string>
+    <string name="desk_attach_success_message" formatted="false">ผู้ดูต้องออกจากระบบและลงชื่อเข้าใช้อีกครั้งก่อนจึงจะใช้โต๊ะซื้อขายใหม่ได้</string>
+    <string name="desk_empty_message" formatted="false">บัญชีของคุณไม่ได้เชื่อมกับโต๊ะซื้อขายใด</string>
+    <string name="desk_load_error" formatted="false">ไม่สามารถโหลดโต๊ะซื้อขายได้ โปรดลองอีกครั้ง</string>
     <string name="settings_account_email" formatted="false">อีเมล</string>
     <string name="settings_account_role">บทบาท: %1$s</string>
     <string name="settings_app_info_version" formatted="false">เวอร์ชัน</string>
@@ -177,7 +177,7 @@
     <string name="notification_defaults_high" formatted="false">สูง</string>
     <string name="notification_defaults_fill" formatted="false">คำสั่งถูกจับคู่แล้ว</string>
     <string name="notification_defaults_rejected" formatted="false">คำสั่งถูกปฏิเสธ</string>
-    <string name="notification_defaults_stop" formatted="false">คำสั่งหยุดขาดทุนถูกเรียกใช้</string>
+    <string name="notification_defaults_stop" formatted="false">คำสั่งตัดขาดทุนถูกเรียกใช้</string>
     <string name="notification_defaults_margin" formatted="false">คำเตือนมาร์จิ้น</string>
     <string name="notification_defaults_system" formatted="false">ข้อผิดพลาดของระบบ</string>
     <string name="notification_defaults_saved" formatted="false">ตกลง</string>
@@ -198,11 +198,11 @@
     <string name="signals_empty" formatted="false">ไม่มีสัญญาณการเทรดที่ตรงกับตัวกรองปัจจุบันของคุณ</string>
     <string name="signals_export" formatted="false">ส่งออก</string>
     <string name="signals_export_failed" formatted="false">ส่งไม่สำเร็จ</string>
-    <string name="venue_accounts_title" formatted="false">บัญชีแลกเปลี่ยน</string>
+    <string name="venue_accounts_title" formatted="false">บัญชีตลาดซื้อขาย</string>
     <string name="venue_accounts_refresh" formatted="false">รีเฟรช</string>
-    <string name="venue_accounts_failed" formatted="false">ไม่สามารถโหลดสถานะบัญชีศูนย์ซื้อขายได้ บัญชีไม่ได้ว่างเปล่า แต่ขณะนี้ยังไม่มีข้อมูลให้ใช้งาน</string>
-    <string name="venue_accounts_authoritative" formatted="false">ข้อมูลจริงจากการแลกเปลี่ยนในหน้าต่างสิทธิ์</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">บัญชีนี้แสดงข้อมูลล่าสุดที่ทราบ ข้อมูลจำลอง หรือข้อมูลที่ไม่พร้อมใช้งาน — ไม่ใช่ยอดคงเหลือแบบเรียลไทม์ที่เชื่อถือได้จากศูนย์ซื้อขาย</string>
+    <string name="venue_accounts_failed" formatted="false">ไม่สามารถโหลดสถานะบัญชีตลาดซื้อขายได้ บัญชีไม่ได้ว่างเปล่า แต่ขณะนี้ยังไม่มีข้อมูลให้ใช้งาน</string>
+    <string name="venue_accounts_authoritative" formatted="false">ข้อมูลจริงจากตลาดซื้อขายในหน้าต่างสิทธิ์</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">บัญชีนี้แสดงข้อมูลล่าสุดที่ทราบ ข้อมูลจำลอง หรือข้อมูลที่ไม่พร้อมใช้งาน — ไม่ใช่ยอดคงเหลือแบบเรียลไทม์ที่เชื่อถือได้จากตลาดซื้อขาย</string>
     <string name="venue_accounts_valuation" formatted="false">การประเมินมูลค่า</string>
     <string name="venue_accounts_balances" formatted="false">ยอดคงเหลือ</string>
     <string name="venue_accounts_observed" formatted="false">เวลาที่สังเกต</string>
@@ -211,7 +211,7 @@
     <string name="venue_accounts_free" formatted="false">พร้อมใช้</string>
     <string name="venue_accounts_used" formatted="false">ใช้ไป</string>
     <string name="venue_accounts_numeric_source" formatted="false">ที่มาของตัวเลข</string>
-    <string name="venue_accounts_positions" formatted="false">โพซิชันที่เปิดอยู่</string>
+    <string name="venue_accounts_positions" formatted="false">สถานะที่เปิดอยู่</string>
     <string name="venue_accounts_funding" formatted="false">ค่าฟันดิง</string>
     <string name="venue_accounts_reconciliation" formatted="false">สถานะการกระทบยอด</string>
     <string name="venue_accounts_evaluation" formatted="false">สถานะการประเมิน</string>
@@ -245,7 +245,7 @@
     <string name="positions_timeline_incompleteness_reasons_scope_order_regression" formatted="false">ลำดับของขอบเขตย้อนกลับ</string>
     <string name="positions_timeline_incompleteness_reasons_before_activation" formatted="false">จุดข้อมูลอยู่ก่อนการเปิดใช้งาน</string>
     <string name="positions_timeline_incompleteness_reasons_activation_baseline_non_finite" formatted="false">ค่าฐานเมื่อเปิดใช้งานไม่ใช่จำนวนจำกัด</string>
-    <string name="positions_timeline_incompleteness_reasons_fill_evidence_gap" formatted="false">หลักฐานการดำเนินคำสั่งที่บันทึกถาวรขาดหาย</string>
+    <string name="positions_timeline_incompleteness_reasons_fill_evidence_gap" formatted="false">หลักฐานการจับคู่คำสั่งซื้อขายที่บันทึกถาวรขาดหาย</string>
     <string name="positions_timeline_incompleteness_reasons_seed_quantity_non_finite" formatted="false">ปริมาณตั้งต้นไม่ใช่จำนวนจำกัด</string>
     <string name="positions_timeline_incompleteness_reasons_cost_basis_unavailable" formatted="false">ไม่มีฐานต้นทุน</string>
     <string name="positions_timeline_incompleteness_reasons_execution_price_provenance_unproven" formatted="false">ยืนยันแหล่งที่มาของราคาดำเนินคำสั่งไม่ได้</string>
@@ -275,9 +275,9 @@
     <string name="positions_timeline_equity_honesty_pricedon">อิงราคาจาก %1$s</string>
     <string name="positions_timeline_equity_honesty_conversionwithheld">จำนวนนาทีที่ถูกตัดออกเพราะไม่มีราคาปิดที่ยืนยันได้: %1$s</string>
     <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">ไม่แสดงการลดลงจากจุดสูงสุดบนฐานที่แปลงสกุลเงิน เนื่องจากติดตามจุดสูงสุดสะสมในสกุลเงินที่เก็บตัวอย่าง</string>
-    <string name="positions_timeline_equity_cashposition_position" formatted="false">มูลค่าโพซิชัน</string>
+    <string name="positions_timeline_equity_cashposition_position" formatted="false">มูลค่าสถานะ</string>
     <string name="positions_timeline_equity_cashposition_cash" formatted="false">เงินสด</string>
-    <string name="pnl_provenance">การคำนวณ: %1$s · แหล่งราคามาร์ก: %2$s · ณ: %3$s</string>
+    <string name="pnl_provenance">การคำนวณ: %1$s · แหล่งราคาอ้างอิง: %2$s · ณ: %3$s</string>
     <string name="pnl_equity_coverage">ตัวอย่างมูลค่าพอร์ตสุทธิ: %1$s · นาทีที่ครบถ้วน: %2$s</string>
     <string name="pnl_execution_history">ประวัติการดำเนินการ: %1$s</string>
     <string name="process_title" formatted="false">โปรเซส</string>
@@ -331,22 +331,22 @@
     <string name="ai_reviews_accepted" formatted="false">ยอมรับการตัดสินใจแล้ว</string>
     <string name="ai_reviews_rejected" formatted="false">เซิร์ฟเวอร์ปฏิเสธการตัดสินใจ</string>
     <string name="ai_reviews_unknown" formatted="false">ไม่ทราบผล ตรวจสอบสถานะก่อนลองอีกครั้ง</string>
-    <string name="positions_accessibility_label_closebutton" formatted="false">ปิดโพซิชัน</string>
-    <string name="positions_accessibility_label_reducebutton" formatted="false">ลดโพซิชัน</string>
+    <string name="positions_accessibility_label_closebutton" formatted="false">ปิดสถานะ</string>
+    <string name="positions_accessibility_label_reducebutton" formatted="false">ลดสถานะ</string>
     <string name="positions_reduce_cancel" formatted="false">ยกเลิก</string>
     <string name="positions_reduce_footer" formatted="false">100% จะปิดสถานะ ส่งคำสั่งมาร์เก็ตแบบ reduce-only ในฝั่งตรงข้าม</string>
     <string name="positions_reduce_sizelabel" formatted="false">ขนาดที่จะลด</string>
     <string name="trading_bracket_attach" formatted="false">แนบ SL / TP</string>
-    <string name="trading_bracket_stoplosslabel" formatted="false">หยุดขาดทุน</string>
+    <string name="trading_bracket_stoplosslabel" formatted="false">ตัดขาดทุน</string>
     <string name="trading_bracket_takeprofitlabel" formatted="false">ทำกำไร</string>
-    <string name="trading_trailingstop_attach" formatted="false">แนบคำสั่งหยุดแบบเลื่อนตามราคา</string>
+    <string name="trading_trailingstop_attach" formatted="false">แนบ Trailing Stop</string>
     <string name="trading_trailingstop_trailamountlabel" formatted="false">ระยะ Trailing</string>
-    <string name="position_action_review" formatted="false">ตรวจสอบการดำเนินการกับโพซิชัน</string>
+    <string name="position_action_review" formatted="false">ตรวจสอบการดำเนินการกับสถานะ</string>
     <string name="position_action_confirm" formatted="false">ยืนยันการดำเนินการ</string>
     <string name="position_action_accepted" formatted="false">ยอมรับคำขอแล้ว รีเฟรชเพื่อตรวจสอบสถานะการดำเนินการ</string>
     <string name="position_action_retry" formatted="false">ลองส่งคำขอเดิมอีกครั้ง</string>
     <string name="position_action_minimum_lock" formatted="false">กำไรที่ล็อกไว้ขั้นต่ำ (%)</string>
-    <string name="position_action_cycle" formatted="false">รอบของโพซิชัน</string>
+    <string name="position_action_cycle" formatted="false">รอบของสถานะ</string>
     <string name="position_action_invalid" formatted="false">ตรวจสอบค่าที่ป้อนก่อนดำเนินการต่อ</string>
     <string name="display_financial_title" formatted="false">รูปแบบสีทางการเงิน</string>
     <string name="display_financial_auto" formatted="false">ตรงกับภูมิภาคของฉัน (อัตโนมัติ)</string>
@@ -418,8 +418,8 @@
     </plurals>
     <string name="records_status_new" formatted="false">ใหม่</string>
     <string name="records_status_open" formatted="false">เปิด</string>
-    <string name="records_status_partially_filled" formatted="false">ดำเนินการบางส่วน</string>
-    <string name="records_status_filled" formatted="false">ดำเนินการแล้ว</string>
+    <string name="records_status_partially_filled" formatted="false">จับคู่บางส่วน</string>
+    <string name="records_status_filled" formatted="false">จับคู่แล้ว</string>
     <string name="records_status_cancelled" formatted="false">ยกเลิกแล้ว</string>
     <string name="records_status_rejected" formatted="false">ถูกปฏิเสธ</string>
     <string name="records_alert_type_order_unknown" formatted="false">ไม่ทราบสถานะคำสั่ง</string>
@@ -455,8 +455,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">แผน · อัตโนมัติ</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">ระบบ · อัตโนมัติ</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">ไม่มีการระบุที่มา · ไม่ทราบแหล่งที่มา</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">ไม่มีการกรอกข้อมูลการค้าแลกเปลี่ยนที่ทำหน้าที่เป็นหลักฐานสำหรับการจองนี้</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">บันทึกที่ได้รับมาแบบดั้งเดิมซึ่งไม่มีการกรอกข้อมูลการค้าแลกเปลี่ยนทำหน้าที่เป็นหลักฐาน</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">ไม่มีรายการจับคู่คำสั่งซื้อขายจากตลาดซื้อขายที่ใช้ยืนยันการบันทึกธุรกรรมนี้</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">บันทึกที่มาจากระบบเดิมซึ่งไม่มีรายการจับคู่คำสั่งซื้อขายจากตลาดซื้อขายเป็นหลักฐาน</string>
     <string name="common_yes" formatted="false">ใช่</string>
     <string name="common_no" formatted="false">ไม่ใช่</string>
     <string name="settings_role_ai_reviewer" formatted="false">ผู้ตรวจสอบ AI</string>
@@ -480,7 +480,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">ตรงกัน</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">ไม่ตรงกัน</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">ไม่ครบถ้วน</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">ค่าดิบจากเอ็กซ์เชนจ์</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">ค่าดิบจากตลาดซื้อขาย</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">ค่าทศนิยมลอยตัวแบบเดิม</string>
     <string name="venue_accounts_status_corrupt" formatted="false">เสียหาย</string>
     <string name="system_status_not_running" formatted="false">ไม่ได้ทำงาน</string>

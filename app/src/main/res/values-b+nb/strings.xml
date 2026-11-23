@@ -18,7 +18,7 @@
     <string name="loading" formatted="false">Laster…</string>
     <string name="size" formatted="false">Størrelse</string>
     <string name="average_price" formatted="false">Gjennomsnittspris</string>
-    <string name="mark_price" formatted="false">Mark-pris</string>
+    <string name="mark_price" formatted="false">Markpris</string>
     <string name="pnl" formatted="false">Urealisert PnL</string>
     <string name="instrument" formatted="false">Instrument</string>
     <string name="price" formatted="false">Pris</string>
@@ -67,7 +67,7 @@
     <string name="order_buy" formatted="false">Kjøp</string>
     <string name="order_sell" formatted="false">Selg</string>
     <string name="order_market" formatted="false">Marked</string>
-    <string name="order_limit" formatted="false">Limit</string>
+    <string name="order_limit" formatted="false">Limitordre</string>
     <string name="order_stop" formatted="false">Stop</string>
     <string name="order_stop_limit" formatted="false">Stop Limit</string>
     <string name="order_live" formatted="false">Live</string>
@@ -75,7 +75,7 @@
     <string name="order_back" formatted="false">Tilbake</string>
     <string name="order_submit" formatted="false">Bekreft ordre</string>
     <string name="order_submitting" formatted="false">Sender…</string>
-    <string name="order_leverage" formatted="false">Gearing</string>
+    <string name="order_leverage" formatted="false">Giring</string>
     <string name="order_reduce_only" formatted="false">Kun reduksjon</string>
     <string name="order_observation_only" formatted="false">Dette instrumentet er kun for observasjon — legg inn ordrer på et instrument som støtter utførelse.</string>
     <string name="order_unknown_instrument" formatted="false">Dette instrumentet gjenkjennes ikke. Last inn listen på nytt og prøv igjen.</string>
@@ -92,7 +92,7 @@
     <string name="order_retry_intent" formatted="false">Prøv samme ordre på nytt</string>
     <string name="order_catalog_error" formatted="false">Kunne ikke laste inn børser eller instrumenter. Prøv igjen.</string>
     <string name="order_no_instruments" formatted="false">Ingen instrumenter tilgjengelig for denne børsen.</string>
-    <string name="order_invalid_form" formatted="false">Skriv inn positive antall og påkrevde priser. Valgfri gearing må være et positivt heltall.</string>
+    <string name="order_invalid_form" formatted="false">Skriv inn positive antall og påkrevde priser. Valgfri giring må være et positivt heltall.</string>
     <string name="order_refresh_failed" formatted="false">Forespørselen ble godtatt, men de nyeste oppføringene kunne ikke lastes inn. Oppdater for å kontrollere status.</string>
     <string name="order_forbidden" formatted="false">Du har ikke lenger tillatelse til denne handlingen.</string>
     <string name="order_session_changed" formatted="false">Økten eller lommeboken er endret. Åpne en ny ordre fra gjeldende konto.</string>
@@ -456,8 +456,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">Plan · automatisert</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">System · automatisert</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Ikke attribuert · ukjent opphav</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Det er ingen byttehandelsfyll som fungerer som bevis for denne bestillingen.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Legacy-avledet post som ingen byttehandel fyller tjener som bevis.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Ingen handelsutførelse på børsen dokumenterer denne bokføringen.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Post med opphav i eldre data uten en dokumenterende handelsutførelse.</string>
     <string name="common_yes" formatted="false">Ja</string>
     <string name="common_no" formatted="false">Nei</string>
     <string name="settings_role_ai_reviewer" formatted="false">AI-gransker</string>

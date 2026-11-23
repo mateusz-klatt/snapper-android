@@ -99,16 +99,16 @@
     <string name="order_enabled">Włączona</string>
     <string name="order_disabled">Wyłączona</string>
     <string name="desk_attach_button">Dodaj obserwatora</string>
-    <string name="desk_attach_desk_label">Desk</string>
-    <string name="desk_nav_title">Moje deski</string>
+    <string name="desk_attach_desk_label">Zespół tradingowy</string>
+    <string name="desk_nav_title">Moje zespoły tradingowe</string>
     <string name="desk_primary_badge">Główny</string>
     <string name="desk_attach_username_placeholder">Dokładna nazwa użytkownika obserwatora</string>
     <string name="desk_attach_validation_username">Wpisz nazwę użytkownika obserwatora.</string>
     <string name="desk_description_unavailable">Brak opisu.</string>
-    <string name="desk_attach_help">Wpisz dokładną nazwę użytkownika obserwatora. Nowy desk będzie dostępny dopiero po wylogowaniu i ponownym zalogowaniu.</string>
-    <string name="desk_attach_success_message">Obserwator musi się wylogować i zalogować ponownie, aby uzyskać dostęp do nowego desku.</string>
-    <string name="desk_empty_message">Twoje konto nie jest przypisane do żadnego desku.</string>
-    <string name="desk_load_error">Nie udało się wczytać desków. Spróbuj ponownie.</string>
+    <string name="desk_attach_help">Wpisz dokładną nazwę użytkownika obserwatora. Nowy zespół tradingowy będzie dostępny dopiero po wylogowaniu i ponownym zalogowaniu.</string>
+    <string name="desk_attach_success_message">Obserwator musi się wylogować i zalogować ponownie, aby uzyskać dostęp do nowego zespołu tradingowego.</string>
+    <string name="desk_empty_message">Twoje konto nie jest przypisane do żadnego zespołu tradingowego.</string>
+    <string name="desk_load_error">Nie udało się wczytać zespołów tradingowych. Spróbuj ponownie.</string>
     <string name="settings_account_email">Email</string>
     <string name="settings_account_role">Rola: %1$s</string>
     <string name="settings_app_info_version">Wersja</string>
@@ -156,7 +156,7 @@
     <string name="system_revoked">Odwołany</string>
     <string name="records_open">Otwarte</string>
     <string name="records_recent">Ostatnie</string>
-    <string name="records_fills">Wykonania</string>
+    <string name="records_fills">Realizacje</string>
     <string name="records_thread">Wątek</string>
     <string name="records_source_topic">Temat źródłowy</string>
     <string name="notification_defaults_title">Domyślne dla użytkownika</string>
@@ -252,7 +252,7 @@
     <string name="positions_timeline_incompleteness_reasons_execution_size_invalid">Nieprawidłowa wielkość realizacji</string>
     <string name="positions_timeline_incompleteness_reasons_execution_price_invalid">Nieprawidłowa cena realizacji</string>
     <string name="positions_timeline_incompleteness_reasons_fx_conversion_unproven">Niepotwierdzone przeliczenie walutowe</string>
-    <string name="positions_timeline_incompleteness_reasons_mark_unavailable">Niedostępna cena mark</string>
+    <string name="positions_timeline_incompleteness_reasons_mark_unavailable">Niedostępna cena referencyjna</string>
     <string name="positions_timeline_incompleteness_reasons_cumulative_non_finite">Nieskończona lub nieokreślona wartość skumulowana</string>
     <string name="positions_timeline_incompleteness_reasons_unrealized_non_finite">Nieskończony lub nieokreślony niezrealizowany P&amp;L</string>
     <string name="positions_timeline_incompleteness_reasons_net_non_finite">Nieskończony lub nieokreślony P&amp;L netto</string>
@@ -452,7 +452,7 @@
     <string name="process_role_strategy" formatted="false">Strategia</string>
     <string name="process_role_backtest" formatted="false">Backtest</string>
     <string name="positions_timeline_incompleteness_scope_global" formatted="false">Cały portfel</string>
-    <string name="positions_timeline_incompleteness_tier_mark_incomplete" formatted="false">Niepełna wycena MARK</string>
+    <string name="positions_timeline_incompleteness_tier_mark_incomplete" formatted="false">Niepełna cena referencyjna</string>
     <string name="positions_timeline_incompleteness_tier_untrusted" formatted="false">NIEZAUFANE</string>
     <string name="positions_timeline_attribution_origins_manual" formatted="false">Ręczne · bezpośrednie</string>
     <string name="positions_timeline_attribution_origins_plan" formatted="false">Plan · automatyczny</string>

@@ -41,7 +41,7 @@
     <string name="exchange" formatted="false">Sàn</string>
     <string name="load_market" formatted="false">Tải nến</string>
     <string name="empty" formatted="false">Không có bản ghi.</string>
-    <string name="snapshot_note" formatted="false">Dữ liệu ảnh chụp. Làm mới để lấy các bản ghi mới nhất hiện có.</string>
+    <string name="snapshot_note" formatted="false">Dữ liệu ảnh chụp nhanh. Làm mới để lấy các bản ghi mới nhất hiện có.</string>
     <string name="chart_description" formatted="false">Biểu đồ nến lịch sử. Các giá trị chính xác được liệt kê bên dưới.</string>
     <string name="error_origin" formatted="false">Nhập địa chỉ gốc HTTPS hợp lệ của backend.</string>
     <string name="error_credentials" formatted="false">Tên người dùng hoặc mật khẩu không đúng.</string>
@@ -252,7 +252,7 @@
     <string name="positions_timeline_incompleteness_reasons_execution_size_invalid" formatted="false">Khối lượng khớp lệnh không hợp lệ</string>
     <string name="positions_timeline_incompleteness_reasons_execution_price_invalid" formatted="false">Giá khớp lệnh không hợp lệ</string>
     <string name="positions_timeline_incompleteness_reasons_fx_conversion_unproven" formatted="false">Chưa xác minh được quy đổi FX</string>
-    <string name="positions_timeline_incompleteness_reasons_mark_unavailable" formatted="false">Không có giá tham chiếu</string>
+    <string name="positions_timeline_incompleteness_reasons_mark_unavailable" formatted="false">Không có giá đánh dấu</string>
     <string name="positions_timeline_incompleteness_reasons_cumulative_non_finite" formatted="false">Giá trị lũy kế không hữu hạn</string>
     <string name="positions_timeline_incompleteness_reasons_unrealized_non_finite" formatted="false">P&amp;L chưa thực hiện không hữu hạn</string>
     <string name="positions_timeline_incompleteness_reasons_net_non_finite" formatted="false">P&amp;L ròng không hữu hạn</string>
@@ -277,7 +277,7 @@
     <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Mức sụt giảm không được hiển thị trên cơ sở quy đổi vì đỉnh lũy kế được theo dõi bằng đồng tiền lấy mẫu.</string>
     <string name="positions_timeline_equity_cashposition_position" formatted="false">Giá trị vị thế</string>
     <string name="positions_timeline_equity_cashposition_cash" formatted="false">Tiền mặt</string>
-    <string name="pnl_provenance">Tính toán: %1$s · Nguồn giá tham chiếu: %2$s · Tính đến: %3$s</string>
+    <string name="pnl_provenance">Tính toán: %1$s · Nguồn giá đánh dấu: %2$s · Tính đến: %3$s</string>
     <string name="pnl_equity_coverage">Vốn chủ sở hữu được lấy mẫu: %1$s · Số phút đầy đủ: %2$s</string>
     <string name="pnl_execution_history">Lịch sử khớp lệnh: %1$s</string>
     <string name="process_title" formatted="false">Tiến trình</string>
@@ -363,8 +363,8 @@
     <string name="market_context_related_empty">Chưa cấu hình công cụ liên quan cho %1$s trên %2$s.</string>
     <string name="market_live_connected" formatted="false">Đã kết nối cập nhật trực tiếp.</string>
     <string name="market_live_connecting" formatted="false">Đang kết nối cập nhật trực tiếp…</string>
-    <string name="market_live_unavailable" formatted="false">Không có cập nhật trực tiếp; đang hiển thị ảnh chụp.</string>
-    <string name="market_snapshot_mode" formatted="false">Chế độ ảnh chụp</string>
+    <string name="market_live_unavailable" formatted="false">Không có cập nhật trực tiếp; đang hiển thị ảnh chụp nhanh.</string>
+    <string name="market_snapshot_mode" formatted="false">Chế độ ảnh chụp nhanh</string>
     <string name="market_context_as_of">Giá đóng cửa trong bộ nhớ đệm tính đến %1$s</string>
     <string name="market_cachebanner_message">Đang làm nóng cache: đã có %1$s / %2$s nến %3$s</string>
     <string name="market_cachebanner_sources_cache" formatted="false"></string>
@@ -449,14 +449,14 @@
     <string name="process_role_strategy" formatted="false">Chiến lược</string>
     <string name="process_role_backtest" formatted="false">Backtest</string>
     <string name="positions_timeline_incompleteness_scope_global" formatted="false">Toàn bộ danh mục</string>
-    <string name="positions_timeline_incompleteness_tier_mark_incomplete" formatted="false">THIẾU GIÁ THAM CHIẾU</string>
+    <string name="positions_timeline_incompleteness_tier_mark_incomplete" formatted="false">THIẾU GIÁ ĐÁNH DẤU</string>
     <string name="positions_timeline_incompleteness_tier_untrusted" formatted="false">KHÔNG ĐÁNG TIN CẬY</string>
     <string name="positions_timeline_attribution_origins_manual" formatted="false">Thủ công · trực tiếp</string>
     <string name="positions_timeline_attribution_origins_plan" formatted="false">Kế hoạch · tự động</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">Hệ thống · tự động</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Chưa phân bổ · không rõ nguồn gốc</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Không có giao dịch trao đổi nào làm bằng chứng cho việc đặt chỗ này.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Bản ghi có nguồn gốc kế thừa mà không có giao dịch trao đổi nào được dùng làm bằng chứng.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Không có lần khớp lệnh trên sàn giao dịch làm bằng chứng cho bút toán này.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Bản ghi bắt nguồn từ hệ thống cũ, không có lần khớp lệnh trên sàn giao dịch làm bằng chứng.</string>
     <string name="common_yes" formatted="false">Có</string>
     <string name="common_no" formatted="false">Không</string>
     <string name="settings_role_ai_reviewer" formatted="false">Người đánh giá AI</string>

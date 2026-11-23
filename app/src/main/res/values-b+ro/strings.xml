@@ -457,8 +457,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">Plan · automatizat</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">Sistem · automatizat</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Neatribuit · proveniență necunoscută</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Nu există nicio completare a schimburilor comerciale care să servească drept dovadă pentru această rezervare.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Înregistrare derivată din moștenire pentru care nicio completare a schimburilor comerciale nu servește drept dovadă.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Nicio execuție de ordin la bursă nu confirmă această înregistrare.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Înregistrare provenită din date vechi, fără o execuție de ordin care să o confirme.</string>
     <string name="common_yes" formatted="false">Da</string>
     <string name="common_no" formatted="false">Nu</string>
     <string name="settings_role_ai_reviewer" formatted="false">Evaluator AI</string>

@@ -18,7 +18,7 @@
     <string name="loading" formatted="false">Betöltés…</string>
     <string name="size" formatted="false">Méret</string>
     <string name="average_price" formatted="false">Átlagár</string>
-    <string name="mark_price" formatted="false">Mark ár</string>
+    <string name="mark_price" formatted="false">Referenciaár</string>
     <string name="pnl" formatted="false">Nem realizált PnL</string>
     <string name="instrument" formatted="false">Instrumentum</string>
     <string name="price" formatted="false">Ár</string>
@@ -41,7 +41,7 @@
     <string name="exchange" formatted="false">Tőzsde</string>
     <string name="load_market" formatted="false">Gyertyák betöltése</string>
     <string name="empty" formatted="false">Nincsenek elérhető rekordok.</string>
-    <string name="snapshot_note" formatted="false">Pillanatfelvétel. Frissítsen a legújabb elérhető rekordok lekéréséhez.</string>
+    <string name="snapshot_note" formatted="false">Pillanatkép. Frissítsen a legújabb elérhető rekordok lekéréséhez.</string>
     <string name="chart_description" formatted="false">Korábbi gyertyák grafikonja. A pontos értékek alább láthatók.</string>
     <string name="error_origin" formatted="false">Adjon meg érvényes HTTPS backend eredetcímet.</string>
     <string name="error_credentials" formatted="false">A felhasználónév vagy a jelszó helytelen.</string>
@@ -100,16 +100,16 @@
     <string name="order_disabled" formatted="false">Letiltva</string>
     <string name="system_tools" formatted="false">Áttekintés</string>
     <string name="desk_attach_button" formatted="false">Megfigyelő hozzáadása</string>
-    <string name="desk_attach_desk_label" formatted="false">Desk</string>
-    <string name="desk_nav_title" formatted="false">Saját deskjeim</string>
+    <string name="desk_attach_desk_label" formatted="false">Kereskedési részleg</string>
+    <string name="desk_nav_title" formatted="false">Saját kereskedési részlegeim</string>
     <string name="desk_primary_badge" formatted="false">Elsődleges</string>
     <string name="desk_attach_username_placeholder" formatted="false">A megfigyelő pontos felhasználóneve</string>
     <string name="desk_attach_validation_username" formatted="false">Adja meg egy megfigyelő felhasználónevét.</string>
     <string name="desk_description_unavailable" formatted="false">Nincs megadva leírás.</string>
-    <string name="desk_attach_help" formatted="false">Adja meg a megfigyelő pontos felhasználónevét. Az új desk csak kijelentkezés és újbóli bejelentkezés után lesz elérhető.</string>
-    <string name="desk_attach_success_message" formatted="false">A megfigyelőnek ki, majd újra be kell jelentkeznie, hogy elérje az új desket.</string>
-    <string name="desk_empty_message" formatted="false">A fiókod nincs egyetlen deskhez sem csatolva.</string>
-    <string name="desk_load_error" formatted="false">A deskek nem tölthetők be. Próbálja újra.</string>
+    <string name="desk_attach_help" formatted="false">Adja meg a megfigyelő pontos felhasználónevét. Az új kereskedési részleg csak kijelentkezés és újbóli bejelentkezés után lesz elérhető.</string>
+    <string name="desk_attach_success_message" formatted="false">A megfigyelőnek ki, majd újra be kell jelentkeznie, hogy elérje az új kereskedési részleget.</string>
+    <string name="desk_empty_message" formatted="false">A fiókod nincs egyetlen kereskedési részleghez sem csatolva.</string>
+    <string name="desk_load_error" formatted="false">A kereskedési részlegek nem tölthetők be. Próbálja újra.</string>
     <string name="settings_account_email" formatted="false">E-mail</string>
     <string name="settings_account_role">Szerep: %1$s</string>
     <string name="settings_app_info_version" formatted="false">Verzió</string>
@@ -159,7 +159,7 @@
     <string name="system_revoked" formatted="false">Visszavonva</string>
     <string name="records_open" formatted="false">Nyitott</string>
     <string name="records_recent" formatted="false">Friss</string>
-    <string name="records_fills" formatted="false">Teljesülések</string>
+    <string name="records_fills" formatted="false">Teljesítések</string>
     <string name="records_refresh" formatted="false">Frissítés</string>
     <string name="records_fee" formatted="false">Díj</string>
     <string name="records_details" formatted="false">Részletek</string>
@@ -277,7 +277,7 @@
     <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">A visszaesés átszámított alapon nem jelenik meg, mert a folyamatos csúcsérték követése a mintavétel pénznemében történik.</string>
     <string name="positions_timeline_equity_cashposition_position" formatted="false">Pozícióérték</string>
     <string name="positions_timeline_equity_cashposition_cash" formatted="false">Készpénz</string>
-    <string name="pnl_provenance">Számítás: %1$s · Mark ár forrása: %2$s · Időpont: %3$s</string>
+    <string name="pnl_provenance">Számítás: %1$s · Referenciaár forrása: %2$s · Időpont: %3$s</string>
     <string name="pnl_equity_coverage">Saját tőke mintavétele: %1$s · Teljes percek: %2$s</string>
     <string name="pnl_execution_history">Végrehajtási előzmények: %1$s</string>
     <string name="process_title" formatted="false">Folyamatok</string>
@@ -363,8 +363,8 @@
     <string name="market_context_related_empty">Nincsenek kapcsolódó instrumentumok konfigurálva ehhez: %1$s ezen a tőzsdén: %2$s.</string>
     <string name="market_live_connected" formatted="false">Élő frissítések csatlakoztatva.</string>
     <string name="market_live_connecting" formatted="false">Csatlakozás az élő frissítésekhez…</string>
-    <string name="market_live_unavailable" formatted="false">Az élő frissítések nem érhetők el; pillanatfelvételek jelennek meg.</string>
-    <string name="market_snapshot_mode" formatted="false">Pillanatfelvételi mód</string>
+    <string name="market_live_unavailable" formatted="false">Az élő frissítések nem érhetők el; pillanatképek jelennek meg.</string>
+    <string name="market_snapshot_mode" formatted="false">Pillanatkép mód</string>
     <string name="market_context_as_of">Gyorsítótárazott záróár ekkor: %1$s</string>
     <string name="market_cachebanner_message">Cache bemelegítése: elérhető gyertyák: %1$s / %2$s %3$s</string>
     <string name="market_cachebanner_sources_cache" formatted="false"></string>
@@ -385,7 +385,7 @@
     <string name="backtests_status_running">Fut</string>
     <string name="backtests_status_completed">Befejezve</string>
     <string name="backtests_status_failed">Sikertelen</string>
-    <string name="backtests_status_cancelled">Megszakítva</string>
+    <string name="backtests_status_cancelled">Visszavonva</string>
     <string name="backtests_status_unknown">Ismeretlen</string>
     <string name="push_title">Snapper-frissítések</string>
     <string name="push_generic">Nyissa meg a Snapper alkalmazást a frissítések megtekintéséhez</string>
@@ -456,8 +456,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">Terv · automatizált</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">Rendszer · automatizált</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Nem attribuált · ismeretlen eredet</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Nincs tőzsdei kereskedés kitöltése, amely bizonyítékul szolgálna ehhez a foglaláshoz.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Örökségből származó rekord, amelyre nincs tőzsdei kereskedési kitöltés bizonyítékként.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Ezt a könyvelési tételt nem igazolja tőzsdei megbízásteljesítés.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Korábbi rendszerből származó bejegyzés igazoló megbízásteljesítés nélkül.</string>
     <string name="common_yes" formatted="false">Igen</string>
     <string name="common_no" formatted="false">Nem</string>
     <string name="settings_role_ai_reviewer" formatted="false">AI-felülvizsgáló</string>

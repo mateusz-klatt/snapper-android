@@ -22,7 +22,7 @@
     <string name="pnl" formatted="false">অবাস্তবায়িত PnL</string>
     <string name="instrument" formatted="false">ইনস্ট্রুমেন্ট</string>
     <string name="price" formatted="false">মূল্য</string>
-    <string name="filled" formatted="false">পূরণ হয়েছে</string>
+    <string name="filled" formatted="false">নির্বাহিত হয়েছে</string>
     <string name="status" formatted="false">স্ট্যাটাস</string>
     <string name="side" formatted="false">সাইড</string>
     <string name="open" formatted="false">ওপেন</string>
@@ -50,7 +50,7 @@
     <string name="error_service" formatted="false">ব্যাকএন্ড এই অনুরোধটি সম্পূর্ণ করতে পারেনি। আবার চেষ্টা করুন।</string>
     <string name="error_unknown" formatted="false">একটি সমস্যা হয়েছে। আবার চেষ্টা করুন।</string>
     <string name="dismiss" formatted="false">সরান</string>
-    <string name="paper" formatted="false">ডেমো</string>
+    <string name="paper" formatted="false">পেপার</string>
     <string name="safety_critical" formatted="false">নিরাপত্তার জন্য গুরুত্বপূর্ণ</string>
     <string name="snapshot_limit" formatted="false">এই ভিউতে বর্তমান পজিশন এবং সর্বোচ্চ 100টি সাম্প্রতিক অর্ডার ও সতর্কতা দেখানো হয়; এটি সম্পূর্ণ ইতিহাস নয়।</string>
     <string name="chart_window" formatted="false">চার্টে সর্বশেষ পাওয়া 100টি ক্যান্ডল দেখানো হয়।</string>
@@ -159,7 +159,7 @@
     <string name="system_revoked" formatted="false">প্রত্যাহৃত</string>
     <string name="records_open" formatted="false">ওপেন</string>
     <string name="records_recent" formatted="false">সাম্প্রতিক</string>
-    <string name="records_fills" formatted="false">ফিল</string>
+    <string name="records_fills" formatted="false">অর্ডার নির্বাহ</string>
     <string name="records_refresh" formatted="false">রিফ্রেশ</string>
     <string name="records_fee" formatted="false">ফি</string>
     <string name="records_details" formatted="false">বিস্তারিত</string>
@@ -175,7 +175,7 @@
     <string name="notification_defaults_low" formatted="false">কম</string>
     <string name="notification_defaults_medium" formatted="false">মাঝারি</string>
     <string name="notification_defaults_high" formatted="false">বেশি</string>
-    <string name="notification_defaults_fill" formatted="false">অর্ডার পূরণ হয়েছে</string>
+    <string name="notification_defaults_fill" formatted="false">অর্ডার নির্বাহিত হয়েছে</string>
     <string name="notification_defaults_rejected" formatted="false">অর্ডার প্রত্যাখ্যাত</string>
     <string name="notification_defaults_stop" formatted="false">স্টপ-লস ট্রিগার হয়েছে</string>
     <string name="notification_defaults_margin" formatted="false">মার্জিন সতর্কতা</string>
@@ -198,11 +198,11 @@
     <string name="signals_empty" formatted="false">আপনার বর্তমান ফিল্টারের সাথে কোনো ট্রেডিং সিগন্যাল মেলে না।</string>
     <string name="signals_export" formatted="false">এক্সপোর্ট</string>
     <string name="signals_export_failed" formatted="false">জমা ব্যর্থ</string>
-    <string name="venue_accounts_title" formatted="false">ভ্যানু অ্যাকাউন্ট</string>
+    <string name="venue_accounts_title" formatted="false">ভেন্যু অ্যাকাউন্ট</string>
     <string name="venue_accounts_refresh" formatted="false">রিফ্রেশ</string>
-    <string name="venue_accounts_failed" formatted="false">এক্সচেঞ্জ অ্যাকাউন্টের অবস্থা লোড করা যায়নি। এটি খালি অ্যাকাউন্ট নয়; ডেটা এই মুহূর্তে অনুপলব্ধ।</string>
-    <string name="venue_accounts_authoritative" formatted="false">লাইভ ভ্যানু সত্য, অথরিটি উইন্ডোর মধ্যে দেখা গেছে।</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">এই অ্যাকাউন্টে সর্বশেষ জানা, সিমুলেটেড বা অনুপলব্ধ ডেটা দেখানো হয় — এগুলো এক্সচেঞ্জের প্রামাণ্য বর্তমান ব্যালেন্স নয়।</string>
+    <string name="venue_accounts_failed" formatted="false">ভেন্যু অ্যাকাউন্টের অবস্থা লোড করা যায়নি। এটি খালি অ্যাকাউন্ট নয়; ডেটা এই মুহূর্তে অনুপলব্ধ।</string>
+    <string name="venue_accounts_authoritative" formatted="false">লাইভ ভেন্যু সত্য, অথরিটি উইন্ডোর মধ্যে দেখা গেছে।</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">এই অ্যাকাউন্টে সর্বশেষ জানা, সিমুলেটেড বা অনুপলব্ধ ডেটা দেখানো হয় — এগুলো ভেন্যুর প্রামাণ্য বর্তমান ব্যালেন্স নয়।</string>
     <string name="venue_accounts_valuation" formatted="false">মূল্যায়ন</string>
     <string name="venue_accounts_balances" formatted="false">ব্যালেন্স</string>
     <string name="venue_accounts_observed" formatted="false">পর্যবেক্ষণের সময়</string>
@@ -245,7 +245,7 @@
     <string name="positions_timeline_incompleteness_reasons_scope_order_regression" formatted="false">স্কোপের ক্রমে পশ্চাদ্গতি</string>
     <string name="positions_timeline_incompleteness_reasons_before_activation" formatted="false">পয়েন্টটি সক্রিয়করণের আগে</string>
     <string name="positions_timeline_incompleteness_reasons_activation_baseline_non_finite" formatted="false">সক্রিয়করণের বেসলাইন সসীম নয়</string>
-    <string name="positions_timeline_incompleteness_reasons_fill_evidence_gap" formatted="false">ফিলের স্থায়ী প্রমাণে ঘাটতি</string>
+    <string name="positions_timeline_incompleteness_reasons_fill_evidence_gap" formatted="false">অর্ডার নির্বাহের স্থায়ী প্রমাণে ঘাটতি</string>
     <string name="positions_timeline_incompleteness_reasons_seed_quantity_non_finite" formatted="false">প্রারম্ভিক পরিমাণ সসীম নয়</string>
     <string name="positions_timeline_incompleteness_reasons_cost_basis_unavailable" formatted="false">কস্ট বেসিস অনুপলভ্য</string>
     <string name="positions_timeline_incompleteness_reasons_execution_price_provenance_unproven" formatted="false">নির্বাহ মূল্যের উৎস প্রমাণিত নয়</string>
@@ -266,8 +266,8 @@
     <string name="positions_timeline_executionhistory_summary" formatted="false">একজন অপারেটর এই পরিসরে রেকর্ড করা কার্যকর লেনদেন অকার্যকর ঘোষণা করেছেন। এখানে তালিকাভুক্ত প্রতিটি সংশোধন এই পৃষ্ঠার হিসাব থেকে বাদ দেওয়া হয়েছে।</string>
     <string name="positions_timeline_executionhistory_targetexecutionid" formatted="false">অকার্যকর ঘোষিত লেনদেন</string>
     <string name="positions_timeline_executionhistory_correctionid" formatted="false">সংশোধনের রেকর্ড</string>
-    <string name="positions_timeline_equity_title" formatted="false">ইক্যুইটি ওভারলে</string>
-    <string name="positions_timeline_equity_serieslabel" formatted="false">ইক্যুইটি</string>
+    <string name="positions_timeline_equity_title" formatted="false">ইকুইটি ওভারলে</string>
+    <string name="positions_timeline_equity_serieslabel" formatted="false">ইকুইটি</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">বর্তমান সর্বোচ্চ মান থেকে পতন</string>
     <string name="positions_timeline_equity_honesty_spotonly" formatted="false">শুধু স্পট ট্রেডিং ভেন্যু — অন্য ভেন্যুতে থাকা ব্যালান্স বাদ দেওয়া হয়েছে।</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">বাইরের জমা ও উত্তোলনের প্রভাব বাদ দেওয়া হয়নি।</string>
@@ -277,8 +277,8 @@
     <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">রূপান্তরিত মানের ভিত্তিতে পতন দেখানো হয় না, কারণ চলমান সর্বোচ্চ মান নমুনার মুদ্রায় হিসাব করা হয়।</string>
     <string name="positions_timeline_equity_cashposition_position" formatted="false">পজিশনের মূল্য</string>
     <string name="positions_timeline_equity_cashposition_cash" formatted="false">নগদ</string>
-    <string name="pnl_provenance">হিসাব: %1$s · মূল্যায়ন মূল্যের উৎস: %2$s · সময়: %3$s</string>
-    <string name="pnl_equity_coverage">ইক্যুইটির নমুনা: %1$s · সম্পূর্ণ মিনিট: %2$s</string>
+    <string name="pnl_provenance">হিসাব: %1$s · মার্ক মূল্যের উৎস: %2$s · সময়: %3$s</string>
+    <string name="pnl_equity_coverage">ইকুইটির নমুনা: %1$s · সম্পূর্ণ মিনিট: %2$s</string>
     <string name="pnl_execution_history">কার্যকরের ইতিহাস: %1$s</string>
     <string name="process_title" formatted="false">প্রসেস</string>
     <string name="process_running" formatted="false">চলছে</string>
@@ -456,8 +456,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">পরিকল্পনা · স্বয়ংক্রিয়</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">সিস্টেম · স্বয়ংক্রিয়</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">অনির্ধারিত · উৎস অজানা</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">এই বুকিং এর প্রমাণ হিসাবে কাজ করে এমন কোন বিনিময় ট্রেড ফিল নেই।</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">উত্তরাধিকার থেকে প্রাপ্ত রেকর্ড যার জন্য কোন বিনিময় বাণিজ্য পূরণ প্রমাণ হিসাবে কাজ করে না।</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">এই নথিভুক্ত লেনদেনের পক্ষে এক্সচেঞ্জে অর্ডার নির্বাহের কোনো প্রমাণ নেই।</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">পুরোনো তথ্য থেকে তৈরি এই রেকর্ডের পক্ষে এক্সচেঞ্জে অর্ডার নির্বাহের কোনো প্রমাণ নেই।</string>
     <string name="common_yes" formatted="false">হ্যাঁ</string>
     <string name="common_no" formatted="false">না</string>
     <string name="settings_role_ai_reviewer" formatted="false">AI পর্যালোচক</string>
@@ -481,7 +481,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">মিলেছে</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">মেলেনি</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">অসম্পূর্ণ</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">এক্সচেঞ্জের অপরিবর্তিত মান</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">ভেন্যুর অপরিবর্তিত মান</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">পুরোনো ফ্লোটিং-পয়েন্ট মান</string>
     <string name="venue_accounts_status_corrupt" formatted="false">ক্ষতিগ্রস্ত</string>
     <string name="system_status_not_running" formatted="false">চালু নেই</string>

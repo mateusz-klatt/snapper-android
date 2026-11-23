@@ -84,18 +84,18 @@
     <string name="order_cancel_title" formatted="false">Annullare l\'ordine?</string>
     <string name="order_cancel_confirm" formatted="false">Annulla ordine</string>
     <string name="order_keep_open" formatted="false">Mantieni aperto</string>
-    <string name="order_select_wallet" formatted="false">Seleziona un portafoglio nella Home prima di inserire un ordine.</string>
+    <string name="order_select_wallet" formatted="false">Seleziona un wallet nella Home prima di inserire un ordine.</string>
     <string name="order_created" formatted="false">Ordine inviato. Aggiorna per verificarne lo stato di esecuzione.</string>
     <string name="order_cancel_requested" formatted="false">Annullamento richiesto. Aggiorna per verificare lo stato dell’ordine.</string>
     <string name="order_unknown_outcome" formatted="false">L’esito della richiesta è sconosciuto. Verifica lo stato prima di eseguire altre azioni.</string>
     <string name="order_check_status" formatted="false">Verifica stato</string>
     <string name="order_retry_intent" formatted="false">Riprova lo stesso ordine</string>
-    <string name="order_catalog_error" formatted="false">Impossibile caricare piattaforme o strumenti. Riprova.</string>
-    <string name="order_no_instruments" formatted="false">Nessuno strumento disponibile per questa piattaforma.</string>
+    <string name="order_catalog_error" formatted="false">Impossibile caricare exchange o strumenti. Riprova.</string>
+    <string name="order_no_instruments" formatted="false">Nessuno strumento disponibile per questo exchange.</string>
     <string name="order_invalid_form" formatted="false">Inserisci quantità positive e i prezzi richiesti. La leva facoltativa deve essere un numero intero positivo.</string>
     <string name="order_refresh_failed" formatted="false">La richiesta è stata accettata, ma non è stato possibile caricare gli ultimi dati. Aggiorna per verificare lo stato.</string>
     <string name="order_forbidden" formatted="false">Non hai più l’autorizzazione per questa azione.</string>
-    <string name="order_session_changed" formatted="false">La sessione o il portafoglio sono cambiati. Apri un nuovo ordine dal conto attuale.</string>
+    <string name="order_session_changed" formatted="false">La sessione o il wallet sono cambiati. Apri un nuovo ordine dal conto attuale.</string>
     <string name="order_enabled" formatted="false">Abilitato</string>
     <string name="order_disabled" formatted="false">Disabilitato</string>
     <string name="system_tools" formatted="false">Panoramica</string>
@@ -225,7 +225,7 @@
     <string name="positions_timeline_controls_last90days" formatted="false">Ultimi 90 giorni</string>
     <string name="positions_timeline_error_title" formatted="false">Impossibile caricare la cronologia P&amp;L</string>
     <string name="positions_timeline_empty_message" formatted="false">Nessun punto P&amp;L disponibile per questo intervallo.</string>
-    <string name="positions_timeline_nowallet_message" formatted="false">Scegli un portafoglio per visualizzarne la cronologia P&amp;L.</string>
+    <string name="positions_timeline_nowallet_message" formatted="false">Scegli un wallet per visualizzarne la cronologia P&amp;L.</string>
     <string name="positions_timeline_incompleteness_title" formatted="false">Perché alcuni punti sono incompleti</string>
     <string name="positions_timeline_incompleteness_description" formatted="false">I motivi si riferiscono all\'intero intervallo caricato. I conteggi possono sovrapporsi quando un punto ha più di una causa.</string>
     <string name="positions_timeline_incompleteness_affectedpoints">Punti interessati: %1$s</string>
@@ -457,8 +457,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">Piano · automatizzato</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">Sistema · automatizzato</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Non attribuito · provenienza sconosciuta</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Non esiste alcun riempimento commerciale di scambio che serva come prova per questa prenotazione.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Record derivato da legacy per il quale nessun riempimento commerciale di scambio funge da prova.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Nessuna esecuzione sull’exchange conferma questa registrazione.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Registrazione derivata da dati preesistenti senza un’esecuzione che la confermi.</string>
     <string name="common_yes" formatted="false">Sì</string>
     <string name="common_no" formatted="false">No</string>
     <string name="settings_role_ai_reviewer" formatted="false">Revisore IA</string>

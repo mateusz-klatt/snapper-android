@@ -128,7 +128,7 @@
     <string name="market_catalog_error" formatted="false">\@string/error_unknown</string>
     <string name="system_health" formatted="false">Sistem durumu</string>
     <string name="system_strategies" formatted="false">Stratejiler</string>
-    <string name="system_backtests" formatted="false">Backtestler</string>
+    <string name="system_backtests" formatted="false">Geriye dönük testler</string>
     <string name="system_users" formatted="false">Kullanıcılar</string>
     <string name="system_delegates" formatted="false">AI vekilleri</string>
     <string name="system_version" formatted="false">Sürüm</string>
@@ -252,7 +252,7 @@
     <string name="positions_timeline_incompleteness_reasons_execution_size_invalid" formatted="false">Gerçekleşme miktarı geçersiz</string>
     <string name="positions_timeline_incompleteness_reasons_execution_price_invalid" formatted="false">Gerçekleşme fiyatı geçersiz</string>
     <string name="positions_timeline_incompleteness_reasons_fx_conversion_unproven" formatted="false">FX dönüşümü kanıtlanamadı</string>
-    <string name="positions_timeline_incompleteness_reasons_mark_unavailable" formatted="false">Referans fiyatı kullanılamıyor</string>
+    <string name="positions_timeline_incompleteness_reasons_mark_unavailable" formatted="false">Mark fiyatı kullanılamıyor</string>
     <string name="positions_timeline_incompleteness_reasons_cumulative_non_finite" formatted="false">Birikimli değer sonlu değil</string>
     <string name="positions_timeline_incompleteness_reasons_unrealized_non_finite" formatted="false">Gerçekleşmemiş P&amp;L sonlu değil</string>
     <string name="positions_timeline_incompleteness_reasons_net_non_finite" formatted="false">Net P&amp;L sonlu değil</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">Özkaynak katmanı</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">Özkaynak</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">Mevcut zirveden düşüş</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Yalnızca spot işlem yeri — diğer işlem yerlerindeki bakiyeler hariçtir.</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Yalnızca spot borsa — diğer borsalardaki bakiyeler hariçtir.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Haricî yatırma ve çekme işlemlerinin etkisi çıkarılmamıştır.</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">Bu rakamlar her dakikanın kapanışında %1$s üzerinden dönüştürülür; doğrudan bu para biriminde örneklenmez.</string>
     <string name="positions_timeline_equity_honesty_pricedon">Fiyat kaynağı: %1$s.</string>
@@ -277,7 +277,7 @@
     <string name="positions_timeline_equity_honesty_drawdownconverted" formatted="false">Hareketli zirve örneklenen para biriminde izlendiği için düşüş dönüştürülmüş değerler üzerinden gösterilmez.</string>
     <string name="positions_timeline_equity_cashposition_position" formatted="false">Pozisyon değeri</string>
     <string name="positions_timeline_equity_cashposition_cash" formatted="false">Nakit</string>
-    <string name="pnl_provenance">Hesaplama: %1$s · Referans fiyat kaynağı: %2$s · İtibarıyla: %3$s</string>
+    <string name="pnl_provenance">Hesaplama: %1$s · Mark fiyatı kaynağı: %2$s · İtibarıyla: %3$s</string>
     <string name="pnl_equity_coverage">Örneklenen özkaynak: %1$s · Tam dakikalar: %2$s</string>
     <string name="pnl_execution_history">Gerçekleşme geçmişi: %1$s</string>
     <string name="process_title" formatted="false">İşlemler</string>
@@ -448,16 +448,16 @@
     <string name="process_mode_thread" formatted="false">Thread Modu</string>
     <string name="process_mode_process" formatted="false">Süreç Modu</string>
     <string name="process_role_strategy" formatted="false">Strateji</string>
-    <string name="process_role_backtest" formatted="false">Backtest</string>
+    <string name="process_role_backtest" formatted="false">Geriye dönük test</string>
     <string name="positions_timeline_incompleteness_scope_global" formatted="false">Tüm portföy</string>
-    <string name="positions_timeline_incompleteness_tier_mark_incomplete" formatted="false">REFERANS FİYATI EKSİK</string>
+    <string name="positions_timeline_incompleteness_tier_mark_incomplete" formatted="false">MARK FİYATI EKSİK</string>
     <string name="positions_timeline_incompleteness_tier_untrusted" formatted="false">GÜVENİLMEZ</string>
     <string name="positions_timeline_attribution_origins_manual" formatted="false">Manuel · doğrudan</string>
     <string name="positions_timeline_attribution_origins_plan" formatted="false">Plan · otomatik</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">Sistem · otomatik</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Atfedilmemiş · kaynağı bilinmiyor</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Bu rezervasyona kanıt teşkil edecek herhangi bir döviz ticareti dolgusu bulunmamaktadır.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Hiçbir borsa ticareti dolgusunun kanıt olarak hizmet etmediği eski türetilmiş kayıt.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Bu kaydı doğrulayan herhangi bir borsa emir gerçekleşmesi yok.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Doğrulayıcı emir gerçekleşmesi bulunmayan eski verilerden türetilmiş kayıt.</string>
     <string name="common_yes" formatted="false">Evet</string>
     <string name="common_no" formatted="false">Hayır</string>
     <string name="settings_role_ai_reviewer" formatted="false">Yapay zeka inceleyicisi</string>
@@ -481,7 +481,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">Eşleşti</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">Eşleşmedi</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Eksik</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">İşlem yerinden alınan ham değerler</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Borsadan alınan ham değerler</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Eski kayan noktalı değerler</string>
     <string name="venue_accounts_status_corrupt" formatted="false">Bozuk</string>
     <string name="system_status_not_running" formatted="false">Çalışmıyor</string>

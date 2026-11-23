@@ -13,12 +13,12 @@
     <string name="orders" formatted="false">Ordrer</string>
     <string name="market" formatted="false">Markedsdata</string>
     <string name="wallet" formatted="false">Wallet</string>
-    <string name="all_wallets" formatted="false">Alle tegnebøger</string>
+    <string name="all_wallets" formatted="false">Alle wallets</string>
     <string name="retry" formatted="false">Prøv igen</string>
     <string name="loading" formatted="false">Indlæser…</string>
     <string name="size" formatted="false">Størrelse</string>
     <string name="average_price" formatted="false">Gennemsnitspris</string>
-    <string name="mark_price" formatted="false">Mark-pris</string>
+    <string name="mark_price" formatted="false">Markpris</string>
     <string name="pnl" formatted="false">Urealiseret PnL</string>
     <string name="instrument" formatted="false">Instrument</string>
     <string name="price" formatted="false">Pris</string>
@@ -67,7 +67,7 @@
     <string name="order_buy" formatted="false">Køb</string>
     <string name="order_sell" formatted="false">Sælg</string>
     <string name="order_market" formatted="false">Markedsordre</string>
-    <string name="order_limit" formatted="false">Limit</string>
+    <string name="order_limit" formatted="false">Limitordre</string>
     <string name="order_stop" formatted="false">Stop</string>
     <string name="order_stop_limit" formatted="false">Stop Limit</string>
     <string name="order_live" formatted="false">Live</string>
@@ -337,8 +337,8 @@
     <string name="positions_reduce_footer" formatted="false">100 % lukker positionen. Sender en markedsordre kun til reduktion mod den modsatte side.</string>
     <string name="positions_reduce_sizelabel" formatted="false">Reducer størrelse</string>
     <string name="trading_bracket_attach" formatted="false">Tilføj SL / TP</string>
-    <string name="trading_bracket_stoplosslabel" formatted="false">Stop loss</string>
-    <string name="trading_bracket_takeprofitlabel" formatted="false">Take profit</string>
+    <string name="trading_bracket_stoplosslabel" formatted="false">Stop-loss</string>
+    <string name="trading_bracket_takeprofitlabel" formatted="false">Take-profit</string>
     <string name="trading_trailingstop_attach" formatted="false">Tilføj trailing stop</string>
     <string name="trading_trailingstop_trailamountlabel" formatted="false">Trail-størrelse</string>
     <string name="position_action_review" formatted="false">Gennemgå positionshandling</string>
@@ -456,8 +456,8 @@
     <string name="positions_timeline_attribution_origins_plan" formatted="false">Plan · automatiseret</string>
     <string name="positions_timeline_attribution_origins_system" formatted="false">System · automatiseret</string>
     <string name="positions_timeline_attribution_origins_unattributed" formatted="false">Ikke attribueret · oprindelse ukendt</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Der er ingen byttehandel, der tjener som bevis for denne reservation.</string>
-    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Legacy-afledt post, for hvilken ingen børshandel fylder tjener som bevis.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_phantom" formatted="false">Ingen handelsudførelse på børsen dokumenterer denne bogføring.</string>
+    <string name="positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage" formatted="false">Post med oprindelse i ældre data uden en dokumenterende handelsudførelse.</string>
     <string name="common_yes" formatted="false">Ja</string>
     <string name="common_no" formatted="false">Nej</string>
     <string name="settings_role_ai_reviewer" formatted="false">AI-anmelder</string>
