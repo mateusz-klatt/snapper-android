@@ -12,6 +12,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -79,7 +80,7 @@ private fun ConnectionStatusRow(badge: HomeConnectionBadge) {
         "$base · ${pluralStringResource(R.plurals.home_heartbeat_age_seconds, badge.ageSeconds, badge.ageSeconds)}"
     } else base
     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp),
-        modifier = Modifier.testTag("home.connection")) {
+        modifier = Modifier.semantics(mergeDescendants = true) {}.testTag("home.connection")) {
         Box(Modifier.size(8.dp).background(dotColor, CircleShape))
         Text(text, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
     }
@@ -88,7 +89,7 @@ private fun ConnectionStatusRow(badge: HomeConnectionBadge) {
 @Composable
 private fun LatestAlertCard(alert: AlertDto) {
     val border = if (alert.isSafetyCritical) BorderStroke(1.dp, MaterialTheme.colorScheme.error) else null
-    Card(Modifier.fillMaxWidth().testTag("home.latestAlert"), border = border) {
+    Card(Modifier.fillMaxWidth().semantics(mergeDescendants = true) {}.testTag("home.latestAlert"), border = border) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
                 Text(stringResource(R.string.home_section_latest_alert), style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary)
@@ -123,7 +124,7 @@ private fun TraderStatusCard(
     activeOrderCount: Int,
 ) {
     val running = status.trader.status == "running"
-    Card(Modifier.fillMaxWidth().testTag("home.traderStatus")) {
+    Card(Modifier.fillMaxWidth().semantics(mergeDescendants = true) {}.testTag("home.traderStatus")) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
                 Text(stringResource(R.string.system_trader), style = MaterialTheme.typography.titleMedium)
@@ -152,7 +153,7 @@ private fun AiReviewsSummaryCard(showPendingCount: Boolean, pendingCount: Int, o
                 Surface(
                     shape = CircleShape,
                     color = if (pendingCount > 0) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surfaceVariant,
-                    modifier = Modifier.testTag("home.aiReviews.pendingCount"),
+                    modifier = Modifier.semantics(mergeDescendants = true) {}.testTag("home.aiReviews.pendingCount"),
                 ) {
                     Text(
                         pendingCount.toString(),
@@ -169,7 +170,7 @@ private fun AiReviewsSummaryCard(showPendingCount: Boolean, pendingCount: Int, o
 
 @Composable
 private fun HomePositionsCard(positions: List<PositionDto>) {
-    Card(Modifier.fillMaxWidth().testTag("home.positions")) {
+    Card(Modifier.fillMaxWidth().semantics(mergeDescendants = true) {}.testTag("home.positions")) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Text(stringResource(R.string.venue_accounts_positions), style = MaterialTheme.typography.titleMedium)
             positions.forEachIndexed { index, position ->
@@ -195,7 +196,7 @@ private fun HomePositionsCard(positions: List<PositionDto>) {
 
 @Composable
 private fun HomeRecentOrdersCard(orders: List<OrderDto>) {
-    Card(Modifier.fillMaxWidth().testTag("home.orders")) {
+    Card(Modifier.fillMaxWidth().semantics(mergeDescendants = true) {}.testTag("home.orders")) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Text(stringResource(R.string.home_section_recent_orders), style = MaterialTheme.typography.titleMedium)
             orders.forEachIndexed { index, order ->
