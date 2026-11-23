@@ -404,4 +404,20 @@
     <string name="push_restart">Close and reopen the app before activating a different Firebase configuration.</string>
     <string name="push_close">Close</string>
     <string name="push_cleanup">Local notifications are off. Remote cleanup is pending; disable again while signed in to retry.</string>
+    <string name="home_connection_connected">Ceangailte</string>
+    <string name="home_connection_connecting">Á cheangal…</string>
+    <string name="home_connection_authenticating">Á fhíordheimhniú…</string>
+    <string name="home_connection_disconnected">Dícheangailte</string>
+    <string name="home_active_strategies">Straitéisí gníomhacha</string>
+    <string name="home_active_orders">Orduithe gníomhacha</string>
+    <string name="home_section_latest_alert">Foláireamh is déanaí</string>
+    <string name="home_section_recent_orders">Orduithe le déanaí</string>
+    <string name="home_position_qty_at_price">Cain.: %1$s @ %2$s</string>
+    <plurals name="home_heartbeat_age_seconds">
+        <item quantity="one">%1$d soicind ó shin</item>
+        <item quantity="two">%1$d shoicind ó shin</item>
+        <item quantity="few">%1$d shoicind ó shin</item>
+        <item quantity="many">%1$d soicind ó shin</item>
+        <item quantity="other">%1$d soicind ó shin</item>
+    </plurals>
 </resources>

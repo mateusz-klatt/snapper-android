@@ -6,6 +6,7 @@ import java.time.Clock
 import java.time.Instant
 import java.time.ZoneId
 import java.time.ZoneOffset
+import kotlin.time.Duration.Companion.seconds
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.TestScope
@@ -234,6 +235,30 @@ class LiveCoordinatorTest {
         socket.control("reauth_ok", """, "exp":"2026-10-16T12:03:00Z"""")
         runCurrent(); advanceTimeBy(200); runCurrent()
         assertEquals(listOf(LiveRefreshTarget.SIGNALS), reads)
+        coordinator.invalidate()
+    }
+
+    @Test fun removingLastRequestedTopicsPublishesStoppedState() = runTest(timeout = 10.seconds) {
+        val transport = Transport()
+        val bound = binding(transport, identity(setOf("read:market_data")))
+        val published = mutableListOf<LiveViewState>()
+        val coordinator = LiveCoordinator(backgroundScope, { bound }, {}, {}, { published += it })
+        coordinator.selectMarket(selection)
+        coordinator.setMarketVisible(true)
+        coordinator.setForeground(true)
+        val socket = establish(transport)
+        assertEquals(LiveConnectionStatus.SUBSCRIBED, coordinator.state.status)
+        val beforeRemoval = published.size
+
+        coordinator.setMarketVisible(false)
+        runCurrent()
+
+        assertTrue(socket.cancelled)
+        assertTrue(published.size > beforeRemoval)
+        assertEquals(LiveConnectionStatus.STOPPED, published.last().status)
+        assertTrue(published.last().acceptedTopics.isEmpty())
+        assertNull(published.last().connectedAt)
+        assertNull(published.last().lastHeartbeatAt)
         coordinator.invalidate()
     }
 

@@ -404,4 +404,16 @@
     <string name="push_restart">Close and reopen the app before activating a different Firebase configuration.</string>
     <string name="push_close">Close</string>
     <string name="push_cleanup">Local notifications are off. Remote cleanup is pending; disable again while signed in to retry.</string>
+    <string name="home_connection_connected">Disambungkan</string>
+    <string name="home_connection_connecting">Menyambung…</string>
+    <string name="home_connection_authenticating">Mengesahkan…</string>
+    <string name="home_connection_disconnected">Terputus</string>
+    <string name="home_active_strategies">Strategi Aktif</string>
+    <string name="home_active_orders">Pesanan Aktif</string>
+    <string name="home_section_latest_alert">Amaran terkini</string>
+    <string name="home_section_recent_orders">Pesanan terkini</string>
+    <string name="home_position_qty_at_price">Kuantiti: %1$s @ %2$s</string>
+    <plurals name="home_heartbeat_age_seconds">
+        <item quantity="other">%1$d saat lalu</item>
+    </plurals>
 </resources>

@@ -404,4 +404,18 @@
     <string name="push_restart">Close and reopen the app before activating a different Firebase configuration.</string>
     <string name="push_close">Close</string>
     <string name="push_cleanup">Local notifications are off. Remote cleanup is pending; disable again while signed in to retry.</string>
+    <string name="home_connection_connected">Savienots</string>
+    <string name="home_connection_connecting">Notiek savienošana…</string>
+    <string name="home_connection_authenticating">Notiek autentifikācija…</string>
+    <string name="home_connection_disconnected">Atvienots</string>
+    <string name="home_active_strategies">Aktīvās stratēģijas</string>
+    <string name="home_active_orders">Aktīvie rīkojumi</string>
+    <string name="home_section_latest_alert">Pēdējais brīdinājums</string>
+    <string name="home_section_recent_orders">Pēdējie rīkojumi</string>
+    <string name="home_position_qty_at_price">Daudz.: %1$s @ %2$s</string>
+    <plurals name="home_heartbeat_age_seconds">
+        <item quantity="zero">pirms %1$d sekundēm</item>
+        <item quantity="one">pirms %1$d sekundes</item>
+        <item quantity="other">pirms %1$d sekundēm</item>
+    </plurals>
 </resources>

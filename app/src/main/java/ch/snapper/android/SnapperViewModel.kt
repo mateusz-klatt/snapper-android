@@ -39,6 +39,11 @@ import ch.snapper.android.features.push.*
 import ch.snapper.android.data.PushClient
 import ch.snapper.android.data.PushIdentity
 import ch.snapper.android.data.PushBinding
+import ch.snapper.android.data.AiReviewsClient
+import ch.snapper.android.features.home.HomeState
+import ch.snapper.android.features.system.SystemFeed
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
 
 class SnapperViewModel(
     private val settings: SettingsStore,
@@ -46,11 +51,12 @@ class SnapperViewModel(
     private val defaultOrigin: String,
     private val allowLocalHttp: Boolean,
     private val pushPlatform: PushPlatform? = null,
+    private val clock: Clock = Clock.systemUTC(),
     private val deviceLanguages: () -> List<Locale> = { listOf(Locale.getDefault()) },
 ) : ViewModel() {
     private val languagePreferenceMutex = kotlinx.coroutines.sync.Mutex()
     private val displayPreferenceMutex = kotlinx.coroutines.sync.Mutex()
-    private val mutableState = MutableStateFlow(AppUiState(accountLanguageReady = false))
+    private val mutableState = MutableStateFlow(AppUiState(accountLanguageReady = false, home = HomeState(now = clock.instant())))
     val state = mutableState.asStateFlow()
     private var session: SessionClient? = null
     private var sessionObserver: Job? = null
@@ -63,6 +69,11 @@ class SnapperViewModel(
     private var catalogRevision = 0L
     private var catalogRequest: Job? = null
     private var orderMutation: Job? = null
+    private var foreground = false
+    private var homeVisible = false
+    private var homeTicker: Job? = null
+    private var pendingAiRevision = 0L
+    private var pendingAiRequest: Job? = null
     private val features = FeatureCoordinator(viewModelScope, { session }, { state.value }, { change -> mutableState.update(change) })
     private val privileged = ActionsCoordinator(viewModelScope, { session }, { state.value },
         { change -> mutableState.update(change) }, ::refresh)
@@ -189,6 +200,8 @@ class SnapperViewModel(
         selectLanguage = ::selectLanguage,
         retryAccountLanguage = accountLanguage::retry,
         push = push?.actions ?: PushActions(),
+        loadHome = { loadHome(force = true) },
+        homeVisible = ::setHomeVisible,
         clearError = { mutableState.update { it.copy(error = null) } },
         loadMarket = ::loadMarket,
         loadCatalog = features::loadCatalog,
@@ -245,19 +258,99 @@ class SnapperViewModel(
     }
 
     fun onForeground() {
+        foreground = true
         if (state.value.user != null && state.value.language.isEmpty()) {
             AccountLanguageResolver.resolve("", deviceLanguages())?.let(::chooseAccountLanguage)
         }
         features.setForeground(true)
         live.setForeground(true)
+        updateHomeTicker()
         if (state.value.user != null && !state.value.isLoading && !state.value.isRestoring) refresh()
     }
 
     fun onBackground() {
+        foreground = false
+        updateHomeTicker()
         features.setForeground(false)
         live.setForeground(false)
         marketRequest?.cancel()
         marketRevision++
+    }
+
+    fun setHomeVisible(visible: Boolean) {
+        if (homeVisible == visible) return
+        homeVisible = visible
+        updateHomeTicker()
+    }
+
+    private fun updateHomeTicker() {
+        val current = state.value
+        val shouldRun = foreground && homeVisible && current.user != null && current.accountLanguageReady &&
+            current.home.status == LiveConnectionStatus.SUBSCRIBED
+        if (shouldRun && homeTicker?.isActive == true) return
+        if (shouldRun) {
+            homeTicker = viewModelScope.launch {
+                while (isActive) {
+                    delay(1_000)
+                    mutableState.update { it.copy(home = it.home.copy(now = clock.instant())) }
+                }
+            }
+        } else {
+            homeTicker?.cancel()
+            homeTicker = null
+        }
+    }
+
+    fun loadHome(force: Boolean = false) {
+        if (state.value.user == null || !state.value.accountLanguageReady) return
+        features.systemActions.refresh(SystemFeed.STATUS)
+        loadPendingAiReviewCount(force)
+    }
+
+    private fun invalidateHomePending() {
+        pendingAiRevision++
+        pendingAiRequest?.cancel()
+        pendingAiRequest = null
+    }
+
+    private fun loadPendingAiReviewCount(force: Boolean = false) {
+        val client = session
+        val reviewClient = client as? AiReviewsClient
+        val user = state.value.user
+        val current = client?.user?.value
+        val canPending = user != null && current != null && sameScope(user, current) &&
+            !user.delegatePublicId.isNullOrBlank() && user.hasPermission("read:signals")
+        if (!canPending || reviewClient == null) {
+            invalidateHomePending()
+            mutableState.update { it.copy(home = it.home.copy(pendingAiReviewCount = 0)) }
+            return
+        }
+        if (!force && pendingAiRequest?.isActive == true) return
+        val capturedEpoch = sessionEpoch
+        val capturedScope = OrderScope.from(user)
+        val capturedDelegate = user.delegatePublicId
+        val request = ++pendingAiRevision
+        pendingAiRequest?.cancel()
+        pendingAiRequest = viewModelScope.launch {
+            try {
+                val count = reviewClient.pendingReviews().size
+                val nowUser = state.value.user
+                val liveUser = client.user.value
+                if (session === client && sessionEpoch == capturedEpoch && request == pendingAiRevision &&
+                    nowUser != null && liveUser != null &&
+                    OrderScope.from(nowUser) == capturedScope && nowUser.delegatePublicId == capturedDelegate &&
+                    OrderScope.from(liveUser) == capturedScope && liveUser.delegatePublicId == capturedDelegate
+                ) {
+                    mutableState.update { it.copy(home = it.home.copy(pendingAiReviewCount = count)) }
+                }
+            } catch (error: CancellationException) {
+                throw error
+            } catch (_: Exception) {
+                if (session === client && sessionEpoch == capturedEpoch && request == pendingAiRevision) {
+                    mutableState.update { it.copy(home = it.home.copy(pendingAiReviewCount = 0)) }
+                }
+            }
+        }
     }
 
     private fun currentSession(): SessionClient {
@@ -293,6 +386,7 @@ class SnapperViewModel(
 
     private fun invalidateObservedProfile(profile: UserDto?) {
         invalidateLanguage()
+        invalidateHomePending()
         features.invalidate()
         privileged.invalidate()
         live.invalidate()
@@ -300,7 +394,8 @@ class SnapperViewModel(
         sessionEpoch++
         marketRevision++
         marketRequest?.cancel()
-        mutableState.update { it.copy(user = profile, snapshot = null, market = MarketState()) }
+        mutableState.update { it.copy(user = profile, snapshot = null, market = MarketState(), home = HomeState(now = clock.instant())) }
+        updateHomeTicker()
     }
 
     fun login(username: String, password: String) {
@@ -326,13 +421,15 @@ class SnapperViewModel(
         if (state.value.isLoading || state.value.user == null) return
         resetOrderFlow()
         invalidateLanguage()
+        invalidateHomePending()
         features.invalidate()
         privileged.invalidate()
         live.invalidate()
         marketRequest?.cancel()
         marketRevision++
         sessionEpoch++
-        mutableState.update { it.copy(snapshot = null, market = MarketState()) }
+        mutableState.update { it.copy(snapshot = null, market = MarketState(), home = HomeState(now = clock.instant())) }
+        updateHomeTicker()
         runOperation { request ->
             val client = currentSession()
             val profile = selectWalletProfile(client, publicId, request, sessionEpoch)
@@ -362,6 +459,7 @@ class SnapperViewModel(
         val snapshot = client.snapshot()
         if (session === client && request == revision && sameScope(snapshot.user, client.user.value)) {
             mutableState.update { it.copy(user = snapshot.user, snapshot = snapshot, orders = it.orders.copy(snapshotRefreshFailed = false)) }
+            if (homeVisible) loadHome(force = true)
         }
     }
 
@@ -397,6 +495,7 @@ class SnapperViewModel(
     private fun clearVisibleSession() {
         pendingPushHint = null
         invalidateLanguage()
+        invalidateHomePending()
         features.invalidate()
         privileged.invalidate()
         live.invalidate()
@@ -408,8 +507,9 @@ class SnapperViewModel(
         marketRequest?.cancel()
         sessionObserver?.cancel()
         mutableState.update {
-            it.copy(user = null, snapshot = null, market = MarketState(), error = null)
+            it.copy(user = null, snapshot = null, market = MarketState(), home = HomeState(now = clock.instant()), error = null)
         }
+        updateHomeTicker()
     }
 
     private suspend fun retireSession() {
@@ -683,7 +783,7 @@ class SnapperViewModel(
         val transport = client as? LiveTransportClient ?: return null
         val identity = LiveIdentity(state.value.backendUrl, OrderScope.from(profile), profile.primaryOperatorPublicId,
             profile.delegatePublicId, sessionEpoch)
-        return LiveBinding(identity, tickets, transport.liveTransport(), Clock.systemUTC())
+        return LiveBinding(identity, tickets, transport.liveTransport(), clock)
     }
 
     fun setMarketVisible(visible: Boolean) {
@@ -702,8 +802,18 @@ class SnapperViewModel(
                     LiveConnectionStatus.STOPPED else value.status,
                 tick = value.market.tick,
             )
-            previous.copy(market = market)
+            previous.copy(
+                market = market,
+                home = previous.home.copy(
+                    status = value.status,
+                    acceptedTopics = value.acceptedTopics,
+                    connectedAt = value.connectedAt,
+                    lastHeartbeatAt = value.lastHeartbeatAt,
+                    now = clock.instant(),
+                ),
+            )
         }
+        updateHomeTicker()
     }
 
     private suspend fun refreshLiveFeature(target: LiveRefreshTarget) {
@@ -715,7 +825,11 @@ class SnapperViewModel(
                 refresh()
                 operation?.join()
             }
-            LiveRefreshTarget.AI_REVIEWS, LiveRefreshTarget.PROCESSES -> privileged.refreshLive(target)
+            LiveRefreshTarget.AI_REVIEWS -> {
+                privileged.refreshLive(target)
+                if (homeVisible) loadPendingAiReviewCount(force = true)
+            }
+            LiveRefreshTarget.PROCESSES -> privileged.refreshLive(target)
             else -> features.refreshLive(target)
         }
     }
@@ -804,6 +918,8 @@ class SnapperViewModel(
     }
 
     override fun onCleared() {
+        homeTicker?.cancel()
+        pendingAiRequest?.cancel()
         live.invalidate()
         sessionObserver?.cancel()
         session?.close()

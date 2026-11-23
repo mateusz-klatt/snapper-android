@@ -61,6 +61,7 @@ private fun AuthenticatedApp(state: AppUiState, actions: AppActions) {
     val pnlWallet = state.snapshot?.wallets?.firstOrNull { it.publicId == state.user?.activeWalletPublicId }
     LaunchedEffect(current, state.backendUrl, sessionScope, if (current == Destination.PNL) pnlWallet else null) {
         when (current) {
+            Destination.HOME -> actions.loadHome()
             Destination.MARKET -> actions.loadCatalog()
             Destination.DESKS -> actions.desks.reload()
             Destination.NOTIFICATIONS -> actions.notificationDefaults.refresh()
@@ -73,9 +74,10 @@ private fun AuthenticatedApp(state: AppUiState, actions: AppActions) {
         }
     }
     DisposableEffect(current, state.backendUrl, sessionScope) {
+        actions.homeVisible(current == Destination.HOME)
         actions.venueAccountsVisible(current == Destination.ACCOUNTS)
         actions.marketVisible(current == Destination.MARKET)
-        onDispose { actions.venueAccountsVisible(false); actions.marketVisible(false) }
+        onDispose { actions.homeVisible(false); actions.venueAccountsVisible(false); actions.marketVisible(false) }
     }
     LaunchedEffect(current, state.backendUrl, sessionScope, state.marketCatalog.exchange,
         state.marketCatalog.instrument, state.marketCatalog.timeframe, state.marketCatalog.canLoad) {
@@ -97,7 +99,11 @@ private fun AuthenticatedApp(state: AppUiState, actions: AppActions) {
             state.error?.let { ErrorCard(it, actions.refresh) }
             } }
             when (current) {
-                Destination.HOME -> item { Column(verticalArrangement = Arrangement.spacedBy(16.dp)) { HomeScreen(state, actions) } }
+                Destination.HOME -> item {
+                    Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
+                        HomeScreen(state, actions) { selected = Destination.AI_REVIEWS.name }
+                    }
+                }
                 Destination.POSITIONS -> positionsScreen(state, actions)
                 Destination.ORDERS -> ordersScreen(state, actions.orders, state.records, actions.records)
                 Destination.ALERTS -> alertsScreen(state)
@@ -126,34 +132,6 @@ private fun AuthenticatedApp(state: AppUiState, actions: AppActions) {
     OrderDialogs(state, actions.orders)
     PositionActionDialogs(state.positionActions, actions.positionActions, actions.refresh)
     AiReviewConfirmation(state.aiReviews, actions.aiReviews)
-}
-
-@Composable
-private fun HomeScreen(state: AppUiState, actions: AppActions) {
-    var expanded by remember { mutableStateOf(false) }
-    val selected = state.snapshot?.wallets?.firstOrNull { it.publicId == state.user?.activeWalletPublicId }
-    Text(stringResource(R.string.wallet))
-    Box {
-        OutlinedButton(onClick = { expanded = true }, modifier = Modifier.testTag("home.wallet")) {
-            Text(selected?.label ?: stringResource(if (state.user?.activeWalletPublicId == null) R.string.all_wallets else R.string.wallet))
-        }
-        DropdownMenu(expanded, onDismissRequest = { expanded = false }) {
-            DropdownMenuItem(modifier = Modifier.testTag("wallet.all"), text = { Text(stringResource(R.string.all_wallets)) }, onClick = { expanded = false; actions.selectWallet(null) })
-            state.snapshot?.wallets?.forEach { wallet ->
-                DropdownMenuItem(modifier = Modifier.testTag("wallet.${wallet.publicId}"), text = { Text(wallet.label + if (wallet.isPaper) " · ${stringResource(R.string.paper)}" else "") },
-                    onClick = { expanded = false; actions.selectWallet(wallet.publicId) })
-            }
-        }
-    }
-    Text(stringResource(R.string.snapshot_note), style = MaterialTheme.typography.bodySmall)
-    Text(stringResource(R.string.snapshot_limit), style = MaterialTheme.typography.bodySmall)
-    state.snapshot?.let { snapshot ->
-        RecordCard(state.user?.username.orEmpty()) {
-            if (snapshot.user.hasPermission(POSITIONS_READ_PERMISSION)) Metric(R.string.positions, snapshot.positions.size.toString())
-            if (snapshot.user.hasPermission("read:orders")) Metric(R.string.orders, snapshot.orders.size.toString())
-            if (snapshot.user.hasPermission("read:notifications")) Metric(R.string.alerts, snapshot.alerts.size.toString())
-        }
-    }
 }
 
 @Composable

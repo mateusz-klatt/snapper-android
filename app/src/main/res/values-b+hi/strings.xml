@@ -404,4 +404,17 @@
     <string name="push_restart">Close and reopen the app before activating a different Firebase configuration.</string>
     <string name="push_close">Close</string>
     <string name="push_cleanup">Local notifications are off. Remote cleanup is pending; disable again while signed in to retry.</string>
+    <string name="home_connection_connected">कनेक्टेड</string>
+    <string name="home_connection_connecting">कनेक्ट हो रहा है…</string>
+    <string name="home_connection_authenticating">ऑथेंटिकेट हो रहा है…</string>
+    <string name="home_connection_disconnected">डिस्कनेक्टेड</string>
+    <string name="home_active_strategies">एक्टिव स्ट्रैटेजी</string>
+    <string name="home_active_orders">एक्टिव ऑर्डर</string>
+    <string name="home_section_latest_alert">नवीनतम अलर्ट</string>
+    <string name="home_section_recent_orders">हालिया ऑर्डर</string>
+    <string name="home_position_qty_at_price">मात्रा: %1$s @ %2$s</string>
+    <plurals name="home_heartbeat_age_seconds">
+        <item quantity="one">%1$d सेकंड पहले</item>
+        <item quantity="other">%1$d सेकंड पहले</item>
+    </plurals>
 </resources>

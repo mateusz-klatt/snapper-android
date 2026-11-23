@@ -404,4 +404,17 @@
     <string name="push_restart">Close and reopen the app before activating a different Firebase configuration.</string>
     <string name="push_close">Close</string>
     <string name="push_cleanup">Local notifications are off. Remote cleanup is pending; disable again while signed in to retry.</string>
+    <string name="home_connection_connected">Yhdistetty</string>
+    <string name="home_connection_connecting">Yhdistetään…</string>
+    <string name="home_connection_authenticating">Tunnistaudutaan…</string>
+    <string name="home_connection_disconnected">Yhteys katkaistu</string>
+    <string name="home_active_strategies">Aktiiviset strategiat</string>
+    <string name="home_active_orders">Aktiiviset toimeksiannot</string>
+    <string name="home_section_latest_alert">Viimeisin hälytys</string>
+    <string name="home_section_recent_orders">Viimeaikaiset toimeksiannot</string>
+    <string name="home_position_qty_at_price">Määrä: %1$s hintaan %2$s</string>
+    <plurals name="home_heartbeat_age_seconds">
+        <item quantity="one">%1$d sekunti sitten</item>
+        <item quantity="other">%1$d sekuntia sitten</item>
+    </plurals>
 </resources>

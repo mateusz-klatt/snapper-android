@@ -404,4 +404,16 @@
     <string name="push_restart">Close and reopen the app before activating a different Firebase configuration.</string>
     <string name="push_close">Close</string>
     <string name="push_cleanup">Local notifications are off. Remote cleanup is pending; disable again while signed in to retry.</string>
+    <string name="home_connection_connected">接続済み</string>
+    <string name="home_connection_connecting">接続中…</string>
+    <string name="home_connection_authenticating">認証中…</string>
+    <string name="home_connection_disconnected">切断済み</string>
+    <string name="home_active_strategies">稼働中の戦略</string>
+    <string name="home_active_orders">有効注文</string>
+    <string name="home_section_latest_alert">最新アラート</string>
+    <string name="home_section_recent_orders">最近の注文</string>
+    <string name="home_position_qty_at_price">数量：%1$s @ %2$s</string>
+    <plurals name="home_heartbeat_age_seconds">
+        <item quantity="other">%1$d秒前</item>
+    </plurals>
 </resources>

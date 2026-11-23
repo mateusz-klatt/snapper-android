@@ -104,6 +104,8 @@ android {
     lint {
         warningsAsErrors = true
         abortOnError = true
+        // Build tools are pinned on purpose; these update checks are time-dependent.
+        informational += setOf("AndroidGradlePluginVersion", "GradleDependency")
     }
 }
 

@@ -404,4 +404,16 @@
     <string name="push_restart">Close and reopen the app before activating a different Firebase configuration.</string>
     <string name="push_close">Close</string>
     <string name="push_cleanup">Local notifications are off. Remote cleanup is pending; disable again while signed in to retry.</string>
+    <string name="home_connection_connected">已連線</string>
+    <string name="home_connection_connecting">正在連線…</string>
+    <string name="home_connection_authenticating">正在驗證…</string>
+    <string name="home_connection_disconnected">已中斷連線</string>
+    <string name="home_active_strategies">運行中策略</string>
+    <string name="home_active_orders">有效訂單</string>
+    <string name="home_section_latest_alert">最新警示</string>
+    <string name="home_section_recent_orders">近期訂單</string>
+    <string name="home_position_qty_at_price">數量：%1$s @ %2$s</string>
+    <plurals name="home_heartbeat_age_seconds">
+        <item quantity="other">%1$d 秒前</item>
+    </plurals>
 </resources>
