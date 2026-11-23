@@ -75,7 +75,7 @@ object HomeGlanceReducer {
                 HEARTBEATS_TOPIC in home.acceptedTopics ->
                     if (age != null && age > HEARTBEAT_STALE_SECONDS) HomeConnectionHealth.DISCONNECTED
                     else HomeConnectionHealth.WARNING
-                else -> HomeConnectionHealth.FRESH
+                else -> HomeConnectionHealth.WARNING
             }
             HomeConnectionBadge(HomeConnectionLabel.CONNECTED, health, age)
         }

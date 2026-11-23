@@ -55,8 +55,35 @@ class HomeGlanceTest {
 
         val socketOnly = HomeGlanceReducer.connectionBadge(HomeState(LiveConnectionStatus.SUBSCRIBED, setOf("orders.events."), base, null, base.plusSeconds(45)))
         assertEquals(HomeConnectionLabel.CONNECTED, socketOnly.label)
-        assertEquals(HomeConnectionHealth.FRESH, socketOnly.health)
+        assertEquals(HomeConnectionHealth.WARNING, socketOnly.health)
         assertEquals(45, socketOnly.ageSeconds)
+    }
+
+    @Test fun subscribedWithoutHeartbeatIsWarningAndOnlyAcceptedHeartbeatTopicTurnsRedAfterThirtySeconds() {
+        val socketOnly = HomeGlanceReducer.connectionBadge(
+            HomeState(
+                status = LiveConnectionStatus.SUBSCRIBED,
+                acceptedTopics = setOf("orders.events."),
+                connectedAt = base,
+                lastHeartbeatAt = null,
+                now = base.plusSeconds(45),
+            ),
+        )
+        assertEquals(HomeConnectionLabel.CONNECTED, socketOnly.label)
+        assertEquals(HomeConnectionHealth.WARNING, socketOnly.health)
+        assertEquals(45, socketOnly.ageSeconds)
+
+        val awaitingHeartbeat = HomeGlanceReducer.connectionBadge(
+            HomeState(
+                status = LiveConnectionStatus.SUBSCRIBED,
+                acceptedTopics = setOf(HomeGlanceReducer.HEARTBEATS_TOPIC),
+                connectedAt = base,
+                lastHeartbeatAt = null,
+                now = base.plusSeconds(45),
+            ),
+        )
+        assertEquals(HomeConnectionHealth.DISCONNECTED, awaitingHeartbeat.health)
+        assertEquals(45, awaitingHeartbeat.ageSeconds)
     }
 
     @Test fun reducerFiltersPositionsOrdersAlertsAndPreservesExactDecimals() {

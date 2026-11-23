@@ -17,6 +17,7 @@ import kotlin.time.Duration.Companion.seconds
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.test.*
 import kotlinx.serialization.json.*
@@ -98,6 +99,37 @@ class SnapperViewModelHomeTest {
             assertEquals(LiveConnectionStatus.SUBSCRIBED, model.state.value.home.status)
             assertNull(model.state.value.home.lastHeartbeatAt)
             model.setHomeVisible(false)
+        } finally {
+            models.clear()
+            runCurrent()
+        }
+    }
+
+    @Test fun repeatedLiveEmitsKeepSameHomeTickerJob() = runTest(dispatcher, timeout = 10.seconds) {
+        try {
+            val client = HomeClient()
+            val model = SnapperViewModel(HomeSettings(), { client }, "https://example.test", false, clock = clock())
+            models.put("home-ticker", model)
+            runCurrent()
+            model.setHomeVisible(true)
+            model.onForeground()
+            runCurrent()
+            val socket = client.sockets.single()
+            authenticateAndSubscribe(socket, clock().instant())
+            runCurrent()
+            val ticker = model.homeTickerJob()
+            assertNotNull(ticker)
+            assertTrue(ticker?.isActive == true)
+
+            socket.heartbeat(clock().instant(), 1)
+            runCurrent()
+            assertSame(ticker, model.homeTickerJob())
+            advanceTimeBy(2_000)
+            runCurrent()
+            assertSame(ticker, model.homeTickerJob())
+            socket.heartbeat(clock().instant(), 2)
+            runCurrent()
+            assertSame(ticker, model.homeTickerJob())
         } finally {
             models.clear()
             runCurrent()
@@ -189,7 +221,7 @@ class SnapperViewModelHomeTest {
             advanceTimeBy(12_000); runCurrent()
             val badge = HomeGlanceReducer.connectionBadge(model.state.value.home)
             assertEquals(HomeConnectionLabel.CONNECTED, badge.label)
-            assertEquals(HomeConnectionHealth.FRESH, badge.health)
+            assertEquals(HomeConnectionHealth.WARNING, badge.health)
             assertEquals(12, badge.ageSeconds)
 
             model.onBackground()
@@ -202,6 +234,9 @@ class SnapperViewModelHomeTest {
             runCurrent()
         }
     }
+
+    private fun SnapperViewModel.homeTickerJob(): Job? =
+        SnapperViewModel::class.java.getDeclaredField("homeTicker").apply { isAccessible = true }.get(this) as? Job
 
     private fun TestScope.authenticateAndSubscribe(
         socket: Socket,

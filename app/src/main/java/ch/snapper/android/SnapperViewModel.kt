@@ -284,16 +284,20 @@ class SnapperViewModel(
     }
 
     private fun updateHomeTicker() {
-        homeTicker?.cancel()
-        homeTicker = null
         val current = state.value
-        if (!foreground || !homeVisible || current.user == null || !current.accountLanguageReady ||
-            current.home.status != LiveConnectionStatus.SUBSCRIBED) return
-        homeTicker = viewModelScope.launch {
-            while (isActive) {
-                delay(1_000)
-                mutableState.update { it.copy(home = it.home.copy(now = clock.instant())) }
+        val shouldRun = foreground && homeVisible && current.user != null && current.accountLanguageReady &&
+            current.home.status == LiveConnectionStatus.SUBSCRIBED
+        if (shouldRun && homeTicker?.isActive == true) return
+        if (shouldRun) {
+            homeTicker = viewModelScope.launch {
+                while (isActive) {
+                    delay(1_000)
+                    mutableState.update { it.copy(home = it.home.copy(now = clock.instant())) }
+                }
             }
+        } else {
+            homeTicker?.cancel()
+            homeTicker = null
         }
     }
 
