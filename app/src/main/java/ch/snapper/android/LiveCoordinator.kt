@@ -3,6 +3,7 @@ package ch.snapper.android
 import ch.snapper.android.data.*
 import ch.snapper.android.features.live.*
 import java.time.Clock
+import java.time.Instant
 import kotlinx.coroutines.CoroutineScope
 
 /** sessionEpoch must change even when a replacement login has the same user and permissions. */
@@ -16,6 +17,8 @@ data class LiveViewState(
     val market: LiveMarketState = LiveMarketState(),
     val status: LiveConnectionStatus = LiveConnectionStatus.STOPPED,
     val acceptedTopics: Set<String> = emptySet(),
+    val connectedAt: Instant? = null,
+    val lastHeartbeatAt: Instant? = null,
 )
 
 /** UI-dispatcher confined. Snapshot callback starts one read; refreshFeature must suspend until its read completes. */
@@ -160,7 +163,10 @@ class LiveCoordinator(
         val topics = desiredTopics(owner)
         if (connection != null && topics == requestedTopics) return
         stopConnection()
-        if (topics.isEmpty()) return
+        if (topics.isEmpty()) {
+            emit()
+            return
+        }
         requestedTopics = topics
         val epoch = connectionEpoch
         val refreshEpoch = refreshes.currentEpoch
@@ -189,16 +195,22 @@ class LiveCoordinator(
         pendingSnapshot = null
         fallbackIssued = false
         refreshes.invalidate()
-        view = view.copy(status = LiveConnectionStatus.STOPPED, acceptedTopics = emptySet())
+        view = view.copy(
+            status = LiveConnectionStatus.STOPPED,
+            acceptedTopics = emptySet(),
+            connectedAt = null,
+            lastHeartbeatAt = null,
+        )
     }
 
     private fun active(epoch: Long): Boolean = foreground && epoch == connectionEpoch && currentBinding() != null
 
     private fun subscribed(epoch: Long, topics: Set<String>) {
         if (!active(epoch)) return
+        val owner = currentBinding() ?: return
         val recovering = acknowledged || fallbackIssued
         acknowledged = true
-        view = view.copy(acceptedTopics = topics)
+        view = view.copy(acceptedTopics = topics, connectedAt = view.connectedAt ?: owner.clock.instant())
         emit()
         refreshAcceptedFeeds(topics)
         fallbackIssued = false
@@ -226,7 +238,13 @@ class LiveCoordinator(
     private fun connectionStatus(epoch: Long, status: LiveConnectionStatus) {
         if (!active(epoch)) return
         val unavailable = status == LiveConnectionStatus.RECONNECTING || status == LiveConnectionStatus.FAILED
-        view = view.copy(status = status, acceptedTopics = if (unavailable) emptySet() else view.acceptedTopics)
+        val clearTimestamps = status != LiveConnectionStatus.SUBSCRIBED
+        view = view.copy(
+            status = status,
+            acceptedTopics = if (unavailable) emptySet() else view.acceptedTopics,
+            connectedAt = if (clearTimestamps) null else view.connectedAt,
+            lastHeartbeatAt = if (clearTimestamps) null else view.lastHeartbeatAt,
+        )
         emit()
         if (unavailable && !fallbackIssued && marketVisible) {
             if (pendingSnapshot == null) beginSnapshot() else fallbackSnapshot()
@@ -236,14 +254,21 @@ class LiveCoordinator(
     private fun receive(epoch: Long, refreshEpoch: Long, bytes: ByteArray) {
         if (!active(epoch)) return
         val owner = currentBinding() ?: return
+        val instant = owner.clock.instant()
         val selection = view.market.selection
         if (marketVisible && selection != null) {
-            decoder.decode(bytes, selection, owner.clock.instant())?.let { frame ->
+            decoder.decode(bytes, selection, instant)?.let { frame ->
                 view = view.copy(market = LiveMarketReducer.receive(view.market, view.market.generation, frame))
                 emit()
                 return
             }
         }
-        events.route(bytes, owner.identity, owner.clock.instant())?.let { refreshes.signal(it, refreshEpoch) }
+        events.route(bytes, owner.identity, instant)?.let { target ->
+            if (target == LiveRefreshTarget.SYSTEM) {
+                view = view.copy(lastHeartbeatAt = instant)
+                emit()
+            }
+            refreshes.signal(target, refreshEpoch)
+        }
     }
 }

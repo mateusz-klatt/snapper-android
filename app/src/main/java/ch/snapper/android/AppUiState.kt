@@ -36,6 +36,7 @@ import ch.snapper.android.features.marketdiagnostics.MarketDiagnosticsState
 import ch.snapper.android.features.marketdiagnostics.MarketDiagnosticsActions
 import ch.snapper.android.features.marketcontext.MarketContextState
 import ch.snapper.android.features.marketcontext.MarketContextActions
+import ch.snapper.android.features.home.HomeState
 
 enum class UiError {
     INVALID_ORIGIN, INVALID_CREDENTIALS, SESSION_EXPIRED, NETWORK, SERVICE, UNKNOWN
@@ -79,6 +80,7 @@ data class AppUiState(
     val accountLanguage: AccountLanguageState = AccountLanguageState(),
     val accountLanguageReady: Boolean = true,
     val push: ch.snapper.android.features.push.PushState = ch.snapper.android.features.push.PushState(),
+    val home: HomeState = HomeState(),
 )
 
 data class AppActions(
@@ -115,4 +117,6 @@ data class AppActions(
     val marketContext: MarketContextActions = MarketContextActions({}, {}, {}),
     val retryAccountLanguage: () -> Unit = {},
     val push: ch.snapper.android.features.push.PushActions = ch.snapper.android.features.push.PushActions(),
+    val loadHome: () -> Unit = {},
+    val homeVisible: (Boolean) -> Unit = {},
 )

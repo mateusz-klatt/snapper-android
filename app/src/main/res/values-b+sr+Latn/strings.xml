@@ -404,4 +404,18 @@
     <string name="push_restart">Close and reopen the app before activating a different Firebase configuration.</string>
     <string name="push_close">Close</string>
     <string name="push_cleanup">Local notifications are off. Remote cleanup is pending; disable again while signed in to retry.</string>
+    <string name="home_connection_connected">Povezano</string>
+    <string name="home_connection_connecting">Povezivanje…</string>
+    <string name="home_connection_authenticating">Autentifikacija…</string>
+    <string name="home_connection_disconnected">Veza prekinuta</string>
+    <string name="home_active_strategies">Aktivne strategije</string>
+    <string name="home_active_orders">Aktivni nalozi</string>
+    <string name="home_section_latest_alert">Poslednje upozorenje</string>
+    <string name="home_section_recent_orders">Nedavni nalozi</string>
+    <string name="home_position_qty_at_price">Kol.: %1$s @ %2$s</string>
+    <plurals name="home_heartbeat_age_seconds">
+        <item quantity="one">pre %1$d sekundu</item>
+        <item quantity="few">pre %1$d sekunde</item>
+        <item quantity="other">pre %1$d sekundi</item>
+    </plurals>
 </resources>

@@ -404,4 +404,18 @@
     <string name="push_restart">Close and reopen the app before activating a different Firebase configuration.</string>
     <string name="push_close">Close</string>
     <string name="push_cleanup">Local notifications are off. Remote cleanup is pending; disable again while signed in to retry.</string>
+    <string name="home_connection_connected">Conectat</string>
+    <string name="home_connection_connecting">Se conectează…</string>
+    <string name="home_connection_authenticating">Se autentifică…</string>
+    <string name="home_connection_disconnected">Deconectat</string>
+    <string name="home_active_strategies">Strategii active</string>
+    <string name="home_active_orders">Ordine active</string>
+    <string name="home_section_latest_alert">Ultima alertă</string>
+    <string name="home_section_recent_orders">Ordine recente</string>
+    <string name="home_position_qty_at_price">Cant.: %1$s @ %2$s</string>
+    <plurals name="home_heartbeat_age_seconds">
+        <item quantity="one">acum %1$d secundă</item>
+        <item quantity="few">acum %1$d secunde</item>
+        <item quantity="other">acum %1$d de secunde</item>
+    </plurals>
 </resources>

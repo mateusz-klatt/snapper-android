@@ -404,4 +404,17 @@
     <string name="push_restart">Close and reopen the app before activating a different Firebase configuration.</string>
     <string name="push_close">Close</string>
     <string name="push_cleanup">Local notifications are off. Remote cleanup is pending; disable again while signed in to retry.</string>
+    <string name="home_connection_connected">Συνδεδεμένη</string>
+    <string name="home_connection_connecting">Γίνεται σύνδεση…</string>
+    <string name="home_connection_authenticating">Έλεγχος ταυτότητας…</string>
+    <string name="home_connection_disconnected">Αποσυνδεδεμένη</string>
+    <string name="home_active_strategies">Ενεργές στρατηγικές</string>
+    <string name="home_active_orders">Ενεργές εντολές</string>
+    <string name="home_section_latest_alert">Τελευταία ειδοποίηση</string>
+    <string name="home_section_recent_orders">Πρόσφατες εντολές</string>
+    <string name="home_position_qty_at_price">Ποσότητα: %1$s @ %2$s</string>
+    <plurals name="home_heartbeat_age_seconds">
+        <item quantity="one">%1$d δευτερόλεπτο πριν</item>
+        <item quantity="other">%1$d δευτερόλεπτα πριν</item>
+    </plurals>
 </resources>
