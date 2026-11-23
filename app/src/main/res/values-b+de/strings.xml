@@ -198,11 +198,11 @@
     <string name="signals_empty" formatted="false">Keine Handelssignale entsprechen deinen aktuellen Filtern.</string>
     <string name="signals_export" formatted="false">Exportieren</string>
     <string name="signals_export_failed" formatted="false">Übermittlung fehlgeschlagen</string>
-    <string name="venue_accounts_title" formatted="false">Börsenkonten</string>
+    <string name="venue_accounts_title" formatted="false">Plattformkonten</string>
     <string name="venue_accounts_refresh" formatted="false">Aktualisieren</string>
-    <string name="venue_accounts_failed" formatted="false">Der Zustand des Börsenkontos konnte nicht geladen werden. Das Konto ist nicht leer; die Daten sind derzeit lediglich nicht verfügbar.</string>
-    <string name="venue_accounts_authoritative" formatted="false">Verbindliche Börsendaten in Echtzeit, innerhalb des Gültigkeitszeitraums erfasst.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Dieses Konto zeigt zuletzt bekannte, simulierte oder nicht verfügbare Daten — keine verbindlichen Börsensalden in Echtzeit.</string>
+    <string name="venue_accounts_failed" formatted="false">Der Zustand des Plattformkontos konnte nicht geladen werden. Das Konto ist nicht leer; die Daten sind derzeit lediglich nicht verfügbar.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Verbindliche Daten der Handelsplattform in Echtzeit, innerhalb des Gültigkeitszeitraums erfasst.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Dieses Konto zeigt zuletzt bekannte, simulierte oder nicht verfügbare Daten — keine verbindlichen Salden auf der Handelsplattform in Echtzeit.</string>
     <string name="venue_accounts_valuation" formatted="false">Bewertung</string>
     <string name="venue_accounts_balances" formatted="false">Salden</string>
     <string name="venue_accounts_observed" formatted="false">Beobachtet am</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">Eigenkapital einblenden</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">Eigenkapital</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">Aktueller Drawdown</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Nur Spot-Börse — Guthaben auf anderen Börsen sind ausgeschlossen.</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Nur Spot-Handelsplattform — Guthaben auf anderen Handelsplattformen sind ausgeschlossen.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Externe Ein- und Auszahlungen werden nicht herausgerechnet.</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">Diese Zahlen werden zu jedem Minutenschluss aus %1$s umgerechnet und nicht direkt in dieser Währung erfasst.</string>
     <string name="positions_timeline_equity_honesty_pricedon">Bewertet anhand von %1$s.</string>
@@ -481,7 +481,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">Übereinstimmend</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">Abweichend</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Unvollständig</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Rohwerte der Börse</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Rohwerte der Handelsplattform</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Alte Gleitkommawerte</string>
     <string name="venue_accounts_status_corrupt" formatted="false">Beschädigt</string>
     <string name="system_status_not_running" formatted="false">Läuft nicht</string>

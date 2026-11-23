@@ -198,11 +198,11 @@
     <string name="signals_empty" formatted="false">אין איתותי מסחר שתואמים את הסינונים הנוכחיים שלך.</string>
     <string name="signals_export" formatted="false">ייצא</string>
     <string name="signals_export_failed" formatted="false">השליחה נכשלה</string>
-    <string name="venue_accounts_title" formatted="false">חשבונות בורסה</string>
+    <string name="venue_accounts_title" formatted="false">חשבונות פלטפורמה</string>
     <string name="venue_accounts_refresh" formatted="false">רענון</string>
-    <string name="venue_accounts_failed" formatted="false">לא ניתן לטעון את מצב החשבון בבורסה. החשבון אינו ריק; הנתונים פשוט אינם זמינים כרגע.</string>
-    <string name="venue_accounts_authoritative" formatted="false">נתוני בורסה מהימנים בזמן אמת, שנצפו בתוך חלון הסמכות.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">חשבון זה מציג נתונים אחרונים ידועים, מדומים או לא זמינים — אלה אינם יתרות בורסה מוסמכות בזמן אמת.</string>
+    <string name="venue_accounts_failed" formatted="false">לא ניתן לטעון את מצב החשבון בפלטפורמה. החשבון אינו ריק; הנתונים פשוט אינם זמינים כרגע.</string>
+    <string name="venue_accounts_authoritative" formatted="false">נתוני פלטפורמה מהימנים בזמן אמת, שנצפו בתוך חלון הסמכות.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">חשבון זה מציג נתונים אחרונים ידועים, מדומים או לא זמינים — אלה אינם יתרות פלטפורמה מוסמכות בזמן אמת.</string>
     <string name="venue_accounts_valuation" formatted="false">הערכת שווי</string>
     <string name="venue_accounts_balances" formatted="false">יתרות</string>
     <string name="venue_accounts_observed" formatted="false">זמן התצפית</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">שכבת הון</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">הון</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">ירידה נוכחית מהשיא</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">בורסת ספוט בלבד — יתרות בבורסות אחרות אינן נכללות.</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">פלטפורמת ספוט בלבד — יתרות בפלטפורמות אחרות אינן נכללות.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">השפעת הפקדות ומשיכות חיצוניות לא נוכתה.</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">נתונים אלה מומרים מ-%1$s בסוף כל דקה, ואינם נדגמים במקור במטבע זה.</string>
     <string name="positions_timeline_equity_honesty_pricedon">התמחור מבוסס על %1$s.</string>
@@ -482,7 +482,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">תואם</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">לא תואם</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">לא שלם</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">ערכים גולמיים מהבורסה</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">ערכים גולמיים מהפלטפורמה</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">ערכי נקודה צפה מהמערכת הישנה</string>
     <string name="venue_accounts_status_corrupt" formatted="false">פגום</string>
     <string name="system_status_not_running" formatted="false">לא פועל</string>

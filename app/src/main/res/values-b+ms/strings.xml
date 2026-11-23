@@ -198,11 +198,11 @@
     <string name="signals_empty" formatted="false">Tiada isyarat dagangan sepadan dengan penapis semasa anda.</string>
     <string name="signals_export" formatted="false">Eksport</string>
     <string name="signals_export_failed" formatted="false">Penghantaran gagal</string>
-    <string name="venue_accounts_title" formatted="false">Akaun Bursa</string>
+    <string name="venue_accounts_title" formatted="false">Akaun Platform</string>
     <string name="venue_accounts_refresh" formatted="false">Muat semula</string>
-    <string name="venue_accounts_failed" formatted="false">Status akaun bursa tidak dapat dimuatkan. Akaun ini bukan kosong; datanya hanya tidak tersedia buat masa ini.</string>
-    <string name="venue_accounts_authoritative" formatted="false">Data bursa masa nyata yang boleh dipercayai, direkodkan dalam tempoh sah.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Akaun ini menunjukkan data terakhir diketahui, simulasi atau tidak tersedia — bukan baki bursa masa nyata yang berautoriti.</string>
+    <string name="venue_accounts_failed" formatted="false">Status akaun platform tidak dapat dimuatkan. Akaun ini bukan kosong; datanya hanya tidak tersedia buat masa ini.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Data platform masa nyata yang boleh dipercayai, direkodkan dalam tempoh sah.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Akaun ini menunjukkan data terakhir diketahui, simulasi atau tidak tersedia — bukan baki platform masa nyata yang berautoriti.</string>
     <string name="venue_accounts_valuation" formatted="false">Penilaian</string>
     <string name="venue_accounts_balances" formatted="false">Baki</string>
     <string name="venue_accounts_observed" formatted="false">Diperhatikan pada</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">Tindihan ekuiti</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">Ekuiti</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">Susut nilai dari puncak semasa</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Bursa lani sahaja — baki pada bursa lain dikecualikan.</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Platform lani sahaja — baki pada platform lain dikecualikan.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Deposit dan pengeluaran luaran tidak dilaraskan keluar.</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">Angka ini ditukar daripada %1$s pada penutupan setiap minit, bukan disampel terus dalam mata wang ini.</string>
     <string name="positions_timeline_equity_honesty_pricedon">Dihargakan berdasarkan %1$s.</string>
@@ -480,7 +480,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">Sepadan</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">Tidak sepadan</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Tidak lengkap</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Nilai mentah daripada bursa</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Nilai mentah daripada platform</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Nilai titik apung lama</string>
     <string name="venue_accounts_status_corrupt" formatted="false">Rosak</string>
     <string name="system_status_not_running" formatted="false">Tidak berjalan</string>

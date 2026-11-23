@@ -198,11 +198,11 @@
     <string name="signals_empty" formatted="false">Niciun semnal de tranzacționare nu corespunde filtrelor curente.</string>
     <string name="signals_export" formatted="false">Exportați</string>
     <string name="signals_export_failed" formatted="false">Trimitere eșuată</string>
-    <string name="venue_accounts_title" formatted="false">Conturi de Bursă</string>
+    <string name="venue_accounts_title" formatted="false">Conturi pe platformă</string>
     <string name="venue_accounts_refresh" formatted="false">Reîmprospătează</string>
-    <string name="venue_accounts_failed" formatted="false">Starea contului de bursă nu a putut fi încărcată. Contul nu este gol; datele sunt pur și simplu indisponibile momentan.</string>
-    <string name="venue_accounts_authoritative" formatted="false">Date bursiere de încredere în timp real, observate în intervalul de autoritate.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Acest cont afișează ultimele date cunoscute, simulate sau indisponibile — nu sunt solduri bursiere oficiale în timp real.</string>
+    <string name="venue_accounts_failed" formatted="false">Starea contului pe platformă nu a putut fi încărcată. Contul nu este gol; datele sunt pur și simplu indisponibile momentan.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Date de încredere ale platformei în timp real, observate în intervalul de autoritate.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Acest cont afișează ultimele date cunoscute, simulate sau indisponibile — nu sunt solduri oficiale ale platformei în timp real.</string>
     <string name="venue_accounts_valuation" formatted="false">Evaluare</string>
     <string name="venue_accounts_balances" formatted="false">Solduri</string>
     <string name="venue_accounts_observed" formatted="false">Observat la</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">Suprapunerea capitalului</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">Capital propriu</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">Scăderea curentă față de maxim</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Doar bursa spot — soldurile de pe alte burse sunt excluse.</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Doar platforma spot — soldurile de pe alte platforme sunt excluse.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Depunerile și retragerile externe nu sunt eliminate din calcul.</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">Aceste cifre sunt recalculate din %1$s la închiderea fiecărui minut, nu sunt eșantionate direct în această monedă.</string>
     <string name="positions_timeline_equity_honesty_pricedon">Evaluat pe %1$s.</string>
@@ -482,7 +482,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">Concordant</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">Neconcordant</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Incomplet</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Valori brute de la bursă</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Valori brute de pe platformă</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Valori vechi în virgulă mobilă</string>
     <string name="venue_accounts_status_corrupt" formatted="false">Corupt</string>
     <string name="system_status_not_running" formatted="false">Nu rulează</string>

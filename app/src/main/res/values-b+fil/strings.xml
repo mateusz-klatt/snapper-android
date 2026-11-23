@@ -198,11 +198,11 @@
     <string name="signals_empty" formatted="false">Walang trading signal na tumutugma sa iyong kasalukuyang mga filter.</string>
     <string name="signals_export" formatted="false">I-export</string>
     <string name="signals_export_failed" formatted="false">Nabigo ang pagsumite</string>
-    <string name="venue_accounts_title" formatted="false">Mga Account sa Palitan</string>
+    <string name="venue_accounts_title" formatted="false">Mga Account sa Plataporma</string>
     <string name="venue_accounts_refresh" formatted="false">I-refresh</string>
-    <string name="venue_accounts_failed" formatted="false">Hindi ma-load ang estado ng account sa palitan. Hindi walang laman ang account; hindi lamang magagamit ang data sa ngayon.</string>
-    <string name="venue_accounts_authoritative" formatted="false">Mapagkakatiwalaang real-time na data ng palitan, naitala sa loob ng panahon ng bisa.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Ipinapakita ng account na ito ang huling nalaman, ginaya, o hindi magagamit na data — hindi ito opisyal na real-time na balanse ng palitan.</string>
+    <string name="venue_accounts_failed" formatted="false">Hindi ma-load ang estado ng account sa plataporma. Hindi walang laman ang account; hindi lamang magagamit ang data sa ngayon.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Mapagkakatiwalaang real-time na data ng plataporma, naitala sa loob ng panahon ng bisa.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Ipinapakita ng account na ito ang huling nalaman, ginaya, o hindi magagamit na data — hindi ito opisyal na real-time na balanse ng plataporma.</string>
     <string name="venue_accounts_valuation" formatted="false">Pagtataya ng halaga</string>
     <string name="venue_accounts_balances" formatted="false">Mga Balanse</string>
     <string name="venue_accounts_observed" formatted="false">Oras ng pagmamasid</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">Patong ng kapital</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">Kapital</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">Kasalukuyang pagbaba mula sa rurok</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Spot na palitan lamang — hindi kasama ang mga balanse sa ibang palitan.</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Spot na plataporma lamang — hindi kasama ang mga balanse sa ibang plataporma.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Hindi pa inaalis sa pagkukuwenta ang mga panlabas na deposito at pag-withdraw.</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">Ang mga numerong ito ay kinonvert mula sa %1$s sa pagsasara ng bawat minuto, hindi direktang na-sample sa perang ito.</string>
     <string name="positions_timeline_equity_honesty_pricedon">Batay ang presyo sa %1$s.</string>
@@ -481,7 +481,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">Tugma</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">Hindi tugma</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Hindi kumpleto</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Mga hilaw na halaga mula sa palitan</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Mga hilaw na halaga mula sa plataporma</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Mga lumang halagang floating-point</string>
     <string name="venue_accounts_status_corrupt" formatted="false">Sira</string>
     <string name="system_status_not_running" formatted="false">Hindi tumatakbo</string>

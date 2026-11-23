@@ -198,11 +198,11 @@
     <string name="signals_empty" formatted="false">Neviens tirdzniecības signāls neatbilst jūsu pašreizējiem filtriem.</string>
     <string name="signals_export" formatted="false">Eksportēt</string>
     <string name="signals_export_failed" formatted="false">Iesniegšana neizdevās</string>
-    <string name="venue_accounts_title" formatted="false">Biržas konti</string>
+    <string name="venue_accounts_title" formatted="false">Platformas konti</string>
     <string name="venue_accounts_refresh" formatted="false">Atsvaidzināt</string>
-    <string name="venue_accounts_failed" formatted="false">Neizdevās ielādēt biržas konta stāvokli. Konts nav tukšs; dati šobrīd vienkārši nav pieejami.</string>
-    <string name="venue_accounts_authoritative" formatted="false">Uzticami biržas reāllaika dati, novēroti pilnvaru logā.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Šajā kontā tiek rādīti pēdējie zināmie, simulētie vai nepieejamie dati — tie nav autoritatīvi biržas atlikumi reāllaikā.</string>
+    <string name="venue_accounts_failed" formatted="false">Neizdevās ielādēt platformas konta stāvokli. Konts nav tukšs; dati šobrīd vienkārši nav pieejami.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Uzticami platformas reāllaika dati, novēroti pilnvaru logā.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Šajā kontā tiek rādīti pēdējie zināmie, simulētie vai nepieejamie dati — tie nav autoritatīvi platformas atlikumi reāllaikā.</string>
     <string name="venue_accounts_valuation" formatted="false">Novērtējums</string>
     <string name="venue_accounts_balances" formatted="false">Atlikumi</string>
     <string name="venue_accounts_observed" formatted="false">Novērojuma laiks</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">Kapitāla līknes pārklājums</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">Kapitāls</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">Pašreizējais kritums no maksimuma</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Tikai tūlītējo darījumu birža — citās biržās turētie atlikumi nav iekļauti.</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Tikai tūlītējo darījumu platforma — citās platformās turētie atlikumi nav iekļauti.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Ārējo iemaksu un izmaksu ietekme nav izslēgta.</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">Šie skaitļi tiek pārrēķināti no %1$s katras minūtes beigās, nevis sākotnēji reģistrēti šajā valūtā.</string>
     <string name="positions_timeline_equity_honesty_pricedon">Cenu avots: %1$s.</string>
@@ -482,7 +482,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">Atbilst</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">Neatbilst</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Nepilnīgs</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Neapstrādātas biržas vērtības</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Neapstrādātas platformas vērtības</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Iepriekšējā formāta peldošā komata vērtības</string>
     <string name="venue_accounts_status_corrupt" formatted="false">Bojāts</string>
     <string name="system_status_not_running" formatted="false">Nedarbojas</string>

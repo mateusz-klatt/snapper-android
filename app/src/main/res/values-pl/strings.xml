@@ -198,11 +198,11 @@
     <string name="signals_empty">Żadne sygnały transakcyjne nie pasują do bieżących filtrów.</string>
     <string name="signals_export">Eksportuj</string>
     <string name="signals_export_failed">Wysłanie nie powiodło się</string>
-    <string name="venue_accounts_title">Konta Giełdowe</string>
+    <string name="venue_accounts_title">Konta na platformie</string>
     <string name="venue_accounts_refresh">Odśwież</string>
-    <string name="venue_accounts_failed">Nie udało się wczytać stanu konta giełdowego. Konto nie jest puste; dane są obecnie po prostu niedostępne.</string>
+    <string name="venue_accounts_failed">Nie udało się wczytać stanu konta na platformie. Konto nie jest puste; dane są obecnie po prostu niedostępne.</string>
     <string name="venue_accounts_authoritative">Prawda na żywo, zaobserwowana w oknie autorytetu.</string>
-    <string name="venue_accounts_not_authoritative">To konto pokazuje ostatnie znane, symulowane lub niedostępne dane — nie są to miarodajne salda giełdowe w czasie rzeczywistym.</string>
+    <string name="venue_accounts_not_authoritative">To konto pokazuje ostatnie znane, symulowane lub niedostępne dane — nie są to miarodajne salda na platformie w czasie rzeczywistym.</string>
     <string name="venue_accounts_valuation">Wycena</string>
     <string name="venue_accounts_balances">Salda</string>
     <string name="venue_accounts_observed">Czas obserwacji</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title">Nakładka kapitału</string>
     <string name="positions_timeline_equity_serieslabel">Kapitał</string>
     <string name="positions_timeline_equity_drawdown_current">Bieżące obsunięcie</string>
-    <string name="positions_timeline_equity_honesty_spotonly">Tylko giełda spot — salda na innych giełdach są wykluczone.</string>
+    <string name="positions_timeline_equity_honesty_spotonly">Tylko platforma spot — salda na innych platformach są wykluczone.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted">Zewnętrzne wpłaty i wypłaty nie są odejmowane.</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">Te dane są przeliczone z %1$s po kursie zamknięcia z każdej minuty i nie są pierwotnie mierzone w tej walucie.</string>
     <string name="positions_timeline_equity_honesty_pricedon">Wycena według %1$s.</string>
@@ -483,7 +483,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">Zgodne</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">Niezgodne</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Niekompletne</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Surowe wartości z giełdy</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Surowe wartości z platformy</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Starsze wartości zmiennoprzecinkowe</string>
     <string name="venue_accounts_status_corrupt" formatted="false">Uszkodzone</string>
     <string name="system_status_not_running" formatted="false">Nie działa</string>

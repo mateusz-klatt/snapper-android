@@ -198,11 +198,11 @@
     <string name="signals_empty" formatted="false">आपके वर्तमान फ़िल्टर से कोई ट्रेडिंग सिग्नल मेल नहीं खाता।</string>
     <string name="signals_export" formatted="false">निर्यात</string>
     <string name="signals_export_failed" formatted="false">सबमिशन विफल</string>
-    <string name="venue_accounts_title" formatted="false">एक्सचेंज खाते</string>
+    <string name="venue_accounts_title" formatted="false">प्लेटफ़ॉर्म के खाते</string>
     <string name="venue_accounts_refresh" formatted="false">रीफ़्रेश करें</string>
-    <string name="venue_accounts_failed" formatted="false">एक्सचेंज खाते की स्थिति लोड नहीं की जा सकी। खाता खाली नहीं है; डेटा अभी उपलब्ध नहीं है।</string>
-    <string name="venue_accounts_authoritative" formatted="false">लाइव एक्सचेंज सच्चाई, प्राधिकरण विंडो के भीतर देखी गई।</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">यह खाता अंतिम ज्ञात, सिम्युलेटेड या अनुपलब्ध डेटा दिखाता है — ये एक्सचेंज के आधिकारिक लाइव बैलेंस नहीं हैं।</string>
+    <string name="venue_accounts_failed" formatted="false">ट्रेडिंग प्लेटफ़ॉर्म के खाते की स्थिति लोड नहीं की जा सकी। खाता खाली नहीं है; डेटा अभी उपलब्ध नहीं है।</string>
+    <string name="venue_accounts_authoritative" formatted="false">लाइव ट्रेडिंग प्लेटफ़ॉर्म सच्चाई, प्राधिकरण विंडो के भीतर देखी गई।</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">यह खाता अंतिम ज्ञात, सिम्युलेटेड या अनुपलब्ध डेटा दिखाता है — ये ट्रेडिंग प्लेटफ़ॉर्म के आधिकारिक लाइव बैलेंस नहीं हैं।</string>
     <string name="venue_accounts_valuation" formatted="false">मूल्यांकन</string>
     <string name="venue_accounts_balances" formatted="false">बैलेंस</string>
     <string name="venue_accounts_observed" formatted="false">अवलोकन का समय</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">इक्विटी ओवरले</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">इक्विटी</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">मौजूदा गिरावट</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">केवल स्पॉट एक्सचेंज — अन्य एक्सचेंज पर रखी शेष राशि शामिल नहीं है।</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">केवल स्पॉट ट्रेडिंग प्लेटफ़ॉर्म — अन्य ट्रेडिंग प्लेटफ़ॉर्म पर रखी शेष राशि शामिल नहीं है।</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">बाहरी जमा और निकासी का प्रभाव हटाने के लिए समायोजन नहीं किया गया है।</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">ये आँकड़े हर मिनट के बंद भाव पर %1$s से परिवर्तित किए गए हैं, सीधे इस मुद्रा में नमूने नहीं लिए गए हैं।</string>
     <string name="positions_timeline_equity_honesty_pricedon">%1$s के आधार पर मूल्यांकित।</string>
@@ -481,7 +481,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">मेल खाता है</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">मेल नहीं खाता</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">अधूरा</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">एक्सचेंज के मूल मान</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">ट्रेडिंग प्लेटफ़ॉर्म के मूल मान</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">पुराने फ़्लोटिंग-पॉइंट मान</string>
     <string name="venue_accounts_status_corrupt" formatted="false">दूषित</string>
     <string name="system_status_not_running" formatted="false">चालू नहीं</string>

@@ -198,11 +198,11 @@
     <string name="signals_empty" formatted="false">Geen handelssignalen komen overeen met je huidige filters.</string>
     <string name="signals_export" formatted="false">Exporteren</string>
     <string name="signals_export_failed" formatted="false">Indienen mislukt</string>
-    <string name="venue_accounts_title" formatted="false">Beursaccounts</string>
+    <string name="venue_accounts_title" formatted="false">Platformaccounts</string>
     <string name="venue_accounts_refresh" formatted="false">Vernieuwen</string>
-    <string name="venue_accounts_failed" formatted="false">De status van het beursaccount kon niet worden geladen. Het account is niet leeg; de gegevens zijn momenteel gewoon niet beschikbaar.</string>
-    <string name="venue_accounts_authoritative" formatted="false">Bindende realtime beursgegevens, waargenomen binnen de geldigheidsperiode.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Dit account toont laatst bekende, gesimuleerde of niet-beschikbare gegevens — geen gezaghebbende realtime beurssaldi.</string>
+    <string name="venue_accounts_failed" formatted="false">De status van het platformaccount kon niet worden geladen. Het account is niet leeg; de gegevens zijn momenteel gewoon niet beschikbaar.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Bindende realtime gegevens van het handelsplatform, waargenomen binnen de geldigheidsperiode.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Dit account toont laatst bekende, gesimuleerde of niet-beschikbare gegevens — geen gezaghebbende realtime saldi op het handelsplatform.</string>
     <string name="venue_accounts_valuation" formatted="false">Waardering</string>
     <string name="venue_accounts_balances" formatted="false">Saldi</string>
     <string name="venue_accounts_observed" formatted="false">Waargenomen op</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">Eigen vermogen weergeven</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">Eigen vermogen</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">Huidige drawdown</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Alleen de spotbeurs — saldi op andere beurzen zijn uitgesloten.</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Alleen het spotplatform — saldi op andere handelsplatformen zijn uitgesloten.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Externe stortingen en opnamen worden niet gecorrigeerd.</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">Deze cijfers worden bij elke minuutafsluiting omgerekend vanuit %1$s en niet rechtstreeks in deze valuta gemeten.</string>
     <string name="positions_timeline_equity_honesty_pricedon">Gewaardeerd op %1$s.</string>
@@ -481,7 +481,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">Overeenkomend</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">Afwijkend</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Onvolledig</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Ruwe beurswaarden</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Ruwe platformwaarden</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Oude waarden met drijvende komma</string>
     <string name="venue_accounts_status_corrupt" formatted="false">Beschadigd</string>
     <string name="system_status_not_running" formatted="false">Niet in uitvoering</string>

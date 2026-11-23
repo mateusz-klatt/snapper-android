@@ -198,11 +198,11 @@
     <string name="signals_empty" formatted="false">Không có tín hiệu giao dịch nào khớp với bộ lọc hiện tại của bạn.</string>
     <string name="signals_export" formatted="false">Xuất</string>
     <string name="signals_export_failed" formatted="false">Gửi thất bại</string>
-    <string name="venue_accounts_title" formatted="false">Tài khoản Sàn</string>
+    <string name="venue_accounts_title" formatted="false">Tài khoản nền tảng</string>
     <string name="venue_accounts_refresh" formatted="false">Làm mới</string>
-    <string name="venue_accounts_failed" formatted="false">Không thể tải trạng thái tài khoản sàn giao dịch. Tài khoản không trống; dữ liệu chỉ đang tạm thời không khả dụng.</string>
-    <string name="venue_accounts_authoritative" formatted="false">Sự thật trực tiếp của sàn, được ghi nhận trong khung thời gian hợp lệ.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Tài khoản này hiển thị dữ liệu mới nhất đã biết, dữ liệu mô phỏng hoặc dữ liệu không khả dụng — không phải số dư chính thức của sàn theo thời gian thực.</string>
+    <string name="venue_accounts_failed" formatted="false">Không thể tải trạng thái tài khoản nền tảng giao dịch. Tài khoản không trống; dữ liệu chỉ đang tạm thời không khả dụng.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Sự thật trực tiếp của nền tảng, được ghi nhận trong khung thời gian hợp lệ.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Tài khoản này hiển thị dữ liệu mới nhất đã biết, dữ liệu mô phỏng hoặc dữ liệu không khả dụng — không phải số dư chính thức của nền tảng theo thời gian thực.</string>
     <string name="venue_accounts_valuation" formatted="false">Định giá</string>
     <string name="venue_accounts_balances" formatted="false">Số dư</string>
     <string name="venue_accounts_observed" formatted="false">Thời điểm quan sát</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">Lớp phủ vốn chủ sở hữu</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">Vốn chủ sở hữu</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">Mức sụt giảm hiện tại</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Chỉ tính sàn giao ngay — không bao gồm số dư trên các sàn khác.</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Chỉ tính nền tảng giao ngay — không bao gồm số dư trên các nền tảng khác.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Chưa điều chỉnh loại trừ các khoản nạp và rút bên ngoài.</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">Các số liệu này được quy đổi từ %1$s tại giá đóng cửa mỗi phút, không được lấy mẫu trực tiếp bằng đồng tiền này.</string>
     <string name="positions_timeline_equity_honesty_pricedon">Định giá theo %1$s.</string>
@@ -480,7 +480,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">Khớp</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">Không khớp</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Chưa đầy đủ</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Giá trị thô từ sàn</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Giá trị thô từ nền tảng</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Giá trị dấu phẩy động cũ</string>
     <string name="venue_accounts_status_corrupt" formatted="false">Hỏng</string>
     <string name="system_status_not_running" formatted="false">Không chạy</string>

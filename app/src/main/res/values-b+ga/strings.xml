@@ -198,11 +198,11 @@
     <string name="signals_empty" formatted="false">Níl aon chomhartha trádála ag teacht le do scagairí reatha.</string>
     <string name="signals_export" formatted="false">Easpórtáil</string>
     <string name="signals_export_failed" formatted="false">Theip ar chur isteach</string>
-    <string name="venue_accounts_title" formatted="false">Cuntais Malartáin</string>
+    <string name="venue_accounts_title" formatted="false">Cuntais Ardáin</string>
     <string name="venue_accounts_refresh" formatted="false">Athnuaigh</string>
-    <string name="venue_accounts_failed" formatted="false">Níorbh fhéidir staid an chuntais malartáin a lódáil. Níl an cuntas folamh; níl na sonraí ar fáil faoi láthair.</string>
-    <string name="venue_accounts_authoritative" formatted="false">Sonraí malartáin iontaofa fíor-ama, taifeadta laistigh den tréimhse bailíochta.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Taispeánann an cuntas seo na sonraí deireanacha atá ar eolas, sonraí insamhlaithe nó sonraí nach bhfuil ar fáil — ní hiarmhéideanna beo údarásacha ón malartán iad.</string>
+    <string name="venue_accounts_failed" formatted="false">Níorbh fhéidir staid an chuntais ardáin a lódáil. Níl an cuntas folamh; níl na sonraí ar fáil faoi láthair.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Sonraí ardáin iontaofa fíor-ama, taifeadta laistigh den tréimhse bailíochta.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Taispeánann an cuntas seo na sonraí deireanacha atá ar eolas, sonraí insamhlaithe nó sonraí nach bhfuil ar fáil — ní hiarmhéideanna beo údarásacha ón ardán iad.</string>
     <string name="venue_accounts_valuation" formatted="false">Luacháil</string>
     <string name="venue_accounts_balances" formatted="false">Iarmhéideanna</string>
     <string name="venue_accounts_observed" formatted="false">Breathnaithe ag</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">Forleagan cothromais</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">Cothromas</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">Titim reatha ón mbuaic</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Malartán spot amháin — tá iarmhéideanna ar mhalartáin eile eisiata.</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Ardán spot amháin — tá iarmhéideanna ar ardáin eile eisiata.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Ní bhaintear éifeacht na dtaiscí agus na n-aistarraingtí seachtracha as na figiúirí.</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">Athríomhtar na figiúirí seo ó %1$s ag deireadh gach nóiméid; ní shampláiltear go díreach san airgeadra seo iad.</string>
     <string name="positions_timeline_equity_honesty_pricedon">Praghsáilte ar %1$s.</string>
@@ -484,7 +484,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">Meaitseáilte</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">Neamhréir</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Neamhiomlán</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Luachanna amha ón malartán</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Luachanna amha ón ardán</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Luachanna oidhreachta snámhphointe</string>
     <string name="venue_accounts_status_corrupt" formatted="false">Truaillithe</string>
     <string name="system_status_not_running" formatted="false">Níl ag rith</string>

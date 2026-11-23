@@ -198,11 +198,11 @@
     <string name="signals_empty" formatted="false">Mevcut filtrelerinizle eşleşen işlem sinyali yok.</string>
     <string name="signals_export" formatted="false">Dışa aktar</string>
     <string name="signals_export_failed" formatted="false">Gönderim başarısız</string>
-    <string name="venue_accounts_title" formatted="false">Borsa Hesapları</string>
+    <string name="venue_accounts_title" formatted="false">Platform Hesapları</string>
     <string name="venue_accounts_refresh" formatted="false">Yenile</string>
-    <string name="venue_accounts_failed" formatted="false">Borsa hesabının durumu yüklenemedi. Hesap boş değil; veriler şu anda kullanılamıyor.</string>
-    <string name="venue_accounts_authoritative" formatted="false">Geçerlilik süresi içinde alınmış güvenilir ve gerçek zamanlı borsa verileri.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Bu hesap son bilinen, simüle edilmiş veya kullanılamayan verileri gösterir — bunlar yetkili gerçek zamanlı borsa bakiyeleri değildir.</string>
+    <string name="venue_accounts_failed" formatted="false">Platform hesabının durumu yüklenemedi. Hesap boş değil; veriler şu anda kullanılamıyor.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Geçerlilik süresi içinde alınmış güvenilir ve gerçek zamanlı platform verileri.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Bu hesap son bilinen, simüle edilmiş veya kullanılamayan verileri gösterir — bunlar yetkili gerçek zamanlı platform bakiyeleri değildir.</string>
     <string name="venue_accounts_valuation" formatted="false">Değerleme</string>
     <string name="venue_accounts_balances" formatted="false">Bakiyeler</string>
     <string name="venue_accounts_observed" formatted="false">Gözlem zamanı</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">Özkaynak katmanı</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">Özkaynak</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">Mevcut zirveden düşüş</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Yalnızca spot borsa — diğer borsalardaki bakiyeler hariçtir.</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Yalnızca spot platform — diğer platformlardaki bakiyeler hariçtir.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Haricî yatırma ve çekme işlemlerinin etkisi çıkarılmamıştır.</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">Bu rakamlar her dakikanın kapanışında %1$s üzerinden dönüştürülür; doğrudan bu para biriminde örneklenmez.</string>
     <string name="positions_timeline_equity_honesty_pricedon">Fiyat kaynağı: %1$s.</string>
@@ -481,7 +481,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">Eşleşti</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">Eşleşmedi</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Eksik</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Borsadan alınan ham değerler</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Platformdan alınan ham değerler</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Eski kayan noktalı değerler</string>
     <string name="venue_accounts_status_corrupt" formatted="false">Bozuk</string>
     <string name="system_status_not_running" formatted="false">Çalışmıyor</string>

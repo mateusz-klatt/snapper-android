@@ -198,11 +198,11 @@
     <string name="signals_empty" formatted="false">Žádné obchodní signály neodpovídají vašim aktuálním filtrům.</string>
     <string name="signals_export" formatted="false">Exportovat</string>
     <string name="signals_export_failed" formatted="false">Odeslání se nezdařilo</string>
-    <string name="venue_accounts_title" formatted="false">Účty na burze</string>
+    <string name="venue_accounts_title" formatted="false">Účty na platformě</string>
     <string name="venue_accounts_refresh" formatted="false">Obnovit</string>
-    <string name="venue_accounts_failed" formatted="false">Stav účtu na burze se nepodařilo načíst. Nejde o prázdný účet; data pouze momentálně nejsou dostupná.</string>
-    <string name="venue_accounts_authoritative" formatted="false">Spolehlivá aktuální data burzy zaznamenaná během doby platnosti.</string>
-    <string name="venue_accounts_not_authoritative" formatted="false">Tento účet zobrazuje poslední známá, simulovaná nebo nedostupná data — nejde o směrodatné aktuální zůstatky burzy.</string>
+    <string name="venue_accounts_failed" formatted="false">Stav účtu na platformě se nepodařilo načíst. Nejde o prázdný účet; data pouze momentálně nejsou dostupná.</string>
+    <string name="venue_accounts_authoritative" formatted="false">Spolehlivá aktuální data platformy zaznamenaná během doby platnosti.</string>
+    <string name="venue_accounts_not_authoritative" formatted="false">Tento účet zobrazuje poslední známá, simulovaná nebo nedostupná data — nejde o směrodatné aktuální zůstatky platformy.</string>
     <string name="venue_accounts_valuation" formatted="false">Ocenění</string>
     <string name="venue_accounts_balances" formatted="false">Zůstatky</string>
     <string name="venue_accounts_observed" formatted="false">Čas pozorování</string>
@@ -269,7 +269,7 @@
     <string name="positions_timeline_equity_title" formatted="false">Překryv kapitálu</string>
     <string name="positions_timeline_equity_serieslabel" formatted="false">Kapitál</string>
     <string name="positions_timeline_equity_drawdown_current" formatted="false">Aktuální pokles od maxima</string>
-    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Pouze spotová burza — zůstatky na ostatních burzách jsou vyloučeny.</string>
+    <string name="positions_timeline_equity_honesty_spotonly" formatted="false">Pouze spotová platforma — zůstatky na ostatních platformách jsou vyloučeny.</string>
     <string name="positions_timeline_equity_honesty_flowsunadjusted" formatted="false">Externí vklady a výběry nejsou odečteny.</string>
     <string name="positions_timeline_equity_honesty_restatedfrom">Tyto údaje jsou přepočteny z %1$s při uzavření každé minuty, nejsou přímo vzorkovány v této měně.</string>
     <string name="positions_timeline_equity_honesty_pricedon">Oceněno na %1$s.</string>
@@ -483,7 +483,7 @@
     <string name="venue_accounts_evaluation_matched" formatted="false">Shodné</string>
     <string name="venue_accounts_evaluation_mismatched" formatted="false">Neshodné</string>
     <string name="venue_accounts_evaluation_incomplete" formatted="false">Neúplné</string>
-    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Nezpracované hodnoty z burzy</string>
+    <string name="venue_accounts_numeric_source_venue_raw" formatted="false">Nezpracované hodnoty z platformy</string>
     <string name="venue_accounts_numeric_source_legacy_float" formatted="false">Starší hodnoty s plovoucí řádovou čárkou</string>
     <string name="venue_accounts_status_corrupt" formatted="false">Poškozeno</string>
     <string name="system_status_not_running" formatted="false">Není spuštěno</string>
