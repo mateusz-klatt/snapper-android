@@ -435,8 +435,6 @@
     <string name="venue_accounts_status_not_applicable" formatted="false">Nelze použít</string>
     <string name="venue_accounts_status_unknown" formatted="false">Neznámé</string>
     <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Odsouhlaseno</string>
-    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">Zjištěna odchylka</string>
-    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">Zatím neodsouhlaseno</string>
     <string name="venue_accounts_reconciliation_status_error" formatted="false">Chyba odsouhlasení</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">Nepodporováno</string>
     <string name="system_status_healthy" formatted="false">V pořádku</string>

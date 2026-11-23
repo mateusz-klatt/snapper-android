@@ -433,8 +433,6 @@
     <string name="venue_accounts_status_not_applicable" formatted="false">Ikke relevant</string>
     <string name="venue_accounts_status_unknown" formatted="false">Ukjent</string>
     <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Avstemt</string>
-    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">Avvik oppdaget</string>
-    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">Ikke avstemt ennå</string>
     <string name="venue_accounts_reconciliation_status_error" formatted="false">Avstemmingsfeil</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">Ikke støttet</string>
     <string name="system_status_healthy" formatted="false">Frisk</string>

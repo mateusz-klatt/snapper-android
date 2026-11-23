@@ -432,8 +432,6 @@
     <string name="venue_accounts_status_not_applicable" formatted="false">Không áp dụng</string>
     <string name="venue_accounts_status_unknown" formatted="false">Không rõ</string>
     <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Đã đối soát</string>
-    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">Đã phát hiện sai lệch</string>
-    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">Chưa đối soát</string>
     <string name="venue_accounts_reconciliation_status_error" formatted="false">Lỗi đối soát</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">Không được hỗ trợ</string>
     <string name="system_status_healthy" formatted="false">Ổn định</string>

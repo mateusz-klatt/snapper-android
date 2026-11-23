@@ -162,26 +162,30 @@ internal fun LazyListScope.alertsScreen(state: AppUiState) {
 }
 
 @Composable
-internal fun tradeSideLabel(value: String): String = when (value.lowercase()) {
-    "buy" -> stringResource(R.string.order_buy)
-    "sell" -> stringResource(R.string.order_sell)
-    else -> value
+internal fun tradeSideLabel(value: String): String = tradeSideLabelRes(value)?.let { stringResource(it) } ?: value
+
+internal fun tradeSideLabelRes(value: String): Int? = when (value.lowercase()) {
+    "buy" -> R.string.order_buy
+    "sell" -> R.string.order_sell
+    else -> null
 }
 
 @Composable
-internal fun orderStatusLabel(value: String): String = when (value.lowercase()) {
-    "pending" -> stringResource(R.string.records_status_pending)
-    "pending_new" -> stringResource(R.string.records_status_pending_new)
-    "new" -> stringResource(R.string.records_status_new)
-    "submitted" -> stringResource(R.string.records_status_submitted)
-    "open" -> stringResource(R.string.records_status_open)
-    "closed" -> stringResource(R.string.records_status_closed)
-    "partial", "partially_filled" -> stringResource(R.string.records_status_partially_filled)
-    "filled" -> stringResource(R.string.records_status_filled)
-    "canceled", "cancelled" -> stringResource(R.string.records_status_cancelled)
-    "expired" -> stringResource(R.string.records_status_expired)
-    "rejected" -> stringResource(R.string.records_status_rejected)
-    else -> value
+internal fun orderStatusLabel(value: String): String = orderStatusLabelRes(value)?.let { stringResource(it) } ?: value
+
+internal fun orderStatusLabelRes(value: String): Int? = when (value.lowercase()) {
+    "pending" -> R.string.records_status_pending
+    "pending_new" -> R.string.records_status_pending_new
+    "new" -> R.string.records_status_new
+    "submitted" -> R.string.records_status_submitted
+    "open" -> R.string.records_status_open
+    "closed" -> R.string.records_status_closed
+    "partial", "partially_filled" -> R.string.records_status_partially_filled
+    "filled" -> R.string.records_status_filled
+    "canceled", "cancelled" -> R.string.records_status_cancelled
+    "expired" -> R.string.records_status_expired
+    "rejected" -> R.string.records_status_rejected
+    else -> null
 }
 
 @Composable
@@ -189,22 +193,26 @@ internal fun alertTitleLabel(alert: AlertDto): String =
     alert.title.ifBlank { alertTypeLabel(alert.alertType) }
 
 @Composable
-internal fun alertPriorityLabel(value: String): String = when (value.lowercase()) {
-    "low" -> stringResource(R.string.notification_defaults_low)
-    "medium" -> stringResource(R.string.notification_defaults_medium)
-    "high" -> stringResource(R.string.notification_defaults_high)
-    "critical" -> stringResource(R.string.records_alert_priority_critical)
-    else -> value
+internal fun alertPriorityLabel(value: String): String = alertPriorityLabelRes(value)?.let { stringResource(it) } ?: value
+
+internal fun alertPriorityLabelRes(value: String): Int? = when (value.lowercase()) {
+    "low" -> R.string.notification_defaults_low
+    "medium" -> R.string.notification_defaults_medium
+    "high" -> R.string.notification_defaults_high
+    "critical" -> R.string.records_alert_priority_critical
+    else -> null
 }
 
 @Composable
-internal fun alertTypeLabel(value: String): String = when (value) {
-    "order_fill_full" -> stringResource(R.string.notification_defaults_fill)
-    "order_rejected" -> stringResource(R.string.notification_defaults_rejected)
-    "position_stop_loss_fired" -> stringResource(R.string.notification_defaults_stop)
-    "margin_warning" -> stringResource(R.string.notification_defaults_margin)
-    "critical_system_error" -> stringResource(R.string.records_alert_type_critical_system_error)
-    "order_unknown" -> stringResource(R.string.records_alert_type_order_unknown)
-    "drift" -> stringResource(R.string.records_alert_type_drift)
-    else -> value
+internal fun alertTypeLabel(value: String): String = alertTypeLabelRes(value)?.let { stringResource(it) } ?: value
+
+internal fun alertTypeLabelRes(value: String): Int? = when (value) {
+    "order_fill_full" -> R.string.notification_defaults_fill
+    "order_rejected" -> R.string.notification_defaults_rejected
+    "position_stop_loss_fired" -> R.string.notification_defaults_stop
+    "margin_warning" -> R.string.notification_defaults_margin
+    "critical_system_error" -> R.string.records_alert_type_critical_system_error
+    "order_unknown" -> R.string.records_alert_type_order_unknown
+    "drift" -> R.string.records_alert_type_drift
+    else -> null
 }

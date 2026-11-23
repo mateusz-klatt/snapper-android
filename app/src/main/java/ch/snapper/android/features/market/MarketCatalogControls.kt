@@ -67,11 +67,13 @@ fun MarketCatalogControls(state: MarketCatalogState, actions: MarketCatalogActio
 }
 
 @Composable
-private fun instrumentKindLabel(value: String): String = when (value) {
-    "spot" -> stringResource(R.string.market_instrument_kind_spot)
-    "perpetual" -> stringResource(R.string.market_instrument_kind_perpetual)
-    "future" -> stringResource(R.string.market_instrument_kind_future)
-    "etf" -> stringResource(R.string.market_instrument_kind_etf)
-    "option" -> stringResource(R.string.market_instrument_kind_option)
-    else -> value
+private fun instrumentKindLabel(value: String): String = instrumentKindLabelRes(value)?.let { stringResource(it) } ?: value
+
+internal fun instrumentKindLabelRes(value: String): Int? = when (value) {
+    "spot" -> R.string.market_instrument_kind_spot
+    "perpetual" -> R.string.market_instrument_kind_perpetual
+    "future" -> R.string.market_instrument_kind_future
+    "etf" -> R.string.market_instrument_kind_etf
+    "option" -> R.string.market_instrument_kind_option
+    else -> null
 }

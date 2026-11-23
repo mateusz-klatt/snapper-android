@@ -434,8 +434,6 @@
     <string name="venue_accounts_status_not_applicable" formatted="false">Nu se aplică</string>
     <string name="venue_accounts_status_unknown" formatted="false">Necunoscut</string>
     <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Reconciliat</string>
-    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">Derivă detectată</string>
-    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">Nereconciliat încă</string>
     <string name="venue_accounts_reconciliation_status_error" formatted="false">Eroare de reconciliere</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">Neacceptat</string>
     <string name="system_status_healthy" formatted="false">Sănătos</string>

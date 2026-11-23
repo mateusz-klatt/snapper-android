@@ -434,8 +434,6 @@
     <string name="venue_accounts_status_not_applicable" formatted="false">Nav piemērojams</string>
     <string name="venue_accounts_status_unknown" formatted="false">Nezināms</string>
     <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Saskaņots</string>
-    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">Atklāta novirze</string>
-    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">Vēl nav saskaņots</string>
     <string name="venue_accounts_reconciliation_status_error" formatted="false">Saskaņošanas kļūda</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">Netiek atbalstīts</string>
     <string name="system_status_healthy" formatted="false">Vesels</string>

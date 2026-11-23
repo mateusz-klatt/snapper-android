@@ -432,8 +432,6 @@
     <string name="venue_accounts_status_not_applicable" formatted="false">Tidak berlaku</string>
     <string name="venue_accounts_status_unknown" formatted="false">Tidak diketahui</string>
     <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Direkonsiliasi</string>
-    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">Penyimpangan terdeteksi</string>
-    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">Belum direkonsiliasi</string>
     <string name="venue_accounts_reconciliation_status_error" formatted="false">Kesalahan rekonsiliasi</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">Tidak didukung</string>
     <string name="system_status_healthy" formatted="false">Sehat</string>

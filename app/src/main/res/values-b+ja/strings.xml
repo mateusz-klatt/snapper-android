@@ -432,8 +432,6 @@
     <string name="venue_accounts_status_not_applicable" formatted="false">該当なし</string>
     <string name="venue_accounts_status_unknown" formatted="false">不明</string>
     <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">照合済み</string>
-    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">乖離を検出</string>
-    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">未照合</string>
     <string name="venue_accounts_reconciliation_status_error" formatted="false">照合エラー</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">未対応</string>
     <string name="system_status_healthy" formatted="false">正常</string>

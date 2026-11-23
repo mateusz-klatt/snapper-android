@@ -131,7 +131,7 @@ private fun decisionLabel(decision: String): Int = when (decision) {
     else -> R.string.ai_reviews_unknown
 }
 
-private fun decisionStatusLabel(decision: String): Int = when (decision) {
+internal fun decisionStatusLabel(decision: String): Int = when (decision) {
     "approve" -> R.string.ai_reviews_status_approved
     "reject" -> R.string.ai_reviews_status_rejected
     else -> decisionLabel(decision)
@@ -149,12 +149,14 @@ private fun outcomeLabel(outcome: AiDecisionOutcome): Int = when (outcome) {
 }
 
 @Composable
-private fun pendingReviewStatusLabel(raw: String): String = when (raw.lowercase()) {
-    "pending" -> stringResource(R.string.ai_reviews_pending)
-    "fanout_dispatched" -> stringResource(R.string.ai_reviews_status_fanout_dispatched)
-    "resolved_approved" -> stringResource(R.string.ai_reviews_status_approved)
-    "resolved_rejected" -> stringResource(R.string.ai_reviews_status_rejected)
-    "timeout" -> stringResource(R.string.ai_reviews_status_timeout)
-    "superseded" -> stringResource(R.string.ai_reviews_superseded)
-    else -> raw
+private fun pendingReviewStatusLabel(raw: String): String = pendingReviewStatusLabelRes(raw)?.let { stringResource(it) } ?: raw
+
+internal fun pendingReviewStatusLabelRes(raw: String): Int? = when (raw.lowercase()) {
+    "pending" -> R.string.ai_reviews_pending
+    "fanout_dispatched" -> R.string.ai_reviews_status_fanout_dispatched
+    "resolved_approved" -> R.string.ai_reviews_status_approved
+    "resolved_rejected" -> R.string.ai_reviews_status_rejected
+    "timeout" -> R.string.ai_reviews_status_timeout
+    "superseded" -> R.string.ai_reviews_superseded
+    else -> null
 }

@@ -55,12 +55,14 @@ private fun ProcessRow(row: ProcessSummaryRowDto, state: ProcessesState, actions
 }
 
 @Composable
-private fun processRoleLabel(value: String): String = when (value) {
-    "core" -> stringResource(R.string.process_role_core)
-    "task" -> stringResource(R.string.process_role_task)
-    "strategy" -> stringResource(R.string.process_role_strategy)
-    "backtest" -> stringResource(R.string.process_role_backtest)
-    else -> value
+private fun processRoleLabel(value: String): String = processRoleLabelRes(value)?.let { stringResource(it) } ?: value
+
+internal fun processRoleLabelRes(value: String): Int? = when (value) {
+    "core" -> R.string.process_role_core
+    "task" -> R.string.process_role_task
+    "strategy" -> R.string.process_role_strategy
+    "backtest" -> R.string.process_role_backtest
+    else -> null
 }
 
 @Composable

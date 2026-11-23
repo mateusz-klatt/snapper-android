@@ -433,8 +433,6 @@
     <string name="venue_accounts_status_not_applicable" formatted="false">প্রযোজ্য নয়</string>
     <string name="venue_accounts_status_unknown" formatted="false">অজানা</string>
     <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">সমন্বয় করা হয়েছে</string>
-    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">বিচ্যুতি শনাক্ত করা হয়েছে</string>
-    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">এখনও সমন্বয় করা হয়নি</string>
     <string name="venue_accounts_reconciliation_status_error" formatted="false">সমন্বয়ে ত্রুটি</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">সমর্থিত নয়</string>
     <string name="system_status_healthy" formatted="false">স্বাস্থ্যকর</string>

@@ -433,8 +433,6 @@
     <string name="venue_accounts_status_not_applicable" formatted="false">Ei sovelleta</string>
     <string name="venue_accounts_status_unknown" formatted="false">Tuntematon</string>
     <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Täsmäytetty</string>
-    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">Poikkeama havaittu</string>
-    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">Ei vielä täsmäytetty</string>
     <string name="venue_accounts_reconciliation_status_error" formatted="false">Täsmäytysvirhe</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">Ei tuettu</string>
     <string name="system_status_healthy" formatted="false">Kunnossa</string>

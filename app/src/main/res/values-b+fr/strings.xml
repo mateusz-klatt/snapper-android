@@ -434,8 +434,6 @@
     <string name="venue_accounts_status_not_applicable" formatted="false">Non applicable</string>
     <string name="venue_accounts_status_unknown" formatted="false">Inconnu</string>
     <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Rapproché</string>
-    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">Dérive détectée</string>
-    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">Pas encore rapproché</string>
     <string name="venue_accounts_reconciliation_status_error" formatted="false">Erreur de rapprochement</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">Non pris en charge</string>
     <string name="system_status_healthy" formatted="false">Sain</string>

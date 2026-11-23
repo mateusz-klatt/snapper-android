@@ -145,62 +145,72 @@ private fun EmptySystemRows(empty: Boolean) {
 private fun Long?.counter(): String = this?.toString() ?: "—"
 
 @Composable
-private fun backtestStatusLabel(raw: String): String = if (raw.lowercase(Locale.ROOT) == "cancel_requested") {
-    stringResource(R.string.backtests_status_cancel_requested)
-} else stringResource(when (BacktestPresentation.status(raw)) {
+private fun backtestStatusLabel(raw: String): String = stringResource(backtestStatusLabelRes(raw))
+
+internal fun backtestStatusLabelRes(raw: String): Int = if (raw.lowercase(Locale.ROOT) == "cancel_requested") {
+    R.string.backtests_status_cancel_requested
+} else when (BacktestPresentation.status(raw)) {
     BacktestStatus.PENDING -> R.string.backtests_status_pending
     BacktestStatus.RUNNING -> R.string.backtests_status_running
     BacktestStatus.COMPLETED -> R.string.backtests_status_completed
     BacktestStatus.FAILED -> R.string.backtests_status_failed
     BacktestStatus.CANCELLED -> R.string.backtests_status_cancelled
     BacktestStatus.UNKNOWN -> R.string.backtests_status_unknown
-})
-
-@Composable
-internal fun systemStatusLabel(raw: String): String = when (raw.lowercase(Locale.ROOT)) {
-    "ready" -> stringResource(R.string.system_status_ready)
-    "degraded" -> stringResource(R.string.system_status_degraded)
-    "healthy" -> stringResource(R.string.system_status_healthy)
-    "running" -> stringResource(R.string.system_running)
-    "not_running" -> stringResource(R.string.system_status_not_running)
-    "stopped" -> stringResource(R.string.system_stopped)
-    "starting" -> stringResource(R.string.system_status_starting)
-    "stopping" -> stringResource(R.string.system_status_stopping)
-    "error" -> stringResource(R.string.system_status_error)
-    "warning" -> stringResource(R.string.system_status_warning)
-    "pending" -> stringResource(R.string.backtests_status_pending)
-    "completed" -> stringResource(R.string.backtests_status_completed)
-    "failed" -> stringResource(R.string.backtests_status_failed)
-    "cancelled" -> stringResource(R.string.backtests_status_cancelled)
-    "unknown" -> stringResource(R.string.backtests_status_unknown)
-    "active" -> stringResource(R.string.system_active)
-    "inactive" -> stringResource(R.string.system_inactive)
-    "ok" -> stringResource(R.string.system_status_ok)
-    else -> raw
 }
 
 @Composable
-internal fun tradingModeLabel(raw: String): String = when (raw.lowercase(Locale.ROOT)) {
-    "live" -> stringResource(R.string.order_live)
-    "paper" -> stringResource(R.string.paper)
-    else -> raw
+internal fun systemStatusLabel(raw: String): String = systemStatusLabelRes(raw)?.let { stringResource(it) } ?: raw
+
+internal fun systemStatusLabelRes(raw: String): Int? = when (raw.lowercase(Locale.ROOT)) {
+    "ready" -> R.string.system_status_ready
+    "degraded" -> R.string.system_status_degraded
+    "healthy" -> R.string.system_status_healthy
+    "running" -> R.string.system_running
+    "not_running" -> R.string.system_status_not_running
+    "stopped" -> R.string.system_stopped
+    "starting" -> R.string.system_status_starting
+    "stopping" -> R.string.system_status_stopping
+    "error" -> R.string.system_status_error
+    "warning" -> R.string.system_status_warning
+    "pending" -> R.string.backtests_status_pending
+    "completed" -> R.string.backtests_status_completed
+    "failed" -> R.string.backtests_status_failed
+    "cancelled" -> R.string.backtests_status_cancelled
+    "unknown" -> R.string.backtests_status_unknown
+    "active" -> R.string.system_active
+    "inactive" -> R.string.system_inactive
+    "ok" -> R.string.system_status_ok
+    else -> null
 }
 
 @Composable
-private fun processModeLabel(raw: String): String = when (raw.lowercase(Locale.ROOT)) {
-    "thread" -> stringResource(R.string.process_mode_thread)
-    "process" -> stringResource(R.string.process_mode_process)
-    else -> tradingModeLabel(raw)
+internal fun tradingModeLabel(raw: String): String = tradingModeLabelRes(raw)?.let { stringResource(it) } ?: raw
+
+internal fun tradingModeLabelRes(raw: String): Int? = when (raw.lowercase(Locale.ROOT)) {
+    "live" -> R.string.order_live
+    "paper" -> R.string.paper
+    else -> null
 }
 
 @Composable
-internal fun userRoleLabel(raw: String): String = when (raw.lowercase(Locale.ROOT)) {
-    "viewer" -> stringResource(R.string.settings_role_viewer)
-    "operator" -> stringResource(R.string.settings_role_operator)
-    "admin" -> stringResource(R.string.settings_role_admin)
-    "ai_delegate" -> stringResource(R.string.settings_role_ai_delegate)
-    "ai_reviewer" -> stringResource(R.string.settings_role_ai_reviewer)
-    "ai_researcher" -> stringResource(R.string.settings_role_ai_researcher)
-    "auditor" -> stringResource(R.string.settings_role_auditor)
-    else -> raw
+private fun processModeLabel(raw: String): String = processModeLabelRes(raw)?.let { stringResource(it) } ?: raw
+
+internal fun processModeLabelRes(raw: String): Int? = when (raw.lowercase(Locale.ROOT)) {
+    "thread" -> R.string.process_mode_thread
+    "process" -> R.string.process_mode_process
+    else -> tradingModeLabelRes(raw)
+}
+
+@Composable
+internal fun userRoleLabel(raw: String): String = userRoleLabelRes(raw)?.let { stringResource(it) } ?: raw
+
+internal fun userRoleLabelRes(raw: String): Int? = when (raw.lowercase(Locale.ROOT)) {
+    "viewer" -> R.string.settings_role_viewer
+    "operator" -> R.string.settings_role_operator
+    "admin" -> R.string.settings_role_admin
+    "ai_delegate" -> R.string.settings_role_ai_delegate
+    "ai_reviewer" -> R.string.settings_role_ai_reviewer
+    "ai_researcher" -> R.string.settings_role_ai_researcher
+    "auditor" -> R.string.settings_role_auditor
+    else -> null
 }

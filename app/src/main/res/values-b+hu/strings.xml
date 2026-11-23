@@ -433,8 +433,6 @@
     <string name="venue_accounts_status_not_applicable" formatted="false">Nem alkalmazható</string>
     <string name="venue_accounts_status_unknown" formatted="false">Ismeretlen</string>
     <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Egyeztetve</string>
-    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">Eltérés észlelve</string>
-    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">Még nincs egyeztetve</string>
     <string name="venue_accounts_reconciliation_status_error" formatted="false">Egyeztetési hiba</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">Nem támogatott</string>
     <string name="system_status_healthy" formatted="false">Egészséges</string>

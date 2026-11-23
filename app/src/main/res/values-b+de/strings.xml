@@ -433,8 +433,6 @@
     <string name="venue_accounts_status_not_applicable" formatted="false">Nicht anwendbar</string>
     <string name="venue_accounts_status_unknown" formatted="false">Unbekannt</string>
     <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Abgeglichen</string>
-    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">Abweichung erkannt</string>
-    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">Noch nicht abgeglichen</string>
     <string name="venue_accounts_reconciliation_status_error" formatted="false">Abgleichfehler</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">Nicht unterstützt</string>
     <string name="system_status_healthy" formatted="false">Gesund</string>

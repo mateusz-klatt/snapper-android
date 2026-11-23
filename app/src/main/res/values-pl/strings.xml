@@ -435,8 +435,6 @@
     <string name="venue_accounts_status_not_applicable" formatted="false">Nie dotyczy</string>
     <string name="venue_accounts_status_unknown" formatted="false">Nieznane</string>
     <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Uzgodniono</string>
-    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">Wykryto odchylenie</string>
-    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">Jeszcze nie uzgodniono</string>
     <string name="venue_accounts_reconciliation_status_error" formatted="false">Błąd uzgadniania</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">Brak obsługi</string>
     <string name="system_status_healthy" formatted="false">Sprawne</string>

@@ -433,8 +433,6 @@
     <string name="venue_accounts_status_not_applicable" formatted="false">Μη εφαρμόσιμο</string>
     <string name="venue_accounts_status_unknown" formatted="false">Άγνωστο</string>
     <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Συμφωνημένο</string>
-    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">Εντοπίστηκε απόκλιση</string>
-    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">Δεν έχει συμφωνηθεί ακόμα</string>
     <string name="venue_accounts_reconciliation_status_error" formatted="false">Σφάλμα συμφωνίας</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">Δεν υποστηρίζεται</string>
     <string name="system_status_healthy" formatted="false">Υγιές</string>

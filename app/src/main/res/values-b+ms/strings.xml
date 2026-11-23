@@ -432,8 +432,6 @@
     <string name="venue_accounts_status_not_applicable" formatted="false">Tidak berkenaan</string>
     <string name="venue_accounts_status_unknown" formatted="false">Tidak diketahui</string>
     <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Telah diselaraskan</string>
-    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">Penyimpangan dikesan</string>
-    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">Belum diselaraskan</string>
     <string name="venue_accounts_reconciliation_status_error" formatted="false">Ralat penyelarasan</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">Tidak disokong</string>
     <string name="system_status_healthy" formatted="false">Sihat</string>

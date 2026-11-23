@@ -434,8 +434,6 @@
     <string name="venue_accounts_status_not_applicable" formatted="false">Nije primjenjivo</string>
     <string name="venue_accounts_status_unknown" formatted="false">Nepoznato</string>
     <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Usklađeno</string>
-    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">Otkriveno odstupanje</string>
-    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">Još nije usklađeno</string>
     <string name="venue_accounts_reconciliation_status_error" formatted="false">Greška pri usklađivanju</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">Nije podržano</string>
     <string name="system_status_healthy" formatted="false">Zdravo</string>

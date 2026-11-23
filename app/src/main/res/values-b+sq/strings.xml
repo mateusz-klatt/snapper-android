@@ -433,8 +433,6 @@
     <string name="venue_accounts_status_not_applicable" formatted="false">Nuk zbatohet</string>
     <string name="venue_accounts_status_unknown" formatted="false">E panjohur</string>
     <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">U rakordua</string>
-    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">U zbulua zhvendosje</string>
-    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">S\'është rakorduar ende</string>
     <string name="venue_accounts_reconciliation_status_error" formatted="false">Gabim në rakordim</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">Nuk mbështetet</string>
     <string name="system_status_healthy" formatted="false">I shëndetshëm</string>

@@ -65,49 +65,59 @@ private fun AccountPositions(account: VenueAccountDto) {
 }
 
 @Composable
-private fun accountStatusLabel(value: String): String = when (value) {
-    "observed" -> stringResource(R.string.venue_accounts_status_observed)
-    "unobserved" -> stringResource(R.string.venue_accounts_status_unobserved)
-    "simulated" -> stringResource(R.string.venue_accounts_status_simulated)
-    "stale" -> stringResource(R.string.venue_accounts_status_stale)
-    "clock_error" -> stringResource(R.string.venue_accounts_status_clock_error)
-    "corrupt" -> stringResource(R.string.venue_accounts_status_corrupt)
-    "unsupported" -> stringResource(R.string.venue_accounts_reconciliation_status_unsupported)
-    "not_applicable" -> stringResource(R.string.venue_accounts_status_not_applicable)
-    "unknown" -> stringResource(R.string.venue_accounts_status_unknown)
-    "error" -> stringResource(R.string.system_status_error)
-    else -> value
+private fun accountStatusLabel(value: String): String = accountStatusLabelRes(value)?.let { stringResource(it) } ?: value
+
+internal fun accountStatusLabelRes(value: String): Int? = when (value) {
+    "observed" -> R.string.venue_accounts_status_observed
+    "unobserved" -> R.string.venue_accounts_status_unobserved
+    "simulated" -> R.string.venue_accounts_status_simulated
+    "stale" -> R.string.venue_accounts_status_stale
+    "clock_error" -> R.string.venue_accounts_status_clock_error
+    "corrupt" -> R.string.venue_accounts_status_corrupt
+    "unsupported" -> R.string.venue_accounts_reconciliation_status_unsupported
+    "not_applicable" -> R.string.venue_accounts_status_not_applicable
+    "unknown" -> R.string.venue_accounts_status_unknown
+    "error" -> R.string.system_status_error
+    else -> null
 }
 
 @Composable
-private fun valuationStatusLabel(value: String): String = when (value) {
-    "native_only" -> stringResource(R.string.venue_accounts_valuation_native_only)
-    else -> value
+private fun valuationStatusLabel(value: String): String = valuationStatusLabelRes(value)?.let { stringResource(it) } ?: value
+
+internal fun valuationStatusLabelRes(value: String): Int? = when (value) {
+    "native_only" -> R.string.venue_accounts_valuation_native_only
+    else -> null
 }
 
 @Composable
-private fun evaluationStatusLabel(value: String): String = when (value) {
-    "matched" -> stringResource(R.string.venue_accounts_evaluation_matched)
-    "mismatched" -> stringResource(R.string.venue_accounts_evaluation_mismatched)
-    "incomplete" -> stringResource(R.string.venue_accounts_evaluation_incomplete)
-    "unsupported" -> stringResource(R.string.venue_accounts_reconciliation_status_unsupported)
-    "error" -> stringResource(R.string.system_status_error)
-    else -> value
+private fun evaluationStatusLabel(value: String): String = evaluationStatusLabelRes(value)?.let { stringResource(it) } ?: value
+
+internal fun evaluationStatusLabelRes(value: String): Int? = when (value) {
+    "matched" -> R.string.venue_accounts_evaluation_matched
+    "mismatched" -> R.string.venue_accounts_evaluation_mismatched
+    "incomplete" -> R.string.venue_accounts_evaluation_incomplete
+    "unsupported" -> R.string.venue_accounts_reconciliation_status_unsupported
+    "error" -> R.string.system_status_error
+    else -> null
 }
 
 @Composable
-private fun numericSourceLabel(value: String): String = when (value) {
-    "venue_raw" -> stringResource(R.string.venue_accounts_numeric_source_venue_raw)
-    "legacy_float" -> stringResource(R.string.venue_accounts_numeric_source_legacy_float)
-    else -> value
+private fun numericSourceLabel(value: String): String = numericSourceLabelRes(value)?.let { stringResource(it) } ?: value
+
+internal fun numericSourceLabelRes(value: String): Int? = when (value) {
+    "venue_raw" -> R.string.venue_accounts_numeric_source_venue_raw
+    "legacy_float" -> R.string.venue_accounts_numeric_source_legacy_float
+    else -> null
 }
 
 @Composable
-private fun reconciliationStatusLabel(value: String): String = when (value) {
-    "matched" -> stringResource(R.string.venue_accounts_evaluation_matched)
-    "mismatched" -> stringResource(R.string.venue_accounts_evaluation_mismatched)
-    "incomplete" -> stringResource(R.string.venue_accounts_evaluation_incomplete)
-    "unsupported" -> stringResource(R.string.venue_accounts_reconciliation_status_unsupported)
-    "error" -> stringResource(R.string.venue_accounts_reconciliation_status_error)
-    else -> accountStatusLabel(value)
+private fun reconciliationStatusLabel(value: String): String = reconciliationStatusLabelRes(value)?.let { stringResource(it) } ?: value
+
+internal fun reconciliationStatusLabelRes(value: String): Int? = when (value) {
+    "matched" -> R.string.venue_accounts_evaluation_matched
+    "mismatched" -> R.string.venue_accounts_evaluation_mismatched
+    "incomplete" -> R.string.venue_accounts_evaluation_incomplete
+    "unsupported" -> R.string.venue_accounts_reconciliation_status_unsupported
+    "error" -> R.string.venue_accounts_reconciliation_status_error
+    else -> accountStatusLabelRes(value)
 }

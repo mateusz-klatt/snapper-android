@@ -432,8 +432,6 @@
     <string name="venue_accounts_status_not_applicable" formatted="false">မသက်ဆိုင်ပါ</string>
     <string name="venue_accounts_status_unknown" formatted="false">မသိရသေး</string>
     <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">စာရင်းရှင်းလင်းပြီး</string>
-    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">လွဲချော်မှု တွေ့ရှိသည်</string>
-    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">စာရင်းမရှင်းလင်းရသေးပါ</string>
     <string name="venue_accounts_reconciliation_status_error" formatted="false">စာရင်းရှင်းလင်းမှုအမှား</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">ပံ့ပိုးမထားပါ</string>
     <string name="system_status_healthy" formatted="false">ကျန်းမာသည်</string>

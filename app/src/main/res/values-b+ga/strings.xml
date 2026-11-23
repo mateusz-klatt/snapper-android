@@ -436,8 +436,6 @@
     <string name="venue_accounts_status_not_applicable" formatted="false">Ní bhaineann</string>
     <string name="venue_accounts_status_unknown" formatted="false">Anaithnid</string>
     <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Athnóite</string>
-    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">Sruth braite</string>
-    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">Níl athnóite go fóill</string>
     <string name="venue_accounts_reconciliation_status_error" formatted="false">Earráid athmhuintearais</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">Gan tacaíocht</string>
     <string name="system_status_healthy" formatted="false">Sláintiúil</string>

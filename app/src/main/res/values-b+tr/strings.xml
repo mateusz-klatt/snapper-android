@@ -433,8 +433,6 @@
     <string name="venue_accounts_status_not_applicable" formatted="false">Uygulanamaz</string>
     <string name="venue_accounts_status_unknown" formatted="false">Bilinmiyor</string>
     <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Mutabakat Sağlandı</string>
-    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">Sapma tespit edildi</string>
-    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">Henüz mutabakat sağlanmadı</string>
     <string name="venue_accounts_reconciliation_status_error" formatted="false">Mutabakat hatası</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">Desteklenmiyor</string>
     <string name="system_status_healthy" formatted="false">Sağlıklı</string>

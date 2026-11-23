@@ -434,8 +434,6 @@
     <string name="venue_accounts_status_not_applicable" formatted="false">לא רלוונטי</string>
     <string name="venue_accounts_status_unknown" formatted="false">לא ידוע</string>
     <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">הותאם</string>
-    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">זוהתה סחף</string>
-    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">טרם הותאם</string>
     <string name="venue_accounts_reconciliation_status_error" formatted="false">שגיאת התאמה</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">לא נתמך</string>
     <string name="system_status_healthy" formatted="false">בריא</string>

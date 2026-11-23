@@ -432,8 +432,6 @@
     <string name="venue_accounts_status_not_applicable" formatted="false">ไม่สามารถใช้ได้</string>
     <string name="venue_accounts_status_unknown" formatted="false">ไม่ทราบ</string>
     <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">กระทบยอดแล้ว</string>
-    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">ตรวจพบความคลาดเคลื่อน</string>
-    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">ยังไม่ได้กระทบยอด</string>
     <string name="venue_accounts_reconciliation_status_error" formatted="false">ข้อผิดพลาดในการกระทบยอด</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">ไม่รองรับ</string>
     <string name="system_status_healthy" formatted="false">สุขภาพดี</string>

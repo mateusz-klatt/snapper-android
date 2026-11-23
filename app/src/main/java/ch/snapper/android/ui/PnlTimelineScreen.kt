@@ -100,10 +100,12 @@ private fun PnlExecutionHistory(history: PnlExecutionHistoryDto) {
 }
 
 @Composable
-private fun executionHistoryStatusLabel(value: String): String = when (value) {
-    "as_recorded" -> stringResource(R.string.pnl_execution_history_as_recorded)
-    "operator_corrected" -> stringResource(R.string.pnl_execution_history_operator_corrected)
-    else -> value
+private fun executionHistoryStatusLabel(value: String): String = executionHistoryStatusLabelRes(value)?.let { stringResource(it) } ?: value
+
+internal fun executionHistoryStatusLabelRes(value: String): Int? = when (value) {
+    "as_recorded" -> R.string.pnl_execution_history_as_recorded
+    "operator_corrected" -> R.string.pnl_execution_history_operator_corrected
+    else -> null
 }
 
 @Composable
@@ -133,33 +135,41 @@ private fun PnlContributions(point: PnlTimelinePointDto) {
 }
 
 @Composable
-private fun withholdingScopeLabel(value: String): String = when (value) {
-    "global" -> stringResource(R.string.positions_timeline_incompleteness_scope_global)
-    "instrument" -> stringResource(R.string.instrument)
-    else -> value
+private fun withholdingScopeLabel(value: String): String = withholdingScopeLabelRes(value)?.let { stringResource(it) } ?: value
+
+internal fun withholdingScopeLabelRes(value: String): Int? = when (value) {
+    "global" -> R.string.positions_timeline_incompleteness_scope_global
+    "instrument" -> R.string.instrument
+    else -> null
 }
 
 @Composable
-private fun withholdingTierLabel(value: String): String = when (value) {
-    "mark_incomplete" -> stringResource(R.string.positions_timeline_incompleteness_tier_mark_incomplete)
-    "untrusted" -> stringResource(R.string.positions_timeline_incompleteness_tier_untrusted)
-    else -> value
+private fun withholdingTierLabel(value: String): String = withholdingTierLabelRes(value)?.let { stringResource(it) } ?: value
+
+internal fun withholdingTierLabelRes(value: String): Int? = when (value) {
+    "mark_incomplete" -> R.string.positions_timeline_incompleteness_tier_mark_incomplete
+    "untrusted" -> R.string.positions_timeline_incompleteness_tier_untrusted
+    else -> null
 }
 
 @Composable
-private fun attributionOriginLabel(value: String): String = when (value) {
-    "manual" -> stringResource(R.string.positions_timeline_attribution_origins_manual)
-    "plan" -> stringResource(R.string.positions_timeline_attribution_origins_plan)
-    "system" -> stringResource(R.string.positions_timeline_attribution_origins_system)
-    "unattributed" -> stringResource(R.string.positions_timeline_attribution_origins_unattributed)
-    else -> value
+private fun attributionOriginLabel(value: String): String = attributionOriginLabelRes(value)?.let { stringResource(it) } ?: value
+
+internal fun attributionOriginLabelRes(value: String): Int? = when (value) {
+    "manual" -> R.string.positions_timeline_attribution_origins_manual
+    "plan" -> R.string.positions_timeline_attribution_origins_plan
+    "system" -> R.string.positions_timeline_attribution_origins_system
+    "unattributed" -> R.string.positions_timeline_attribution_origins_unattributed
+    else -> null
 }
 
 @Composable
-private fun correctionReasonLabel(value: String): String = when (value) {
-    "unwitnessed_phantom" -> stringResource(R.string.positions_timeline_executionhistory_reasons_unwitnessed_phantom)
-    "unwitnessed_legacy_lineage" -> stringResource(R.string.positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage)
-    else -> value
+private fun correctionReasonLabel(value: String): String = correctionReasonLabelRes(value)?.let { stringResource(it) } ?: value
+
+internal fun correctionReasonLabelRes(value: String): Int? = when (value) {
+    "unwitnessed_phantom" -> R.string.positions_timeline_executionhistory_reasons_unwitnessed_phantom
+    "unwitnessed_legacy_lineage" -> R.string.positions_timeline_executionhistory_reasons_unwitnessed_legacy_lineage
+    else -> null
 }
 
 @Composable

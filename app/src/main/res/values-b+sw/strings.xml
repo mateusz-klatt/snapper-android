@@ -433,8 +433,6 @@
     <string name="venue_accounts_status_not_applicable" formatted="false">Haitumiki</string>
     <string name="venue_accounts_status_unknown" formatted="false">Hajulikani</string>
     <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Imepatanishwa</string>
-    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">Mchepuko umegunduliwa</string>
-    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">Bado haijapatanishwa</string>
     <string name="venue_accounts_reconciliation_status_error" formatted="false">Hitilafu ya upatanisho</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">Haitumiki</string>
     <string name="system_status_healthy" formatted="false">Afya nzuri</string>

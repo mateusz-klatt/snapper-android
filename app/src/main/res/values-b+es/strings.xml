@@ -434,8 +434,6 @@
     <string name="venue_accounts_status_not_applicable" formatted="false">No aplicable</string>
     <string name="venue_accounts_status_unknown" formatted="false">Desconocido</string>
     <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Conciliado</string>
-    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">Desviación detectada</string>
-    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">Aún no conciliado</string>
     <string name="venue_accounts_reconciliation_status_error" formatted="false">Error de conciliación</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">No admitido</string>
     <string name="system_status_healthy" formatted="false">Saludable</string>

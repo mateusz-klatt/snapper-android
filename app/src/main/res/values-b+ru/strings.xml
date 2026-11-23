@@ -435,8 +435,6 @@
     <string name="venue_accounts_status_not_applicable" formatted="false">Не применимо</string>
     <string name="venue_accounts_status_unknown" formatted="false">Неизвестно</string>
     <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Сверено</string>
-    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">Обнаружено отклонение</string>
-    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">Еще не сверено</string>
     <string name="venue_accounts_reconciliation_status_error" formatted="false">Ошибка сверки</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">Не поддерживается</string>
     <string name="system_status_healthy" formatted="false">В норме</string>

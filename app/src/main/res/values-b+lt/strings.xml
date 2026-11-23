@@ -435,8 +435,6 @@
     <string name="venue_accounts_status_not_applicable" formatted="false">Netaikoma</string>
     <string name="venue_accounts_status_unknown" formatted="false">Nežinoma</string>
     <string name="venue_accounts_reconciliation_status_reconciled" formatted="false">Suderinta</string>
-    <string name="venue_accounts_reconciliation_status_drift_detected" formatted="false">Aptiktas nuokrypis</string>
-    <string name="venue_accounts_reconciliation_status_not_reconciled" formatted="false">Dar nesuderinta</string>
     <string name="venue_accounts_reconciliation_status_error" formatted="false">Suderinimo klaida</string>
     <string name="venue_accounts_reconciliation_status_unsupported" formatted="false">Nepalaikoma</string>
     <string name="system_status_healthy" formatted="false">Sveika</string>
